@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO Motion File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO Motion File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="motion.html#INTRO">Introduction</a></li>
+        <li><a href="motion.html#BLOCK0">Block 0 - File Header</a></li>
+        <li><a href="motion.html#BLOCK1">Block 1 - Header Strings</a></li>
+        <li><a href="motion.html#BLOCK2">Block 2 - Joint List</a></li>
+        <li><a href="motion.html#BLOCK3">Block 3 - Keyframes</a></li>
+        <li><a href="motion.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><big style="text-decoration: underline;"><big
+ style="font-weight: bold;"><br>
+1. Introduction</big></big><br>
+      <br>
+AIBO Motion files consist of a signature, followed by multiple sections
+or
+blocks.&nbsp;&nbsp;&nbsp; The
+blocks describe which servos are to be used, and provide keyframes
+giving positional
+information for those servos.&nbsp;&nbsp;&nbsp; <br>
+      <br>
+The file signature is the string "OMTN".&nbsp;&nbsp; The blocks are
+sequentially numbered, and provide a block length
+(inclusive of the block header itself).<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct block_header_type {<br>  unsigned blocknum;<br>  unsigned blocklen;		// Block lengths are normally 8 byte aligned.<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+Blocks are zero padded to align them to 8 byte lengths typically (not
+sure Aibo actually requires it though).<br>
+      <br>
+ERS-110 special cases:&nbsp; <br>
+&nbsp;&nbsp; Block 2 length is often not aligned.<br>
+&nbsp;&nbsp; Block 3 blocklen field is unsigned short (two bytes
+instead of four).<br>
+      <br>
+      <a name="BLOCK0"></a><br>
+      <big><big style="text-decoration: underline;"><span
+ style="font-weight: bold;">2. MTN BLOCK 0</span></big></big><br>
+      <br>
+The first block immediately follows the 4-byte signature, and contains
+the file version number, number of keyframes, and playback frame rate.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct block0_type {<br>  unsigned block_num;         // always 0x00000000    block number<br>  unsigned block_size;        // always 0x00000018    block size<br>  unsigned num_sections;      // always 0x00000004    num blocks<br>  unsigned short major_ver;   // always 0x0001        major version<br>  unsigned short minor_ver;   //                      minor version<br>  unsigned short tile_count;  //                      keyframe count<br>  unsigned short frame_rate;  //                      frame rate (msec/frame)<br>  unsigned options;           // always 0?            options<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"> <a name="BLOCK1"></a><big><big
+ style="text-decoration: underline;"><span style="font-weight: bold;"><br>
+3. MTN BLOCK 1</span></big></big><br>
+      <br>
+The next block contains the three variable sized header strings,
+consisting of a single-byte length field, followed by the string
+contents (ie: Pascal style).&nbsp;&nbsp; The three strings must be in
+the
+following order:<br>
+      <ul>
+        <li>Action "chunk" name.</li>
+        <li>Author/Creator name</li>
+        <li>Format (aibo-platform)</li>
+      </ul>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;"><br>
+Chunk Name String</span></big><br>
+      <br>
+The first string, the chunk name, is parsed by AIBO and must be
+specially formatted.&nbsp;&nbsp; ie:<br>
+&nbsp;&nbsp; a_sit#stand_description<br>
+      <br>
+The first character can be:<br>
+      <ul>
+        <li>a = all servos</li>
+        <li>h = head servos only</li>
+        <li>l = leg servos only</li>
+        <li>m = mouth servo only</li>
+        <li>e = ear servos only</li>
+        <li>t = tail servos only</li>
+      </ul>
+      <span style="font-family: monospace;"></span>The '#' separated
+words
+tell AIBO the start &amp; stop predefined postures.&nbsp;&nbsp; These
+vary by
+AIBO model, but at a minimum include "sleep", "sit" and "stand".<br>
+      <br>
+The description can be anything alphanumeric.&nbsp;&nbsp; Skitter just
+sets this equal to the skit name.<br>
+      <br>
+      <br>
+      <big><span
+ style="font-weight: bold; font-style: italic; text-decoration: underline;">Format
+Platform String</span></big><br>
+      <br>
+The format varies by platform as follows:
+      <ul>
+        <li><span style="font-family: monospace;">ERS-110:&nbsp;&nbsp;&nbsp;
+"DRX-700"</span></li>
+        <li><span style="font-family: monospace;">ERS-210:&nbsp;&nbsp;&nbsp;
+"DRX-910"</span></li>
+        <li><span style="font-family: monospace;">ERS-220:&nbsp;&nbsp;&nbsp;
+"DRX-900"</span></li>
+        <li><span style="font-family: monospace;">ERS-310:&nbsp;&nbsp;&nbsp;
+"DRX-801"</span></li>
+        <li><span style="font-family: monospace;">ERS-7:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"DRX-1000"</span></li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"> <a name="BLOCK2"><br>
+      </a><big><big style="text-decoration: underline;"><span
+ style="font-weight: bold;">4. MTN BLOCK 2</span></big></big><br>
+      <br>
+The next block contains a servo count, followed by the servo PRM joint
+names
+(Pascal style strings again). <br>
+&nbsp; <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct block2_type {<br>  unsigned block_num;<br>  unsigned block_size;<br>  unsigned short num_joints;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The joint names vary by
+AIBO model, and are listed below.&nbsp;&nbsp; The order the joints are
+listed defines the order of entries in keyframes (defined in next
+block).<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"><big><span
+ style="font-weight: bold;">ERS-110:</span></big><br>  HEAD_PITCH    "PRM:/r0/c0-Joint:j0"<br>  HEAD_YAW      "PRM:/r0/c0/c1-Joint:j1"<br>  HEAD_ROLL     "PRM:/r0/c0/c1/c2-Joint:j2"<br>  MOUTH         "PRM:/r0/c0/c1/c2/c3-Joint:j3"<br>  FR_LEG_VERT   "PRM:/r2/c0-Joint:j0"<br>  FR_LEG_LAT    "PRM:/r2/c0/c1-Joint:j1"<br>  FR_LEG_KNEE   "PRM:/r2/c0/c1/c2-Joint:j2"<br>  FL_LEG_VERT   "PRM:/r3/c0-Joint:j0"<br>  FL_LEG_LAT    "PRM:/r3/c0/c1-Joint:j1"<br>  FL_LEG_KNEE   "PRM:/r3/c0/c1/c2-Joint:j2"<br>  BR_LEG_VERT   "PRM:/r4/c0-Joint:j0"<br>  BR_LEG_LAT    "PRM:/r4/c0/c1-Joint:j1"<br>  BR_LEG_KNEE   "PRM:/r4/c0/c1/c2-Joint:j2"<br>  BL_LEG_VERT   "PRM:/r5/c0-Joint:j0"<br>  BL_LEG_LAT    "PRM:/r5/c0/c1-Joint:j1"<br>  BL_LEG_KNEE   "PRM:/r5/c0/c1/c2-Joint:j2"<br>  TAIL_VERT     "PRM:/r1/c0-Joint:j0"<br>  TAIL_HORZ     "PRM:/r1/c1-Joint:j1"<br>  <br><big><span
+ style="font-weight: bold;">ERS-210/220:</span></big><br>  HEAD_PITCH    "PRM:/r1/c1-Joint2:j1"<br>  HEAD_YAW      "PRM:/r1/c1/c2-Joint2:j2"<br>  HEAD_ROLL     "PRM:/r1/c1/c2/c3-Joint2:j3"<br>  MOUTH         "PRM:/r1/c1/c2/c3/c4-Joint2:j4"<br>  LEFT_EAR      "PRM:/r1/c1/c2/c3/e1-Joint3:j5"<br>  RIGHT_EAR     "PRM:/r1/c1/c2/c3/e2-Joint3:j6"<br>  FL_LEG_VERT   "PRM:/r2/c1-Joint2:j1"<br>  FL_LEG_LAT    "PRM:/r2/c1/c2-Joint2:j2"<br>  FL_LEG_KNEE   "PRM:/r2/c1/c2/c3-Joint2:j3"<br>  BL_LEG_VERT   "PRM:/r3/c1-Joint2:j1"<br>  BL_LEG_LAT    "PRM:/r3/c1/c2-Joint2:j2"<br>  BL_LEG_KNEE   "PRM:/r3/c1/c2/c3-Joint2:j3"<br>  FR_LEG_VERT   "PRM:/r4/c1-Joint2:j1"<br>  FR_LEG_LAT    "PRM:/r4/c1/c2-Joint2:j2"<br>  FR_LEG_KNEE   "PRM:/r4/c1/c2/c3-Joint2:j3"<br>  BR_LEG_VERT   "PRM:/r5/c1-Joint2:j1"<br>  BR_LEG_LAT    "PRM:/r5/c1/c2-Joint2:j2"<br>  BR_LEG_KNEE   "PRM:/r5/c1/c2/c3-Joint2:j3"<br>  TAIL_HORZ     "PRM:/r6/c1-Joint2:j1"<br>  TAIL_VERT     "PRM:/r6/c2-Joint2:j2"<br>  <br><big><span
+ style="font-weight: bold;">ERS-310:</span></big><br>  HEAD_PITCH    "PRM:/r1/c1-Joint2:11"<br>  HEAD_PITCH2   "PRM:/r1/c1/c2-Joint2:12"<br>  HEAD_YAW      "PRM:/r1/c1/c2/c3-Joint2:13"<br>  FL_LEG_VERT   "PRM:/r2/c1-Joint2:21"<br>  FL_LEG_LAT    "PRM:/r2/c1/c2-Joint2:22"<br>  FL_LEG_KNEE   "PRM:/r2/c1/c2/c3-Joint2:23"<br>  BL_LEG_VERT   "PRM:/r3/c1-Joint2:31"<br>  BL_LEG_LAT    "PRM:/r3/c1/c2-Joint2:32"<br>  BL_LEG_KNEE   "PRM:/r3/c1/c2/c3-Joint2:33"<br>  FR_LEG_VERT   "PRM:/r4/c1-Joint2:41"<br>  FR_LEG_LAT    "PRM:/r4/c1/c2-Joint2:42"<br>  FR_LEG_KNEE   "PRM:/r4/c1/c2/c3-Joint2:43"<br>  BR_LEG_VERT   "PRM:/r5/c1-Joint2:51"<br>  BR_LEG_LAT    "PRM:/r5/c1/c2-Joint2:52"<br>  BR_LEG_KNEE   "PRM:/r5/c1/c2/c3-Joint2:53"<br>  <br><big><span
+ style="font-weight: bold;">ERS-7:</span></big><br>  HEAD_PITCH    "PRM:/r1/c1-Joint2:11"<br>  HEAD_YAW      "PRM:/r1/c1/c2-Joint2:12"<br>  HEAD_PITCH2   "PRM:/r1/c1/c2/c3-Joint2:13"<br>  MOUTH         "PRM:/r1/c1/c2/c3/c4-Joint2:14"<br>  LEFT_EAR      "PRM:/r1/c1/c2/c3/e5-Joint4:15"<br>  RIGHT_EAR     "PRM:/r1/c1/c2/c3/e6-Joint4:16"<br>  FL_LEG_VERT   "PRM:/r2/c1-Joint2:21"<br>  FL_LEG_LAT    "PRM:/r2/c1/c2-Joint2:22"<br>  FL_LEG_KNEE   "PRM:/r2/c1/c2/c3-Joint2:23"<br>  BL_LEG_VERT   "PRM:/r3/c1-Joint2:31"<br>  BL_LEG_LAT    "PRM:/r3/c1/c2-Joint2:32"<br>  BL_LEG_KNEE   "PRM:/r3/c1/c2/c3-Joint2:33"<br>  FR_LEG_VERT   "PRM:/r4/c1-Joint2:41"<br>  FR_LEG_LAT    "PRM:/r4/c1/c2-Joint2:42"<br>  FR_LEG_KNEE   "PRM:/r4/c1/c2/c3-Joint2:43"<br>  BR_LEG_VERT   "PRM:/r5/c1-Joint2:51"<br>  BR_LEG_LAT    "PRM:/r5/c1/c2-Joint2:52"<br>  BR_LEG_KNEE   "PRM:/r5/c1/c2/c3-Joint2:53"<br>  TAIL_VERT     "PRM:/r6/c1-Joint2:61"<br>  TAIL_HORZ     "PRM:/r6/c2-Joint2:62"<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"> <a name="BLOCK3"><br>
+      </a><big><big style="text-decoration: underline;"><span
+ style="font-weight: bold;">5. MTN BLOCK 3<br>
+      </span></big></big><br>
+The last block contains the keyframes.&nbsp;&nbsp;&nbsp; The keyframe
+count was given back in block 0.&nbsp;&nbsp; Each keyframe consists of
+a time delta, three words of zeros, then the various servo
+positions in micro-radian (uradian) coordinates. <br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct keyframe_header_type {<br>  unsigned time_delta;<br>  unsigned dummy[3];<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <span style="font-family: monospace;"></span><span
+ style="font-family: monospace;"></span><br>
+To convert between uradians and degrees, use the following:<br>
+&nbsp;&nbsp;&nbsp; angle_degrees = angle_uradians * 180.0 /
+(1000000.0*3.141592654)<br>
+&nbsp;&nbsp;&nbsp; angle_uradians = angle_degrees *
+(1000000.0*3.141592654) / 180.0<br>
+      <br>
+To compute elapsed time between keyframes, use:<br>
+&nbsp;&nbsp;&nbsp; time_msecs = (keyframe_time_delta+1) * frame_rate<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td><a name="EXAMPLE"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">6. Example</span></big></big><br>
+      <pre style="font-size: 8pt;"><span>000000:&nbsp; <span
+ style="color: rgb(0, 153, 0);">4f 4d 54 4e&nbsp; 00 00 00 00&nbsp; 18 00 00 00&nbsp; 04 00 00 00</span>  |OMTN............|&nbsp; <span
+ style="color: rgb(0, 153, 0);">Block 0</span><br>000010:&nbsp; <span
+ style="color: rgb(0, 153, 0);">01 00 02 00  02 00 10 00&nbsp; 00 00 00 00</span>&nbsp; <span
+ style="color: rgb(51, 51, 255);">01 00 00 00</span>  |................|&nbsp; <span
+ style="color: rgb(0, 153, 0);">File Header</span><br>000020:&nbsp; <span
+ style="color: rgb(51, 51, 255);">34 00 00 00  18 61 5f 73&nbsp; 6c 65 65 70&nbsp; 23 73 69 74</span>  |4....a_sleep#sit|<span
+ style="color: rgb(51, 51, 255);"></span><br>000030:&nbsp; <span
+ style="color: rgb(51, 51, 255);">5f 53 6c 65  65 70 5f 54&nbsp; 6f 5f 53 69&nbsp; 74 07 53 6b</span>  |_Sleep_To_Sit.Sk|&nbsp; <span
+ style="color: rgb(51, 51, 255);">Block 1 </span><br>000040:&nbsp; <span
+ style="color: rgb(51, 51, 255);">69 74 74 65  72 07 44 52&nbsp; 58 2d 39 31&nbsp; 30 00 00 00</span>  |itter.DRX-910...|&nbsp; <span
+ style="color: rgb(51, 51, 255);">Header Strings</span><br>000050:&nbsp; 02 00 00 00&nbsp; f8 01 00 00&nbsp; 14 00 14 50&nbsp; 52 4d 3a 2f&nbsp; |...........PRM:/|<br>000060:&nbsp; 72 31 2f 63&nbsp; 31 2d 4a 6f&nbsp; 69 6e 74 32&nbsp; 3a 6a 31 17&nbsp; |r1/c1-Joint2:j1.|&nbsp; Block 2 <br>000070:&nbsp; 50 52 4d 3a&nbsp; 2f 72 31 2f&nbsp; 63 31 2f 63&nbsp; 32 2d 4a 6f&nbsp; |PRM:/r1/c1/c2-Jo|&nbsp; Joint List<br>000080:&nbsp; 69 6e 74 32&nbsp; 3a 6a 32 1a&nbsp; 50 52 4d 3a&nbsp; 2f 72 31 2f&nbsp; |int2:j2.PRM:/r1/|<br>000090:&nbsp; 63 31 2f 63&nbsp; 32 2f 63 33&nbsp; 2d 4a 6f 69&nbsp; 6e 74 32 3a&nbsp; |c1/c2/c3-Joint2:|<br>0000a0:&nbsp; 6a 33 1d 50&nbsp; 52 4d 3a 2f&nbsp; 72 31 2f 63&nbsp; 31 2f 63 32&nbsp; |j3.PRM:/r1/c1/c2|<br>0000b0:&nbsp; 2f 63 33 2f&nbsp; 63 34 2d 4a&nbsp; 6f 69 6e 74&nbsp; 32 3a 6a 34&nbsp; |/c3/c4-Joint2:j4|<br>0000c0:&nbsp; 1d 50 52 4d&nbsp; 3a 2f 72 31&nbsp; 2f 63 31 2f&nbsp; 63 32 2f 63&nbsp; |.PRM:/r1/c1/c2/c|<br>0000d0:&nbsp; 33 2f 65 31&nbsp; 2d 4a 6f 69&nbsp; 6e 74 33 3a&nbsp; 6a 35 1d 50&nbsp; |3/e1-Joint3:j5.P|<br>0000e0:&nbsp; 52 4d 3a 2f&nbsp; 72 31 2f 63&nbsp; 31 2f 63 32&nbsp; 2f 63 33 2f&nbsp; |RM:/r1/c1/c2/c3/|<br>0000f0:&nbsp; 65 32 2d 4a&nbsp; 6f 69 6e 74&nbsp; 33 3a 6a 36&nbsp; 14 50 52 4d&nbsp; |e2-Joint3:j6.PRM|<br>000100:&nbsp; 3a 2f 72 32&nbsp; 2f 63 31 2d&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; |:/r2/c1-Joint2:j|<br>000110:&nbsp; 31 17 50 52&nbsp; 4d 3a 2f 72&nbsp; 32 2f 63 31&nbsp; 2f 63 32 2d&nbsp; |1.PRM:/r2/c1/c2-|<br>000120:&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; 32 1a 50 52&nbsp; 4d 3a 2f 72&nbsp; |Joint2:j2.PRM:/r|<br>000130:&nbsp; 32 2f 63 31&nbsp; 2f 63 32 2f&nbsp; 63 33 2d 4a&nbsp; 6f 69 6e 74&nbsp; |2/c1/c2/c3-Joint|<br>000140:&nbsp; 32 3a 6a 33&nbsp; 14 50 52 4d&nbsp; 3a 2f 72 33&nbsp; 2f 63 31 2d&nbsp; |2:j3.PRM:/r3/c1-|<br>000150:&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; 31 17 50 52&nbsp; 4d 3a 2f 72&nbsp; |Joint2:j1.PRM:/r|<br>000160:&nbsp; 33 2f 63 31&nbsp; 2f 63 32 2d&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; |3/c1/c2-Joint2:j|<br>000170:&nbsp; 32 1a 50 52&nbsp; 4d 3a 2f 72&nbsp; 33 2f 63 31&nbsp; 2f 63 32 2f&nbsp; |2.PRM:/r3/c1/c2/|<br>000180:&nbsp; 63 33 2d 4a&nbsp; 6f 69 6e 74&nbsp; 32 3a 6a 33&nbsp; 14 50 52 4d&nbsp; |c3-Joint2:j3.PRM|<br>000190:&nbsp; 3a 2f 72 34&nbsp; 2f 63 31 2d&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; |:/r4/c1-Joint2:j|<br>0001a0:&nbsp; 31 17 50 52&nbsp; 4d 3a 2f 72&nbsp; 34 2f 63 31&nbsp; 2f 63 32 2d&nbsp; |1.PRM:/r4/c1/c2-|<br>0001b0:&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; 32 1a 50 52&nbsp; 4d 3a 2f 72&nbsp; |Joint2:j2.PRM:/r|<br>0001c0:&nbsp; 34 2f 63 31&nbsp; 2f 63 32 2f&nbsp; 63 33 2d 4a&nbsp; 6f 69 6e 74&nbsp; |4/c1/c2/c3-Joint|<br>0001d0:&nbsp; 32 3a 6a 33&nbsp; 14 50 52 4d&nbsp; 3a 2f 72 35&nbsp; 2f 63 31 2d&nbsp; |2:j3.PRM:/r5/c1-|<br>0001e0:&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; 31 17 50 52&nbsp; 4d 3a 2f 72&nbsp; |Joint2:j1.PRM:/r|<br>0001f0:&nbsp; 35 2f 63 31&nbsp; 2f 63 32 2d&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; |5/c1/c2-Joint2:j|<br>000200:&nbsp; 32 1a 50 52&nbsp; 4d 3a 2f 72&nbsp; 35 2f 63 31&nbsp; 2f 63 32 2f&nbsp; |2.PRM:/r5/c1/c2/|<br>000210:&nbsp; 63 33 2d 4a&nbsp; 6f 69 6e 74&nbsp; 32 3a 6a 33&nbsp; 14 50 52 4d&nbsp; |c3-Joint2:j3.PRM|<br>000220:&nbsp; 3a 2f 72 36&nbsp; 2f 63 31 2d&nbsp; 4a 6f 69 6e&nbsp; 74 32 3a 6a&nbsp; |:/r6/c1-Joint2:j|<br>000230:&nbsp; 31 14 50 52&nbsp; 4d 3a 2f 72&nbsp; 36 2f 63 32&nbsp; 2d 4a 6f 69&nbsp; |1.PRM:/r6/c2-Joi|<br>000240:&nbsp; 6e 74 32 3a&nbsp; 6a 32 00 00&nbsp; <span
+ style="color: rgb(153, 0, 0);">03 00 00 00&nbsp; c8 00 00 00</span>  |nt2:j2..........|&nbsp; <span
+ style="color: rgb(153, 0, 0);">Block 3 </span><br>000250:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>  |................|&nbsp; <span
+ style="color: rgb(153, 0, 0);">Keyframes</span><br>000260:&nbsp; <span
+ style="color: rgb(153, 0, 0);">3c 56 fd ff  00 00 00 00&nbsp; 00 00 00 00&nbsp; 79 33 ff ff</span>  |&lt;V..........y3..|<br>000270:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  00 00 00 00&nbsp; 9d fa 0f 00&nbsp; 00 00 00 00</span>  |................|<br>000280:&nbsp; <span
+ style="color: rgb(153, 0, 0);">4e fd 07 00  a8 5f e1 ff&nbsp; 00 00 00 00&nbsp; a7 9d 26 00</span>  |N...._........&amp;.|<br>000290:&nbsp; <span
+ style="color: rgb(153, 0, 0);">9d fa 0f 00  00 00 00 00&nbsp; 4e fd 07 00&nbsp; a8 5f e1 ff</span>  |........N...._..|<br>0002a0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  a7 9d 26 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>  |......&amp;.........|<br>0002b0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">27 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>  |'...............|<br>0002c0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">94 57 f9 ff  00 00 00 00&nbsp; 00 00 00 00&nbsp; 79 33 ff ff</span>  |.W..........y3..|<br>0002d0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>0002e0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">c4 a9 02 00  14 08 e8 ff&nbsp; 00 00 00 00&nbsp; e2 f3 23 00</span>  |..............#.|<br>0002f0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  00 00 00 00&nbsp; c4 a9 02 00&nbsp; 14 08 e8 ff</span>  |................|<br>000300:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 00 00 00  e2 f3 23 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>  |......#.........|</span></pre>
+      <a href="examples/Sleep_To_Sit.mtn.html">Download Example</a><span><br>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

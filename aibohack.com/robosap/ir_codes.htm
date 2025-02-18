@@ -1,0 +1,231 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboSapien IR Codes
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboSapien IR Codes
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The IR Carrier is 39.2kHz.
+Data is modulated using a space coded signal with 8 data bits (data clock is 1200Hz, but actual data rate varies depending on the data).
+
+<P></P>
+You can skip the IR and IR modulation by wiring directly into the main PCBoard.
+This can be encoded easily by almost any small microprocessor.
+For modulating the signals yourself, the signal looks something like this:
+<pre>
+Timing based on 1/1200 second clock (~.833ms)
+Signal is normally high (idle, no IR).
+Start: signal goes low for 8/1200 sec.
+Data bits: for each of 8 data bits, space encoded signal depending on bit value
+    Sends the most significant data bit first
+    If the data bit is 0: signal goes high for 1/1200 sec, and low for 1/1200 sec.
+    If the data bit is 1: signal goes high for 4/1200 sec, and low for 1/1200 sec.
+    BTW: The first bit (msb) is always 1 (valid codes are from $80 to $FF)
+When completed, signal goes high again.
+No explicit stop bit. Minimal between signals is not known.
+</pre>
+
+<H3>Movement Commands (no shift)</H3>
+<UL>
+<LI>$80 - turn right (on left side of remote)
+<LI>$81 - right arm up (upper left button on remote)
+<LI>$82 - right arm out
+<LI>$83 - tilt body right
+<LI>$84 - right arm down
+<LI>$85 - right arm in
+<LI>$86 - walk forward
+<LI>$87 - walk backward
+<LI>$88 - turn left (on right side of remote)
+<LI>$89 - left arm up (upper right button on remote)
+<LI>$8A - left arm out
+<LI>$8B - tilt body left
+<LI>$8C - left arm down
+<LI>$8D - left arm in
+<LI>$8E - stop
+</UL>
+
+<H3>Programming Commands (no shift)</H3>
+<UL>
+<LI>$90 - P (Master Command Program)
+<LI>$91 - P>> (Program Play, the one on the bottom)
+<LI>$92 - R>> (Right sensor program)
+<LI>$93 - L>> (Left sensor program)
+<LI>$94 - S>> (Sonic sensor program)
+</UL>
+<P></P>
+
+<P></P>
+<H3>GREEN shift commands</H3>
+<UL>
+<LI>$A0 - right turn step
+<LI>$A1 - right hand thump
+<LI>$A2 - right hand throw
+<LI>$A3 - sleep
+<LI>$A4 - right hand pickup
+<LI>$A5 - lean backward
+<LI>$A6 - forward step
+<LI>$A7 - backward step
+<LI>$A8 - left turn step
+<LI>$A9 - left hand thump
+<LI>$AA - left hand throw
+<LI>$AB - listen
+<LI>$AC - left hand pickup
+<LI>$AD - lean forward
+<LI>$AE - reset
+<P></P>
+<LI>$B0 - Execute (master command program execute)
+<LI>$B1 - Wakeup
+<LI>$B2 - Right (right sensor program execute)
+<LI>$B3 - Left (left sensor program execute)
+<LI>$B4 - Sonic (sonic sensor program execute)
+</UL>
+
+<P></P>
+<H3>ORANGE shift commands</H3>
+<UL>
+<LI>$C0 - right hand strike 3
+<LI>$C1 - right hand sweep
+<LI>$C2 - burp
+<LI>$C3 - right hand strike 2
+<LI>$C4 - high 5
+<LI>$C5 - right hand strike 1
+<LI>$C6 - bulldozer
+<LI>$C7 - oops (fart)
+<LI>$C8 - left hand strike 3
+<LI>$C9 - left hand sweep
+<LI>$CA - whistle
+<LI>$CB - left hand strike 2
+<LI>$CC - talkback
+<LI>$CD - left hand strike 1
+<LI>$CE - roar
+<P></P>
+<LI>$D0 - All Demo
+<LI>$D1 - Power Off (drop snow-globe and say "Rosebud")
+<LI>$D2 - Demo 1 (Karate skits)
+<LI>$D3 - Demo 2 (Rude skits)
+<LI>$D4 - Dance
+</UL>
+
+
+<P></P>
+NOTES:
+<UL>
+<LI>add $08 to go from right-side commands to left-side commands.
+<LI>add $20 to command bytes for the GREEN shift (ie. $Ax and $Bx range)
+<LI>add $40 to command bytes for the ORANGE shift (ie. $Cx and $Dx range)<P></P>
+</UL>
+
+<P></P>
+<HR>
+<H2>SECRET UNDOCUMENTED CODES</H2>
+<P></P>
+
+<A NAME=LAUNCH>
+<H3>Several different launch codes (Executing the main program)</H3>
+<P></P>
+<UL>
+<LI>$B0 - standard "EXECUTE" on remote
+<BR>Robot says "uh-huh" before starting Main program
+<BR>No subroutines called [Execute sensor commands (Green Shift) cause error sounds to be played instead of what they should do -- bug or feature you decide]
+<P></P>
+<LI>$97 - appears to be same as $B0
+<P></P>
+<LI>$98 - Quiet execute main program
+<BR>Robot does not say "uh-huh"
+<BR>No subroutines called
+<P></P>
+<LI>$9A - Quiet execute main program with subroutines !!
+<BR>Robot does not say "uh-huh"
+<BR>Subroutines are called (as documented in the manual). This is the one to use.
+<BR>Execute feature appears to be same as $91 (regular remote Program Play). $91 button also does other things like end the current recording. $9A code doesn't. 
+</UL>
+<P></P>
+
+<H3>Useful? secret codes</H3>
+<P></P>
+<UL>
+<LI>$F6 - feet shuffle
+<LI>$FB - nothing (useful as NO-OP)
+<LI>$FC - raise arm throw
+<LI>$D6 - karate chop
+</UL>
+<P></P>
+<P></P>
+<H3>WORK IN PROGRESS, not useful [or at least no significant difference detected]</H3>
+<UL>
+<LI>$95,$96 - Program main again (like $90)
+<LI>$99 - like $98
+<LI>$9B - like $90 ?
+<LI>$9C - do nothing
+<LI>$9D,9E,9F - like $90 ?
+<LI>$B5 - like $97 ?
+<LI>$B6 - like $90 ?
+<LI>others - looks like these repeat as well (eg: record/execute one of the program areas) or do nothing
+<P></P>
+<LI>$E0 - $EE (looks like the $A0 range)
+<LI>$EF - nothing
+<LI>$F0 - like $97
+<LI>$F1 - like $98
+<LI>$F2 - Execute right program
+<LI>$F3 - Execute left program
+<LI>$F4 - Execute sonic program
+<LI>$F5 - like $F0/97 ?
+<LI>$F7 - like $F0/97 ?
+<LI>$F8,F9,FA - like $F1/98 ?
+<LI>$FD,FE,FF - program main again (like $90)
+</UL>
+<P></P>
+
+
+</BODY>
+</HTML>

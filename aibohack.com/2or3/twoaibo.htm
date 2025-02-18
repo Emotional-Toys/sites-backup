@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+  <BR>
+    <HR>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=gold)" align="center" valign="top">
+	  <a href="../homie/index.html">HomieGate</a>
+        </TD>
+        </TR>
+    </TABLE>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+  <a href="../lesser/index.html">Gallery</a><BR>
+ </td>
+ <td colspan=3 align="center" valign="top" bgcolor=#D0D0D0>
+  <BR>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+
+ <td width=15% align="center" valign="top">
+  <a href="../clie/index.html">CLIE</a><BR>
+  <a href="../panel/index.html">Panel</a><BR>
+  <a href="../icybie/index.html">ICybie</a><BR>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AIBO and Costello - multiple ERS-210 conversations (RCodePlus 2.50)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AIBO and Costello - multiple ERS-210 conversations (RCodePlus 2.50)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+
+<H2>Overview</H2>
+"AIBO and Costello" is an entertainment personality showing how two AIBOs can communicate in interesting ways.
+<BR>
+Currently it supports several skits.
+<UL>
+<LI>Part of the classic "Who's on First" routine by Abbott and Costello.
+<LI>The argument sketch from Monty Python.
+<LI>Selections from the Knights who say Ni.
+<LI>Row Row Row your boat.
+</UL>
+<P></P>
+
+<HR>
+<H2>Supported AIBOs</H2>
+
+<UL>
+<LI><IMG VALIGN=center SRC="../gfx/icon_110not.gif"> - ERS-110/111 not supported</A>
+<LI><IMG SRC="../gfx/icon_210.gif"> - ERS-210 supported.
+<LI><IMG SRC="../gfx/icon_220.gif"> - ERS-220 supported.
+<LI><IMG SRC="../gfx/icon_310.gif"> - ERS-311/312 supported (but sometimes the timing is off)
+</UL>
+
+This personality requires <b>two</b> AIBOs and two PMS/RCODE memory sticks.
+Different software goes on each stick. One Aibo as the Master (Abbott) and the other as the Slave (Costello).
+
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper RCodePlus runtime for the model of your AIBO.
+<UL>
+<LI>For the ERS-210: <A HREF="../rcode/RCodePlus252A(210).zip">RCode Plus 2.52 'A' (210)</A>
+<LI>For the ERS-220: <A HREF="../rcode/RCodePlus252A(220).zip">RCode Plus 2.52 'A' (220)</A>
+<LI>For the ERS-31x: <A HREF="../rcode/RCodePlus252A(31x).zip">RCode Plus 2.52 'A' (31x)</A>
+<LI>(Save this .ZIP file on your computer. You may want to use it again later.)
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<P></P>
+You must have one "master" AIBO. This will start the conversation.
+<LI>Download <A HREF="TwoAibo03_Master.zip">TwoAibo03_Master.zip</A> and unzip it to the first stick
+<LI>Unzip that file on top of your RCODE/PMS stick (replacing any files it asks about).
+<P></P>
+You must have at least one "slave" AIBO. It will listen to the Master, and respond accordingly.
+<LI>Download <A HREF="TwoAibo03_Slave.zip">TwoAibo03_Slave.zip</A> and unzip it to the second stick
+<LI>Unzip that file on top of your RCODE/PMS stick (replacing any files it asks about).
+<P></P>
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO. Follow the instructions (see below).
+</UL>
+
+<DIR>Repeat for the second AIBO. Be sure you install the correct RCodePlus version for the model of AIBO you plan to use (210, 220 or 31x)</DIR>
+
+<P></P>
+<HR>
+<H2>Usage</H2>
+
+<LI>Put the first stick in the master AIBO (call him Abbott).
+<LI>Put the second stick in the slave AIBO (call him Costello).
+<P></P>
+<LI>Start up the two ERS-210 AIBOs. You should hear the "Pump it up" song (by another Costello).
+<LI>Both AIBOs should eventually sit up.
+<LI>Press the back of the Master AIBO. It will give you a preview of one of the four skits (Who's on first -> Argument -> Knights who say Ni -> Row Row Row your boat).
+<LI>When you find the skit you want, press the head of the Master AIBO.
+<LI>Sit back and listen
+<LI>When the skit is over, both AIBOs will sit up again. You can select another skit from the Master AIBO.
+</UL>
+<P></P>
+
+<HR>
+<H2>Performance Tips</H2>
+If you have three or more AIBOs, you will have one Master AIBO, and two or more Slave AIBOs.
+Install the Slave software on all slaves. Once they are running and sitting up, press the back on the second slave once. This will make him delay his performance a little to give more meaningful performances for the Row-Row-Row-your-Boat song.
+
+<P></P>
+Master AIBO should be to your left (ie. stage left) of the Slave AIBO.
+<BR><IMG SRC="http://aibohack.com/2or3/twoaibo_stage.gif"></BR>
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

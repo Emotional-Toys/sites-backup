@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Radio Control Pleo
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Radio Control Pleo
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<CENTER>
+WARNING: Work in Progress - documentation may be incomplete in some areas
+</CENTER>
+
+<H2>Pleo's serial debug terminal (monitor)</H2>
+Pleo comes with several diagnostic services that let you monitor the behavior of a running program over a serial port.
+This is not necessary for MySkit/PleoMap or YAPT programming.
+IMHO it is essential for any Pawn programming and debugging is the ability to see 'printf' style messages in real-time.
+<BR>
+You can use Pleo's USB cable to connect to a PC (instructions coming soon).
+I prefer using the hardware serial port instead. It has several advantages, notaably it is always available (no USB startup problems) and can easily be converted to a wireless signal.
+
+<H2>Pleo's serial port</H2>
+<P></P>
+//TODO: add closeup of serial port
+<BR>
+The hardware serial port comes out of the bottom of the robot and it can be used  with a voltage shifter
+You can easily remove the plastic cover next to the on-off switch (NOTE: it will come off easily, but it won't go back on).
+<BR>
+So far we don't know the proper part number for the connector.
+The hardware serial port is low voltage (3.3V) so don't hook it directly to the RS-232 port on your PC.
+Adapter boards are available (including <A HREF="http://www.sparkfun.com/commerce/product_info.php?products_id=8165">this USB one</A>.
+<BR>
+//TODO: document the pins
+<P></P>
+
+For simple connection to the robot, you need an RF connection that will run at 115,200 bps.
+It should be a 3.3V device so it can be powered by the Pleo.
+<BR>
+NOTE: the interface to Pleo runs at 115,200bps, but the radio transmitter can't run continuously at that speed. Sometimes data is dropped.
+This is not important for most text monitor needs.
+
+<BR>
+There are two good candidates:
+
+<UL>
+<LI>BlueSMiRF device. This is a Bluetooth module.
+You connect one to your robot.
+Recommended if your computer already has Bluetooth, otherwise you must buy a Bluetooth<->USB 'dongle' and install the proper software on your PC.
+Available for purchase <A HREF=http://www.sparkfun.com/commerce/product_info.php?products_id=582>at SparkFun</A>.
+<BR>
+<LI>XBee radio modules. This is a proprietary protocol.
+You will need two of them.
+Development kits currently on sale at
+<A HREF=http://store.digi.com/index.cfm?fuseaction=product.display&Product_ID=622>digi.com</A> (the $99 development kit is all you need).
+Optional mounting parts are available for purchase <A HREF=http://www.sparkfun.com>at SparkFun</A>
+(<A HREF=http://www.sparkfun.com/commerce/product_info.php?products_id=8276>one of these</A> and
+<A HREF=http://www.sparkfun.com/commerce/product_info.php?products_id=8272>two of these</A>,
+or solder it directly like I did).
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+I have successfully used the XBee setup recommended here.
+<CENTER><IMG SRC="xbee_pleo.jpg"></CENTER>
+
+
+<P></P>
+<HR>
+<P></P>
+<H2>What is it good for</H2>
+So far the RF connection is good for debugging Pawn programs, or examining Pleo's default personality when it runs.
+<BR>
+The serial terminal could be used for other remote control applications.
+<BR>
+Unfortunately because of the way Pleo is built, transferring camera video or audio from the microphones over wireless is not practical.
+The camera and microphones go into the 2nd ARM CPU. The debug serial port is attached to the main CPU.
+<P></P>
+
+</BODY>
+</HTML>

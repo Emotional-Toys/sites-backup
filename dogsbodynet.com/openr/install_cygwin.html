@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Cygwin Install Tutorial</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Cygwin Install
+Tutorial</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">Table
+of Contents</span></span></big></big><br>
+      <ol>
+        <li><a href="install_cygwin.html#INTRO">Introduction</a></li>
+        <li><a href="install_cygwin.html#SETUP">Download Installer</a></li>
+        <li><a href="install_cygwin.html#LAUNCH">Cygwin Setup</a></li>
+        <li><a href="install_cygwin.html#INSTALLTYPE">Installation Type</a></li>
+        <li><a href="install_cygwin.html#INSTALLDIR">Installation Directory</a></li>
+        <li><a href="install_cygwin.html#LOCALDIR">Local Directory</a></li>
+        <li><a href="install_cygwin.html#CONNECTION">Select Connection Type</a></li>
+        <li><a href="install_cygwin.html#SITE">Choose Download Site</a></li>
+        <li><a href="install_cygwin.html#PACKAGES">Select Packages</a></li>
+        <li><a href="install_cygwin.html#PROGRESS">Download and Install</a></li>
+        <li><a href="install_cygwin.html#ICONS">Create Icons</a><br>
+        </li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">1. Introduction</span><br>
+      </span></big></big><br>
+OPEN-R requires a Unix/Linux like environment.&nbsp;&nbsp; To work with
+it on Windows, the Cygwin package can be used.&nbsp; It's based on
+Linux, and allows Linux programs (for the most part) to work under
+Windows.&nbsp; <br>
+      <br>
+I suggest having at least 1GByte of free disk space available to
+download and install Cygwin.<br>
+      <br>
+      <a name="SETUP"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">2. Download Installer</span></span></big></big><br>
+      <br>
+Download the following Cygwin setup program:&nbsp; <a
+ href="https://www.cygwin.com/setup-x86.exe">https://www.cygwin.com/setup-x86.exe</a>.&nbsp;&nbsp;
+Save it to your desktop, and launch once
+ready.&nbsp;&nbsp; NOTE:&nbsp; It's important use the Cygwin <span
+ style="font-weight: bold;">32-bit</span> installer.&nbsp; The OPEN-R
+SDK toolchain is not compatible with Cygwin-64.<br>
+      <br>
+      <a name="LAUNCH"></a><br>
+      <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">3.
+Cygwin Setup<br>
+            </span></span></big></big><br>
+After launching the setup program, you'll see this screen.&nbsp; Click
+the <span style="font-weight: bold;">Next</span> button...<br>
+            <br>
+            </td>
+            <td style="width: 15px; vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="width: 350px; vertical-align: top; text-align: center;"><img
+ alt="Page 1" src="cygwin1s.png" style="width: 350px; height: 274px;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="INSTALLTYPE"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">4.
+Installation Type<br>
+            </span></span></big></big><br>
+Select "Install from Internet".&nbsp;&nbsp; Click the <span
+ style="font-weight: bold;">Next</span> button...</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 2" src="cygwin2s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="INSTALLDIR"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">5.
+Installation Directory<br>
+            </span></span></big></big><br>
+The defaults are recommended.&nbsp;&nbsp; Cygwin software packages will
+install to
+"C:\Cygwin".&nbsp;&nbsp; <br>
+            <br>
+Click the <span style="font-weight: bold;">Next</span> button...<br>
+.</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 3" src="cygwin3s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="LOCALDIR"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">6.
+Local Directory</span></span></big></big><br>
+            <br>
+Pick somewhere temporary for downloading the files.&nbsp; Don't use the
+installation directory.&nbsp; ie: "C:\zzz" or "C:\Cygwin_Installer"<br>
+            <br>
+Click the <span style="font-weight: bold;">Next</span> button...<br>
+            <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 4" src="cygwin4s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="CONNECTION"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">7.
+Select Connection Type</span></span></big></big><br>
+            <br>
+Use "Direct Connection" (the default) unless you experience
+problems, or must use a proxy, etc...<br>
+            <br>
+Click the <span style="font-weight: bold;">Next</span> button...<br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 5" src="cygwin5s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="SITE"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">8.
+Choose Download Site</span></span></big></big><br>
+            <br>
+Pick one.&nbsp; ie: "mirrors.kernel.org".<br>
+            <br>
+Click the <span style="font-weight: bold;">Next</span> button, and
+setup downloads the list of available packages (this is quick).<br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 6" src="cygwin6s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="PACKAGES"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">9.
+Select Packages<br>
+            </span></span></big></big><br>
+In addition to any packages selected by default, you need...<br>
+            <div style="margin-left: 40px;">Devel "binutils"<br>
+Devel "gcc-g++" &amp; "gcc-core".<br>
+Devel "make"<br>
+Interpreters "perl", "perl_autorebase", "perl_base"<br>
+Interpreters "perl_manpages", "perl_pods"<br>
+Net "rsync"<br>
+Base "util-linux"<br>
+            </div>
+            <br>
+Other recommended packages...<br>
+            <div style="margin-left: 40px;">Libs "libjpeg8" &amp;
+"libjpeg-devel"<br>
+Libs "libpng12" &amp; "libpng12-devel"<br>
+Libs "zlib" &amp; "zlib-devel"<br>
+Anything else you like!<br>
+            </div>
+            <br>
+Click the text following the little arrow-circles to read "Install" or
+"Keep" to
+select a package.&nbsp;&nbsp; You can rerun the setup
+program again later to add more packages as needed.&nbsp;&nbsp; Click
+the <span style="font-weight: bold;">Next</span> button.<br>
+            <br>
+If you are prompted to install additional recommended or required
+packages, agree &amp; click <span style="font-weight: bold;">Next</span>
+button again.<br>
+            <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 7" src="cygwin7s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="PROGRESS"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">10.
+Download and Install<br>
+            </span></span></big></big><br>
+On a 1.5MBit DSL connection, this will take 5 to 10 minutes.<br>
+            <br>
+The download is approximately 45-90 MBytes, depending on the packages
+selected.&nbsp;&nbsp; After downloading everything, setup decompresses
+and installs the package files.<br>
+            <br>
+Good time for a snack...<br>
+            <br>
+            <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;"></span></span></big></big></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 8" src="cygwin8s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><a name="ICONS"></a></td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">11.
+Create Icons</span></span></big></big><br>
+            <br>
+For convenience, let the installer add icons to either the desktop or
+start menu (or both).&nbsp;&nbsp; <br>
+            <br>
+Click the <span style="font-weight: bold;">Finish</span> button, and
+you now have Cygwin installed!<br>
+            <br>
+            <big><span style="font-weight: bold; font-style: italic;">Congratulations!</span></big><br>
+            <br>
+Next, <a href="install_openr_win.html">Install the OPEN-R SDK</a> on
+Cygwin...<br>
+            <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top; text-align: center;"><img
+ alt="Page 9" src="cygwin9s.png" style="width: 350px; height: 274px;"></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

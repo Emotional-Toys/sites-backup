@@ -1,0 +1,392 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ StikZap - CLIE tool for AIBO owners (version 1.4)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ StikZap - CLIE tool for AIBO owners (version 1.4)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+StikZap is a CLIE program to check and fix certain types of AIBO memory sticks.
+<BR>
+StikZap tricks the (now defunct) Sony CLIE PDA to access the special
+pink sticks used by the (now defunct) Sony AIBO.
+<BR>
+NOTE: StikZap is a backup-like utility. It will save the necessary hardware stick information in a "Safety File" on the memory stick.
+It is intended for legal uses of making backup copies of software you own (and have legal licence to run).
+Don't make illegal copies of software.
+<P></P>
+
+<H3>CLIE models supported</H3>
+<UL>
+<LI>Confirmed to work: all known CLIE models
+<LI>AFAIK all PalmOS4 and PalmOS5 devices will work with StikZap (NX, TJ, TH, UX, VZ, NZ, NR, SL and many others).
+The StikZap program may warn you about "guessing". You can ignore those warnings.
+<LI>The very old (monochrome) PalmOS3 models like the S300 will also work. After running the program, these older CLIEs may crash
+(there is a problem with the color icons).
+Simply reset the S300 CLIE and all will be well again
+<P></P>
+<LI>Version 1.4 includes bug fix for PalmOS 4 devices.
+<LI>As always proceed at your own risk.
+<LI>Other PDAs won't work. It must be a CLIE (Sony Palm PDA) with a memory stick slot.
+</UL>
+
+<H3>Sticks Detected</H3>
+<UL>
+<LI>Over 2 dozen common and not-so-common memory sticks.
+<LI>Includes 8MB and 16MB sticks, and the two different sizes of AiboMind sticks (32MB and 128MB). The Darker blue 128MB AiboMind3 stick also counts as a "pink" stick.
+</UL>
+
+<H3>Sticks Repairable / Zap-able</H3>
+<UL>
+<LI>Any stick where you saved a "Safety File" (save it to the memory stick first, then save it to your PC)
+<LI>"PMS" Programmable Memory sticks (normally used for free programs like RCODE and Open-R SDK programs). Note "PMS" is a special kind of stick.
+<LI>AiboMind (1, 2 or 3) for ERS-7
+<LI>Note: PMS And AiboMind are special cases for your convenience (they can be 'zap'ed onto a stick even if you didn't bother to make a Safety File).
+In these two cases the physical sticks can run many different versions of software.
+As always, be sure the software you run is legally obtained.
+</UL>
+
+<H3>"Blank" Sticks that can be used as backups or as (blank) "PMS" sticks</H3>
+<UL>
+<LI>...more details to be filled in later
+<LI>An official pink PMS stick (8MB or 16MB)
+<LI>Any old pink stick (for the ERS-2x0 or ERS-31x) that you don't use anymore (eg: the lame Party Mascot).
+Make a full backup first (with Safety File), then use it for something else.
+<LI>An left-over 32MB AiboMind1/2 stick you don't use anymore (ie. after upgrading to Mind3)
+<LI>Any old light blue stick that works on the ERS-11x.
+<LI>Any light blue Sony "MSA-" stick of the right size (8MB -> 128MB: MSA-8, MSA-16, MSA-32, MSA-64, MSA-128)
+<LI>The pure white original Magic Gate sticks do work (but I find they run slower than newer sticks)
+<LI>MS Pro sticks will not work. Any stick larger than 128MB will not work.
+<LI>Sony "MSH-" sticks may or may not work for you.
+Sony stopped making the "MSA-" sticks and now sells the "MSH-" ones.
+Some people report success (with MSH-128).
+Test them to see if they work for you.
+<LI>Non-Sony brand memory sticks may or may not work. Test them to see.
+<LI>The 32MB Black MS DUO stick that comes with the PSP will work, but you need a stick extender. Test it carefully first.
+The stick extender may get stuck in the CLIE or the AIBO!
+</UL>
+
+<CENTER>
+<TABLE width=80% border=10 bgcolor=#F030F0 cellspacing=10 cellpadding=20>
+<tr><td colspan=1>
+<H2>Newbie Warning</H2>
+If you've never used a stick reader before, or backed up your memory stick before, you shouldn't be using StikZap.
+<BR>
+StikZap is not that difficult or risky, but if it is the first time you've attempted stick backups, you may screw it up.
+<BR><B>
+Improper use of StikZap (without making a proper backup first) can screw up your memory sticks.
+</B>
+<BR>
+Become familiar with more general uses of a SONY BRAND stick reader before continuing.
+<BR>
+This tutorial assumes you are generally familiar with using a CLIE (installing and running programs).
+You should also be familar with backing up your memory stick contents to your computer
+(using a Sony brand stick reader or your CLIE in MSImport/DataImport mode).
+<BR>
+</td></tr>
+</TABLE>
+</CENTER>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Installation</H2>
+<UL>
+<LI>Backup your PDA first. Hotsync is usually sufficient.
+<LI>TIP: Soft reset before you start. Not strictly necessary, but helpful when trying a new program for the first time.
+<LI>Download the program <A HREF="StikZap_14.prc">StikZap_14.prc</A>
+<LI>Install the .prc file on your CLIE, using HotSync or copying to stick. If you don't know how to do this, go read the "Newbie Warning".
+<LI>The program "StikZap" should appear in your program launcher. Don't run it right now, especially if there is no memory stick in the CLIE.
+</UL>
+
+<CENTER>
+<TABLE width=80% border=10 bgcolor=#F00000 cellspacing=10 cellpadding=20>
+<tr><td colspan=1>
+<H2>Only use a Sony Brand memory stick reader !</H2>
+Your CLIE running in "MSImport" or "DataImport" mode is safe too (connected to your PC with the USB cable).
+</td></tr>
+</TABLE>
+</CENTER>
+
+<H2>Using the program - common operations</H2>
+
+<UL>
+<LI>Proceed at your own risk. StikZap can be used to fix your damaged sticks. When used improperly, it can break your working sticks.
+<LI>First insert the memory stick into your CLIE. The CLIE will usually beep.
+Sometimes the CLIE launcher will show you the programs on the stick (in this case none).
+<LI>Run the "StikZap" program on your CLIE, it will tell you what to do. See below for common scenarios.
+<LI>When done, remove the memory stick from the CLIE
+<LI>If appropriate put the stick in your AIBO and test it.
+<LI>NOTE: Be sure the memory stick is not write protected (switch on back should not show red)
+<LI>NOTE: the CLIE will usually create a "PALM" folder at the top level of the memory stick (with Launcher and PROGRAMS folders inside). You can ignore it.
+</UL>
+
+<P></P>
+<H3>Common Case : Backup your sticks</H2>
+This is the most common case. You should do this before playing around with the contents of your stick.
+NOTE: In general there is no need to backup a "PMS" programmable stick
+<UL>
+<LI>First insert the memory stick into your CLIE. The CLIE will usually beep.
+<LI>Run the "StikZap" program on your CLIE. It will Check the stick for you.
+<LI>The first time it is run, StikZap should recommend "Create Safety, then copy entire stick to PC"
+<LI>Press the "Create Safety" button, then press "OK"
+<LI>You are done with StikZap. You must backup the entire memory stick to your PC for your own safety.
+<P></P>
+<LI>Option One (doing it on the CLIE):
+<UL>
+<LI>Exit StikZap.
+<LI>Run the MSImport or DataImport program on the CLIE.
+<LI>Plug in the CLIE (or CLIE in a cradle) to your PC with the USB cable
+<LI>The CLIE's memory stick will appear as a new drive on "My Computer" (if it doesn't you may need to install the CLIE drivers on your PC)
+<LI>Drag the files in that drive to your Desktop, or use a program like WinZip to create a backup copy of the entire stick contents.
+</UL>
+<P></P>
+<LI>Option Two (using a separate, Sony Brand, stick reader)
+<UL>
+<LI>Remove the memory stick from the CLIE (the StikZap program will exit)
+<LI>Insert the memory stick in your separate, Sony Brand, stick reader attached to your PC.
+<LI>Drag the files from the memory stick drive to your Desktop, or use a program like WinZip to create a backup copy of the entire stick contents.
+</UL>
+</UL>
+
+The backup is <i>your personal</i> backup of your stick.
+Keep it safe.
+It includes information about your stick hardware, the software (copyrighted by Sony and others), personal information about your AIBO, as well as any custom personality your robot has developed.
+Do not share this file or post it to the web.
+Even if you don't care about the invasion of your privacy, it is probably illegal in your country to post such copyrighted material (aka don't support piracy).
+
+<H3>Common Case : Stick gets corrupted / Restore it</H3>
+<UL>
+<LI>if your stick is corrupted at a low level, you may need to format it first (tutorial to be written)
+<LI>Place the corrupted stick into your stick reader (or if using your CLIE as a stick reader, run the MSImport/DataImport program)
+<LI>Using your PC, select all the files and folders on the memory stick and delete them. If necessary, empty the Recycling Bin.
+<LI>Restore the backup you made earlier to the memory stick. This must be a backup you made after the "Create Safety" step described above.
+<LI>There should be an "OPEN-R" folder at the topmost folder of the memory stick. There may be others ("CUSTOM", "PALM" etc)
+<LI>Remove the stick from the memory stick reader and place it in the CLIE. If using the CLIE as a memory stick reader, stop and exit MSImport/DataImport.
+<LI>Run the "StikZap" program on your CLIE. It will Check the stick for you.
+<LI>It should automatically recommend "Press 'Use Safety', (only if you kept a backup)"
+<LI>Press the "Use Safety" button, and pick "Yes"
+<LI>Remove the stick from your CLIE, and place in AIBO. Boot AIBO and see if it works.
+<LI>If it fails to boot, the stick may have lower level formatting problems, or may not work as an AIBO stick.
+</UL>
+NOTE: Some websites have "Virgin" memory stick images of various commercial AiboWare programs. These won't work for this purpose.
+
+<P></P>
+<H3>Common Case : Make a working backup (stick copy)</H3>
+Start with a stick you aren't using. If an AIBO stick, make a backup with the safety file (see above) and save it away somewhere on your PC.
+See above for other kinds of "blank" sticks you can use (ie. old pink stick, or old light blue sticks).
+<BR>
+Then follow the instructions above for restoring a corrupted stick.
+<BR>
+NOTE: Some websites have "Virgin" memory stick images of various commercial AiboWare programs. These won't work for this purpose.
+<P></P>
+If you have a legal licence to run this software, this is a 'fair use' backup of software you have purchased.
+If you haven't legally obtained a licence to run this software, or if you sold the original, you shouldn't be using these backups.
+
+
+<P></P>
+<H3>Common Case: Make your own "PMS" stick</H3>
+
+Start with a stick you aren't using. If an AIBO stick, make a backup with the safety file (see above) and save it away somewhere on your PC.
+See above for other kinds of "blank" sticks you can use (ie. old pink stick, or old light blue sticks).
+After you have a good backup, you can "ZAP" it to make it a blank PMS stick.
+<P></P>
+<UL>
+<LI>If you care what was on the stick before, be sure you have a backup (see above)
+<LI>Insert the memory stick into your CLIE. The CLIE will usually beep.
+<LI>Run the "StikZap" program on your CLIE. It will Check the stick for you. You can ignore the recommendations.
+<LI>From the menu, pick "ZAP PMS". Answer "Yes" and your stick will now be a PMS stick.
+<LI>Using a stick reader (or the CLIE in MSImport/DataImport mode), delete any old files and install a PMS personality and see if it works.
+<LI>Suggestions: (especially for testing the first time)
+<UL>
+<LI>For the ERS-210/210A - <A HREF="../rcode/RCodePlus252A(210).zip">RCodePlus 2.52A (210)</A>
+<LI>For the ERS-220/220A - <A HREF="../rcode/RCodePlus252A(220).zip">RCodePlus 2.52A (220)</A>
+<LI>For the ERS-311/312/31L - <A HREF="../rcode/RCodePlus252A(31x).zip">RCodePlus 2.52A (31x)</A>
+<LI>For the ERS-7 - <A HREF="../ers7/RCODE7_YART703_E.zip">RCODE7_YART703_E.zip</A>
+</UL>
+<LI>Remove the stick from the stick reader (or CLIE) and put it in AIBO.
+<LI>Boot AIBO, and see if it stretches and sit up.
+<LI>If it fails to boot or doesn't stretch the stick you tried may not work in AIBO (or may have format problems).
+<LI>If there is a problem AIBO usually shut downs early in the boot process.
+If the stick stays locked for more than 2 or 3 minutes, then eject the stick using the leg tool.
+
+</UL>
+
+<H3>Special Case : untested CPU</H2>
+It has been tested on a small number of models, but StikZap is smart and will guess where necessary.
+If you test it on a newer model, it will tell you it is guessing.
+<BR>
+If the guess works, please email me with the results of the menu command "Guess Cpu"
+<BR>
+If it fails, please run the menu command "Save Cpu" with an (8 or 16MB) Aibo memory stick in the CLIE.
+It will create a file on the stick called INTERNAL.BIN. Please email me the file.
+No promises that additional models will be supported.
+Currently there are many models that do work.
+
+
+<P></P>
+<HR>
+<P></P>
+
+<H2>Legal Notice - Copyright Issues</H2>
+<P></P>
+You can't legally run software unless you've already purchased the legal rights to run it on your AIBO.
+<BR>
+"PMS" sticks are usually used for free downloaded software (like RCODE or OpenR SDK programs).
+There are a few cases of not-free software that runs on the "PMS", and legal licensing of the software must be obtained separately (StikZap doesn't change the legal terms where you bought the stick)
+AiboMind sticks can only run on the ERS-7 series robots, and all ERS-7 owners have a legal license to at least one version of AiboMind software.
+<P></P>
+StikZap doesn't change the rules for running legally obtained software. When obtained legally, you can make a 'fair' use backup.
+<P></P>
+The "fair use" rules for backups don't let you pirate software.
+If you make a backup of an AIBO memory stick you bought and own, you can legally use that backup yourself, and only as long as you own/keep the original.
+You can't sell the backups.
+If you do want to sell it, you can sell the original, but you must destroy any backups.
+NOTE: This has nothing to do with AIBO in particular, but any copyrighted material.
+In reality you never buy software, you are buying the right to run it but the rules are essentially the same (ie. you bought the rights to the software, if you sell it to someone else, you can't legally use it anymore)
+<P></P>
+
+<H2>Legal Notice - DMCA</H2>
+From the <A HREF="http://www.copyright.gov/title17/92chap12.html">DMCA</A>:
+<I> to "circumvent a technological measure" means to descramble a scrambled work, to decrypt an encrypted work, or otherwise to avoid, bypass, remove, deactivate, or impair a technological measure, without the authority of the copyright owner...</I>
+
+<P></P>
+This tool does not circumvent the copy protection mechanism of the Sony software.
+All copy protection technology remains intact.
+There is no "encryption" technology involved. It is simply a low-level stick reader and writer.
+<P></P>
+<HR>
+<P></P>
+<H2>Source Code</H2>
+<P></P>
+A few people have asked for the source code to StikZap.
+It is included below to show you generally how it works on the CLIE and that it won't work anywhere else.
+AIBO specific data (hardware and software keys) are not included in this public version.
+If you have an idea for a new feature, please send me email.
+<BR>
+<LI><A HREF="StikZap_13_SRC.zip">StikZap_13_SRC.zip</A>
+<BR>
+It is a CodeWarrior project. CodeWarrior for PalmOS is a not-free development environment which has been discontinued.
+It can be adapted to work with free open-source tools, but it is probably not worth the effort.
+If you have an idea for a new feature, please send me email.
+<P></P>
+This is a Palm and CLIE specific program that hacks into the memory stick driver.
+You can't use this source code to port it to other platforms (like WinCE/PocketPC/MobilePC or other USB stick readers).
+<BR>
+<B>Bottom Line:</B> the source code is not going to be useful to you.
+<P></P>
+
+</BODY>
+</HTML>

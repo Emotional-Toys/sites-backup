@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+OPEN-R SDK and the ERS-31x
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+OPEN-R SDK and the ERS-31x
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+
+<H2>Overview</H2>
+It is possible to port a working application to the ERS-31X series.
+Get it working on the ERS-2x0 series first. When running on the ERS-31X you don't have the debugging WiFi LAN console to help you.
+
+<P></P>
+<H2>Configuration Changes</H2>
+<P></P>
+
+Since there is no WiFi LAN on the ERS-31x, you should use the BASIC memory stick ( /usr/local/OPEN_R_SDK/OPEN_R/MS/BASIC/[NO]MEMPROT )
+
+<P></P>
+
+You need to add the following lines to the \OPENR\MW\CONF\DESIGN.CFG file:
+<pre>
+	[ERS-310]
+	0008.*.*-1
+	0009.*.*-0
+</pre>
+This will match all models of ERS-31x (Latte, Macaron, Pugsly) and call them "ERS-310".
+<BR>
+If there are model specific values in the DESIGNDB.CFG file (or elsewhere in your code), you must adapt them for the "ERS-310" model as well.
+<P></P>
+<HR>
+<H2>Joint/Sensor Changes</H2>
+The configuration changes are the easy part.
+All the joints and sensors are named differently on the ERS-310.
+So search your code (and data files) for anything with "PRM:" in it, and expect to change that code.
+<P></P>
+The joint ranges and functionality are also different on the ERS-310, in particular for the head.
+<P></P>
+
+
+<A name=LEGS>
+<TABLE border = 1>
+<TR>
+<TH>Description</TH>
+<TH>ERS-2x0</TH>
+<TH>ERs-31x</TH>
+</TR>
+
+<TR>
+<TD>HEAD TILT</TD>
+<TD>"PRM:/r1/c1-Joint2:j1"</TD>
+<TD>"PRM:/r1/c1-Joint2:11"</TD>
+</TR>
+<TR>
+<TD>HEAD TILT2</TD>
+<TD>n/a</TD>
+<TD>"PRM:/r1/c1/c2-Joint2:12"</TD>
+</TR>
+<TR>
+<TD>HEAD PAN</TD>
+<TD>"PRM:/r1/c1/c2-Joint2:j2"</TD>
+<TD>"PRM:/r1/c1/c2/c3-Joint2:13"</TD>
+</TR>
+<TR>
+<TD>HEAD ROLL</TD>
+<TD>"PRM:/r1/c1/c2/c3-Joint2:j3"</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD>LFLEG J1 (Left Front Leg)</TD>
+<TD>"PRM:/r2/c1-Joint2:j1"</TD>
+<TD>"PRM:/r2/c1-Joint2:21"</TD>
+</TR>
+<TR>
+<TD>LFLEG J2</TD>
+<TD>"PRM:/r2/c1/c2-Joint2:j2"</TD>
+<TD>"PRM:/r2/c1/c2-Joint2:22"</TD>
+</TR>
+<TR>
+<TD>LFLEG J3</TD>
+<TD>"PRM:/r2/c1/c2/c3-Joint2:j3"</TD>
+<TD>"PRM:/r2/c1/c2/c3-Joint2:23"</TD>
+</TR>
+<TR>
+<TD>LRLEG J1 (Left Rear Leg)</TD>
+<TD>"PRM:/r3/c1-Joint2:j1"</TD>
+<TD>"PRM:/r3/c1-Joint2:31"</TD>
+</TR>
+<TR>
+<TD>LRLEG J2</TD>
+<TD>"PRM:/r3/c1/c2-Joint2:j2"</TD>
+<TD>"PRM:/r3/c1/c2-Joint2:32"</TD>
+</TR>
+<TR>
+<TD>LRLEG J3</TD>
+<TD>"PRM:/r3/c1/c2/c3-Joint2:j3"</TD>
+<TD>"PRM:/r3/c1/c2/c3-Joint2:33"</TD>
+</TR>
+<TR>
+<TD>RFLEG J1 (Right Front Leg)</TD>
+<TD>"PRM:/r4/c1-Joint2:j1"</TD>
+<TD>"PRM:/r4/c1-Joint2:41"</TD>
+</TR>
+<TR>
+<TD>RFLEG J2</TD>
+<TD>"PRM:/r4/c1/c2-Joint2:j2"</TD>
+<TD>"PRM:/r4/c1/c2-Joint2:42"</TD>
+</TR>
+<TR>
+<TD>RFLEG J3</TD>
+<TD>"PRM:/r4/c1/c2/c3-Joint2:43"</TD>
+<TD>"PRM:/r4/c1/c2/c3-Joint2:j3"</TD>
+</TR>
+<TR>
+<TD>RRLEG J1 (Right Rear Leg)</TD>
+<TD>"PRM:/r5/c1-Joint2:j1"</TD>
+<TD>"PRM:/r5/c1-Joint2:51"</TD>
+</TR>
+<TR>
+<TD>RRLEG J2</TD>
+<TD>"PRM:/r5/c1/c2-Joint2:j2"</TD>
+<TD>"PRM:/r5/c1/c2-Joint2:52"</TD>
+</TR>
+<TR>
+<TD>RRLEG J3</TD>
+<TD>"PRM:/r5/c1/c2/c3-Joint2:j3"</TD>
+<TD>"PRM:/r5/c1/c2/c3-Joint2:53"</TD>
+</TR>
+</TABLE>
+<P></P>
+<HR>
+<H2>Hard core debugging</H2>
+If you want to see 'printf' debugging information on your ERS-31X, you can take your AIBO apart and wire up a serial port.
+This is only for the hard core people who are willing to void their warranty and solder onto their AIBO's brain.
+This is not a substitute for the WiFi LAN debugging console (it is output only).
+Email me for details.
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

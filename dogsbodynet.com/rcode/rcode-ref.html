@@ -1,0 +1,2754 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>R-Code Reference</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">R-Code Reference</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <h2 style="text-decoration: underline;">Table of Contents</h2>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+      <center>
+      <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 33%; white-space: nowrap; vertical-align: top;">
+            <ol>
+              <li><a href="rcode-ref.html#TEXTFORMAT">Text Formatting
+Requirements</a></li>
+              <li><a href="rcode-ref.html#COMMENTS">Comments</a></li>
+              <li><a href="rcode-ref.html#JUMPLABEL">Jump Labels</a></li>
+              <li><a href="rcode-ref.html#NUMBERS">Numbers</a></li>
+              <li><a href="rcode-ref.html#CONTROLCMD">Control Commands</a></li>
+              <li><a href="rcode-ref.html#ACTIONCMD">Action/Skit Commands</a></li>
+              <li><a href="rcode-ref.html#DEBUGCMDS">Debug Commands</a></li>
+              <li><a href="rcode-ref.html#JUMPCMDS">Jump/Loop Commands</a></li>
+              <li><a href="rcode-ref.html#SUBROUTINES">Subroutine Commands</a></li>
+              <li><a href="rcode-ref.html#VARCMDS">Variable Declare &amp; Assign</a></li>
+              <li><a href="rcode-ref.html#STACKCMDS">Stack Commands</a></li>
+              <li><a href="rcode-ref.html#OPERATORS">Operators</a></li>
+              <li><a href="rcode-ref.html#STACKOPS">Stack Operators</a></li>
+              <li><a href="rcode-ref.html#SYSTEMVARS">System Variables</a></li>
+              <li><a href="rcode-ref.html#PLATFORMVARS">Platform Specific Variables</a></li>
+            </ol>
+            </td>
+            <td
+ style="width: 50%; white-space: nowrap; vertical-align: top;"><br>
+            <br>
+            <br>
+            <br>
+( <small><a href="rcode-ref.html#EDIT">EDIT</a>, <a href="rcode-ref.html#END">END</a>, <a
+ href="rcode-ref.html#RUN">RUN</a>, <a href="rcode-ref.html#EXIT">EXIT</a>, <a href="rcode-ref.html#HALT">HALT</a>,
+            <a href="rcode-ref.html#INIT">INIT</a>, <a href="rcode-ref.html#BSTOP">!</a> </small>)<br>
+( <small><a href="rcode-ref.html#PLAY">PLAY</a>,&nbsp;<a href="rcode-ref.html#WAIT">WAIT</a>,&nbsp;<a
+ href="rcode-ref.html#STOP">STOP</a>,&nbsp;<a href="rcode-ref.html#QUIT">QUIT</a></small> )<br>
+(&nbsp;<small><a href="rcode-ref.html#PRINT">PRINT</a>,&nbsp;<a href="rcode-ref.html#VDUMP">VDUMP</a></small>
+)<br>
+(&nbsp;<small><a href="rcode-ref.html#GO">GO</a>,&nbsp;<a href="rcode-ref.html#IF">IF</a>,&nbsp;<a
+ href="rcode-ref.html#SWITCH">SWITCH</a>, <a href="rcode-ref.html#CSET">CSET</a>,&nbsp;<a
+ href="rcode-ref.html#CASE">CASE</a>,&nbsp;<a href="rcode-ref.html#FOR">FOR</a>, <a href="rcode-ref.html#WHILE">WHILE</a>,
+            <a href="rcode-ref.html#REPEAT">REPEAT</a>, <a href="rcode-ref.html#DO">DO</a>, <a
+ href="rcode-ref.html#BREAK">BREAK</a></small>
+)<br>
+(&nbsp;<small><a href="rcode-ref.html#CALL">CALL</a>, <a href="rcode-ref.html#ARG">ARG</a>,&nbsp;<a
+ href="rcode-ref.html#RETURN">RETURN</a>, <a href="rcode-ref.html#RET">RET</a></small> )<br>
+( <small><a href="rcode-ref.html#GLOBAL">GLOBAL</a>, <a href="rcode-ref.html#LOCAL">LOCAL</a>,&nbsp;<a
+ href="rcode-ref.html#LET">LET</a>,&nbsp;<a href="rcode-ref.html#SET">SET</a>,&nbsp;<a href="rcode-ref.html#CLR">CLR</a>,
+            <a href="rcode-ref.html#VSAVE">VSAVE</a>, <a href="rcode-ref.html#VLOAD">VLOAD</a></small>
+)<br>
+(&nbsp;<small><a href="rcode-ref.html#PUSH">PUSH</a>,&nbsp;<a href="rcode-ref.html#POP">POP</a>,&nbsp;<a
+ href="rcode-ref.html#DUP">DUP</a>,&nbsp;<a href="rcode-ref.html#JT">JT</a>,&nbsp;<a href="rcode-ref.html#JF">JF</a></small>
+)<br>
+(&nbsp;<small><a href="rcode-ref.html#ADD">ADD</a>, <a href="rcode-ref.html#SUB">SUB</a>,&nbsp;<a
+ href="rcode-ref.html#MUL">MUL</a>, <a href="rcode-ref.html#DIV">DIV</a>, <a href="rcode-ref.html#MOD">MOD</a>,
+            <a href="rcode-ref.html#AND">AND</a>, <a href="rcode-ref.html#IOR">IOR</a>, <a
+ href="rcode-ref.html#XOR">XOR</a>, <a href="rcode-ref.html#NOT">NOT</a>, <a href="rcode-ref.html#LAND">LAND</a>,
+            <a href="rcode-ref.html#LIOR">LIOR</a>, <a href="rcode-ref.html#LNOT">LNOT</a>, <a
+ href="rcode-ref.html#RND">RND</a></small>
+)<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      <hr style="width: 100%; height: 2px;"> <big><big><span
+ style="font-weight: bold;"></span></big></big><a name="TEXTFORMAT"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">1. Text
+Formatting
+Requirements</big></big><br>
+      <ul>
+        <li>Lines must be less than 127 characters (comments included).</li>
+        <li>Only alphanumeric &amp; underscore characters (A-Z, 0-9,
+and _ ) should be used in variable names.</li>
+        <li>All upper-case words are reserved for R-Code.&nbsp;&nbsp;
+Use lower-case, or mixed-case for variable names.</li>
+        <li>Spaces &amp; tab can be used to indent commands for
+readability.<br>
+        </li>
+        <li>R-Code commands &amp; parameters must be separated by colon
+characters ( : )</li>
+      </ul>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Example: </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">SET:my_var_name:123<br>PLAY:ACTION:STAND<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="COMMENTS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">2. Comments</big></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">You can place comments
+(text which AIBO skips) by using
+double-slashes ( // ).&nbsp;&nbsp; Everything afterwards is
+ignored. <br>
+            <br>
+Example: </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">PLAY:ACTION:STAND // Make AIBO stand up<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="JUMPLABEL"></a><br>
+      <big style="font-style: italic;"><big
+ style="text-decoration: underline;"><span style="font-weight: bold;">3.
+Jump
+Labels</span></big></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Lines <span
+ style="font-style: italic;"><span style="font-weight: bold;">starting</span>
+            </span>with
+colon characters define jump labels.&nbsp;&nbsp; Can be used
+with <a href="rcode-ref.html#IF">IF</a>, <a href="rcode-ref.html#GO">GO</a>, and <a href="rcode-ref.html#CALL">CALL</a>
+commands (and others).&nbsp; <br>
+            <br>
+Example: </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand repeatedly forever...<br>:JumpHere<br>PLAY:ACTION:SIT<br>WAIT<br>PLAY:ACTION:STAND<br>WAIT<br>GO:JumpHere<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><span
+ style="font-family: monospace;"><a name="NUMBERS"></a><br>
+      </span><big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">4. Numbers</big></big><br>
+      <ul>
+        <li>Decimal numbers start with 0 to 9, or plus/minus signs (+ -)<br>
+        </li>
+        <li>Hexadecimal numbers (base 16) must start with 0x or 0X, and
+may contain digits 0 to 9, and A to F.<br>
+        </li>
+        <li>Octal numbers (base 8) must start with 0o or 0O, and may
+contain digits 0 to 7.</li>
+        <li>Binary numbers (base 2) must start with 0b or 0B, and may
+contain digits 0 and 1.</li>
+      </ul>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Examples: </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">SET:decnum:123          // Positive decimal number<br>SET:posnum:+123         // Positive decimal number<br>SET:negnum:-456         // Negative decimal number<br>SET:hexnum:0xABC        // Hexadecimal number (2748 in decimal)<br>SET:octnum:0o34567      // Octal number (14711 in decimal)<br>SET:binnum:0b01010101   // Binary number (85 in decimal) <br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="CONTROLCMD"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">5. Control
+Commands</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#EDIT">EDIT</a></td>
+            <td>Load new program</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#END">END</a></td>
+            <td>End loading program</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#RUN">RUN</a></td>
+            <td>Begin program (make AIBO perform program).</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#EXIT">EXIT</a></td>
+            <td>Stop program</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#HALT">HALT</a></td>
+            <td>Shutdown AIBO (power off)</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#INIT">INIT</a></td>
+            <td style="vertical-align: top;">Restart AIBO (reinitialize)</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#BSTOP">!</a></td>
+            <td>Force program to stop.</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="EDIT"></a><br>
+      <big><span style="font-weight: bold;">EDIT - Load New
+Program</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Place AIBO into program
+load mode.&nbsp;&nbsp; Any previously loaded program is
+erased.&nbsp;&nbsp; Normally used for transferring programs from your
+PC to AIBO, such as with Aibnet.&nbsp;&nbsp; Stop program load with <span
+ style="font-weight: bold;"><a href="rcode-ref.html#END">END</a> </span>command.<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">EDIT<br>// Make AIBO sit &amp; stand repeatedly forever...<br>:JumpHere<br>PLAY:ACTION:SIT<br>WAIT<br>PLAY:ACTION:STAND<br>WAIT<br>GO:JumpHere<br>END<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="END"></a><br>
+      <big><span style="font-weight: bold;">END - End Program Load Mode</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Use only in conjunction
+with <a style="font-weight: bold;" href="rcode-ref.html#EDIT">EDIT</a>.&nbsp;&nbsp;
+See above.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="RUN"></a><br>
+      <big><span style="font-weight: bold;">RUN - Begin Program</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Make AIBO start performing
+program loaded with <a style="font-weight: bold;" href="rcode-ref.html#EDIT">EDIT</a>/<a
+ style="font-weight: bold;" href="rcode-ref.html#END">END</a> commands.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="EXIT"></a><br>
+      <big><span style="font-weight: bold;">EXIT - Stop Program</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Make AIBO stop performing
+program.&nbsp;&nbsp; Can be used within a loaded "running" program to
+stop itself.&nbsp;&nbsp;&nbsp; Any skit being played will continue to
+run until finished.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="HALT"></a><br>
+      <big><span style="font-weight: bold;">HALT - Shutdown AIBO</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Make AIBO stop performing
+program and shutdown.&nbsp;&nbsp; Can be used within a loaded "running"
+program to make AIBO turn itself off (for example if the battery gets
+low). </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="INIT"></a><br>
+      <big><span style="font-weight: bold;">INIT - Restart/Reinitialize
+AIBO</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Restart the R-Code
+parser.&nbsp; <br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+INIT:&lt;init-level&gt;</span><br style="font-family: monospace;">
+            <br>
+Only use values 2 or 9.&nbsp;&nbsp; All others are reserved or
+undefined.<br>
+            <br>
+Examples:<span style="font-family: monospace;"></span><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">INIT:2   // Reset dictionary &amp; variable tables.<br>INIT:9   // Shutdown &amp; reboot AIBO<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="BSTOP"></a><br>
+      <big><span style="font-weight: bold;">! - Force Program to Stop</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Force AIBO to stop
+performing program, and cancel playback immediately also.&nbsp;&nbsp;
+Leaves AIBO in an unknown posture. </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="BBSTOP"></a><br>
+      <big><span style="font-weight: bold;">!! - Normal Program Stop</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Make AIBO to stop
+performing program.&nbsp; Same as <a style="font-weight: bold;"
+ href="rcode-ref.html#EXIT">EXIT</a> command.&nbsp;&nbsp; Any skit
+being played will continue to run until finished. </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <br>
+      <hr style="width: 100%; height: 2px;"><a name="ACTIONCMD"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">6. Action/Skit
+Commands</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#PLAY">PLAY</a></td>
+            <td>Perform skit/action (add to a queue)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#WAIT">WAIT</a><br>
+            </td>
+            <td>Pause R-Code program (not skit playback).<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#STOP">STOP</a><br>
+            </td>
+            <td>Empty skit/action queue, and stop autorepeating skits
+(such as tail wagging).<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#QUIT">QUIT</a><br>
+            </td>
+            <td>Empty skit/action queue, and immediately stop skit
+playback.</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="PLAY"></a><br>
+      <big><span style="font-weight: bold;">PLAY - Perform skit/action</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Add a skit or action to
+the playback queue.&nbsp;&nbsp; You can dispatch several skits at once,
+and AIBO will perform them sequentially in turn.&nbsp;&nbsp; The R-Code
+program continues to run while the skit is being performed.&nbsp;&nbsp;
+If you want to pause the program until the skit finishes, see the <a
+ style="font-weight: bold;" href="rcode-ref.html#WAIT">WAIT</a> command.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+PLAY:ACTION:skitname[:optional parameters]</span><br
+ style="font-family: monospace;">
+            <br>
+Note some builtin actions require parameters:<br>
+            <ul>
+              <li>Walk/kick/touch actions need an angle and distance
+(in millimeters).<br>
+              </li>
+              <li>Turn actions need an angle.<br>
+              </li>
+              <li>Head movement actions need horizontal (left/right)
+and vertical angles (up/down).</li>
+              <li>Search/Track actions need a target, which must be
+PINK_BALL.</li>
+            </ul>
+Angles are in degrees.&nbsp; Negative angles mean right. &nbsp;
+Positive
+angles means left. <br>
+&nbsp;&nbsp;&nbsp; 0 is straight-ahead.&nbsp; <br>
+&nbsp;&nbsp;&nbsp; 90 means left.<br>
+&nbsp;&nbsp; -90 means right. &nbsp;&nbsp; <br>
+&nbsp;&nbsp; -180 is backwards.<br>
+            <br>
+Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Perform the beethoven5 skit (present in DogsLife)<br>PLAY:ACTION:beethoven5<br>WAIT // wait for skit to finish<br>  <br>PLAY:ACTION:STAND         // Stand up (if not already doing so)<br>WAIT<br>  <br>PLAY:ACTION:WALK:0:500    // Walk 500mm forwards<br>WAIT<br>  <br>PLAY:ACTION:KICK:45:200   // Kick something 200mm away at 45 degrees<br>WAIT<br>  <br>PLAY:ACTION:TOUCH:45:200  // Touch something 200mm away at 45 degrees<br>WAIT<br>  <br>PLAY:ACTION:TURN:360      // Turn in place completely around.<br>WAIT<br>  <br>PLAY:ACTION:MOVE_HEAD:-45:-20 // Look right and down<br>WAIT<br>  <br>PLAY:ACTION:SEARCH:PINK_BALL  // Search for the ball<br>WAIT<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="WAIT"></a><br>
+      <big><span style="font-weight: bold;">WAIT </span></big><big><span
+ style="font-weight: bold;">- Pause Program&nbsp;</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"> Pause R-Code program
+temporarily from doing anything else. <br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+WAIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pause until playback queue empty.&nbsp; Queued skits continue.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Does nothing if nothing queued or being performed.<br
+ style="font-family: monospace;">
+            </span><span style="font-family: monospace;">&nbsp;&nbsp;
+WAIT:&lt;number&gt;&nbsp;&nbsp;&nbsp;&nbsp; Wait number of milliseconds
+(1 to 30000).</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+WAIT:&lt;part&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R-Code 1.2 and
+above.&nbsp;&nbsp; Wait until given part of AIBO idle.</span><br
+ style="font-family: monospace;">
+            <br>
+The time/number parameter has a resolution of 32
+milliseconds.&nbsp;&nbsp; ie:&nbsp; <br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; Values 1
+to 32 equal 32</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; Values
+33 to 64 equal 64</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; Etc...</span><br
+ style="font-family: monospace;">
+            <br>
+The part parameter can be one of the following:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_ALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All motions</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_HEAD&nbsp;&nbsp;&nbsp;&nbsp; Head motion</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_LEG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Leg motion</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_TAIL&nbsp;&nbsp;&nbsp;&nbsp; Tail motion</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_MOUTH&nbsp;&nbsp;&nbsp; Chin motion</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+MOTION_EAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ear motion</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+SOUND_ALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All sounds</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;"></span><span
+ style="font-family: monospace;">&nbsp;&nbsp;
+LED_ALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All lights</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LED_FACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Face (eye) lights</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LED_MODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mode lights</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LED_TAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tail lights<br>
+            <br>
+Examples:<br>
+            </span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">WAIT:2000   // Pause R-Code for two seconds.<br>  <br>PLAY:ACTION:STAND<br>WAIT        // Pause R-Code until STAND action finished.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="STOP"></a><br>
+      <big><span style="font-weight: bold;">STOP - Empty Playback Queue</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Empty the skit/action
+playback queue, and stop autorepeating skits once last iteration
+finishes.<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">PLAY:ACTION:PALONE.AUTO.TAILH // Wag tail horizontally...<br>WAIT:2000                     // ...for two seconds<br>STOP<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="QUIT"></a><br>
+      <big><span style="font-weight: bold;">QUIT </span></big><big><span
+ style="font-weight: bold;"> - Empty Playback Queue, and Stop Playback
+Immediately</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Empty
+the skit/action playback queue, and all playback immediately. &nbsp;
+Can
+leave AIBO in an unknown posture, forcing a stretch to reset things.
+&nbsp;
+Not recommended for normal use. </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <br>
+      <hr style="width: 100%; height: 2px;"><a name="DEBUGCMDS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">7. Debug
+Commands</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#PRINT">PRINT</a></td>
+            <td>Display a message, or contents of one or more variables<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#VDUMP">VDUMP</a><br>
+            </td>
+            <td>Show value of variable<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <br>
+      <a name="PRINT"></a><br>
+      <big><span style="font-weight: bold;">PRINT </span></big><big><span
+ style="font-weight: bold;"> - Display a Message</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Display a message, and
+optionally the value of one or more variables.&nbsp;&nbsp; Useful only
+if connected over WLAN.<br>
+            <br>
+Usage:<br>
+&nbsp;&nbsp; PRINT:"message"[:one or more variables]<br>
+            <br>
+Message must be enclosed in quotes.&nbsp;&nbsp; You also must use
+either "%d" or "%x" within the message to position displayed variable
+values.&nbsp;&nbsp;&nbsp; %d for decimal.&nbsp;&nbsp; %x for
+hexadecimal. <br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Show current position of head...<br>PRINT:"Head_Tilt=%d   Head_Pan=%d":Head_Tilt:Head_Pan<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Output appears as follows:
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(221, 255, 221);">Head_Tilt=-45   Head_Pan=-20<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="VDUMP"></a><br>
+      <big><span style="font-weight: bold;">VDUMP </span></big><big><span
+ style="font-weight: bold;"> - Show value of variable</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Second method for showing
+variable value.&nbsp;&nbsp; Outputs variable name and its value to the
+WLAN console.<br>
+            <br>
+Usage:<br>
+&nbsp;&nbsp; VDUMP:variable_name<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Show current position of head...<br>VDUMP:Head_Tilt<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Output appears as follows:
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(221, 255, 221);">Head_Tilt = -45<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="JUMPCMDS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">8. Jump/Loop
+Commands</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#GO">GO</a></td>
+            <td> Jump to label<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#IF">IF</a></td>
+            <td> Conditional test</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#SWITCH">SWITCH</a></td>
+            <td>Assign Context for CASE statement</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#CSET">CSET</a></td>
+            <td>Conditional Test and Context Assign for CASE statement</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#CASE">CASE</a></td>
+            <td>Perform parameter if Context matches value</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#FOR">FOR</a></td>
+            <td style="vertical-align: top;">Start FOR
+loop.&nbsp;&nbsp; Repeat commands inside FOR/NEXT specified number of
+times.<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#NEXT">NEXT</a></td>
+            <td>End FOR loop</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#WHILE">WHILE</a></td>
+            <td>Start WHILE loop.&nbsp;&nbsp; Repeat commands inside
+WHILE/WEND while test true.<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#WEND">WEND</a></td>
+            <td>End WHILE loop <br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#REPEAT">REPEAT</a></td>
+            <td>Start REPEAT loop.&nbsp;&nbsp; Repeat commands inside
+REPEAT/UNTIL until test true.</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#UNTIL">UNTIL</a></td>
+            <td>End REPEAT loop</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#DO">DO</a><br>
+            </td>
+            <td style="vertical-align: top;">Start DO loop.&nbsp;&nbsp;
+Repeat commands inside DO/LOOP until test true. </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#LOOP">LOOP</a></td>
+            <td>End DO loop</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#BREAK">BREAK</a></td>
+            <td>Break out of loop</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="GO"></a><br>
+      <big><span style="font-weight: bold;">GO </span></big><big><span
+ style="font-weight: bold;"> - Jump to label</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The R-Code program moves
+to jump label.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; GO:label<br>
+            </span><br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand repeatedly forever...<br>:JumpHere<br>PLAY:ACTION:SIT<br>WAIT<br>PLAY:ACTION:STAND<br>WAIT<br>GO:JumpHere<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="IF"></a><br>
+      <big><span style="font-weight: bold;">IF </span></big><big><span
+ style="font-weight: bold;"> - Conditional test</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Compare two numbers or
+variables, and perform parameter accordingly.&nbsp;&nbsp; There are
+several different flavors of the IF command...<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+1</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+IF:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:THEN<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // command block (performed only if
+comparison succeeds)<br>
+&nbsp;&nbsp; ENDIF<br>
+            </span><br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+2</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+IF:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:THEN<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// then block (performed if comparison
+succeeds)<br>
+&nbsp;&nbsp; ELSE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// else block (performed if comparison
+fails)<br>
+&nbsp;&nbsp; ENDIF</span><br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+3</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+IF:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:CALL:label[:argument-count]</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; &nbsp; </span>If
+comparison succeeds, perform <a href="rcode-ref.html#CALL">CALL</a> command and jump
+to subroutine<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </span>at label with optional argument count (see <a
+ href="rcode-ref.html#CALL">CALL</a> command for details).<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+4</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; IF:</span><span
+ style="font-family: monospace;">&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:BREAK</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; &nbsp; </span>If
+comparison succeeds, perform <a href="rcode-ref.html#BREAK">BREAK</a> command and
+exit nearest loop.<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+5</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; IF:</span><span
+ style="font-family: monospace;">&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;</span><span
+ style="font-family: monospace;">:match-label</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; &nbsp; </span>If
+comparison succeeds, jump to label "match-label".<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+6</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+IF:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:match-label:else-label</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; &nbsp; </span>If
+comparison succeeds, jump to label "match-label". <br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; &nbsp; </span>If
+comparison fails, jump to label "else-label".<br>
+            <br>
+            <span
+ style="font-weight: bold; font-style: italic; text-decoration: underline;">Values:</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; </span>The
+&lt;value&gt; fields can be either variables or numbers.<br>
+            <a name="OPS"></a><br>
+            <span
+ style="font-weight: bold; font-style: italic; text-decoration: underline;">Operators:</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; </span>The
+&lt;op&gt; field can be one of the following:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=&nbsp;&nbsp;&nbsp; Equals (compare succeeds if both values equal)</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+==&nbsp;&nbsp; Equals (works same as above)</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;&gt;&nbsp;&nbsp; Not Equal</span><br style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+!=&nbsp;&nbsp; Not Equal (works same as above).</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;&nbsp;&nbsp;&nbsp; Less than</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;=&nbsp;&nbsp; Less than, or Equal</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&gt;&nbsp;&nbsp;&nbsp; Greater than</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&gt;=&nbsp;&nbsp; Greater than, or Equal</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&amp;&nbsp;&nbsp;&nbsp; Succeed if bitwise AND of values is non-zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; Succeed if either
+value non-zero (bitwise OR of values)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^&nbsp;&nbsp;&nbsp; Succeed if bitwise
+XOR of values is non-zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &amp;&amp;&nbsp;&nbsp; Succeed if both
+values non-zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp; Succeed if either value
+non-zero<br style="font-family: monospace;">
+            </span><br>
+Examples:<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">:JumpHere<br>IF:Back_ON:&gt;:0:THEN<br>  SET:Back_ON:0<br>  PRINT:"Back Sensor Pressed"<br>ENDIF<br>  <br>IF:Jaw_ON:==:0:JumpHere<br>SET:Jaw_ON:0<br>PRINT:"Jaw Sensor Pressed"<br>GO:JumpHere<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="SWITCH"></a><br>
+      <big><span style="font-weight: bold;">SWITCH </span></big><big><span
+ style="font-weight: bold;"> - Assign Context for CASE statement</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Set context for multiple
+branching with <a href="rcode-ref.html#CASE">CASE</a> statement.&nbsp;&nbsp; A
+useful shorthand for comparing a value against multiple numbers.&nbsp;
+Should be immediately followed by one or more <a href="rcode-ref.html#CASE">CASE</a>
+statements.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; SWITCH:</span><span
+ style="font-family: monospace;">&lt;value1&gt;</span><span
+ style="font-family: monospace;"></span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">SWITCH:some_var<br>  CASE:1:PRINT:"some_var = 1"<br>  CASE:2:PRINT:"some_var = 2"<br>  CASE:3:PRINT:"some_var = 3"<br>  CASE:4:PRINT:"some_var = 4"<br>  CASE:5:SET:some_var:55<br>  CASE:6:GO:JumpHere<br>  CASE:ELSE:PRINT:"some_var = Unknown"<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="CSET"></a><br>
+      <big><span style="font-weight: bold;">CSET </span></big><big><span
+ style="font-weight: bold;"> - Conditional test and Context Assign for
+CASE statement</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Perform comparison and set
+context if successful.&nbsp;&nbsp;&nbsp; On a successful match,
+subsequent CSET's are skipped.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+CSET:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:&lt;context-value&gt;<br>
+            </span><br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">CSET:some_var:&lt;:100:1<br>CSET:some_var:&lt;:200:2<br>CSET:some_var:&lt;:300:3<br>CSET:some_var:&lt;:400:4<br>CSET:some_var:&lt;:500:5<br>CSET:some_var:&lt;:500:6<br>CASE:1:PRINT:"some_var &lt; 100"<br>CASE:2:PRINT:"some_var &lt; 200"<br>CASE:3:PRINT:"some_var &lt; 300"<br>CASE:4:PRINT:"some_var &lt; 400"<br>CASE:5:SET:some_var:55<br>CASE:6:GO:JumpHere<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="CASE"></a><br>
+      <big><span style="font-weight: bold;">CASE </span></big><big><span
+ style="font-weight: bold;"> - Perform parameter if Context matches
+value</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Compare context to
+parameter value.&nbsp;&nbsp; If equal, perform
+command.&nbsp;&nbsp;&nbsp; Alternately, can use "ELSE" instead of
+value.&nbsp; In which case, command is performed if all previous CASE
+statements failed.<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+1</span><span style="font-family: monospace;"><br>
+&nbsp;&nbsp; CASE:&lt;value&gt;:&lt;command&gt;</span><br>
+            <span style="font-family: monospace;"><br>
+            </span><span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+2</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+CASE:ELSE:&lt;command&gt;<br>
+            </span><br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">SWITCH:some_var<br>  CASE:1:PRINT:"some_var = 1"<br>  CASE:2:PRINT:"some_var = 2"<br>  CASE:3:PRINT:"some_var = 3"<br>  CASE:4:PRINT:"some_var = 4"<br>  CASE:5:SET:some_var:55<br>  CASE:6:GO:JumpHere<br>  CASE:ELSE:PRINT:"some_var = Unknown"<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="FOR"></a><a name="NEXT"></a><br>
+      <big><span style="font-weight: bold;">FOR </span></big><big><span
+ style="font-weight: bold;">/ NEXT - Repeat nested commands</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Repeat nested commands
+specified number of times.&nbsp;&nbsp; Variable gets set to
+&lt;from-value&gt;, and is then incremented by 1 on each pass until
+matches
+&lt;to-value&gt;.&nbsp;&nbsp;&nbsp; The optional &lt;step-value&gt; can
+change the increment, or even make it negative (for counting backwards).<br>
+            <br>
+            <span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+1</span>:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+FOR:&lt;variable&gt;:&lt;from-value&gt;:&lt;to-value&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; // nested commands<br>
+&nbsp;&nbsp; NEXT<br>
+            </span><span style="font-family: monospace;"><br>
+            </span><span
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">Version
+2</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+FOR:&lt;variable&gt;:&lt;from-value&gt;:&lt;to-value&gt;:&lt;step-value&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; // nested commands<br>
+&nbsp;&nbsp; NEXT<br>
+            </span> <span style="font-family: monospace;"></span><br>
+Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand five times...<br>FOR:some_var:1:5<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>NEXT<br>  <br>// Count backwards and display 50,40,30,20,10,0<br>FOR:some_var:50:0:-10<br>  PRINT:"some_var = %d":some_var<br>NEXT<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="WHILE"></a><a name="WEND"></a><br>
+      <big><span style="font-weight: bold;">WHILE / WEND </span></big><big><span
+ style="font-weight: bold;"> - Repeat nested commands while test true</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Repeat nested commands
+while comparison succeeds.&nbsp;&nbsp; Note:&nbsp; If comparison
+fails on first attempt, nested commands are not
+performed at all!&nbsp;&nbsp; Comparison occurs <span
+ style="font-style: italic; font-weight: bold;">before</span> nested
+commands
+performed.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+WHILE:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp; // nested commands<br>
+&nbsp;&nbsp; WEND<br>
+            <br>
+            </span>See "<a href="rcode-ref.html#IF">IF</a>" command for list of
+available operators (the <a href="rcode-ref.html#OPS">&lt;op&gt;</a> field).<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand while back not pressed...<br>WHILE:Back_ON:==:0<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>WEND<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="REPEAT"></a><a name="UNTIL"></a><br>
+      <big><span style="font-weight: bold;">REPEAT / UNTIL </span></big><big><span
+ style="font-weight: bold;"> - Repeat nested commands until test true</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Repeat nested commands
+until comparison succeeds.&nbsp;&nbsp; Nested commands always performed
+at least once.&nbsp;&nbsp; Comparison occurs <span
+ style="font-weight: bold; font-style: italic;">after</span> nested
+commands
+performed.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; REPEAT<br>
+&nbsp;&nbsp;&nbsp;&nbsp; // nested commands<br>
+&nbsp;&nbsp; UNTIL</span><span style="font-family: monospace;">:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;</span><br>
+            <span style="font-family: monospace;"><br>
+            </span>See "<a href="rcode-ref.html#IF">IF</a>" command
+for list of available operators (the <a href="rcode-ref.html#OPS">&lt;op&gt;</a>
+field).<br>
+            <span style="font-family: monospace;"><br>
+            </span>Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand until back pressed...<br>REPEAT<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>UNTIL:Back_ON:&gt;:0<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="DO"></a><a name="LOOP"></a><br>
+      <big><span style="font-weight: bold;">DO / LOOP </span></big><big><span
+ style="font-weight: bold;"> - Repeat nested commands while or until
+test true</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Repeat nested
+commands.&nbsp;&nbsp; Optionally supports comparing values both before
+and after nested commands performed.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; DO[:WHILE</span><span
+ style="font-family: monospace;">|UNTIL:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;]</span><br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;
+// nested commands<br>
+&nbsp;&nbsp; LOOP[</span><span style="font-family: monospace;">:WHILE|UNTIL:</span><span
+ style="font-family: monospace;">&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;]</span><br>
+            <span style="font-family: monospace;"> </span><span
+ style="font-family: monospace;"></span><br>
+See "<a href="rcode-ref.html#IF">IF</a>" command for list of available
+operators (the <a href="rcode-ref.html#OPS">&lt;op&gt;</a> field).<br>
+            <br>
+Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand forever...<br>DO<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>LOOP<br>  <br>// Make AIBO sit &amp; stand while back not pressed...<br>DO:WHILE:Back_ON:==:0<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>LOOP<br>  <br>// Make AIBO sit &amp; stand while back not pressed...<br>DO:UNTIL:Back_ON:&gt;:0<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>LOOP<br>  <br>// Make AIBO sit &amp; stand while neither jaw or back not pressed...<br>DO:WHILE:Jaw_ON:==:0<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>LOOP:UNTIL:Back_ON:&gt;:0<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="BREAK"></a><br>
+      <big><span style="font-weight: bold;">BREAK </span></big><big><span
+ style="font-weight: bold;"> - Break out of loop</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Break out of loops. &nbsp;
+Convenient for exiting a loop early, perhaps if a sensor detects
+something unusual.&nbsp; Works with <a href="rcode-ref.html#FOR">FOR/NEXT</a>, <a
+ href="rcode-ref.html#WHILE">WHILE/WEND</a>, <a href="rcode-ref.html#REPEAT">REPEAT/UNTIL</a>,
+or <a href="rcode-ref.html#DO">DO/LOOP</a>.<br>
+            <br>
+You can break out of multiple nested loops with a single BREAK by
+giving the optional level parameter.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+BREAK[:&lt;level&gt;]<br>
+            </span><br>
+Examples:<br>
+            <span style="font-family: monospace;"></span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">// Make AIBO sit &amp; stand until back pressed...<br>DO<br>  PLAY:ACTION:SIT<br>  WAIT<br>  PLAY:ACTION:STAND<br>  WAIT<br>  IF:Back_ON:&gt;:0:BREAK<br>LOOP<br>  <br>FOR:some_var:1:10<br>  FOR:another_var:1:10<br>    IF:some_var:&gt;5:THEN<br>      BREAK:2 // exit both FOR loops<br>    ENDIF<br>    PRINT:"%d %d":some_var:another_var<br>  NEXT<br>NEXT<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="SUBROUTINES"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">9. Subroutine
+Commands</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#CALL">CALL</a></td>
+            <td>Call subroutine</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#ARG">ARG</a></td>
+            <td>Retrieve subroutine argument</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#RETURN">RETURN</a></td>
+            <td>Return from subroutine</td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#RET">RET</a></td>
+            <td>Return from subroutine (context version)</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="CALL"></a><br>
+      <span style="font-weight: bold;"></span><big><span
+ style="font-weight: bold;"></span></big><big><span
+ style="font-weight: bold;">CALL </span></big><big><span
+ style="font-weight: bold;"> - </span></big><big><span
+ style="font-weight: bold;">Call a Subroutine</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The R-Code program moves
+to the given label, but remembers where it came from.&nbsp;&nbsp; Using
+            <a href="rcode-ref.html#RET">RET</a> or <a href="rcode-ref.html#RETURN">RETURN</a>
+resumes at the old location.<br>
+            <br>
+You can pass arguments to subroutines by <a href="rcode-ref.html#PUSH">PUSH</a>ing
+them beforehand.&nbsp;&nbsp; Arguments allow reusing a subroutine in
+different places, without dedicating variables.&nbsp;&nbsp; See <a
+ href="rcode-ref.html#ARG">ARG</a> command for details.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+CALL:label[:argument-count]<br>
+            </span><br>
+Example:<br>
+            <span style="font-family: monospace;"></span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">:JumpHere<br>CALL:SayHello<br>GO:JumpHere<br>  <br>:SayHello<br>PRINT:"Hello"<br>RET<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="ARG"></a><br>
+      <big><span style="font-weight: bold;">ARG </span></big><big><span
+ style="font-weight: bold;"> - Get Stack Argument for Subroutine</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Extracts an argument <a
+ href="rcode-ref.html#PUSH">PUSH</a>ed before calling a
+subroutine.&nbsp;&nbsp; The same number of arguments must be retrieved
+as were pushed.&nbsp;&nbsp; The first argument pushed is the first
+retrieved.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+ARG:&lt;variable&gt;<br>
+            </span><br>
+Example:<br>
+            <span style="font-family: monospace;"></span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">:JumpHere<br>PUSH:10<br>PUSH:Back_ON<br>PUSH:42<br>CALL:MySubroutine:3    // Tell subroutine there are 3 arguments<br>PRINT:"Back Again"<br>GO:JumpHere<br>  <br>// Subroutine starts here...<br>:MySubroutine<br>ARG:somevar1<br>ARG:somevar2<br>ARG:somevar3<br>PRINT:"Subroutine Args = %d %d %d":somevar1:somevar2:somevar3<br>RET<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="RETURN"></a><br>
+      <big><span style="font-weight: bold;">RETURN </span></big><big><span
+ style="font-weight: bold;"> - Return from Subroutine (stack version)</span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Return to R-Code position
+following <a href="rcode-ref.html#CALL">CALL</a> command.&nbsp;&nbsp;&nbsp; If
+returning optional value, then use the <a href="rcode-ref.html#POP">POP</a> command
+to retrieve result.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RETURN[:&lt;value&gt;]<br>
+            </span><br>
+Example:<br>
+            <span style="font-family: monospace;"></span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">:JumpHere<br>CALL:MySubroutine<br>POP:somevar<br>PRINT:"Subroutine result = %d":somevar<br>GO:JumpHere<br>  <br>:MySubroutine<br>PRINT:"Entered MySubroutine"<br>RETURN:123<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="RET"></a><br>
+      <big><span style="font-weight: bold;">RET - Return from
+Subroutine (context version)</span></big><big><span
+ style="font-weight: bold;"></span></big>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Return to R-Code position
+following <a href="rcode-ref.html#CALL">CALL</a> command.&nbsp;&nbsp;&nbsp; Return
+value placed into Context variable, for use with <a href="rcode-ref.html#CASE">CASE</a>
+statement.&nbsp;&nbsp; If value not given, or zero is returned,
+original Context value (on entry to subroutine) is returned.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RET:&lt;new-context-value&gt;</span><span
+ style="font-family: monospace;"><br>
+            </span><br>
+Example:<br>
+            <span style="font-family: monospace;"></span> </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">CALL:MySubroutine<br>CASE:1:GO:JumpHere<br>CASE:2:GO:JumpThere<br>CASE:3:GO:JumpSomewere<br>// etc...<br>  <br>:MySubroutine<br>PRINT:"Entered MySubroutine"<br>RET:1<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="VARCMDS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">10. Variable
+Declare and Assign</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#GLOBAL">GLOBAL</a></td>
+            <td>Declare global variable<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#LOCAL">LOCAL</a></td>
+            <td>Declare local variable<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#LET">LET</a></td>
+            <td>Assign variable a value<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#SET">SET</a></td>
+            <td>Assign variable (plus system functions)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><a
+ style="font-weight: bold;" href="rcode-ref.html#CLR">CLR</a><br>
+            </td>
+            <td style="vertical-align: top;">Clear sensor variable<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><a
+ style="font-weight: bold;" href="rcode-ref.html#VSAVE">VSAVE</a><br>
+            </td>
+            <td style="vertical-align: top;">Save variable value to
+memory stick<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><a
+ style="font-weight: bold;" href="rcode-ref.html#VLOAD">VLOAD</a><br>
+            </td>
+            <td style="vertical-align: top;">Load variable value from
+memory stick<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <big><span style="font-weight: bold;"></span></big><a
+ name="GLOBAL"></a><br>
+      <big><span style="font-weight: bold;">GLOBAL - Declare Global
+Variable</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Define a global variable
+visible to entire program.&nbsp;&nbsp; Not generally needed, since AIBO
+makes all unknown new variables global by default.&nbsp;&nbsp; Can
+optionally assign a value also.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+GLOBAL:&lt;variable&gt;[:&lt;value&gt;]<br>
+            </span><br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">GLOBAL:somevar               // Declare variable, defaults to zero.<br>GLOBAL:anothervar:123        // Declare another, defaulted to 123.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="LOCAL"></a><br>
+      <big><span style="font-weight: bold;">LOCAL - Declare Local
+Variable</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Define a local variable
+visible in current scope only.&nbsp;&nbsp; Scope means something like a
+subroutine, or loop (ie: WHILE/WEND).<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">LOCAL:somevar               // Declare variable, defaults to zero.<br>LOCAL:anothervar:123        // Declare another, defaulted to 123.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="LET"></a><br>
+      <big><span style="font-weight: bold;">LET - Assign Variable a
+Value</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Specify value variable to
+be equal to.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LET:&lt;variable&gt;:&lt;value&gt;<br>
+            </span><br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">LET:somevar:123       // Assign user variable<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="SET"></a><br>
+      <big><span style="font-weight: bold;">SET - Assign Variable (plus
+system functions)</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Specify value variable to
+be equal to.&nbsp;&nbsp; Also can clear sensor variables.&nbsp;&nbsp;
+Generally you can safely use SET for all assignments (there is no
+reason to use LET).<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+SET:&lt;variable&gt;:&lt;value&gt;</span><br>
+            <br>
+Once the system sets the following variables, the only way to clear
+them is using SET.<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp; Head_ON</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp; Head_OFF</span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Head_Hit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Head_Pat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;"></span><span
+ style="font-family: monospace;">&nbsp;&nbsp;
+Head_LONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Back_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Back_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Back_LONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Jaw_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Jaw_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+Jaw_LONG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RFLeg_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RFLeg_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LFLeg_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LFLeg_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RRLeg_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+RRLeg_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LRLeg_ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+LRLeg_OFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+            <br>
+Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">SET:somevar:123       // Assign user variable<br>SET:Head_ON:0         // Clear Head_ON sensor<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="CLR"></a><br>
+      <big><span style="font-weight: bold;">CLR:SENSORS - Clear Sensor
+Variables</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Sets to zero all
+persistent sensor variables (those which store previous value).<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+CLR:SENSORS</span><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <big><span style="font-weight: bold;"></span></big><a name="VSAVE"></a><br>
+      <big><span style="font-weight: bold;">VSAVE - Save Variable</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Save variable value to
+memory stick.&nbsp;&nbsp; The variable name is used as a filename
+(maximum name length of 8 characters).&nbsp;&nbsp; Use <a href="rcode-ref.html#VLOAD">VLOAD</a>
+to read it back.&nbsp;&nbsp; Good for storing learned information (for
+example).<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+VSAVE:&lt;variable&gt;</span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">VSAVE:somevar   // Save value to /OPEN-R/APP/PC/AMS/SOMEVAR.SAV<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="VLOAD"></a><br>
+      <big><span style="font-weight: bold;">VLOAD - Load Variable</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Load value from memory
+stick.&nbsp;&nbsp; The variable name is used as a filename (maximum
+name length of 8 characters). <br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+VLOAD:&lt;variable&gt;</span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">VLOAD:somevar   // Load value stored in file /OPEN-R/APP/PC/AMS/SOMEVAR.SAV<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="STACKCMDS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">11. Stack
+Commands</big></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The following commands
+operate on the stack.&nbsp;&nbsp; R-Code manages the stack
+just like a stack of dishes.&nbsp;&nbsp; The last thing placed on the
+stack, is the first one removed.&nbsp; <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#PUSH">PUSH</a></td>
+            <td>Add value to stack<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#POP">POP</a></td>
+            <td>Remove value from stack<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#DUP">DUP</a></td>
+            <td>Duplicate value on top of stack<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: bold;"><a
+ href="rcode-ref.html#JT">JT</a></td>
+            <td>Jump if top-most value on stack non-zero<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><a
+ style="font-weight: bold;" href="rcode-ref.html#JF">JF</a><br>
+            </td>
+            <td style="vertical-align: top;">Jump if top-most value on
+stack zero </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <br>
+      <big><span style="font-weight: bold;"></span></big><a name="PUSH"></a><br>
+      <big><span style="font-weight: bold;">PUSH - Add Value to Stack</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Add variable or constant
+value onto stack.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+PUSH:&lt;value&gt;</span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">PUSH:42<br>PUSH:somevar<br>MUL             // Multiply somevar by 42.  Result left on stack.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="POP"></a><br>
+      <big><span style="font-weight: bold;">POP - Remove Value from
+Stack</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Remove top-most value from
+stack.&nbsp;&nbsp; If variable not specified, top-most stack value is
+discarded.&nbsp;&nbsp; If stack is empty, POP can cause an error.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+POP[:&lt;variable&gt;]</span><br>
+            <br>
+Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">POP:somevar    // Remove top-most value from stack, and store in somevar<br>POP            // Discard next value on stack<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="DUP"></a><br>
+      <big><span style="font-weight: bold;">DUP - Duplicate Value on
+Stack</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Duplicate/copy top-most
+value on stack.<br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">PUSH:7<br>DUP           // duplicate value of 7 on stack (now there are two 7's)<br>ADD<br>POP:somevar   // somevar equals 14<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="JT"></a><br>
+      <big><span style="font-weight: bold;">JT - Jump if True</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Remove top-most value from
+stack.&nbsp;&nbsp; If non-zero, jump to label.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+JT:&lt;label&gt;</span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">JT:JumpHere     // POP topmost value from stack.  If non-zero, jump.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big><span style="font-weight: bold;"></span></big><a name="JF"></a><br>
+      <big><span style="font-weight: bold;">JF - Jump if False</span></big><br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Remove top-most value from
+stack.&nbsp;&nbsp; If zero, jump to label.<br>
+            <br>
+Usage:<br>
+            <span style="font-family: monospace;">&nbsp;&nbsp;
+JF:&lt;label&gt;</span><br>
+            <br>
+Example:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">JF:JumpHere     // POP topmost value from stack.  If zero, jump.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="OPERATORS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">12. Operators</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The following commands
+perform arithmetic on variables &amp; value parameters.:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="ADD"></a>ADD:&lt;var&gt;:&lt;value&gt;<br>
+            </td>
+            <td>Add value to variable.&nbsp;&nbsp;&nbsp; variable =
+variable + value<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="SUB"></a>SUB:&lt;var&gt;:&lt;value&gt;</td>
+            <td>Subtract value from variable.&nbsp;&nbsp;&nbsp;
+variable = variable / value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="MUL"></a>MUL:&lt;var&gt;:&lt;value&gt;</td>
+            <td>Multiply variable by value.&nbsp;&nbsp;&nbsp; variable
+= variable * value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="DIV"></a>DIV:&lt;var&gt;:&lt;value&gt;</td>
+            <td>Divide variable by value.&nbsp;&nbsp;&nbsp; variable =
+variable / value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="MOD"></a>MOD:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Remainder of dividing
+variable by value.&nbsp;&nbsp;&nbsp; variable = variable % value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="AND"></a>AND:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Bitwise AND variable with
+value.&nbsp;&nbsp; variable = variable &amp; value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="IOR"></a>IOR:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Bitwise OR variable with
+value.&nbsp;&nbsp; variable = variable | value </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="XOR"></a>XOR:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Bitwise XOR variable with
+value.&nbsp;&nbsp; variable = variable ^ value</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="NOT"></a>NOT:&lt;var&gt;</td>
+            <td style="vertical-align: top;">Bitwise invert
+variable.&nbsp;&nbsp; variable = ~variable</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="LAND"></a>LAND:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Logical AND.&nbsp;&nbsp;
+If both variable and value non zero, set to 1.&nbsp;&nbsp; Otherwise 0.<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="LIOR"></a>LIOR:&lt;var&gt;:&lt;value&gt;</td>
+            <td style="vertical-align: top;">Logical OR.&nbsp;&nbsp; If
+either variable or value non zero, set to 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="LNOT"></a>LNOT:&lt;var&gt;</td>
+            <td style="vertical-align: top;">Logical NOT.&nbsp; If
+variable zero, set to 1.&nbsp;&nbsp; Otherwise 0.<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;"><a
+ name="RND"></a>RND:&lt;var&gt;:&lt;from&gt;:&lt;to&gt;</td>
+            <td style="vertical-align: top;">Set variable to random
+number between &lt;from&gt; and &lt;to&gt;.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">ADD:somevar:123<br>SUB:anothervar:456<br>  <br>SET:somevar:0x55<br>AND:somevar:0xAA    // somevar equals 0<br>  <br>SET:somevar:0x55<br>IOR:somevar:0xAA    // somevar equals 255 (0xFF in hex)<br>  <br>SET:somevar:0x55<br>LAND:somevar:0xAA   // somevar equals 1 (both non-zero)<br>SET:somevar:0<br>LAND:somevar:0xAA   // somevar equals 0 (because one value zero)<br>  <br>SET:somevar:0<br>LIOR:somevar:0      // somevar equals 0 (both zero)<br>SET:somevar:0<br>LIOR:somevar:0xAA   // somevar equals 1 (one value non-zero)<br>SET:somevar:0x55<br>LIOR:somevar:0      // somevar equals 1 (one value non-zero)<br>  <br>SET:somevar:0x5555<br>NOT:somevar         // somevar equals 0xAAAA<br>  <br>SET:somevar:0<br>LNOT:somevar        // somevar equals 1<br>SET:somevar:0x5555<br>LNOT:somevar        // somevar equals 0<br>  <br>RND:somevar:1:10    // somevar set to random value between 1 and 10<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="STACKOPS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">13. Stack
+Operators</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The following commands
+perform arithmetic on the stack.&nbsp;&nbsp; R-Code manages the stack
+just like a stack of dishes.&nbsp;&nbsp; The last thing placed on the
+stack, is the first one removed.&nbsp;&nbsp;&nbsp;&nbsp; To do math
+with the stack, typically you'll first <a href="rcode-ref.html#PUSH">PUSH</a> two
+values.&nbsp;&nbsp; Next perform the operation.&nbsp;&nbsp; Lastly, <a
+ href="rcode-ref.html#POP">POP</a> the result.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="width: 15%; font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">ADD<br>
+            </td>
+            <td>Add value to variable.&nbsp;&nbsp; &lt;push&gt; =
+&lt;pop2&gt; + &lt;pop1&gt;<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">SUB</td>
+            <td>Subtract value from variable.&nbsp;&nbsp; &lt;push&gt;
+= &lt;pop2&gt; - &lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">MUL</td>
+            <td>Multiply variable by value.&nbsp;&nbsp;&nbsp;
+&lt;push&gt; = &lt;pop2&gt; * &lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">DIV</td>
+            <td>Divide variable by value.&nbsp;&nbsp;&nbsp;
+&lt;push&gt; = &lt;pop2&gt; / &lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">MOD</td>
+            <td style="vertical-align: top;">Remainder of dividing
+variable by value.&nbsp;&nbsp;&nbsp; &lt;push&gt; = &lt;pop2&gt; %
+&lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">AND</td>
+            <td style="vertical-align: top;">Bitwise AND variable with
+value.&nbsp;&nbsp; &lt;push&gt; = &lt;pop2&gt; &amp; &lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">IOR</td>
+            <td style="vertical-align: top;">Bitwise OR variable with
+value.&nbsp;&nbsp; &lt;push&gt; = &lt;pop2&gt; | &lt;pop1&gt; </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">XOR</td>
+            <td style="vertical-align: top;">Bitwise XOR variable with
+value.&nbsp;&nbsp; &lt;push&gt; = &lt;pop2&gt; ^ &lt;pop1&gt;</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">NOT</td>
+            <td style="vertical-align: top;">Bitwise invert
+variable.&nbsp;&nbsp; &lt;push&gt; = ~&lt;pop&gt;</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">LAND</td>
+            <td style="vertical-align: top;">Logical AND.&nbsp;&nbsp;
+If both &lt;pop1&gt; &amp; &lt;pop2&gt; non zero, &lt;push&gt;
+1.&nbsp;&nbsp; Otherwise 0.<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">LIOR</td>
+            <td style="vertical-align: top;">Logical OR.&nbsp;&nbsp; If
+either &lt;pop1&gt; or &lt;pop2&gt; non zero, &lt;push&gt;
+1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">LNOT</td>
+            <td style="vertical-align: top;">Logical NOT.&nbsp; If
+&lt;pop&gt; value zero, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="font-weight: bold; text-align: left; font-family: monospace; vertical-align: middle;">EQ</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; and
+&lt;pop1&gt; equal, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">NE</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; and
+&lt;pop1&gt; not equal, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">LT</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; less than
+&lt;pop1&gt;, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">LE</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; less than
+or equal to &lt;pop1&gt;, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">GT</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; greater
+than &lt;pop1&gt;, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">GE</td>
+            <td style="vertical-align: top;">If &lt;pop2&gt; greater
+than or equal to &lt;pop1&gt;, &lt;push&gt; 1.&nbsp;&nbsp; Otherwise 0.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">RND:&lt;from&gt;:&lt;to&gt;</td>
+            <td style="vertical-align: top;">&lt;push&gt; random value
+between &lt;from&gt; and &lt;to&gt;<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; font-family: monospace; font-weight: bold;">RND:&lt;to&gt;<br>
+            </td>
+            <td style="vertical-align: top;">&lt;push&gt; random value
+between zero and &lt;to&gt;<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">Examples:<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">PUSH:200<br>PUSH:100<br>SUB<br>POP:somevar         // result is 100 (200-100)<br>  <br>PUSH 100<br>PUSH 2<br>PUSH 4<br>PUSH 6<br>ADD<br>MUL<br>DIV<br>POP:somevar         // result is 5 = 100/((4+6)*2)<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <hr style="width: 100%; height: 2px;"><a name="SYSTEMVARS"></a><br>
+      <big style="font-style: italic;"><big
+ style="font-weight: bold; text-decoration: underline;">14. System
+Variables</big></big><br>
+      <pre>   AiboId          Least significant byte of WLAN IP address.   Zero if not connected.<br>   AiboType        210, 220, 310, or 7<br>   Year            Year (2000 or later)<br>   Month           Month (1-12)<br>   Day             Date (1-31)<br>   Hour            Hour (0-23)<br>   Min             Minute (0-59)<br>   Sec             Second (0-59) - 2 second resolution<br>   Dow             Day of week (0=Sunday, 1=Monday, 2=Tuesday, ..., 6=Saturday)<br>   Seed            Random number seed (default is 1)<br>   Status          Startup Status.   0=Normal, 1=Recovery (from falling over)<br>   Context         Context value  <br>   Wait            Number of actions/skits queued for playback<br>   Clock           Clock (incremented by 1 every 32 ms)<br>   Brightness      Ambient brightness (0-255)<br>  <br>   Pink_Ball       Pink ball.  Set 1 once detected <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Pink_Ball_H     Pink ball horizontal angle (in degrees, 0=center, pos=left, neg=right)<br>   Pink_Ball_V     Pink ball vertical angle (in degrees, 0=center, neg=down, pos=up)<br>   Pink_Ball_D     Distance to pink ball from nose camera (in millimeters)    <br>  <br>   AU_Voice        Set if voice command recognised <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   AU_Voice_ID     Voice ID (1-53)   <br>  <br>   AU_AiboSound    Set 1 if AiboSound detected <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   AU_AiboSound_ID AiboSound ID (1-35)<br>  <br>   AU_AiboTone     Set 1 if AiboTone detected <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   AU_AiboTone_ID  AiboTone ID (1-68)<br>  <br>   Temp_Hi         Set if temperature too high.  AIBO will auto-shutdown in 20 seconds.<br>  <br>   LFLeg_1         Left-front Hip Joint (front/back direction, in degrees)<br>   LFLeg_2         Left-front Hip Joint (left/right direction, in degrees)<br>   LFLeg_3         Left-front Knee Joint (degrees)<br>   LRLeg_1         Left-hind Hip Joint (front/back direction, in degrees)<br>   LRLeg_2         Left-hind Hip Joint (left/right direction, in degrees)<br>   LRLeg_3         Left-hind Knee Joint (degrees)<br>   RFLeg_1         Right-front Hip Joint (front/back direction, in degrees)<br>   RFLeg_2         Right-front Hip Joint (left/right direction, in degrees)<br>   RFLeg_3         Right-front Knee Joint (degrees)<br>   RRLeg_1         Right-hind Hip Joint (front/back direction, in degrees)<br>   RRLeg_2         Right-hind Hip Joint (left/right direction, in degrees)<br>   RRLeg_3         Right-hind Knee Joint (degrees)<br>  <br>   Batt_Rest       Battery charge remainder [%]<br>   Batt_Temp       Battery temperature [C]<br>   Body_Temp       Body temperature [C]<br>  <br>   Distance        Distance to obstacle [mm]<br>  <br>   Head_ON         Set if head sensor pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Head_LONG       Set if head sensor pressed for 3 or more seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Head_Pat        Set if head sensor stroked back and forth twice <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Head_Hit        Set if head sensor touched briefly and forcefully <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Head_OFF        Amount of time head sensor pressed [msecs]<br>  <br>   Back_ON         Set if back sensor pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)&gt;</a><br>   Back_LONG       Set if back sensor pressed for 3 or more seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Back_OFF        Amount of time back sensor was pressed [msecs]<br>  <br>   RFLeg_ON        Set if right front paw sensor was pressed  <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   RFLeg_OFF       Amount of time right front paw sensor was pressed [msecs]<br>  <br>   LFLeg_ON        Set if left front paw sensor was pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   LFLeg_OFF       Amount of time left front paw sensor was pressed [msecs]<br>  <br>   RRLeg_ON        Set if right hind paw sensor was pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   RRLeg_OFF       Amount of time right hind paw sensor was pressed [msecs]<br>  <br>   LRLeg_ON        Set if left hind paw sensor was pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   LRLeg_OFF       Amount of time left hind paw sensor was pressed [msecs] <br></pre>
+      <hr style="width: 100%; height: 2px;"><a name="PLATFORMVARS"></a><br>
+      <big><big
+ style="font-style: italic; font-weight: bold; text-decoration: underline;">15.
+Platform
+Specific Variables</big></big><br>
+      <pre><big><span style="font-weight: bold;">ERS-210</span></big><br>   Head_Tilt       Head Up/Down Angle (degrees) <br>   Head_Pan        Head Left/Right Angle (degrees)<br>   Head_Roll       Head Roll Angle (side-to-side, degrees)<br>   Mouth           Mouth (degrees)<br>   Jaw_ON          Set if chin sensor pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Jaw_OFF         Length of time face sensor was pressed [ms]<br>   Jaw_LONG        Set if chin sensor was pressed for 3 or more seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_Pan        Tail: horizontal (left/right) angle [degrees]<br>   Tail_Tilt       Tail: Vertical (up/down) angle [degrees]<br>  <br><big><span
+ style="font-weight: bold;">ERS-220</span></big><br>   Head_Tilt       Head: vertical (up-down) angle [degrees]<br>   Head_Pan        Head: horizontal (left-right) angle [degrees]<br>   Head_Roll       Head: roll angle [degrees]<br>   Jaw_ON          Face sensor pressed <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Jaw_OFF         Length of time face sensor was pressed [ms]<br>   Jaw_LONG        Face sensor was pressed for 3 seconds or longer <a
+ href="rcode-ref.html#SET">(clear w/SET)</a>    <br>  <br><big><span
+ style="font-weight: bold;">ERS-310</span></big><br>   Head_Tilt       Head: vertical (up-down) angle 1 [degrees]<br>   Head_Tilt_2     Head: vertical (up-down) angle 2 [degrees]<br>   Head_Pan        Head: horizontal (left-right) angle [degrees]<br><br>   Tail_Roll3      Tail rotated 3 times (in either direction)<a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_RollR      Tail rotated clockwise <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_RollL      Tail rotated counterclockwise <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_U_LONG     Tail pressed forward 3 seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_D_LONG     Tail pressed backward 3 seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_R_LONG     Tail pressed right 3 seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_L_LONG     Tail pressed left 3 seconds <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_U_ON       Tail pressed forward <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_D_ON       Tail pressed backward <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_R_ON       Tail pressed right <a
+ href="rcode-ref.html#SET">(clear w/SET)</a><br>   Tail_L_ON       Tail pressed left <a
+ href="rcode-ref.html#SET">(clear w/SET)</a></pre>
+      <br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(153, 255, 153); width: 100%; text-align: left;"
+ border="0" cellpadding="10" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><big>Find a problem or
+think something is missing here?<br>
+            <a style="font-style: italic; font-weight: bold;"
+ href="mailto:dogsbody@dogsbodynet.com?subject=AIBO%20RCode%20Files">Email
+DogsBody!</a></big><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

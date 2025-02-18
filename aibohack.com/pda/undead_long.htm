@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Toshiba e800/e805 UnDead Hack V2.3 (longer instructions)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Toshiba e800/e805 UnDead Hack V2.3 (longer instructions)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+<DIR>NOTE: For the original Toshiba e800/e805. Do not use if you have upgraded to Pocket PC 2003 "SE".</DIR>
+<P></P>
+
+<P></P>
+The "Dead zone" is a <i>feature / bug</i> of the Toshiba e800/e805 PDA that prevents the stylus from working in the upper left corner of the PDA when in VGA mode. This is normally where the Start Menu is located (in normal portrait orientation).
+<BR>
+Installing the UnDead Hack will correct this problem.
+
+<P></P>
+<HR>
+<H2>Requirements</H2>
+You must have the following:
+<UL>
+<LI>Toshiba e800 or e805 PDA
+<LI>ROM version 1.0108 or 1.0110. Other versions may work.
+<LI>An ActiveSync connection for installation
+<LI>Installed one of the following resolution switchers.
+You should be familiar with how the VGA <-> QVGA switching process works.
+<UL>
+<LI><A HREF=http://home.comcast.net/~swdeveloper/res1.html>ResFix (1.0)</A> by deez, free.
+<LI><A HREF=http://discussion.brighthand.com/showthread.php?s=&threadid=95331>ResSwitch (1.9)</A> by envoke, free.
+<LI><A HREF=http://home.comcast.net/~swdeveloper>ResFix (2.0)</A> with landscape mode by deez, $10.
+<LI><A HREF="http://www.pocketpctools.com/modules.php?name=Forums&file=viewforum&f=61">MyVGA</A> by hugbug and others, free but registration required
+<LI>NOTE: it will also work with the built-in Toshiba ClearVue limited VGA mode, but that is a lame experience.
+</UL>
+<P></P>
+<LI>NOTE: if you have installed an older version of the UnDead Hack, the new installer program will help you uninstall it (potentially saving 3/4 MB of RAM)
+</UL>
+<P></P>
+
+<P></P>
+<HR>
+<a name="INSTALL">
+<H2>Installation</H2>
+This is a one-time installation (ie. do it once and forget about it, unless you hard reset your PDA).
+You can optionally keep the "install_undead.exe" program on your PDA for later use. It also serves as an un-install program.
+<UL>
+<LI>BACKUP YOUR PDA FIRST!
+<LI>If you have any programs that you plan on disabling or uninstalling later, temporarily disable or uninstall them now.
+Anything program installed (and active) <b>before</b> the undead fix is installed will become fixed in the chain of handlers.
+In these more complicated cases, do not try to uninstall those older drivers or the undead fix.
+Well behaved programs you install after the undead fix can be uninstalled later.
+<LI>Some common examples:
+<UL>
+<LI>NYDITOT driver - disable NYDITOT before running install_undead.exe (Special Case #5)
+<LI>Calligrapher, is not well behaved. Install it <b>before</b> the undead hack. Do not try to uninstall later. This is Special Case #4 and you must confirm.
+<LI>Well behaved input programs (eg: Effy and other IME programs) can be installed before or after the undead hack.
+<LI>If you install a well behaved <B>before</B> the undead hack, it will ask you to confirm (Special Case #4), after which you should not try to uninstall.
+<LI>If you install a well behaved <B>after</B> the undead hack, there should be no problems and you can uninstall the program later (but leave the undead hack installed).
+</UL>
+<P></P>
+
+<LI>Download this file: <A HREF="install_undead.exe">install_undead.exe</A> [V2.3 13.8 KB], and put it somewhere you will remember (eg: on your PC desktop)
+<LI>NOTE: Do not run this program on your PC. It is a Pocket PC program that you must run on your PDA.
+<P></P>
+<LI>Put your PDA in the cradle connected to your PC.
+<LI>Perform the following steps on your PC:
+<UL>
+<LI>Microsoft ActiveSync should popup and connect [if not check your connections]
+<LI>Press the "Explore" button.
+<LI>Double click on "My Pocket PC" 
+<LI>Double click on the "Temp" folder
+<LI>Drag the install_undead.exe program from your PC (eg: your desktop) to the \Temp folder on the PDA
+</UL>
+<P></P>
+<LI>Perform the following steps on your PDA:
+<UL>
+<LI>Run "File Explorer" (in Programs) and go to the "\Temp" folder
+<LI>Click on the "install_undead" program
+<LI>If successful, it should report "UnDead hack installed OK (version 2.3)"
+and "Soft reset to activate". If not, check below for "Special Case #?"
+</UL>
+<P></P>
+<LI>Remove the PDA from the cradle, and press the reset button. After the soft reset the patched driver will be used.
+<LI>Enjoy - the dead zone is dead!
+</UL>
+
+<P></P>
+<HR>
+<H3>Special Case#1 - uninstall of version 1</H3>
+
+If the install_undead program detects the old version 1 patch (patched GWES.EXE)
+<UL>
+<LI>it will report "Patched GWES.EXE found" and will ask you if you it should move the file for deleting later.
+<LI>Answer "YES".
+<LI>After rebooting, go back to the "Temp" folder on the PDA and you will see "GWES_DeleteMe.exe". Delete it and you will free up 3/4MB of RAM.
+</UL>
+
+<P></P>
+<H3>Special Case#2 - keep program or delete it</H3>
+You don't need to keep the install_undead.exe program around after following the main instructions and rebooting.
+If you plan on uninstalling it later, you can keep the program around (perhaps moving it to the "\Windows\Start Menu\Programs" folder).
+Otherwise you can delete it from the "\Temp" folder.
+
+<P></P>
+<H3>Special Case#3 - uninstall</H3>
+If you run the install_undead.exe program on a PDA that already has the UnDead hack installed, it will ask you if it should uninstall the hack.
+However, do so at your own risk.
+This will restore the "dead zone" and depending on the current screen resolution, this may cause problems for you.
+<P></P>
+To upgrade, you need to run the newer "install_undead.exe" twice. First uninstall the old version, soft reset and then install the new version (and soft reset again).
+NOTE: during this process, the dead zone will be back temporarily. Switch to QVGA mode first if you want to be extra careful.
+
+<P></P>
+<H3>Special Case#4 - programs that chain the touch.dll driver</H3>
+
+Some programs like NYDITOT, Effy and Calligrapher will take over the touch driver chain. This is a non-standard use of the WinCE system registry, and unfortunately most programs do it differently.
+<P></P>
+If there is something already installed in the chain when install_undead.exe is run, it will report
+"Warning: another touch driver is installed",
+ and ask "Do you want to install on top of it?"
+You will normally select "YES", and it will add the undead hack to the current head of the chain.
+This is a safe option, as long as you don't try to uninstall programs installed <b>before</b> the undead hack.
+
+<P></P>
+NOTE: It will also report the DLL name that is currently at the head of the chain
+(eg: "\Windows\cgrtouchstub1.dll" for Calligrapher 6.x, "Effy_Touch_??.dll" for Effy, and others possible). This is mostly just for-your-information.
+<BR>
+NOTE: If you find chaining programs that do not work after you select "YES" in the install, please send me an email.
+
+<P></P>
+<H3>Special Case#5 - NYDITOT</H3>
+A special case of Special Case#4.
+Disable the NYDITOT driver, pick the "(Disable Virtual Display)" mode and soft reset. Then try the install (install_undead.exe) again.
+<P></P>
+Other problems that don't have a "Special Case#?" number are probably general errors. Try resetting your PDA and trying again.
+<P></P>
+
+<HR>
+
+
+
+</BODY>
+</HTML>

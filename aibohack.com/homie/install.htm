@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ HomieGate Install - Main
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ HomieGate Install - Main
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This is the main installation steps for the HomieGate server.
+HomieGate is recommended for experienced computer people.
+Some of the installation steps are rather complicated.
+LAN (WiFi) setup can be very complicated.
+<BR>
+Advice: There are many things that can be done with HomieGate.
+You don't have to get them all working in one evening.
+If you run into problems, relax and take a break.
+Computers can be frustrating at times.
+
+<P></P>
+<HR>
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>Windows PC (the 'Homie Gate Server PC')
+<LI>WiFi card (or Access Point) attached to the Server PC.
+<DIR>WiFi components should be setup and working already!</DIR>
+<LI>Microphone on the Server PC (for testing).
+<LI>Speaker on the Server PC (for testing and for regular use to play music)
+<LI>Windows XP is recommended.
+<BR>Earlier Windows versions will work as well.
+<BR>Very old Windows versions (like Win98) are not recommended for use as a full featured HomieGate server (with Voice Recognition)
+<LI>The faster the processor the better. Voice recognition is more responsive with a 2GHz+ CPU, but a 500MHz CPU also works acceptably.
+<LI>Disk space requirements for HomieGate are minimal. Large hard disk(s) may be used for your music collection.
+</UL>
+
+<P></P>
+<HR>
+<A name="VOICE">
+<H2>Installing Voice Recognition</H2>
+
+<H3>First check if you need it</H3>
+You will need a SAPI 5.x compatible speech recognition and text-to-speech engine installed on your computer.
+
+You can check to see if this already installed by running the 'Control Panel' and selecting 'Speech'.
+The 'Speech Properties' Panel should have <b>both</b> a 'Speech Recognition' and 'Text to Speech' tab.
+<CENTER><IMG SRC="speech_prop.gif"></CENTER>
+
+If one of these tabs is missing, or you don't have a 'Speech' control panel, then you need to install the Speech SDK.
+If you have both, you can skip the next step.
+
+<H3>Download and Install the Speech SDK</H3>
+The Speech SDK <A HREF=http://www.microsoft.com/speech/download/sdk51/>version 5.1</A> is available for free download from Microsoft.
+This is a large download (68MB).
+<BR>
+NOTE: do not use the newer beta 6.x SDK.
+<BR>
+NOTE: you will probably have difficulties on Windows 98 or Windows ME.
+Windows XP (or Windows 2000) are recommended for the voice recognition features.
+
+<P>Steps:</P>
+<UL>
+<LI>Download the "Speech SDK 5.1" : <A HREF=http://download.microsoft.com/download/speechSDK/SDK/5.1/WXP/EN-US/speechsdk51.exe>speechsdk51.exe</A> (68 MB)
+<DIR>That is not a typo, it is 68 Mega-Bytes in size.</DIR>
+<LI>When downloaded, run the 'speechsdk51.exe' program, and specify a folder (like c:\VSETUP) to unzip the files to.
+<LI>Run the SETUP.EXE program in that folder 
+<LI>Accept the licence agreement (read it first if you prefer)
+<LI>Install the SDK in a different folder (like C:\VSDK)
+</UL>
+<P></P>
+When done you can delete the C:\VSETUP folder and its contents.
+<BR>
+Optional you can train the speech recognition engine to better understand your voice. I recommend you do that later.
+
+<P></P>
+<HR>
+<A name="INSTALL">
+<H2>Installing HomieGate</H2>
+
+NOTE: you <B>must</B> install HomieGate in the 'C:\Homie' folder on your PC to start with. After the initial installation and testing,
+you can move this elsewhere if desired. You must edit paths in the HG.INI file.
+<P></P>
+
+<P>Steps:</P>
+<UL>
+<LI>Download <A HREF="HG_Preview01b.zip">HG_Preview01b.zip</A> (2MB, with config fix and music.g fix)
+<LI>Unzip it to the "C:\Homie" folder on your Server PC. Do not install it in another folder.
+</UL>
+<CENTER><IMG SRC="folder_start.gif"><BR>(what the folder should look like at the start)</CENTER>
+<P></P>
+
+<HR>
+<H2>Configuring HomieGate (the first time)</H2>
+Before running the server, you need to configure it.
+
+<UL>
+<LI>Run the configuration tool (C:\Homie\hg_config.exe).
+<CENTER><IMG SRC="ss_config.gif"></CENTER>
+<LI>Press the "Find My Music" button. This will find the two sample albums ("total 15 tracks from 2 albums". Later you can incorporate your real music collection.
+<LI>Press the "Save Changes and Generate Voice Commands" button at the bottom.
+HG_config.exe will update the HomieGate server information and close.
+</UL>
+<P></P>
+There are more features of the hg_config.exe program which you can use later.
+<P></P>
+<CENTER><IMG SRC="folder_gen.gif"><BR>(a few generated files added)</CENTER>
+
+<P></P>
+<HR>
+<H2>Running HomieGate (the server)</H2>
+
+Run the HomieGate server (C:\Homie\hg_server.exe).
+<P></P>
+
+You should see the server running:
+<CENTER><IMG SRC="ss_server.gif"></CENTER>
+The listbox gives you status information. A log file (log.out) is also created for debugging.
+
+<P></P>
+<HR>
+<A name="TEST">
+<H2>Testing HomieGate</H2>
+
+For this step we will be using the same PC for both the server and the client.
+
+<BR>
+After this initial test, you will use other remote devices ("clients") connected using WiFi.
+This includes PDAs, SD panels or robots like AIBO.
+
+<P></P>NOTE: you will need a microphone attached to the PC to say voice commands.
+The default "Sound Recording" device is used.
+The volume of your microphone must be set correctly.
+This is the recording volume (not the system speech recognition volume).
+<P></P>
+<P>Run the Homie Client</P>
+<LI>Run the PC version of the client, (C:\Homie\hg_client.exe)
+<LI>It will ask for an IP address. We are using the localhost 127.0.0.1, so you don't have to change anything.
+<LI>Press "Connect"
+<LI>It should start with the standard client interface in a small window.
+<CENTER><IMG SRC="ss_pc_client.gif"></CENTER>
+
+<P>Please perform the following tests in the following order:</P>
+
+<P>Test simple .MP3 music playback</P>
+<LI>Expand the tree view under "Music"/"Pop"/"Madonna - Like a Prayer".
+<LI>Pick any of the .MP3 track and it should play on the PC's speakers. Note: these are short low quality clips, not the full album.
+<LI>If that doesn't work, you may not have a .MP3 decoder setup.
+<BR>
+Try the four Cartman test .WAV files under "Music"/"TestWavs". If WAVs play but not MP3s, please check the <A HREF="install_music.htm#FAQ">Music setup FAQ</A>.
+
+<P>Test microphone and memo record</P>
+<LI>Press the "Memo" button
+<LI>Say something into the microphone on your PC (talk for a few seconds)
+<LI>When done, press the "Done" button (formerly the "Memo" button)
+<LI>Scroll down to the "Voice Memos" list and pick the one on the bottom (the files are time stamped in a format: 'yyyy.mm.dd hhmm')
+<LI>When you pick that voice memo, you should hear a recording of what you recorded played back on your PC's speaker
+<LI>If you don't hear it, your microphone level may be set incorrectly, or your PC sound card may be confused.
+Try playing back "Cartmans Todo Note". If you hear it, then check the microphone volume. If you don't hear it there may be something wrong with your sound card setup.
+
+<P>Test voice recognition (the cool features)</P>
+<LI>Press the big "Push to Talk" button.
+<LI>Ask "What time is it?". Speak clearly into the microphone.
+<LI>You should hear the answer, and the big button should change back to "Push to Talk".
+<LI>Repeat the process (ie. press the button before you talk) and ask:
+<LI>Ask "Why is the sky blue?"
+<LI>Ask "What is the first law?"
+<LI>Ask "Who invented the internet?"
+<LI>Say (in one breath) "Play Music Like a Prayer by Madonna"
+<LI>Say "Next song"
+<LI>Say "Stop the music"
+<LI>There are literally thousands of things you can say or ask.
+See the <A HREF="vcmd.htm">What to Say</A> list.
+<LI>NOTE: When HomieGate is listening to you, the "Push to Talk" button becomes "Talk Now, push to stop".
+Normally you don't need to press the button to stop
+Normally if HomieGate understands what you are saying, you don't have to push the button a second time to stop.
+
+<P>What Now ?</P>
+<LI>If you have an X10 Firecracker module controlling your home, you may want to try the <A HREF="install_x10.htm">X10 setup</A> now.
+Otherwise, you should start installing the client software for WiFi devices you own.
+<LI>If you have an AIBO with a WiFi card, you will probably be eager to install the <A HREF="install_aibo.htm">AIBO support</A>
+<LI>If you have a hacked SD panel, you should perform the <A HREF="install_panel.htm">SD Panel install</A> since it is the best remote control around.
+<LI>PocketPC users should look into the <A HREF="install_pda.htm">PDA install</A> if you have the right hardware.
+<LI>Later, you should think about incorporating your music collection sitting on your computer (perhaps in MP3 format).
+See the music <A HREF="install_music.htm">music setup</A> page.
+
+<P></P>
+If you don't have any of the above, you can stick with the PC based client, but you are really missing out on the coolness of HomieGate.
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

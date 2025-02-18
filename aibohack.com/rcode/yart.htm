@@ -1,0 +1,375 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YART = Yet Another RCode Tool
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YART = Yet Another RCode Tool
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>NOTE: This page describes YART in general and specifics for ERS-2x0 and ERS-31x.<BR>
+Please refer to separate pages for other models:
+<LI>For the ERS-110,111 - see the <A HREF="../111/yart11x.htm">YART 11x page</A>
+<LI>For the ERS-7 - see the <A HREF="../ers7/yart7.htm">YART 7 page</A>
+</DIR>
+
+<P></P>
+<H2>Overview</H2>
+YART is a simple drag-and-drop tool for customizing the behavior of existing YART-enabled personalities.
+<BR>
+YART is not a replacement for more powerful RCODE programming tools like Master Studio or AbNet, but it is a great place to start.
+<BR>
+<A HREF="yart_apg.htm">YART_APG</A> (Audio Personality Generator) is a separate tool for converting audio files (.WAV files) into AIBO actions.
+
+<P></P>
+<HR>
+<H2>Supported AIBOs</H2>
+
+<UL>
+<LI><IMG SRC="../gfx/icon_110not.gif">ERS-110/111 supported with <A HREF="../111/yart11x.htm">YART 11x</A>.
+<LI><IMG SRC="../gfx/icon_210.gif">ERS-210 supported.
+<LI><IMG SRC="../gfx/icon_220.gif">ERS-220 supported.
+<LI><IMG SRC="../gfx/icon_310.gif">ERS-311/312/31L supported.
+</UL>
+
+<P></P>
+<HR>
+
+<A name="install">
+
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-220 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-31x model AIBO (311 Latte, 312 Macaron or 31L Pug)
+<P></P>
+
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper RCodePlus runtime for the model of your AIBO.
+<UL>
+<LI>For the ERS-210: <A HREF="RCodePlus252A(210).zip">RCode Plus 2.52 'A' (210)</A>
+<LI>For the ERS-220: <A HREF="RCodePlus252A(220).zip">RCode Plus 2.52 'A' (220)</A>
+<LI>For the ERS-31x: <A HREF="RCodePlus252A(31x).zip">RCode Plus 2.52 'A' (31x)</A>
+<LI>(Save this .ZIP file on your computer. You may want to use it again later.)
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<A name="install_yart">
+<LI>RCodePlus 2.51 'A' contains the latest version of YART and YART_APG (.05).
+There is nothing else to install.
+<P></P>
+<LI>On your PC, run the program "\CUSTOM\YART.EXE" on the memory stick
+<LI>See instructions below
+</UL>
+<P></P>
+
+<BR>
+NOTE: If you install other non-YART personalities (eg: Disco or DogsLife) on top of it, you will replace the RCODE program.
+
+<P></P>
+<HR>
+<H2>YART Tutorial</H2>
+
+After installation, you can go through the <A HREF="yart_tut.htm">YART Tutorial</A> which will cover the basic operations, including how to add your own audio files (using YART_APG).
+<DIR>
+<A HREF="yart_tut.htm">Click Here</A> to go to YART tutorial page.
+</DIR>
+
+<P></P>
+<HR>
+<H2>YART Overview</H2>
+The user interface is relatively simple:
+
+<CENTER>
+<IMG SRC="ss_yart0.gif">
+</CENTER>
+
+<P></P>
+<H3>Step 1:</H3>
+On the upper left is the conditions tree ("When this happens").
+Select a condition from this tree.
+You can expand or contract the groups.
+
+<P></P>
+<H3>Step 2:</H3>
+On the upper right is the most important window, the code window ("AIBO does this").
+This shows the RCODE statements that are executed when the selected condition happens.
+Read what is here, and decide if you like it or want to change it.
+
+<P></P>
+<H3>Step 2B:</H3>
+If you don't like what is in the code window, grab it with the mouse and drag it out of the window (that will delete it).
+<BR>
+Most PLAY statements are followed by a WAIT statement. They go together, so delete both if you don't want them.
+
+<P></P>
+<H3>Step 3:</H3>
+In the middle is a dropdown list of Action categories ("Available Actions").
+When you pick a new Action category, the list below it fills with the available actions.
+<P>Action categories include:</P>
+<UL>
+<LI>Standard - basic things like sitting and standing, walking and killing time.
+<LI>LEDs - turning certain LEDs on or off (model specific)
+<LI><A HREF="yart.htm#user">User Actions</A> - provides access to user actions (see below)
+<LI><A HREF="yart.htm#system">System Actions</A> - built-in actions, in many different categories (see below)
+<LI>Subroutines - for more complicated things like Name Registration and Take a Picture.
+</UL>
+
+<P></P>
+<H3>Step 4:</H3>
+
+Browse through the Action list (below "Available Actions") and find one you want.
+Grab the item you want and drag it into the code window.
+It will expand to the appropriate RCODE statements.
+For most things this is usually:
+<pre>
+        PLAY ACTION system_action_name // comment
+        WAIT
+
+_or_
+        PLAY ACTION+ user_action_name // comment
+        WAIT
+
+</pre>
+NOTES:<BR>
+In this case "WAIT" will wait until all actions are completed
+(ie. the action performance is over).
+<BR>
+If "WAIT" is followed by a number, that is the number of milli-seconds to wait.
+<BR>
+Some actions have "_NOWAIT" in the name, because they repeat the same thing over and over. Use these with caution (you should stop them with "PLAY ACTION STOP", see "Standard"/"Stop playing").
+
+<P></P>
+<H3>Step 5: Repeat</H3>
+Repeat the process to add more actions (step 4), or actions from a different catetegory (step 3&4) or for a different condition (repeat steps 1,2,3 & 4).
+<P></P>
+When you are finally done, press the "Save RCODE program to memory stick" button and try out your creation in your AIBO.
+
+<P></P>
+<H3>Step 6: Test, Repeat</H3>
+After testing it out in your AIBO, put the memory stick back into your PC, and run "\CUSTOM\YART" on the memory stick again. Do what is needed to fix or otherwise improve your creation.
+<P></P>
+<HR>
+<A name="user">
+<H2>User Actions</H2>
+The "User Actions" list is empty when you first install YART.
+You can create your own user actions using Master Studio or YART_APG.
+You can also <I>borrow</I> user actions from existing personalities (like DogsLife or ObeyCat or Cartman).
+<P></P>
+Please see the <A HREF="yart_tut.htm">YART Tutorial</A> for how to turn your own audio files into user actions.
+<P></P>
+See the <A HREF="yart_advanced.htm#borrow">YART Advanced page</A> for how to <i>borrow</i> user actions from existing personalities.
+
+<P></P>
+<HR>
+<A name="system">
+<H2>System Actions</H2>
+There are many model independent actions built into AIBO.
+Over 350 of them are named and provided by YART.
+The same action names will work in the ERS-210, ERS-220 and ERS-31x series AIBOs.
+<BR>
+These are built in system actions, and act smoothly.
+These are the essentially the same actions used in the main "AiboLife" personality
+(and will be used where appropriate in future DogsLife personalities)
+
+<BR>
+If you don't care about the ERS-31X, you have an addition 225 ERS-2x0 specific actions available to you as well (see below under "O2_" actions).
+
+<P></P>
+<H3>System Action Categories</H3>
+System Actions are categorized by how they are used by AIBO.
+This is not necessarily what the performance does (but more what AIBO means to say).
+<P></P>
+You can pick the category in the YART "Available Actions" dropdown list.
+The "System: " actions are listed below.
+
+<UL>
+<LI>ALONE_??? - Play Alone - things AIBO does by himself
+<LI>HUMAN_??? - Play with Human - things AIBO does with you
+<LI>ROBOT_??? - Play with Robot - things AIBO does with other AIBOs
+<LI>OBJECT_??? - Play with Object - things AIBO does with things (usually pink balls)
+<P></P>
+<LI>EMOTION_??? - Show emotions / moods (joy, fear, disgust, ...)
+<LI>FEELING_??? - Show feelings (bored, embarrased, dislike, ...)
+<LI>PHYSIO_??? - Physiological reactions (cold, hot, itchy, peeing, ...)
+<P></P>
+<LI>REQUEST_??? - Requests (play with me)
+<LI>REFLEX_??? - Reflexes (react to noise or surprise)
+<LI>INTENT_??? - Show Intentions (just say no)
+<P></P>
+<LI>OFF_??? - Offsensive (attack, provoke, escape)
+<LI>GUARD_??? - Guard / Defensive (attack, cover, threaten)
+<P></P>
+<LI>CONTACT_??? - Contact -  AIBO raises paw to touch something (in different locations)
+<LI>TACTILE_??? - Tactile - Reactions to being touched (hate it, pressed, tickled)
+<P></P>
+<LI>CHGPOS_??? - Special case position changes (advanced)
+<LI>SEARCH_???, FOLLOW_??? - Ball search and tracking (advanced)
+<LI>SYS_??? - System specific warnings etc
+<P></P>
+<LI>O2_??? - Only on ERS-210 and ERS-220 (see below)
+</UL>
+
+<H3>Model Independent Actions</H3>
+<BR>
+If you create an RCODE program using these actions, you program
+will immediately work on any other model AIBO with no translation.
+<P></P>
+For example:
+<DIR>
+        ALONE_GROOM0_SIT = Aibo sitting alone grooming himself<BR>
+        EMOTION_ANGRY1_SLP = Aibo showing anger, when in the sleeping position<BR>
+        PHYSIO_EXCRETE0_STD = Aibo excreting (peeing) while standing<BR>
+</DIR>
+When used in RCODE, the main category is up front (see above), followed by what
+the action is used for, followed by a posture name.
+<DIR>
+        _STD = AIBO is standing<BR>
+        _SIT = AIBO is sitting<BR>
+        _SLP = AIBO is sleeping (laying down)<BR>
+        _STN = AIBO is on the station<BR>
+        _ANY = any posture<BR>
+        _SND = audio only (posture doesn't matter)<BR>
+</DIR>
+If there is more than one action in a given category, they are numbered
+(eg EMOTION_ANGRY1_SLP, EMOTION_ANGRY4_SLP, EMOTION_ANGRY4_SLP2)
+Try out the variations to see which one you prefer.
+
+<P></P>
+NOTE: the action may perform differently on different model AIBOs, but the intent should be the same.
+<P></P>
+<H3>"O2_" ERS-2x0 System Actions</H3>
+An additional 200+ actions are provided that only work on the ERS-210
+and ERS-220. Do not use these actions if you want your personality
+to work on the ERS-31X. The names for these actions start with "O2_"
+followed by the name used in the DogsLife source.
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

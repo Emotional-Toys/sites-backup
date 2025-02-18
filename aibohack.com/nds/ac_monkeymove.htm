@@ -1,0 +1,240 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Monkey Movement Tutorial
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Monkey Movement Tutorial
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Before you start, you must have your Action Replay working and you should be familiar with how the <A HREF="ac_mapedit.htm">Map Editor</A> works.
+Be sure to keep backups of your town, especially when you find one with a moving NPC in the "9th slot".
+<P></P>
+This is a tutorial if you have an Action Replay, and have used the Map Editor before.
+It will explain how you can send Monkey residents from your town to your friends town over WiFi.
+For this tutorial I will explain them as moving monkeys, but it is not limited to monkeys.
+The technique works for other NPC neighbor/villager characters too (eg: Cyrano the ant-eater), including gender confused ones.
+<P></P>
+NOTE: Please only send characters from your town to people who want them.
+See the instructions for a reliable technique that works 100% of the time AFAIK, but your friend must stay off WiFi during a critical period before the monkey moves in.
+Releasing them "into the wild" is not recommended. It may confuse new users, but more importantly they won't appreciate what they got.
+
+<P></P>
+<H2>Step #1: Preparation</H2>
+<UL>
+<LI>You should have a working Action Replay. You should have backed up your town a few times already and be familiar with the backup/edit/restore process.
+<LI>If your town was just started, and has never been full (8 NPCs), wait until later before trying this process.
+<LI>You must wait until one of your NPC neighbors/villagers moves from your town.
+You could have an almost full town (7 NPCs), or full town (8 NPCs, one of them replacing the one that just moved out)
+<LI>Backup your game save now using Action Replay and uncompress it to a DUC file.
+<LI>Open the DUC file with the Map Editor version 1.4<B>B</B> (you must use the latest version)
+<LI>If it reports "9th Neighbor moving in progress", and it says it is moving from <i>your</i> town then go to Step #2. Congratulations!
+<CENTER><IMG SRC="acmap_ss13.jpg"></CENTER>
+<LI>If it doesn't report anything when you first open the .DUC file, go back and play the game until another neighbor moves.
+<LI>Alternatively you can check from time to time until you get a DUC gamesave with a "9th Neighbor moving in progress"
+<LI>NOTE: if it reports moving in progress, but the NPC is not from your town, you should probable wait until you get one from your town.
+<LI>Repeat the above steps until you get a good "9th Neighbor moving in progress" gamesave.
+</UL>
+
+<P></P>
+<H2>Step #2: Customize the "9th slot" NPC (the one moving)</H2>
+<UL>
+<LI>Make an extra copy of this .DUC file. You can use it later many times to send monkeys to other towns.
+<LI>Now open the DUC file.
+<LI>When it reports "9th Neighbor moving in progress" from your town, press OK.
+<LI><B>If you don't see this alert</B>, you are using the wrong DUC file (or an old version of the Map Editor). Go back to Step#1.
+<LI>Press the "Advanced >>>" button and answer "Yes" that you want to start ADVANCED mode.
+<LI>From the menu, select "Town" and the "View 9th neighbor info" menu item
+<LI>You can now edit the 9th neighbor. This is the neigbhor you will be sending to your friend over WiFi.
+<P></P>
+<LI>The neighbor editing features are similar to the "Edit Neighbors" feature for the 8 regular NPCs
+<UL>
+<LI>Species/Name: the species. The 6 monkeys are at the very bottom of the list.
+<LI>Personality: one of 6 (see note below)
+<LI>Catch Phrase: 10 chars max (see note below)
+<LI>Edit Room Contents: lets you customize the furniture that will move with the monkey, once it unpacks its boxes in the new town.
+<LI>Edit Relationships: only useful if the person receiving the moving monkey has previously talked to the old character in your town.
+</UL>
+<P></P>
+<LI>NOTE: It is up to you if you want the personality and catch-phrase to match the species normally used by the game.
+<BR>
+The official personalites and catch-phrases can be found in the
+animalxing.com <A HREF="http://www.animalxing.com/acdscharsearch.php">AC:WW Character database</A>
+<BR>
+For the 6 monkey species: (not in the database)
+<UL>
+<LI>Champ - Jock, says "choo CHOO"
+<LI>Nana - Normal, says "po po"
+<LI>Simon - Lazy, says "zzzook"
+<LI>Tammi - Peppy, says "chimpy"
+<LI>Monty - Cranky, says "g'tang"
+<LI>Elise - Snooty, says "puh-lease"
+</UL>
+
+<P></P>
+<LI>Press "DONE" and "FINAL SAVE" when you are done customizing the moving NPC (monkey or whatever)
+<LI>Save this backup on your computer. Restore this backup to your DS cartridge right when you are ready to force the move in Step#4 (not before).
+Your friend (who doesn't have an Action Replay) must complete Step #3 before you can do the real work.
+</UL>
+
+<P></P>
+<H2>Step #3: Getting your friend's town ready for the move</H2>
+<UL>
+<LI>The monkey will be moving to your friend's town over WiFi.
+<LI>They must have 7 NPCs in their town. If the town is full (8 NPCs) then ask them to wait until one of their NPCs moves out.
+<LI>Also explain to them (probably over email) what they will have to do.
+If they don't follow the instructions, they may lose their monkey.
+<LI>When everything is ready, and you are both ready to meet-up over WiFi, go to Step #4
+</UL>
+
+<P></P>
+<H2>Step #4: Move that Monkey</H2>
+<UL>
+<LI>Be sure your DS game cartridge has the Action Replay tweeked 9th neighbor ready to move (the result of Step#2)
+<LI>Be sure your friend's town is not full (7 NPCs or less).
+<LI>Also be sure the NPC you are trying to move is not already in your friends town (ie. you can't force the same species to move twice to the same town)
+<LI>OPTIONAL: if you have a busy town, you may want to remove extra friendcodes to prevent interruption.
+<P></P>
+<LI>You can go visit your friends town, or have them visit your town.
+<LI>Connect over WiFi like you would normally to visit.
+Once you connect and your character appears outside the gatehouse, immediately stop the game with "Party's Over".
+<LI>Only do this once.
+<P></P>
+<LI><B>This is the important step</B>. Your friend (the one without an Action Replay) must stay off WiFi until the new monkey neighbor moves in. Usually it will happen within the next day. See Step#5.
+If they get back on WiFi, they may lose their moving monkey to someone else (the next person they connect with)
+<P></P>
+<LI>For the person with Action Replay, you don't have to wait. You can continue to play normally, or you can restore the backup you made in Step#2 and repeat the process with another next friend who wants a monkey.
+<LI>NOTE: if you now backup the game, you can see what your friend sent you from their 9th slot (or it may be empty)
+</UL>
+
+<P></P>
+<H2>Step #5: Monkey moves in for real</H2>
+<UL>
+<LI>Your friend must stay off WiFi until the process completes. No visiting towns or opening town gates!!
+<CENTER><IMG SRC="monkey_says.jpg"></CENTER>
+<LI>Eventually the monkey (or whatever) will move into their town, and act like a regular NPC neighbor.
+<LI>Once that happens (usually a day, no more than 2), they can interact with the new neighbor like usual, and can go back to regular WiFi activity.
+</UL>
+
+<P></P>
+<H2>Technical Info</H2>
+There is room for 8 regular NPC slots. There is also a special "9th slot" where NPCs get stored when they are in the process of moving.
+This is the technology that lets NPCs move all over the web, even if you haven't directly visited the town they came from.
+<BR>//REVIEW: perhaps add a little graphic if people don't understand this
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

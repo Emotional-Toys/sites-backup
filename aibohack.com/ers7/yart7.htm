@@ -1,0 +1,240 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YART 7 = Yet Another RCode Tool for the ERS-7
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YART 7 = Yet Another RCode Tool for the ERS-7
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>For the ERS-7 model only.
+<BR>
+Please refer to separate pages for other models:
+<LI>For the ERS-110,111 - see the <A HREF="../111/yart11x.htm">YART 11x page</A>
+<LI>For the ERS-210/220/31x - see the <A HREF="../rcode/yart.htm">main YART page</A>
+</DIR>
+
+<P></P>
+
+<TABLE border=20 bgcolor=#80F080 cellspacing=10 cellpadding=20>
+<TR><TD>
+<CENTER>
+<A HREF="../pms.htm">To use RCODE you need an 8MB or 16MB "PMS" stick.<BR>Other sticks will not work.<BR>Click here to learn more about PMS sticks</A>
+</TD></TR>
+</CENTER>
+</TABLE>
+<H2><font color=red>WARNING:</font> ONLY USE SONY BRAND MEMORY STICK READERS!</font></H2>
+<H2><font color=red>WARNING:</font> NEVER FORMAT A PINK MEMORY STICK!</font></H2>
+
+<HR>
+
+<P></P>
+<H2>Overview</H2>
+YART is a simple drag-and-drop tool for customizing the behavior of existing YART-enabled personalities.
+
+<P></P>
+<HR>
+
+<H2>Minimal Documentation release</H2>
+
+WARNING: You should first be familiar with the regular version of YART (210/220/31x) and YART_APG (if you wish to use it).
+If you have never used them before, I suggest following the
+<A HREF="../rcode/yart_tut.htm"> regular tutorial first<A>.
+You should at least read through the tutorial.
+You may do the tutorial steps yourself on a memory stick even if you don't have a 210/220/31x AIBO just to get a feel for it.
+
+<P></P>
+<H2>Installation</H2>
+<LI>Dig up a PMS memory stick (8MB or 16MB). It must be a PMS stick.
+It must be pink. It must <i>not</i> have an ERF- number on the sticker.
+You can't use the 32MB AiboMind/AiboMind2 pink stick.
+<P></P>
+<LI>Delete any files on the stick (do not format, use a Sony brand stick reader)
+<LI>Download the RCODE7+YART memory stick image:
+<A HREF="RCODE7_YART703_E.zip">RCODE7_YART703_E.zip</A> (3.8MB)
+<LI>Unzip the memory stick image on top of your RCODE/PMS stick.
+<BR>
+When done at the top of the memory stick there should be an "OPEN-R" folder, a "CUSTOM" folder and maybe a "MEMSTICK.IND" file (zero size) and nothing else.
+<P></P>
+<LI>Now open the "\CUSTOM" folder on the memory stick. In there you will find YART7.EXE and YART_APG7.EXE. You can run them directly from there.
+</UL>
+<P></P>
+<H3>YART Notes:</H3>
+<UL>
+<LI>The program is found on the memory stick in the \CUSTOM folder (\CUSTOM\YART7.EXE)
+<LI>This version includes a mostly empty skeleton R-CODE application. Most event handlers are empty.
+<BR>
+<LI>When running YART, drag and drop the actions as described in the regular tutorial. You will notice the categories and features are different.
+<LI>When selecting a system action, take a look at the bottom of the YART screen. It will say something like "Posture_stand". This is the starting posture of the action.
+Most actions start and end with the same posture (unless they are specially designed to change between postures). "Posture_any" works for any posture (usually LED and/or audio only)
+<LI>Some old feature of RCodePlus are not supported in the current version (which uses regular RCODE version 7)
+</UL>
+<P></P>
+
+<H3>Action Naming:</H3>
+<UL>
+<LI>Action names are straight from the documentation with some disambiguation added (I'm open to suggestions for improvement).
+The category names need some improvement too.
+<LI>The action names (and categories) are good hints, but you still must use trial and error and the posture rules mentioned above.
+<LI>The action names are in the general format "?_category.mood.kind", eg:
+"L_PHYSI.M_EXCRETE.S_HANG".
+Categories start with "L_" or "E_". I think "L_" categories mostly involve the legs.
+<LI>Some names require disambiguation, and will end in ".sleep", ".sit", ".stand". This is similar to the _SLP,_SIT,_STD extension for the starting posture.
+These are the same as the Posture_??? reported on the bottom.
+For example:
+<BR>
+"L_PHUMAN.M_GREET.S_GOODMORNING.stand",
+<BR>"L_PHUMAN.M_GREET.S_GOODMORNING.sit",
+<BR>"L_PHUMAN.M_GREET.S_GOODMORNING.sleep"
+<LI>Other names requiring disambiguation end in different numbers for different versions.
+Try them all to find the one you like best.
+For example:
+<BR>"L_FDSP.M_CHEER.S_FOUNDTOY.1",
+<BR>"L_FDSP.M_CHEER.S_FOUNDTOY.2",...
+</UL>
+
+<P></P>
+Custom motions may be added with Skitter or the new MEdit editor (.MTN files).
+Custom LED patterns may be edited with Skitter (.LED files).
+<BR>
+You can optionally use YART_APG to generate audio-synced eye LED flashing, mouth movement and head bopping actions for use with Audio based personalities.
+YART_APG can also be used to build the final action list for motions created with Skitter or MEdit.
+
+<P></P>
+<H3>YART_APG Notes:</H3>
+<UL>
+<LI>YART_APG use is optional. YART7 can be used with or without YART_APG.
+<LI>The program is found on the memory stick in the \CUSTOM folder (\CUSTOM\YART_APG7.EXE)
+<LI>Audio must be in old style WAV format (8kHz, 8bit, mono). The ERS-7 does support other audio formats, but not YART_APG.
+<LI>If the action name end in "_SND", then YART_APG will not generate mouth/head movements for the action (so you can play the sound and perform full body motions at the same time)
+<LI>See the YART_APG tutorial if you haven't already used this tool.
+<LI>To add more room on the memory stick, the YART_APG program can be copied to your PC (ie. they don't have to reside in the \CUSTOM folder)
+</UL>
+
+<P></P>
+<H3>Future work</H3>
+<UL>
+<LI>Beef up the default behavior for the initial personality
+<LI>Do something about the cryptic action names (and categories)
+<LI>Fix rear leg switch bug ?
+<LI>Provide full blown YART7 personalities as samples and entertainment value (Cartman7, WhoAibo7, Bender7?)
+</UL>
+
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

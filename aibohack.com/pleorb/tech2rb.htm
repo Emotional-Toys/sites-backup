@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ PleoRB Sensor Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PleoRB Sensor Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<BR>
+
+<H3>Sensor Values</H3>
+The sensor values are not backwardly compatible with the original PLEO firmware.
+You must recompile your PDK program to make it compatible with the RB.
+For use with YAPT, you must have an updated .Y file.
+<BR>
+Here are the PleoRB values.
+
+<DIR>
+<PRE>
+0  ($00) SENSOR_HIT -- new (shock sensor in 3D axis accelerometer?)
+1  ($01) SENSOR_NTC
+2  ($02) SENSOR_BATTERY
+3  ($03) SENSOR_IR
+4  ($04) SENSOR_IR_ACTIVITY
+5  ($05) SENSOR_RFID -- new (see below)
+6  ($06) SENSOR_HEAD
+7  ($07) SENSOR_CHIN
+8  ($08) SENSOR_CHEEKL -- new
+9  ($09) SENSOR_CHEEKR -- new
+10 ($0A) SENSOR_BACK
+11 ($0B) SENSOR_BACK2 -- new
+12 ($0C) SENSOR_LEFT_LEG
+13 ($0D) SENSOR_RIGHT_LEG
+14 ($0E) SENSOR_LEFT_ARM
+15 ($0F) SENSOR_RIGHT_ARM
+16 ($10) SENSOR_ARSE (aka Tail)
+17 ($11) SENSOR_ARSE2 -- new
+18 ($12) SENSOR_FRONT_LEFT
+19 ($13) SENSOR_FRONT_RIGHT
+20 ($14) SENSOR_BACK_LEFT
+21 ($15) SENSOR_BACK_RIGHT
+22 ($16) SENSOR_CARD_DETECT
+23 ($17) SENSOR_ULTRA_SONIC -- new (not used?)
+24 ($18) SENSOR_LEFT_LOUD
+25 ($19) SENSOR_LIGHT
+26 ($1A) SENSOR_RIGHT_LOUD
+27 ($1B) SENSOR_OBJECT
+28 ($1C) SENSOR_MOUTH
+29 ($1D) SENSOR_VR -- new "Voice Recognition". Value is 01 to 08 following the RFID numbers.
+30 ($1E) SENSOR_SOUND_DIR
+31 ($1F) SENSOR_LIGHT_CHANGE
+32 ($20) SENSOR_SOUND_LOUD
+33 ($21) SENSOR_TILT
+34 ($22) SENSOR_TERMINAL
+35 ($23) SENSOR_POWER_DETECT
+36 ($24) SENSOR_USB_DETECT
+37 ($25) SENSOR_WAKEUP
+38 ($26) SENSOR_BATTERY_TEMP
+39 ($27) SENSOR_KEY_RTC -- new
+40 ($28) SENSOR_SHAKE
+41 ($29) SENSOR_SOUND_LOUD_CHANGE
+42 ($2A) SENSOR_BEACON
+43 ($2B) SENSOR_BATTERY_CURRENT
+44 ($2C) SENSOR_PACKET -- new (not used?)
+</PRE>
+</DIR>
+<LI>Virtual sensors like "SENSOR_TOUCH_TAP" appear to be the same (values over 100 in the old PDK).
+</UL>
+
+
+<P></P>
+<HR>
+<H3>RFID values</H3>
+Each RFID toy has a code number. Each has its own PCB with the number written on it (if you want to rip apart the toys be careful).
+Here are the known toys and their numbers.
+
+<UL>
+<P>The first 8 cards are used to train the voice recognition commands</P>
+<LI>01 - the ID card used for naming the PleoRB (comes with PleoRB). All ID tags appear to be the same (ie. the serial number printed on top is cosmetic).
+<LI>02 - Come To Me stone (vr_come_to_me)
+<LI>03 - Counting stone (vr_stay_with_me)
+<LI>04 - Playing stone (vr_lets_play)
+<LI>05 - Eating stone (vr_eat_now)
+<LI>06 - 'Bow' stone (comes with PleoRB, vr_go_to_sleep)
+<LI>07 - Singing stone (vr_sing_a_song)
+<LI>08 - Dancing stone (vr_dance)
+
+<P>Tug-of-war is a special game mode (vr_tug_of_war)</P>
+<LI>09 - Tug of War stone on rope (comes with PleoRB)
+
+<P>The others</P>
+<LI>12 - Conifer Leaf (Health Care)
+<LI>13 - Cycad Leaf (Daily Nutrition)
+<LI>14 - Sugar Cane (Leisure Food)
+<LI>15 - Chili Pepper (Leisure Food)
+<LI>16 ($10) - Coffee Leaf (Leisure Food)
+<LI>17 ($11) - Mushroom (Daily Nutrition)
+<LI>18 ($12) - Mint Leaf (Health Care)
+<LI>19 ($13) - Rock Salt (Health Care)
+<LI>20 ($14) - Chunk of Ice (Daily Nutrition)
+
+<P>There are some unavailable 'cheat' cards (exp_cheat_card)</P>
+<LI>10 - Cheat Card #10 - reset all properties to zero, except DNA; start over as newborn (age_new=10)
+<LI>11 - Cheat Card #11 - advance/regress to hatchling (age_new=20)
+<LI>21 ($15) - Cheat Card #21 - advance/regress to social development (age_new=30)
+<LI>22 ($16) - Cheat Card #22 - advance to juvenile (age_new=40).
+<LI>23 ($17) - Cheat Card #23 - advance to mature/adult (age_new=50). Set mood properties to low values (9)
+<LI>24 ($18) - Cheat Card #24 - advance to mature/adult (age_new=50). Set mood properties to midrange values (50)
+<LI>25 ($19) - Cheat Card #25 - advance to mature/adult (age_new=50). Set mood properties to high values (99)
+<LI>others TBD
+<LI>124 ($7C) - something used internally for voice recording?
+</UL>
+Note: the default BabeRB personality will speak the RFID code when it detects the toy.
+<BR>
+Note: the soft rubber leaf does not have an RFID chip inside.<BR>
+<BR>
+Note: the 'Cheat Cards' are inferred by looking at the robot software. AFAIK they are not sold as true toys.
+<BR>
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

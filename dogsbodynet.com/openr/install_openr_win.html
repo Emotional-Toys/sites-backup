@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Install OPEN-R on Cygwin</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Install OPEN-R on
+Cygwin</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">Table
+of Contents</span></span></big></big><br>
+      <ol>
+        <li><a href="install_openr_win.html#INTRO">Introduction</a></li>
+        <li><a href="install_openr_win.html#DOCS">Install Documentation &amp; Sample Code</a></li>
+        <li><a href="install_openr_win.html#SDK">Install OPEN-R SDK</a></li>
+        <li><a href="install_openr_win.html#SAMPLE">Build a Sample</a></li>
+        <li><a href="install_openr_win.html#TEST">Test Sample</a><br>
+        </li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">1. Introduction</span><br>
+      </span></big></big><br>
+OPEN-R requires a Unix/Linux like environment.&nbsp;&nbsp; To work with
+it on Windows, the Cygwin package can be used.&nbsp; It's based on
+Linux, and allows Linux programs (for the most part) to work under
+Windows.&nbsp;&nbsp;&nbsp; <br>
+      <br>
+To first install Cygwin, you'll want to follow <a
+ href="install_cygwin.html">this tutorial</a>.<br>
+      <br>
+If just starting out with AIBO programming, I highly recommend first
+checking
+out AiboPet's <a href="https://www.aibohack.com/rcode/yart.htm">YART</a>
+instead.<br>
+      <br>
+      <a name="DOCS"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">2. Install Documentation &amp;
+Sample Code</span></span></big></big><br>
+      <br>
+Before going too far, see if
+OPEN-R is for you. &nbsp;&nbsp; Download the following documentation
+and samples archives.&nbsp; Save them to: "<span
+ style="font-family: monospace; font-weight: bold;">C:\Cygwin\usr\local</span>".
+&nbsp; In a Cygwin terminal, the path is "<span
+ style="font-weight: bold;">/usr/local</span>".
+      <ul>
+        <li>OPEN-R Documentation (<a
+ href="downloads/OPEN_R_SDK-docE-1.1.5-r1.tar.gz">OPEN_R_SDK-docE-1.1.5-r1.tar.gz</a>)&nbsp;
+~2.4 MBytes</li>
+        <li>OPEN-R Samples (<a
+ href="downloads/OPEN_R_SDK-sample-1.1.5-r2.tar.gz">OPEN_R_SDK-sample-1.1.5-r2.tar.gz</a>)&nbsp;&nbsp;
+~3.8 MBytes</li>
+      </ul>
+Open a Cygwin terminal.&nbsp;&nbsp; Either use the desktop icon or
+Start Menu entry.&nbsp;&nbsp; To extract the documentation and samples,
+type the commands shown below in white:<br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(0, 0, 0); width: 90%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(51, 255, 51);"
+ border="2" cellpadding="10" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="margin-bottom: 0px;">dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~</span><br><span
+ style="color: rgb(255, 255, 255);">$ mkdir aibo</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~</span><br><span
+ style="color: rgb(255, 255, 255);">$ cd aibo</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo</span><br><span
+ style="color: rgb(255, 255, 255);">$ tar -zxf /usr/local/OPEN_R_SDK-docE-1.1.5-r1.tar.gz</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo</span><br><span
+ style="color: rgb(255, 255, 255);">$ tar -zxf /usr/local/OPEN_R_SDK-sample-1.1.5-r2.tar.gz</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The contents are expanded to folders <span
+ style="font-family: monospace;"><span style="font-weight: bold;">OPEN_R_SDK-doc-1.1.5-r1</span>
+and <span style="font-weight: bold;">samples</span>.</span>
+      <ul>
+      </ul>
+In particular, you should read the programmers guide
+(ProgrammersGuide_E.pdf) in the docs directory.<br>
+      <br>
+      <a name="SDK"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">3. Install OPEN-R SDK</span></span></big></big><br>
+      <br>
+If you decide to continue, download the following files.&nbsp;&nbsp;
+Again, save to "<span style="font-family: monospace; font-weight: bold;">C:\Cygwin\usr\local</span>".<br>
+      <div class="itemizedlist">
+      <ul type="disc">
+        <li>MIPS development tools (<a
+ href="downloads/mipsel-devtools-3.3.2-bin-r1.tar.gz">mipsel-devtools-3.3.2-bin-r1.tar.gz</a>)&nbsp;
+~22.7 MBytes</li>
+        <li>OPEN-R SDK (<a href="downloads/OPEN_R_SDK-1.1.5-r5.tar.gz">OPEN_R_SDK-1.1.5-r5.tar.gz</a>)&nbsp;
+~12.2 MBytes</li>
+      </ul>
+      </div>
+Open a Cygwin terminal (or use the previous one).&nbsp;&nbsp; Type the
+commands shown below in white:<br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(0, 0, 0); width: 90%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(51, 255, 51);"
+ border="2" cellpadding="10" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="margin-bottom: 0px;">dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo</span><br><span
+ style="color: rgb(255, 255, 255);">$ cd /usr/local</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">/usr/local</span><br><span
+ style="color: rgb(255, 255, 255);">$ tar -zxf mipsel-devtools-3.3.2-bin-r1.tar.gz</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">/usr/local</span><br><span
+ style="color: rgb(255, 255, 255);">$ tar -zxf OPEN_R_SDK-1.1.5-r5.tar.gz</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">/usr/local</span><br><span
+ style="color: rgb(255, 255, 255);">$ chmod -R a+rw OPEN_R_SDK</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+This installs the MIPS compatible compiler and OPEN-R-SDK into "<span
+ style="font-family: monospace; font-weight: bold;">C:\Cygwin\usr\local\OPEN-R-SDK</span>".&nbsp;
+The last step avoids problems when copying files to memsticks later on.<br>
+      <br>
+      <a name="SAMPLE"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">4. Build a Sample</span></big></big><br>
+      <br>
+To test the tools installed properly, try compiling a sample (for
+ERS-210/220):<br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(0, 0, 0); width: 90%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(51, 255, 51);"
+ border="2" cellpadding="10" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="margin-bottom: 0px;">dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">/usr/local</span><br><span
+ style="color: rgb(255, 255, 255);">$ cd ~/aibo/sample/ers200/BallTrackingHead</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo/sample/ers200/BallTrackingHead</span><br><span
+ style="color: rgb(255, 255, 255);">$ make</span><br>  <br>... much scrolling of compile progress ...<br><br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo/sample/ers200/BallTrackingHead</span><br><span
+ style="color: rgb(255, 255, 255);">$ make install</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo/sample/ers200/BallTrackingHead</span><br><span
+ style="color: rgb(255, 255, 255);">$ ls -al MS/OPEN-R/MW/OBJS</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+You should see the following binaries listed:<br>
+      <ul style="font-family: monospace;">
+        <li>BALLTRCK.BIN</li>
+        <li>LFSOUND.BIN</li>
+        <li>MVHEAD2.BIN</li>
+        <li>MVLEGS2.BIN</li>
+        <li>POWERMON.BIN</li>
+      </ul>
+To compile for the ERS-7 instead, use path "<span
+ style="font-family: monospace;"></span><span
+ style="font-family: monospace;">~/aibo/sample/ers7/BallTrackingHead7".</span><br>
+      <br>
+      <a name="TEST"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">5. Test Sample</span></big></big><br>
+      <br>
+To try the sample on AIBO, you'll need a programmable memory stick
+&amp; reader.&nbsp;&nbsp; <a href="../rcode_supplies.html">Click here</a>
+for details.&nbsp;&nbsp;&nbsp; Assuming
+your drive appears as "<span style="font-weight: bold;">M:</span>",
+type the following commands:<br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(0, 0, 0); width: 90%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(51, 255, 51);"
+ border="2" cellpadding="10" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="margin-bottom: 0px;">dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo/sample/ers200/BallTrackingHead</span><br><span
+ style="color: rgb(255, 255, 255);">$ cp -r /usr/local/OPEN_R_SDK/OPEN_R/MS_ERS200/BASIC/memprot/OPEN-R /cygdrive/m</span><br>  <br>dogsbody@WinXP <span
+ style="color: rgb(255, 204, 0);">~/aibo/sample/ers200/BallTrackingHead</span><br><span
+ style="color: rgb(255, 255, 255);">$ cp -r MS/OPEN-R /cygdrive/m</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The first command copies the base SDK.&nbsp;&nbsp; The second copies
+the compiled sample binaries.&nbsp;&nbsp; The last letter in each
+command is the memstick drive.&nbsp;&nbsp;&nbsp; To prepare an ERS-7
+memstick instead, replace "MS_ERS200" with "MS_ERS7".<br>
+      <br>
+Once done copying, eject the memstick from the reader &amp; insert into
+AIBO.&nbsp;&nbsp; Boot AIBO &amp; give it a try!&nbsp;&nbsp; AIBO will
+stretch, then start scanning for the ball.&nbsp; Once found AIBO bleeps
+and tracks it.<br>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

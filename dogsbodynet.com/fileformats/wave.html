@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO Wave File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO Wave File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="wave.html#INTRO">Introduction</a></li>
+        <li><a href="wave.html#RIFF">Wave RIFF Chunk</a></li>
+        <li><a href="wave.html#FORMAT">Wave Format Chunk</a></li>
+        <li><a href="wave.html#DATA">Wave Sound Data Chunk</a></li>
+        <li><a href="wave.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+Wave files are an excessively flexible format for recording
+sound.&nbsp;&nbsp; There are literally dozens of varients, some with
+compressed sound, others without.&nbsp;&nbsp; However, this document
+only describes
+those flavors supported by AIBO.&nbsp;&nbsp;
+Specifically:<br>
+      <ul>
+        <li>&nbsp;&nbsp;&nbsp; 8 bit data, 8KHz sample rate, PCM,
+Monaural (single channel).</li>
+        <li>&nbsp;&nbsp;&nbsp; 16 bit data, 16KHz sample rate, PCM,
+Monaural (single channel).</li>
+      </ul>
+      <a href="../skitter.html">Skitter</a> can convert other PCM
+(pulse-code-modulated) wave
+files with different sample rates and/or stereo sound to be compatible.<br>
+      <br>
+      <a name="RIFF"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">2. Wave RIFF
+Chunk</span></big></big><br>
+      <br>
+Wave files are composed of a RIFF header chunk, followed by format
+&amp; sound data chunks -- one of each.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct riff_chunk_type {<br>  char signature[4];       // "RIFF"<br>  int chunklen;            // length of format/sound chunks<br>  char rifftype[4];        // "WAVE"<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+The RIFF header specifies the size of the format &amp; sound data
+chunks, and is useful for testing file validity.&nbsp;&nbsp; The length
+field is not inclusive of the header itself.<br>
+      <br>
+      <a name="FORMAT"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">3. Wave Format
+Chunk</span></big></big><br>
+      <br>
+The format chunk specifies the data encoding, number of channels,
+sample rate, bits-per-sample, and other information.&nbsp;&nbsp; There
+can be exactly one format chunk per wave fule.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct format_chunk_type {<br>  char signature[4];                   // "fmt "<br>  int chunklen;                        // 16 bytes<br>  short format_tag;                    // 1 (PCM format, no compression)<br>  unsigned short channels;             // 1 (monaural)<br>  unsigned long samples_per_sec;       // 8192 or 16384<br>  unsigned long average_bytes_per_sec; // 8192 or 16384<br>  unsigned short block_alignment;      // 1 (8 bit) or 2 (16 bit)<br>  unsigned short bits_per_sample;      // 8 or 16<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+For PCM audio:<br>
+      <ul>
+        <li>format_tag must be 1</li>
+        <li>channels should be 1 (for monaural) or 2 (for stereo)<br>
+        </li>
+        <li>samples_per_sec is variable.&nbsp;&nbsp; Typically 8000,
+11025, 16000, 22050, or 44100<br>
+        </li>
+        <li>average_bytes_per_sec = (samples_per_sec * block_alignment)</li>
+        <li>block_alignment = (channels * bits_per_sample)/8)</li>
+        <li>bits_per_sample should be 8 or 16<br>
+        </li>
+      </ul>
+For AIBO compatible 8 bit 8KHz PCM sound:<br>
+      <ul>
+        <li>format_tag = 1</li>
+        <li>channels = 1<br>
+        </li>
+        <li>samples_per_sec = 8000<br>
+        </li>
+        <li>average_bytes_per_sec = 8000</li>
+        <li>block_alignment = 1</li>
+        <li>bits_per_sample = 8</li>
+      </ul>
+For AIBO compatible 16 bit 16KHz PCM sound:<br>
+      <ul>
+        <li>format_tag = 1</li>
+        <li>channels = 1<br>
+        </li>
+        <li>samples_per_sec = 16000<br>
+        </li>
+        <li>average_bytes_per_sec = 16000</li>
+        <li>block_alignment = 2</li>
+        <li>bits_per_sample = 16<br>
+        </li>
+      </ul>
+      <br>
+      <a name="DATA"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">4. Wave Sound
+Data Chunk</span></big></big><br>
+      <br>
+The data chunk contains the actual sound data bytes.&nbsp;&nbsp;&nbsp;
+There can be exactly one data chunk per PCM wave file.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct data_chunk_type {<br>  char signature[4];       // "data"<br>  int chunklen;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+Following the chunk header, is the contiguous array of bytes (8 bit,
+unsigned) or short integers (16 bit, signed). <br>
+      <br>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>5.
+Example</big></big><br>
+      <span style="font-family: monospace;"><br>
+      <span style="font-weight: bold; color: rgb(0, 153, 0);">RIFF
+Chunk Header</span><br>
+      <span style="color: rgb(204, 102, 0); font-weight: bold;">Format
+Chunk Header</span><br>
+      <span style="color: rgb(51, 51, 255); font-weight: bold;">Data
+Chunk Header</span></span><br>
+      <pre>000000:&nbsp; <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">52 49 46 46&nbsp; 85 01 00 00&nbsp; 57 41 56 45</span>&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">66 6d 74 20</span>  |RIFF....WAVEfmt |<br>000010:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">10 00 00 00&nbsp; 01 00 01 00&nbsp; 40 1f 00 00&nbsp; 40 1f 00 00</span>  |........@...@...|<br>000020:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">01 00 08 00</span>&nbsp; <span
+ style="color: rgb(51, 51, 255); font-weight: bold;">64 61 74 61  61 01 00 00</span>&nbsp; 77 83 6d 5f&nbsp; |....dataa...w.m_|<br>000030:&nbsp; 8b 8c 94 98&nbsp; 57 82 77 51&nbsp; 7d 48 a9 7c&nbsp; 71 ec 57 58&nbsp; |....W.wQ}H.|q.WX|<br>000040:&nbsp; 6d 27 96 e4&nbsp; b8 6b 66 52&nbsp; 5e ad 2a 68&nbsp; a4 46 df b3&nbsp; |m'...kfR^.*h.F..|<br>000050:&nbsp; 17 a8 6a 5f&nbsp; ff 83 1a 8d&nbsp; 65 47 d1 77&nbsp; 7c cb 85 97&nbsp; |..j_....eG.w|...|<br>000060:&nbsp; 86 4e 60 75&nbsp; a9 83 86 a1&nbsp; 61 a7 77 4a&nbsp; 96 72 9c 98&nbsp; |.N`u....a.wJ.r..|<br>000070:&nbsp; 76 84 65 a9&nbsp; 61 84 9d 64&nbsp; b1 75 9f a6&nbsp; 57 8e 4e 78&nbsp; |v.e.a..d.u..W.Nx|<br>000080:&nbsp; a2 b2 ae 56&nbsp; 55 30 4c b0&nbsp; ab a5 9c 68&nbsp; 95 81 75 6d&nbsp; |...VU0L....h..um|<br>000090:&nbsp; 5b 76 ad 9e&nbsp; 75 7e 40 51&nbsp; c3 74 74 91&nbsp; 48 98 91 76&nbsp; |[v..u~@Q.tt.H..v|<br>0000a0:&nbsp; 78 76 64 7b&nbsp; 99 8f 65 8a&nbsp; 73 50 9f 65&nbsp; 94 b0 60 72&nbsp; |xvd{..e.sP.e..`r|<br>0000b0:&nbsp; 6c 64 8d 89&nbsp; 84 88 88 6e&nbsp; 75 50 69 7e&nbsp; 84 98 71 a5&nbsp; |ld.....nuPi~..q.|<br>0000c0:&nbsp; 8c 7c 7c 43&nbsp; 8d 8a 6f 95&nbsp; 7d 7e 8c 86&nbsp; 7d 7e 6a 6f&nbsp; |.||C..o.}~..}~jo|<br>0000d0:&nbsp; 7e 82 8b 8d&nbsp; 6a 6f 91 77&nbsp; 8f 91 79 86&nbsp; 7d 81 89 76&nbsp; |~...jo.w..y.}..v|<br>0000e0:&nbsp; 5e 82 86 96&nbsp; 99 60 72 67&nbsp; 7e a3 96 94&nbsp; 7f 69 5a 68&nbsp; |^....`rg~....iZh|<br>0000f0:&nbsp; 6b 95 93 8d&nbsp; 8f 6f 7f 6e&nbsp; 70 9c 7d 9a&nbsp; 86 71 83 6b&nbsp; |k....o.np.}..q.k|<br>000100:&nbsp; 77 72 7f 85&nbsp; 82 98 82 76&nbsp; 88 71 7c 81&nbsp; 69 85 84 7f&nbsp; |wr.....v.q|.i...|<br>000110:&nbsp; a4 79 70 74&nbsp; 71 8c 86 88&nbsp; 7d 72 7d 73&nbsp; 7d 86 7c 85&nbsp; |.yptq...}r}s}.|.|<br>000120:&nbsp; 7c 83 8d 7c&nbsp; 80 6c 7f 8d&nbsp; 7f 88 74 66&nbsp; 77 7e 83 8d&nbsp; ||..|.l....tfw~..|<br>000130:&nbsp; 8d 87 82 81&nbsp; 75 75 85 7c&nbsp; 7f 81 79 7e&nbsp; 7a 83 8a 7e&nbsp; |....uu.|..y~z..~|<br>000140:&nbsp; 83 79 7c 87&nbsp; 7d 7c 81 7b&nbsp; 7f 81 7b 83&nbsp; 7c 7e 83 83&nbsp; |.y|.}|.{..{.|~..|<br>000150:&nbsp; 7e 7f 7a 80&nbsp; 83 87 7b 7b&nbsp; 7d 81 8c 80&nbsp; 80 85 78 81&nbsp; |~.z...{{}.....x.|<br>000160:&nbsp; 84 7d 87 82&nbsp; 7d 80 87 86&nbsp; 7f 7f 7e 82&nbsp; 86 87 82 7f&nbsp; |.}..}.....~.....|<br>000170:&nbsp; 7d 80 80 81&nbsp; 7e 7c 84 85&nbsp; 82 81 7a 80&nbsp; 82 80 86 80&nbsp; |}...~|....z.....|<br>000180:&nbsp; 7f 7d 81 7e&nbsp; 7e 82 7b 84&nbsp; 82 80 82 7e  80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |.}.~~.{....~.&nbsp;&nbsp; |</pre>
+      <a href="examples/tea_buttonclick.wav">Download Example</a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

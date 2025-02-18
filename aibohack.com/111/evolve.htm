@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+AIBO Evolution Rules
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+AIBO Evolution Rules
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P><B><font size=4>Overview</font></P></B>
+Evolution (or "Growing") from one stage happens after a certain amount of "quality time" is spent at the old stage.
+If you are interacting with the dog, "quality time" passes at the same rate as real time.
+If you are ignoring the dog, "quality time" passes slower than real time.
+
+<P><B><font size=4>Evolution Diagrams</font></P></B>
+For ERS-110 (Summer 1999) and ERS-111 "A" (Winter 1999) AIBOs, the evolution rules are summarized below.
+The rules are the same except for the time it takes to evolve from a Youth to an Adult (it takes twice as long for an ERS-111).
+<br><img src="evolve.jpg"></br>
+For ERS-111 "B" (Spring 2000 release) AIBOs, the evolution rules are much simpler.
+<br><img src="evolve_b.jpg"></br>
+
+<P><B><font size=4>Impact of Color</font></P></B>
+The color of your dog's room is the most significant factor in deciding its personality.
+If the room is mostly blue, your dog will grow up to be active.
+If the room is mostly orange (including red-tones and brown-tones) then your dog will probably grow up to be lazy.
+There are exceptions (eg: Lazy Child grows into Bad Boy).
+NOTE: for the ERS-111B, color has a much smaller impact on the dog's evolution.
+
+<P><B><font size=4>Evolving from Newborn</font></P></B>
+Evolution from Newborn to Baby occurs after 100,000 ticks of "quality time" (over 2 hours, 1 tick = 1/10 second). There are no additional choices here, all Newborns become Babies.
+<P><B><font size=4>Evolving from Baby</font></P></B>
+After 300,000 ticks as a Baby (over 8 hours), the dog will evolve into a Child. It can become a Child#1 (Lazy Child) or Child#2 (Rumble Child) depending on the following rule.
+<pre>
+    if (G_BALL > 0 AND              // must have seen the ball
+      G_RISE > 0 AND                // must have fallen down and got up
+      G_LIFT > 0 AND                // must have gone limp after lifted or shaken
+      G_DOSTOP > 0 AND              // must have been paused
+      S_Skill > 0) then             // mystery???
+        become Rumble Child
+    else
+        become Lazy Child
+
+NOTE: for ERS-111B the "G_LIFT" term has been removed.
+
+</pre>
+The values are the values in the RHAPSODY file.
+The dominant factor is the "G_LIFT". In order to raise a Rumble Child you must lift or shake the Baby dog until it goes limp, at least once (except with ERS-111B).
+<P><B><font size=4>Evolving from Child</font></P></B>
+After 1,000,000 ticks (over 27 hours) as a Child, the dog will evolve into a Youth (or "Young" dog).
+<br>
+If the dog was a Child#1 (Lazy Child), the rule is:
+<pre>
+    if (G_UNFAV > G_FAV AND         // must have seen more ORANGE than BLUE
+      G_LIFT > 0 AND                // must have been lifted/shaken
+      G_DOSTOP > 0 AND
+      S_Skill > 0 AND
+      L_Skill > 0 AND
+      S_sound > 0 AND
+      L_sound > 0) then
+        become Bad Boy
+    else
+        become Lazy Boy
+
+NOTE: for ERS-111B the "G_LIFT" term has been removed.
+</pre>
+<br>
+The dominant factor is the color term "G_UNFAV > G_FAV", which means the dog must have seen "ORANGE" more than it has seen "BLUE".  This is backwards from the other color rules.
+<P></P>
+If the dog was a Child#2 (Rumble Child), the rule is:
+<pre>
+    if (G_FAV > G_UNFAV AND // must have seen more BLUE than ORANGE
+      G_BALL > 0 AND
+      G_RISE > 0 AND
+      G_LIFT > 0 AND
+      G_DOSTOP > 0 AND
+      S_Skill > 0) then
+        become Good Boy
+    else
+        become Bad Boy
+
+NOTE: for ERS-111B the "G_FAV > G_UNFAV" and "G_LIFT" term has been removed.
+</pre>
+The dominant factor is the color term "G_FAV > G_UNFAV", which means the dog must have seen "BLUE" more than it has seen "ORANGE".
+In either case, seeing more "ORANGE" influences the child to be a "Bad Dog".
+
+<P><B><font size=4>Evolving from Youth</font></P></B>
+The time spent as a Youth is 2,000,000 ticks (over 55 hours) for the ERS-110 and 4,000,000 ticks (over 111 hours) for the ERS-111.
+I'm guessing the AIBO developers wanted the newer ERS-111 to take longer to grow up, so they just doubled the time spent as a youth.
+<P></P>
+Which Adult personality the dog evolves into depends on the following rules.
+<br>
+If the dog was a Youth#1 (Lazy Boy), the rule is:
+<pre>
+    if (S_Skill >= 5 AND
+      L_Skill >= 3 AND
+      S_sound >= 5 AND
+      L_sound >= 3 AND
+      Walking >= 10 AND
+      Special > 0) then
+        become Rumble Cat
+    else
+        become Lazy Cat
+</pre>
+In this case color doesn't matter. The dominant factor appears to be the "L_Skill" term. I haven't figured what that is, but it is usually a small number even after hours of use.
+<br>
+If the dog was a Youth#2 (Bad Boy), the rule is:
+<pre>
+    if (G_FAV > G_UNFAV AND
+      G_ON_ST > 0 AND               // was on the station
+      G_OFF_ST > 0 AND              // was off the station
+      G_LIFT > 0 AND
+      G_DOSTOP >= 3 AND
+      Special > 0) then
+        become Lazy Dog
+    else
+        become Rumble Cat (lazier than a Lazy Dog)
+
+NOTE: for ERS-111B the "G_FAV > G_UNFAV", "G_ON_ST", "G_OFF_ST" and "G_LIFT" terms has been removed. It should be near impossible to raise a Rumble Cat from a Bad Boy.
+</pre>
+<br>
+If the dog was a Youth#3 (Good Boy), the rule is:
+<pre>
+    if (G_FAV > G_UNFAV AND
+      G_ON_ST > 0 AND               // was on the station
+      G_OFF_ST > 0 AND              // was off the station
+      G_LIFT > 0 AND
+      G_DOSTOP >= 3 AND
+      S_Skill >= 5 AND
+      L_Skill >= 3 AND
+      S_sound >= 5 AND
+      L_sound >= 3 AND
+      Walking >= 10 AND
+      Special > 0) then
+        become Rumble Dog
+    else
+        become Lazy Dog
+
+NOTE: for ERS-111B the "G_ON_ST", "G_OFF_ST" and "G_LIFT" terms has been removed.
+</pre>
+In these last two cases, the color term is the most dominant.
+In either case, seeing more "BLUE" influences the dog to be more active, seeing more "ORANGE" influences the dog to be more lazy.
+
+<P><B><font size=4>Evolving from Adult</font></P></B>
+Adults never grow up.
+ 
+<P><B><font size=4>Notes</font></P></B>
+Trivia: you can customize these threshold times by creating a file "open-r/app/conf/LION" <A HREF="inihacks.htm#lion">(click here for details)</A>
+<P></P>
+Algorithms determined by disassembling code in the "learning" module of ERS-111.
+<br>
+I believe these rules are the same for ERS-110.
+
+</BODY>
+</HTML>

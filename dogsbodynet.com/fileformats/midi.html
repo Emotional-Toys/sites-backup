@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO MIDI File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO MIDI File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="midi.html#INTRO">Introduction</a></li>
+        <li><a href="midi.html#HDRCHUNKS">MIDI Header Chunks</a></li>
+        <li><a href="midi.html#TRACKCHUNKS">MIDI Track Chunks</a></li>
+        <li><a href="midi.html#DELTATIME">MIDI Delta Time</a></li>
+        <li><a href="midi.html#EVENTS">MIDI Events</a></li>
+        <li><a href="midi.html#RUNSTATUS">MIDI Running Status</a><br>
+        </li>
+        <li><a href="midi.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+MIDI files are a flexible format for encoding music.&nbsp;&nbsp; They
+can support multiple instruments on multiple tracks.&nbsp;&nbsp;&nbsp;
+This document describes the subset supported by the ERS-110/210/220/310
+AIBO models.<br>
+      <br>
+      <a name="HDRCHUNKS"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">2. MIDI Header
+Chunks</span></big></big><br>
+      <br>
+MIDI files are composed of a header chunk, and one or more track
+chunks.&nbsp;&nbsp; Each chunk starts with a 4-byte signature &amp;
+4-byte chunk length field.&nbsp;&nbsp; The first chunk in a file is the
+header chunk.&nbsp;&nbsp; Header chunks specify MIDI
+format &amp; the time base.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct header_chunk_type {<br>&nbsp; unsigned int signature;&nbsp;&nbsp;&nbsp; // "MThd" = header<br>&nbsp; unsigned int chunk_len;<br>&nbsp; unsigned short format;&nbsp;&nbsp;&nbsp;&nbsp; // MIDI format (types 0, 1, 2 are valid)<br>&nbsp; unsigned short tracks;&nbsp;&nbsp;&nbsp;&nbsp; // Number of tracks.<br>&nbsp; unsigned short division;&nbsp;&nbsp; // Time delta units per quarter-note.<br>};</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+NOTE:&nbsp; The ERS-110/210/220/310 AIBO platforms only support single
+track files (format 0 MIDI files).&nbsp;&nbsp; However, <a
+ href="../skitter.html">Skitter</a> can automatically convert
+multi-track MIDI
+to work on AIBO.<br>
+      <br>
+Format 0 is a single-track MIDI file.&nbsp;&nbsp; The track contains
+all note and tempo information.&nbsp;&nbsp; <br>
+Format 1 is a multi-track MIDI file, where the first track holds the
+tempo map &amp; meta-data.&nbsp; All tracks play at once.<br>
+Format 2 is also a multi-track MIDI file, where each track is a
+seperate sequence.<br>
+      <br>
+      <a name="TRACKCHUNKS"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">3. MIDI Track
+Chunks</span></big></big><br>
+      <br>
+MIDI track chunks contain a sequence of one or more <a
+ href="midi.html#DELTATIME">&lt;delta-time&gt;</a>,<a href="midi.html#EVENTS">&lt;event&gt;</a>
+pairs following the
+signature/chunk-length:<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct track_chunk_type {<br>  unsigned int signature;    // "MTrk" = track<br>  unsigned int chunk_len;<br>};</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="DELTATIME"></a><br>
+      <big><big style="text-decoration: underline;"><span
+ style="font-weight: bold;">4. MIDI Delta Time</span></big></big><br>
+      <br>
+The delta-time fields are a variable length value.&nbsp;&nbsp; The MSB
+(bit 7)
+of each byte is a continuation flag if set.&nbsp; The lower 7-bits
+are the time value.&nbsp;&nbsp; Each additional byte adds 7-bits to the
+time-delta, up to a maximum of 0x0FFFFFFF.&nbsp;&nbsp; You repeat
+shifting a running total by 7 bits &amp; adding the new 7-bits while
+the MSB is set.&nbsp; ie:<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td ="">
+            <pre style="background-color: rgb(255, 255, 204);">0x7F =           0x7F<br>0x86 0x21 =      0x321<br>0x84 0xC2 0x21 = 0x12121</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="EVENTS"></a><br>
+      <big><big style="text-decoration: underline;"><span
+ style="font-weight: bold;">5. MIDI Events</span></big></big><br>
+      <br>
+MIDI events control turning notes on &amp; off, plus various effects
+for simulating musical instruments.&nbsp; There are four types:<br>
+      <ul>
+        <li><a href="midi.html#VOICEEVENTS">Channel Voice Events</a></li>
+        <li><a href="midi.html#MODEEVENTS">Channel Mode Events</a></li>
+        <li><a href="midi.html#SYSEX">Sysex Events</a></li>
+        <li><a href="midi.html#META">Meta Events</a></li>
+      </ul>
+      <a name="VOICEEVENTS"></a><br>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;">5.1 MIDI Channel Voice
+Events</span></big><br>
+The following channel voice events are used.&nbsp;&nbsp; The values
+(status bytes) shown are in hexadecimal.&nbsp;&nbsp; The range of
+values support up to
+16 MIDI channels.&nbsp; However, AIBO just combines them.<br>
+      <div style="margin-left: 40px;">
+      <pre>0x80 - 0x8F&nbsp;&nbsp; Note Off.<br>0x90 - 0x9F&nbsp;&nbsp; Note On.<br>0xA0 - 0xAF&nbsp;&nbsp; Polyphonic pressure. Ignored by AIBO.<br>0xB0 - 0xBF&nbsp;&nbsp; Controller Change. Ignored by AIBO.<br>0xC0 - 0xCF&nbsp;&nbsp; Program/Instrument Change.<br>0xD0 - 0xDF&nbsp;&nbsp; Channel Key Pressure. Ignored by AIBO.<br>0xE0 - 0xEF&nbsp;&nbsp; Pitch Bend.      </pre>
+      </div>
+      <br>
+      <span style="font-weight: bold;">NOTE OFF/ON.</span>&nbsp;&nbsp;
+These events take two additional parameter bytes:&nbsp;&nbsp; The "key"
+(pitch) and "velocity" (volume).&nbsp; As a special case, a NOTE-ON
+event with zero volume is equivilent to a NOTE-OFF event.&nbsp; <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-right: auto; margin-left: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0x90 0x3C 0x7F = Turn on middle-C at maximum volume.<br>0x80 0x3C 0x00 = Turn off middle-C.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <span style="font-weight: bold;">POLYPHONE PRESSURE.</span>&nbsp;&nbsp;
+Takes two additional parameter bytes.&nbsp;&nbsp; The "key" (pitch) and
+"pressure" applied.<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0xA0 0x3C 0x7F   =  Turn on middle-C at maximum volume.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <span style="font-weight: bold;">CONTROLLER CHANGE.</span> &nbsp;
+Takes two additional parameter bytes.&nbsp; The controller "number" and
+controller "value".<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0xB0 0x12 0x34   =  Set controller number 0x12 to value 0x34. <br>                    Controller number range is 0x00 to 0x77.  Higher<br>                    values are reserved for <a
+ href="midi.html#MODEEVENTS">channel mode events</a>.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <span style="font-weight: bold;">PROGRAM CHANGE.</span>&nbsp;&nbsp;
+Takes one additional parameter byte.&nbsp;&nbsp; The new "program" (or
+instrument) number.<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0xC0 0x47        =  Set instrument number to 0x47 (Clarinet).<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <span style="font-weight: bold;">CHANNEL KEY PRESSURE.</span>&nbsp;&nbsp;
+Takes one additional parameter byte.&nbsp;&nbsp; The channel "pressure"
+value.<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0xD0 0x7F        =  Change overall channel pressure to maximum.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <span style="font-weight: bold;">PITCH BEND.</span>&nbsp;&nbsp;
+Takes two additional parameter bytes.&nbsp;&nbsp; The LSB &amp; MSB of
+the pitch value.<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">0xE0 0x00 0x7F   =  Change channel pitch to mid-range.<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="MODEEVENTS"></a><br>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;">5.2 MIDI Channel Mode
+Events</span></big><br>
+Channel mode events overload the "Controller Change" event
+above.&nbsp;&nbsp; They support optional extended features.&nbsp;&nbsp;
+The messages are always three bytes in length -- the same as the
+controller
+change event.&nbsp;&nbsp; The values
+(status bytes) shown are in hexadecimal.<br>
+      <div style="margin-left: 40px;">
+      <pre>0xB0 0x78 0x00&nbsp;&nbsp; Turn off all sound.<br>0xB0 0x79 0x00&nbsp;&nbsp; Reset All Controllers.<br>0xB0 0x7A 0x00&nbsp;&nbsp; Disconnect Local Keyboard.<br>0xB0 0x7A 0xFF&nbsp;&nbsp; Reconnect Local Keyboard.<br>0xB0 0x7B 0x00&nbsp;&nbsp; All Notes Off.<br>0xB0 0x7C 0x00&nbsp;&nbsp; Omni Mode Off.<br>0xB0 0x7D 0x00&nbsp;&nbsp; Omni Mode On.<br>0xB0 0x7E 0x00&nbsp;&nbsp; Mono Mode On.<br>0xB0 0x7F 0x00&nbsp;&nbsp; Poly Mode On. </pre>
+      </div>
+      <span style="font-family: monospace;"></span>These are ignored by
+AIBO, and filtered by Skitter.<br>
+      <br>
+      <a name="SYSEX"></a><br>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;">5.3 System Exclusive
+(Sysex) Events</span></big><br>
+These events are for including information other than MIDI events into
+a MIDI file.&nbsp;&nbsp; There are two:&nbsp; 0xF0 &amp;
+0xF7.&nbsp;&nbsp; Both are followed by a variable-length byte count
+(ie: delta-time format), then the message data.&nbsp; ie:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"> 0xF0    0x06    0x11 0x22 0x33 0x44 0x55 0x66<br>SysEx  &lt;length&gt;  &lt;six bytes of misc data&gt;<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+These are ignored by AIBO, and filtered by Skitter.<br>
+      <br>
+      <a name="META"></a><br>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;">5.4 Meta Events</span></big><br>
+These events store music related information, such as track names,
+tempo, instruments names, etc...&nbsp;&nbsp; The events start with
+0xFF, followed by a variable-length byte count (ie: delta-time format),
+then the message data.&nbsp;&nbsp; ie:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre>0xFF 01 len msg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Misc Text Event (any message you like)<br>0xFF 02 len msg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Copyright notice <br>0xFF 03 len msg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Track name <br>0xFF 04 len msg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Instrument name <br>0xFF 51 03 tt tt tt&nbsp;&nbsp;&nbsp;&nbsp; Tempo in microseconds per quarter note (24-bit value). <br>0xFF 58 04 nn dd cc bb&nbsp; Time signature (ie: 3/4 time). <br>                          nn = numerator <br>                         &nbsp;dd = denominator power of 2). 1=&gt;2, 2=&gt;4, 3=&gt;8, ...<br>                         &nbsp;cc = MIDI clocks per tick<br>                         &nbsp;bb = Number of 1/32 notes per 24 MIDI clocks.<br>0xFF 2F 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  End of Track (should be last event on all tracks).<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="RUNSTATUS"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">6. MIDI Running
+Status</span></big></big><br>
+      <br>
+To reduce file size, MIDI supports the so called "Running
+Status".&nbsp;&nbsp; So long as the status byte (ie: note on/off
+events) doesn't change, there is no need to repeat it.&nbsp;&nbsp;
+Status bytes are the MIDI channel voice/mode event bytes described
+above.<br>
+      <br>
+      <div style="margin-left: 40px;"><big
+ style="font-weight: bold; font-style: italic;">Without Running Status:</big><br>
+      </div>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-right: auto; margin-left: auto; font-family: monospace;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"> 0x90   0x3C   0x7F     0x90   0x3D   0x6F     0x90   0x3E    0x5F<br>status  key  velocity  status  key  velocity  status  key  velocity<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+Since the subsequent status bytes doesn't change, they can be omitted...<br>
+      <br>
+      <div style="margin-left: 40px;"><big
+ style="font-weight: bold; font-style: italic;">With Running Status:</big><br>
+      </div>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-right: auto; margin-left: auto; font-family: monospace;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"> 0x90   0x3C   0x7F    0x3D   0x6F    0x3E    0x5F<br>status  key  velocity  key  velocity  key  velocity<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;">6.1 Rules for Running
+Status</span></big><br>
+      <ul>
+        <li>In effect while status byte doesn't change. </li>
+        <li>Applies to channel voice/mode events only.</li>
+        <li>System Exclusive (SysEx) Events cancel running status.</li>
+      </ul>
+      <big style="text-decoration: underline;"><span
+ style="font-weight: bold; font-style: italic;"><br>
+6.2 Running Status Efficiency</span></big><br>
+      <br>
+To improve running status efficiency, use note-on events with velocity
+0 instead of note-off events.&nbsp;&nbsp; This avoids needing to issue
+new status bytes.&nbsp;&nbsp; For example, the following cannot use
+running status:<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-right: auto; margin-left: auto; font-family: monospace;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"> 0x90    0x3C   0x7F       0x80   0x3C   0x40       0x90   0x3E   0x5F<br>status   key  velocity    status  key  velocity    status  key  velocity<br>      (note on)                 (note off)               (note on)</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+However, changing the note-off event to a note-on with zero-velocity
+permits:<br>
+      <div style="margin-left: 40px;"><br>
+      </div>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-right: auto; margin-left: auto; font-family: monospace;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"> 0x90   0x3C   0x7F      0x3C   0x00      0x3E   0x5F<br>status  key  velocity    key  velocity    key  velocity<br>     (note on)            (note off)        (note on)<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>7.
+Example</big></big><br>
+      <span style="font-family: monospace;"><br>
+      <span style="color: rgb(0, 153, 0); font-weight: bold;">Chunk
+Headers</span><br>
+      <span style="font-weight: bold; color: rgb(0, 0, 153);">Meta
+Events &amp; Status Bytes</span><br>
+      <span style="color: rgb(204, 102, 0); font-weight: bold;">Time
+Delta's<br>
+      </span></span>
+      <pre>000000:&nbsp; <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">4d 54 68 64&nbsp; 00 00 00 06</span>&nbsp; 00 00 00 01&nbsp; 00 78 <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">4d 54</span>  |MThd.........xMT|<br>000010:&nbsp; <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">72 6b 00 00&nbsp; 01 27</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span> <span
+ style="font-weight: bold; color: rgb(0, 0, 153);">ff&nbsp; 51 03 05 b8&nbsp; d8</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span> <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff 58</span>  |rk...'..Q......X|<br>000020:&nbsp; <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">04 04 02 18&nbsp; 08</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span> <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">c0</span> 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span> <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">90</span> 4f 60&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4f 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  |..........O`PO.(|<br>000030:&nbsp; 4f 60 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 4f  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4f 60&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4f 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4f 60 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4f&nbsp; |O`PO.(O`PO.(O`PO|<br>000040:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span> 4f 60&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4f 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4f 60 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4f&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; |.(O`PO.(O`PO.(N.|<br>000050:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  |PN.(N.PN.(N.PN.(|<br>000060:&nbsp; 4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 4e  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; |N.PN.(N.PN.(N.PN|<br>000070:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span> 52 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>52 7f&nbsp; |.(R.PR.(R.PR.(R.|<br>000080:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>50 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>50 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  |PR.(R.PR.(P.PP.(|<br>000090:&nbsp; 52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 52  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>53 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>53 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  53 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>53&nbsp; |R.PR.(S.PS.(S.PS|<br>0000a0:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span> 53 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>53 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  53 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>53&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>52 7f&nbsp; |.(S.PS.(S.PS.(R.|<br>0000b0:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  50 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>50&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  |PR.(P.PP.(N.PN.(|<br>0000c0:&nbsp; 4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 4e  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; |N.PN.(N.PN.(N.PN|<br>0000d0:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span> 4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; |.(N.PN.(N.PN.(N.|<br>0000e0:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  |PN.(N.PN.(N.PN.(|<br>0000f0:&nbsp; 4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 4e  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>4e 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>4e&nbsp; |N.PN.(N.PN.(N.PN|<br>000100:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span> 52 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>52 7f&nbsp; |.(R.PR.(R.PR.(R.|<br>000110:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28</span>  52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>52&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>50 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>50 00 28&nbsp; |PR.(R.PR.(P.PP.(|<br>000120:&nbsp; 52 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span> 52  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>53 7f&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50 </span>53 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">81  20 </span>4e 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">50</span>  |R.PR.(S.PS.. N.P|<br>000130:&nbsp; 4e 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">28 </span>53&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">81 70 </span>53&nbsp; 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00 </span><span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff 2f&nbsp; 00</span>           |N.(S..pS.../.&nbsp;&nbsp; |</pre>
+      <a href="examples/piano.mid">Download Example</a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

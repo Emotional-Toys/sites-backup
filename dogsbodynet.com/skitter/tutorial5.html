@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter Tutorial #5 - Adding Skits to DogsLife!</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table border="0" cellpadding="20" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#0a6cce" valign="top"><big><b><font
+ size="+1"><big><font color="#ffffff"><big>Skitter Tutorial -
+Customize DogsLife!</big> </font></big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><br>
+      <u><i><big><big><b>Customize DogsLife by Adding Skits!</b></big></big></i></u><br>
+      </p>
+      <p>The first <a href="tutorial1.html">two</a> <a
+ href="tutorial2.html">tutorials</a> introduced
+making skits with motion, light &amp; sound.&nbsp;&nbsp; The <a
+ href="tutorial3.html">next</a> <a href="tutorial4.html">two</a> show
+simple ways of using those skits on AIBO.<br>
+      </p>
+      <p>This tutorial demonstrates adding them to <a
+ href="../dogslife.html">DogsLife</a>.&nbsp;&nbsp; One extra step is
+required
+-- downloading the DogsLife source code to your PC.&nbsp;&nbsp;
+Otherwise, its similar to the <a href="tutorial3.html">YART tutorial</a>.
+&nbsp;&nbsp; If you haven't used YART yet, please review <a
+ href="tutorial3.html">tutorial 3</a> first.<br>
+      </p>
+      <p>Note this tutorial only applies to the 210, 220, and 310.<br>
+      </p>
+      <p> </p>
+Our goals are:<br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li><a href="tutorial5.html#DOWNLOAD">Installing the DogsLife Source
+Code</a></li>
+              <li><a href="tutorial5.html#ACTDIR">DogsLife Action Directories.</a></li>
+              <li><a href="tutorial5.html#YART">Adding Skits to DogsLife Memstick</a></li>
+              <li><a href="tutorial5.html#USEYART">Using New Skits in YART</a></li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+Let's get started!<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="DOWNLOAD"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>1.0
+Installing DogsLife Source Code</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><br>
+      <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)</font></small></b></big></big> </td>
+            <td valign="top">Download the <a
+ href="../downloads/DogsLife_Source_v2.52.zip">DogsLife Source Code ZIP
+file</a>
+to your PC.<br>
+            </td>
+            <td
+ style="width: 25%; vertical-align: middle; text-align: center;"><a
+ href="../downloads/DogsLife_Source_v2.52.zip">DogsLife_Source_v2.52.zip</a></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" rowspan="1" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; <br>
+            <big><big><b><small><font color="#3366ff">(2)</font></small></b></big></big></td>
+            <td valign="top"><br>
+Using a program such as <a href="https://www.winzip.com">WinZip</a>,
+"unzip" the source code ZIP file onto your PC.&nbsp;&nbsp;&nbsp; Choose
+a convenient location, such as your Windows desktop, or "<code>C:\DogsLife</code>",
+etc...<br>
+            </td>
+            <td valign="top"><img alt="DogsLife Directory"
+ src="../images/stut5_1.gif" border="1" height="225" hspace="30"
+ vspace="0" width="277"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="ACTDIR"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>2.0
+DogsLife Action Directories</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)</font></small></b></big></big> </td>
+            <td valign="top">DogsLife has one action directory for each
+AIBO platform.&nbsp;&nbsp; Go into the folder matching your AIBO model.<br>
+            <br>
+Most actions are found in the 210 folder.&nbsp;&nbsp; Other than a few
+exceptions, the 220 &amp; 310 version skits are mostly derived
+automatically by <a href="../skitter.html">Skitter</a> &amp; <a
+ href="../aibnet_tools/OdaBuild.html">OdaBuild</a>.&nbsp;&nbsp;
+DogsLife currently uses action files (*.act) for all skits, and <a
+ href="../aibnet_tools/UAC_Format.html">UAC</a> files for tweaking them.<br>
+            <br>
+            </td>
+            <td valign="top"><img src="../images/stut5_2.gif" alt=""
+ align="right" border="1" height="225" hspace="30" width="277"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <hr noshade="noshade" size="1" width="100%"><br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(2)</font></small></b></big></big> </td>
+            <td valign="top"><small><u><i><big><b>2.1 Copying Workbooks
+into DogsLife</b></big></i></u></small><br>
+Copying AIBO Workbooks is easy.&nbsp;&nbsp; Just drag-n-drop copy the
+files using
+Windows Explorer (hold CTRL key down while dragging).<br>
+            <div style="text-align: center;"><img
+ alt="Copy into DogsLife" src="../images/stut5_3.gif" border="2"
+ height="207" hspace="40" vspace="10" width="470"><br>
+            </div>
+            <br>
+            <br>
+            <img alt="SaveAs into DogsLife" src="../images/stut5_4.gif"
+ align="right" border="1" height="213" hspace="20" width="342"><br>
+            <u><i><b>2.2 C</b></i></u><small><u><i><big><b>opying
+Action Files into DogsLife</b></big></i></u></small><br>
+Copying action files is harder.&nbsp; You must copy the action file,
+motion, led &amp; sound files.&nbsp;&nbsp; The easiest way is using
+Skitter. <br>
+            <br>
+Open the target performance in Skitter, and use the <b>File </b>Menu,
+"<b>Save-As</b>"
+command.&nbsp;&nbsp; Select the DogsLife Action directory, and
+Skitter saves copies of all files associated with the performance.<br>
+            <br>
+            <div align="center"><br>
+            </div>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="YART"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>3.0
+Adding Skits to DogsLife Memstick<br>
+            </b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <u><i><big><big><b></b></big></big></i></u><br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><br>
+            <big><big><b><small><font color="#3366ff">(1)&nbsp; <br>
+            </font></small></b></big></big></td>
+            <td valign="top"><br>
+Insert
+a programmable memory stick containing DogsLife into your memstick
+reader.<br>
+            </td>
+            <td style="text-align: center;" valign="top"><img
+ alt="DogsLife" src="../images/stut8_5.gif"
+ style="width: 175px; height: 77px;"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+            </font></b></big></td>
+            <td valign="top">Start Skitter &amp; close any open skits.<br>
+            <br>
+Click on the toolbar "<b>Write</b>"
+button.&nbsp;&nbsp; Skitter prompts for the AIBO platform being
+used.&nbsp;&nbsp; This must match your AIBO model, or AIBO won't boot
+up
+properly.<br>
+            <br>
+Select your AIBO type (or click Cancel to quit).<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_1.gif" alt="" align="right" border="1"
+ height="142" hspace="40" width="265"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Now select the DogsLife action directory
+you updated earlier.<br>
+            <br>
+The example (see right) shows selecting the DogsLife 210 action
+directory.<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut5_5.gif" alt="" align="top" border="1" height="264"
+ hspace="0" width="257"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">) <br>
+            </font></b></big></td>
+            <td valign="top">Skitter compiles the action directory, and
+writes it to the programmable memory stick.<br>
+            <br>
+DogsLife action directories are large and take a while to
+compile.&nbsp; It could take several seconds to finish.<br>
+            <br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_3.gif" alt="" align="top" border="1" height="117"
+ hspace="0" width="209"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(5</font></b></big><big><b><font
+ color="#3366ff">)<br>
+            </font></b></big></td>
+            <td valign="top">Once Skitter displays "Done!" the memstick
+is ready, or an error message if something went wrong.<br>
+            <br>
+If an error occurred, click on the "<b>View Log</b>"
+button to see what happened.<br>
+            <br>
+Otherwise, click "<b>OK</b>" to close the dialog.<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_4.gif" alt="" align="top" border="1" height="117"
+ hspace="0" width="209"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><u><i><big><big><b><a name="USEYART"></a><br>
+      </b></big></big></i></u>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>4.0
+Using New Skits in YART</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff"><br>
+(1)&nbsp; <br>
+            </font></small></b></big></big></td>
+            <td valign="top"><br>
+Start AiboPet's <a href="https://www.aibohack.com/rcode/yart.htm">YART</a>
+utility on the DogsLife memory stick.&nbsp;&nbsp; It can be found in
+the memstick "CUSTOM" folder.&nbsp; Double click on "<b><big><tt>YART.EXE</tt></big></b>"
+from Windows Explorer.<br>
+            <br>
+The "<b><i>When this happens</i></b>" events are different, but
+otherwise using YART on DogsLife is identical to before.<br>
+            </td>
+            <td valign="top"><img src="../images/stut5_6.gif" alt=""
+ align="right" border="1" height="404" hspace="20" width="398"> </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+            </font></b></big></td>
+            <td valign="top">From the "<i><b>When this happens</b></i>"
+box, expand "AIBO voice command", then click "Hello".<br>
+            <br>
+Click on the "<i><b>Available Actions</b></i>" box &amp; select "<b>User
+Actions</b>".&nbsp; YART puts all the DogsLife &amp; your custom/new
+skits in this
+category.<br>
+            <br>
+----<br>
+            <br>
+All the DogsLife "AIBO does this" slots are initially empty. &nbsp; The
+slots teach DogsLife new tricks, and don't replace old ones.<br>
+            <br>
+            <br>
+            </td>
+            <td valign="top"><img src="../images/stut5_7.gif" alt=""
+ align="right" border="1" height="404" hspace="20" width="398"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Click-n-drag one of the listed actions
+(ie:
+"firstwave"), into the "<i><b>AIBO does this</b></i>" box.<br>
+            </td>
+            <td valign="top"><img src="../images/stut5_8.gif" alt=""
+ align="right" border="1" height="403" hspace="20" width="396"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">) <br>
+            </font></b></big></td>
+            <td colspan="2" valign="top">You're done!&nbsp;&nbsp; Click
+the large "<b>Save RCode program to memory stick</b>" button.&nbsp; <br>
+            <br>
+Once saving is complete, insert the memory stick into AIBO.&nbsp;&nbsp;
+Turn on AIBO, and after booting, try saying "Hello".&nbsp;&nbsp; AIBO
+-<i><b>may</b></i>- respond with the custom performance you
+added. <br>
+            <br>
+Dogslife combines things it already knows with elements from
+YART.&nbsp;&nbsp;&nbsp; You'll probably need a few tries before your
+tweaks appear if AIBO is feeling stubborn.<br>
+            <br>
+If you've done all the tutorials, you can now create skits, use them in
+YART, AiboMind, and in DogsLife!<br>
+            <br>
+            <big><i><b>Congratulations!<br>
+            <br>
+            </b></i></big>Got a question? &nbsp;&nbsp; <i><a
+ href="mailto:dogsbody@dogsbodynet.com">Ask Dogsbody!</a></i><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

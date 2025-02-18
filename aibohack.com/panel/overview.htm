@@ -1,0 +1,234 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ PanelPet's Smart Display Panel page
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PanelPet's Smart Display Panel page
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Here is an older writeup using the Viewsonic panel as a PDA.
+
+<P></P>
+<HR>
+<A NAME=day1>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Super PDA</H1>
+</center></td></tr> </TABLE>
+<HR>
+The heart of your display panel is a pretty good Windows CE PDA.
+<P></P>
+The hardware capabilities (V150):
+<UL>
+<LI>400MHz XScale (ARM) processor
+<LI>32MB ROM (over 20MB free)
+<LI>64MB RAM (over 40MB free when MIRA not running)
+<LI>1024x768 x 16bit color display
+<LI>Touch screen / Stylus input
+<LI>Two USB ports
+<LI>PCMCIA slot
+<LI>Microphone and speaker
+<LI>Good battery life
+</UL>
+
+<P></P>
+The software has much of what is needed:
+<UL>
+<LI>WindowsCE 4.1 core software (not a full PDA version)
+<LI>Viewsonic MiraShell program (the one you are used to)
+<LI>Microsoft provided MIRA shell (with more/different features)
+<LI>Control panel and other standard WindowsCE features
+<LI>some USB drivers, PCMCIA drivers, printer drivers (lots of things underexploited)
+</UL>
+
+But Viewsonic thinks of their Smart Display products as a closed system,
+where you can't add you own software.
+
+<HR>
+<H2>One Small Hack Later...</H2>
+After the minimal enabling hack, many things are possible:
+
+<P></P>
+<IMG SRC="photo_panelce1.jpg"><BR>
+
+<P></P>
+NOTE: the MIRA program (Remote Desktop Client) is running along with other WinCE programs.
+p
+<P></P>
+
+<IMG SRC="ss_panelce_bottom.jpg"><BR>
+
+<P></P>
+Unfortunately the version of Windows CE 4.1 (AKA Windows CE .NET) that comes with the Panel is trimmed down to handle the Remote Desktop client features, and not much else.
+As a result you only have a partial WinCE (PDA) device.
+You can supplement it with other WinCE programs (eg: an ancient version of Reversi).
+<P></P>
+<HR>
+
+BTW: Viewsonic did sell a <A HREF=http://www.viewsonic.com/products/superpda_viewpad100.htm>Super-PDA</A>,
+but it is now discontinued (and had a slower CPU and small screen).
+
+<P></P>
+
+Disclaimer:<BR>
+For those people who own a PDA or Tablet PC, you may consider these features to be rather ordinary.
+<BR>
+
+The challenging part is hacking the Smart Display Panel to do similar things,
+whether practical or not ;-)
+
+
+<P></P>
+<HR>
+<A NAME=day2>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Day2: Multiple Mira Clients</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+The normal use of a Smart Display is as a "Remote Desktop Client"
+<BR>
+The ViewSonic developers have created their own MIRA client with setup options and other things.
+This is what you are familar with if you've used a V110 or V150.
+
+<HR>
+<H2>SideBar: Customizing ViewSonic's MiraShell</H2>
+
+I didn't like the layout of the default shell, but like many things it can be tweeked.
+<BR>
+Many more things are customizable, but the font sizes were the big problem for me.
+
+<P></P>
+For example (actual WinCE screenshot):<BR>
+<CENTER> <IMG SRC="tweeked_ui1.jpg"> </CENTER>
+<P></P>
+There are other hidden goodies here as well (eg: application add-ins).
+I haven't figured out how to tweek the icons yet.
+
+<P></P>
+<HR>
+<H2>Alternative Client</H2>
+
+You normally can only have one of the ViewSonic's MiraShell programs running at a time (that's all you see).
+With the Super-PDA hack, you can decide what programs to run, and when.
+<P></P>
+I prefer to use the Microsoft Terminal Services client (mstsc.exe).
+It has a few additional customization features not normally available (for example):<BR>
+<P></P>
+<CENTER>
+<IMG SRC="option1.jpg">
+</CENTER>
+
+You can "Show contents of windows while dragging" and it works pretty well.
+<BR>
+If you have installed the Microsoft Remote Desktop Client on another computer (Eg: Windows 95, 98, ME NT, 2K, XP, and even the Mac), you have an idea of what the Microsoft client looks like.
+<P></P>
+
+<HR>
+<H2>Different clients/Multiple clients (on the same panel)</H2>
+
+With the Super-PDA hack, you can decide what programs to run, and when.
+You can run multiple clients at the same time (attached to different computers).
+You just need to switch (using the WinCE taskbar) between different clients to switch between desktop computers.
+With the normal Viewsonic shell, you need to disconnect from one, then reconnect to the other.
+
+<P></P>
+NOTE: This is not earth-shaking.
+You can easily have multiple client sessions running on a laptop or other computer that runs the Remote Desktop Client program (Win95 and up, WinCE, Mac or Linux).
+Doing it on the closed system Viewsonic panel is new and cool.
+
+<P></P>
+NOTE: there are several ways of performing multi-tasking. The easiest is to have the WinCE taskbar "auto-hide" and the Windows XP-Pro taskbar normal.
+When running programs on the desktop (Windows XP-Pro), you have the entire screen except for the very bottom of the panel.
+To pop up the WinCE taskbar, you just click the very bottom of the screen.
+For the screen shot below, I expanded both taskbars for illustration (you can auto-hide one or both).
+
+<P></P>
+<HR>
+<H2>Multi-Tasking : Many things in one Panel</H2>
+<P></P>
+<CENTER>
+<IMG SRC="busy.jpg">
+</CENTER>
+<P></P>
+There are many things going on here:
+<LI>There are two separate MIRA clients running on the Panel (one is shown, the other is minimized)
+<LI>The ViewSonic MIRA shell (minimized) coexists with the Microsoft shell (maximized)
+<LI>When the Microsoft shell/client is running, it has a cute little title bar on the top of the screen ("bmgm24"). You can turn this off.
+<LI>There are two taskbars in this case.
+The bottom one is the WinCE taskbar (switching between apps on the panel).
+The other one is from the MIRA session (and is the taskbar of Windows XP-Pro running on the connected desktop)
+<LI>The blue background, Command Prompt and Explorer tree view are running on the desktop computer (ie. any old Windows XP-Pro program)
+<LI>The "Mini Registry Viewer" program is a WinCE program running directly on the Panel (and temporarily on top of the MIRA client)
+<P></P>
+
+<HR>
+<A NAME=day2>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Day2.5: File Sharing</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<CENTER>
+<IMG SRC="option2.jpg">
+</CENTER>
+
+In the file view of the above screenshot.
+The WindowsCE file system (on the Panel) is exported to the desktop (via WiFi) as a remote network drive, and is displayed on the WindowsXP-Pro desktop as a normal folder.
+The graphics rendition of that folder is transmitted to the panel and show graphically using the MIRA client.
+<BR>
+So you can use Windows XP tools (eg: compilers, editors) to modify WindowsCE programs/files - without touching the keyboard or mouse of your Windows XP computer.
+<P></P>
+
+<HR>
+
+</BODY>
+</HTML>

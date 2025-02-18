@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ ICSDK2 - Final Release
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ ICSDK2 - Final Release
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+<H2>Requirements</H2>
+
+You MUST:
+<UL>
+<LI>Have a working Super ICybie (ie. working serial port)
+<LI>Have a working cartridge
+<LI>Have a Windows PC with an available COM port
+<LI>Have already used YICT!
+<LI>Have some experience with the "C" programming language
+<LI>Be interested in writing low level code for your dog.
+<LI>Be willing to live with an incomplete SDK
+<LI>NOTE: A backup ICybie is recommended (in case something breaks on the SIC)
+</UL>
+
+<P></P>
+<HR>
+<H2>Major Caveats</H2>
+Read the main README.TXT for a list of features that are working and those that are not.
+<BR>
+The major incomplete or missing pieces include:
+<BR>
+1) a real servo control loop (the current version is lame)
+<BR>
+2) full action playback (the current version does legs and sounds only; no head/neck/mouth/tail or LEDs)
+<BR>
+3) lots of little things (eg: tilt handling/recovery, clap detect, ...)
+<BR>
+4) no sample personality (things haven't evolved that far).
+<BR>
+5) crashes from time to time (be prepared to use that reset button!)
+
+<P></P>
+If you are interested in writing personalities, the current ICSDK will not help you. You should use YICT instead.
+If you don't know what YICT is, or haven't tried it yet, then you should not
+be using the ICSDK.
+
+<P></P>
+<HR>
+<H2>Things you can do</H2>
+Things you *can* do with the ICSDK in its current state:
+<UL>
+<LI>Play around with any of the low level services/hardware. See list of working things in main README.TXT, plus all the routines in \INC\IC_*.H
+<LI>Improve the servo control loop so motion playback isn't so sloppy. See the the 'test0' sample.
+<LI>Help finish up the missing features for the first full release
+<LI>Contribute new code to ICLib2 (the ICSDK runtime library)
+<LI>Contribute new samples, or enhance the existing ones
+<LI>Play back the standard actions (see the 'A' and 'a' commands in the 'test1' sample).
+Playback is incomplete and sloppy and can jam - but it can be funny too.
+<LI>Play around with sound playback (eg: adding your own tone generator).
+See the 'sine' sample
+<LI>all sorts of IR transmit and receive options.
+See the 'test0' sample for IR obstacle detection, or the 'irprobe' sample for even lower level IR signal detection.
+</UL>
+
+<P></P>
+<HR>
+<H2>Installation and use</H2>
+
+<UL>
+<LI>Download this file <A HREF="icsdk2_alpha01.zip">icsdk2_alpha01.zip</A> (1.8MB) and unzip to a new directory on your Windows PC machine ("C:\ICSDK" recommended)
+<LI>Read the main README.TXT file (C:\ICSDK\README.TXT), and the samples readme file (C:\ICSDK\SAMPLES\README.TXT).
+<LI>If you want to read, understand or modify the library code, read the library readme file (C:\ICSDK\LIBSRC\README.TXT) as well as the implementation notes (C:\ICSDK\NOTES\*.TXT).
+<LI>The samples are much easier to read and understand than the library code itself.
+</UL>
+
+<P></P>
+To build any of the samples, just go to that directory and type "m" to build and "t" to upload and run (using sicburn).
+
+<pre>
+    cd \icsdk\samples\hello
+    m
+    t
+
+</pre>
+
+<P></P>
+To re-build the library:
+<pre>
+    cd \icsdk\libsrc
+    m
+
+</pre>
+You can type "m clean" to remove any generated files for a clean build.
+
+<P></P>
+<HR>
+<H2>Anything missing</H2>
+
+Documentation is intentional minimal and focusing on the essentials.
+The audience for the ICSDK is for people who will spend time poking around with the existing source, and already have a reasonable amount of programming experience (ie. not for newbies).
+<P></P>
+
+Due to lack of interest, this is essentially "abandon-ware" with no planned future improvements.
+All the available source code is in the release itself (see libsrc and binsrc).
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

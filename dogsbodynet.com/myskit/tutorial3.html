@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>MySkit Tutorial #3 - Perform Skits on PLEO</title>
+<link rel="shortcut icon" href="../pleoicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="images/web_pleo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table style="width: 90%; color: rgb(153, 255, 153);" border="0"
+ cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; background-color: rgb(51, 204, 0); text-align: center;">
+      <table
+ style="background-color: rgb(51, 204, 0); width: 100%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(255, 255, 255);"
+ border="0" cellpadding="20" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="text-align: center; vertical-align: top; background-color: rgb(0, 153, 0);"><big><b><font
+ size="+1"><big><big>MySkit </big></big></font></b></big><big><b><font
+ size="+1"><big><big>Tutorial #3</big></big></font></b></big><big><b><font
+ size="+1"><big><big> -
+Perform Skits on PLEO</big></big></font></b></big></td>
+          </tr>
+        </tbody>
+      </table>
+      <big><b><font size="+1"><big> </big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+<br>
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p> </p>
+      <table border="0" cellpadding="8" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <p><u><i><big><big><b>Perform Skits on PLEO!</b></big></big></i></u><br>
+            </p>
+            <p>The <a href="tutorial1.html">first tutorial</a>
+introduced
+PLEO motion files (making PLEO move).&nbsp;&nbsp; The <a
+ href="tutorial2.html">second</a> described using the sound
+editor.&nbsp; <br>
+            </p>
+            <p>Editing skits is ok for a while, but the real fun is
+seeing PLEO perform them!&nbsp;&nbsp; This tutorial explains preparing
+simple behaviors for PLEO flash cards. &nbsp;
+It's easy &amp; only takes a few mouse clicks. <br>
+            </p>
+            <p>A couple notes:<br>
+            </p>
+            <ol>
+              <li>This won't change PLEO's current personality at
+all.&nbsp;&nbsp; The flash card behavior is temporary -- for fun only. <br>
+              </li>
+              <li>To create a
+more realistic &amp; interactive personality for PLEO, you'll need
+AiboPet's <a href="https://www.aibohack.com/pleo/yapt.htm">YAPT</a>
+utility (see <a href="tutorial4.html">tutorial #4</a>).</li>
+            </ol>
+            <p> </p>
+            <br>
+Our goals are:<br>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">
+                  <ul>
+                    <li><a href="tutorial3.html#ACTDIR">Prepare an Action Directory</a></li>
+                    <li><a href="tutorial3.html#FLASH">Select Flash Card</a><br>
+                    </li>
+                    <li><a href="tutorial3.html#ASSIGN">Assigning Skits</a></li>
+                    <li><a href="tutorial3.html#WRITE">Writing the Flash Card</a></li>
+                  </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+Let's get started!<br>
+            <p><a name="ACTDIR"></a><br>
+            </p>
+            <table
+ style="width: 100%; background-color: rgb(204, 204, 204);" border="1"
+ cellpadding="8" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td
+ style="vertical-align: top; background-color: rgb(51, 255, 51);"><u><i><big><big><b>1.0
+Prepare an Action Directory</b></big></big></i></u></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)</font></small></b></big></big> </td>
+                  <td valign="top">An "<b>action directory</b>" is a
+folder
+(on your PC) where you collect the skits you want placed on PLEO.<br>
+                  <br>
+There is nothing special about this folder, other than it contain the
+workbooks (*.pleo) for your skits.<br>
+                  <br>
+Generally you'll have one action directory for each PLEO personality
+you create.<br>
+                  <br>
+NOTE:&nbsp; If you have PLEO motion (*.umf) or sound files (*.usf)
+you'll need to convert them into workbooks using MySkit.&nbsp;&nbsp;
+See below.<br>
+                  </td>
+                  <td style="vertical-align: top; text-align: center;"><img
+ alt="" src="images/pstut3_1.gif"
+ style="border: 1px solid ; width: 239px; height: 178px;" align="middle"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;"> <br>
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td style="vertical-align: top;"><u><i><big><b><br>
+1.1 Making Workbooks from Motion/Sound files</b></big></i></u><br>
+                  <br>
+MySkit can only write workbooks to flash cards.&nbsp;&nbsp; <br>
+                  <br>
+To convert PLEO motions or sounds (*.umf/usf/wav), open them in
+MySkit and use "<span style="font-weight: bold;">File Menu -&gt; Save
+As...</span>" to create workbooks from them.<br>
+                  </td>
+                  <td style="text-align: center; vertical-align: top;"><img
+ src="images/pstut3_2.gif" alt="" style="width: 300px; height: 242px;"
+ hspace="10" vspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;">
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <br>
+            <a name="FLASH"></a><br>
+            <table
+ style="width: 100%; background-color: rgb(204, 204, 204);" border="1"
+ cellpadding="8" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td
+ style="vertical-align: top; background-color: rgb(51, 255, 51);"><u><i><big><big><b>2.0
+Select Flash Card<br>
+                  </b></big></big></i></u></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)</font></small></b></big></big> </td>
+                  <td valign="top">MySkit
+currently requires an SD Flash Card (16MB or larger recommended) and
+flash card reader for writing it.&nbsp;&nbsp; <br>
+                  <br>
+To configure MySkit -- so it knows where your card reader is --
+select "<b>Setup Flash Drive</b>" from the File Menu.&nbsp;&nbsp; <br>
+                  <br>
+Type in the drive path to your flash card
+reader. </td>
+                  <td valign="top"><img alt="Setup Flash Card"
+ src="images/sflash.gif"
+ style="border: 1px solid ; width: 227px; height: 122px;" hspace="55"
+ vspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;"><br>
+                  <hr noshade="noshade" size="1" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><big><b><font
+ color="#3366ff">(2</font></b></big><big><b><font color="#3366ff">)</font></b></big></td>
+                  <td style="vertical-align: top;">Insert a flash card
+(at least 16
+MBytes) into your SD card reader. &nbsp; Oops, don't have one?&nbsp; <a
+ href="https://www.newegg.com/Product/ProductList.aspx?Submit=ENE&amp;Description=SD%20card%20reader&amp;bop=And&amp;Order=PRICE">Any
+of these</a> should work fine.<br>
+                  <br>
+NOTE:&nbsp; If your card originally came with a camera, reformat it on
+your PC before continuing.&nbsp;&nbsp; Camera formatted cards use a
+non-standard setup that can cause problems.</td>
+                  <td style="text-align: center; vertical-align: top;"><img
+ alt="SD Card" src="images/sdcard.gif"
+ style="width: 90px; height: 120px;" hspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;"><br>
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><b><big><u> </u></big></b></p>
+            <p> </p>
+            <br>
+            <a name="ASSIGN"></a><br>
+            <table
+ style="width: 100%; background-color: rgb(204, 204, 204);" border="1"
+ cellpadding="8" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td
+ style="vertical-align: top; background-color: rgb(51, 255, 51);"><u><i><big><big><b>3.0
+Assigning Skits<br>
+                  </b></big></big></i></u></td>
+                </tr>
+              </tbody>
+            </table>
+            <p> </p>
+            <br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff">(1</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+                  </font></b></big></td>
+                  <td valign="top">Start MySkit &amp; close any open
+skits.<br>
+                  <br>
+Click on the toolbar "<b>Write</b>"
+button. <br>
+                  </td>
+                  <td align="center" valign="top" width="330"><img
+ src="images/pstut3_4.gif" alt=""
+ style="border: 1px solid ; width: 101px; height: 57px;" align="top"
+ hspace="10"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"> </td>
+                </tr>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff"><br>
+(2</font></b></big><big><b><font color="#3366ff">)&nbsp; <br>
+                  </font></b></big></td>
+                  <td valign="top"><br>
+Now select the "<b>action directory</b>"
+on your PC, where you've collected everything for your PLEO personality.<br>
+                  <br>
+The picture (see right) shows selecting the Examples folder included
+with MySkit.<br>
+                  <br>
+                  </td>
+                  <td align="center" valign="top"><img
+ src="images/adselect.gif" alt=""
+ style="border: 1px solid ; width: 259px; height: 265px;" align="top"
+ hspace="10" vspace="10"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top">
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><big><b><font
+ color="#3366ff"><br>
+(3</font></b></big><big><b><font color="#3366ff">) </font></b></big></td>
+                  <td style="vertical-align: top;"><br>
+If you've only one skit, you're done.&nbsp; MySkit skips to the next
+section.&nbsp;&nbsp; Your
+skit automatically plays when Pleo is turned on. <br>
+                  <br>
+However, if you've multiple skits, then PMap starts. &nbsp; Now you
+can select one skit for startup, a different one when the head is
+touched, etc...<br>
+                  <br>
+                  <br>
+                  </td>
+                  <td style="text-align: center; vertical-align: top;"><img
+ alt="PMap" src="images/pmap1.gif"
+ style="border: 1px solid ; width: 300px; height: 310px;" hspace="5"
+ vspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;">
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  <big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">)</font></b></big><br>
+                  </td>
+                  <td style="vertical-align: top;"><br>
+Click-n-drag actions into the event slots.&nbsp; You can assign skits
+to multiple events if you like (as shown), or leave some empty.<br>
+                  <br>
+If you make a mistake, no worries.&nbsp;&nbsp; Click on the event slot
+and drag to the correct place, or hit the DEL key to remove it.&nbsp;
+You can't break anything here.<br>
+                  <br>
+Once happy with your PMap assignments, click the "<b>OK</b>" button.<br>
+                  <br>
+                  </td>
+                  <td style="text-align: center; vertical-align: top;"><img
+ alt="PMap" src="images/pmap.gif"
+ style="border: 1px solid ; width: 300px; height: 310px;" hspace="5"
+ vspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><br>
+                  </td>
+                  <td colspan="2" rowspan="1"
+ style="vertical-align: top;">
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <br>
+            <a name="WRITE"></a><br>
+            <table
+ style="width: 100%; background-color: rgb(204, 204, 204);" border="1"
+ cellpadding="8" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td
+ style="vertical-align: top; background-color: rgb(51, 255, 51);"><u><i><big><big><b>4.0
+Writing the Flash Card<br>
+                  </b></big></big></i></u></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff">(1</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+                  </font></b></big></td>
+                  <td valign="top">MySkit compiles your action
+directory,
+and
+writes it to the flash card.<br>
+                  <br>
+The files are quite large, so this might take several seconds.<br>
+                  <br>
+                  </td>
+                  <td align="center" valign="top"><img
+ src="images/wrflash.gif" alt=""
+ style="border: 1px solid ; width: 209px; height: 116px;" align="top"
+ hspace="40"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)<br>
+                  </font></b></big></td>
+                  <td valign="top">Once MySkit displays "Done!" the
+flash
+card
+is ready.<br>
+                  <br>
+If an error occurred instead, click on the "<b>View Log</b>"
+button to see what happened.<br>
+                  <br>
+Otherwise, click "<b>OK</b>" to close the dialog.<br>
+                  </td>
+                  <td align="center" valign="top"><img
+ src="images/wrdone.gif" alt=""
+ style="border: 1px solid ; width: 209px; height: 116px;" align="top"
+ hspace="40"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;"><big><b><font
+ color="#3366ff">(3</font></b></big><big><b><font color="#3366ff">)</font></b></big></td>
+                  <td style="vertical-align: top;">Turn off PLEO and
+insert your flash card.&nbsp;&nbsp; Turn him back on
+and enjoy! <br>
+                  <br>
+To restore PLEO's original personality, turn him off and remove the
+flash card.&nbsp;&nbsp; He'll be his original self unchanged when
+powered back on.<br>
+                  <br>
+After three tutorials, you can now create custom skits and watch them
+perform on PLEO! <br>
+                  <br>
+                  <big><i><b>Congratulations!</b></i></big>&nbsp; <br>
+                  <br>
+Got a question? &nbsp;&nbsp; <i><a
+ href="mailto:dogsbody@dogsbodynet.com">Ask Dogsbody!</a></i><br>
+                  </td>
+                  <td style="text-align: center; vertical-align: top;"><img
+ src="images/web_pleo.gif" alt=""
+ style="border: 1px solid ; width: 100px; height: 100px;" align="top"
+ hspace="40" vspace="10"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"PLEO" is a trademark UGOBE, Inc.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

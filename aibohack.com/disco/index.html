@@ -1,0 +1,391 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="../pleorb/index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Disco AIBO (for the ERS-11x, 2x0, 31x, and ERS-7)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Disco AIBO (for the ERS-11x, 2x0, 31x, and ERS-7)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+<DIR><I>Installation instructions are different for the different model AIBOs.
+Please follow the correct instructions</I></DIR>
+
+<H2>Supported AIBOs</H2>
+<UL>
+<LI><A HREF="index.html#11x"><IMG SRC="../gfx/icon_110.gif"> - ERS-111 is supported</A>
+<LI><A HREF="index.html#210"><IMG SRC="../gfx/icon_210.gif"> - ERS-210 is supported</A>
+<LI><A HREF="index.html#220"><IMG SRC="../gfx/icon_220.gif"> - ERS-220 is supported</A>
+<LI><A HREF="index.html#31x"><IMG SRC="../gfx/icon_310.gif"> - ERS-311/312 is supported</A>
+<LI><A HREF="index.html#ERS7"><IMG SRC="../gfx/icon_7.gif"> - ERS-7 is supported</A>
+</UL>
+
+<P></P>
+
+<HR>
+<H2>Overview</H2>
+Disco AIBO makes your AIBOs dance along to songs played on your computer.
+<LI>Disco AIBO works with all model AIBOs (ERS-11x, ERS-2x0, ERS-31x and ERS-7)
+<LI>Disco AIBO has a total of 22 dances
+<LI>All dances have ERS-7, ERS-31x, ERS-2x0, ERS-11x parts
+<LI>Some dances have multiple parts (ie. singer and backup dancers) for the ERS-2x0 and ERS-31x
+<P></P>
+The tones at the start of the songs provided trigger AIBOs to start dancing at (approximately) the same time.
+
+<P></P>
+Disco AIBO is built using RCODE/RCodePlus.
+For the ERS-2x0, ERS-31X and ERS-7 versions, you will need a "blank" <A HREF="../pms.htm">PMS/RCODE stick</A>.
+The ERS-11x portion can be used on any memory stick.
+<P></P>
+
+<HR>
+<P></P>
+WARNING: the first time you playback any Disco AIBO steps,
+be sure your AIBO is on a soft surface (carpet recommended).
+Some dance steps may cause AIBO to fall down.
+That is part of the charm of the dances.
+Help out a fallen AIBO be helping him stand/sit up and continuing to dance.
+<BR>
+As always use at your own risk.
+<P></P>
+
+<HR>
+<A name=ERS7>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Installation for <font color=red>ERS-7</font> with PMS stick</H1>
+</center></td></tr> </TABLE>
+<HR>
+<IMG SRC="../gfx/icon_7.gif"><BR>
+
+NOTE: The old AiboMind1 game version has been discontinued. You will need a PMS stick.
+</DIR>
+
+<H2>Installation:</H2>
+<UL>
+<LI>Put an <A HREF="../pms.htm">available PMS stick</A> into your computer's stick reader. You can't use the 32MB AiboMind pink stick.
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick. 
+<LI>Download the RCODE7+YART memory stick image:
+<A HREF="../ers7/RCODE7_YART703_E.zip">RCODE7_YART703_E.zip</A> (3.8MB)
+<LI>Unzip the memory stick image on top of your RCODE/PMS stick.
+<P></P>
+<LI>Download this additional file <A HREF="disco7pms.zip">disco7pms.zip</A>.
+<LI>Unzip it to the root of the memory stick. It will ask you to replace some files. Answer "Yes".
+<P></P>
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO. Follow the instructions (see below).
+</UL>
+
+<HR>
+
+<A name=210> <A name=220> <A name=31x>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Installation for <font color=red>ERS-210, 220 </font>or <font color=red>31x</font></H1>
+</center></td></tr> </TABLE>
+<HR>
+<IMG SRC="../gfx/icon_210.gif"><IMG SRC="../gfx/icon_220.gif"><IMG SRC="../gfx/icon_310.gif"><BR>
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-220 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-31x model AIBO (311 Latte, 312 Macaron or 31L Pug)
+<P></P>
+
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper RCodePlus runtime for the model of your AIBO.
+<UL>
+<LI>For the ERS-210: <A HREF="../rcode/RCodePlus252A(210).zip">RCode Plus 2.52 'A' (210)</A>
+<LI>For the ERS-220: <A HREF="../rcode/RCodePlus252A(220).zip">RCode Plus 2.52 'A' (220)</A>
+<LI>For the ERS-31x: <A HREF="../rcode/RCodePlus252A(31x).zip">RCode Plus 2.52 'A' (31x)</A>
+<LI>(Save this .ZIP file on your computer. You may want to use it again later.)
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<LI>Download the personality for Disco AIBO: <A HREF="disco45(all).zip">disco45(all).zip (~450KB)</A>
+<LI>Unzip that file on top of your RCODE/PMS stick (replacing any files it asks about).
+<P></P>
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO. Follow the instructions (see below).
+</UL>
+
+<P></P>
+
+
+
+<P></P>
+<HR>
+<A name=11x>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Installation for <font color=red>ERS-110, 111</font></H1>
+</center></td></tr> </TABLE>
+<HR>
+<IMG SRC="../gfx/icon_110.gif"><BR>
+This covers installing Disco AIBO on an ERS-110 or ERS-111.
+Disco AIBO will work on any 8MB or 16MB memory stick.
+A purple memory stick is recommended (save the red sticks for the ERS-210).
+
+<UL>
+<LI>You will need an 8MB or 16MB purple memory stick.
+<LI>If you are reusing an existing stick, backup first. You can restore your backup later.
+<LI>Delete all files from the memory stick
+<LI>Download this file <A HREF="disco45(11x).zip">disco45(11x).zip (2.6MB)</A> and unzip it on top of the existing stick.
+<LI>When complete, put the stick into your AIBO and start him up
+<LI>Play one of the songs (below) on your computer.
+Make sure your AIBO can hear the first part of the song.
+AIBO will dance along with the song.
+<LI>If AIBO falls on his face, help him up (some dances are not tuned for the 11x)
+
+<LI>After playing, you can restore your backup, or leave the Disco personality on the memory stick
+<LI>Shut down AIBO when done, or just pull out the memory stick.
+</UL>
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Using Disco Aibo, The Songs</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>Using:</H2>
+AIBO should be sitting down ready to start when you play a dance song.
+NOTE: Disco AIBO doesn't do anything else.
+<P></P>
+Play one of the songs (below) on your computer.
+<BR>
+AIBO must hear the first part of the song.
+AIBO will dance along with the song.
+<BR>
+If AIBO falls on his face, help him up.
+If AIBO jams, unjam it (by holding the head) and it will restart the personality and wait for the next dance to begin.
+When done with dancing, shut down AIBO by pressing the chest button (or just pull out the stick).
+
+<P></P>
+<A name=SONGS>
+<H2>The Songs</H2>
+
+To play the Disco AIBO songs, download them and play them on any MP3 player.
+The tones at the start will trigger the dance steps on your AIBO.
+
+<UL>
+<LI><A HREF="02_NFever.mp3">02_NFever.mp3</A>:
+ Disco intro and Night Fever (the Bee Gees) 
+<LI><A HREF="03_SexMac.mp3">03_SexMac.mp3</A>:
+ Sex Machine (James Brown) 
+<LI><A HREF="04_Atomic.mp3">04_Atomic.mp3</A>:
+ Atomic Dog (George Clinton)
+<LI><A HREF="05_Rap.mp3">05_Rap.mp3</A>:
+ We Didn't Start the Fire (Billy Joel) 
+<LI><A HREF="nobots/06_Grease.mp3">06_Grease.mp3</A>:
+ Greased Lightning (John Travolta, Grease) - choreographed by Dean
+<LI><A HREF="07_XMas.mp3">07_XMas.mp3</A>:
+ Christmas Dance (various) - choreographed by <A HREF=http://www.tina-m.com>Tina</A>
+<LI><A HREF="08_Vogue.mp3">08_Vogue.mp3</A>:
+ Vogue (Madonna) - 2 parts
+<LI><A HREF="nobots/09_TLC.mp3">09_TLC.mp3</A>:
+ No Scrubs (TLC) - 3 parts
+<LI><A HREF="10_Slipknot_12_2012.mp3">10_Slipknot.mp3</A>:
+ Spit it Out (Slipknot) - ADULT CONTENT - 3 parts
+<LI><A HREF="11_Harrison.mp3">11_Harrison.mp3</A>:
+ Here Comes the Sun (George Harrison) - choreographed by Genie
+<LI><A HREF="12_REM.mp3">12_REM.mp3</A>:
+ Shiny, Happy People (REM) - choreographed by Genie
+<LI><A HREF="13_Palmer.mp3">13_Palmer.mp3</A>:
+ Simply Irresistable (Robert Palmer) - 2 parts
+<LI><A HREF="14_Spender.mp3">14_Spender.mp3</A>:
+ Big Spender Dance - choreographed by Genie
+<LI><A HREF="15_Oompa.mp3">15_Oompa.mp3</A>:
+ Oompa Loompa Dance - 2 parts - choreographed by <A HREF=http://www.tina-m.com>Tina</A>
+<LI><A HREF="16_Hokey.mp3">16_Hokey.mp3</A>:
+ Hokey Pokey - choreographed by Jeff
+<P></P>
+<LI><A HREF="17_DogsOut.mp3">17_DogsOut.mp3</A>:
+ Who Let the Dogs Out - 2 parts - choreographed by Jeff and Tenchi (2 different dances)
+<LI><A HREF="18_HoundDog.mp3">18_HoundDog.mp3</A>:
+ Hound Dog - choreographed by Tenchi
+<LI><A HREF="19_ClearDay.mp3">19_ClearDay.mp3</A>:
+ Clear Day (Streisand) - choreographed by Michael
+<LI><A HREF="20_Balloon.mp3">20_Balloon.mp3</A>:
+ Up up and away... - choreographed by Michael
+<LI><A HREF="21_MisBehave.mp3">21_MisBehave.mp3</A>:
+ Ain't misbehaving - choreographed by Michael
+<LI><A HREF="22_TouchedMe.mp3">22_TouchedMe.mp3</A>:
+ He touched me (Streisand) - choreographed by Michael
+<LI><A HREF="23_Weezer.mp3">23_Weezer.mp3</A>:
+ Island in the Sun (Weezer) - choreographed by Dean
+</UL>
+<BR>
+NOTE: Dances 21 and higher do not work on the ERS-11x.
+
+<P></P>
+<HR>
+<H2>Multi-part dances</H2>
+Two part AIBO dances require at least two AIBOs.
+Set one to be the lead-singer part.
+Set the second AIBO(s) in the backup-dancer part.
+Then play the song as usual.
+<P></P>
+Three part AIBO dances require at least three AIBOs.
+Set the first one to the lead-singer part.
+Set the second one to the second-lead part.
+Leave the third (or any other) AIBOs in the backup-dancer part.
+Then play the song as usual.
+<P></P>
+To change the part played by an ERS-2x0, press his back sensor.
+It will cycle through the parts.
+The right-red eye indicates the "lead-singer" part.
+The left-red eye indicates the "second-lead" part.
+The green eye (the default) indicate the "backup-dancer" part.
+<BR>
+Press the head to show the current mode.
+<P></P>
+To change the part played by an ERS-31x, press his tail up direction.
+It will cycle through the parts.
+<BR>
+The orange/amber dome light indicates the "lead-singer" part.
+The blue dome light indicates the "second-lead" part.
+The green dome light (the default) indicate the "backup-dancer" part.
+Press the head to show the current mode.
+<P></P>
+The ERS-7 and ERS-11x versions have a single part.
+
+<P></P>
+<HR>
+<H2>Special Features</H2>
+To abort the current dance:
+<LI>ERS-2x0: Hold down the back sensor for 3 seconds
+<LI>ERS-31x: Hold the tail in the up direction for 3 seconds
+<LI>ERS-7 PMS: Hold the top and bottom back sensors for 3 seconds.
+<P></P>
+The personality will restart and wait for the next dance to begin.
+<HR>
+<H2>Credits</H2>
+
+Thanks to everyone for their contributions to Disco AIBO !
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

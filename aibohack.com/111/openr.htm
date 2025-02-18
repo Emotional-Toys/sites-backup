@@ -1,0 +1,243 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AIBO's Brain
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AIBO's Brain
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P><B><font size=4>Overview</font></P></B>
+This web page tries to explain some of the details of "AiboWare", the software in AIBO's brain. I make no claims on the accuracy of the information. If you have any corrections/suggestions/questions, please email me at 'aibopet@go.to'.
+
+<P><B><font size=4>Open-R - NOT</font></P></B>
+AiboWare is built on Open-R which is in turn built upon Aperios. Aperios (formerly named Apertos) is a Sony proprietary operating system. Open-R is a general robot control mechanism used by AIBO as well as the RoboCup dogs. AIBO has some additional software built upon that to give the dog emotions, behaviors and learning capabilities.
+
+<BR>
+<P><B><font size=4>CPU Hardware</font></P></B>
+<br><img src="cpublock.jpg"></br>
+<P></P>
+AIBO uses a MIPS 4000-series processor
+(Sony claims it is a "64-bit" processor, but it really is a 32-bit processor).
+AIBO has 16MB of RAM in a Unified Memory Architecture shared by the CPU and other hardware.
+Permanent storage is on the external memory stick (8MB or 16MB).
+<br>
+A Custom hardware ASIC is used for interfacing to external components, and providing a variety of interfacing and other functions. This includes:
+<br> - bus host controller for the Open-R bus
+<br> - DMAC - a DMA controller
+<br> - FBK - a multi-resoltion filter bank for the camera's video data
+<br> - CDT - an 8 channel color detection engine
+<br> - IPE - an inner product engine for helping in video calculations
+<br> - DSP - a digital signal processor for sound processing
+
+
+<P><B><font size=4>Instincts and Emotions</font></P></B>
+AIBO has 4 Instincts and 6 Emotions in what is called the "ieModel".
+Interactions with the dog affect these ieModel values.
+Each value is in the range of 0 (low) to 100 (high).
+<pre>
+Instincts:
+	Exercise
+	Affection
+	Appetite
+	Curiosity
+Emotions:
+	Joy (AKA Happiness)
+	Sadness
+	Anger
+	Surprise
+	Disgust (AKA Discontent)
+	Fear
+</pre>
+How you interact with the dog will change the dog's mood.
+<P></P>
+How the dog's emotions react in turn depends on the current behavior/mood of the dog.
+<br>
+For example, in one behavior mode: if the dog sees the pink BALL then the "Joy" value will go up, and the negative emotions "Sadness", "Anger" and "Disgust" will go down.
+Conversely, if the dog sees the color it hates (the "UNFAV" color), "Joy" will go down and "Surprise" and "Fear" will go up.
+<P></P>
+The dog's instincts change in a similar fashion, but are not controlled by the dog's moods. For example, seeing the BALL increases "Exercise" and "Affection" a bit, but increase "Curiosity" a lot. Seeing the hated color does the reverse.
+<P></P>
+You can use the AIBO Browser to "Chart" these instincts/emotions.
+
+
+<P><B><font size=4>Growing / Evolution</font></P></B>
+AIBO starts out as a Newborn. After a few hours of use it grows (or "evolves") into a Baby stage. After about 8 hours of use it will grow into a Child, and so on.
+<br>
+The stages are: Newborn, Baby, Child, Youth (or Young) and Adult.
+<br>
+Growing stops when the dog hits the adult stage.
+<P></P>
+When AIBO evolves to a new stage, it picks one of several possible personality variants.
+The older the stage, the more personality variants there are.
+<br>
+Personality variants can be described with either a number following the stage (as in "Child#2") or with a descriptive name (as in "Rumble Child"). These descriptive names are what the AIBO developers used to describe these personality variants.
+<P></P>
+There are a total of 11 possible personality variants for AIBO:
+<br>
+<br> - Newborn - "Tweety"
+<br>
+<br> - Baby
+<br>
+<br> - Child#1 - Lazy Child
+<br> - Child#2 - Rumble Child
+<br>
+<br> - Young#1 - Lazy Boy
+<br> - Young#2 - Bad Boy
+<br> - Young#3 - Good Boy
+<br>
+<br> - Adult#1 - Lazy Cat
+<br> - Adult#2 - Rumble Cat
+<br> - Adult#3 - Lazy Dog
+<br> - Adult#4 - Rumble Dog
+<P></P>
+Stating the obvious: In general "Rumble" personalities are more active than "Lazy" personalities. Cats are lazier than Dogs.
+
+<P></P>
+The AIBO Browser or AIBO Trainer will show you the stage and personality of your dog.
+You can use the AIBO Trainer to adjust the stage and personality variant of your AIBO.
+<br>
+<A HREF="evolve.htm">Click here to learn more about how AIBO grows/evolves.</A>
+
+<P><B><font size=4>Instinctive Behavior</font></P></B>
+
+<DIR><A HREF="behave.htm">Click Here for more Behavior info</A></DIR>
+
+The AIBO Browser will show you the "Instinctive Behavior" of the dog.
+The AIBO Trainer can adjust this "Instinctive Behavior" using the "New Tricks" option.
+
+<P><B><font size=4>Learned Behavior</font></P></B>
+In addition to the "Instinctive Behavior" that is common to all dogs with the same personality, there is "Learned Behavior".
+<P></P>
+The AIBO Browser will show you the "Learned Behavior" of the dog.
+The AIBO Trainer can adjust this "Learned Behavior" using the "Basic Training" option.
+<P></P>
+There is a debate on the AIBOard BBS (www.aibonet.com/bbs) whether AIBO learns more than this. This is still being debated.
+
+<P><B><font size=4>Good Touching, Bad Touching:</font></P></B>
+
+The top of the dog's head has a pressure sensitive switch. Depending on how long you press the switch, that determines how the dog reacts.
+<br>
+If you press the dog's head quickly (less than .1 seconds), this is a "CLICK" and is used to get the dog's attention.
+If you press the dog's head slightly longer (less than .37 seconds), this is a "HIT" and is used to scold the dog.
+If you press the dog's head longer (more than .37 seconds), this is a "PAT" and is used to praise the dog.
+If you press the dog's head for longer than 5 seconds, this is a "LONGPAT" and is used to wakeup the dog after it passes out after a servo jam or being lifted or shaken.
+
+<P></P>
+Trivia: you can customize these times by creating a file "open-r/app/conf/touch.cfg" <A HREF="inihacks.htm#touch">(click here for details)</A>
+
+
+
+</BODY>
+</HTML>

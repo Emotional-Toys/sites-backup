@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter - Chapter 4 - Motion Editor</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table border="0" cellpadding="20" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#0a6cce" valign="top"><big><b><font
+ size="+1"><big><font color="#ffffff"><big>Skitter - Chapter 4 - Motion
+Editing</big> </font></big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+<br>
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><b><font size="+1">Table of Contents:<br>
+      </font></b>&nbsp;&nbsp;&nbsp; <a href="../skitter.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="../skitter.html#INSTALL">2.0 Install
+Skitter</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="perform.html">3.0 Performance Files</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="motion.html#MOTIONS">4.0 Motion Editing</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNINTRO">4.1 Motion
+Files &amp; Keyframes</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNNAV">4.2 Navigating Motion Files</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#CREATEKEYFRAME">4.3 Creating Keyframes</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MOVEKEYFRAME">4.4 Moving Keyframes</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#EDITSERVO">4.5 Editing Servo Position</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#BUILTINPOSE">4.6 Standard Poses</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#SPEEDLIMIT">4.7 Servo Speed Limits</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNSMOOTH">4.8 Smooth Motion Servos</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNMIRROR">4.9 Mirror Motion Left/Right</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNREVERSE">4.10 Reverse Motion (play
+in reverse)</a><br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MTNSCALE">4.11 Scale Motion (change how
+long it takes finish)</a><br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#MOUTH_WIZARD">4.12 Mouth Wizard</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#TAILWAG_WIZARD">4.13 Tailwag Wizard</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="motion.html#FIRSTLAST">4.14 Customize First/Last
+Keyframes</a> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="motion.html#CONVERT">4.15
+Converting AIBO Platforms</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="motion.html#MTNUNDO">4.16 Undo/Redo
+Changes to Motion</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="motion.html#MTNSPLIT">4.17 The
+Splitter Bar</a><br>
+&nbsp;&nbsp;&nbsp; <a href="led.html">5.0 LED Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="midi.html">6.0 MIDI Sound Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="wave.html">7.0 Wave Sound Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="library.html">8.0 The Reference Library</a><br>
+&nbsp;&nbsp;&nbsp; <a href="preview.html">9.0 The AIBO Window</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="test.html">10.0 Test Actions on AIBO</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="upload.html">11.0 Upload Actions to AIBO</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="prefs.html">12.0 Specify Preferences</a><br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <p> </p>
+      <table border="0" cellpadding="8" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"> <a name="MOTIONS"></a>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            <big><big><b><u>4.0 Motion Editing<br>
+            </u></b></big></big><br>
+Motion files tell AIBO how to control its servos -- where to put them,
+and when.&nbsp; Skitter shows the "where &amp; when" for each servo as
+a black horizontal line.&nbsp;&nbsp; The small blue tabs (called
+keyframes), indicate points where the positions change.<br>
+            <br>
+            <img src="../images/motion.gif" title="" alt="Motion Editor"
+ border="1" height="417" hspace="40" width="552"><br>
+            <br>
+            <a name="MTNINTRO"></a>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><br>
+            <i><big><b><u>4.1&nbsp; Motion Files &amp; Keyframes</u></b></big></i></p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td colspan="2" valign="top">AIBO tracks movement
+using keyframes.&nbsp;&nbsp; A keyframe
+is a snapshot of AIBO's servo positions (ie: head,
+shoulder,
+knees, etc...).&nbsp;&nbsp; Keyframes tell AIBO where all its servos
+should be, and when.&nbsp;&nbsp; AIBO smoothly moves servos
+from one keyframe to the next, as it performs a motion.<br>
+                  <br>
+A motion file always has at least two keyframes -- the first &amp;
+last.&nbsp; There can never be zero or one keyframes.&nbsp;&nbsp; The
+start/stop
+keyframes are special, since AIBO expects them to contain a standard
+pose (sleep, sit, stand, etc...).&nbsp;&nbsp; Therefore, they cannot be
+edited directly.<br>
+                  <br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">AIBO supports up to 250 seconds of
+custom motion (over 15000 keyframes) in a motion file.&nbsp;&nbsp;
+Note keyframes are always marked with a blue pointed tab in the ruler
+bar.<br>
+                  </td>
+                  <td align="center" valign="top" width="210"><img
+ src="../images/tilemark.gif" title="" alt="Tile Marker" border="1"
+ height="66" hspace="30" width="83"></td>
+                </tr>
+              </tbody>
+            </table>
+            <a name="MTNNAV"></a><br>
+            <hr noshade="noshade" size="1" width="100%">
+            <p> </p>
+            <big><b><u><br>
+            <i>4.2&nbsp; Navigating Motion Files</i></u></b></big><br>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"><br>
+                  <br>
+An orange marker bar shows the current time position.&nbsp;&nbsp;
+Left-clicking
+in the ruler or data pane, moves the marker. </td>
+                  <td align="left" valign="middle" width="210"><img
+ src="../images/marker.gif" title="" alt="Current Position Marker"
+ border="1" height="115" hspace="30" width="149"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td height="1" valign="top"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="middle">Click-n-drag
+in the ruler bar (above the data pane), and a green selection marker
+appears at the starting point.&nbsp; Skitter highlights between the
+markers &amp; changes any included keyframe tabs green.&nbsp;&nbsp; All
+servos
+are selected.<br>
+                  </td>
+                  <td valign="top"><img src="../images/rangesel.gif"
+ title="" alt="Range Selection" border="1" height="115" hspace="30"
+ width="149"></td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td valign="top"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="middle">Click-n-drag in the data pane
+(below the ruler bar), to select a range of servo data between the two
+markers.&nbsp;&nbsp; Special effects only affect selected servos.<br>
+                  </td>
+                  <td valign="top"><img src="../images/servosel.gif"
+ title="" alt="Servo Range Selection" border="1" height="115"
+ hspace="30" width="149"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td valign="top"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">In the upper-left corner of
+motion editor, is the 3D preview
+of AIBO. &nbsp; It shows AIBO servo settings at the current time
+position (the orange marker).</td>
+                  <td align="center" valign="top"> <img
+ src="../images/aiboview.gif" title="" alt="Motion Preview" border="1"
+ height="82" hspace="30" width="82"> </td>
+                </tr>
+              </tbody>
+            </table>
+            <p> </p>
+            <a name="CREATEKEYFRAME"></a>
+            <hr noshade="noshade" size="1" width="100%">
+            <p> </p>
+            <p><big><u><b><br>
+            <i>4.3 Creating Keyframes</i></b></u></big></p>
+            <p>There are several ways to make keyframes.&nbsp;&nbsp;
+First, position
+the orange marker bar where you want a keyframe.&nbsp; Next, choose
+one of the following:<br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" cols="1"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td>
+                  <ul>
+                    <li>Press Ctrl+K, or...<br>
+                    </li>
+                    <li>Double click in the ruler bar, or...<br>
+                    </li>
+                    <li>Select the "Edit-&gt;Create Keyframe" menu
+option <br>
+                    </li>
+                  </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </p>
+            <p>Skitter calculates the servo positions under the orange
+marker, and creates the keyframe.</p>
+            <p> <br>
+            <a name="MOVEKEYFRAME"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><big><b><u><br>
+            <i>4.4 Moving &amp; Deleting Keyframes</i></u></b> </big></p>
+            <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top;">
+                  <p>Moving
+keyframes is easy.&nbsp; Select a keyframe tab in the ruler bar (so it
+turns green), then click-n-drag the tab marker to adjust the spacing
+between keyframes.&nbsp; Note:&nbsp; It does not create new keyframes.</p>
+                  <p>Alternatively,
+you can move a keyframes by inserting/deleting time before
+it.&nbsp;&nbsp;&nbsp; Position the orange marker bar before a keyframe,
+and use the <b><tt>[INSERT]</tt></b>
+or <b><tt>[DELETE]</tt></b> keys.<br>
+                  </p>
+                  </td>
+                  <td style="vertical-align: top;" align="center"
+ width="210"><img src="../images/tiledrag.gif" title=""
+ alt="Tile Dragging" border="1" height="66" hspace="20" width="79"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><i><b>Note</b></i>:&nbsp; If you hit <b><tt>[DELETE]</tt></b>with
+the marker on a keyframe (tab marker highlighted green), that keyframe
+is deleted.</p>
+            <p> <br>
+            <a name="EDITSERVO"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.5 Edit Servo Positions</i></u></big></b><big> </big></p>
+            <table cellpadding="0" cellspacing="0" cols="1" width="100%">
+              <tbody>
+                <tr>
+                  <td>
+                  <p>Skitter offers a variety of ways to edit servo
+positions.&nbsp;&nbsp;
+First, click on a servo line at the location you want to change.&nbsp;
+An
+edit diamond appears under the mouse.&nbsp; <br>
+                  </p>
+Pick one of the following methods to alter the servo position:<br>
+                  <ul>
+                    <li>Use the Up/Down arrow keys&nbsp;&nbsp; <b>-or-</b></li>
+                    <li>Move the edit diamond with the
+mouse&nbsp;&nbsp; <b>-or-</b></li>
+                    <li>Press <b><tt>[ENTER]</tt></b> and type a
+number using the keyboard.</li>
+                  </ul>
+                  <ul>
+                  </ul>
+                  </td>
+                  <td style="vertical-align: top;" align="center"
+ width="210"><img src="../images/diamond.gif" title=""
+ alt="Edit Diamond" border="1" height="85" hspace="20" width="84"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p><u><b><br>
+            </b></u><img src="../images/kbdedit.gif" title=""
+ alt="Keyboard Edit" align="right" border="1" height="60" hspace="20"
+ vspace="10" width="258"><u><b><i>4.5.1&nbsp; Editing From Keyboard</i></b></u><br>
+            </p>
+            <p>The edit diamond turns black during keyboard editing
+(for
+clarity).&nbsp;&nbsp; The value is edited in the current value box,
+found after the servo name.</p>
+            <br>
+            <p><i><u><b>4.5.2&nbsp; Create Keyframe from Editing</b></u></i><br>
+            </p>
+            <p>If you select a location between existing keyframes,
+editing (with any of the techniques mentioned above) creates a
+new keyframe. <br>
+            </p>
+            <p><br>
+            <a name="BUILTINPOSE"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.6 Standard Poses</i></u></big></b><big> </big></p>
+            <p>You can use a standard pose anywhere you like, including
+the first &amp; last keyframes.&nbsp;&nbsp;
+From the Motion menu, select "Set Pose".&nbsp;&nbsp; The following
+options
+are available.&nbsp;&nbsp; ERS-7 owners review the <a
+ href="ers7info.html">ERS-7 Skit Guidelines</a>.<br>
+&nbsp;
+            <table cellpadding="5" cellspacing="0" height="194"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td nowrap="nowrap" valign="top" width="25%">
+                  <ul>
+                    <li>Sleep Position</li>
+                    <li>Sit Position</li>
+                    <li>Stand Position</li>
+                    <li>Baby Position</li>
+                    <li>Belly Position</li>
+                    <li>Sleep Wide</li>
+                    <li>Sleep Flat</li>
+                    <li>Sit Wide</li>
+                    <li>Sit Flat</li>
+                  </ul>
+                  </td>
+                  <td valign="top">(normal sleep or down position) <br>
+(normal sit position) <br>
+(normal stand position) <br>
+(legs pointing out away from body) <br>
+(rear legs pointing out away from body) <br>
+(sleep position, with rear legs flared out to the side) <br>
+(sleep position, with rear legs spread out flat on floor) <br>
+(sit position, with rear legs flared out to the side) <br>
+(sit position, with rear legs spread out flat on floor)</td>
+                </tr>
+              </tbody>
+            </table>
+            </p>
+            <p>These are the standard built-in poses that AIBO
+knows.&nbsp;&nbsp;
+Once a pose is copied into a keyframe, you can customize it further
+(except
+for the first/last keyframes).<br>
+            </p>
+            <table align="center" border="0" cellpadding="0"
+ cellspacing="0" width="10%">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose1.gif"><img alt="Sleep" title="Sleep Position"
+ src="../images/pose1s.gif" border="1" height="59" hspace="3" width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose2.gif"><img alt="Sit" title="Sit Position"
+ src="../images/pose2s.gif" border="1" height="59" hspace="3" width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose3.gif"><img src="../images/pose3s.gif"
+ title="Stand Position" alt="Stand" border="1" height="59" hspace="3"
+ width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose4.gif"><img src="../images/pose4s.gif"
+ title="Baby Position" alt="Baby" border="1" height="59" hspace="3"
+ width="66"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose5.gif"><img src="../images/pose5s.gif"
+ title="Belly Position" alt="Belly" border="1" height="59" hspace="3"
+ width="65"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose6.gif"><img alt="Sleep Wide"
+ title="Sleep Wide Position" src="../images/pose6s.gif" border="1"
+ height="59" hspace="3" width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose7.gif"><img alt="Sleep Flat"
+ title="Sleep Flat Position" src="../images/pose7s.gif" border="1"
+ height="59" hspace="3" width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose8.gif"><img alt="Sit Wide"
+ title="Sit Wide Position" src="../images/pose8s.gif" border="1"
+ height="59" hspace="3" width="57"></a></td>
+                  <td align="center" valign="top" width="10"><a
+ href="../images/pose9.gif"><img alt="Sit Flat"
+ title="Sit Flat Position" src="../images/pose9s.gif" border="1"
+ height="59" hspace="3" width="57"></a></td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose1.gif">Sleep</a></small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose2.gif">Sit</a></small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose3.gif">Stand</a></small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose4.gif">Baby</a></small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose5.gif">Belly</a></small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose6.gif">Sleep </a><a href="../images/pose6.gif">Wide</a><br>
+                  </small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose7.gif">Sleep Flat</a><br>
+                  </small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose8.gif">Sit Wide</a><br>
+                  </small></td>
+                  <td align="center" valign="top"><small><a
+ href="../images/pose9.gif">Sit Flat</a><br>
+                  </small></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><br>
+            <a name="SPEEDLIMIT"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.7 Servo Speed Limits</i></u></big></b><big> </big></p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">AIBO can wear out prematurely,
+overheat, or even damage
+servos that
+move too fast.
+                  <p>Skitter monitors for such situations, and
+highlights
+them.&nbsp;
+A transition turns yellow when above the speed limit, and red if
+excessively
+fast (more than 10% over).&nbsp;&nbsp; Skitter prompts when
+saving/testing files with excessive speed violations. <br>
+                  </p>
+                  <br>
+It is HIGHLY recommended you fix violations yourself manually,
+or let Skitter do it automatically (usually there isn't a noticeable
+change).</td>
+                  <td valign="top"><img alt="Speed Violation"
+ src="../images/toofast.gif" align="right" border="1" height="163"
+ hspace="10" vspace="0" width="256"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><a name="MTNSMOOTH"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.8 Smooth Motion Servos</i></u></big></b> </p>
+            <p>Smoothing
+makes a servo move in a straight line, between the start &amp; stop
+times.&nbsp;&nbsp; Keyframes are updated to match the changes.<br>
+            </p>
+            <p>In the example below, the highlighted servo is
+smoothed.&nbsp;&nbsp; Between times 20 and 70, four keyframes are
+changed.&nbsp; The result is a clean transition from the start time to
+the stop time.<br>
+            </p>
+            <p> </p>
+            <table align="center" border="0" cellpadding="0"
+ cellspacing="0" width="50%">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top">Before<br>
+                  </td>
+                  <td align="center" valign="top">After<br>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" valign="top"><img
+ src="../images/smooth1.gif" title="" alt="Before Smoothing" border="1"
+ height="132" hspace="10" width="201"><br>
+                  </td>
+                  <td align="center" valign="top"><img
+ src="../images/smooth2.gif" title="" alt="After Smoothing" border="1"
+ height="132" hspace="10" width="201"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p>&nbsp;<a name="MTNMIRROR"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.9 Mirror Motion Left/Right</i></u></big></b><big> </big></p>
+            <p>Mirroring a motion file left/right (or part of one) is
+an easy way
+to increase variety in your AIBO personalities.&nbsp;&nbsp; DogsLife
+has
+several performances identical, except mirrored left to right.<br>
+            </p>
+            <p>Movement on the left &amp; right sides of AIBO are
+swapped.<br>
+            </p>
+            <p><br>
+            <a name="MTNREVERSE"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.10 Reverse Motion (play in reverse)</i></u></big></b><big>
+            </big></p>
+            <p>Reversing a motion (or part of one) is helpful when
+working up complicated
+action files.&nbsp; You can have AIBO "unwind" some sequence of
+steps required to get it into a position. <br>
+            </p>
+            <p><br>
+            <a name="MTNSCALE"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.11 Scale Motion (change how long it
+takes finish)</i></u></big></b><big> </big></p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">Scaling makes motions play faster or
+slower.&nbsp;&nbsp; It's easier to watch all the small details on slow
+motions.&nbsp; Once finished, you
+can scale it up to speed.<br>
+                  <br>
+One particular application is keeping sync with sound
+files.&nbsp;&nbsp;
+AIBO unfortunately isn't accurate at keeping time with sound,
+especially "busy" MIDI
+files.&nbsp;&nbsp; <br>
+                  <br>
+Sometimes there is drift from what Skitter estimates, and the sound
+AIBO
+actually produces.&nbsp;&nbsp; The variations aren't easy to
+predict.&nbsp; To compensate, scale motion files into
+keeping
+sync with the music.</td>
+                  <td valign="top"><img alt="Scale Motion Dialog"
+ src="../images/scale.gif" border="1" height="193" hspace="10"
+ width="244"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><a name="MOUTH_WIZARD"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.12 Mouth Wizard</i></u></big></b></p>
+            <p>For AIBO's with mouths (110, 210 &amp; 7) the mouth
+wizard generates automatic mouth movement from sound files (MIDI or
+Wave).&nbsp; Mouth movement should be added after other leg &amp; head
+movements are complete. &nbsp; The wizard typically creates <i>-many- </i>additional
+keyframes and complicates
+editing thereafter.<br>
+            </p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">The wizard supports a variety of
+common
+settings, for horizontal &amp; vertical
+tail wagging.&nbsp;&nbsp; <br>
+                  <br>
+The
+"mouth speed" setting controls how quickly the mouth is
+opened/closed.&nbsp;&nbsp; The "sound level" specifies the threshold at
+when the mouth should open or close.&nbsp;&nbsp; The wizard updates the
+motion in real-time for previewing, since selecting the sound level is
+very dependent on the sound file.<br>
+                  <br>
+Before starting the wizard, select a time range to receive mouth
+movement (otherwise the entire motion will be
+affected).&nbsp;&nbsp;&nbsp; <br>
+                  <br>
+From the <b>Motion </b>Menu, select "<b>Mouth Wizard</b>".&nbsp;&nbsp;
+Select your preferences, and sit back while Skitter does the work.<br>
+                  </td>
+                  <td valign="top"><img alt="Mouth Wizard"
+ src="../images/mouthwiz.gif" border="1" height="228" hspace="10"
+ width="278"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><br>
+            <a name="TAILWAG_WIZARD"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.13 Tailwag Wizard</i></u></big></b></p>
+            <p>For AIBO's with tails (110, 210 &amp; 7) the tail
+wagging wizard (as the name implies) takes
+all the pain out of wagging AIBO's tail.&nbsp;&nbsp; Tail wagging
+should be the
+very last thing you add to a motion.&nbsp;&nbsp; The wizard typically
+creates <i>-many- </i>additional keyframes and complicates
+editing thereafter.</p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">The wizard supports a variety of
+common
+settings, for horizontal &amp; vertical
+tail wagging.&nbsp;&nbsp; <br>
+                  <br>
+The intensity setting controls how far the
+tail moves.&nbsp; The speed range supports from nothing, to the maximum
+possible speed for the tail servos.&nbsp;&nbsp; The image next the
+speed slider previews the results.<br>
+                  <br>
+Before starting the wizard, select a time range to receive tail wagging
+(otherwise the entire motion will be affected).<br>
+                  <br>
+From the <b>Motion </b>Menu, select "<b>Tailwag Wizard</b>".&nbsp;&nbsp;
+Select your preferences, and sit back while Skitter does the work.<br>
+                  </td>
+                  <td valign="top"><img alt="Tailwag Wizard" title=""
+ src="../images/tailwag.gif" border="1" height="250" hspace="20"
+ width="254"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><br>
+            <a name="FIRSTLAST"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.14 Customize First/Last Keyframes</i></u></big></b><big>
+            </big></p>
+            <p>Customizing the first/last keyframes is an advanced
+override.&nbsp;
+Only use once <b><i>SURE</i></b>
+you understand everything below.&nbsp;&nbsp; Please read this section
+fully and exercise caution.</p>
+            <p align="center"><img src="../images/poseover.gif" title=""
+ alt="First &amp; Last Pose Override Confirmation" border="1" height="174"
+ width="340"><br>
+            </p>
+            <p align="left"><small><b><big><u><br>
+            <i>4.13.1 Custom Poses Overview - Please Read</i><br>
+            </u></big></b></small></p>
+            <p align="left">Custom start/stop poses are very useful,
+and safe when used properly.&nbsp;&nbsp; Dogslife uses custom poses in
+its various games to great effect (for example).&nbsp;&nbsp; Here are a
+few facts you should know:<br>
+            </p>
+            <ul>
+              <li>AIBO doesn't track its servos very well between
+motions (fortunately).&nbsp;&nbsp; </li>
+            </ul>
+            <ul>
+              <li>Motion files tell AIBO the start and stop poses,
+separately from the servo positions.&nbsp; These are text descriptions
+(ie: "stand" or "sit").&nbsp; Skitter updates these text descriptions
+when you select standard poses for the first/last keyframes.&nbsp; </li>
+            </ul>
+            <ul>
+              <li>AIBO uses the start/stop text descriptions for
+automatic transitions.&nbsp;&nbsp; These occur before a motion is
+played, if the previous motion ended in a different pose.&nbsp;&nbsp;
+For example, assume the first motion ended sitting, but the second
+starts standing.&nbsp; AIBO automatically performs the sit-to-stand
+transition before starting the second motion.</li>
+            </ul>
+            <ul>
+              <li>AIBO doesn't do anything before a motion, if its
+start-pose matches the previous motion stop-pose.<br>
+              </li>
+            </ul>
+            <ul>
+              <li>AIBO never verifies the pose text descriptions match
+the servo positions.<br>
+              </li>
+            </ul>
+            <ul>
+              <li>Therefore, if you guarantee AIBO doesn't need to do
+anything between motions,<b> the servos can be in any pose you like.</b><br>
+              </li>
+            </ul>
+            <p align="left"><br>
+            <b>CAUTION!!!</b>&nbsp;&nbsp; If you forget AIBO is in a
+custom pose, and it suddenly tries transitioning into another pose, bad
+things happen.&nbsp;&nbsp; AIBO might snap its servos at maximum speed,
+or legs could collide, etc...&nbsp;&nbsp; It is NOT healthy.<br>
+            </p>
+            <p align="left">Essentially, we take over responsibility
+for managing transitions.&nbsp;&nbsp; We fake out AIBO, using the same
+standard pose in all motions with our custom poses.<br>
+            </p>
+            <p align="left">You need to provide two special
+skits.&nbsp; One transitioning <i>INTO </i>the
+custom pose (from a standard pose), and one transitioning <i>FROM </i>the
+custom pose (back to a standard pose).&nbsp;&nbsp;&nbsp; ie:&nbsp; The
+DogsLife rock-paper-scissor game has
+"rps-intro" &amp; "rps-close".<br>
+            <br>
+            </p>
+            <p align="left"><i><small><b><big><u>4.14.2 Custom Poses
+Step-by-Step</u></big></b></small></i><big> </big></p>
+            <ul>
+              <li>Pick one standard pose for both start/stop
+frames.&nbsp;&nbsp;</li>
+              <li>All skits containing your custom pose must use that
+standard pose.</li>
+              <li>When
+creating a new skit for custom poses, step one is changing the
+first/last keyframes into that standard pose.&nbsp;&nbsp; Skitter
+changes the start/stop pose text descriptions only when you pick
+standard poses.&nbsp;&nbsp; If the start/stop text descriptions aren't
+right AIBO might decide to perform automatic transitions.<br>
+              </li>
+              <li>Create an intro-skit to transition from the standard
+pose into your custom pose.</li>
+              <li>Create an exit-skit to transition from your custom
+back to the standard pose.</li>
+              <li>Create custom-pose skits (as many as you like).<br>
+              </li>
+            </ul>
+            <br>
+            <p><i><small><b><big><u>4.14.3 Custom Poses Used Safely</u></big></b></small></i></p>
+Your
+behavior or RCode, MUST guarantee the intro-skit plays first,
+custom-poses in-between, and the exit-skit after.&nbsp;&nbsp; One easy
+way is using a wrapper.&nbsp; ie:<br>
+            <table align="center" border="0" cellpadding="2"
+ cellspacing="2" width="90%">
+              <tbody>
+                <tr>
+                  <td valign="top"><b><tt>:GameWrapper<br>
+PLAY ACTION GAME_INTRO // move into custom pose<br>
+WAIT<br>
+CALL PlayGame<br>
+PLAY ACTION GAME_EXIT&nbsp; // move out of custom pose<br>
+WAIT<br>
+RET:1<br>
+                  <br>
+:PlayGame<br>
+//<br>
+// use various custom-pose skits at will here<br>
+//<br>
+.<br>
+.<br>
+.<br>
+// return to wrapper once game over<br>
+RET:1<br>
+                  </tt></b></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+The intro-skit is performed before the game, and the exit-skit once the
+game finishes.<br>
+            <p><br>
+            </p>
+            <p><a name="CONVERT"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            </u></big><u><big><i>4.15 Converting AIBO Platforms</i></big><i><big>
+            </big></i></u></b><br>
+            </p>
+Skitters supports changing a performance
+from one AIBO platform into another.&nbsp; ie: 210 into 310 (or
+visa-versa).&nbsp;&nbsp; Servos are translated, removed, or added as
+necessary.&nbsp;&nbsp;&nbsp; From "Edit Menu", select "Convert
+Platform", then the target (110, 210, 220, 310, or 7).<br>
+            <br>
+Conversion
+is a lossy process.&nbsp; If you convert a 210 performance to a 310,
+then back into 210 you lose information.&nbsp;&nbsp; Motions
+for the mouth, ears &amp; tail are lost.&nbsp; Detail LED information
+is gone also.&nbsp;&nbsp; Range of motion can be affected as well.<br>
+            <br>
+Platform conversions cannot be undone.&nbsp;&nbsp; Therefore, before
+converting a
+performance, save it.&nbsp;&nbsp; After converting, save again using a
+new action
+name (assuming you want both versions).<br>
+            <br>
+            <p><i><u><b>4.15.1&nbsp; Special Cases</b></u></i></p>
+Skitter has special case processing when converting from the 210 into
+220.&nbsp;&nbsp; Mouth, ear, and tail motions translate into visual LED
+patterns.&nbsp;&nbsp; Mouth motion converts into face &amp; headlight
+LED's.&nbsp; Ears converts into the mouth LED (over the chin
+button).&nbsp;&nbsp; Tail motions convert into the tail-fan &amp; tail
+LED's.<br>
+            <br>
+There is also special case processing when converting motions into
+310.&nbsp;&nbsp; The 310 is more "tippy" because of its larger head,
+especially in sit-up actions (where AIBO raises its front paws off the
+floor).&nbsp;&nbsp; Skitter attempts to identify these situations and
+adjusts the motion to use more stable pose.<br>
+            <br>
+            <p align="left"><a name="MTNUNDO"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.16 Undo/Redo Changes to Motion</i></u></big></b><br>
+            </p>
+            <p>If you make a change that doesn't work out, simply undo
+it
+(Edit Menu-&gt;Undo).&nbsp;&nbsp; Skitter supports unlimited undo (ie:
+all edits since the motion file was loaded, or last platform
+conversion.).&nbsp; If you undo too
+much, you can reapply changes (Edit Menu-&gt;Redo).</p>
+            <p> </p>
+            <p>Warning!&nbsp; Changing AIBO platforms currently cannot
+be undone.<br>
+            </p>
+            <p>Keyboard shortcuts of Ctrl+Z (Undo) and Ctrl+Y (Redo)
+are available.<br>
+            </p>
+            <br>
+            <p><a name="MTNSPLIT"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>4.17 The Splitter Bar</i></u></big></b><br>
+            </p>
+            <p>The vertical splitter bar allows two views of the motion
+data
+at once.&nbsp;&nbsp; To adjust the position of the splitter bar, select:<br>
+&nbsp;&nbsp; "<b>Window Menu -&gt; Split Window</b>".&nbsp; <br>
+            </p>
+            <p>You can
+move the splitter at any time.&nbsp;&nbsp; To dock the splitter bar
+(hide it), simply drag the
+splitter to its left-most position.&nbsp; <br>
+            </p>
+            <p align="center"><img src="../images/splitter.gif" title=""
+ alt="Splitter Bar" border="1" height="302" width="495"><br>
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

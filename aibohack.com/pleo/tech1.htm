@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Pleo Hardware Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Pleo Hardware Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This webpage contains technical info about the hardware inside Pleo.
+<BR>
+For a general overview, I recommend the excellent <A HREF="http://electronics.howstuffworks.com/pleo.htm">How Stuff Works</A> article by Tracy Wilson.
+<P></P>
+<H1>Hardware</H1>
+DISCLAIMER: based on pre-release version of hardware (prototype Pleo taken apart).
+<CENTER> <IMG SRC="helpme1.jpg"> </CENTER>
+Chips may be slightly different on production models (I haven't taken one of those apart yet ;-)
+<P></P>
+<H2>Main chips:</H2>
+<UL>
+<LI>Main CPU - Atmel AT91SAM7S256. 32-bit ARM based main brain (ARM7, 32-bit CPU, 16-bit instruction set compatible).
+CPU clock speed TBD.
+256KB Flash ROM on-chip for firmware. 64KB Static RAM.
+Tons of peripheral features, including USB2, JTAG etc.
+<A HREF="http://www.atmel.com/dyn/products/product_card.asp?part_id=3524">(datasheet)</A>.
+<LI>Data Store - Atmel 45DB321D "DataFlash". 4MB flash memory (serial interface).
+Used to store some maintenance info, and the main personality (much of the 4MB is the default personality written in Pawn, see <A HREF="tech2.htm">this page</A>).
+<BR>
+<A HREF="http://www.atmel.com/dyn/products/product_card.asp?family_id=616&family_name=DataFlash%AE&part_id=3818">(datasheet)</A>.
+<LI>Other voltage regulators (LM2941S, LM2937L)
+<LI>other chips
+<LI>SunPlus audio driver (SPY0030A)
+<BR>
+<LI>OV6650 color camera in the head <A HREF="http://www.ic-on-line.cn/IOL/datasheet/OV6650_237403.pdf">(datasheet)</A>.
+Max 352x288 pixels, but save appears to be 176x144.
+<LI>"Head CPU" - Philips LPC2103F for camera, audio and IR processing.
+Also handles some of the sensors.
+(ARM7 core, 32KB flash, 8KB RAM). CPU clock speed TBD.
+Fewer peripheral connections than the main CPU.
+<A HREF="http://www.nxp.com/#/pip/cb=[type=product,path=50809/45994,final=LPC2101_02_03_1]|pip=[pip=LPC2101_02_03_1][0]">(datasheet)</A>.
+<BR>
+Connected to main CPU through a serial connection. Not fast enough for real-time video.
+
+</UL>
+<H3>Motor Drivers</H3>
+The robot has 14 servos built using custom motors and gearing.
+They are driven by four different motor driver circuits (4 back leg servos, 4 front leg servos,
+4 for the neck/head/body/eyes and 2 for the tail motion)
+<BR>
+The motor driver circuit (one of four) will drive 2 or 4 servos and consists of:
+<UL>
+<LI>8bit motor control CPU - Toshiba TMP85FH47. Z80-like CPU with 16KB Flash ROM and 512B of RAM. 4 chips total.
+<A HREF="http://www.toshiba-mikrocontroller.de/sites/TMP86FH4x.htm">(datasheet)</A>.
+<BR>
+NOTE: hopefully they haven't moved to a masked-ROM part.
+<LI>Two Dual H-Bridge chips - Fairchild FAN8100N. Normally two chips driven by the same 8bit CPU for 4 servos for each motor controller. 7 chips total.
+(in the case of the tail's two servos, there is only 1 H-Bridge chip)
+<A HREF="http://www.fairchildsemi.com/pf/FA/FAN8100N.html">(datasheet)</A>.
+<LI>LM324 - quad op amp
+</UL>
+Each leg has only two servos, good enough to walk forward or backwards, or do limited lifting of the legs.
+Other quadraped robots (eg: Aibo or iCybie) have 3 servos per leg. They can pivot their legs at the hip, allowing them to roll over or get up if they fall down.
+<BR>
+So the Pleo has a total of 6 different CPUs/processors (one main ARM chip, one vision ARM chip, and four 8-bit motor controllers)
+<P></P>
+
+<H3>14 servos/motors</H3>
+TODO - add photos of the motors (especially the funky tail and neck).
+<BR>
+Also read the <A HREF="http://electronics.howstuffworks.com/pleo6.htm">"how stuff works" webpage</A> that has an animation showing the tail servo/cable motion
+<P></P>
+
+<H3>"Bluetooth connector"</H3>
+On the main board, there is a connector marked "Bluetooth connector"
+<BR>
+
+<P></P>
+<HR>
+<P></P>
+
+<H1>Software/Firmware</H1>
+There are four different pieces of firmware/software in the Pleo.
+<UL>
+<LI>The main personality. Closed source. A "Pawn" interpreted program. Program and data (sound, motions etc) filling most of the 4MB of data store.
+See <A HREF="tech2.htm">this page</A> for more info from disassembling this file (and how to grab it yourself).
+<LI>The main CPU firmware. Closed source. ARM code filling most of the 256KB of Flash ROM in the main CPU.
+Easy to disassemble with various ARM disassemblers (not free IDA-Pro recommended).
+<LI>The head CPU firmware. Closed source. ARM code filling most of the 32KB of Flash ROM in the chip.
+Easy to disassemble with various ARM disassemblers (not free IDA-Pro recommended).
+<LI>The motion controller firmware. Closed source. Toshiba TMP (Z80-like) code in the 4 motion/servo controllers.
+</UL>
+Note: AFAIK all software/firmware is updatable (typically by installing a special update program in the SD card).
+<BR>
+Note: all software/firmware is <i>currently</i> closed source and proprietary.
+IMHO this is a big mistake.
+
+</BODY>
+</HTML>

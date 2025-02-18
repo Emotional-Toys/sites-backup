@@ -1,0 +1,1694 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>User Action Files</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<br>
+<center>
+<b><font size="+3">User Action Files (*.UAC)</font></b><br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ <br>
+<table border="0" cellpadding="0" cellspacing="0" width="95%">
+  <tbody>
+    <tr>
+      <td valign="top"><b><font size="+1">Table of Contents:</font></b><big><br>
+      </big>&nbsp;&nbsp; <a href="UAC_Format.html#UACINTRO">1.0
+UAC Introduction</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#ACTION">2.0
+Action Commands</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#MTN_INSERT">3.0
+Motion Commands</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#LED_MIRROR">4.0
+LED Commands</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#SOUND_START">5.0
+Sound Commands</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#JOINT_IDENT">6.0
+Servo Joint Identifiers</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#LED_IDENT">7.0 LED Identifiers</a><br>
+&nbsp;&nbsp; <a href="UAC_Format.html#EXAMPLES">8.0
+Examples</a><br>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<table cellpadding="0" cellspacing="0" cols="1" width="95%">
+  <tbody>
+    <tr>
+      <td><a name="UACINTRO"></a>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">1.0
+UAC Introduction<br>
+      </font></b>
+      <hr noshade="noshade" size="1" width="100%"><br>
+User action files (*.uac) provide an alternative method for defining
+skits.&nbsp; They are processed by <a href="OdaBuild.html">OdaBuild</a>
+in much the same way as Action files (*.act) or Skitter workbooks
+(*.aib).&nbsp;&nbsp;&nbsp; All three methods name actions and specify
+the motion/sound/LED files, but action files &amp; workbooks are binary
+formats.&nbsp;&nbsp; <br>
+      <br>
+The UAC format is simple text and edited with Windows Notepad (or any
+text editor), plus offers much more functionality.&nbsp;&nbsp; ie:<br>
+      <ul>
+        <li>Defining skits (associate action name with mtn/sound/led
+filenames).</li>
+        <li>Import skits from the same or different Aibo platform (ie:
+converting
+210 skits to 310)<br>
+        </li>
+        <li>Modify motions (ie: change servo positions, mirror
+left/right, add
+tail-wagging,
+scaling, etc...)</li>
+        <li>Modify LED's (ie: change LED on/off states)</li>
+        <li>Changing sound start time.</li>
+        <li>Changing repeat count (useful for creating new tailwags).</li>
+        <li>Changing start/stop postures (not limited to basic
+sleep/sit/stand
+poses).</li>
+        <li>Creating head only, leg only, tail only, or mouth only
+actions.</li>
+        <li>Creating motions &amp; LEDs from scratch (no motion or LED
+files
+needed).</li>
+        <li>Over 20 commands for editing motions, LED's &amp; sounds!</li>
+      </ul>
+      <p><br>
+Applications: </p>
+      <ul>
+        <li>Conversion tweaks.&nbsp; The automatic conversion is pretty
+good, but
+rarely
+a minor change is needed.</li>
+        <li>Soccer kicks.&nbsp; Create a kick in <a
+ href="../skitter.html">Skitter</a>,
+Master Studio or Performance Editor, then have OdaBuild modify it to
+permit
+uninterupted ball tracking (just like the built in ones).&nbsp;&nbsp;
+See examples section.<br>
+        </li>
+        <li>Mirror actions left/right.&nbsp; Easy to do &amp; great for
+variety
+(ala soccer kicks).</li>
+        <li>Tail wagging.&nbsp; Making the 110/210/7 tail wag clutters
+up motion
+files.&nbsp; Simply create
+motions without, and have OdaBuild add wagging afterwards.<br>
+        </li>
+        <li>Adjust run time of a motion.&nbsp;&nbsp; A common problem
+is
+keeping motion &amp; sound aligned.&nbsp; Aibo running real RCode just
+isn't 100% predictable.&nbsp;&nbsp; You could
+go back &amp; edit your motion, or simply have OdaBuild adjust (scale)
+the run length of the motion slightly to compensate.</li>
+        <br>
+        <br>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">1.1
+UAC File Format</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%"><br>
+A UAC script is a simple text file, changed using Windows Notepad (or
+any other text editor).&nbsp; UAC commands are processed by OdaBuild in
+the order listed in the script.&nbsp; Upper/lower case is ignored.
+      <p>Anything after a '#' character is a comment, unless enclosed
+in double-quotes.&nbsp;
+Comments can be on stand-alone lines, or follow a command (on the same
+line). </p>
+      <p><i>Examples:</i> <br>
+&nbsp;&nbsp;&nbsp; # this is a comment on a stand-alone line <br>
+&nbsp;&nbsp;&nbsp; ACTION beethoven&nbsp;&nbsp;&nbsp;&nbsp; # this
+comment follows a command <br>
+&nbsp; </p>
+      <p> </p>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">1.2
+UAC Commands</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table border="0" cols="3" width="100%">
+        <tbody>
+          <tr>
+            <td width="2%"><br>
+            </td>
+            <td width="25%"><a href="UAC_Format.html#ACTION">ACTION</a></td>
+            <td width="70%">Specify action name.</td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><a href="UAC_Format.html#ACTIONPARAM">ACTION_PARAM</a></td>
+            <td valign="top">Specify MWC file action paremeter (used to
+indicate walks/turns/searches etc...)<br>
+            </td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#CONVERT">CONVERT</a></td>
+            <td>Import action from another platform.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MOTION">MOTION</a></td>
+            <td>Load Motion file or create a new one.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#LED">LED</a></td>
+            <td>Load LED file or create a new one.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#SOUND">SOUND</a></td>
+            <td>Load SOUND file</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_INSERT">MTN_INSERT</a></td>
+            <td>Insert time in motion.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_DELETE">MTN_DELETE</a></td>
+            <td>Delete time from motion (possible remove keyframes also)</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_SET">MTN_SET</a></td>
+            <td>Specify absolute servo positions.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_ADJUST">MTN_ADJUST</a></td>
+            <td>Adjust servo positions (adjust from current value)</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_COPY">MTN_COPY</a></td>
+            <td>Copy servo positions across keyframes.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_SMOOTH">MTN_SMOOTH</a></td>
+            <td>Smooth/interpolate servo positions across keyframes.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_MIRROR">MTN_MIRROR</a></td>
+            <td>Mirror servo's left/right.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_SCALE">MTN_SCALE</a></td>
+            <td>Scale motion run time length.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_RENAME">MTN_RENAME</a></td>
+            <td>Rename action start/stop positions.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_SERVOTYPE">MTN_SERVOTYPE</a></td>
+            <td>Specify motion type &amp; servo subset (all servos,
+head only, legs
+only, tail only, etc...)</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#MTN_REPEAT">MTN_REPEAT</a></td>
+            <td>Set repeat count for motion.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#LED_MIRROR">LED_MIRROR</a></td>
+            <td>Mirror LED's left/right.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#LED_SET">LED_SET</a></td>
+            <td>Specify LED value for a given time.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#LED_REPEAT">LED_REPEAT</a></td>
+            <td>Set repeat count for LED.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#SOUND_START">SOUND_START</a></td>
+            <td>Set sound start time.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><a href="UAC_Format.html#SOUND_REPEAT">SOUND_REPEAT</a></td>
+            <td>Set repeat count for sound.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a name="ACTION"></a><br>
+      </p>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.0
+ACTION</font></b>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Used to specify the name used to reference an action
+within RCode or
+within Master Studio Behavior Arranger.&nbsp; Appears in the ACTION.CFG
+or ACTION.EXT file.&nbsp;&nbsp; Action names matching any system
+action,
+or a previously loaded user action, replaces that previous action with
+the new one (ie: for overriding).
+            <p><i>Syntax:&nbsp;</i> <br>
+            <tt>&nbsp; ACTION action_name&nbsp;</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ACTION beethoven</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="ACTIONPARAM"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.1
+ACTION_PARAM</font></b>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Used to specify a parameter values for an action
+file.&nbsp;&nbsp;
+This value appears in the ACTION.CFG or ACTION.EXT
+file.&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <p><i>Syntax:&nbsp;</i> <br>
+            <tt>&nbsp; ACTION_PARAM &lt;value&gt;</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ACTION MOVE_HEAD<br>
+            </tt><tt>&nbsp; ACTION_PARAM 3</tt><br>
+            </p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="CONVERT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.2
+CONVERT</font></b>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Import actions from the specified AIBO model, using the
+provided *.ACT
+or *.UAC file.&nbsp;&nbsp;&nbsp; If a pathname isn't given, OdaBuild
+looks
+for the action name in ODAREF (contains reference actions).&nbsp; If
+not
+found, OdaBuild reports an error.&nbsp;&nbsp; Pathnames containing
+spaces
+should be enclosed in double-quotes.
+            <p>Typically used to convert ERS-210 actions to work on the
+220/310 platforms. </p>
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; CONVERT [210/220/310]</tt> <br>
+            <tt>&nbsp; CONVERT [210/220/310] "pathname"</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Convert builtin 210 "BEG_BALL" to current
+platform.</tt> <br>
+            <tt>&nbsp; ACTION BEG_BALL</tt> <br>
+            <tt>&nbsp; CONVERT 210&nbsp;</tt> </p>
+            <p><tt>&nbsp; ## Convert custom action for 210 to current
+platform (210,
+220 or 310)</tt> <br>
+            <tt>&nbsp; ACTION beethoven</tt> <br>
+            <tt>&nbsp; CONVERT 210 "..\210\beethoven.act"</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MOTION"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.3
+MOTION</font></b>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Specify motion file to load.&nbsp;&nbsp; If "NEW"
+given, OdaBuild creates
+an empty motion template.&nbsp; Pathnames containing spaces should be
+enclosed
+in double-quotes.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MOTION "pathname"</tt> <br>
+            <tt>&nbsp; MOTION NEW</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; MOTION "beethoven.mtn"</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="LED"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.4
+LED</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Specify LED file to load.&nbsp;&nbsp; If "NEW" given,
+OdaBuild creates
+an empty LED template.&nbsp; Pathnames containing spaces should be
+enclosed
+in double-quotes.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; LED "pathname"</tt> <br>
+            <tt>&nbsp; LED NEW</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; LED "beethoven.led"</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="SOUND"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">2.5
+SOUND</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Specify Sound (Wave or MIDI) file to load.&nbsp;&nbsp;
+Pathnames containing
+spaces should be enclosed in double-quotes.&nbsp;&nbsp; Wave files
+format
+should be PCM, 8KHz, 8-Bit Mono.&nbsp;&nbsp; MIDI files should be
+mono-tone
+(one note at a time), and single-track.&nbsp; OdaBuild does not support
+creating empty sound files (as with motion &amp; LED formats).
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; SOUND "pathname"</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; SOUND "beethoven.mid"</tt> <br>
+            <tt>&nbsp; SOUND "bark.wav"</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_INSERT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.0
+MTN_INSERT</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Insert space at specified target time.&nbsp;&nbsp;
+Stretches out the
+time between preceding keyframes and those following.&nbsp;
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_INSERT &lt;target_time&gt; &lt;framecount&gt;</tt>
+            </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## Insert forty ticks at time 500...</tt> <br>
+            <tt>&nbsp; MTN_INSERT&nbsp; 500&nbsp; 40&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_DELETE"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.1
+MTN_DELETE</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Deletes spaces at target time.&nbsp;&nbsp; Note: May
+delete keyframes.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_DELETE &lt;target_time&gt; &lt;framecount&gt;</tt>
+            </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## Remove forty ticks at time 500.&nbsp;</tt> <br>
+            <tt>&nbsp; ## Any keyframe falling in that range is
+deleted...</tt> <br>
+            <tt>&nbsp; MTN_DELETE&nbsp; 500&nbsp; 40&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_SET"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.2
+MTN_SET</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Set servo position.&nbsp; If target time isn't a
+keyframe,&nbsp; one
+is created.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_SET &lt;time&gt; <a
+ href="UAC_Format.html#JOINT_IDENT">&lt;jointid&gt;</a>
+new_position&nbsp; [&lt;time&gt; <a href="UAC_Format.html#JOINT_IDENT">&lt;jointid&gt;</a>
+new_position]
+etc...</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## At time 500, position head to look down at 45
+degrees...</tt> <br>
+            <tt>&nbsp; MTN_SET&nbsp; 500 -head_tilt -45&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_ADJUST"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.3
+MTN_ADJUST</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Adjust servo position.&nbsp; If target time isn't a
+keyframe, one is
+created.&nbsp; Similar to MTN_SET, but adds a delta value to current
+servo
+position instead of replacing value.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_ADJUST &lt;time&gt; <a
+ href="UAC_Format.html#JOINT_IDENT">&lt;jointid&gt;</a>
+new_position&nbsp; [&lt;time&gt; <a href="UAC_Format.html#JOINT_IDENT">&lt;jointid&gt;</a>
+new_position]
+etc...</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## At time 500, move head to look down an
+additional 20
+degrees...</tt> <br>
+            <tt>&nbsp; MTN_ADJUST&nbsp; 500 -head_tilt -20&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_COPY"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.4
+MTN_COPY</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Copy frames.&nbsp; Copy target into frames between
+start &amp; stop
+time, or a specified range of frames to 'start_time'.&nbsp;&nbsp; If a
+joint list is given, only those subset of servos are copied.&nbsp;
+            <p><i>Syntax 1:</i> <br>
+            <tt>&nbsp; MTN_COPY -target &lt;time&gt; -start
+&lt;start_time&gt; -stop
+&lt;stop_time&gt; [<a href="UAC_Format.html#JOINT_IDENT">&lt;joint-list&gt;</a>]</tt>
+            </p>
+            <p><i>Syntax 2:</i> <br>
+            <tt>&nbsp; MTN_COPY -range &lt;range_start&gt;
+&lt;range_stop&gt; -start
+&lt;start_time&gt; [<a href="UAC_Format.html#JOINT_IDENT">&lt;joint-list&gt;</a>]</tt>
+            </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Copy head tilt from time 500 into every
+keyframe between
+times 1000 &amp; 1100</tt> <br>
+            <tt>&nbsp; MTN_COPY -target 500 -start 1000 -stop 1100
+-head_tilt</tt> </p>
+            <p><tt>&nbsp; ## Copy head tilts between times 500 &amp;
+600 into keyframes
+starting at time 1000</tt> <br>
+            <tt>&nbsp; MTN_COPY -range 500 600 -start 1000
+-head_tilt&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_SMOOTH"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.5
+MTN_SMOOTH</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Smooth/Interpolate joints.&nbsp; Modify frames between
+start &amp;
+stop times, to change smoothly (linearly).&nbsp; ie: Draws a straight
+line
+between start &amp; stop times, and change intervening keyframes to
+fall
+on that line.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_SMOOTH -start &lt;start_time&gt; -stop
+&lt;stop_time&gt; [<a href="UAC_Format.html#JOINT_IDENT">&lt;joint-list&gt;</a>]</tt>
+            </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## Make head tilt smoothly from time 500 to its
+position
+at time 600...</tt> <br>
+            <tt>&nbsp; MTN_SMOOTH&nbsp; -start 500 -stop 600
+-head_tilt&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_MIRROR"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.6
+MTN_MIRROR</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Mirror joints left/right.&nbsp; If start/stop not
+specified, then entire
+motion file is mirrored.&nbsp;&nbsp; If motion-group not given, all
+joints
+are mirrored.&nbsp;
+            <p>Available motion groups are:&nbsp;&nbsp;
+-all&nbsp;&nbsp; -mouth&nbsp;
+-head&nbsp; -legs&nbsp; -tails&nbsp; -ears </p>
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_MIRROR [-start &lt;start_time&gt;] [-stop
+&lt;stop_time&gt;]
+&lt;motion-group&gt;</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Mirror all head movements left to right
+between times
+500 &amp; 1000...</tt> <br>
+            <tt>&nbsp; MTN_MIRROR -start 500 -stop 1000 -head</tt> </p>
+            <p><tt>&nbsp; ## Mirror entire performance left to right
+(head, legs, tail,
+and LED's)...</tt> <br>
+            <tt>&nbsp; MTN_MIRROR&nbsp;</tt> <br>
+            <tt>&nbsp; LED_MIRROR&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_SCALE"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.7
+MTN_SCALE</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Stretch or shrink motion.&nbsp; Number of keyframes
+remains unchanged,
+but the amount of time between them is changed.&nbsp; Useful for
+aligning
+motions to sound files (since previews never match a performance under
+RCode).
+            <p>Factor should be 50.00 to 200.00. <br>
+&nbsp;&nbsp; 50 = Makes motion run twice as fast. <br>
+&nbsp;&nbsp; 100 = No change. <br>
+&nbsp;&nbsp; 200 = Makes motion take twice as long to run. </p>
+            <p>Warning!&nbsp; This can make Aibo joints move faster
+than recommended
+limits, and potentially cause damage.&nbsp; OdaBuild will issue a
+warning
+on servos moving faster than the limit.&nbsp;&nbsp; USE CAREFULLY! </p>
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_SCALE &lt;factor&gt;</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## Make motion run 10% faster than before.</tt> <br>
+            <tt>&nbsp; MTN_SCALE 90</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_RENAME"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.8
+MTN_RENAME</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Change motion title in header.&nbsp; Motion titles are
+organized in
+"a_start#stop_name" format.&nbsp; The start/stop/name fields are&nbsp;
+specified individually, or the entire full-name.&nbsp; The start/stop
+positions
+are typically "sleep", "sit", or "stand".&nbsp;&nbsp; This command does
+not affect servo settings -- only the motion title itself.
+            <p>AIBO moves smoothly through preprogrammed transistions
+into the 'start'
+position specified.&nbsp;&nbsp; For example, if the previous
+performance
+ended in the "stand" position, and the new performance starts in the
+"sit"
+position, AIBO automatically transitions from standing to sitting
+beforehand. </p>
+            <p>AIBO -assumes- its servos are in the position specified
+by the stop
+position.&nbsp;&nbsp; If wrong, AIBO might make some extremely fast
+transitions
+for the next performance.&nbsp; This causes prematurely servo wear and
+should be avoided. </p>
+            <center>
+            <p><b><i>DO NOT USE UNLESS YOU ARE CERTAIN YOU UNDERSTAND
+THE ABOVE!!!</i></b></p>
+            </center>
+            <p><i>Syntax 1:</i> <br>
+&nbsp;&nbsp;&nbsp; MTN_RENAME [-start position] [-stop position] [-name
+new_motionfile_name]
+            <table cellpadding="0" cellspacing="0" cols="3" width="100%">
+              <tbody>
+                <tr>
+                  <td width="6%"><br>
+                  </td>
+                  <td width="10%">-start</td>
+                  <td width="80%">Change the 'start' portion of motion
+title.</td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td>-stop</td>
+                  <td>Change the 'stop' portion of motion title.</td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td>-name</td>
+                  <td>Change the 'name' portion of motion title.</td>
+                </tr>
+              </tbody>
+            </table>
+            </p>
+            <p><i>Syntax 2:</i> <br>
+            <tt>&nbsp; MTN_RENAME [-full "full_title"]</tt> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Replace entire motion
+title.&nbsp;&nbsp;
+Must be of "a_start#stop_name" format.&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First character MUST match
+the servo type (a=all, m=mouth, l=legs, h=head, t=tail, e=ears).&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note: It's important to
+enclose the title in double-quotes, to prevent the '#' being seen as a
+comment. </p>
+            <p><i>Syntax 3:</i> <br>
+            <tt>&nbsp; MTN_RENAME [-reverse]</tt> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Swaps the 'start' and 'stop'
+poritions of motion title. </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Change start &amp; stop positions in title...</tt>
+            <br>
+            <tt>&nbsp; MTN_RENAME -start sit -stop stand</tt> </p>
+            <p><tt>&nbsp; ## Reverse start &amp; stop positions...</tt>
+            <br>
+            <tt>&nbsp; MTN_RENAME -reverse</tt> </p>
+            <p><tt>&nbsp; ## Specified a full motion title name
+manually...</tt> <br>
+            <tt>&nbsp; MTN_RENAME -full&nbsp; "a_sit#sit_beethoven5"</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_SERVOTYPE"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.9
+MTN_SERVOTYPE</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Specify the motion servo type.&nbsp; Tells Aibo which
+block of servos
+will participate in the motion.&nbsp; Can be one or more of the
+indicate
+options.&nbsp;&nbsp; OdaBuild inserts or deletes servos from the action
+to match, and updates first character in motion title.
+            <p>If multiple servo groups are specified, OdaBuld creates
+one motion chunk
+for each (a partial motion, as required by AIBO to differentiate the
+servo
+groups).&nbsp;&nbsp; All motion chunks will start simultaneously when
+the
+action is played. </p>
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_SERVOTYPE
+[-all][-head][-mouth][-head_axis][-legs][-tail][-ears]<br>
+            </tt></p>
+            <p><tt>-head = Head neck servos, mouth &amp; ears<br>
+-head_axis = Head neck servos only<br>
+-mouth = mouth only<br>
+-ears = ears only<br>
+-legs = legs only<br>
+-tail = tail only<br>
+            </tt> </p>
+            <p><i>Example 1:</i> <br>
+            <tt>&nbsp; ## Create leg only motion.&nbsp; Removes head
+&amp; tail
+servos.</tt> <br>
+            <tt>&nbsp; MTN_SERVOTYPE -legs</tt> </p>
+            <p><i>Example 2:</i> <br>
+            <tt>&nbsp; ## Create head &amp; tail motion.&nbsp; Removes
+leg servos.&nbsp;
+OdaBuild makes</tt> <br>
+            <tt>&nbsp; ## four motion chunks (one for each servo-group
+specified).</tt> <br>
+            <tt>&nbsp; MTN_SERVOTYPE -head_axis -mouth -ears -tail</tt><br>
+&nbsp;</p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="MTN_REPEAT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">3.10
+MTN_REPEAT</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Set motion repeat count.&nbsp; Motion will be repeated
+specified number
+of times when performed by Aibo.&nbsp; Value of -1 means repeat
+forever.&nbsp;
+Typically used to create continuous tail or ear wagging on a 210.&nbsp;
+Normal value is 1 (play once).
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; MTN_REPEAT &lt;count&gt;</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Make motion repeat forever.</tt> <br>
+            <tt>&nbsp; MTN_REPEAT -1</tt> </p>
+            <p><tt>&nbsp; ## Make motion repeat twice.</tt> <br>
+            <tt>&nbsp; MTN_REPEAT 2</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="LED_MIRROR"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">4.0
+LED_MIRROR</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Mirror 210/220 LED's left/right.&nbsp; If start/stop
+time not given,
+entire LED mirrored.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; LED_MIRROR [-start &lt;start_time&gt;] [-stop
+&lt;stop_time&gt;]</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Mirror all LED's left to right between times
+500 &amp;
+1000...</tt> <br>
+            <tt>&nbsp; LED_MIRROR -start 500 -stop 1000</tt> </p>
+            <p><tt>&nbsp; ## Mirror entire performance left to right...</tt>
+            <br>
+            <tt>&nbsp; MTN_MIRROR&nbsp;</tt> <br>
+            <tt>&nbsp; LED_MIRROR&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="LED_SET"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">4.1
+LED_SET</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Turn LED(s) on/off.&nbsp; Valid intensity values are
+0,1,32,64,96&nbsp;
+Other values round down.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; LED_SET &lt;time&gt; &lt;framecount&gt; <a
+ href="UAC_Format.html#LED_IDENT">&lt;led-id&gt;</a> &lt;intensity&gt;
+[<a href="UAC_Format.html#LED_IDENT">&lt;led-id&gt;</a>
+&lt;intensity&gt;] etc...</tt> </p>
+            <p><i>Example:</i> <br>
+            <tt>&nbsp; ## At time 500, turn on happy eyes at max
+brightness for 100 frames.</tt> <br>
+            <tt>&nbsp; LED_SET 500 100 -210happy 96&nbsp;</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="LED_REPEAT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">4.2
+LED_REPEAT</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Set LED sequence repeat count.&nbsp; LED sequence is
+repeated specified
+number of times when performed by Aibo.&nbsp; Using a value of -1 means
+repeat forever.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; LED_REPEAT &lt;count&gt;</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Make LED sequence repeat forever.</tt> <br>
+            <tt>&nbsp; LED_REPEAT -1</tt> </p>
+            <p><tt>&nbsp; ## Make LED sequence repeat twice.</tt> <br>
+            <tt>&nbsp; LED_REPEAT 2</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="SOUND_START"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">5.0
+SOUND_START</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Specify starting point of sound in action in motion
+frames.&nbsp;&nbsp;
+Useful for aligning sounds to motions.&nbsp;&nbsp; When using wave
+files,
+it can also save an enormous amount of space on the memory
+stick.&nbsp;&nbsp;
+Instead of having seconds of silence, specify a sound start
+time.&nbsp;&nbsp;
+Value is specified in motion time ticks.
+            <p><i>Syntax 1 (absolute time):</i> <br>
+            <tt>&nbsp; SOUND_START &lt;time&gt;&nbsp;</tt> </p>
+            <p><i>Syntax 2 (adjust time by a delta):</i> <br>
+            <tt>&nbsp; SOUND_START [+/-]&lt;time&gt;</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Make sound playback start at motion frame
+time 500.</tt> <br>
+            <tt>&nbsp; SOUND_START&nbsp; 500</tt> </p>
+            <p><tt>&nbsp; ## Make sound playback start 42 frames later.</tt>
+            <br>
+            <tt>&nbsp; SOUND_START&nbsp; +42</tt> </p>
+            <p><tt>&nbsp; ## Make sound playback start 30 frames
+earlier.</tt> <br>
+            <tt>&nbsp; SOUND_START&nbsp; -30</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="SOUND_REPEAT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">5.1
+SOUND_REPEAT</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td>Set sound repeat count.&nbsp; Sound (MIDI or Wave) is
+repeated specified
+number of times when performed by Aibo.&nbsp; Value of -1 means repeat
+forever.
+            <p><i>Syntax:</i> <br>
+            <tt>&nbsp; SOUND_REPEAT &lt;count&gt;</tt> </p>
+            <p><i>Examples:</i> <br>
+            <tt>&nbsp; ## Make sound repeat forever.</tt> <br>
+            <tt>&nbsp; SOUND_REPEAT -1</tt> </p>
+            <p><tt>&nbsp; ## Make sound repeat twice.</tt> <br>
+            <tt>&nbsp; SOUND_REPEAT 2</tt></p>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <a name="JOINT_IDENT"></a> <br>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">6.0
+Motion Servo Joint Identifiers</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">The phrase "<b><i>&lt;jointid&gt;</i></b>"
+can
+be one (and only one) of the following.&nbsp;&nbsp;&nbsp; "<b><i>&lt;joint-list&gt;</i></b>"
+can be one or more.
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td width="25%">&nbsp; -all</td>
+            <td width="75%">All body joints</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -head</td>
+            <td>All head joints (tilt, pan, roll, mouth, ears)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -head_axis</td>
+            <td>All head motion joints (tilt, pan, roll only)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legs</td>
+            <td>All leg joints</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -tail</td>
+            <td>Both tail joints.</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -front</td>
+            <td>All front leg joints</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -back</td>
+            <td>Back legs</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfl</td>
+            <td>Front-left leg</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbl</td>
+            <td>Back-left leg</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfr</td>
+            <td>Front-right leg</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbr</td>
+            <td>Back-right leg</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -head_tilt</td>
+            <td>Vertical up/down</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -head_pan</td>
+            <td>Left-to-Right&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -head_toll</td>
+            <td>Roll side-to-side</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -mouth</td>
+            <td>Mouth</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -ear_right</td>
+            <td>Right Ear</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -ear_left</td>
+            <td>Left Ear</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfl_vert</td>
+            <td>Front Left Shoulder</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfl_tilt or -legfl_lat</td>
+            <td>Front Left Lateral</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfl_knee</td>
+            <td>Front Lef tKnee</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfr_vert</td>
+            <td>Front Right Shoulder</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfr_tilt or -legfr_lat</td>
+            <td>Front Right Lateral</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legfr_knee</td>
+            <td>Front Right Knee</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbl_vert</td>
+            <td>Rear Left Hip</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbl_tilt or -legbl_lat</td>
+            <td>Rear Left Lateral</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbl_knee</td>
+            <td>Rear Left Knee</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbr_vert</td>
+            <td>Rear Right Hip</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbr_tilt or -legbr_lat</td>
+            <td>Rear Right Lateral</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -legbr_knee</td>
+            <td>Rear Right Knee</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -front_vert</td>
+            <td>Both front leg vertical (shoulder)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -front_tilt or -front_lat</td>
+            <td>Both front leg tilt(shoulder)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -front_knee</td>
+            <td>Both front leg knees</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -back_vert</td>
+            <td>Both rear leg vertical (shoulder)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -back_tilt or -back_lat</td>
+            <td>Both rear leg tilt (shoulder)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -back_knee</td>
+            <td>Both rear leg knees</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -leg_vert</td>
+            <td>All leg vertical's</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -leg_tilt or -leg_lats</td>
+            <td>All leg tilt/lateral's</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -leg_knee</td>
+            <td>All leg knee's</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -tail_horz</td>
+            <td>Horizontal Tail</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -tail_vert</td>
+            <td>Vertical Tail</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a name="LED_IDENT"></a><br>
+      </p>
+      <hr noshade="noshade" size="1" width="100%"><b><font size="+1">7.0
+LED Identifiers</font></b> <br>
+      <hr noshade="noshade" size="1" width="100%">For &lt;led-id&gt;,
+can be one the following:
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">&nbsp; -110mode<br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -110mad<br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -110happy<br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td width="25%">&nbsp; -210mode</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210mad</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (left/right mad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210happy</td>
+            <td>Green&nbsp; (left/right happy)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210sad</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (left/right sad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye1r</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (right mad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye1l</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (left mad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye2r</td>
+            <td>Green&nbsp; (right happy)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye2l</td>
+            <td>Green&nbsp; (left happy)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye3r</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (right sad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210eye3l</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (left sad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210tail1</td>
+            <td>Blue</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -210tail2</td>
+            <td>Orange</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220mode</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220mad</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220happy</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220sad</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye1r</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (right mad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye1l</td>
+            <td>Red&nbsp;&nbsp;&nbsp; (left mad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye2r</td>
+            <td>Blue&nbsp;&nbsp; (right happy)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye2l</td>
+            <td>Blue&nbsp;&nbsp; (left happy)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye3r</td>
+            <td>Blue&nbsp;&nbsp; (right sad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220eye3l</td>
+            <td>Blue&nbsp;&nbsp; (left sad)</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220face1</td>
+            <td>Blue</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220face2</td>
+            <td>Blue</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220face3</td>
+            <td>Red</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tail1</td>
+            <td>Blue</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tail2</td>
+            <td>Red</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tail3</td>
+            <td>Blue</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan1</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan2</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan3</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan4</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan5</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220tailfan6</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -220headlight</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310mode</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310mad</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310happy</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310sad</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310green</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310red</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp; -310blue</td>
+            <td><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7modered</td>
+            <td valign="top">Mode LED's (by ears)<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7modegreen</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7modeblue</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7headyellow</td>
+            <td valign="top">Head touch LED<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7headwhite</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7wifi</td>
+            <td valign="top">WIFI led (back of head)<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7mad</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7happy</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7sad</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facetop1</td>
+            <td valign="top">Top row of matrix LED's<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facetop2</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facetop3</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facetop4</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facetop5</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facemid1</td>
+            <td valign="top">Middle row of matrix LED's<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facemid2</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facemid3</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facemid4</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facemid5</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facelow1</td>
+            <td valign="top">Lowest row of matrix LED's<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7facelow2</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back1white</td>
+            <td valign="top">Frontmost back LED<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back1color</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back2white</td>
+            <td valign="top">Middle back LED<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back2color</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back3white</td>
+            <td valign="top">Rearmost back LED<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp; -7back3color</td>
+            <td valign="top"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> <a name="EXAMPLES"></a> </p>
+      <hr align="left" noshade="noshade" size="1" width="100%"><b><font
+ size="+1">8.0&nbsp; Examples</font></b> <br>
+      <hr align="left" noshade="noshade" size="1" width="100%">Example
+of simple UAC format: <br>
+      <tt>&nbsp; ACTION action_name</tt> <br>
+      <tt>&nbsp; MOTION "Motion\myaction.mtn"</tt> <br>
+      <tt>&nbsp; LED&nbsp;&nbsp;&nbsp; "LED\myaction.led"</tt> <br>
+      <tt>&nbsp; SOUND&nbsp; "Sound\myaction.wav"</tt> <br>
+      <tt>&nbsp; SOUND_START 100</tt> <br>
+      <p>Example of simple UAC format.&nbsp; Same as above, but
+creating a left/right
+mirror image: <br>
+      <tt>&nbsp; ACTION action_mirror</tt> <br>
+      <tt>&nbsp; MOTION "Motion\myaction.mtn"</tt> <br>
+      <tt>&nbsp; LED&nbsp;&nbsp;&nbsp; "LED\myaction.led"</tt> <br>
+      <tt>&nbsp; SOUND&nbsp; "Sound\myaction.wav"</tt> <br>
+      <tt>&nbsp; SOUND_START 100</tt> <br>
+      <tt>&nbsp; MTN_MIRROR -all</tt> <br>
+      <tt>&nbsp; LED_MIRROR -all</tt> <br>
+      </p>
+      <p>Example of import &amp; conversion (presumably for a 220 or
+310): <br>
+      <tt>&nbsp; ACTION action_name</tt> <br>
+      <tt>&nbsp; FROM 210 "..\210\action.act"</tt> <br>
+      </p>
+      <p>Example of import &amp; mirroring an action left/right (for a
+220 or
+310): <br>
+      <tt>&nbsp; ACTION action_mirror</tt> <br>
+      <tt>&nbsp; FROM 210 "..\210\action.act"</tt> <br>
+      <tt>&nbsp; MTN_MIRROR -all</tt> <br>
+      <tt>&nbsp; LED_MIRROR -all</tt> <br>
+      </p>
+Example of creating a "leg-only" motion.&nbsp; Ideal for soccer kicks,
+since it allows the head to keep tracking the ball. <br>
+      <b><i>Make sure your motion cannot possibly allow the front legs
+to
+collide with the head!!!</i></b> <br>
+      <tt>&nbsp; ACTION action_soccer_kick</tt> <br>
+      <tt>&nbsp; MOTION "Motion\mykick.mtn"</tt> <br>
+      <tt>&nbsp; MTN_SERVOTYPE -legs</tt> <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"> <br>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+</center>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Master Studio Behavior File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Master Studio
+Behavior File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="behavior.html#INTRO">Introduction</a></li>
+        <li><a href="behavior.html#CODES">Behavior Codes</a></li>
+        <li><a href="behavior.html#CONNECT">Connections</a></li>
+        <li><a href="behavior.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><big
+ style="text-decoration: underline;"><big style="font-weight: bold;">1.
+Introduction<br>
+            </big></big><br>
+Master Studio Behavior Arrange (BA) files are text based -- you can
+open them in Notepad.&nbsp;&nbsp; Each line starts with a character or
+word indicating what follows.&nbsp;&nbsp; All parameters are separated
+by colon ( <span style="font-weight: bold;">:</span> ) characters. <br>
+            <br>
+Behaviors are organized into frames or pages.&nbsp;&nbsp; A single
+behavior file can have dozens or hundreds of frames.&nbsp;&nbsp;
+Behavior Arranger shows each frame on its own editor page.&nbsp;&nbsp;
+Group boxes are used to reference frames within another, creating a
+hierarchy of sorts.&nbsp;&nbsp; Frames always have a single entry
+point,
+but can have multiple exit points (or none at all).<br>
+            </td>
+            <td style="width: 273px;"><img alt="Behavior Example"
+ src="behavior.png"
+ style="border: 1px solid ; width: 273px; height: 251px;" hspace="10"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <a name="CODES"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">2. Behavior Codes</span></big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold; font-style: italic; text-decoration: underline;">Code</span><br>
+            </td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold; font-style: italic; text-decoration: underline;">Description</span><br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="width: 5%; vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">AMS</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Behavior Arranger Version</span><br>
+            <div style="text-align: left;">
+            <ol>
+              <li>"BA" (always)</li>
+              <li>"1.1" (version of Behavior Arranger which created
+file)</li>
+            </ol>
+Example:
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">AMS:BA:1.1<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">F</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">New frame declaration</span><br>
+            <ol>
+              <li>Frame Number</li>
+              <li>Frame Name (quoted)<br>
+              </li>
+              <li> Window horizontal X screen coordinates
+(with <span style="font-weight: bold;">Open All Groups</span>
+command)</li>
+              <li> Window vertical Y screen coordinates (with <span
+ style="font-weight: bold;">Open All Groups</span> command)</li>
+              <li> Window horizontal size in pixels (with <span
+ style="font-weight: bold;">Open All Groups</span> command)</li>
+              <li> Window vertical size in pixels (with <span
+ style="font-weight: bold;">Open All Groups</span> command)</li>
+              <li>Always 0</li>
+              <li>Always 0</li>
+              <li>Workspace horizontal size in pixels</li>
+              <li>Workspace vertical size in pixels</li>
+              <li>Flags.&nbsp; If bit0 set, frame opened
+in own window.</li>
+            </ol>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">F40000:"M_StandUp:Main":0:0:960:729:0:0:1112:739:208:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">S</span><br>
+            </td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Entry Terminal</span>.&nbsp; Tells Master
+Studio where AIBO should first start within the frame.
+            <ol>
+              <li>Block Number</li>
+              <li>Block Name (quoted)</li>
+              <li>Block horizontal workspace coordinate in grid units</li>
+              <li>Block vertical workspace coordinate in grid units</li>
+              <li>Block horizontal size in grid units</li>
+              <li>Block vertical size in grid units</li>
+              <li>Connection info (see section 3)</li>
+              <li>Always 0</li>
+              <li>Comments (quoted)</li>
+            </ol>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">S40001:"START":200:50:80:20:40003,99999999,99999999,99999999:0:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">T</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Exit Terminal</span>.&nbsp; Tells Master
+Studio to leave this frame &amp; resume in previous frame.
+            <ol>
+              <li>Block Number</li>
+              <li>Block Name (quoted)</li>
+              <li>Block horizontal workspace coordinate in grid units</li>
+              <li>Block vertical workspace coordinate in grid units</li>
+              <li>Block horizontal size in grid units</li>
+              <li>Block vertical size in grid units</li>
+              <li>Always 0</li>
+              <li>Always 0</li>
+              <li>Comments (quoted)</li>
+            </ol>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">T40002:"END":200:200:80:20:0:0:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">A</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Action Block</span>.&nbsp; Contains lists
+of commands for AIBO to perform.&nbsp; It's parameters are as follows:<br>
+            <ol>
+              <li>Block Number</li>
+              <li>Block Name (quoted)</li>
+              <li>Block horizontal workspace coordinate in grid units</li>
+              <li>Block vertical workspace coordinate in grid units</li>
+              <li>Block horizontal size in grid units</li>
+              <li>Block vertical size in grid units</li>
+              <li>Connection info (see section 3)</li>
+              <li>Always 0</li>
+              <li>Comments (quoted)</li>
+              <li>Optional.&nbsp; Path to background bitmap file
+(quoted)</li>
+            </ol>
+Zero or more optional lines of R-Code commands can follow, which start
+with "<span style="font-weight: bold;">&gt;</span>" continuation
+characters.&nbsp;&nbsp; The
+R-Code commands are composed of:<br>
+            <ul>
+              <li>Two colon seperated keywords (the second if which can
+be blank)</li>
+              <li>Five operands (variables, numbers, etc...).&nbsp;
+Unused operands are blank.</li>
+              <li>A field that's always 0</li>
+              <li>Comment</li>
+            </ul>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">A40003:"STAND":200:110:100:60:40002,99999999,99999999,99999999:0:<br>&gt;PLAY:ACTION:STAND:::::0:<br>&gt;WAIT:::::::0:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">B</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Branch
+Block</span><span style="font-weight: bold;"></span>.&nbsp; Contains
+lists of tests, so control can go down different paths.<br>
+            <ol>
+              <li>Block Number</li>
+              <li>Block Name (quoted)</li>
+              <li>Block horizontal workspace coordinate in grid units</li>
+              <li>Block vertical workspace coordinate in grid units</li>
+              <li>Block horizontal size in grid units</li>
+              <li>Block vertical size in grid units</li>
+              <li>Always 0<br>
+              </li>
+              <li>Always 0</li>
+              <li>Comment (quoted)</li>
+              <li>Optional.&nbsp; Path to background bitmap file
+(quoted)</li>
+            </ol>
+Zero or more optional lines of branch statements follow, which start
+with "<span style="font-weight: bold;">&gt;</span>" continuation
+characters.&nbsp;&nbsp; The branch statements are composed of:<br>
+            <ul>
+              <li>Test Command (IF/AND/OR/ELSE)</li>
+              <li>Variable</li>
+              <li>Operator (=, &lt;&gt;, &gt;, &gt;=, &lt;. &lt;=, or
+Bit)</li>
+              <li>Variable or Number</li>
+              <li>Name of connected block<br>
+              </li>
+              <li>Two blank fields</li>
+              <li>Connection info (see section 3)</li>
+              <li>Comment<br>
+              </li>
+            </ul>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">B10004:"Branch":330:230:100:60:0:0:<br>&gt;IF:a:=:1:LeftTurn:::10005,99999999,99999999,99999999:<br>&gt;IF:a:=:2:RightTurn:::10007,99999999,99999999,99999999:<br>&gt;IF:a:=:3:StandUp:::10008,99999999,99999999,99999999:<br>&gt;ELSE::::SitDown:::10009,99999999,99999999,99999999:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">G</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Group Block</span><span
+ style="font-weight: bold;"></span><span style="font-weight: bold;"></span>.&nbsp;
+Transfer control to another frame.&nbsp;&nbsp; On return, control can
+go down different paths.<br>
+            <ol>
+              <li>Block Number</li>
+              <li>Block Name (quoted)</li>
+              <li>Block horizontal workspace coordinate in grid units</li>
+              <li>Block vertical workspace coordinate in grid units</li>
+              <li>Block horizontal size in grid units</li>
+              <li>Block vertical size in grid units</li>
+              <li>Always 0<br>
+              </li>
+              <li>Frame number to receive control<br>
+              </li>
+              <li>Comment (quoted)</li>
+              <li>Optional.&nbsp; Path to background bitmap file
+(quoted)</li>
+            </ol>
+Zero or more optional lines of return statements follow, which start
+with "<span style="font-weight: bold;">&gt;</span>" continuation
+characters.&nbsp;&nbsp; The branch statements are composed of:<br>
+            <ul>
+              <li>Name of exit terminal (from called frame)<br>
+              </li>
+              <li>Three blank fields.<br>
+              </li>
+              <li>Name of connect block</li>
+              <li>Two blank fields<br>
+              </li>
+              <li>Connection info (see section 3)</li>
+              <li>Comment<br>
+              </li>
+            </ul>
+Example:<br>
+            <center>
+            <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="5" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                  <pre style="background-color: rgb(255, 255, 204);">G10002:"WaitForHeadTouch":330:80:100:60:0:60000:<br>&gt;Head_ON::::Random:::10003,99999999,99999999,99999999:<br>&gt;Head_OFF:::::::10002,99999999,60,99999999:<br></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">&gt;</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Continuation line</span>.&nbsp;&nbsp; Used
+by Action, Branch
+&amp; Group blocks (see above).<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;">//<br>
+            </td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Program comments.<br>
+            </span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><span
+ style="font-weight: bold;">[</span></td>
+            <td style="vertical-align: top;"><span
+ style="font-weight: bold;">Platform model &amp; language</span>.&nbsp;
+ie: [ERS-210(E)]&nbsp; (AMS 1.1
+only)</td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+Any line not starting with one of the above is ignored.<br>
+      <br>
+      <a name="CONNECT"></a><br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">3.&nbsp;
+Connections</span><br
+ style="font-weight: bold; text-decoration: underline;">
+      </big></big><br>
+Connections between blocks are tracked by block numbers&nbsp; -- the
+value
+immediately following a start-of-line character.&nbsp;&nbsp; For
+example, the connection below means jump to block number 10001.<br>
+      <table
+ style="width: 50%; text-align: left; margin-right: auto; margin-left: 40px;"
+ border="0" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">10001,99999999,99999999,99999999<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+The three comma seperated values following the block number are
+Behavior Arranger guide information for drawing connection
+lines.&nbsp;&nbsp; All 9's means use the default routing.&nbsp;&nbsp;
+Click-n-drag a connection line, and these values get initialized. <br>
+      <br>
+      <table style="width: 100%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">The three values are:<br>
+            <ul>
+              <li>Vertical distance from bottom of starting block (in
+grid units), for a horizontal line.<br>
+              </li>
+              <li>Horizontal distance from center of starting block (in
+grid units), for a vertical line.<br>
+              </li>
+              <li>Vertical distance from top of ending block (in grid
+units), for a second horizontal line.</li>
+            </ul>
+For example, the image (to right) shows the connection:&nbsp;
+"10002,20,80,-40"<br>
+            </td>
+            <td style="width: 245px;"><img alt="Connection"
+ src="behavior2.png"
+ style="border: 1px solid ; width: 245px; height: 134px;" hspace="10"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>4.
+Example</big></big><br>
+      <br>
+      <center>
+      <table style="width: 95%; text-align: left;" border="0"
+ cellpadding="2" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(255, 255, 240); vertical-align: top; white-space: nowrap;">AMS:BA:1.1<br>[ERS-210(E)]</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(240, 255, 255); vertical-align: top; white-space: nowrap;">F10000:"Main":1:0:960:729:0:0:1172:739:208:<br>S10001:"START":330:30:80:20:10002,99999999,99999999,99999999:0:<br>G10002:"WaitForHeadTouch":330:80:100:60:0:60000:<br>&gt;Head_ON::::Random:::10003,99999999,99999999,99999999:<br>&gt;Head_OFF:::::::10002,99999999,60,99999999:<br>A10003:"Random":330:160:100:60:10004,99999999,99999999,99999999:0:<br>&gt;RND::a:1:4:::0:Pick random number between 1 and 4<br>B10004:"BranchBox":330:230:100:60:0:0:<br>&gt;IF:a:=:1:LeftTurn:::10005,99999999,99999999,99999999:<br>&gt;IF:a:=:2:RightTurn:::10007,99999999,99999999,99999999:<br>&gt;IF:a:=:3:StandUp:::10008,99999999,99999999,99999999:<br>&gt;ELSE::::SitDown:::10009,99999999,99999999,99999999:<br>G10005:"LeftTurn":150:320:100:60:0:20000:<br>&gt;END::::LieDown:::10006,99999999,99999999,99999999:<br>A10006:"LieDown":330:410:100:60:10002,99999999,-250,99999999:0:<br>&gt;PLAY:ACTION:LIE:::::0:Make AIBO lie down<br>&gt;WAIT:::::::0:<br>G10007:"RightTurn":270:320:100:60:0:30000:<br>&gt;END::::LieDown:::10006,99999999,99999999,99999999:<br>G10008:"StandUp":390:320:100:60:0:40000:<br>&gt;END::::LieDown:::10006,99999999,99999999,99999999:<br>G10009:"SitDown":510:320:100:60:0:50000:<br>&gt;END::::LieDown:::10006,99999999,99999999,99999999:</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(255, 255, 240); vertical-align: top; white-space: nowrap;">F20000:"M_LeftTurn:Main":44:44:960:729:0:0:1112:739:208:<br>S20001:"START":200:50:80:20:20003,99999999,99999999,99999999:0:<br>T20002:"END":200:170:80:20:0:0:<br>A20003:"LEFT_TURN":200:90:100:60:20002,99999999,99999999,99999999:0:<br>&gt;PLAY:ACTION:TURN:90::::0:<br>&gt;WAIT:::::::0:</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(240, 255, 255); vertical-align: top; white-space: nowrap;">F30000:"M_RightTurn:Main":66:66:960:729:0:0:948:623:208:<br>S30001:"START":200:50:80:20:30003,99999999,99999999,99999999:0:<br>T30002:"END":200:200:80:20:0:0:<br>A30003:"RIGHT_TURN":200:90:100:60:30002,99999999,99999999,99999999:0:<br>&gt;PLAY:ACTION:TURN:-90::::0:<br>&gt;WAIT:::::::0:</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(255, 255, 240); vertical-align: top; white-space: nowrap;">F40000:"M_StandUp:Main":0:0:960:729:0:0:1112:739:208:<br>S40001:"START":200:50:80:20:40003,99999999,99999999,99999999:0:<br>T40002:"END":200:200:80:20:0:0:<br>A40003:"STAND_UP":200:110:100:60:40002,99999999,99999999,99999999:0:<br>&gt;PLAY:ACTION:STAND:::::0:<br>&gt;WAIT:::::::0:</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(240, 255, 255); vertical-align: top; white-space: nowrap;">F50000:"M_SitDown:Main":0:0:960:729:0:0:948:623:208:<br>S50001:"START":200:50:80:20:50003,99999999,99999999,99999999:0:<br>T50002:"END":200:200:80:20:0:0:<br>A50003:"SIT_DOWN":200:100:100:60:50002,99999999,99999999,99999999:0:<br>&gt;PLAY:ACTION:SIT:::::0:<br>&gt;WAIT:::::::0:</pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(255, 255, 240); vertical-align: top; white-space: nowrap;">F60000:"S_WaitUntilHeadTouched:Main":69:400:960:729:0:0:1112:739:208:<br>S60001:"START":200:50:80:20:60003,99999999,99999999,99999999:0:<br>T60002:"Head_ON":190:400:80:20:0:0:<br>B60003:"Head_ON?":200:130:100:60:0:0:<br>&gt;IF:Head_ON:=:1:INIT:::60004,99999999,99999999,99999999:<br>&gt;ELSE::::WAIT:::60005,99999999,99999999,-10:<br>A60004:"INIT":190:250:100:60:60002,99999999,99999999,99999999:0:<br>&gt;SET::Head_ON:0::::0:<br>A60005:"WAIT":330:250:100:60:60006,99999999,99999999,99999999:0:<br>&gt;WAIT:100::::::0:<br>T60006:"Head_OFF":330:400:80:20:0:0:            </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre
+ style="padding: 0pt; margin-bottom: 0pt; background-color: rgb(240, 255, 255); vertical-align: top; white-space: nowrap;">H10000:1</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <span style="font-family: monospace;"><br>
+      </span><a href="examples/demo.be.html">Download Example</a><span
+ style="font-family: monospace;"></span><br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

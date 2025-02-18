@@ -1,0 +1,207 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YAPT = YAPT advanced topics (OBSOLETE INSTRUCTIONS)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YAPT = YAPT advanced topics (OBSOLETE INSTRUCTIONS)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+NOTE: before trying these advanced topics, please try the standard <A HREF="yapt.htm">YAPT tutorial</A> with the Babe personality.
+<P></P>
+YAPT can be used with pre-existing personalities like Holiday Pleo (Xmas songs) or PleoPM (the default personality) that weren't meant to work with YAPT.
+The old logic is replaced completely. You can reuse any of the resources (sounds, motions or animation 'commands').
+
+<P></P>
+<H2>Changing Holiday Pleo</H2>
+<P></P>
+The Holiday Pleo personality randomly picks between 6 Christmas songs.
+For this tutorial, we are going to use YAPT to make a predictable behavior removing the random playing.
+Pressing one of 6 sensors (head, back, 4 legs) will perform one specific song.
+This is useful if you have more than 1 Pleo and want to trigger all of them to perform the same song.
+
+<UL>
+<LI>Prerequisite: Please work through the intro <A HREF="yapt.htm">YAPT tutorial</A> first, with the Babe personality.
+<LI>Prerequisite: Please download and run the Holiday Pleo program first
+<LI>If you haven't installed it already, download the 
+<A HREF=http://www.pleoworld.com/downloads>Holiday Pleo from the UGOBE site</A>
+and install it on the SD card.
+There should be a PLEO.URF file in the top-most folder of the SD card.
+<LI>Download the <A HREF="yapt01a.zip">yapt01a.zip</A> stand-alone install and unzip it to the top-most folder of the SD card.
+(there should be 2 .AMX files, 2 .EXE files, one PLEO.Y file and the PLEO.URF file)
+<P></P>
+<LI>Run the YAPT.EXE program.
+<LI>Initially, there is no behavior. Select "Startup" and press the top "Add" button. Add the motion "x_hohohoa".
+That's a short intro skit so we know the Pleo has booted up properly.
+<LI>At the main YAPT screen, select "Body"/"Head Release". Add the motion "x_song_merry_xmas".
+<LI>At the main YAPT screen, select "Body"/"Back Release". Add the motion "x_song_jingle2".
+<LI>At the main YAPT screen, select "Legs"/"Left Leg Release". Add the motion "x_song_12_days".
+<LI>At the main YAPT screen, select "Legs"/"Right Leg Release". Add the motion "x_jingle_bells".
+<LI>At the main YAPT screen, select "Legs"/"Left Arm Release". Add the motion "x_song_goodking".
+<LI>At the main YAPT screen, select "Legs"/"Right Arm Release". Add the motion "x_deckhalls".
+
+<LI>Geek Note: in the original Holiday Pleo, the random song selection is done with an Animation Command "x_rxn_song". You can assign it to another sensor if you like.
+It will randomly pick a song like the original.
+<P></P>
+<LI>When you are done, press the "Save program to SD card" button on the bottom. Then press "OK".
+<LI>If necessary 'stop' the SD card (required for some computers) and remove the SD card from the SD card reader and insert in Pleo SD slot.
+<LI>Test it on Pleo. Pleo should say "ho ho ho" when it starts.
+<LI>To trigger a song, hold one of the 6 assigned sensors (Head, Back, or 4 legs).
+Hold your hand on the sensor for a second or two.
+When you release your hand the song will start.
+<LI>NOTE: The leg sensors are on the upper part of the legs (not to be confused with the foot sensors on the bottom of the feet)
+<LI>NOTE: songs are not interruptable (that's how the YAPT personality works for now), so you will be forced to listen to the entire song ;->
+<P></P>
+<LI>NOTE: For synchronizing multiple Pleos, release the sensors all at the same time.
+<LI>ADVICE: For quick reactions the 'Tap' sensors should be used. Pleo will react instantly.
+For longer reactions the 'Hold' sensor condition should be used. This reduces the chance of a mis-trigger (eg: picking up Pleo).
+Finally, use the 'Release' sensor condition if you want to be in control of the exact start of a skit (for making videos or multiple Pleo performances)
+<P></P>
+<LI>You can repeat the YAPT process with other motions and sounds on the Holiday Pleo personality. However there aren't that many canned motions to pick from.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Changing PleoPM (the default personality)</H2>
+<P></P>
+Short answer: don't.
+<BR>
+Use the YAPT approach with the 'Babe' personality or a MySkit created personality.
+These personalities have a sound and motion library at the end that is very similar to the PleoPM default personality.
+
+<P></P>
+<H2>Browsing PleoPM (the default personality)</H2>
+You can use YAPT (and P3D) to browse the built-in sounds/motions/commands of the default personality (PleoPM), or any PLEO.URF you find.
+<UL>
+<LI>"Grab" the default PleoPM personality from your Pleo, to an SD card. Copy the Pleo.URF file to a folder on your PC.
+<A HREF="tech2.htm#GRAB">Instructions for Grabbing PleoPM are here</A>.
+You only need to do that once.
+<BR>
+The rest can be done on your PC (no SD card or Pleo required).
+<P></P>
+<LI>Download the <A HREF="yapt01a.zip">yapt01a.zip</A> stand-alone install and unzip it to that folder containing the PLEO.URF file.
+<LI>Run YAPT. For this purpose, most of the features of YAPT are ignored. Press the top "Add" button and YAPT can be used as a sound/motion/command browser.
+<LI>In the "Pick Action to add" dialog, check the "Auto Preview" checkbox at the bottom right.
+<LI>You can browse through the Sounds, Motions and Commands of the default personality.
+When you select them, they will be previewed in the P3D player.
+<LI>For browsing purposes, don't double-click or "Add Action". When you are done with browsing, you can close YAPT and ignore any changes.
+</UL>
+<P></P>
+<BR><CENTER><IMG SRC="ss_yapt2_1.jpg"></CENTER>
+<P></P>
+
+
+</BODY>
+</HTML>

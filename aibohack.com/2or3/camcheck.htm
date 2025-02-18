@@ -1,0 +1,276 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+  <BR>
+    <HR>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=gold)" align="center" valign="top">
+	  <a href="../homie/index.html">HomieGate</a>
+        </TD>
+        </TR>
+    </TABLE>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+  <a href="../lesser/index.html">Gallery</a><BR>
+ </td>
+ <td colspan=3 align="center" valign="top" bgcolor=#D0D0D0>
+  <BR>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+
+ <td width=15% align="center" valign="top">
+  <a href="../clie/index.html">CLIE</a><BR>
+  <a href="../panel/index.html">Panel</a><BR>
+  <a href="../icybie/index.html">ICybie</a><BR>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ CamCheck
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ CamCheck
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+FAQ: Why can't my AIBO see anything except in a very bright room ?
+<BR>
+A: Install a LifePlus stick, and tweek the camera settings
+
+<P></P>
+
+CamCheck is a simple RCodePlus program you can run on your ERS-2x0 or 31x AIBO.
+You run it to test the camera response (with different settings) to the current lighting conditions.
+
+CamCheck will give you information on the ideal settings for AIBO's camera for your lighting conditions.
+You can use it to find the right settings, and then use \CUSTOM\PLUSCON.EXE on a LifePlus stick (version 2.52) to set the ideal camera settings.
+
+<P></P>
+
+<HR>
+<H2>Supported AIBOs</H2>
+
+<UL>
+<LI><IMG SRC="../gfx/icon_210.gif"> - ERS-210 supported.
+<LI><IMG SRC="../gfx/icon_220.gif"> - ERS-220 supported.
+<LI><IMG SRC="../gfx/icon_310.gif"> - ERS-311/312/31L supported.
+</UL>
+
+<P></P>
+<HR>
+
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-220 model AIBO
+ <B>OR</B>
+
+<LI>An ERS-31x model AIBO (311 Latte, 312 Macaron or 31L Pug)
+<P></P>
+
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper RCodePlus runtime for the model of your AIBO.
+<UL>
+<LI>For the ERS-210: <A HREF="../rcode/RCodePlus252A(210).zip">RCode Plus 2.52 'A' (210)</A>
+<LI>For the ERS-220: <A HREF="../rcode/RCodePlus252A(220).zip">RCode Plus 2.52 'A' (220)</A>
+<LI>For the ERS-31x: <A HREF="../rcode/RCodePlus252A(31x).zip">RCode Plus 2.52 'A' (31x)</A>
+<LI>(Save this .ZIP file on your computer. You may want to use it again later.)
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<LI>Download the very small CamCheck program <A HREF="camcheck1.zip">camcheck1.zip (3KB)</A>
+<LI>Unzip that file on top of your RCODE/PMS stick (replacing any files it asks about).
+<P></P>
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO. Follow the instructions (see below).
+</UL>
+
+<P></P>
+<HR>
+<H2>Capturing</H2>
+<P></P>
+With the room lighting set to how it is normally when you play with AIBO, place AIBO on the ground, facing several colored objects (Pink, Blue and Green).
+If you have Aibo Recognition, make sure he is facing the charging tower (or at least the 3 color plastic pieces).
+Start up AIBO.
+He will stretch, lay down and then proceed to take 29 photos (with photo sounds).
+Once he starts taking photos, do not move him or change the objects within his field of view (or the lighting).
+It will take a few minutes, and he will eventually shut himself off.
+Remove the memory stick and immediately take it to your PC (if you run the stick again, it will take new photos, and replace the old ones).
+
+<P></P>
+<HR>
+<H2>Look at the pretty pictures</H2>
+Put the stick into your PC's memory stick reader, and open the folder "\PHOTOS" on the memory stick.
+There should be 59 files new files in that folder (29 .BMPs, 29 .JPGs and BEST.TXT).
+There may also be an old file called "HERE.TXT" which you can ignore.
+<P></P>
+
+If you are running a newer version of Windows, turn on "Thumbnail" view to see the .BMP and .JPG files as small images. Sort the thumbnails by file name.
+<BR>
+If you have another image viewer program with a similar thumbnail/preview feature - you should use that.
+The actual image quality matters less than the color blocks you can see.
+
+<CENTER>
+<IMG SRC="camcheck.gif">
+</CENTER>
+
+Images are in pairs (eg: SNAP0111.BMP, SNAP0111.JPG) one for each camera setting.
+The .BMP image shows the results of the color detection (distinct blue, green and pink regions are desirable).
+The .JPG image shows the camera photo.
+
+<H3>The 27 different camera settings</H3>
+<P></P>
+Most of the photos (and bitmaps) are the same photo taken with different camera settings.
+For example SNAP0xyz.BMP and SNAP0xyz.JPG are for the camera settings 'xyz'.
+<LI>'x' is the white balance (1 = inside, 2 = outside, 3 = fluorescent)
+<LI>'y' is the camera gain (1 = low, 2 = med, 3 = high)
+<LI>'z' is the camera shutter speed (1 = slow, 2 = med, 3 = fast)
+<BR>
+There are a total of 27 different photos/bitmaps.
+SNAP0000 and SNAP0999 are special.
+
+<H3>The 'best' camera settings (SNAP0000)</H3>
+Of the 27 different camera settings, the CamCheck program picks one it thinks is the best.
+
+It is "SNAP0000.BMP" and "SNAP0000.JPG" and should be at the top of the list.
+
+<H3>The default camera settings</H3>
+
+<P></P>
+At the bottom of the list (SNAP0999.BMP and SNAP0999.JPG) is the default camera settings (ie. what AIBO will actually use).
+<BR>
+GEEK: AFAIK the default camera settings for all sticks is the same [I think the same as SNAP0222 (xyz = 222)].
+<P></P>
+<H3>Now the information you can use</H3>
+If the 'default' photo (SNAP0999.JPG) is dark and the 'default' bitmap (SNAP0999.BMP) shows no color distinctions, then then AIBO will not see too much with the current lighting.
+
+<P></P>
+If the 'best' photo (SNAP0000.JPG) does not look clear (and relatively bright),
+and the best .BMP (SNAP0000.BMP) does no distinctly show different color ranges,
+then there is zero chance that AIBO will *ever* see the color markers.
+The only solution is to adjust the lighting.
+<P></P>
+
+<P></P>
+<HR>
+<H2>So what - what can I do with those 3 numbers</H2>
+
+Right now, nothing much.
+For now, you will have to adjust the lighting, not the camera.
+
+<P></P>
+<I>In the future</I>: you will be able to use the best camera settings to adjust the camera of AIBO. In the mean time, you are stuck with adjusting the lighting.
+
+
+<P></P>
+GEEK: If you have your own RCodePlus program, you can use the <A HREF="../rcode/rcp_device.htm">AP_DEVCTL</A> to set the camera settings.
+If you have the LAN setup and one of the Life Plus sticks (used with Aibo Scope LIVE!) you can adjust the camera settings dynamically [email me for a newer version of Aibo Scope LIVE!]
+
+<P></P>
+<HR>
+<H2>Try out different lighting</H2>
+
+Sunlight works best.
+Fluorescent lamps work second best.
+Incandescent lamps (including Halogen) work the worst.
+
+<P></P>
+For now, only the default settings (SNAP0999.BMP/JPG) matter.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

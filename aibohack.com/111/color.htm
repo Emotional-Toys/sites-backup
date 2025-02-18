@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AIBO Color Detection
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AIBO Color Detection
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Overview</H2>
+AIBO can detect 5 different color ranges, and can react in 3 different ways.
+
+<br>
+The five ranges are: ORANGE, PINK, YELLOW, BLUE, GREEN
+<br>
+The five reaction are: "BALL", "FAV" and "UNFAV".
+<P></P>
+PINK is the "BALL" color. As you probably know, AIBO will try and kick things that are pink.
+<br>
+YELLOW is another "BALL" color. It appears that YELLOW is treated the same as PINK.
+<br>
+ORANGE is the "UNFAV" color, AKA unfavorite or hated color. When the dog sees this shade of orange it will react negatively.
+<br>
+BLUE is the "FAV" or favorite color. When the dog sees this shade of blue, it will react positively.
+<br>
+GREEN is not used for anything that I've found.
+
+<P></P>
+It appears the color choices are remnants of the Robocup competition.
+In Robocup, the ball in PINK, the goals are BLUE (FAV) and ORANGE (UNFAV) and the turf is GREEN.
+<P></P>
+AIBO's vision uses a YUV encoded color signal from the camera in the dog's head. It uses that signal for motion detection and color detection.
+
+
+<P></P>
+<P><B><font size=4>Five Colors</font></P></B>
+AIBO's color detection is rather selective. The exact color must be seen, or it is ignored.
+This detection is more selective for Yellow, Blue and Green (ie. the color must be very close) and more liberal for Orange and Pink (ie. the color doesn't need to be as precise).
+
+<P></P>
+The color detection range varies depending on the brightness of the video signal. Here are some example bitmaps for the closest matching color (from dark to light). The brighter the color, the better the chance of matching.
+<P></P>
+There are five colors the dog recognizes:
+<br>
+Orange:
+<br><pre>          <img src="orange.jpg"></pre></br>
+Pink:
+<br><pre>          <img src="pink.jpg"></pre></br>
+Yellow:
+<br><pre>          <img src="yellow.jpg"></pre></br>
+Blue:
+<br><pre>          <img src="blue.jpg"></pre></br>
+Green:
+<br><pre>          <img src="green.jpg"></pre></br>
+<br>
+
+<P><B><font size=4>Very Picky Colors</font></P></B>
+Here is a big plot of the color ranges. For each of the five colors, there are three rows. The middle row is the dog's preferred color.
+The row above and below show the colors that are just outside the dog's recognition.
+<br>
+The columns represent brightness.
+<br>
+<br><pre>          <img src="big.jpg"></pre></br>
+
+<P></P>
+Disclaimer: these colors include no color correction (neither for the AIBO camera nor for your monitor displaying the colors).
+
+</BODY>
+</HTML>

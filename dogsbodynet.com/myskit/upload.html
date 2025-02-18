@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>MySkit - Chapter 8 - Upload Actions</title>
+<link rel="shortcut icon" href="../pleoicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="images/web_pleo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table style="width: 90%; color: rgb(153, 255, 153);" border="0"
+ cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; background-color: rgb(51, 204, 0); text-align: center;">
+      <table
+ style="background-color: rgb(51, 204, 0); width: 100%; text-align: left; margin-left: auto; margin-right: auto; color: rgb(255, 255, 255);"
+ border="0" cellpadding="20" cellspacing="0">
+        <tbody>
+          <tr>
+            <td
+ style="text-align: center; vertical-align: top; background-color: rgb(0, 153, 0);"><big><b><font
+ size="+1"><big><big>MySkit - Chapter 8 -
+Upload Actions</big></big></font></b></big></td>
+          </tr>
+        </tbody>
+      </table>
+      <big><b><font size="+1"><big> </big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+<br>
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><b><font size="+1">Table of Contents:<br>
+      </font></b>&nbsp;&nbsp;&nbsp; <a href="index.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="index.html#INSTALL">2.0 Install
+MySkit</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="perform.html">3.0 Workbook Files</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="motion.html">4.0 Motion Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="wave.html">5.0 Wave Sound Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="library.html">6.0 The Reference Library</a><br>
+&nbsp;&nbsp;&nbsp; <a href="preview.html">7.0 The PLEO Window</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="upload.html#UPLOAD">8.0 Upload Actions to PLEO</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="upload.html#SETUP">8.1 Setup Flash Card</a><br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="upload.html#SELECT">8.2 Select Action Directory</a><br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="upload.html#ASSIGN">8.3 Assign Skits to Events</a><br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="upload.html#WRITE">8.4 Writing the Flash Card</a><br>
+&nbsp;&nbsp;&nbsp; <a href="prefs.html">9.0 Specify Preferences</a><br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;<br>
+      <p> </p>
+      <table border="0" cellpadding="8" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"> <a name="UPLOAD"></a>
+            <hr noshade="noshade" size="1" width="100%">
+            <p>&nbsp;<br>
+            <big><big><b><u>8.0 Upload Actions to PLEO</u></b></big></big></p>
+            <p><big><big><b><u> </u></b></big></big></p>
+            <p><big><big><b><u> </u></b></big></big>MySkit
+currently requires an SD Flash Card -- at least 16MB recommended -- and
+flash card reader for writing
+actions.&nbsp;&nbsp; The PLEO resource files (*.urf)
+will be generated and written to the card.<br>
+            </p>
+            <p><a name="SETUP"></a></p>
+            <hr noshade="noshade" size="1" width="100%">&nbsp;&nbsp;
+            <p><b><big><u> </u></big></b></p>
+            <p> </p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"><i><big><b><u>8.1&nbsp; Setup Flash
+Card</u></b></big></i><br>
+                  <br>
+To configure MySkit, from the File Menu select "<b>Setup Flash Drive</b>".&nbsp;&nbsp;
+Type in the drive path to your flash card
+reader.<br>
+                  </td>
+                  <td valign="top" width="10"><img
+ alt="Setup Flash Card" src="images/sflash.gif"
+ style="border: 1px solid ; width: 227px; height: 122px;" hspace="26"
+ vspace="10"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p> </p>
+            <p><a name="SELECT"></a></p>
+            <hr noshade="noshade" size="1" width="100%"><b><big><u><br>
+            </u></big></b><br>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"><b><big><u><i>8.2 Select Action
+Directory</i><br>
+                  </u></big></b><br>
+You currently must write action
+files using a flash card reader.&nbsp; Save any open performance
+files.&nbsp; Insert
+a flash card into your reader, and click the toolbar "<b>Write</b>"
+button.&nbsp; <br>
+                  <br>
+A window appears for selecting an action directory (see
+right).&nbsp;&nbsp; The action directory is simply a folder where
+you've saved all the PLEO skits (*.pleo files) you want included.<br>
+                  <b></b><br>
+Click OK once you make a selection.<br>
+                  </td>
+                  <td valign="top" width="10"><img
+ alt="Select Directory" src="images/adselect.gif"
+ style="border: 1px solid ; width: 259px; height: 265px;" hspace="10"
+ vspace="10"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <b><big><u></u></big></b>
+            <p><a name="ASSIGN"></a></p>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top;"><b><big><u><i>8.3
+Assign Skits to Events<br>
+                  </i></u></big></b><br>
+If you have only a single skit, this step is skipped.&nbsp;&nbsp; Your
+skit is performed after turning on Pleo, or when any sensor is touched.<br>
+                  <br>
+If you have multiple skits, PMap is started for you.<br>
+                  <br>
+PMap supports simple skit customization.&nbsp;
+Click-n-drag actions into the various event slots.&nbsp; You can assign
+skits
+to multiple events if you like (as shown), or leave some empty.<br>
+                  <br>
+If you make a mistake, no worries.&nbsp;&nbsp; Click on the event slot
+and drag to the correct place, or hit the DEL key to remove it.&nbsp;
+You can't break anything here.<br>
+                  <br>
+Once happy with your PMap assignments, click the "<b>OK</b>" button.<br>
+                  </td>
+                  <td align="center" valign="top"><img alt="PMap"
+ src="images/pmap.gif"
+ style="border: 1px solid ; width: 300px; height: 310px;" hspace="10"
+ vspace="10"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><br>
+            <a name="WRITE"></a></p>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            <table style="width: 100%;" border="0" cellpadding="0"
+ cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top;"><b><big><u><i>8.4
+Writing the Flash Card<br>
+                  <br>
+                  </i></u></big></b>MySkit compiles your action
+directory, and updates your flash card.&nbsp; The files being written
+are quite large, so
+this might take a few seconds. </td>
+                  <td valign="top" width="10"><img
+ src="images/wrflash.gif" alt=""
+ style="border: 1px solid ; width: 209px; height: 116px;" align="right"
+ hspace="40" vspace="10"></td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top;">&nbsp;<br>
+                  </td>
+                  <td style="vertical-align: top;">&nbsp;<br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="middle">Once
+MySkit displays "Done!" the flash card is ready.&nbsp;&nbsp; If an
+error occurred, click on the "<b>View
+Log</b>"
+button to see what happened.<br>
+                  <br>
+If everything worked, turn off PLEO and install the flash card.&nbsp;
+Turn him back on and enjoy!<br>
+                  <br>
+To restore PLEO's original personality, turn him off and remove the
+flash card.&nbsp;&nbsp; He'll be his original self unchanged when
+powered back on.<br>
+                  </td>
+                  <td valign="top"><img src="images/wrdone.gif" alt=""
+ style="border: 1px solid ; width: 209px; height: 116px;" align="right"
+ hspace="40" vspace="10"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"PLEO" is a trademark UGOBE, Inc.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

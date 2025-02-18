@@ -1,0 +1,280 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+WalkBench 2.1
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+WalkBench 2.1
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>WalkBench</H2>
+
+<CENTER>
+<B>Walking (Demo Movie)</B><BR>
+<A HREF="../movies/apv_walkbench.wmv"><IMG SRC="../movies/apv_walkbench.jpg"><BR></A>
+</CENTER>
+<P></P>
+
+WalkBench is a test program for experimenting with the existing walking algorithms.
+They are controlled by typing in single character commands using 'telnet' on the PC.
+There are several different engines that can be commanded (one at a time):
+<UL>
+<LI>Sony's old walk engine (much like the ERS-11x walking styles)
+<LI>CMU's walk engine (winner of Robocup 2002 - CMPack'02 team)
+<LI>others may be added later
+</UL>
+
+<H3>Requirements</H3>
+<UL>
+<LI>An ERS-2x0 model AIBO (ERS-210, ERS-220, ERS-210A, ERS-220A)
+<LI>AIBO LAN card
+<LI>PC Lan card
+<P></P>
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+</UL>
+
+<P></P>
+<H3>WARNING!!</H3>
+
+<DIR><B><font size=+2 color=red>Use at your own risk!</font></B></DIR>
+The RoboCup dogs wear out their knees and necks faster than normal AIBOs because of these strange walks.
+Your AIBO may fall down or servo jam (especially when changing from one walk to another).
+
+
+<P></P>
+<H3>Installation</H3>
+
+NOTE: you should have already have tried and be familiar with <A HREF="../210/remote.htm">AiboRemote</A>.
+If your AIBO does not work with AiboRemote, then it probably will not work with WalkBench.
+WalkBench is a more advanced and low level utility.
+<UL>
+<LI>Download <A HREF="walkbench21.zip">walkbench21.zip</A> and unzip to an empty PMS/RCODE stick (8MB or 16MB)
+<LI>If necessary, edit the WLANCONF.TXT file as appropriate (the default uses IP address 10.0.1.201).
+<BR>
+If you have a non-standard configuration,
+copy the WLANCONF.TXT file from a working LAN memory stick to \OPEN-R\SYSTEM\CONF\WLANCONF.TXT on the WalkBench memory stick.
+<DIR><B>NOTE: this is a different folder than you use for RCODE !</B><BR>
+The default IP address is 10.0.1
+</DIR>
+<LI>Put it in your AIBO. Be sure the PC LAN is running, and boot the AIBO.
+<DIR><B>NOTE: to reduce neck stress - move his head so his chin is touching his chest while booting </B> (he will stretch and keep his head down at the start)</DIR>
+</UL>
+<P></P>
+<H3>Telnet (text mode) operation</H3>
+<UL>
+<LI>Telnet to the AIBO (typically "telnet 10.0.1.201"). This uses the default port 23.
+<LI>After connected, type '?' to see the connection status (if not check your LAN connection or reboot Aibo).
+<LI>Type one of the many single character command codes described below.
+Upper case and lower case are different commands.
+<LI>NOTE: AIBO starts out using the CMU walk engine
+</UL>
+<P></P>
+
+<H3>Joystick operations</H3>
+<UL>
+<LI>Email me if you want to try the JoyWalkDog command line program.
+<LI>In addition to the normal hardware setup, you will need a Joystick with both a rudder control and a "Z" axis.
+<P></P>
+<LI>The normal joystick X and Y axes move the dog in that direction (relative to the forward direction of the dog's nose).
+<LI>The "Z axis" (ie. rotate the stick) will turn the dog's orientation.
+<LI>The rudder sets the setting the walking speed.
+<LI>Most "fire" buttons (buttons 1->4) will kick the ball in different ways.
+<LI>Addition buttons (buttons 5->8) are used to select the current dog on the team.
+One joystick can control up to a four dog team.
+</UL>
+
+<P></P>
+<HR>
+<H2>Telnet Usage - Sony Walk Engine</H2>
+
+<P>Commands</P>
+<UL>
+<LI>'?' - general status (good to test if LAN is working)
+<LI>'Y' - change to use CMU engine [see below]
+<LI>'s' - stop
+<LI>'S' - emergency stop
+</UL>
+
+<P>Setting Walking Style</P>
+<UL>
+<LI>'0' - default
+<LI>'1' - stable
+<LI>'2' - slow
+<LI>'3' - fast [very fast]
+<LI>'4' - offload
+<LI>'5' - baby
+<LI>'6' - lizard
+<LI>'7' - creep
+<LI>'8' - trot [very fast]
+<LI>'9' - adaptive
+</UL>
+
+<P>Walking commands that use the current style</P>
+<UL>
+<LI>'w' - walk forward
+<LI>'e' - walk forward and to the right
+<LI>'q' - walk forward and to the left
+<LI>'d' - turn right
+<LI>'a' - turn left
+<LI>'x' - walk backwards
+</UL>
+
+<P>Other Walking/Moving</P>
+<UL>
+<LI>'D' - spin turn right
+<LI>'A' - spin turn left
+</UL>
+
+<P>Kicking commands</P>
+<UL>
+<LI>'l' - kick right
+<LI>'j' - kick left
+</UL>
+
+<P></P>
+<HR>
+<H2>Telnet Usage - CMU Walk Engine (default)</H2>
+
+<P>Commands</P>
+<UL>
+<LI>'?' - general status (good to test if LAN is working)
+<LI>'y' - change to use Sony engine [see above]
+<LI>'s' - stop normal
+<LI>'S' - stop and crouch
+</UL>
+
+<P>Setting Walking Speed</P>
+<UL>
+<LI>'1' - 10% speed
+<LI>'2' - 20% speed
+<LI>'3' - 30% speed
+<LI>'4' - 40% speed
+<LI>'5' - 50% speed
+<LI>'6' - 60% speed
+<LI>'7' - 70% speed
+<LI>'8' - 80% speed
+<LI>'9' - 90% speed
+<LI>'0' - 100% speed (fast, but slips on carpet)
+<P></P>
+<LI>'T' - set Strafe mode
+<LI>'t' - set Turn (non-strafe) mode
+</UL>
+
+<P>Walking commands that use the current style</P>
+<UL>
+<LI>'w' - walk forward
+<LI>'e' - walk forward and to the right (strafe or turn)
+<LI>'q' - walk forward and to the left (strafe or turn)
+<LI>'d' - turn right (strafe or turn)
+<LI>'a' - turn left (strafe or turn)
+<LI>'x' - walk backwards
+</UL>
+
+<P>Other Walking/Moving</P>
+<UL>
+<LI>'D' - spin turn right (strafe or turn)
+<LI>'A' - spin turn left (strafe or turn)
+</UL>
+
+<P>Kicking commands</P>
+<UL>
+<LI>'k' - kick bump
+<LI>'l' - kick right
+<LI>'j' - kick left
+</UL>
+
+<P>Diving Kicks (note: can jam sensors and abuse poor AIBO)</P>
+<UL>
+<LI>'K' - kick mini-dive
+<LI>'L' - dive kick right
+<LI>'I' - dive kick center
+<LI>'J' - dive kick left
+</UL>
+
+<P>Special</P>
+<UL>
+<LI>'V' - perform victory dance
+<LI>'h' - hold the ball and scare off everyone else
+</UL>
+
+<P></P>
+<HR>
+
+<H2>Notes</H2>
+
+The key bindings may appear counter-intuitive (eg: <i>L</i> to kick to the right).
+If you place one finger on the 's' key to control walking and another on the 'k' to control kicking,
+you will see it makes sense (for QWERTY keyboards).
+Upper case commands (ie. with the shift key pressed) are more extreme versions of the lower case commands (where available).
+
+<pre>
+
+        Q W E               (I)  
+        A S D              J K L
+          X
+
+</pre>
+
+For the CMU walk engine, angled walking (like 'q', 'e', 'a' and 'd') mix walking forward with walking in one side direction.
+This side movement can either be a rotation ("turn" mode), or a translation ("strafe" mode). Try both to see which you prefer.
+
+<P></P>
+Source code to CMU walk engine is available and covered by a GPL-like reuse license.
+My version is significantly trimmed down (just the MotionObject with a few extra hacks).
+Source to my version (you must install OMWare yourself) is available here: <A HREF="walkbench21_src_no_omware.zip">walkbench21_src_no_omware.zip</A>.
+You will need the binaries and headers for OMWare from the SoccerLion sample or the CMU source release.
+Source code to Sony walk engine "OMWare" is not available, unfortunately.
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

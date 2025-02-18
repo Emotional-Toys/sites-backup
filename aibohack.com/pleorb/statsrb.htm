@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ statsRB - tool for dumping internal statistics from PleoRB
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ statsRB - tool for dumping internal statistics from PleoRB
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Pleo Models supported:
+<UL>
+<LI>Pleo RB (any model: Green, Blue or Pink)
+<LI>Older model Pleo running 1.1 software or PM2 software (limited dump info).
+<LI>Original Ugobe Pleo software 1.0 not supported.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+
+<H2>Prerequisites</H2>
+To run statsRB you must have the following:
+<UL>
+<LI>A PleoRB (or old model Pleo)
+<LI>A micro-SD card compatible with PleoRB
+<LI>A micro-SD card reader for your computer
+<LI>A Windows computer to run the statsRB.exe program
+</UL>
+<P></P>
+<H2>Instructions</H2>
+<UL>
+<BR>
+<H3>On your Windows computer:</H3>
+<LI>Insert the micro-SD card into the card reader on your computer
+<LI>If there are files on the micro-SD card, delete them
+<LI>Download this file <A HREF="statsrb_v11.zip">statsrb_v11.zip</A>
+<LI>Unzip it and place the files at the root (top-most) folder of the micro-SD card
+<DIR>
+The micro-SD disk should look something like this:
+<BR>
+<IMG SRC="ss_statsrb_setup.jpg">
+</DIR>
+<LI>Remove the micro-SD card from the card reader
+(If Windows complains, do it again but stop the micro-SD drive before removing it)
+<BR>
+<H3>With your PleoRB:</H3>
+<LI>Remove the PleoRB battery and carefully insert the micro-SD card inside the battery compartment under your PleoRB.
+The card will only go in one way. The micro-SD card label should be facing you.
+<LI>Insert the battery and press the power on button. The green LED should turn on.
+<LI>Wait until PleoRB wakes up and starts thrashing around.
+<LI>Immediately press and hold the power button for 5 seconds or so to make PleoRB go back to sleep.
+<LI>Wait until PleoRB shuts down and the green LED turns off.
+<LI>Remove the PleoRB battery and carefully remove the micro-SD card.
+<LI>You can return the battery and use PleoRB normally.
+<BR>
+<H3>Back to your Windows computer:</H3>
+<LI>Insert the micro-SD card into the card reader on your computer
+<LI>The micro-SD card contains a backup of your PleoRB's personality. If you like you can make a backup of these files.
+<LI>Double click on the <B>statsRB.exe</B> program on the micro-SD card. It will generate a report and open it in your web browser.
+</UL>
+
+You can repeat this process again-and-again to check on the progress of your Pleo.
+
+<BR>
+<P></P>
+<HR>
+<P></P>
+<H2>Example Report</H2>
+
+NOTE: this is a report for a PleoRB. The format for your Pleo may be different.
+<BR>
+
+<!--extracted from report.html from statsRB embedded one level deep, smaller Hs-->
+<DIR>
+<TABLE border=1>
+<TR align=left><TD bgcolor=#C0C0C0 align=left>
+
+<font size="-1">
+<H2><B>PleoRB Property Dump</B></H2>
+(Version 1.0 - work in progress)<BR>
+<P><HR><P>
+<H2>Growth Report</H2>
+<BR>
+<DIR>
+<B>Stage 2: Social Development</B>
+<BR><BR>
+Growth this stage: 3.9 / 4.0 hours
+<BR>
+<BR>
+This stage is <B>96.9%</B> complete<BR>
+approximately <B>0.1 hours</B> till next stage<BR>
+</DIR>
+<P><HR><P>
+<H3>DNA Attributes (what PleoRB was born with)</H3>
+<BR>
+<DIR>
+<B>Gender: Female</B><BR><BR>
+Courage: Normal<BR>
+Temper: Good<BR>
+Physical: Normal<BR>
+Activeness: Low<BR>
+Intelligence: Normal<BR>
+</DIR>
+<P><HR><P>
+<H3>Health Report (how you are treating your dinosaur)</H3>
+<BR>
+<DIR>
+Mood: 99%<BR>
+Physical: 80%<BR>
+Emotion: 47%<BR>
+Health: 99%<BR>
+<font color=red>Feed: 10%</font><BR>
+<BR><B><font color=red>Pleo is in bad shape</font></B><BR>
+<BR>
+Activity: 30%<BR>
+Obedience: 50%<BR>
+Skill: 50%<BR>
+</DIR>
+<P><HR><P>
+<H3>Dinosaur Pheromones (what your Pleo is sending to other Pleos)</H3>
+<BR>
+<DIR>
+Pleo is sending out <B>Female</B> pheremones<BR>
+Pleo is sending out a <B>Very Happy</B> vibe<BR>
+</DIR>
+...(followed by other stuff)
+</font>
+
+</TD></TR></TABLE>
+</DIR>
+<BR>
+
+<P></P>
+<H3>Notes/Advice</H3>
+<UL>
+<LI>This is a work in progress.
+<LI>statsRB is a simple monitoring program. It does not change your PleoRB.
+Using statsRB is not a replacement for playing with your PleoRB normally.
+<LI>If it reports 'Pleo is in bad shape' or values in red, then try to improve those numbers.
+If Pleo is depressed or hungry or injured, it will ignore most of your commands.
+<BR>
+<LI>Predicting when PleoRB will evolve to the next stage/age is tricky. Use the suggested times only as a guideline.
+Check after every battery or two to see the progress.
+<LI>The date stamps are not related to real time. The year started when you put in the RTC battery.
+The hour of the day should be approximately the same as real time.
+If not, wait until noon (real-time) and press the small reset button on PleoRB's foot.
+</UL>
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

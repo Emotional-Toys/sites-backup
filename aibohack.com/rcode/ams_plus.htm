@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+Master Studio Plus
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+Master Studio Plus
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+If you wish to use RCodePlus features with Master Studio (version 1.1), please follow these instructions.
+
+<P></P>
+<HR>
+<H2>Background/Requirements</H2>
+
+You need Master Studio 1.1 (will not work with 1.0 / 1.01).
+<BR>
+Master Studio installs itself in a directory on a PC.
+This is normally "C:\Program Files\Sony\Master Studio"
+<BR>
+I will refer to this installation directory as "{InstallDirectory}"
+<BR>
+I will refer to the root of the memory stick as "{StickRoot}" (typically "E:\")
+
+<P></P>
+<H2>Installation</H2>
+<P>Prepare the memory stick</P>
+<UL>
+<LI>Download the proper <A HREF="index.html#DOWNLOAD">RCodePlus 2.5x</A> to the memory stick (210, 220 or 31x version).
+</UL>
+NOTE: Do not use the normal Master Studio system files installation.
+<P></P>
+<P>Install Master Studio extensions</P>
+NOTE: You may want to backup the existing contents if the {InstallDirectory}\MS directory, in case you want to un-install the RCodePlus additions.
+<UL>
+<LI>Make sure Behavior Arranger is NOT running.
+<LI>Download <A HREF="AMSPlus251.zip">AMSPlus251.zip</A> and unzip it to the {InstallDirectory}
+<LI>It will replace a few files.
+</UL>
+<P></P>
+<HR>
+<H2>Usage</H2>
+
+Now you can run Behavior Arranger and use many of the new "AP_" commands and variables.
+Also you will notice the extended RCODE voice commands are available to compare with "AU_Voice_ID" (or "AP_Voice_Cmd").
+<BR>
+NOTE: some obscure features which are designed to be used in hand-written RCODE are not provided (but you can add them to the R-CODE.CFG file yourself if you really need them)
+
+<HR>
+<H2>RCR Routines</H2>
+
+You can call RCR (Rcode Runtime) routines (for name registration etc). In an action box select "CALL" and the appropriate "RCR_???" routine.
+<BR>
+You must do two additional steps:
+<UL>
+<LI>Copy the "RCRLIB.R" file from the \CUSTOM folder of the ObeyCat stick to your memory stick
+<LI>Somewhere in your Behavior Arranger program, insert a library box using the "..\RCodePlus\INCLUDE_CUSTOM_RCR.be" library.
+</UL>
+See the ObeyCat 251 sample for an example.
+
+<P></P>
+
+</BODY>
+</HTML>

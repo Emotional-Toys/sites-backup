@@ -1,0 +1,276 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Sound features
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Sound features
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+This page describes the sound related extensions provided in RCodePlus.
+<P></P>
+<HR>
+
+<H2>Voice Command Vocabularies</H2>
+There are two different voice command vocabularies you can choose between:
+<DIR>
+"LIFE" The default RCodePlus release includes the <A HREF="rc_vcmd.htm#LIFE1">LIFE</A> voice commands in English.
+It is the same as the AiboLife (1) and Hello AIBO voice commands.
+This vocabulary is used for most RCode Plus personalities (including ObeyCat and DogsLife).
+</DIR>
+<B>OR</B>
+<DIR>
+"RCODE" The default RCODE 1.2 release from Sony includes the <A HREF="rc_vcmd.htm#RCODE12">RCODE</A> voice commands (and is documented in the Master Studio 1.1 manual).
+The RCODE vocabulary is recommended for new personalities.
+</DIR>
+
+
+<P></P>
+<H3>AP_Vocab, AP_VLang</H3>
+To check for the current vocabulary in your own RCode Plus program,
+VLOAD and then check the variable "AP_Vocab".
+It will be 1 to indicate the LIFE vocabulary.
+The current language is also stored in "AP_VLang" (2=J, 3=E, 4=G, 5=F).
+<DIR>NOTE: You must "VLOAD" these variables before testing them</DIR>
+
+<P></P>
+<HR>
+<H2>AU_ or AP_</H2>
+There are two sets of variables for voice and sound detection.
+The AiboPet RCodePlus extensions start with "AP_".
+The Sony provided ones start with "AU_" (in RCODE 1.2 and later).
+<BR>
+For new programs, you should use the "AU_" voice and sound detection features provided in Master Studio 1.1.
+You can use the "AP_" variables for backward compatibility with old programs or if you need features not supported by the "AU_" variables.
+<BR>
+The "AP_" variables are similar but not identical to the "AU_" variables.
+
+<P></P>
+<HR>
+<H2>AP_ Voice variables</H2>
+
+There are several input variables used for detecting voice commands that can be used together.
+<UL>
+<LI>AP_Voice_Cmd - the last voice command heard (or zero)
+<LI>AP_Voice_Level - the volume level (of the last voice command heard)
+<LI>AP_Voice_Pitch - the pitch (of the last voice command heard)
+<LI>AP_Voice_Horz - the horizontal position (of the last voice command heard)
+</UL>
+
+<H3>AP_Voice_Cmd</H3>
+To wait for a voice command, clear the "AP_Voice_Cmd" variable then wait for it to be non-zero.
+When it becomes non-zero, the value is the "Vcmd#" documented in the voice command list.
+<BR>
+When AIBO hears the next voice command, these variables will change, 
+so if you wish to use them later, be sure to take them out of the "AP_Voice_*"
+variables and put them in your own user variables for later use.
+<BR>
+NOTE: same as the "AU_Voice_ID" variable.
+
+<H3>AP_Voice_Level</H3>
+The value is from 1 to 5 representing the volume of the voice heard:
+<DIR>1=very quiet, 2=quiet, 3=mid range, 4=loud, 5=stop screaming in my ear.</DIR>
+You should not change this value.
+You should only read this value after the "AP_Voice_Cmd" value is set to non-zero.
+
+<H3>AP_Voice_Pitch</H3>
+The value is from 1 to 5 representing the pitch (frequency) of the voice heard:
+<DIR>1=John "Bowser" Bowman, 2=low, 3=mid range, 4=high, 5=chipmonk.</DIR>
+You should not change this value.
+You should only read this value after the "AP_Voice_Cmd" value is set to non-zero.
+
+<H3>AP_Voice_Horz</H3>
+The value is a bit value from 1 to 128 representing the horizontal location where the voice came from (relative to the dog's nose):
+<DIR>
+1 = in front<BR>
+2 = front right<BR>
+4 = right<BR>
+8 = rear right<BR>
+16 = rear (ie. behind his head)<BR>
+32 = rear left<BR>
+64 = left<BR>
+128 = front left<BR>
+</DIR>
+You should not change this value.
+You should only read this value after the "AP_Voice_Cmd" value is set to non-zero.
+The front, front right and front left directions appear to work correctly.
+I'm not sure if the rear directions are ever present for voice commands.
+
+<P></P>
+<HR>
+<H2>AP_ Loud variables</H2>
+<P></P>
+
+There are several variables that detect loud sounds that can be used together.
+<UL>
+<LI>AP_Loud - non-zero if a loud sound heard
+<LI>AP_Loud_Level - the volume level (of the last sound heard)
+<LI>AP_Loud_Pitch - the pitch (of the last sound heard)
+<LI>AP_Loud_Horz - the horizontal position (of the last sound heard)
+</UL>
+This works almost exactly like the "AP_Voice_*" variables.
+Usually when AIBO can not make out a voice command, it will detect it as a loud sound.
+If you hear both loud sound and a voice command, you should react to the voice command.
+<BR>
+The interpretation of the "Level", "Pitch" and "Horz" values is the same as the similar "AP_Voice_*" values.
+NOTE: the value of "AP_Load" will be set to non-zero when a loud sound is heard.
+Be sure to clear the variable like you would "AP_Voice_Cmd".
+<DIR><I>I haven't figured out what the value means.</I></DIR>
+
+<P></P>
+<HR>
+<H2>AP_AiboSound, AP_Tone</H2>
+
+These two input variables detect musical tones (AiboSound) or ERS-111 Sound controller tri-tones (AP_Tone).
+
+<BR>
+NOTE: "AP_AiboSound" is the same as the "AU_AiboSound_ID" variable. The interpretation of the numbers is the same as the RCODE 1.2 values.
+<BR>
+NOTE: "AP_Tone" is the same as the "AU_AiboTone_ID" variable. The interpretation of the numbers is the same as the old version.
+
+<P></P>
+In future will have "_Horz" values that give the position of where the sound/tone came from (version 2.52 and later).
+
+<P></P>
+<HR>
+<H2>AP_Rhythm, AP_Noise</H2>
+These last two sound related input variables detect special cases.
+<BR>
+These input variables work independently, and should be used like "AP_Voice_Cmd".
+Set the variable to zero, and wait for it to be non-zero.
+
+<H3>AP_Rhythm</H3>
+When non-zero, this indicates a "rhythm" is heard by AIBO, usually a loud song with a strong beat.
+When non-zero, the value is a fixed pitch of 3.
+In future will have a "AP_Rhythm_Horz" value can be used to determine where the sound came from (version 2.52 and later).
+
+<H3>AP_Noise</H3>
+When non-zero, this indicates a AIBO is hearing a lot of noise.
+When non-zero, the value is the volume (level) of the noise (in range 1 to 5).
+There is no position information.
+
+<P></P>
+<HR>
+<H2>Voice Command Dictionary Index</H2>
+<H3>AP_Voice_DicID</H3>
+This is a special purpose input variable that acts like the "AP_Voice_Cmd" variable.
+It can be used in conjunction with "AP_Voice_Cmd" or separately.
+Instead of giving one of 52 high level voice commands, this value is one of several hundred lower level phrases.
+<BR>
+If you need to use this feature, please email me.
+<BR>
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

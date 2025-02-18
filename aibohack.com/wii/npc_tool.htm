@@ -1,0 +1,370 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Animal Villager Customization (NPC_Tool)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Animal Villager Customization (NPC_Tool)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+DISCLAIMER: THIS IS AN ADVANCED TOOL
+<BR>
+NPC_Tool is a gamesave editor that lets you change your NPC Animal Villagers in your AC:CF town.
+You can change the prototype to one of the 210 standard animals.
+You can customize the name and catchphrases. It also allows you to change the looks of the NPCs by editing a few bitmaps to change their 3D texture map.
+
+<P></P>
+<CENTER><IMG SRC="tutorials/npctut5.jpg"></CENTER>
+<P></P>
+<H2>General Background</H2>
+<H3>Prerequisites</H3>
+
+NPC_Tool requires WiiBrew on your Wii to save and restore gamesaves.
+This tutorial assumes you are already using the ACToolkit tool for AC:CF town editing.
+
+<DIR><B>If you are not familiar with the WiiBrew/ACToolkit save and restore process, please stop here.
+First get familiar with how the process works using ACToolkit before exploring NPC editing</B></DIR>
+<P></P>
+
+<H3>Download</H3>
+
+Download the latest version here: <A HREF="npc_tool_4b.zip">npc_tool_4b.zip</A> (version .4b ). 
+<BR>
+Unzip it (and helper DLL) to any folder on your PC. If you have a USB Gecko, I recommend installing it in the folder containing "wiirdw32.exe".
+<P></P>
+
+<H3>General Use</H3>
+Use NPC_Tool just like ACtoolkit (or use them together)
+<UL>
+<LI>#1) Extract gamesave to SD card
+<LI>#2) run tool (ACToolkit.exe or NPC_Tool.exe) on Windows PC, open RVFOREST.DAT
+<LI>#3) save changes to SD card
+<LI>#4) Install gamesave back on Wii.
+<LI>#5) Test it out.
+<LI>#6) rinse, repeat...
+</UL>
+
+See tutorials below.
+<BR>
+Note: for more elaborate texture editing, a USB Gecko and WiiRD are recommended (see special instructions below). This significantly speeds up the process.
+<P></P>
+Note: for discussion of specific problems, please read/post on
+<A HREF="http://game-hackers.com/forum/showthread.php?t=1129">this thread at game-hackers.com</A> (registration required).
+
+
+<P></P>
+<H3>Rules/Limitations:</H3>
+<UL>
+<LI>Use at your own risk. <B>ALWAYS</B> keep an extra backup of the gamesave (RVFOREST.DAT)
+<LI>Use the Windows Paint Brush program (PBrush.exe) for bitmap editing.
+Other bitmap editors may change the .BMP format in incompatible ways.
+<BR>NOTE: You may try other editors, they may or may not work. If the import feature complains, go back to using PBrush.
+<LI>Do not change the size of the bitmap
+<LI>Do not change the format of the bitmap
+<LI>Do not change the colors of the bitmap (they will be ignored)
+<LI>"Twiggy" is not currently supported (uses a non-standard texture)
+<LI>You can change the colors in the special PALETTE.BMP file. See the tutorial.
+</UL>
+
+<P></P>
+<H3>Which NPCs to edit?</H3>
+You should be familiar with how the NPC character looks in the game.
+<P></P>
+<CENTER><IMG SRC="tutorials/npctut3.jpg"><BR>Regular Nana</CENTER>
+<P></P>
+
+There are 210 possible canned characters you can use as a prototype (eg: Antonio, Nana, Bob).
+There are 33 unique 'species' that share the same 3D model (eg: Anteaters, Frogs, Monkeys, ...).
+<BR>
+The texture bitmaps you will be editing are flattened versions.
+<A HREF="accf_npctex.htm">Click here for a list of the body bitmaps for the 210 canned characters</A>
+<BR>
+For example: Cyrano, Antonio, Pango and Anabelle are all anteaters/aardvarks (the same species).
+The difference is in the colors and patterns overlaid on the 3D model.
+You can't edit the 3D model, but you can edit the texture bitmaps (AKA texture maps).
+
+<P></P>
+<HR>
+<P></P>
+<H2>Tutorials</H2>
+
+<P></P>
+<H3>Tutorial #1: The basics</H3>
+
+We are going to start with the basics, editing a gamesave and changing one of our NPCs to a specific character prototype.
+
+<BR>
+<UL>
+<LI>On the Wii, Extract the gamesave to an SD card. Typically this is done with Waninkoko game save Extractor launched from the Homebrew Channel.
+<BR>NOTE: If you don't know how to use this, please go back and read the Prerequisites.
+<LI>On your PC, insert the SD card.
+<LI>Save a backup copy of RVFOREST.DAT
+<LI>Run NPC_Tool.exe, and open the RVFOREST.DAT file from the SD card.
+<LI>The main Browsing dialog will appear, press the "Edit NPCs" button
+<DIR><DIR> <IMG SRC="tutorials/npctut6.jpg"> </DIR></DIR>
+<LI>This will pop up a different dialog showing the 20 possible NPC slots.
+<DIR><DIR> <IMG SRC="tutorials/npctut7.jpg"> </DIR></DIR>
+<LI>Pick one of the NPC slots, eg: Neighbor #1. Press the "Change" button next to it.
+<DIR><DIR> <IMG SRC="tutorials/npctut8.jpg"> </DIR></DIR>
+<LI>You can now change the attributes
+<UL>
+<LI>First change the "Prototype" (the kind of canned character to start with). Change it to "Nana".
+<LI>Change the personality type to the proper gender. There are 3 male and 3 female personalities.
+<LI>Optionally change the birthday for the new NPC character.
+<LI>Optionally change the name and the catchprase. In AC:CF the Neighbor's name doesn't have to be the same as the prototype.
+<P></P>
+<LI>To change name/catchphrase (English versions):
+<UL>
+<LI>Change the Name and CatchPhrase directly. This will set the English (US) and any matching names.
+This includes the defaults for the PAL English version (UK and Australia).
+</UL>
+<P></P>
+<LI>To change name/catchphrase (other language versions):
+<UL>
+<LI>Press the "All Lang...".
+<LI>You now have direct control over all the Languages.
+<DIR><DIR> <IMG SRC="tutorials/npctut11.jpg"> </DIR></DIR>
+<LI>NOTE: names are limited to ANSI characters (ie. no Japanese).
+<LI>There are two "English" slots, "US" (NorthAmerican) and "ENG2" (UK and Australia)
+<LI>The US (North American) version has 3 different catch phrases (for NA English, NA Spanish and NA French)
+</UL>
+
+<P></P>
+<LI>Other Things:
+<UL>
+Press the "Edit Room Contents" button and you can change the flooring, wallpaper and music in the NPC's house.
+<BR>
+You can change the furniture, but the layout in the room is decided by the game.
+<DIR><DIR> <IMG SRC="tutorials/npctut12.jpg"></DIR></DIR>
+</UL>
+<P></P>
+<LI>Press "Done" twice to go back.
+<LI>NOTE: shirts, umbrellas and room contents are currently not customizable. You may get remnants from the original NPC (before the Change Prototype)
+</UL>
+<P></P>
+<LI>Press the "Save and Exit" button on the main dialog.
+<LI>Go back to the Wii and Install the updated gamesave.
+Typically this is done with Waninkoko game save Installer launched from the Homebrew Channel.
+<LI>Run the AC:CF game on the Wii, start the game.
+<LI>In the game, go visit the first neighbor. It will now be a Nana monkey, with whatever name and catchphrase you picked.
+</UL>
+
+<P></P>
+<H3>Tutorial #2: Texture Editing</H3>
+
+Next we are going to change the textures to make the Nana monkey look different.
+For good looking results you need to repeat this process several times.
+<BR>
+<UL>
+<LI>Start with a gamesave you can edit (extract from Wii if necessary or use old backup)
+<LI>TIP: If your SD card is slow, I recommend copying the gamesave to your PC first.
+The textures will be saved in sub-folders of the current directory.
+<LI>Run NPC_Tool and open the RVFOREST.DAT file again.
+<LI>If you are going to change the character prototype, do that first (like in Tutorial #1).
+Once you start editing the texture bitmaps, do not change the prototype or your work will be lost.
+<LI>Once you are happy with the basic characteristics of the NPCs, press the "Export Textures" button.
+You will normally only do this once.
+<P></P>
+<LI>Now browse in the folder where you opened the RVFOREST.DAT.
+There will be a number of "NPCxx" folders containing bitmaps and other data.
+For the first NPC, that's "NPC01".
+<DIR><DIR> <IMG SRC="tutorials/npctut9.jpg"> </DIR></DIR>
+<LI>The main bitmap is "b0.bmp". That's the body. Start there. Leave the other files alone for now.
+<LI>Open the "b0.bmp" bitmap in Windows PaintBrush (PBrush.exe). For Nana (the monkey) it looks like this:
+<DIR><DIR> <IMG SRC="tutorials/npctut1.jpg"> </DIR></DIR>
+<LI>Immediately press CTRL+PAGEDOWN in PaintBrush. This makes the bitmap easier to see.
+<LI>NOTE: Do not change the size of the bitmap. Do not change the colors used in the bitmap.
+Do not change the format of the bitmap (a 16 color BMP).
+<LI>Each 3D model uses the texture differently. You should be familiar with how the original texture works in the game.
+A little experimentation is needed to learn how the bitmap is used.
+<LI>At the very bottom of the bitmap is a color guide. Don't edit it. Instead use it for color selection.
+Press the eye-dropper icon ("Pick color") and select one of the 16 colors on the bottom of the bitmap.
+Then use that color to draw on top of the bitmap.
+<P></P>
+Here's what I did to poor Nana (a dirt mark on her cheek, and advertising on back of her head):
+<DIR><DIR> <IMG SRC="tutorials/npctut2.jpg"> </DIR></DIR>
+<P></P>
+<LI>Save the changed "b0.bmp" file.
+<LI>Go back to NPC_Tool, and press the "Import Textures" button.
+It will report the number of new textures imported, as well as the number unchanged.
+<DIR><DIR> <IMG SRC="tutorials/npctut10.jpg"> </DIR></DIR>
+<P></P>
+<LI>Press the "Save and Exit" button on the main dialog.
+<LI>Go back to the Wii and Install the updated gamesave (NOTE: if you copied the RVFOREST.DAT to the PC before editing, be sure to copy it back to the SD card first)
+<LI>Test it out by playing the game and visiting the NPC you changed.
+<DIR><DIR> <IMG SRC="tutorials/npctut4.jpg">    -   <IMG SRC="tutorials/npctut5.jpg"></DIR></DIR>
+</UL>
+You are on your own. There are many possibilities based on what you can edit in the "b0.bmp" file.
+There are other bitmaps you can edit for a more complex custom character.
+The mouth bitmaps (m.?.bmp) shows the mouth in different positions, like for talking.
+Note: some NPCs don't have mouths.
+The eye bitmaps (e.?.bmp) shows the eyes in different expressions.
+All these bitmaps use the same color palette. You are limited to 16 colors. The first color is usually the body color, or in some cases it may be transparent.
+Experiment.
+
+<P></P>
+<H3>Tutorial #3: Changing the color palette</H3>
+All of the textures for a character use a 16 color palette.
+You can recolor the character.
+<UL>
+<LI>Editing the PALETTE.BMP in the NPCxx subfolders.
+<LI>NOTE: Do not change the format of the file. Unlike the other bitmaps you have been editing, this is a 24 bit color bitmap. Only change the colors in the squares.
+<LI>Pick a new color (using the PBrush color selector) then flood fill the appropriate square.
+<LI>Repeat for other colors.
+<LI>NOTE: The first color (left-most square) is typically the background color of the NPC. It may be transparent.
+<LI>Save the new PALETTE.BMP.
+<LI>Use the "Import Textures" on NPC_Tool to use the new color palette.
+<LI>If there are no errors, immediately press "Export Textures" and the 16-color bitmaps you normally edit will use the new color scheme
+<LI>WARNING: be sure you get the order correct. Import successfully and immediately rerun Export (if you do it backwards your work may be lost)
+</UL>
+
+<P></P>
+<H3>Tutorial #4: ADVANCED: USB Gecko/WiiRD users</H3>
+If you have a USB Gecko, you can rapidly test out changes to the textures.
+<UL>
+<LI>For basic changes like names and prototype, make your changes on a PC like in Tutorial #1.
+Be sure to press "Save and Exit".
+<LI>Put that new version on an SD card and Install it on your Wii (with USB Gecko connected)
+<LI>On Wii: Start the game like normal, and find the NPC character you want to customize in the game.
+Ideally the NPC character will be trapped in their house. If they are walking around town, find a nearby house or building you can easily enter and leave.
+<LI>On PC: Run NPC_Tool on your PC again. Continue to make changes to the textures like in Tutorial #2 (edit bitmaps in NPC## subfolders).
+<LI>When you want to test out your texture, press "Import Textures" but do not press "Save and Edit".
+<LI>Look at the file "npcwiird.log". The very last few lines will contain an "upload" command.
+Copy and paste that into to the WiiRD command line (adjust pathname if necessary).
+<LI>On Wii: go back to the running game. Enter a house and immediately exit (or if the NPC is trapped inside their house, exit their house and reenter). The new texture take effect.
+<LI>Examine your artwork, repeat as necessary (edit bitmaps, Import Textures, upload, ...)
+</UL>
+NOTE: Changes are only immediate to you (after you leave/enter a building).
+Visitors visiting your town over WiFi won't see these rapid changes.
+They will see the NPC's texture at the time they connect to your town.
+
+
+<P></P>
+<H3>Tutorial #5: Moving Neighbors</H3>
+<BR>
+TO BE WRITTEN.
+<BR>
+Like with AC:WW (for the Nintendo DS), you can move a character from your town to another town over WiFi.
+There are more NPC slots. Some may contain 'frozen' NPCs.
+These are either NPCs moving out of your town or moving in to your town.
+These can be edited in a similar fashion to the 9th neighbor 
+<A HREF="../nds/ac_monkeymove.htm">Click here for the old tutorial for AC:WW</A>.
+The process is similar. A more detailed tutorial will be written later.
+
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

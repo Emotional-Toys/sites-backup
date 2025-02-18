@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Compiler Preprocessor</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<b><font size="+3">CPP - Compiler Preprocessor</font></b><br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <p><a name="CPP"></a>
+      <table cellpadding="0" cellspacing="0" cols="1" width="95%">
+        <tbody>
+          <tr>
+            <td><big style="font-weight: bold;">Introduction:</big><br>
+            <br>
+CPP is a macro preprocessor.&nbsp;&nbsp; Instead of
+using numbers in
+RCode (say to represent voice commands), you can declare meaningful
+labels
+to improve readability.&nbsp; Use CPP to substitute your labels, remove
+comments, and apply conditional code statements before uploading
+handwritten
+code to AIBO..&nbsp;
+            <p>The tool originated many years ago to when the C
+programming language was first developed.&nbsp;&nbsp;
+CPP fortunately works with any language, not just C, and therefore
+helps
+us write better RCode.&nbsp;&nbsp; This version of CPP was created by
+Sun
+Microsystems, and modified slightly (to display a help screen from the
+command line, and support DOS pathname conventions).&nbsp; Source code
+is available upon request.<br>
+            <br>
+            </p>
+            <p><big style="font-weight: bold;">Usage</big> (from dos
+prompt):</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" cols="2" width="100%">
+        <tbody>
+          <tr>
+            <td width="10"><br>
+            </td>
+            <td><b><i>CPP&nbsp; [options]&nbsp; infile&nbsp; outfile</i></b></td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+The command line options are:
+      <table cellpadding="3" cellspacing="0" width="95%">
+        <tbody>
+          <tr>
+            <td width="20%"><i>-<b>B</b></i></td>
+            <td width="100%">Support C++ style comment indicator
+'//'.&nbsp;&nbsp;
+With this indicator everything on a line after // is treated as a
+comment
+and filtered.&nbsp; Recommended always.<br>
+            </td>
+          </tr>
+          <tr>
+            <td><i>-<b>C</b></i></td>
+            <td>Do not filter any comments.&nbsp; By default, CPP
+strips
+all comments (C-style, and C++ style if the -B specified).</td>
+          </tr>
+          <tr>
+            <td><i>-<b>I&lt;dir&gt;</b></i></td>
+            <td>Add include file directory.</td>
+          </tr>
+          <tr>
+            <td><i>-<b>N</b></i></td>
+            <td>No default include files.</td>
+          </tr>
+          <tr>
+            <td><i>-<b>P</b></i></td>
+            <td>No compiler line control information.&nbsp;&nbsp;&nbsp;
+Only use if
+CPP outfile used directly on AIBO.&nbsp; Don't use in conjunction with
+ReCode,
+since the compiler line info is required to generate accurate error
+messages.&nbsp;</td>
+          </tr>
+          <tr>
+            <td><i>-<b>V</b>i</i></td>
+            <td>Verbose include expansion.</td>
+          </tr>
+          <tr>
+            <td><i>-<b>Vm</b></i></td>
+            <td>Verbose macro definition.</td>
+          </tr>
+          <tr>
+            <td><i>-<b>Vx</b></i></td>
+            <td>Verbose macro expansion.</td>
+          </tr>
+          <tr>
+            <td><i>-<b>Xi</b></i></td>
+            <td>Output #pragma on include files.&nbsp; Never use this
+with AIBO.</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>Example 1 (CPP output used directly on AIBO):</i></b> <br>
+      <tt>&nbsp;&nbsp; CPP -B -P infile.r R-CODE.R</tt> </p>
+      <p><b><i>Example 2 (CPP used along with ReCode):</i></b> <br>
+      <tt>&nbsp;&nbsp; CPP -B infile.r tempfile</tt> <br>
+      <tt>&nbsp;&nbsp; ReCode tempfile</tt> <br>
+&nbsp; </p>
+      <p><b><font size="+1">CPP Directives:</font></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>All cpp directives start with a hash symbol (#) as the
+first character
+on a line.&nbsp; White space (SPACE or TAB characters) can appear after
+the initial # for proper indentation.&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#define</i>&nbsp; target&nbsp; replacement-string</b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>&nbsp;Create a simple macro definition.&nbsp; Replaces
+subsequent instances
+of 'target' with 'replacement-string'.&nbsp;&nbsp; Example:&nbsp;
+            <blockquote>&nbsp;
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>#define MAX 42&nbsp; <br>
+PRINT:%d:MAX</td>
+                    <td valign="top">PRINT:%d:42</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#define</i> target(argument [, argument] ...&nbsp; )
+replacement-string</b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Create a macro definition with arguments.&nbsp; There
+can be no space
+between the target name and the `('.&nbsp;&nbsp; Replaces subsequent
+instances
+of target name (followed by a parenthesized list of arguments) with the
+replacement-string.&nbsp; Each occurrence of an argument in the
+replacement-string
+is replaced by the corresponding value from the comma-separated
+arguments.&nbsp;
+Example:&nbsp;
+            <blockquote>&nbsp;
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>#define MAX 42&nbsp; <br>
+#define LT(x,y) IF x &lt; y&nbsp; <br>
+LT(12,34) PRINT:%d:MAX</td>
+                    <td valign="top">IF 12 &lt; 34 PRINT:%d:42</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#undef target</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Remove definition for the macro.&nbsp;&nbsp; Nothing is
+permitted to
+appear after 'target' on the line.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#include "filename"<br>
+      </i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Read in the contents of filename at location of
+#include statement.&nbsp;&nbsp;
+The data read from the file is processed by CPP as if it were part of
+the
+original/current file.&nbsp;&nbsp; CPP will search for the "filename"
+in
+the current directory, and any other directories listed by the -I
+option
+(see above).&nbsp; Example:&nbsp;
+            <blockquote>&nbsp;
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>Current File:&nbsp; <br>
+&nbsp;&nbsp;&nbsp; PRINT "HELLO"&nbsp; <br>
+&nbsp;&nbsp;&nbsp; #include "file2.r"&nbsp;
+                    <p>file2.r:&nbsp; <br>
+&nbsp;&nbsp;&nbsp; PRINT "WORLD"</p>
+                    </td>
+                    <td valign="top">PRINT "HELLO"&nbsp; <br>
+PRINT "WORLD"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#ap_include "filename"<br>
+      </i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Read in the contents of filename at location of
+#ap_include statement.&nbsp;&nbsp;
+The data read from the file is processed by CPP as if it were part of
+the
+original/current file.&nbsp;&nbsp; CPP will search for the "filename"
+in
+the current directory, and any other directories listed by the -I
+option
+(see above).&nbsp; <br>
+            <br>
+The #AP_INCLUDE command was defined by <a
+ href="https://www.aibohack.com/">AiboPet</a>
+for use on AIBO, where it includes files from AIBO's memory
+stick.&nbsp;&nbsp; When compiled on a PC however, your computer cannot
+access the memory stick files.&nbsp;&nbsp; You must make a local copy
+of them.&nbsp;&nbsp; Using AP_INCLUDE on PC compiled code isn't
+recommend and CPP will issue a warning.&nbsp;&nbsp; Use the "#include"
+directive instead.<br>
+            <br>
+Example:
+            <blockquote>
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>Current File:&nbsp; <br>
+&nbsp;&nbsp;&nbsp; PRINT "HELLO"&nbsp; <br>
+&nbsp;&nbsp;&nbsp; #AP_INCLUDE "file2.r"&nbsp;
+                    <p>file2.r:&nbsp; <br>
+&nbsp;&nbsp;&nbsp; PRINT "WORLD"</p>
+                    </td>
+                    <td valign="top">PRINT "HELLO"&nbsp; <br>
+PRINT "WORLD"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#if constant-expression</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Subsequent lines up to a matching #else, #elif, or
+#endif directive
+appear in output if the "constant-expression" yields a non-zero
+value.&nbsp;
+All binary non-assignment C operators, including "&amp;&amp;", "||",
+"?:",
+and unary "-" "!" "~" operators are legal in
+constant-expressions.&nbsp;
+Only integer constants and names known by CPP are usable within
+constant-expressions.&nbsp;
+You cannot reference variables, but macro's from previous #define
+statements
+are ok.&nbsp;&nbsp; Example:&nbsp;
+            <blockquote>&nbsp;
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>#define MAX 42&nbsp; <br>
+#if (MAX&gt;100)&nbsp; <br>
+&nbsp;&nbsp; PRINT "ACK"&nbsp; <br>
+#elif (MAX&gt;10)&nbsp; <br>
+&nbsp;&nbsp; PRINT "PHBBT"&nbsp; <br>
+#else&nbsp; <br>
+&nbsp;&nbsp; PRINT "NOMAX"&nbsp; <br>
+#endif</td>
+                    <td valign="top">PRINT "PHBBT"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#ifdef name</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Subsequent lines up to a matching&nbsp; #else,&nbsp;
+#elif,&nbsp; or
+#endif appear in the output only if name has been defined with a
+#define
+directive (assuming no intervening #undef directive).&nbsp;
+Example:&nbsp;
+            <blockquote>&nbsp;
+              <table border="0" cellpadding="0" cellspacing="0" cols="2"
+ width="75%">
+                <tbody>
+                  <tr>
+                    <td><b><i>Before</i></b></td>
+                    <td><b><i>After</i></b></td>
+                  </tr>
+                  <tr>
+                    <td>#define MAX 42&nbsp; <br>
+#ifdef MAX&nbsp; <br>
+&nbsp;&nbsp; PRINT "ACK"&nbsp; <br>
+#else&nbsp; <br>
+&nbsp;&nbsp; PRINT "PHBBT"&nbsp; <br>
+#endif</td>
+                    <td valign="top">PRINT "ACK"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </blockquote>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#ifndef name</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Subsequent lines up to a matching&nbsp; #else,&nbsp;
+#elif,&nbsp; or
+#endif appear in the output only if name has <i>NOT</i> been defined
+with
+a #define directive, or if an intervening #undef directive removed the
+name definition.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#elif constant-expression</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Any number of #elif (else-if) directives may appear
+between an #if, #ifdef, or
+#ifndef directive and a matching #else or #endif directive.&nbsp; The
+lines
+following the #elif directive appear in the output, only if the
+previous
+conditional statements was false, and the constant-expression of the
+elif
+evaluates to non-zero.&nbsp;&nbsp; If the constant-expression evaluates
+to non-zero, all subsequent #elif and #else directives are ignored
+until
+a matching #endif.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#else</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>Inverts the sense of the previous conditional
+directive.&nbsp; If all
+preceding conditional statements are false, then the lines between
+#else
+and #endif are output.&nbsp;&nbsp; Conditional directives and
+corresponding
+#else directives can be nested.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i>#endif</i></b>
+      <table style="width: 95%;" border="1" cellpadding="5"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td>End a section of lines begun by one of the conditional
+directives #if,
+#ifdef, or #ifndef.&nbsp; Each such conditional directive must have a
+matching
+#endif.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

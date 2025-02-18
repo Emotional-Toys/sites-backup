@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ HomieGate Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ HomieGate Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Architectural Overview</H2>
+
+The main HomieGate server program runs on your desktop PC (the Homie Gate Server).
+It is the gateway to your Home PC.
+<BR>
+Some available features require hardware attached to the Homie Gate Server (eg: Home stereo, X10 home automation).
+<P></P>
+Remote devices (clients) talk to the Homie Gate Server via WiFi.
+You use these devices to control the features of the Homie Gate Server, either through a touch screen or through voice commands.
+<BR>
+Examples of HomieGate voice commands include "what time is it?", "turn on the light", "play album Ray-of-light by Madonna", "Skip the song", "why is the sky blue?".
+<P></P>
+For use with AIBO, everything is done through voice commands.
+You get AIBO's attention, by saying "AIBO" followed by the HomieGate voice command.
+??? REVIEW: update
+There are AIBO specific features like, "Are you hot?", "Are you tired?", "Perform the bender monkey speech" (and other skits), "walk forward 1 metre",...
+<P></P>
+For use with PDAs, there is a simple user interface that you can click directly on the PDA screen.
+Everyting is directly accessible, ie. no typing (other than entering the initial IP address of the server).
+This is much more convenient for picking songs from albums to play, or building quick play lists, or direct control over X10 devices.
+<P></P>
+The voice recognition feature is also available on PDAs (when the PDA microphone is adequate quality).
+You can also record voice memos and other features.
+
+
+<P></P>
+<IMG SRC="homieg_arch.gif">
+//REVIEW: update AIBO using RFW, other PDAs
+<P></P>
+<HR>
+<H2>Supported Clients (Remote Devices)</H2>
+
+<BR>
+The following clients will be supported for the Beta3 release:
+<P></P>
+<H3>AIBO</H3>
+<DIR>
+<LI><IMG SRC="../gfx/icon_7.gif"> - ERS-7 AIBO (with built-in WiFi card).
+</DIR>
+<P></P>
+Speak your commands into AIBO's ears.
+He will talk back to you and do other things (ie. dance or walk around).
+<BR>
+This is similar to the old <A HREF="../210/brainbo.htm">BrainBo V1</A>.
+Older version of HomieGate (Beta1) supported the ERS-210 and ERS-220. The ERS-2x0 models are not currently supported in the current release.
+
+<P></P>
+<H3>CLIE</H3>
+Supports the CLIE PalmOS devices with WiFi support (eg: NX/NZ with WL1x0 card, UX or TH series).
+Voice recognition and synthesized voice playback supported (NOTE: requires MCA2 for NX/NZ devices).
+
+<P></P>
+<H3>Viewsonic Smart Display Panel</H3>
+Use microphone and speaker.
+Large screen is great for selecting from large music collections.
+<CENTER><IMG SRC="panel_ui.jpg"></CENTER>
+Same as the PocketPC version.
+
+<P></P>
+<H3>Pocket PC</H3>
+Any Pocket PC PDA with ARM processor and WiFi card (eg: Toshiba or iPaq).
+Small PDA version of user interface.
+All the same features as the large panel display.
+Depending on device, microphone may be too noisy for good quality voice recognition.
+<P></P>
+
+<H3>Local Client (Windows)</H3>
+The client software will run on a standard Windows PC as well.
+This is typically run on the server PC to test out the interface, but can be used on any other PC (eg: a laptop) with a WiFi card.
+<P></P>
+
+<P></P>
+<H3>Server Features</H3>
+<P></P>
+The following PC features/peripherals will be supported in the preview release:
+<LI>Knowledge base (based on AliceBot and BrainBo V1), eg "Why is the sky blue"
+<LI>PC local stereo device (use with free home stereo server, high quality optional)
+<LI>Simple voice memos
+<LI>Optional: X10 home automation control using FireCracker interface (CM17A only) for now
+<LI>Optional: CX777 support, Sony's 400 CD/DVD/SACD player. Select disc or track from tree view.
+<LI>Optional: Piano support, Midi output to sythesizer or other MIDI music player. Data from "Classical Music Archives" can be easily integrated.
+<LI>REVIEW: others?
+
+<P></P>
+
+</BODY>
+</HTML>

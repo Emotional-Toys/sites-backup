@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ HomieGate Install - AIBO
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ HomieGate Install - AIBO
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The current AIBO version is very simple.
+AIBO will sit there and wait for you to tell it what to do.
+A future version will be more elaborate and inco
+
+<P></P>
+<HR>
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>HomieGate Server <A HREF="install.htm">installed, configured and tested</A> previously
+<P></P>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+<LI>An ERS-220 model AIBO
+<P></P>
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+<LI>An AIBO LAN Card on the same WiFi network as the HomieGate Server
+</UL>
+You should be familiar and comfortable with general AIBO WiFi configuration and testing (using 'ping').
+
+If you have never run "AiboScope LIVE!" or "AiboRemote" or the Sony AIBO Navigator,
+you should start with those programs before trying HomieGate.
+If you have run those programs before, and have a working WLANCONF.TXT file, you are most of the way there.
+
+<P></P>
+<HR>
+<H2>Installation and Testing</H2>
+
+<P>Installation (on AIBO)</P>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper RCodePlus runtime for the model of your AIBO.
+<UL>
+<LI>For the ERS-210: <A HREF="../rcode/RCodePlus252A(210).zip">RCode Plus 2.52 'A' (210)</A>
+<LI>For the ERS-220: <A HREF="../rcode/RCodePlus252A(220).zip">RCode Plus 2.52 'A' (220)</A>
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<LI>Download the HomieGate Test Personality: <A HREF="HG_Aibo01.zip">HG_Aibo01.zip(very small 35KB)</A>
+<LI>Unzip that file on top of your RCODE/PMS stick (replacing any files it asks about).
+<P></P>
+<LI>If necessary, customize the WLANCONF.TXT file on the memory stick to work with your WiFi LAN setup.
+If you don't change this, the default will be for a WiFi 'AIBONET' with WEP enabled ('AIBO2' password).
+AIBO will be on IP address 10.0.1.100
+<LI>Put the stick in AIBO (but don't boot him up yet)
+</UL>
+
+<P>Installation (on HomieGate Server)</P>
+<UL>
+<LI>Run the configuration tool (C:\Homie\hg_config.exe)
+<LI>Check the "AIBO (Client #3)" checkbox.
+<LI>Change the IP address for your AIBO if necessary (NOTE: be sure you are running .01'A')
+<LI>Press the "Save Changes and Generate Voice Commands" button
+</UL>
+
+<P>Testing - LAN connection and polling</P>
+<UL>
+<LI>Be sure your WiFi card is running on the PC (usually the Link light will flash)
+<LI>If the HomieGate server is running on the PC, stop it now.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>AIBO will stretch and sit there waiting with no LEDs on.
+<LI>Now run the HomieGate server (C:\Homie\hg_server.exe).
+<LI>Keep an eye on the third status line in the upper right of the HomieG server dialog.
+It should change from "Searching for AIBO" through several messages eventually to "AIBO ready"
+<LI>AIBO should stretch again, and his forehead light will turn green.
+<CENTER><IMG SRC="ss_aibodetect.gif"></CENTER>
+<LI>TIP: If AIBO is not found, be sure you can 'ping' the AIBO from your PC
+<LI>TIP: if you can ping, but have problems, try closing and restarting the HomieGate Server (hg_server.exe on the PC).
+</UL>
+
+<P>Testing - Voice Commands</P>
+<UL>
+<LI>Before saying any HomieGate voice command, say "AIBO" first (or press his back button). AIBO's lights will start flashing.
+<LI>When the lights are flashing, say the phrase (eg: "How old are you?")
+<LI>If AIBO/HomieGate doesn't understand, it will beep. Please say "AIBO" again, and then say the phrase again.
+
+<LI>TIP: using the back button is necessay in loud rooms, or if AIBO gets confused.
+Press the back button gently so it doesn't make any noise.
+<LI>TIP: if you asked AIBO to play music, it will be too loud for him to hear you.
+Press his back to give him a new command (like "Stop the Music").
+He will mute the stereo to listen to your every word.
+</UL>
+
+<P></P>
+That's it for setup.
+Try some of the long list of <A HREF="vcmd.htm">what to say (voice commands)</A>.
+<P></P>
+<P>Other Tips</P>
+<UL>
+<LI>It usually helps to stop the HomieGate Server program (hg_server.exe) when you initially boot up your AIBO.
+<LI>Some of the canned AIBO skits are a little 'jerky', but should not harm your AIBO
+<LI>Multiple AIBOs are supported. The need to be on separate IP addresses and configured properly with hg_config.exe.
+The configuration tool supports two AIBOs, but the server can handle up to four (the architecture can handle even more).
+<LI>With multiple AIBOs, try not to talk to them both at the same time. If both are in the same room,
+use the back switch to talk to one at a time.
+</UL>
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

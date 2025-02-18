@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Old Hardware Hacks
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Old Hardware Hacks
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+NOTE: Describes some hardware hacks done shortly after ICybie was originally released.
+Many are no longer necessary because of more recent developments (Super ICybie, SilverLit accessories, etc), but some of the information here may be of interest.
+<HR>
+
+<HR>
+<H2>Poor ICybie</H2>
+
+<center>
+<A HREF="hack_overview2.jpg"><IMG SRC="hack_overview.jpg"></A>
+<BR>
+(click for larger picture)
+</center>
+<P></P>
+<HR>
+<H2>DISCLAIMER</H2>
+
+<P><B>Taking apart ICybie, attaching heat sinks or soldering things on to his brain will void his warranty.</B></P>
+
+<P></P>
+<HR>
+
+<H2>Taking ICybie Apart</H2>
+
+Before taking the body apart, you should remove the four leg shields.
+Each leg shield has two large triangular screws and three small triangular screws holding it on.
+<BR>
+There are three small triangular screws holding a small round piece of plastic on the other side of the legs that you do not have to remove.
+<BR>
+Triangular screws can be removed by (a) using the properly sized slot screwdriver and angling it into the triangular slot or (b) getting a piece of metal and filing it down the proper triangular shape.
+<P></P>
+After the leg shields are removed, you need to remove the <b>seven</b> phillips (cross shaped) screws holding the body together.
+On the dog's left side, there is only one screw.
+On the dog's left side, there are <B>six</b> (one for each hole).
+<BR>
+Three are visible. The other three are hidden under plastic covers/caps (sneaky).
+
+Stick a long wood screw in the remaining holes, and give them a small turn - gently pull out the screw and the plastic cap should come out with it.
+NOTE: there may be two plastic caps in the same hole.
+Then use a phillips screwdriver like all the rest.
+<BR>
+The sides will easily move apart (if not you forgot a screw).
+
+<P></P>
+<font color=red>UPDATE: </font>The replacement shell</A> comes with specially shaped screwdrivers for removing the triangle screws and cover/caps.
+<P></P>
+<HR>
+
+<H2>Heat Problems</H2>
+The main voltage regulator transistor in the body does <B>not</B> have a heat sink.
+This transistor gets very hot.
+If you want to run your ICybie naked (without the outer shell), I recommend attaching a heat sink to the regulator and avoid touching it.
+Installing a heat sink inside the plastic shell is not essential.
+It will still get hot (inside a sealed case), but you can at least increase the surface area of the transistor.
+<P></P>
+Just bolt anything metal to it (that can fit in the case).
+Be sure you heat sink does not touch any plastic parts when re-assembled.
+<BR>
+
+<P></P>
+<center><IMG SRC="backside.jpg"></center>
+
+<P></P>
+<HR>
+
+<H2>Voltage Detector Problems</H2>
+ICybie does a poor job of detecting the battery voltage.
+If you are only getting 1/2 hour run times, you should adjust the voltage threshold and/or recondition the battery.
+
+<font color=red>UPDATE: </font>Use the Battery Adjust cartridge program instead of any hardware hacks.
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>More Advanced Hacking</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<DIR>Please see the <A HREF="super.htm">"Super ICybie" project</A> for other ways of extending your ICybie's brain</DIR>
+<P></P>
+
+<H2>Cartridge Flash ROM</H2>
+
+<P><B>NOTE: <font color=red>NO LONGER RECOMMENDED</font> - see the Super ICybie upgrade and/or the Silverlit 'downloader'.</B></P>
+
+Building your own Flash ROM cartridge is not recommended.
+
+<P></P>
+<HR>
+<H2>Serial Port</H2>
+<DIR>Use of the serial port for other devices can be done in conjunction with the Super ICybie upgrade</DIR>
+The CPU has an unused serial port (serial port 0). The three soldering pads underneath the CPU are the serial port pins.
+NOTE: The serial port is CMOS level (0 -> 3.5V give or take). It is not compatible with RS-232 without some form of level shifter (and logic inverter).
+See the RS-232 Super ICybie upgrade for more details.
+
+<P></P>
+<center>
+<IMG SRC="hack_serial.jpg">
+</center>
+
+<P></P>
+<HR>
+<H2>RF Radio Link</H2>
+To keep ICybie wireless, you can hook the serial port to a wireless transmitter / receiver.
+I used the Linx LC series RF data modules from <A HREF=http://www.linxtechnologies.com>Linx Technologies<A>.
+They are relatively cheap (under $20 for an RX and TX module), easy to hook up, and pretty reliable.
+They have a relatively low data rate, so I lowered the ICybie baud rate to 2400 baud.
+There are other RF modules out there, so pick what you are comfortable with.
+<center>
+<IMG SRC="hack_rfparts.jpg">
+</center>
+<P></P>
+
+You will need a similar setup (RX and TX module) attached to the serial port of the PC. After it is all working, you can use any terminal program to talk directly to your ICybie.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>
+
+</BODY>
+</HTML>

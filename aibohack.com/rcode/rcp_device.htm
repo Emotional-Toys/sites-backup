@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Device control features
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Device control features
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This page describes lower level device control extensions provided in RCodePlus.
+<P></P>
+<H2>AP_DEVCTL</H2>
+Device control for setting camera white balance, gain, and shutter speed. Also sets microphone parameters.
+<P></P>
+<pre>
+	AP_DEVCTL prop val
+
+	prop = 1, sets camera white balance (1 = inside, 2 = outside, 3 = fluorescent)
+	prop = 2, sets camera gain (1 = low, 2 = med, 3 = high)
+	prop = 3, set camera shutter speed (1 = slow, 2 = med, 3 = fast)
+	prop = 4, sets microphone omni mode (0 = off = unidirectional, 1 = on = omnidirectional).
+	prop = 5, sets microphone ALC (0 = off, 1 = on = automatic level control)
+        [does not appear to work]
+	prop = 6, sets Human Face Detector on/off (0 = off, 1 = on). Eats up CPU cycles.
+
+</pre>
+<P></P>
+<HR>
+<H2>AP_GETACCEL</H2>
+The accelerometers can be read with AP_GETACCEL.
+
+<pre>
+    AP_GETACCEL varY varX varZ
+
+    returns the X, Y and Z values in the 3 variables (all three are needed)
+    Units are micro-meters per second per second (range +- 2G).
+    For the ERS-31x, the last "Z" parameter is not set.
+
+</pre>
+
+<P></P>
+<HR>
+
+<P></P>
+<H2>AP_VOICEREC, AP_VoiceRec_Result (2.51)</H2>
+
+This is an advanced feature for implementing "Name Registration".
+
+<pre>
+    AP_VOICEREC vcmdID
+
+    inputs:
+        vcmdID = voice command number
+	        1 = dog's name
+	        0x100 = owner's name
+	        another number over 0x100 = other name
+
+    outputs:
+        When AP_VOICEREC is called, "AP_VoiceRec_Result" is initially set to -1.
+        The variable will stay at -1 while recording.
+        When the request is completed, "AP_VoiceRec_Result" is the return code.
+            Typical values are 1 for complete, 2 for incomplete, 3 for error
+
+        AP_VoiceRec_Result will be -1 while recording,
+                1 if complete, 2 if incomplete
+</pre>
+
+See ObeyCat or Yacky AIBO for sample code.
+You should assign extra words from 257 up. When the recognized word is heard, it will be treated like any other voice command (use AU_Voice or AP_Voice_Cmd). The Dog's name returns number 1, the owners name returns number 256. Other extra words should return 257 up.
+
+<P></P>
+<H2>AP_GETSYNVOICE, AP_SynBite_Mode (2.51)</H2>
+This is an advanced feature for implementing "What's your name" or mimic mode.
+<pre>
+TO BE DOCUMENTED
+</pre>
+See the RCR (RCode Runtime) used in ObeyCat or Yacky AIBO for sample code.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

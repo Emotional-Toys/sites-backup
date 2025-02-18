@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Motion control
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Motion control
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+Typically, your RCODE personality will use pre-created .MTN files to perform motions (and perhaps audio and .LED performances).
+You sometimes want to have more dynamic and low level control over AIBO's servos.
+<BR>
+WARNING: advanced and dangerous. You can burn up your AIBO's servos if you aren't careful!!
+<P></P>
+
+<HR>
+<H2>Servo numbers</H2>
+
+The value of iLeg is typically in the range of 0 to 11.
+Special values exist for the head (12, 13, 14), the mouth (15, ERS-210 only), and the tail (16 and 17, ERS-210 only).
+<pre>
+    //REVIEW: add complete list with normal RCode names
+</pre>
+
+<P></P>
+<HR>
+<H2>AP_GETJOINTS, AP_MOVEJOINTS, AP_Move_Results (2.51)</H2>
+
+<DIR><i>Once again, arrays to the rescue!</i></DIR>
+
+<pre>
+    AP_GETJOINTS array array_offset play_type
+    AP_MOVEJOINTS array array_offset play_type frame_count
+
+	'array' contains the new angles (in degrees)
+    'array_offset' lets you have multiple values in the same array
+        array_offset is added to the array to index the servo values
+        [word index]
+
+    'play_type' indicates which servos are specified
+        12 = legs only (12 servos)
+        15 = full body motion for ERS-220 or ERS-31x
+        18 = full body motion for ERS-210
+        0xC03 = head only
+        [upper byte=start servo, lower byte=servo_count]
+
+    'frame_count' is the number of 32ms frames to perform the move
+        [range of 1 to 16, 16 is recommended]
+
+</pre>
+AP_GETJOINTS fill the array with current joint values (in degrees).
+AP_MOVEJOINTS move the joints to the new values.
+After calling AP_MOVEJOINTS, you should check the variable "AP_Move_Result".
+If the value is -1, then AIBO was busy and the move did not occur, so wait a little while and try again.
+<P></P>
+
+<HR>
+<H2>AP_SETGAIN2</H2>
+
+The RCodePlus statement "AP_SETGAIN2:iLeg:p:i:d" will set the specified joint to use the 3 gain coefficients, p, i and d.
+These are typically in the range of 0 to under 100.
+<BR>
+The value of iLeg is typically in the range of 0 to 11.
+Special values exist for the head (12, 13, 14), the mouth (15, ERS-210 only), and the tail (16 and 17, ERS-210 only).
+
+<BR>
+NOTE: if the joints have been turned completely off (as in a jam condition), they will stay off.
+<P></P>
+If you wish an updated version of the old "pidWalker" program, or want to experiment with different walking styles (gaits), please send me an email.
+
+<P></P>
+<HR>
+
+
+<pre>
+
+//TO DOCUMENT:
+
+Using "INIT MTN", "LOAD SND/MTN/LED", "PLAY MTN"
+MTN_MSG strings
+AP_Use_Replay_Result
+AP_Replay_Result
+    start with -1 in your code
+    0 = null
+    1 = success
+    2 = error
+    3 = complete
+    4 = incomplete
+    5 = allocerror
+
+    Side-steps the Wait decrement, but not the increment.
+    You should "SUB Wait 1" after AP_Replay_Result is set
+
+AP_Use_Ram
+    if != 0 hooks "LOAD SND/MTN/LED"
+        file name is not important, but use "ram"
+
+    -1 for uploaded data
+    1->? for array data
+
+    Set to 0 when done
+
+</pre>
+
+</BODY>
+</HTML>

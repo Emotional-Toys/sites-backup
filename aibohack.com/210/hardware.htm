@@ -1,0 +1,173 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ERS-210 Hardware - CPU and memory
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ERS-210 Hardware - CPU and memory
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The main block of the ERS-210 AIBO is an engineering marvel.<BR>
+It is much smaller than the ERS-111 AIBO, has fewer circuit boards and integrates the mechanical components (battery holder / lock / release, memory stick holder / lock / release, 6 appendage release mechanisms, many Open-R ports and a PCMCIA slot) in an amazingly tight space.
+
+<BR><IMG SRC="hw_brick.jpg"><BR>
+
+<HR>
+<H2>The Main Chips</H2>
+
+<BR><IMG SRC="hw_mainbd1.jpg"><BR>
+
+<BR><IMG SRC="hw_mainbd2.jpg"><BR>
+
+<H3>CPU</H3>
+The CPU is a QED (Quantum Effective Devices) MIPS processor, part number RM5231A-200H. It uses the MIPS IV instruction set, 32-bit data bus, and has a maximum speed of 200MHz.
+
+<H3>Memory</H3>
+Dynamic memory is in two NEC D4518163G5-A80 memory chips giving a total of 32MB of memory. This is SDRAM.
+<BR>
+Read only memory is in single Toshiba TC58FVB321FT-10 flash memory chip giving a total of 4MB of flash ROM.
+
+<H3>I/O Controller</H3>
+There is a separate 8-bit micro-controller that performs I/O functions as well as controlling the main CPU (including powering it up and acting like a watch-dog).
+The chip is an NEC D780023AY running at 4MHz.
+It is an 8-bit micro-controller with 24KB of ROM and 1KB of RAM, an analog-to-digital converter, a real-time-clock, a buzzer circuit (for the boot failure tune) and two serial ports (among other features).
+
+<H3>Specs</H3>
+Here are the main chips:
+<UL>
+<LI>200MHz MIPS CPU from <A HREF=http://www.qedinc.com>QED</A>
+<LI>8-bit Micro-controller from <A HREF=http://www.necel.com>NEC</A>
+<LI>16MB SDRAM from from <A HREF=http://www.necel.com>NEC</A>
+<LI>Toshiba 4M Flash ROM
+<LI>Texas Instrument USB controller chip
+</UL>
+Specs are easily found online. If you can't find a particular chip specific, please send me an email.
+
+<H3>Custom Chips</H3>
+There are two custom Sony chips on the main board. The Sony chips are marked "CXD9561GB" and "CDX9540TG". Their functionality is a mystery.
+
+<H3>Other Chips</H3>
+There are several other smaller chips. On of interest is the TI TUSB2036 which is a USB hub controller chip.
+
+<HR>
+<H2>Testing Port</H2>
+At the bottom of the main board, there is a 30 pin connector which (probably) is used for system testing.
+You can access this by removing the little plastic hatch (with a slot in it) on the underside of the ERS-210 block (next to the battery).
+
+<BR><IMG SRC="hw_conn.jpg"><BR>
+
+<HR>
+
+</BODY>
+</HTML>

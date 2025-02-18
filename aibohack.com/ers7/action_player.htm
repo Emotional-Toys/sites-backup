@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ ActionPlayer (requires LAN)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ ActionPlayer (requires LAN)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<BR>
+If you have the AIBO LAN setup and an RCODE 7 personality on the memory stick,
+it can be remote controlled via ActionPlayer.
+This is similar to the ERS-2x0 AiboRemote, but without video and audio features.
+In addition to making AIBO walk, it can be used to play back any of the canned RCODE sticks.
+
+<P></P>
+ActionPlayer will to turn your AIBO into a remote control toy.
+<P><CENTER><IMG SRC="ss_actionplayer.jpg"></CENTER></P>
+
+<H3>Quick Instructions</H3>
+<UL>
+<LI>You need a PMS memory stick with initialized with an RCODE (ERS-7) personality.
+If you haven't done this before, I recommend starting with the <A HREF="cylon7.htm">Cylon 7 personality</A>
+<LI>The LAN settings must be configured for the PMS/RCODE stick.
+The easiest way to do this is to copy the WLANCONF.TXT file from your AiboMind stick (\OPEN-R\SYSTEM\CONF\WLANCONF.TXT)
+You must know the IP address of your AIBO.
+<LI>Download <A HREF="ActionPlayer701.zip">ActionPlayer701.zip</A>, unzip and run ActionPlayer.exe.
+</UL>
+
+<P></P>
+<HR>
+<H3>Usage</H3>
+<UL>
+<LI>Enter the IP address of your AIBO and connect. If this fails, you probably have the WLANCONF.TXT configuration wrong.
+<LI>When connected, the RCODE program will stop running.
+<LI>The upper left will show PINK ball and BONE detection
+<LI>The two distance sensors show the distance to obstacles in mm (upper number is sensor in the nose, lower number is chest 'cliff' sensor)
+<LI>The Walk options will make AIBO walk.
+<LI>The Look options will make AIBO move his head
+<LI>The "Stand", "Sit", "Lie" buttons make AIBO move to those postures
+<LI>Other postures
+<UL>
+<LI>Pick other postures from the "Start Posture" dropdown list, and the bottom list will fill with possible actions.
+<LI>Click on any of these actions, and AIBO will perform them.
+The action names are the same as you will find in YART7.
+<LI>Most actions start and end with the same posture. Some change postures (at the top of the list with "POS CHANGE:"). If you perform these actions the list will change to that posture.
+<LI>If that's not you want, or the list becomes empty, pick another "Start Posture" and try again.
+</UL>
+</UL>
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

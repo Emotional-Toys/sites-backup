@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ HomieGate and X10 commands
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ HomieGate and X10 commands
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>DISCLAIMER:
+Currently only the FireCracker X10 PC control module is supported.
+<BR>
+If you have another X10 computer interface module, please send me an email with details.
+</DIR>
+
+<BR>
+HomieGate will control X10 devices by voice commands or by selecting options from a HomieGate client (in the tree view under 'X10 Devices').
+<BR>
+NOTE: HomieGate is not a replacement of your existing home automation software, it only provides basic on/off control on demand (ie. no timers, no macros, no automatically turning lights on and off).
+
+<P></P>
+<HR>
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>HomieGate Server <A HREF="install.htm">installed, configured and tested</A>
+<LI>An X10 "FireCracker" module (CM17A) connected to a serial port on the PC
+<LI>An X10 Transciever module (TM751) set to the house code you want to use (eg: "A"). This also functions as a lamp module (eg: "A1")
+<LI>One or more X10 devices in the same house (eg: lamp modules, appliance modules, garage door openers, ...)
+<BR>
+NOTE: All of these components come in a <A HREF=http://www.x10.com/automation/firecracker.htm>FireCracker starter kit</A> for around $40 USD for people in the USA.
+<BR>
+NOTE: In future the more powerful Active Home (CM11A/CM12) will be supported.
+</UL>
+
+<P></P>
+<HR>
+<H2>Configuration</H2>
+
+<UL>
+<LI>Run the configuration program (C:\homie\hg_config.exe)
+<LI>Check the "Use X10 (FireCracker)" checkbox
+<LI>Set "Com Port" to the COM/Serial port number your FireCracker is attached to
+<BR>
+NOTE: the Firecracker module has a pass-through, so you can connect other serial devices to the COM port, but they must not be used while HomieGate is running.
+<P></P>
+<LI>Press the "Edit" button. This will edit the file 'hgdata_x10.txt' (usually in notepad).
+<LI>Make any changes to the hgdata_x10.txt file. Save the file and exit the text editor.
+<LI>Return to hg_config.exe and press "Save Changes and Generate Voice Commands".
+You must do this after every change to 'hgdata_x10.txt' so the voice commands will be available.
+<P></P>
+<LI>If the server is already running exit it (close box or ESCAPE)
+<LI>Start the server now (C:\homie\hg_server.exe) and it will use the new settings.
+<P></P>
+<LI>Run one of the HomieGate client programs, like the PC or SD Panel or a PDA, and connect to the HomieGate server.
+<LI>Test out your new additions by selecting the devices in the tree view under 'X10 Devices'
+<LI>Try out the voice commands as well.
+</UL>
+
+<P></P>
+<HR>
+<H2>Editing hgdata_x10.txt</H2>
+The format is very simple, and described at the top of the file itself.
+You can easily add an unlimited number of X10 commands to your HomieGate server by editing X10.TXT
+<BR>
+I may add more elaborate documentation here later.
+If it is not self explanatory, please send me an email.
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

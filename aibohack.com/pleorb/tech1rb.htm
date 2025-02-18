@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ PleoRB Hardware Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PleoRB Hardware Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Please refer to my <A HREF="../pleo/tech1.htm">original UGOBE Pleo teardown</A> for background. It is old, but still accurate.
+<BR>
+For a general overview of the older models, I recommend the excellent <A HREF="http://electronics.howstuffworks.com/pleo.htm">How Stuff Works</A> article by Tracy Wilson.
+<P></P>
+<BR>
+Much of the PleoRB is similar to the original model.
+This page focuses on changes in the PleoRB hardware.
+
+<BR>
+
+<H2>Overview of Hardware Changes</H2>
+
+<H3>External Hardware</H3>
+<UL>
+<LI>New battery (old NiMHd 2.2AHr, new lighter LiPoly 2.8AHr). Charger logic much improved.
+<LI>USB connection moved inside of battery compartment. Looks like old terminal feature not supported.
+<LI>No hardware serial connector. Much harder for debugging remote control apps.
+<LI>SD card replaced with micro SD card inside of battery compartment. Makes swapping personalities more difficult.
+<LI>Real-Time-Clock battery in foot.
+</UL>
+<BR>
+<H3>Internal Hardware - Main Body</H3>
+<UL>
+<LI>DataFlash in the main body doubled in size (4MB -> 8MB). Default personality program (PLEOPM) needs it.
+<LI>Main CPU appears to be same (Atmel AT91SAM7S256). Still only 64KB of RAM (KiloBytes is not a typo).
+<LI>3D axis accelerometer in upper body (KXTF9 on I2C bus along with another chip)
+<LI>Additional touch sensors (now 2 on back, 2 on butt/arse)
+<LI>Much of the rest looks similar to original Pleo (Toshiba TMP85FH47 motor controllers, etc).
+</UL>
+<BR>
+<H3>Internal Hardware - Head</H3>
+<UL>
+<LI>Overworked head CPU replaced with two chips (new chip specs unknown).
+<UL>
+<BR><I>Before</I><BR>
+<LI>The old Pleo head CPU did poor sound direction detection, and slow camera capture.
+<LI>The old chip was ARM based with 32KB of flash ROM for code. The old chip did everything: sound detection, camera interface and various head specific features.
+<BR><I>After (PleoRB)</I><BR>
+<LI>The new PleoRB does true voice commands (8 of them), faster camera access (?) and other things.
+<LI>These tasks are split between two different CPUs:
+<LI>The smaller chip has 128KB of flash ROM for code. Chip specs unknown. Probably doing the voice recognition feature.
+Appears similar to the RSC-300 feature of the <A HREF="../icybie/autopsy.htm">iCybie</A>.
+Lets you record 8 unique speaker dependent voice commands and use them to trigger specific modes.
+<LI>The larger new chip has 1MB of flash ROM. Chip specs unknown. Probably doing the camera interfacing and other head sensor control.
+<LI>Neither of these chips are meant to be user programmable. The Pawn personality program (interpreted by the main CPU in the body) is programmable with the PDK.
+</UL><BR>
+<LI>RFID detection in mouth. See <A HREF="tech2rb.htm">this page</A> for the list of known RFID toys.
+<LI>Additional touch sensors (2 new ones in cheeks)
+<LI>Additional sensors (light, temperature)
+<LI>Head servo configuration changed
+<LI>Still only 64KB in serial SRAM (used for image capture)
+<LI>Camera marked "JS668850" - same as last version?
+<LI>Slow data connection between head and body is claimed to be fixed - but needs testing with real timing.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Software/Firmware</H2>
+There are several different pieces of firmware/software in the Pleo.
+<UL>
+<LI>The main personality. Often called "PLEOPM". Closed source. A "Pawn" interpreted program. Program and data (sound, motions etc) filling most of the 8MB of data store.
+See <A HREF="tech3rb.htm">this page</A> for more info.
+<LI>The main CPU firmware. Closed source. ARM code filling most of the 256KB of Flash ROM in the main CPU. Probably very similar to the old version.
+<LI>The two head CPUs have their own firmware. I assume they have a similar update mechanism like the original model. Much more complicated firmware for camera and sound features.
+<LI>The motion controller firmware. Closed source. Toshiba TMP (Z80-like) code in the 4 motion/servo controllers. Probably very similar to the old version.
+</UL>
+Note: AFAIK all software/firmware is updatable (typically by installing a special update program in the SD card).
+<BR>
+Note: all software/firmware is <i>currently</i> closed source and proprietary.
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

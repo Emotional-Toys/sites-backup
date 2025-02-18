@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ HomieGate Install - Smart Display 'Panel'
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ HomieGate Install - Smart Display 'Panel'
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The SD Panel user interface is one of the best features of HomieGate.
+It lets you pick music selections easily from long lists, when you are far from your computer and home stereo.
+
+<P></P>
+<HR>
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>HomieGate Server <A HREF="install.htm">installed, configured and tested</A>
+<LI>A 'hacked' SD Panel like the Viewsonic V110 or V150
+<LI>The SD Panel WiFi Card must be on the same WiFi network as the HomieGate Server PC
+<LI>OPTIONAL: an external powered microphone
+</UL>
+
+If you have not opened the 'back door' hack for the SD Panel, please read about it <A HREF="../panel/index.html">here</A>.
+The process is rather complicated. I don't recommend trying to install the SD Panel hack and HomieGate in the same evening.
+First install the SD Panel hack, and play with the Fun Pack apps. Take a break, then try the SD panel HomieGate install.
+
+<P></P>
+<HR>
+<H2>Installation and Testing</H2>
+
+<P>Installation (on HomieGate Server)</P>
+There is nothing special to do on the HomieGate server. The SD Panel will connect to one of the available client connections (usually Client#1 or Client#2).
+<BR>
+You will need to know the true WiFi IP address of the HomieGate Server PC.
+You can not use the 127.0.0.1 address used for the earlier test.
+Use 'ipconfig' or 'winipcfg' to display the PC's IP address.
+
+<P>One time - turn on the Speaker on the SD Panel</P>
+<UL>
+<LI>Turn on your SD panel or press the reset button if you don't care about losing RAM data.
+<LI>If the PanelShell (PanelPet's mini launcher) is not shown press the blue bar at the top to bring it to the top.
+If you don't know what I am talking about, you probably don't have a hacked panel (read instructions above).
+<LI>Scroll down to the very bottom of the listbox and double click on "CPL: Volume & Sounds (cplmain.cpl)"
+<LI>Check the top two checkboxes, "Events (...)" and "Applications (...)".
+<LI>Press the OK button
+<LI>NOTE: you only have to do this once, or if you re-flash your SD panel (ie. not after every reset).
+</UL>
+
+<P></P>
+<P>Installation (on the SD Panel)</P>
+
+<UL>
+<LI>In a manner similar to Steps 8 and 9 in the <A HREF="../panel/install.htm">SD Panel Hack installation</A> connect to your PC using the MSTSC client.
+<LI>Copy the file "C:\Homie\PDA\hg_client_arm.exe" from your PC to the SD Panel's "\Programs" folder
+<LI>Disconnect from the MSTSC client and go back to your normal login.
+<LI>NOTE: you only have to do this once, or after you reset the panel (resetting the panel wipes out the RAM contents)
+</UL>
+
+<P>Testing - connecting</P>
+<UL>
+<LI>Press the blue bar at the top of your SD Panel to bring up the PanelShell
+<LI>Press the "refresh" button on the Panel Shell
+<LI>Double click on "\Programs\hg_client_arm.exe"
+<LI>Enter the IP address of the server (this is the only time you will need the virtual keyboard)
+<LI>Press "Connect"
+<LI>If the server is not found, please check the IP address and other WiFi settings. If still no luck, be sure you can ping the SD Panel from your PC.
+</UL>
+<P></P>
+
+<P>Testing - Using</P>
+Once it connects, you will have a client interface very similar to the one you used for <A HREF="install.htm#TEST">testing earlier</A>.
+Perform the same tests to make sure your Panel microphone and speaker are working.
+<UL>
+<LI>Record a memo to make sure the microphone works. The built in microphone is in the upper left hand corner. Voice memos are limited to 10 seconds in this case.
+<LI>Check playback of the voice memo.
+<LI>Note: voice memos are played back on the SD Panel speaker.
+<P></P>
+<LI>Expand the tree view under "Music"/"Pop"/"Madonna - Like a Prayer".
+<LI>Pick any of the .MP3 track and it should play on the PC's speakers. Note: these are short low quality clips, not the full album.
+<LI>NOTE: Music is played on the PC's sound card, which will typically be attached to your home stereo.
+<P></P>
+<LI>Test voice recognition. Press the "Push to Talk" button, and say a voice command into the microphone. You must complete the phrase in under 3 seconds.
+You should press the button again when you are done speaking.
+<LI>NOTE: this time limit is specific to the SD panel. If three seconds are not long enough, press the "Options" button on the HomieGate Client, and change the voice buffer from 3 seconds to 5 or 10. Do not use the "Immediate" with the built-in microphone.
+</UL>
+
+<P>Other Options</P>
+<UL>
+<LI>An external microphone can be used, but it must be a powered microphone (ie. one with a battery). With an external microphone, you can use the "Immediate" voice recognition option.
+<LI>The "Blue Bar" option puts a blue bar on the right hand side of your SD Panel screen. This acts like the PanelShell blue bar (on the top), but for HomieGatea Client (on the right). Minimize HomieGate Client and you can do other things.
+To turn this on check the "Blue Bar" option, close hg_client_arm.exe and start it up again.
+</UL>
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ PSP IR Sample Program
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PSP IR Sample Program
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Robo IR .02 - RoboSapien, ICybie, and Media Center</H2>
+
+<H3>Hardware Required</H3>
+<UL>
+<LI>Homebrew capable Sony PSP (firmware version 1.0 or 1.50)
+<BR>
+One or more of the following:
+<LI>Robosapien (V1)
+<LI>ICybie running stock firmware
+<LI>ICybie running enhanced walkup charger firmware
+<LI>Windows Media Center computer with "RC6" remote control
+<P></P>
+</UL>
+
+<H3>Downloads</H3>
+<UL>
+<LI>PSP 1.0 version: <A HREF="ir_sample_02_run10.zip">ir_sample_02_run10.zip</A>
+<LI>PSP 1.50 version: <A HREF="ir_sample_02_run150.zip">ir_sample_02_run150.zip</A>
+<LI>Source code: <A HREF="ir_sample_02_src.zip">ir_sample_02_src.zip</A>
+</UL>
+
+<P></P>
+
+<H3>General Use</H3>
+<UL>
+<LI>Install the proper version on your Homebrew compatible PSP
+<LI>Run the program on the PSP
+<LI>At the start page, select the device you want to control (RoboSapien, ICybie, Media Center)
+<LI>Use the PSP as an IR remote control for that device.
+<LI>The buttons are labelled on the screen with the commands.
+<LI>Certain buttons (like LTrigger and RTrigger) can act as shift buttons.
+Hold those buttons and new options will show up.
+Keep holding the shift button and press the regular button.
+<LI>When pressing a command button, aim the top of the PSP towards the device's IR receiver
+<LI>Press HOME to go back to the main screen to change devices
+<LI>Press HOME again to exit the app
+</UL>
+
+<P>RoboSapien Specifics</P>
+<UL>
+<LI>There are two options, normal or reversed.
+Pick normal if you are facing in the direction of the robot (your right is the robot's right side).
+Pick reversed if you are looking at the robot's face (your right is the robot's left side).
+<LI>There are several shift buttons giving most of the common actions (but not all of them)
+<LI>Hold LTrigger for left arm, RTrigger for right arm.
+Hold both triggers for body rocking.
+Hold the select button for skits.
+</UL>
+<P>ICybie Specifics</P>
+<UL>
+<LI>This is a very boring direct implementation of the standard 12 buttons + Large and Small buttons.
+<LI>A smarter mode aware remote could be written.
+<LI>Using special codes, certain walk-up-charger behaviors can be tricked.
+</UL>
+<P>Media Center Specifics</P>
+<UL>
+<LI>Only "RC6" compatible remotes will work. Your media center may or may not work because of the device prefix.
+<LI>Provides many of the common remote control features. Try out the different Trigger/shift buttons.
+<LI>If you want to change the button mappings, or the device specific codes, see the source code ("FANCY")
+</UL>
+<P></P>
+
+NOTE: these are examples of how the PSP can be used for customized "Consumer IR" remote controls, not limited to SIRCS.
+<BR>
+This is not meant as a "universal remote". The technology provided here can be used to write/port other IR programs.
+
+<P></P>
+<HR>
+<a name=DEV>
+<a name=SOURCE>
+<H2>For Developers - Source Code</H2>
+
+The standard firmware only supports the Sony "Consumer IR" protocol call "SIRCS".
+"Consumer IR" is different than IrDA, which won't be discussed here.
+<P></P>
+This IR sample shows ways of using the RAW IR capabilities of the PSP hardware, to control many "Consumer IR" devices.
+<P></P>
+The "rawir.c" source file has the tricks needed to send RAW IR data to the hardware and reuse the SIRCS event handler for non-SIRCS data.
+Data is formatted ahead of time in a PWM-like format.
+<P></P>
+The RoboSapien and ICybie robots use proprietary encoded IR signals, with a carrier frequency of approximately 40kHz.
+The standard Media Center uses the RC6 protocol, with a carrier frequency of 36kHz.
+This RAW IR technology can be used for other protocols.
+The limits of the carrier frequency and the PWM modulation timing have not been fully explored (hopefully should do most standard IR protocols, but probably not if the carrier is greater than 100kHz).
+<P></P>
+The source code includes two samples.
+Both have similar IR remote control functionality (some of the buttons are different).
+"SIMPLE" is a simple pspDebug "printf" style app.
+"FANCY" is the binary released version. It includes a user inteface to draw the current button settings on the screen.
+<P></P>
+<LI>Source code: <A HREF="ir_sample_02_src.zip">ir_sample_02_src.zip</A>
+</UL>
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

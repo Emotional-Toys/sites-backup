@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ ICybie's Moods
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ ICybie's Moods
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Please read the manual (chapter 8) for the general description of ICybie's moods.
+This page gives a slightly more technical description.
+<BR>
+ICybie's moods are influenced by three factors:
+
+<UL>
+<LI>Interaction: petting, pressing head/back, talking to your dog, clap commands
+<LI>Environment: dark or quiet
+<LI>Terrain: walls, hard to walk, falling
+</UL>
+
+Your ICybie keeps a count of these experiences.
+He also keeps a history of the previous 4 minutes of experiences
+
+<P></P>
+NOTE: actually the counts are separated into 10 different counts: 4 for Interaction (commands, petting, head/back, nose), 2 for Environment and 4 for Terrain.
+Also the Environment total is scaled by 4. These values are tweekable with YICT 1.01.
+<BR>
+NOTE: the counts history is stored in E2PROM, and can be viewed with a SIC test program.
+
+<P></P>
+<HR>
+<H2>Mood Changes</H2>
+The current and previous 4 minutes of experiences are added up, and used to determine the new mood.
+[ie. on average the last 4.5 minutes of experiences]
+<P></P>
+This gives you three different totals: Interaction (larger number for more interaction), Environment (larger numbers for dark/quiet rooms), and Terrain (larger numbers for smaller rooms, more obstacles).
+
+<P></P>
+
+<table border=1 cellpadding=10>
+<tr>
+  <th>Dark Room test</th>
+  <th>Small Room test</th>
+  <th>result (new mood)</th>
+  <th>comment</th>
+</tr>
+
+<tr>
+  <td rowspan=3>more Interaction<BR> than dark Environment</td>
+  <td>more Interaction than rough Terrain</td>
+  <td width=100 bgcolor=#80F080>Happy</td>
+  <td bgcolor=#80F080>Bright large room, or lots of attention</td>
+</tr>
+<tr>
+  <td>about same Interaction as rough Terrain</td>
+  <td bgcolor=#80F080>Happy</td>
+  <td bgcolor=#80F080>Bright room</td>
+</tr>
+<tr>
+  <td>more rough Terrain than Interaction</td>
+  <td bgcolor=#F08080>Hyper</td>
+  <td bgcolor=#F08080>Bright but cramped room</td>
+</tr>
+
+<tr>
+  <td rowspan=3>about same Interaction<BR> as dark Environment</td>
+  <td>more Interaction than rough Terrain</td>
+  <td bgcolor=#80F080>Happy</td>
+  <td bgcolor=#80F080>Large room</td>
+</tr>
+<tr>
+  <td>about same Interaction as rough Terrain</td>
+  <td bgcolor=#F0F080>Sad</td>
+  <td bgcolor=#F0F080>Very boring room</td>
+</tr>
+<tr>
+  <td>more rough Terrain than Interaction</td>
+  <td bgcolor=#F08080>Hyper</td>
+  <td bgcolor=#F08080>Small (cramped) room</td>
+</tr>
+
+<tr>
+  <td rowspan=3>more dark Environment<BR> than Interaction</td>
+  <td>more Interaction than rough Terrain</td>
+  <td bgcolor=#F0F080>Sad</td>
+  <td bgcolor=#F0F080>Dark large room</td>
+</tr>
+<tr>
+  <td>about same Interaction as rough Terrain</td>
+  <td bgcolor=#8080D0>Sleepy</td>
+  <td bgcolor=#8080D0>Dark room</td>
+</tr>
+<tr>
+  <td>more rough Terrain than Interaction</td>
+  <td bgcolor=#F080F0>Sick</td>
+  <td bgcolor=#F080F0>Dark cramped room, or lack of attention</td>
+</tr>
+
+</table>
+
+<P></P>
+<HR>
+<H2>Custom Mood Factors</H2>
+With YICT (version 1.01 and later), you can pick from several sets of mood factors to customize the mood logic:
+<UL>
+<LI>Standard: the normal ICybie rules (Interaction*1, Environment*4, Terrain*1, closeness threshold = 3)
+<LI>Balanced: balanced weight (Interaction*1, Environment*1, Terrain*1, closeness threshold = 3)
+<LI>Balanced2: balanced weight with lower closeness threshold (Interaction*1, Environment*1, Terrain*1, closeness threshold = 0)
+<LI>Mostly Happy: (Interaction*1, Environment*0, Terrain*0, closeness threshold = 0)
+<LI>Mostly Hyper: (Interaction*1, Environment*0, Terrain*4, closeness threshold = 0)
+<LI>Others TBD...
+</UL>
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

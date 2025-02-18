@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Install OPEN-R on Linux</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Install OPEN-R on
+Linux</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big><big><span
+ style="font-weight: bold;"><span style="text-decoration: underline;">Table
+of Contents</span></span></big></big><br>
+      <ol>
+        <li><a href="install_openr_linux.html#INTRO">Introduction</a></li>
+        <li><a href="install_openr_linux.html#FILES">Files Needed</a></li>
+        <li><a href="install_openr_linux.html#DOCS">Install Documentation &amp; Samples</a><br>
+        </li>
+        <li><a href="install_openr_linux.html#SDK">Install OPEN-R SDK</a></li>
+        <li><a href="install_openr_linux.html#SAMPLE">Build a Sample</a></li>
+        <li><a href="install_openr_linux.html#TEST">Test Sample</a><br>
+        </li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big><big><span style="font-weight: bold;"><span
+ style="text-decoration: underline;">1. Introduction</span><br>
+      </span></big></big><br>
+OPEN-R requires a Unix/Linux like environment, so if your running
+something like <a href="https://www.ubuntu.com/">Ubuntu</a> you're all
+set.&nbsp;&nbsp; However, if your just
+starting out with AIBO programming, I highly recommend first
+checking
+out AiboPet's <a href="https://www.aibohack.com/rcode/yart.htm">YART</a>
+instead.<br>
+      <br>
+      <a name="FILES"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">2. Files Needed</span></big></big><br>
+      <br>
+To install OPEN-R, first download the
+following files from the <a href="https://www.tekkotsu.org">Tekkotsu</a>
+site.&nbsp;&nbsp; Do not unzip any of the archives - the
+build
+script handles that. &nbsp; Download somewhere convenient, perhaps "<span
+ style="font-weight: bold;">aibo</span>" under your home
+directory.
+      <ul>
+        <li><a href="downloads/build-aibo-toolchain-3.3.6-r1.sh">build-aibo-toolchain-3.3.6-r1.sh</a></li>
+        <li><a href="downloads/OPEN_R_SDK-1.1.5-r5.tar.gz">OPEN_R_SDK-1.1.5-r5.tar.gz</a>
+(~12.2 MBytes)</li>
+        <li><a href="downloads/gcc-3.3.6.tar.bz2">gcc-3.3.6.tar.bz2</a>
+(~23 MBytes)</li>
+        <li><a href="downloads/binutils-2.15.tar.bz2">binutils-2.15.tar.bz2</a>
+(~11 MBytes)</li>
+        <li><a href="downloads/newlib-1.15.0.tar.gz">newlib-1.15.0.tar.gz</a>
+(~10 MBytes)</li>
+      </ul>
+You'll also want to grab the docs &amp; samples files...<br>
+      <ul>
+        <li><a href="downloads/OPEN_R_SDK-docE-1.1.5-r1.tar.gz">OPEN_R_SDK-docE-1.1.5-r1.tar.gz</a>
+(~2.4 MBytes)</li>
+        <li><a href="downloads/OPEN_R_SDK-sample-1.1.5-r2.tar.gz">OPEN_R_SDK-sample-1.1.5-r2.tar.gz</a>
+(~3.8 MBytes)</li>
+      </ul>
+      <a name="DOCS"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">3. Install Documentation &amp; Samples<br>
+      </span></big></big><br>
+Open a terminal, and expand the documentation &amp; samples archives
+with:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">cd ~/aibo<br>tar -zxf OPEN_R_SDK-docE-1.1.5-r1.tar.gz<br>tar -zxf OPEN_R_SDK-sample-1.1.5-r2.tar.gz <br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="SDK"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">4. Install OPEN-R SDK<br>
+      </span></big></big><br>
+You must have <span style="font-weight: bold;">gcc-3.4</span> <span
+ style="font-weight: bold;"></span>installed on your
+computer (OPEN-R is
+incompatible with gcc-4.1), and will possibly need several other
+packages.<br>
+      <br>
+The steps required to install these differs
+between distributions.&nbsp;&nbsp;&nbsp; On <a
+ style="font-weight: bold;" href="https://www.ubuntu.com/">Ubuntu</a>
+7.04 or 7.10
+for example:<br>
+      <ul>
+        <li>Select System -&gt; Administrator -&gt; Synaptic Package
+Manager<br>
+        </li>
+        <li>Click the <span style="font-weight: bold;">Development</span>
+category, and select&nbsp; <span style="font-weight: bold;">build-essential</span>,&nbsp;
+          <span style="font-weight: bold;">flex</span>,&nbsp; and&nbsp;
+          <span style="font-weight: bold;">gcc-3.4</span><br>
+        </li>
+        <li>Click the <span style="font-weight: bold;">Word Processing</span>
+category, and select&nbsp; <span style="font-weight: bold;">texinfo</span>
+        </li>
+        <li>Finally, click
+the "<span style="font-weight: bold;">Apply</span>" toolbar button</li>
+      </ul>
+Open a terminal, set the build script executable (if necessary) with:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">chmod a+x build-aibo-toolchain-3.3.6-r1.sh <br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+Now run the build script as shown below.&nbsp;&nbsp; It installs
+everything in
+/usr/local/OPEN_R_SDK.&nbsp;&nbsp; Edit the script beforehand if you
+want
+OPEN-R installed somewhere else.&nbsp;
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">export CC=gcc-3.4<br>sudo ./build-aibo-toolchain-3.3.6-r1.sh <br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+Go a grab a snack.&nbsp; The build takes a while.&nbsp;&nbsp; Read the "<span
+ style="font-weight: bold;">ProgrammerGuide_E.pdf</span>" while you
+wait.<br>
+      <br>
+You'll see "<span style="font-weight: bold;">All Done!</span>" if it
+worked properly.<br>
+      <br>
+      <a name="SAMPLE"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">5. Build a Sample</span></big></big><br>
+      <br>
+To test the tools installed properly, try compiling a sample (for
+ERS-210/220):<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">cd ~/aibo/sample/ers200/BallTrackingHead<br>make<br>make install<br>ls -al MS/OPEN-R/MW/OBJS<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+You should see the following binaries:<br>
+      <ul style="font-family: monospace;">
+        <li>BALLTRCK.BIN</li>
+        <li>LFSOUND.BIN</li>
+        <li>MVHEAD2.BIN</li>
+        <li>MVLEGS2.BIN</li>
+        <li>POWERMON.BIN</li>
+      </ul>
+To compile for the ERS-7 instead, use path "<span
+ style="font-family: monospace;"></span><span
+ style="font-family: monospace;">~/aibo/sample/ers7/BallTrackingHead7".</span><br>
+      <br>
+      <a name="TEST"></a><br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;">6. Test Sample</span></big></big><br>
+      <br>
+To try the sample on AIBO, you'll need a programmable memory stick
+&amp; reader.&nbsp;&nbsp; <a href="../rcode_supplies.html">Click here</a>
+for details.&nbsp;&nbsp; Open with a file browser.<br>
+      <br>
+First copy the base SDK from:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre>ERS-210/220:  <span style="font-weight: bold;">/usr/local/OPEN_R_SDK/OPEN_R/MS_ERS200/BASIC/memprot</span><br>ERS-7:        <span
+ style="font-weight: bold;">/usr/local/OPEN_R_SDK/OPEN_R/MS_ERS7/BASIC/memprot</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+Next copy the compiled sample from:<br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre>ERS-210/220:  <span style="font-weight: bold;">~/aibo/sample/ers200/BallTrackingHead/MS</span><br>ERS-7:        <span
+ style="font-weight: bold;">~/aibo/sample/ers7/BallTrackingHead7/MS</span><br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+Eject the memstick from the reader, and insert into AIBO. &nbsp; Boot
+AIBO &amp; give it a try!&nbsp; AIBO will stretch, then start scanning
+for the ball.&nbsp; Once found AIBO bleeps and tracks it.<br>
+      <br>
+      <big style="text-decoration: underline;"><big><span
+ style="font-weight: bold;"></span></big></big> </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

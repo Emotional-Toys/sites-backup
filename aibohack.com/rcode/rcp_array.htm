@@ -1,0 +1,402 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Array features
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Array features
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+This page describes the array extensions provided in RCodePlus.
+<P></P>
+
+
+These AP_ extensions provide simple arrays.
+<P></P>
+Array rules:
+<LI>You can have up to 20 arrays, numbered from 1 to 20.
+<LI>Numbers 21 to 25 are special and reserved for telemetry.
+<LI>Before using an array, you must dimension it with AP_DIM (set its size).
+<LI>Arrays are zero based, single dimension arrays of 16 bit numbers.
+<LI>The maximum size is 32767 elements.
+<LI>All array operations have error checking. If you pass invalid arguments, or index beyond the array bounds an error will be trapped.
+<LI>Argument and indexing errors will stop the RCODE interpreter, print an error message on the LAN console and log it to the ERROR.LOG file.
+<LI>There are special features for automatic or manual saving and loading of arrays
+<LI>There are advanced features for using arrays as data structures for advanced mucking of AIBO's internals
+
+<P></P>
+<HR>
+<H2>Array syntax summary</H2>
+All 'size's, 'offset's, 'index's and 'count's are in terms of 16-bit values.
+<pre>
+    // creating, dimensioning
+    AP_DIM array size [1]
+    AP_NEWARRAY array_var size
+    AP_FREEARRAY array_var
+
+    // old style access
+    AP_GET var array offset [index2] // var = array[offset+index2]
+    AP_SET val array offset [index2] // array[offset+index2] = val
+
+    // move and find
+	AP_BMOVE array read_index write_index count
+	AP_SCANFIND var array start_index scan_count find_value
+	AP_SCANCOUNT var array start_index scan_count find_value
+
+    // using arrays as structures
+
+    AP_SETW array offset val1 [val2 [val3 [val4]]]
+    AP_GETW array offset var1 [var2 [var3 [var4]]]
+    AP_SETB array offset val1 [val2 [val3 [val4]]]
+    AP_GETB array offset var1 [var2 [var3 [var4]]]
+	AP_SETDBL array offset intval fractval_times_10000
+
+    AP_PEEK array offset peekpoke_type dindex
+    AP_POKE array offset peekpoke_type dindex
+
+	AP_SAVEARRAY array "filename" [format_value]
+	AP_LOADARRAY array "filename_format" [format_value [actual_size_var]]
+
+    // special case for telemetry
+    AP_SETVARADDR array var_offset var1 [var2 [var3 [var4]]]
+
+    // special case for synvoice
+    AP_GETSYNVOICE array actual_size_var vcmd_number
+    AP_SETARRAYASRAM array offset actual_size
+</pre>
+NOTE: all 'offset's are word offsets (2 bytes per element).
+'var_offset' is for variable pointers (4 bytes per element).
+
+<P></P>
+<HR>
+<H2>Array basics: AP_DIM, AP_SET, AP_GET</H2>
+
+<P></P>
+<H3>AP_DIM - create/dimension an array</H3>
+Assign each array a number (from 0 to 19).
+Call "AP_DIM" and specify the size of the array.
+New arrays are filled with zeros.
+You can call "AP_DIM" again to resize and zero out the array.
+<pre>
+    SET my_array 1  // convenient name for the array
+    AP_DIM my_array 1000        // 1000 elements (indexed 0 .. 999)
+
+</pre>
+
+<H3>AP_GET, AP_SET - accessing elements</H3>
+Use AP_SET and AP_GET to set and get individual elements of an array.
+Invalid calls (missing args) or trying to access an element out of bounds will cause the statement to be ignored (no error report right now).
+
+<pre>
+    AP_GET var array offset [index2] // var = array[offset+index2]
+    AP_SET val array offset [index2] // array[offset+index2] = val
+
+        // 'index2' is optional
+
+  Examples:
+    AP_SET 55 my_array 10           // my_array[10] = value
+    AP_GET local1 my_array 10       // local1 = my_array[10]
+
+</pre>
+
+<H3>AP_DIM - auto-save arrays</H3>
+
+AP_DIM can be used to specify an "auto-save" array.
+You specify "1" as the auto-save flag after the size.
+<pre>
+    SET saved_array 2  // convenient name for the array
+    AP_DIM saved_array 100 1
+</pre>
+Normally AP_DIM will zero fill the initial elements of the array.
+Auto-save arrays will load their data from the memory stick, if there is any.
+The current data will be saved to memory stick when AIBO's chest light is pressed.
+
+<P></P>
+<HR>
+<H2>Block Move</H2>
+
+<H3>AP_BMOVE</H3>
+This is a block move of data within an array.
+<pre>
+	
+	AP_BMOVE array, read_index, write_index, count
+
+	PSEUDO CODE:
+	if (read_index > write_index)
+	{
+		// typically for deleting an element
+		for (int di = 0; di < count; di++)
+			array[write_index + di] = array[read_index + di]
+	}
+	else
+	{
+		// typically for inserting an element
+		for (int di = count-1; di >= 0; di--)
+			array[write_index + di] = array[read_index + di]
+	}
+</pre>
+
+<P></P>
+<HR>
+<H2>Fast Search</H2>
+
+<H3>AP_SCANFIND</H3>
+
+Find the first occurance of a value in an array range (or -1 if not found)
+<pre>
+	AP_SCANFIND var, array, start_index, scan_count, find_value
+
+	PSEUDO CODE:
+	var = -1;
+	for (int i = start_index; i < start_index + scan_count; i++)
+		if (array[i] == find_value)
+			{ var = i; break }
+</pre>
+
+<H3>AP_SCANCOUNT</H3>
+Count up the occurances of a value in an array range
+<pre>
+	AP_SCANCOUNT var, array, start_index, scan_count, find_value
+
+	PSEUDO CODE:
+	var = 0;
+	for (int i = start_index; i < start_index + scan_count; i++)
+		if (array[i] == find_value)
+			var++
+</pre>
+
+<P></P>
+<HR>
+<H2>Arrays in place of structures</H2>
+
+<DIR><I>TO BE DOCUMENTED</I></DIR>
+
+<pre>
+// Example: C data structure looks something like this
+    
+    struct MY_STRUCT
+    {
+		WORD field_w1;       // 2 bytes - offset = 0
+        WORD field_w2;       // 2 bytes - offset = 1
+        BYTE field_b1;       // 1 byte - offset = 2
+        BYTE field_b2;       // 1 byte
+        BYTE pad[2];         // 2*1=2 bytes - offset = 3
+        double field_d[2];   // 2*8=16 bytes - offset = 4, 8
+    }; // total of 24 bytes = 12 WORDs
+
+
+    // MY_STRUCT myst = { 0, 0, 0, ..., 0 };
+    SET myst 15     // some available array number
+    AP_DIM myst 12
+		// NOTE: array size (in bytes) is size of AP_DIM times two.
+
+    // myst.field_w1 = 10
+    // myst.field_w2 = 20
+    AP_SETW myst 0 10
+    AP_SETW myst 1 20       // byte offset = 2
+    AP_SETW myst 0 = 10
+
+    // myst.field_b1 = 30; myst.field_b2 = 40
+    AP_SETB myst 2 30 40       // byte offset = 4,5 [set bytes together]
+
+    // myst.field_d[1] = 2.5
+	AP_SETDBL myst 8 2 5000
+		// NOTE: AP_SETDBL use 8 byte doubles, and word indexes
+
+    // notice all "AP_SET*" variants are slightly different be careful!
+
+
+<H3>AP_SETDBL</H3>
+
+<pre>
+	AP_SETDBL array offset intval fractval_times_10000
+
+    // array is an array of 16 bit words
+    // doubles are 8 bytes (4 words)
+    // array[offset,offset+3] = (double) intval + fractval_times_10000 / 10000;
+
+<H3>AP_SETW, AP_GETW</H3>
+<H3>AP_SETB, AP_GETB</H3>
+Set or get up to 4 values in one line.
+Arrays are treated as word arrays for figuring out 'offset's (even when accessing bytes).
+
+<pre>
+    AP_SETW array offset val1 [val2 [val3 [val4]]]
+    AP_GETW array offset var1 [var2 [var3 [var4]]]
+    AP_SETB array offset val1 [val2 [val3 [val4]]]
+    AP_GETB array offset var1 [var2 [var3 [var4]]]
+
+</pre>
+
+<H3>AP_PEEK, AP_POKE</H3>
+
+<pre>
+    // new 2.51 format
+    AP_PEEK array offset peekpoke_type dindex
+    AP_POKE array offset peekpoke_type dindex
+
+    array_offset is a word offset
+
+	peekpoke_type:
+    1 : Locomotion Parameters, dindex = 0 to 44, array size = 392 bytes
+            [PEEK, or POKE if you are careful]
+    2 : Walk Parameters, dindex = 0 to 11, array size = 256 bytes
+            [PEEK, or POKE if you are careful]
+
+    [others TBD]
+    NOTE: only supported on the 2x0 AIBOs at the current time
+
+    Support structures:
+    LOCOPARAM
+        email me for info
+
+    WALKPARAM
+        email me for info
+
+</pre>
+
+<H3>AP_SAVEARRAY, AP_LOADARRAY</H3>
+
+<pre>
+	AP_SAVEARRAY array "filename"
+	AP_SAVEARRAY array "filename_format" format_value
+	AP_LOADARRAY array "filename"
+	AP_LOADARRAY array "filename_format" format_value [actual_size_var]
+
+    NOTE: "filename_format" should only include one sprintf() format
+        for an integer (eg: "%d", "%04d" or "%x").
+    NOTE: "filename" or "filename_format" must start with "/MS/"
+</pre>
+
+<P></P>
+<HR>
+<H2>Array data telemetry (2.51)</H2>
+You can use arrays to transfer data quickly across the LAN.
+See the sample code in the new AiboRemote.
+
+<P>Notes</P>
+<UL>
+<LI>You can send the array commands via the LAN telnet socket to initialize the array.
+<LI>Use array numbers 21 to 25 for arrays created on the PC.
+<LI>There are two kinds of arrays, raw and variables.
+<LI>Raw arrays are typically filled in by your RCODE program. The PC program can send a telemetry request to get the current array data.
+<LI>Variable arrays require a little setup, but after that don't require any running RCODE to operate.
+You place the variable addresses in the array using AP_SETVARADDR.
+When the PC sends a telemetry request to get the data, AIBO will build a reply based on the current values of those variables.
+<LI>Only use global variables with AP_SETVARADDR. System variables (like "Pink_Ball") can be used as well.
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,487 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ "Life Plus" Aibo Life (1 or 2) Plus, Explorer Plus
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ "Life Plus" Aibo Life (1 or 2) Plus, Explorer Plus
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>New: be sure to use the latest 'A' version for a bug fix that makes audio capture much more reliable.
+It should work with all known cores (even original model ERS-210s that haven't had a firmware update).
+If you still have problems with your AIBO crashing, please send me an email.
+</DIR>
+
+The "Life Plus" family supplements existing AiboWare to add interesting new features, most significantly LAN support.
+Through the Wireless LAN you can use <A HREF="aiboscope.htm">AiboScope LIVE!</A> to observe what your AIBO is doing, in real time.
+<BR>
+There are some other functionality tweeks (especially for AiboLife 1 Plus).
+<P></P>
+NOTE: unlike other AiboPet personalities, these are <B>not</B> RCode based, so they will not work on a $34 RCODE/PMS stick.
+<BR>
+<P></P>
+
+<HR>
+<H2>Supported AIBOs</H2>
+
+<P></P>
+<DIR><font color=red><B>You must own the proper red memory stick to install the Plus additions</B></font></DIR>
+<DIR><font color=red>Do not try to install these additions to another stick. The $34 PMS/RCODE stick will <B>NOT</B> work.</font></DIR>
+<DIR> Before installing the software, be sure your stick has the proper "ERF-" number on the stick's label.</DIR>
+
+<UL>
+<LI><IMG SRC="../gfx/icon_210.gif"><IMG SRC="../gfx/icon_220.gif"> - <A HREF="lifeplus.htm#RECOGPLUS">Aibo Recognition</A> (requires Recognition ERF-<B>210</B>AW<B>06</B> stick)
+<LI><IMG SRC="../gfx/icon_210.gif"><IMG SRC="../gfx/icon_220.gif"> - <A HREF="lifeplus.htm#ALP2">Aibo Life 2</A> (requires AiboLife 2 ERF-<B>220</B>AW<B>01</B> stick)
+<LI><IMG SRC="../gfx/icon_210.gif"><IMG SRC="../gfx/icon_220.gif"> - <A HREF="lifeplus.htm#EXP">Explorer</A> (requires Explorer ERF-<B>220</B>AW<B>02</B> stick)
+<LI><IMG SRC="../gfx/icon_210.gif"><IMG SRC="../gfx/icon_gap.gif"> - <A HREF="lifeplus.htm#ALP1">Aibo Life 1</A> (requires AiboLife ERF-<B>210</B>AW<B>01</B> stick)
+<LI><IMG SRC="../gfx/icon_110not.gif"><IMG SRC="../gfx/icon_310not.gif"> - other models not supported
+</UL>
+
+<P></P>
+NOTE: also be sure to check out <A HREF="../2or3/patches.htm">Patch Central</A> for additional patches you can apply.
+
+
+<a name=CAMERA>
+<P></P>
+<HR>
+<H2>New feature: Camera Settings!</H2>
+<P></P>
+After you install the latest version (2.52) of LifePlus, you can run the \CUSTOM\PLUSCON.EXE program on the stick to set various things.
+One of the most important is the camera settings.
+<P></P>
+The simple way to adjust for dark rooms, is to set "Gain" to 3 (high gain) and the shutter speed to 1 (slow speed).
+<P></P>
+The more elaborate way is to run the <A HREF="../2or3/camcheck.htm">CamCheck</A> RCodePlus program on a PMS/RCODE stick first.
+Aim your AIBO at a colored background and take a lot of photos. Then examine the photos in your PC,
+and pick the right camera settings and then use PLUSCON to set them on your LifePlus stick.
+
+<P></P>
+<HR>
+<A name=RECOG>
+<A name=RECOGPLUS>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Recognition Plus</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<P></P>
+
+Recognition Plus is adds the following features to a Recognition stick (ERF-210AW06):
+<UL>
+<LI>LAN support for AiboScope LIVE! and AiboCam
+<LI><font color=red>NEW: </font>Camera Settings Adjustment (use PLUSCON.EXE)
+<LI>BONUS: ERS-220 mode
+</UL>
+NOTE: the volume settings (using PLUSCON) and the top 10 voice command matches in AiboScope are not supported in the current version of Recognition Plus.
+
+<P></P>
+<HR>
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+<LI>An ERS-220 model AIBO (see disclaimer)
+<LI>An Aibo Recognition stick (ERF-210AW06) - $99
+<LI>A memory stick reader to install the software (Sony brand recommended)
+<LI>A charging station (for self-charging) is recommended
+</UL>
+<P></P>
+
+<H3>BONUS FEATURE: ERS-220 support</H3>
+The ERS-210 is officially supported by the Recognition AiboWare.
+The ERS-220 is suppored as a hack on top of the 210 support.
+<BR>
+It (like all AiboPet AiboWare) is not officially supported or endorsed by Sony.
+When run in your ERS-220, it will act very much like an ERS-210.
+<BR>
+The extra hardware of the 220 (extra LEDs, switches) is not exploited.
+The personality is the same "Barbie"-like personality.
+<P></P>
+I recommend trying it (at least once) on the ERS-220 if you already have the appropriate hardware/software
+(ie. you have a 210 and 220 and already have the Recognition stick).
+Although possible to use if you only have an ERS-220, I can not recommend it because it is a very incomplete hack.
+When run on a 220, it will often hang and not react to inputs.
+The "find the charger" feature appears to work rather well.
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+NOTE: Recognition Plus is only available as a "patch", you must have the Recognition software already running on your stick.
+<UL>
+<LI>Backup your Recognition stick as a safety precaution.
+<LI>Check the pink stick and make sure it says "ERF-210AW06". Recognition Plus will not work on any other stick.
+<LI>Put the stick into your computer's stick reader
+<LI>Download <A HREF="RecognitionPlus252A.zip">RecognitionPlus252 'A'.zip</A> (about 1/2 MB)
+<LI>Unzip this file to the root of the memory stick. WinZip will ask you to replace existing files. Answer "Yes to all".
+<LI>Perform any of the optional installation steps described below.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO.
+</UL>
+<P></P>
+
+<HR>
+<H2>Optional Installation Steps:</H2>
+<UL>
+<LI>For LAN support: Copy a working <A HREF="wlanconf.htm">WLANCONF.TXT</A> to the memory stick.
+<LI>Tweek the features of your AIBO: run the \CUSTOM\PLUSCON.EXE program on your memory stick.
+Only the camera and volume settings can be changed.
+<LI>Run ACustomZ to customize the sounds and Barbie's voice.
+</UL>
+
+
+<P></P>
+<HR>
+<A name=LIFE2>
+<A name=ALP2>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>AiboLife 2 Plus</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+AiboLife 2 Plus is adds the following features to an AiboLife 2 stick (ERF-220AW01):
+<UL>
+<LI>LAN support for AiboScope LIVE! and AiboCam
+<LI>Volume level adjustments (use PLUSCON.EXE)
+<LI><font color=red>NEW: </font>Camera Settings Adjustment (use PLUSCON.EXE)
+<LI>Includes motion training fix (version 1.1 of AiboLife 2)
+<LI>Does not alter the existing personality of your AIBO
+</UL>
+
+<P></P>
+<HR>
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+<LI>An ERS-220 model AIBO
+<LI>An AiboLife 2 stick (ERF-220AW01) - $90
+<LI>A memory stick reader to install the software (Sony brand recommended)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+NOTE: AiboLife 2 Plus is only available as a "patch", you must have the AiboLife 2 software already running on your stick.
+<UL>
+<LI>Backup your AiboLife 2 stick as a safety precaution.
+<LI>Check the pink stick and make sure it says "ERF-220AW01" (AiboLife any language). AiboLife 2 Plus will not work on any other stick.
+<LI>Put the stick into your computer's stick reader
+<LI>Download <A HREF="Life2Plus252A.zip">Life2Plus252 'A'.zip</A> (about 1/2 MB)
+<LI>Unzip this file to the root of the memory stick. WinZip will ask you to replace existing files. Answer "Yes to all".
+<LI>Perform any of the optional installation steps described below.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO.
+</UL>
+<P></P>
+
+<HR>
+<H2>Optional Installation Steps:</H2>
+<UL>
+<LI>For LAN support: Copy a working <A HREF="wlanconf.htm">WLANCONF.TXT</A> to the memory stick.
+<LI>Tweek the features of your AIBO: run the \CUSTOM\PLUSCON.EXE program on your memory stick.
+Only the camera and volume settings can be changed.
+</UL>
+
+<P></P>
+<HR>
+<A name=EXP>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Explorer Plus</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<DIR>NOTE: the Explorer personality shares a lot with the Gentle/NiceGuy personality of AiboLife 2.
+Despite the name, Explorer Plus is considered a "Life Plus" enhancement.
+</DIR>
+Explorer Plus is adds the following features to an Explorer stick (ERF-220AW02):
+<UL>
+<LI>LAN support for AiboScope LIVE! and AiboCam
+<LI><font color=red>NEW: </font>Camera Settings Adjustment (use PLUSCON.EXE)
+<LI>Volume level adjustments (use PLUSCON.EXE)
+</UL>
+
+<P></P>
+<HR>
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+<LI>An ERS-220 model AIBO
+<LI>An Explorer stick (ERF-220AW02) - $90
+<LI>A memory stick reader to install the software (Sony brand recommended)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+NOTE: Explorer Plus is only available as a "patch", you must have the Explorer software already running on your stick.
+<UL>
+<LI>Backup your Explorer stick as a safety precaution.
+<LI>Check the pink stick and make sure it says "ERF-220AW02" (Explorer any language). Explorer Plus will not work on any other stick.
+<LI>Put the stick into your computer's stick reader
+<LI>Download <A HREF="ExplorerPlus252A.zip">ExplorerPlus252 'A'.zip</A> (about 1/2 MB)
+<LI>Unzip this file to the root of the memory stick. WinZip will ask you to replace existing files. Answer "Yes to all".
+<LI>Perform any of the optional installation steps described below.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO.
+</UL>
+<P></P>
+
+<HR>
+<H2>Optional Installation Steps:</H2>
+<UL>
+<LI>For LAN support: Copy a working <A HREF="wlanconf.htm">WLANCONF.TXT</A> to the memory stick.
+<LI>Tweek the features of your AIBO: run the \CUSTOM\PLUSCON.EXE program on your memory stick.
+Only the camera and volume settings can be changed.
+</UL>
+
+<P></P>
+<HR>
+
+<P></P>
+<HR>
+<A name=LIFE1>
+<A name=ALP1>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>AiboLife 1 Plus</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+AiboLife 1 Plus is adds the following features to an AiboLife 1 stick (ERF-210AW01):
+<UL>
+<LI>LAN support for AiboScope LIVE! and AiboCam
+<LI>Volume level adjustments (use PLUSCON.EXE)
+<LI><font color=red>NEW: </font>Camera Settings Adjustment (use PLUSCON.EXE)
+<LI>Other PLUSCON.EXE features:
+<UL>
+<LI>Freeze evolution and Freeze personality changes
+<LI>Behavior options for freeze name-registration
+<LI>Behavior options for quick name-registration and quick photo
+</UL>
+</UL>
+
+<P></P>
+<HR>
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210 model AIBO (other models not supported)
+<LI>An AiboLife 1 stick (ERF-210AW01) - $50
+<LI>A memory stick reader to install the software (Sony brand recommended)
+</UL>
+<P></P>
+
+<HR>
+<H2>Installation:</H2>
+NOTE: AiboLife1 Plus is only available as a "patch",
+you must have the AiboLife or AiboLife1 Plus (2.50) software already running on your stick.
+It will not change any of the personality settings.
+<BR>NOTE: if you have a very old (before 2002) release of AiboLife1 Plus,
+you should restore a "virgin" stick image before proceeding (see AiboSite.com).
+<UL>
+<LI>Backup your AiboLife 1 stick as a safety precaution.
+<LI>Check the pink stick and make sure it says "ERF-210AW01" (AiboLife any language). AiboLife 1 Plus will not work on any other stick.
+<LI>Put the stick into your computer's stick reader
+<LI>Download <A HREF="Life1Plus252A.zip">Life1Plus252 'A'.zip</A> (about 1/2 MB)
+<LI>Unzip this file to the root of the memory stick. WinZip will ask you to replace existing files. Answer "Yes to all".
+<LI>Perform any of the optional installation steps described below.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO.
+</UL>
+<P></P>
+
+<HR>
+<H2>Optional Installation Steps:</H2>
+<UL>
+<LI>For LAN support: Copy a working <A HREF="wlanconf.htm">WLANCONF.TXT</A> to the memory stick.
+<LI>Tweek the features of your AIBO: run the \CUSTOM\PLUSCON.EXE program on your memory stick. See below for details.
+<LI>For a different personality: Use the Browser's Brain Surgery feature to change the stage/personality if you don't want a Gentle/NiceGuy adult.
+<LI>For a different language: download the proper language addon and unzip it on top of the existing stick:
+</UL>
+
+<P></P>
+<HR>
+<H2>AiboLife 1 Plus - PLUSCON.EXE</H2>
+
+<center>
+<BR><IMG SRC="ss_pluscon.gif"></BR>
+</center>
+These features impact the functionality of the AIBO software by selectively turning off things you may not like.
+If you turn off all the features (and set the Volume levels to Default), the AiboLifePlus personality will function just like a normal AiboLife personality.
+
+<H3>Camera Settings</H3>
+
+See instructions at the <A HREF="index.html#CAMERA">top of the page</A>.
+
+<H3>Evolution Control</H3>
+<UL>
+<LI>Freeze Evolution - will prevent AIBO from evolving to a new stage
+<LI>Freeze Personality Changes - will prevent AIBO from changing personality
+<BR>These are normally used together (either both on or both off)
+</UL>
+
+<H3>Volume Control</H3>
+Use the four sliders to adjust the volume of the four preset volume levels.
+After adjusting the levels, you can use the AIBO recharging station to pick which of the four levels you wish.
+<BR>
+The buttons "Loud", "Quiet" and "Default" will set good initial values. You can adjust the levels from there.
+<BR>
+NOTE: Using the "Loud" setting for a long time may be bad for your AIBO's speaker and your nerves (it is very loud).
+
+<H3>Behavior Control</H3>
+<UL>
+<LI>Quick Pictures - just say "Take a Picture". AIBO will take a picture and give the snapshot sound (no head bopping or head pressing required).
+<LI>Quick Name Registration - just say "Name Registration" - wait for a single gesture (instead of three) and start recording the new name (no head pressing required).
+<LI>Freeze Name Registration - will disable the "Name Registration" command (even if the dog is unnamed).
+</UL>
+NOTE: turning on "Quick Name Registration" will make it easier for AIBO to be accidentally renamed. If this is a problem, use the "Freeze Name Registration" option.
+
+<H3>Customized Sounds</H3>
+If you have customized your boot sound, you should copy the BOOT.WAV file from your backup. This file is found in the "\OPEN-R\MW\DATA\P" folder.
+<BR>
+If you have system sound ("SysODA") customization of the very old AiboLife Plus (1.1 or 1.3), please use the <A HREF="../2or3/customz.htm">ACustomZ</A> tool instead.
+
+<P></P>
+<HR>
+<H2>FunPack owners</H2>
+
+If you update the software on your AiboLife stick, the AIBO Fun Pack may complain about corrupt files.
+
+<P></P>
+The Fun Pack will warn you with a "File check" alert, and ask you whether to "Restore Files" or "Cancel".
+
+<DIR>Do <B>not</B> Restore Files. Select Cancel instead.</DIR>
+Follow the instructions below to update the backup copy on your hard drive. You will only have to do this once.
+
+<H3>To update the backup copy</H3>
+
+<P></P>
+Steps:
+<LI>Put the AiboLife memory stick in the stick reader
+<LI>Run the Fun Pack
+<LI>In the Fun Pack main screen, pick the "Tools" button
+<LI>Select "Export AIBO Data" and save the AIBO's data to a file (saves diary data and photos)<BR>
+NOTE: if you have multiple personalities, you will have to pick the right one
+<P></P>
+<LI>Now select, "Erase AIBO Data". This will erase the AIBO's diary as well as the memory stick backup
+<LI>Select "Import AIBO Data" and pick the file you saved earlier. This will restore the diary info
+<LI>Next time you insert the memory stick, it will backup what is on there now (eg: AiboLife Plus)
+
+<P></P>
+If the AIBO diary information is not important to you, skip steps saving and restoring and just Erase AIBO Data.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

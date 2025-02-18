@@ -1,0 +1,304 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YAPT = Yet Another Pleo Tool (1.0 and 1.1 compatible with Babe)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YAPT = Yet Another Pleo Tool (1.0 and 1.1 compatible with Babe)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+
+<P></P>
+<CENTER>
+<TABLE width=70% border=20 bgcolor=#008000 cellspacing=10 cellpadding=20>
+<tr><td colspan=1>
+WARNING: This software is old and obsolete and kept here for the convenience of existing Pleo owners.
+It may be removed at any time.
+<A HREF="transition.htm">Please click here for more info.
+</TD></TR>
+</TABLE></CENTER>
+
+<P></P>
+
+<P></P>
+<H2>Overview</H2>
+YAPT is a simple tool for creating very simple entertainment personalities for Pleo.
+<BR>
+YAPT is not a replacement for more powerful Pawn programming tools that will be released in the future by UGOBE.
+<BR>
+YAPT is used to define or modify the behavior logic of the personality.
+YAPT does not create or modify resources like sounds or motions, but exploits the resources from an existing personality.
+<P></P>
+YAPT can be used with pre-existing personalities like Babe (the tutorial), Holiday Pleo (Xmas songs) or PleoPM (the default personality).
+YAPT can also be used with MySkit created motions.
+<BR>
+First work through the YAPT tutorial below using the Babe sample personality.
+<BR>
+Many thanks to DogsBody for the MySkit tool and the P3D simulator included with YAPT.
+<P></P>
+
+<H2>Installation and first time running</H2>
+
+<H3>Hardware Required</H3>
+<UL>
+<LI>A Pleo robot. Either the older (1.0.2) or latest (1.1) firmware will work with the Babe personality.
+<LI>A Pleo compatible SD card with at least 8MB free.
+<LI>SD card reader attached to a Windows PC (USB 2.0 speed recommended but not critical)
+<LI>A Windows PC to run the customization program (YAPT.EXE and P3D.EXE)
+</UL>
+
+<H3>Initial Testing</H3>
+
+Before running YAPT install and run the demo Babe personality.
+This will ensure your SD card is fast enough to run the personality, and give you a general idea of how the Babe personality will react in response to touching its sensors.
+<BR>
+If you haven't already downloaded and run Babe, <A HREF="babe.htm">click here for full instructions</A>.
+<B>If you recently upgraded to the 1.1 firmware, be sure you have the 1.1 version of Babe.</B>
+<P></P>
+If you have problems, please refer to the general <A HREF="babe.htm">Babe Pleo personality webpage</A>. Your SD card may not be fast enough.
+
+<H2>Customizing Behavior with 'YAPT'</H2>
+
+<H3>Starting YAPT</H3>
+<UL>
+<LI>When you are bored with the current Babe behavior, change it!
+<LI>Turn off the robot (switch on bottom) and remove the SD card.
+<LI>Insert the SD card into the SD card reader of your Windows PC.
+<LI>If it doesn't pop up immediately, open the topmost folder of the SD card.
+<BR><CENTER><IMG SRC="ss_yapt1.jpg"><BR>.Y and .URF filenames are different with 1.1 version</CENTER>
+<LI>Double-click on the YAPT.EXE program.
+<LI>If YAPT doesn't automatically open up with the main selector screen, double click on "babe11.y" file.
+<LI>YAPT should open up with the main selector screen.
+<BR><CENTER><IMG SRC="ss_yapt2.jpg"></CENTER>
+</UL>
+
+<H3>How to edit behavior</H3>
+<H4>Steps: (mini-tutorial)</H4>
+<BR><CENTER><IMG SRC="ss_yapt3.jpg"></CENTER>
+<UL>
+<LI>Step#1: First select a condition ("When Pleo feels this").
+You can press the "+" and "-" buttons to expand the categories.
+<BR>
+For example, expand the "Body" category by pressing the "+" button.
+Then select "Head Tap".
+<LI>Step#2: There are 3 reaction boxes. When you select a condition, it will show you the current reactions.
+<BR>
+For the mini-tutorial we will focus on the top reaction box.
+When Pleo detects a "Head Tap" it will perform the motion "misc_owww". Babe will cry "oww" and move a little.
+<LI>Step#3: you can delete the current behavior by pressing the top "Delete" button. Don't do that now.
+<LI>Step#4: press the top "Add" button.
+This will bring up a list of available motions.
+Double click on one you like, for example "long_bigbuttheads".
+<BR>
+See below for more options and tips.
+<P></P>
+<LI>Normally you will repeat this process to add more actions and customize more conditions.
+<LI>When you are done, press the "Save program to SD card" button on the bottom. Then press "OK".
+<LI>If necessary 'stop' the SD card (required for some computers) and remove the SD card from the SD card reader and insert in Pleo SD slot.
+<LI>Test it on Pleo. Try tapping Pleo's head and it should say "oww" followed by the new actions you added.
+<P></P>
+<LI>NOTE: YAPT personalities will only do one thing at a time.
+If it is reacting to a head tap, it will ignore other input until it is done performing the skit, and then it will wait for new input.
+<LI>TIP: For each condition, there are up to 3 reaction boxes ("Pleo does this", "or this", "or this"). Start with the first one.
+Empty boxes are ignored. If there are 2 or 3 boxes with actions in them, Pleo will pick one box at random.
+All the actions in a box are played in order, without interruption.
+<LI>TIP: Each reaction box will hold at most 6 actions.
+A technical and practical limit.
+Try to keep most reactions relatively short.
+Pleo ignores new input when performing all the actions in the reaction box.
+</UL>
+
+<H3>Adding Actions</H3>
+<BR><CENTER><IMG SRC="ss_yapt4.jpg"></CENTER>
+There are YAPT features to help you decide which actions to use.
+If you select a sound or motion and press the "Preview" button, it will run P3D (thanks to DogsBody) that will perform the sound/motion on your PC.
+<UL>
+<LI>TIP: when selecting/previewing actions, you can double click an action to quickly add it.
+If the "Auto Preview" checkbox is checked, a single click will preview it (if you like it, double click to add it).
+<LI>Action Categories include:
+<UL>
+<LI>Sounds - sounds specific to the personality (eg: Babe sound files). Sounds are audio only.
+<LI>Motions - motions specific to the personality (eg: motions that perform with Babe sounds). Motions typically include built-in sounds.
+<LI>Sound Library - generic sounds similar to the default personality
+<LI>Motion Library - generic motions similar to the default personality
+<LI>Commands or Command Library - animation 'commands'. Advanced.
+To start with, try to use "Motions" or "Motion Library" actions instead.
+</UL>
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Other Tips</H2>
+<P></P>
+
+<P></P>
+<H3>TIP: Mac/Linux etc</H3>
+The editing tools (YAPT.exe and P3D.exe) are Windows programs.
+If you want to run them under other operating systems, look for a Windows emulator (eg: Virtual PC under MacOS or WINE and variants under Linux).
+In general having a dual-boot Windows machine is recommended.
+
+<P></P>
+<H3>TIP: Starting YAPT taking too long?</H3>
+For convenience and simplicity the Pleo personality and the editing tools (YAPT.exe and P3D.exe) are stored in same folder on the SD card.
+Running programs from the SD card may be slow depending on your hardware.
+Also if your SD card is too small and you can't fit the programs on the SD card.
+<BR>
+To fix this, move the two .EXE files (YAPT.EXE and PLEO3D.EXE) to somewhere on your harddrive.
+Leave PLEO.URF and PLEO.Y on the SD card (in the top-most folder).
+You can run YAPT.EXE from the hard drive, and when it asks, open the "PLEO.Y" file on the SD card (in the top-most folder). This should be much faster.
+
+<P></P>
+<HR>
+<P></P>
+
+<P></P>
+<H2>Advanced YAPT Tips</H2>
+<P></P>
+
+<CENTER>
+<TABLE width=60% border=10% bgcolor=#F08080 cellspacing=10 cellpadding=20>
+<TR><TD colspan=1>
+<CENTER>
+<H1>The following is for for Pleo firmware 1.0.2 Only</H1>
+The following applies to the 1.0.2 firmware only.
+1.1 compatible versions may be updated in the future.
+</TD></TR>
+</TABLE></CENTER>
+<P></P>
+
+<P></P>
+<H3>Using with MySkit</H3>
+
+Described in the <A HREF="http://www.dogsbodynet.com/myskit/index.html">MySkit tutorial</A>.
+Please use the <A HREF="yapt01a.zip">yapt01a.zip</A> stand-alone install for use with MySkit or other existing PLEO.URF files.
+(YAPT is the same as the Babe tutorial, but with helper .AMX files and an empty PLEO.Y file).
+<BR>
+Typically you should use the skits listed in the "Motions" category.
+They will perform the motions you edited with MySkit along with any associated sound.
+If you pick from the "Sounds" category, it will play the sound only (no motion).
+<P></P>
+
+<H3>Advanced: Using YAPT on other personalities</H3>
+You can use YAPT (and the 2 YAPT .AMX modules) to customize other personalites.
+This includes the official UGOBE personalities (Holiday Pleo, Default personality) as well as personalities created with PleSkit.
+Please look at this <A HREF="yapt2.htm">advanced tutorial page</A> for details.
+
+<P></P>
+<H3>Advanced: Using library animation 'commands'</H3>
+TODO: to be described later, with examples.
+<BR>
+For now pick items from the 'Motion Library' with similar names.
+
+</BODY>
+</HTML>

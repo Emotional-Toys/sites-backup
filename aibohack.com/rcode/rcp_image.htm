@@ -1,0 +1,288 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Image (camera) features
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Image (camera) features
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+This page describes the image (camera) extensions provided in RCodePlus.
+<P></P>
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>JPEG images</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>AP_SNAPSHOT, AP_Snap_Ready, AP_SAVEIMAGE</H2>
+
+Normally you will use the LAN protocol to download camera data to your PC.
+You can also snapshot camera data and save it to the memory stick.
+You would use this to implement a "Take a Picture" command on AIBO.
+It can also be used in conjunction with the LAN protocol.
+<P></P>
+You start with the command "AP_SNAPSHOT". It takes no arguments.
+<BR>
+AP_Snap_Ready is an read-only input variable.
+It is cleared (set to 0) when AP_SNAPSHOT is called, and is set (set to 1) when the camera data has been captured.
+Be sure to wait for this to change to 1 before calling AP_SAVEIMAGE.
+<BR>
+The command "AP_SAVEIMAGE:#" will save the last captured snapshot (large image format only) to memory stick.
+The one argument is a number that specifies the file name (data will be saved in \PHOTOS\SNAP####.JPG on the memory stick).
+See the "Obey Cat" sample for an example of saving this data (in response to "Take a Picture").
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Color Detection</H1>
+</center></td></tr> </TABLE>
+<HR>
+NOTE: RCodePlus 2.51 and later
+<P></P>
+
+<H2>Background</H2>
+There are up to eight color ranges that can be detected by AIBO.
+You can view the main colors using the Browser (View/Color Preferences).
+You can perform simple changes to the color ranges by using AiboTool.
+More advanced customization can be done by hacking on the "TR.CT" file (email me if you want details).
+<P></P>
+AIBO saves JPEG images at a resolution of 176x144 pixels.
+The color detection is 88x72 (4 camera pixels per color detected).
+The data is stored in an 88x72 array of bytes (6336 bytes).
+Each byte contains 8 bits that indicate if that color pixel matches one of the eight color ranges:
+
+<pre>
+        bit 0 = pink ball
+        bit 1 = another pink ball
+        bit 2 = ?
+        bit 3 = flesh
+        bit 4 = favorite (typically blue)
+        bit 5 = un-favorite (typically yellow/green)
+        bit 6 = ?
+        bit 7 = ?
+</pre>
+A value of 3 (bit 0 + bit 1) is commonly used to match the PinkBall.
+
+<P></P>
+<HR>
+<H2>AP_COLORLVL</H2>
+
+NOTE: Fav_Color and Unfav_Color are no longer supported. AP_COLORLVL can be used to provide similar (and more powerful) functionality.
+<P></P>
+AP_COLORLVL can return the current color level for a single color.
+The color level is a value between 0 and 255 which represents the number of color pixels that match. This is pre-calculated by AIBO so it is very fast.
+
+<pre>
+    AP_COLORLVL bit_index output_variable
+        // bit_index = 0 -> 7
+
+    //example:
+    AP_COLORLVL 4 fav // fav in range 0 to 255
+    IF fav > 25 THEN
+        // do something when FAV color is seen
+    ENDIF
+
+    //example:
+    AP_COLORLVL 0 pink1
+    AP_COLORLVL 1 pink2
+    SET pinkBoth pink1
+    ADD pinkBoth pink2 // pinkBoth in the range 0 to 510
+    IF pinkBoth > 25 THEN // or some other threshold
+        // saw something pink
+    ENDIF
+</pre>
+No color snapshot is required. The current color detection values are used (which are updated 25 times per second).
+<BR>
+This can be used to infer the distance to a known size object like the ball.
+
+<HR>
+<H2>AP_GETCOLORARRAY, AP_COLORFND, AP_COLORGRID</H2>
+For more complicated color analysis, you will want to snapshot the color image first.
+
+The technique is similar to the JPEG capture, but you store it in an array for future use with AP_COLORFND or AP_COLORGRID.
+
+<pre>
+    // prepare array (do this once)
+    SET cdt ? // some available array number
+    AP_DIM cdt 3168 // 88*72/2
+
+    AP_GETCOLORARRAY cdt
+
+</pre>
+
+<H2>AP_COLORFND</H2>
+AP_COLORFND is used to find the centroid of the color image (the "x,y" center based on a mask).
+This assumes there is one object of that color in the camera's field of view.
+
+<pre>
+	AP_COLORFND cdt_array colormask x y count
+        // inputs:
+            // cdt_array = array captured as described above
+            // colormask = byte color mask for all the colors you care about
+                    // (eg: 3 for pink ball)
+        // outputs:
+            // x, y = returns center of matching color
+            // count = returns count of matching pixels [if 0 then x,y invalid]
+</pre>
+From this x,y position, and the position of the head, you can determine where the object is.
+The "count" can be used to infer the distance to a known size object like the ball.
+<BR>
+NOTE: The "count" value provides similar information to the AP_COLORLVL value, but is a true count of pixels (in the range 0 to 6336).
+The algorihtms are different, but 1 AP_COLORLVL point is approximately 4 pixels. APL_COLORLVL maxes out at 255 (approximately 1/6 of the camera image filled with a single color).
+
+<H2>AP_COLORGRID</H2>
+AP_COLORGRID reduces the 88x72 image to a smaller grid for analysis in your RCODE program.
+
+<pre>
+	AP_COLORGRID cdt_array colormask result_array xgrid ygrid
+        // inputs:
+            // cdt_array = array captured as described above
+            // colormask = byte color mask for all the colors you care about
+                    // (eg: 3 for pink ball)
+            // xgrid = number of horizontal pieces
+                // ideally an even divisor of 88 (eg: 2, 4, 8)
+            // ygrid = number of vertical pieces
+                // ideally an even divisor of 72 (eg: 2, 3, 4, 6, 8)
+
+        // outputs:
+            // result_array = array of values,
+                // dimensioned to be at least xgrid * ygrid elements
+                // element order is:
+                    // x=0, y=0
+                    // x=1, y=0
+                    // x=2, y=0
+                    // ...
+                    // x=xgrid-1, y=0
+                    // x=0, y=1
+                    // x=1, y=1
+                    // ...
+                    // x=xgrid-2, y=ygrid-1
+                    // x=xgrid-1, y=ygrid-1
+
+</pre>
+<P></P>
+<H2>Sample code</H2>
+Take a look at the R-CODE.R that comes with a "virgin" RCodePlus 2.51 image. It includes several tracking test programs.
+Ideally run with the LAN or debug terminal monitoring PRINT statements.
+Stick a pink ball in AIBO's face, then hold his head for 5 seconds to enter tracking test mode.
+Then you can press his Right front paw for detailed tracking mode (the 210 LEDs will light up depending on which region of the camera he sees pink).
+Or press his Left front paw for head tracking.
+Hold the head for 5 seconds to leave a mode.
+
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

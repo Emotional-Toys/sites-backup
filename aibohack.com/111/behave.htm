@@ -1,0 +1,253 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+The AIBO Behavior Model - Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+The AIBO Behavior Model - Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+AIBO's behavior is defined in a number of Behavior files (/open-r/app/conf/table/b_*).
+The behavior files vary depending on the dog's stage and personality variant.
+<p>For example the Child#2 AIBO personality uses the following behavior files:</p>
+<pre>
+    b_at_c2 - main autonomous mode
+    b_ea_c - emotions in autonomous mode
+    b_st_c2 - main station behavior
+    b_sb_c2 - main walking/soccer behavior
+
+    b_es_c - emotions in station mode
+    b_av_c - walking around mode (exploring and avoiding obstacles)
+    b_ps_c - general position changes (including getting up)
+    b_rf_c - some additional general reactions
+
+    In addition to common files such as "b_system", "b_mode" etc.
+</pre>
+<p><b>States:</b></p>
+Each behavior file contains a number of States (or Nodes). Execution of a behavior begins at State # 0.
+State transitions are done through a system of Patterns and Arcs.
+Patterns are the conditions under which a state transition will take place.
+Arcs are the way of transitioning from one state to another.
+<p>Examples of patterns are: (shown in the BASIC-like syntax the ERS-11x Browser dumps)</p>
+<pre>
+        if ON_STATION
+        if PAT
+        if SCMD_FOOBAR
+        if TRACKING(BALL)
+        if system(?)
+
+      NOTE: all of the "system(?)" conditions are not yet deciphered.
+</pre>
+<p><b>Patterns:</b></p>
+Each Pattern has one or more Arcs attached to it.
+The Arcs are attached to the Pattern with a weight, or probability.
+When a Pattern's condition is true, one of the Arcs is picked based
+on a random number and each Arc's probability. Each Arc has an optional
+action to perform and a new state to goto.<br>
+<pre>
+Example #1:
+        if HIT then play 7SUP1Y_REF; goto 50
+
+    The Pattern's condition is "if HIT".
+    There only one Arc with 100% probability.
+
+    When the dog is HIT, the dog will perform the action named "7SUP1Y_REF",
+     and then move to state 50.
+
+Example #2:
+        if PAT then
+            [50%] then play 7JOY1Y_REF; goto 11
+            [50%] then play 7JOY2Y_REF; goto 11
+
+    The Pattern's condition is "if PAT". There are two Arcs, each with
+    a 50-50 chance of being chosen. One of the two actions is performed,
+    and in either case we move to state 11.
+</pre>
+    
+<p><b>Standard Patterns:</b></p>
+AIBO supports the following list of conditionals based on interaction with the human, and other things.  Patterns also have arguments to make some of the condiitons more complicated (details not completely figured out yet).
+<pre>
+
+    Pattern Condition           Description
+
+    CLICK                      Very quick hit (shorter than HIT)
+    HIT                        Quick hit (longer than CLICK, shorter than PAT)
+    PAT                        Praise pat (longer than HIT)
+    LONGPAT                    Very long pat
+
+    LOUD                       Heard a sound
+    SCMD_*                     Many sound commands
+
+    OFF_STATION                Dog is off the charging station
+    ON_STATION                 Dog is on the charging station
+
+    BALL                       I see the ball
+    BALL_LOST                  I don't see the ball
+    FAV                        I see my favorite color
+    FAV_LOST                   I don't see my favorite color
+    UNFAV                      I see my hated color
+    UNFAV_LOST                 I don't see my hated color
+
+    MOVE_OBJ, MOVE_OBJECT      I see a moving object
+    NEAR_OBJ                   I see a near object
+    NEAR_OBJ_LOST              I don't see a near object
+
+    OBSTACLE                   Blocked by obstacle
+    SAFE                       Not blocked by obstacle
+
+    LIFT                       Dog rapidly lifted up
+    VIBRATION                  Stop shaking me!
+    FALLDOWN_FRONT             I've fallen on my face
+    FALLDOWN_LEFT              I've fallen on my left side
+    FALLDOWN_REAR              I've fallen on my butt
+    FALLDOWN_RIGHT             I've fallen on my right side
+    RISE                       Dog is standing after falling down
+    JAM                        Your finger's jammed in the servo
+    HOLDDOWN                   ?
+
+    ACT_OFF                    ??
+    ACT_ON                     ??
+    EMERGENCY                  ? something really bad
+    ENERGY_FULL                ? battery full
+    ENERGY_LOW                 ? battery low
+    KEYSW_ON                   Pause switch
+    READY_CHARGE               ??
+    SIT, SLP, STA, STD         ??
+    TIMEOVER                   ??
+    WTEMP_OVER                 ??
+        
+</pre>
+
+<p><b>Learned Behavior:</b></p>
+When decoding Learned Data, an additional format including 2 percentages
+is shown. The first number is the instinctive probability, and the
+second number is the learned percentage.
+<pre>
+Example #3:
+        if system(3) then
+            [50%->39%] play BTAIL_SIT; goto 701
+            [50%->61%] play BTAIL_SIT3; goto 701
+
+    The dog has received more praise when it performs "BTAIL_SIT3"
+    than "BTAIL_SIT".  The probability of perfoming "BTAIL_SIT3"
+    has been increased so it will do it more often in the future.
+</pre>
+
+For convenience, the probabilities are displayed as a percentage. In fact, the probabilties do not always add up to 100.
+
+<p></p>
+Disclaimer: all of the details of the behavior state machine are still not deciphered.
+
+</BODY>
+</HTML>

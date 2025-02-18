@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboQuad IR Codes
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboQuad IR Codes
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The RoboQuad modulation scheme is the same as the RSV2 12-bit encoding described
+at the top of the <A HREF="ir_codes_v2.htm">IR Codes V2 page</A>.
+The first 4 bits are "0110" for the RoboQuad (hex $6).
+
+<P></P>
+
+<H3>Movement Commands (direction pad)</H3>
+<UL>
+<LI>$600 + SHIFT ($600,$620,$640,$680) = stop
+<LI>$601 + SHIFT ($601,$621,$641,$681) = forward
+<LI>$602 + SHIFT ($602,$622,$642,$682) = backward
+<LI>$603 + SHIFT ($603,$623,$643,$683) = left
+<LI>$604 + SHIFT ($604,$624,$644,$684) = right
+<LI>$605 + SHIFT ($605,$625,$645,$685) = top+left
+<LI>$606 + SHIFT ($606,$626,$646,$686) = top+right
+<LI>$607 + SHIFT ($607,$627,$647,$687) = bottom+left
+<LI>$608 + SHIFT ($608,$628,$648,$688) = bottom+right
+<BR>
+SHIFT = $00 (shift level 1, LED off), $20 (shift level 2, green), $40 (shift level 3, orange) or $80 (shift level 4, red).
+</UL>
+<H3>Special</H3>
+<UL>
+
+<LI>$609 + SHIFT ($609,$629,$649,$689) = rotate clockwise
+<LI>$60A + SHIFT ($60A,$62A,$64A,$68A) = rotate counter-clockwise
+<LI>$610 + SHIFT ($610,$630,$650,$690) = autonomy button
+<LI>$611 + SHIFT2 (n/a,$631,$651,$691) = activity shift combinations
+<LI>$612 + SHIFT2 (n/a,$632,$652,$692) = aggression shift combinations
+<LI>$613 + SHIFT2 (n/a,$633,$653,$693) = awareness shift combinations
+<LI>$614 + SHIFT ($614,$634,$654,$694) = program button
+<LI>$615 + SHIFT ($615,$635,$655,$695) = program play button
+<LI>$616 + SHIFT ($616,$636,$656,$696) = demo
+<BR>
+SHIFT = $00 (shift level 1, LED off), $20 (shift level 2, green), $40 (shift level 3, orange) or $80 (shift level 4, red).
+<BR>
+SHIFT2 = $20 (shift level 2, green), $40 (shift level 3, orange) or $80 (shift level 4, red). When unshifted, toggles one attribute, then sends current personality state.
+</UL>
+
+<H3>Personality setting (when any of 3 personality buttons pressed, no shift)</H3>
+<UL>
+<LI>$6C0 + activity_level * 1 + awareness_level * 4 + aggression_level * $10
+<BR>activity/awareness/aggression level = 0 (low, green), 1 (medium, orange) or 2 (high, red)
+</UL>
+NOTE: the current levels are stored in the remote.
+Pressing any one of the 3 personality buttons will toggle that one level
+(low->med->high->low...)
+and send the new combined settings (one new level, and the two old ones) in one 12-bit IR code.
+
+<H3>To Examine (may do nothing)</H3>
+<UL>
+<LI>UNKNOWN: $60B + SHIFT = ?
+<LI>UNKNOWN: $60C + SHIFT = ?
+<LI>UNKNOWN: $60D + SHIFT = ?
+<LI>UNKNOWN: $60E + SHIFT = ?
+<LI>UNKNOWN: $60F + SHIFT = ?
+<LI>UNKNOWN: $617 and higher = ?
+<LI>UNKNOWN: $611,$612,$613 = ? (not normally sent)
+<LI>UNKNOWN: level = 3 ???
+<BR>
+
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

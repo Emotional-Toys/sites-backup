@@ -1,0 +1,279 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Pleo Software Overview - including default Pawn Personality
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Pleo Software Overview - including default Pawn Personality
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+DISCLAIMER: the SDK (PDK) needed to program the Pleo in Pawn has not been released by UGOBE.
+This page describes some of the technology and things you can do with the default Pleo personality stored inside each and every Pleo.
+<BR>
+GEEK WARNING: You don't need this information for casual use.
+<P></P>
+<CENTER>
+WARNING: Work in Progress - documentation may be incomplete in some areas
+</CENTER>
+<P></P>
+<HR>
+<P></P>
+
+<H2>Pleo.URF files</H2>
+
+Typically a Pleo program (personality) runs from a large file named "PLEO.URF" stored at the topmost folder of the SD card.
+When no PLEO.URF file is found on the SD card, the personality from the internal 4MB data store is used.
+This default personality ("PLEOPM") is described in more detail below.
+
+<H3>What's inside a .URF file</H3>
+The URF file is a collection of 'resources'.
+<BR>
+A resource can be a sound to play, a motion skit to perform, a Pawn script to run or other things.
+The resource types used are described below.
+<BR>
+URF files a UGOBE proprietary file format, but the format is relatively simple.
+Each resource has a type (eg: sound, motion, script, command, property), a name and a number (ie. a resource ID for fast lookup).
+<BR>
+You can browse and preview most of these resources using YAPT and P3D (sounds, motions, commands).
+When extracted as files, the MySkit tool can play back sound (.USF) and motion (.UMF) files.
+For creating your own personalities, use MySkit to create the motions and sounds.
+The behavior/script can be glued together with existing tools like PleoMap (for simple cases and testing) and YAPT (for slightly more complicated cases).
+Eventually UGOBE will release a PDK which lets you write your own Pawn scripts.
+<BR>
+
+<H3>Sounds</H3>
+Individual sounds are stored in a UGSF resources or USF files. They are very similar to WAV files.
+Sounds are sampled at 11025 samples-per-second. They can either be 8 bit mono, or 4 bit ADPCM mono.
+<H3>Motions</H3>
+Motions are stored in UGMF resources or UMF files.
+They are a proprietary format, that specify which servos to move and when.
+They also can contain references to one or more sound resources to play when the Pleo is moving.
+<H3>Animation 'Commands'</H3>
+The two UGOBE personalities (PLEOPM the default personality and the Holiday personality) also use animation 'commands'.
+These are combinations of conditions and motions and sounds.
+These can be previewed partially in YAPT with P3D.
+They are used for different things.
+See the discussion below on personality Analysis.
+<H3>Properties</H3>
+Properties are where Pleo stores permanent information like age and 'learned' information.
+They are also used for communication between scripts.
+They are stored to non-volatile storage (either the internal data store or the SD card).
+<H3>Scripts - Pawn</H3>
+Scripts are compiled PAWN programs.
+Source is <B>not</B> provided.
+However they are relatively easy to disassemble into an opcode listing, but they can be hard to understand.
+Hopefully UGOBE will consider releasing the source to the default personality.
+It is not very large or complicated in the current version.
+<P></P>
+Here's an example of a re-sourced version of one of the 'tricks':
+<font size=-1>
+<DIR>
+<PRE>
+// trx_balance.p - Balancing trick
+// re-sourced from AMX binary
+...
+_getprop(arg1)
+{
+    return property_get(arg1);
+}
+
+_setprop(arg1, arg2)
+{
+    return property_set(arg1, arg2);
+}
+
+public main()
+{
+    printf("** bvr main: trx_balance\n");
+    
+    _setprop(property_command_stage, _getprop(property_milestone_param));
+    command_exec(command_trx_balance, 0);
+
+    while (command_is_playing(command_trx_balance))
+    {
+    }
+    _setprop(property_touch_event, 0);
+    _setprop(property_touch_present, 0);
+    _setprop(property_milestone_active, 0);
+    return 0;
+}
+
+public close()
+{
+    _setprop(property_milestone_active, 0);
+    printf("** bvr close: trx_balance\n");
+    return 0;
+}
+
+</PRE>
+</DIR>
+</font>
+
+<H3>"Shadowing"</H3>
+TODO: describe this in more detail
+
+<P></P>
+<HR>
+<P></P>
+
+<H2>The Default personality ("PLEOPM")</H2>
+The default Pleo personality is stored inside Pleo in the internal memory (a 4MB DataFlash).
+The default Pleo personality is a 3.4MB .URF file.
+<BR>
+NOTE: This describes the current version of PLEOPM (the default personality) shipped with the first hatch Pleos.
+An update will be provided by UGOBE some time in 2008 that has many new promised features.
+<P></P>
+
+<A NAME=GRAB>
+<H3>Grabbing the PLEO.URF for the default personality</H3>
+<B>OBSOLETE.</B>
+The updates downloadable from UGOBE contain the PLEO.URF file for the default personality (currently versions 1.0.2 and 1.1).
+It is often called "PLEO.PM".
+
+<P></P>
+<B>WARNING: some of the following information is out of date with the 1.1 version of the firmware.</B>
+<H3>What you can do with it</H3>
+If you place that PLEO.URF file on the SD card (no 'automon.txt'), Pleo will use that personality instead of the builtin one.
+You can tweek that file to change resources and/or script logic.
+This can be complicated.
+<BR>
+You should start using the easier to use tools like MySkit and YAPT.
+You can use YAPT to browse much of the content of this file.
+You shouldn't use this PLEO.URF with YAPT to create a custom personality.
+Instead use the Babe sample or a PLEO.URF created with MySkit.
+It will contain all the generic motions, sounds and commands tacked onto the end of the URF (without some of the complications of "PLEOPM")
+
+<P></P>
+<HR>
+<P></P>
+<H2>The two official URF personalities (so far) - Analysis</H2>
+
+A fast way of understanding the structure of a personality is to browse it with YAPT, and look at the dependencies between resources
+(eg: what sounds are used by what motions, what do the script files need etc)
+<BR>
+There are currently two official URF personalities, the default "PLEOPM" personality and the Holiday personality (XMas songs and dances).
+<A HREF="yapt2.htm">See this page</A> for a mini-tutorial for browsing and customizing prebuild personalities.
+
+<P></P>
+More details to come including dump of resources, cross-reference of what uses what, drives and moods, other properties, animation 'commands' and other random technical topics.
+
+<BR>
+Currently low priority. Please email me if you are interested in this kind of detail.
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

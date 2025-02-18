@@ -1,0 +1,244 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Double Precision Floating Point
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Double Precision Floating Point
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The floating point routines use one array as a FPU (floating point unit) register bank.
+The syntax is rather klunky if you write RCodePlus directly.
+
+Look at the debug code in the default RCodePlus personality (Mini-ObeyCat) for a simple test program.
+
+<P></P>
+<HR>
+<H2>Preparing to use floating point</H2>
+Determine the number of floating point registers you need, and multiply it by 4 (8 bytes per FPU register).
+Use that number (##) in the following code:
+<pre>
+    LOCAL fpu_array 25
+    AP_DIM fpu_array ## // ## = number of FPU registers times 4
+    SET AP_fpu fpu_array // use this array from now on
+</pre>
+All DBL_ operations use indices into this array (that are first multiplied by 8 bytes). So your indices you use start with 0 and go up by 1.
+
+<P></P>
+<HR>
+<H2>Getting values in and out of FPU registers</H2>
+
+To get floating point values in and out of RCODE variables (16 bit signed integers), a simple fixed point representation is used. The <i>int_part</i> is the integer part, and <i>fract_part</i> is the fractional part multiplied by 10000.
+For positive numbers, you can think of it as a "%d.%04d" format.
+Negative numbers get tricky (the int_part carries the sign, the fract_part does not).
+<BR>
+The complete definition is:
+<pre>
+    // float_value = int_part . fract_part
+    if (int_part > 0)
+    {
+        // positive
+	    assert(fract_part >= 0 && fract_part < 10000);
+        float_value = int_part + fract_part / 10000;
+    }
+    else if (int_part < 0)
+    {
+        // negative, fract_part is not signed
+	    assert(fract_part >= 0 && fract_part < 10000);
+        float_value = int_part - fract_part / 10000;
+    }
+    else
+    {
+        // int_part = 0, in this case, fract_part is signed
+	    assert(fract_part > -10000 && fract_part < 10000);
+        float_value = int_part + fract_part / 10000;
+    }
+</pre>
+    
+<P></P>
+Try to keep values in the FPU registers for as long as you can, and only convert to RCODE variables when you need to.
+<BR>
+
+Setting a FPU register (DBL_SET) comes in two forms, a constant or from another FPU register.
+Retreiving the current value (int_part, fract_part, perhaps with loss of precision) is done with DBL_GET.
+You can 
+<pre>
+	DBL_SET index int_part fract_part // fpu[index] = int_part . fract_part
+	DBL_SET index index2  // fpu[index] = fpu
+
+    DBL_GET index variable_for_int_part variable_for_fract_part
+
+    For example:
+        DBL_SET 1 10 5 // fpu[0] = 10.5
+        DBL_GET 1 a b   // a = 10, b = 5
+</pre>
+<P></P>
+<HR>
+<H2>Binary Operations</H2>
+The format of the binary operations are all the same.
+The first index is the destination (an FPU register), followed by the index of the first operand (an FPU register), followed by either one or two numbers.
+If one number, the second operand is an FPU register.
+If two numbers, the second operand is an immediate constant value (int_part . fract_part)
+
+<pre>
+    DBL_ADD index0 index1 index2 // fpu[index0] = fpu[index1] + fpu[index2]
+    DBL_ADD index0 index1 int_part fract_part // fpu[index0] = fpu[index1] + int_part . fract_part
+
+    For example:
+        DBL_ADD 9 9 1 0 // fpu[9] += 1.0
+</pre>
+All the binary operators have the same format:
+<UL>
+<LI>DBL_ADD : addition
+<LI>DBL_SUB : subtraction
+<LI>DBL_MUL : multiply
+<LI>DBL_DIV : divide
+<LI>DBL_ATAN2 : atan2() = arctan(arg1 / arg2) - in radians
+</UL>
+
+<HR>
+<H2>Unary Operations</H2>
+The format of the unary operations are all the same.
+The first index is the destination (an FPU register), followed by either one or two numbers.
+If one number, the operand is an FPU register.
+If two numbers, it is an immediate constant value (int_part . fract_part)
+
+<pre>
+    DBL_SIN index0 index1 // fpu[index0] = sin ( fpu[index1] )
+    DBL_SIN index0 int_part fract_part // fpu[index0] = sin ( int_part . fract_part )
+
+    For example:
+        DBL_SIN 7 2 // fpu[7] = sin(fpu[2])
+        DBL_EXP 8 1 0 // fpu[8] += e ^ 1 = e
+</pre>
+All unary operators have the same format:
+<UL>
+<LI>DBL_SIN : sin() - in radians
+<LI>DBL_TAN : tan() - in radian
+<LI>DBL_SQRT : square root
+<LI>DBL_EXP : exp() - power of e
+<LI>DBL_LOG : ln() - log base e
+<LI>(oops ASIN/ACOS missing)
+</UL>
+
+<P></P>
+All trig is in radians. All logarithms are in base 'e'.
+Only primary functions are provided.
+You can create other functions (eg: cos()) or constants (e = exp(1), pi=2*atan(1,0)) by combining them
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

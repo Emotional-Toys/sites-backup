@@ -1,0 +1,352 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCode, Master Studio and WiFi LAN card
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCode, Master Studio and WiFi LAN card
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>NOTE:This page for ERS-2x0 and ERS-31x RCODE/RCodePlus only.
+<BR>
+Please refer to separate pages for other models:
+<LI>For the ERS-110,111 - see the <A HREF="../111/yart11x.htm">YART 11x page</A>
+<LI>For the ERS-7 - see the <A HREF="../ers7/yart7.htm">YART 7 page</A>
+</DIR>
+
+This section discusses programming the AIBO using RCode and optionally the AIBO Master Studio ("AMS").
+
+This section discusses programming the AIBO using RCode and optionally the AIBO Master Studio ("AMS").
+If you wish to use existing RCode personalities (like Bender or Obey Cat),
+please goto the general page for the proper model of your AIBO (at top of this page).
+
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#FFC0C0"><tr><td><center>
+<H1>Please Read This</H1>
+</center></td></tr> </TABLE>
+<DIR><B>Ignore the "ERA-MS008" stamped on the back of the pink stick.</B></DIR>
+To run RCode, RCodePlus or OpenR SDK programs you need a pink <B>PMS/RCODE</B> stick.
+When you buy this stick, the model number is "ERA-MS008" for the 8MB size or "ERA-MS016" for the 16MB size.
+Availability varies by country.
+<P></P>
+If you already have a pink stick with "ERA-MS008" stamped on the back, it is probably <B>NOT</B> a PMS/RCODE stick.
+<BR>
+Ignore the "ERA-MS008" stamped on the back.
+Look at the front of the stick instead.
+<BR>
+If there is an "ERF-" model number printed on the sticker on the front, then it is <B>NOT</B> a PMS/RCODE stick.
+Purple/Blue sticks or white sticks will not work either.
+<P></P>
+PMS/RCODE sticks do not have an "ERF-" number, are always pink, and usually have no label or a home made label.
+<P></P>
+<CENTER>
+<IMG SRC="pms.jpg">
+</CENTER>
+
+<P></P>
+<HR>
+<P></P>
+<center>
+<TABLE width=50% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>YART</H1>
+
+<A HREF="yart.htm">YART</A> - Try it (AIBO programming ain't going to get any easier!)</DIR>
+</center></td></tr> </TABLE>
+</center>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>RCode / RCode Plus Info</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H3>YART (Yet Another RCODE Tool - easy AIBO programming)</H3>
+<UL>
+<LI><A HREF="yart.htm">YART overview and guide</A>
+<DIR><LI><A HREF="../111/yart11x.htm">YART 11x</A> - for the ERS-110, ERS-111</DIR>
+<LI><A HREF="yart_tut.htm">YART tutorial</A>
+<LI><A HREF="yart_apg.htm">YART_APG guide</A> (Audio Personality Generator)
+<LI><A HREF="yart_advanced.htm">YART advanced topics</A>
+
+</UL>
+
+<H3>General, RCODE, RCodePlus</H3>
+<UL>
+<LI><A HREF="rc_vcmd.htm">RCODE Voice Commands</A>
+<LI><A HREF="rc_aibosound.htm">AiboSound Tones</A>
+<P></P>
+<LI><A HREF="rcp_overview.htm">RCode Plus 2.5x (overview)</A>
+<UL>
+<LI><A HREF="rcp_face.htm">Human Face Detection (<font color=red>NEW</font> 2.52)</A>
+<LI><A HREF="rcp_sound.htm">Voice Commands, Tones and other sound features</A>
+<LI><A HREF="rcp_image.htm">Camera capture, color detection and other camera features</A>
+<LI><A HREF="rcp_array.htm">Arrays</A>
+<LI><A HREF="rcp_dbl.htm">Double precision floating point support (<font color=red>NEW</font> 2.52)</A>
+<LI><A HREF="rcp_device.htm">Device control</A>
+<LI><A HREF="rcp_motion.htm">Motion Control</A>
+</UL>
+
+</UL>
+
+<H3>AIBO LAN</H3>
+<UL>
+<LI><A HREF="lan_telemetry.htm">"Telemetry pipe" LAN Protocol (RCodePlus 2.5x)</A>
+<LI><A HREF="index.html#LAN_SAMPLES">PC LAN Tools/Samples (C++)</A>
+<LI>Check the <A HREF="http://www.us.aibo.com/lan/index.php">ClubAibo website</A> for general information about getting you AIBO LAN working.
+</UL>
+
+<H3>Master Studio (1.1)</H3>
+<P></P>
+<UL>
+<LI><A HREF="ams_plus.htm">Master Studio Plus</A>
+<LI><A HREF="ams_samp.htm">Master Studio Samples</A>
+</UL>
+
+<P></P>
+<H3>DogsLife version</H3>
+DogsLife users, please see the <A HREF="../dogslife/index.html">DogsLife all-in-one</A> installation page.
+
+</UL>
+
+<P></P>
+
+<A name=DOWNLOADS>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>RCode Plus - Downloads</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<P></P>
+<H2>Downloads</H2>
+Many personalities come with instructions on how to install RCodePlus.
+If you want to build your own RCodePlus program (with or without Master Studio), you can start with the basic release.
+<BR>
+The basic release includes no RCODE program and no custom motions or sounds.
+The ObeyCat sample is only slightly more advanced than the basic RCodePlus release.
+
+<H3>RCodePlus 2.52 "A"</H3>
+
+RCodePlus 2.52 "A" comes with the <A HREF="rc_vcmd.htm">Extended RCODE</A> voice commands (English).
+The "A" version includes a fix for Audio capture (and other crashes with older cores).
+<BR>
+<UL>
+<LI><A HREF="RCodePlus252A(210).zip">RCodePlus 2.52A (210)</A> - for the ERS-210
+<LI><A HREF="RCodePlus252A(220).zip">RCodePlus 2.52A (220)</A> - for the ERS-220
+<LI><A HREF="RCodePlus252A(31x).zip">RCodePlus 2.52A (31x)</A> - for the ERS-311/312/31L
+</UL>
+
+<P>Other Language Packs</P>
+<UL>
+<LI><A HREF="RCodePlus_lang2e.zip">RCodePlus_lang2e.zip</A> - English Extended RCODE voice commands (default, AP_VLang=3, AP_Vocab=2)
+<LI><A HREF="RCodePlus_lang2j.zip">RCodePlus_lang2j.zip</A> - Japanese Extended RCODE voice commands (AP_VLang=2, AP_Vocab=2)
+<LI><A HREF="RCodePlus_lang3e.zip">RCodePlus_lang3e.zip</A> - English Minimal voice commands (AP_VLang=3, AP_Vocab=3)
+</UL>
+
+<P></P>
+<DIR><A HREF="older.htm">Older versions</A> of Language packs are available if the RCODE personality supports them</DIR>
+
+<P></P>
+<A name=RCODE_SAMPLES>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>RCode Examples - Source</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H3>YART Examples:</H3>
+<A name=YART_SAMPLES>
+<P></P>
+<DIR>When you first install RCodePlus, it comes with a simple starter personality that is YART enabled. Run \CUSTOM\YART.EXE to customize it.
+</DIR>
+
+<P></P>
+
+<H3>Master Studio Examples:</H3>
+<A name=AMS_SAMPLES>
+<UL>
+<LI><A HREF="Bender250Src.zip">Bender250Src.zip</A> - Bender (25x) Master Studio Source (.BE, .ALB and data files)
+<LI><A HREF="ObeyCat251Src.zip">ObeyCat251Src.zip</A> - Obey Cat Master Studio Source (.BE, .ALB and data files)
+</UL>
+
+<P></P>
+
+<H3>AbNet Examples:</H3>
+<A name=ABNET_SAMPLES>
+<UL>
+<LI>DogsLife source - See <A HREF="http://www.dogsbodynet.com">http://www.dogsbodynet.com</A>
+</UL>
+
+<P></P>
+
+<A name=LAN_SAMPLES>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>LAN Tools - Source</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<P></P>
+<H3>LAN Connection Sample Programs - requires LAN card</H3>
+
+Source for many LAN samples is provided for people programming in C++, Visual C++ or Visual Basic.
+This includes source for programs like AiboRemote and AiboScopeLIVE!.
+Most samples run on a Windows desktop/laptop computer (Windows 95 or later) and use a LAN card to talk to AIBO.
+<BR>
+There are some programs that run on PDAs (CLIE or Windows CE/Pocket PC).
+<P></P>
+
+<UL>
+<LI><A HREF="LAN_SampleCode_252.zip">LAN_SampleCode_252.zip</A>
+</UL>
+<P></P>
+
+See the readme.txt file in the zip file for a list of all the samples.
+Most of the C++ samples use the "AIBOH" helper library for handling the communication with AIBO (both telemetry and RCODE pipes).
+<H3>Some hilights</H3>
+
+"AiboCap" is a very minimal camera capture program (that works with AiboLife Plus or RCode Plus). The specified number of images are captured and are saved as bitmap files on the PC.
+This sample is a command line program (no graphical user interface) written in C++ (with minimal use of C++).
+
+<P></P>
+"AiboRemote" is really three programs in one.
+It will display camera data, get status from AIBO (battery level etc) and let you "drive" your AIBO by pressing buttons.
+When it starts up, you enter AIBO's IP Address and pick from one of the three versions. The Simple version has minimal features, the Soccer version has features optimized for playing with the ball, and the Complex version has the kitchen sink.
+<P></P>
+<center>
+<IMG SRC="ss_remote1.gif"> <IMG SRC="ss_remote2.gif"> <IMG SRC="ss_remote3.gif">
+<BR>(note screen shots are out-of-date)
+</center>
+<P></P>
+
+"AiboPlayR" is a C++ command line program that will download a performance (.WAV + .MTN + .LE2 file) to AIBO and perform it. It uses the ram buffer for speed.
+
+<P></P>
+"AiboRemoteVB" is the one Visual Basic sample.
+It provides similar functionality to the Visual C++ AiboRemote program.
+<BR>
+It is a simple shell, but is very easy to add new features.
+<center>
+<IMG SRC="ss_remotevb.gif">
+</center>
+
+<P></P>
+Please read through the samples, if you have any questions, send me an email.
+Also, for more sophisticated PC processing, I suggest looking into <A HREF="../210/brainbo.htm">BrainBo</A> technology.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

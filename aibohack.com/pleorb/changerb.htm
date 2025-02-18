@@ -1,0 +1,299 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ ChangeRB - PleoRB Personality tells you how it is feeling, and lets you change their moods and DNA
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ ChangeRB - PleoRB Personality tells you how it is feeling, and lets you change their moods and DNA
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+WARNING: Only use with PleoRB (any model: Green, Blue or Pink). Do not use on older Pleo models.
+<BR>
+To determine what your PleoRB is feeling, and read its DNA, you can use the read-only <A HREF="proberb.htm">ProbeRB</A> personality. ProbeRB will not change your PleoRB's brain.
+
+<BR>
+ChangeRB is a personality similar to ProbeRB, but lets you change the properties directly.
+<BR>
+ProbeRB and ChangeRB are spoilers for people who want to raise their PleoRB 100% 'naturally'.
+
+<P></P>
+<HR>
+<P></P>
+
+WARNING: USE AT YOUR OWN RISK.
+<BR>
+ChangeRB changes the property file stored inside your Pleo.
+The chances of corruption are slim, but to be safe, make a backup of the "pm_props.bak" file onto your computer.
+You can get this file after running 'statsRB' or 'ProbeRB' or ChangeRB for the first time.
+
+<P></P>
+<HR>
+<P></P>
+
+<H2>Prerequisites</H2>
+Please start with <A HREF="proberb.htm">ProbeRB</A>.
+<BR>
+Please follow the instructions for ProbeRB first, and run it on your PleoRB.
+<BR>
+It will test out your micro-SD card and give you a general overview of ChangeRB.
+ChangeRB is a super-set of ProbeRB.
+<BR>
+In addition, you will need two of the toys that came with the PleoRB.
+The Mint Leaf is needed to change the health/mood of PleoRB.
+The ID card is needed to change the DNA.
+
+<P></P>
+
+<P></P>
+<H2>Instructions - Preparing the SD card (do this once)</H2>
+<H3>On your computer: (do this once)</H3>
+<UL>
+<LI>Be sure you have installed and run <A HREF="proberb.htm">ProbeRB</A> at least once.
+<LI>Take the micro-SD card you used for ProbeRB and insert it into the card reader on your computer.
+<LI>Insert the micro-SD card into the card reader on your computer
+<BR>
+The micro-SD disk should look something like this:
+<BR>
+<IMG SRC="ss_changerb_setup1.jpg">
+<LI>Drag the "pm_props.bak" file from the micro-SD disk and save it somewhere on your computer.
+This is the heart-and-soul of your Pleo's personality.
+You should never need it, since you can reverse any changes made with ChangeRB, but keeping a backup is a good idea.
+<LI>Delete the "ProbeRB.urf" file from the micro-SD disk.
+<LI>Download this file <A HREF="changerb_v1.zip">changerb_v1.zip</A>
+<LI>Unzip it and place the personality file at the root (top-most) folder of the micro-SD card
+<BR>
+The micro-SD disk should now look something like this:
+<BR>
+<IMG SRC="ss_changerb_setup2.jpg">
+<LI>Remove the micro-SD card from the card reader
+(If your computer complains, do it again but stop the micro-SD drive before removing it)
+</UL>
+
+This micro-SD card now has the ChangeRB personality on it.
+If you insert the micro-SD card inside Pleo it will run the ChangeRB personality. It speaks in English, barely moves, and does not grunt.
+If you don't use the micro-SD inside Pleo, it will run the default personality (sometimes called PLEOPM).
+It moves, grunts, acts like a dinosaur and does not speak English.
+
+<P></P>
+<HR>
+<P></P>
+<H2>Instructions - Running ChangeRB on your PleoRB (do this as often as you like)</H2>
+
+ADVICE: Before running ChangeRB, be sure you have recently played with your PleoRB.
+If it has been inactive, play with it normally first (with no SD card). Feed it. Then press and hold the power button to turn it off like normal.
+ChangeRB will warn if you haven't played with PleoRB today.
+
+<BR>
+Then try ChangeRB (see following instructions) and it will report on the moods and health of the most recent Pleo interactions, and let you change them.
+
+<H3>With your PleoRB:</H3>
+<UL>
+<LI>Remove the PleoRB battery and carefully insert the micro-SD card inside the battery compartment under your PleoRB.
+The card will only go in one way. The micro-SD card label should be facing you.
+<LI>Insert the battery and press the power on button. The green LED should turn on.
+
+<LI><B>IMPORTANT:</B> keep Pleo laying on its side.
+<LI>Wait until PleoRB wakes up and starts talking to you ("Welcome to ChangeRB version ...).
+This is the Change interface. You press the buttons on the bottom of PleoRB's feet to do things.
+It is the same as ProbeRB but with one extra foot.
+<BR><IMG SRC="pleorb_on_side3.jpg">
+</UL>
+
+<H3>Just like ProbeRB</H3>
+<UL>
+<LI>If you press Pleo's head/chin it will speak the instructions.
+<LI>If you press Pleo's front left paw (the one with the serial number), it will describe Pleo's health and moods.
+<LI>The health and mood report (front left paw) is one you should use often.
+If it says "pleo is in bad shape", then you need to improve the health/mood/feed level of your Pleo before.
+It will say "warning" for the properties that are too low. These can be changed directly.
+<LI>If you press Pleo's front right paw, it will describe Pleo's growth status.
+<LI>If you press Pleo's rear left paw, it will describe Pleo's DNA settings.
+</UL>
+
+<H3>New to ChangeRB: Changing Health and Mood (Mint Leaf Required)</H3>
+<UL>
+<LI>Press Pleo's right rear paw. It will ask you to insert either the Mint Leaf or the ID card.
+Place the mint leaf in Pleo's mouth. Leave it in his mouth for the entire procedure.
+<LI>After instructions, it will tell you about each of the health and mood properties, starting with 'mood'.
+<BR><IMG SRC="pleorb_on_side4.jpg">
+<LI>After it speaks the current value, you can:
+<UL>
+<LI>Press the UP foot pad (Pleo's front left) to increase the value. If Pleo says "WARNING", you should increase the value until it stops warning you.
+<LI>Press the DOWN foot pad (Pleo's rear left) to decrease the value.
+<LI>Once you are happy with the value, press the GOTO NEXT foot pad (Pleo's front right)
+</UL>
+<LI>Keep advancing through the properties pressing GOTO NEXT and change the values you like.
+<LI>When done, Pleo will say "to save, press both rear feet within 10 seconds."
+<LI>Press <B>both</B> rear feet at the same time and the changes will be made.
+<LI>You can turn off your Pleo or continue to make other changes.
+</UL>
+
+<H3>More tips for changing values</H3>
+<UL>
+<LI>Most values are in the range 0 to 100%. Each change will be by 20%.
+<LI>For more precise control, hold Pleo's tail and the change will be 1%.
+<LI>Not all properties work best at 100%. Experiment.
+<LI>The injury property is how badly Pleo is injured. If injured, press the Down foot pad until the injury is healed.
+</UL>
+
+<H3>New to ChangeRB: Changing Pleo's DNA (ID card required)</H3>
+<UL>
+<LI>The same procedure can be used to change Pleo's DNA.
+<LI>Press Pleo's right rear paw. It will ask you to insert either the Mint Leaf or the ID card.
+This time insert the ID card.
+<LI>Pleo will allow you to change most of the DNA values. Press the UP foot to make the DNA value go up, press DOWN to make it go down.
+Press GOTO NEXT to go to the next DNA value.
+<LI>Values choices are normally High, Normal, or Low.
+<LI>The DNA gender can not be changed with ChangeRB.
+<LI>Experiment with different combinations.
+<LI>Some DNA values are not currently used by the default personality.
+</UL>
+
+<H3>When done with ChangeRB, go back to normal:</H3>
+<UL>
+<LI>When done making changes, simply press the power button (no need to hold it).
+<LI>Wait until Pleo shuts down and the green LED turns off.
+<LI>Remove the PleoRB battery and carefully remove the micro-SD card.
+<LI>You can return the battery and use PleoRB normally.
+</UL>
+You can repeat this process again-and-again to check on the progress of your Pleo.
+See the ProbeRB page for a short cut to avoid excessive micro-SD swapping.
+<BR>
+
+<H3>Experimental ChangeRB features (other toys required)</H3>
+<UL>
+<LI>There are two experimental features. If you want to experiment with them, press Pleo's right rear paw, but insert a different RFID toy.
+The procedure is the same as the others, but the property values are different.
+<LI>If you insert the tug-of-war toy, you can change the obedience level. Currently there are only two usual settings, Normal and Perfect.
+A normal Pleo will ignore you 50% of the time. A perfect Pleo will not ignore you and perform 100% of the time.
+If the current health, mood or feed levels are too low, Pleo will ignore you regardless.
+<LI>If you insert the Rock Salt, you can change the internal RTC clock.
+This gives you more control over Pleo's internal clock than the noon button on his foot.
+You can set the current time and date (down to the minute).
+<BR>
+NOTE: if you change the RTC value, Pleo will normally drop down to a low feed level.
+It will treat the change as you not playing with Pleo for a long time.
+Play with him normally for a short while, then run ChangeRB again to update any low mood and health values that make him "in bad shape".
+<BR>
+NOTE: changing the RTC has other ramifications in the evolution of your PleoRB's personality.
+Advanced experimentation only. Use at your own risk.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

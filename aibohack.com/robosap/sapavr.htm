@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboSapienPet's SuperSapien Mod#1 - SapAVR
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboSapienPet's SuperSapien Mod#1 - SapAVR
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Please read the overview and general warnings about this Do-It-Yourself modification on the <A HREF="supersap.htm">main SuperSapien mods page</A>.
+<BR>
+These pages give much general advice, as well as instructions for how to modify your robot in a way similar to mine.
+I've tried to pick the very lowest cost and generally available construction alternative (ie. no replacement sockets, burn holes in the back of the robot to mount parts etc).
+Your esthetics may vary!
+<BR>
+There are many other variations possible, depending on what <i>you</i> want to do to make your modified robot a unique creation.
+<P></P>
+
+<HR>
+<H2>WORK IN PROGRESS</H2>
+The main hardware modification is complete. The firmware is still being written/enhanced.
+<BR>
+The instructions here are intended to be minimal (leaving flexibility in part placement and wiring alternatives).
+If you have suggestions for improvement of the instructions, please let me know.
+<BR>
+Any future improvements will be in part based on the general community interest in the SapAVR modification.
+<P></P>
+
+<HR>
+<H2>Preparation!</H2>
+
+<H3>Parts Needed</H3>
+
+What you need:
+<UL>
+<LI>A RoboSapien Robot (that you <I>can</I> afford to replace)
+<LI>a 20 pin Atmel AVR chip "AT90S2313" (any speed)
+<LI>a 20 pin socket for the chip
+<LI>a small perf board for mounting the socket
+<BR>There are other wiring variations possible, that's up to you.
+<LI>thin wire (eg: wire-wrap wire)
+<LI>A means of programming the 20 pin AVR chip (see below)
+<LI>A PC or serial terminal for debugging (debug console)
+<LI>A MAX233A level shifter for the debugging console, a power supply, and PC serial connector [temporary construction allowed]
+</UL>
+
+<P></P>
+<H3>How to program the chip</H3>
+
+NOTE: for the early adopter version, it is up to you to figure out the best and most economical way of programming the chip. Eventually I will add in-circuit serial chip programming to the design.
+<P></P>
+You will need a way of programming the AVR chip.
+If you already have access to a 'universal' chip programmers, you should see if it supports the Atmel AVR series.
+Otherwise you can either buy a dedicated programmer, or build a serial one very easily.
+<P></P>
+<LI><A HREF=http://www.iguanalabs.com>Iguana Labs</A> sells a stand alone programmer that programs the 20 pin Atmel chips (including the AVR, $79). Works off the serial port.
+<LI><A HREF=http://www.futurlec.com/ATDevBoard.shtml>Futurlec</A> sells a dev board for the AVR'2313 ($20, thanks to knitsu for finding this one).
+Works off the parallel port.
+<LI>If you want to build one completely from scratch, there are several suggestions on <A HREF=http://elm-chan.org/works/avrx/report_e.html>this webpage</A>. Not recommended for beginners.
+
+<P></P>
+<B>Please Read This</B>
+If this is the first time you have programmed the AVR chip, I strongly suggest you try out the firmware (see 'The Firmware' below), compiling it up using the free tools, and burning an AVR '2313 chip using your choice in hardware.
+Try this before modifying your RoboSapien robot.
+
+<P></P>
+<H3>Buying the parts</H3>
+In the USA, <A HREF=http://www.jameco.com>Jameco</A> sells the 10MHz AT90S2313 for $3.25 per chip (20 pin DIP).
+<BR>
+They also sell the MAX233A chip (MAX233CPP for $5.75 each) as well as the cheaper MAX232 chip (capacitors needed).
+<P></P>
+Prices and availability of this part will vary by country.
+<BR>
+Either the full speed 10MHz (AT90S2313-10) or low speed 4MHz (AT90S2313-4) should work. In the SapAVR circuit, the chip runs at 4MHz using a lower VCC voltage (around 3.3 or 3.5V).
+
+<P></P>
+<H3>Decide where to mount the chip and serial connector</H3>
+
+Remove the back case (4 screws) and take a look at the RoboSapien's inside.
+You have to mount the 20 pin AVR somewhere, as well as a connector for the PC serial port (3 pins minimum).
+<P></P>
+MY CONSTRUCTION NOTES:
+<BR>
+I melted a few holes in the back (by the speaker) to mount the AVR chip, and a 6 pin header for the external serial connector.
+<CENTER>
+<IMG SRC="sapavr_holeinback.jpg">
+ <IMG SRC="sapavr_holeinback2.jpg">
+ <IMG SRC="sapavr_finalback.jpg">
+</CENTER>
+
+<P></P>
+
+<H3>The PC connection</H3>
+The level shifter for the PC debug console is an external circuit.
+It is needed for writing your own software for the SuperSapien.
+It can be built in a permanent fashion, or temporary. I've use an experimenters socket board for mine, which is easy to build.
+<CENTER><IMG SRC="sapavr_serial.jpg"></CENTER>
+NOTE: in future serial programming may added (see schematic below, don't rely on this photo)
+
+<P></P>
+<HR>
+<H2>The Modification</H2>
+
+Now is the time to perform the modification.
+
+<P></P>
+MY CONSTRUCTION NOTES:
+<BR>I used wirewrap wire and a simple socket.
+<CENTER>
+<IMG SRC="sapavr_loosewire.jpg">
+</CENTER>
+
+General disclaimer: Other installation variants are possible.
+
+<P></P>
+<H3>Prepare the small circuit board</H3>
+Now is a good time to solder a 20 pin socket to a small board.
+This will make it easier to solder connections.
+NOTE: use a high quality socket (ZIF if you plan on switching the chip a lot)
+NOTE: other wiring options are possible (eg: wire wrap socket if you have the room)
+
+<P></P>
+<H3>Shell - attaching board and serial connector</H3>
+If not done already, remove the 4 screws holding on the back.
+I hope you have decided where you are going to mount the addon part.
+My approach was to place the AVR chip right above the speaker (temporarily remove the 3 screw speaker holder as well), and the external connector (for the PC serial terminal) on the side.
+
+MY CONSTRUCTION NOTES: (see photos above)
+<BR>I placed a second 20 pin socket in the first one to add height.
+<BR>A hot soldering iron will quickly melt the plastic shell for creating holes
+<BR>A hot glue gun will attach parts (and fill in any unwanted holes)
+<BR>For the serial connector, only 3 signals are required (PB.5, PB.6 and Gnd).
+<BR>For future programming I exported 6 signals (Gnd, Reset, PB.5, PB.6, PB.7 and VCC)
+<BR>You may want to consider what other periherals you plan on adding later, and pick the location on the robot accordingly.
+
+<P></P>
+<H3>Chop Chop</H3>
+Now the destruction really begins...
+<BR>
+You need to cut several wires.
+In this diagram, notice the places marked with red Xs.
+Each of those wires must be cut (and most rewired to the SapAVR board)
+Cut the wires at least 1/4" next to the connector, leaving room to connect to both sides of the cut wire.
+<CENTER><IMG SRC="sapavr_chopchop.jpg"></CENTER>
+NOTE: I know the RoboSapien has all those sockets, but replacment sockets are hard to find, and not needed for the minimal rewiring done here.
+Your esthetics may vary!
+
+<H3>Wire it up</H3>
+<CENTER>
+<IMG SRC="sapavr_pointtopoint.jpg">
+<CENTER><IMG SRC="sapavr_wireup.jpg"></CENTER>
+</CENTER>
+Next there is wiring from the cut wires and other places on the original board to the new SapAVR board.
+Be sure to leave enough wire for future access and maintenance.
+However don't make the wiring longer than necessary (especially the CLKIN wire).
+
+Here's a schematic/wiring diagram:
+<P></P>
+<CENTER><IMG SRC="sapavr_schematic.gif"></CENTER>
+
+WIRING NOTES:
+<UL>
+<LI>The Ground signal can come from a connector, or alternatively wire it to the back of the PCB.
+<LI>Try to keep the CLKIN wire as short as possible
+<LI>The ROUT and LOUT signals are soldered to the wire stub on the connector of the original PCB (count 4 from the top)
+<LI>Tip: Wire the four switch grounds together first, then connect them with a single wire to the ground signal (NOTE: allows for easier un-modification)
+</UL>
+
+
+<P></P>
+<H3>Wiring up the debug terminal</H3>
+
+A MAX233A level shifter is needed to connect the 3.3V signals from the AVR chip to your PC's serial port.
+<BR>
+Here's a schematic/wiring diagram for the level shifter using the single chip MAX233 chip:
+<P></P>
+<CENTER><IMG SRC="sapavr_ser3_max233.gif"></CENTER>
+<BR>
+WIRING NOTES:
+<UL>
+<LI>I suggest building this external to the robot. Once the firmware is debugged, you won't need the level shifter.
+<LI>The circuit can be powered from 5V or 3.3V. That is officially below spec, but it works for me.
+<LI>The cheaper and easier to find, MAX232 part can be used instead of the MAX233. It requires 4 external capacitors.
+Check <A HREF="http://www.lookrs232.com/rs232/level_converters.htm">this webpage</A> for specifics of the MAX232 chip.
+Although a little more expensive, I prefer the MAX233 chip because it is easier to wire up.
+<LI>If having problems with the 9 pin connection to the PC, try swapping pins 2 and 3.
+<LI>Plan for changing this circuit in the future. I want to add another two signals to turn it into an in-circuit programmer.
+</UL>
+
+<P></P>
+<HR>
+<H2>The Firmware</H2>
+
+You may want to do this part first, before physically modifying your robot.
+
+<H3>Download Firmware</H3>
+
+SapAVR0.1 Firmware
+"SapAVR0.1" is the first incomplete release of the firmware.
+<UL>
+<LI>Hex firmware ready for program onto AVR '2313 chip - coming later.
+<LI><A HREF="sapavr_fw01src.zip">sapavr_fw01src.zip</A> - Source code - preview release
+</UL>
+NOTE: Source code and firmware is copyrighted by me.
+You are free to use it for any non-commercial use.
+<BR>
+If you make any general improvements that may be useful to others, please email them to me. You are under no obligation to do so (this is not GPL).
+
+<P></P>
+<H3>Download Free Tools</H3>
+
+To compile the source you need the free WinAVR compiler.
+You can download the WinAVR compiler and other tools from
+<A HREF=http://winavr.sourceforge.net>http://winavr.sourceforge.net</A>.
+Here's the install guide (parts 1 to 4 apply) 
+<A HREF=http://winavr.sourceforge.net/download/install_config_WinAVR.pdf>
+install_config_WinAVR.pdf </A>.
+
+<P></P>
+The toolset can be complicated to setup, and is overly large for what is needed.
+We only need the command line tools (stop after chapter 4 of the install guide -- command line make, compile, assemble, link, dumpobj).
+<P></P>
+The "Programmers Notepad" graphical environment is not needed.
+<BR>
+The low cost 90S2313 does not support debugging features
+<BR>
+The AVR-GCC library is not used in SapAVR. Not only is it very big for the small 90S2313 chip, but it doesn't provide useful features for typical SapAVR programs.
+
+<H3>Modifying and adding your own C++ code</H3>
+More details to be written. Look at 'sap1.cpp' and 'console.cpp' for the bulk of the smarts.
+<BR>
+Size of code is an issue. There is only 2KB of code space on the AVR chip and the compiler can generate fat code. With all the features turned on, you can run out of space.
+Some parts of the firmware are in assembler for size reasons.
+
+<P></P>
+<HR>
+
+<H2>Final Note</H2>
+Any future improvements will be in part based on the general community interest in the SapAVR modification.
+[ie. if other people do the hardware mod, and at least try to write some software]
+If you have suggestions for improvement of the instructions, please let me know.
+<P></P>
+<HR>
+
+
+
+</BODY>
+</HTML>

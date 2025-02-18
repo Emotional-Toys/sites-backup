@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ CLIE SpyStillCam (2.1)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ CLIE SpyStillCam (2.1)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<CENTER>
+<IMG SRC="ss_spystillcam.jpg">
+<BR>
+</CENTER>
+<DIR><I>Version 2.1 - with JPEG compression</I></DIR>
+
+A simple CLIE SpyCam and PC based SpyCamWatcher program.
+Supports UX, NZ, NX(V) model CLIEs.
+This is similar to the old version 0.2 SpyCam.
+It is called Spy<I>Still</I>Cam since the data is transfered from the CLIE to the PC as small JPG still images.
+Frame rate will vary depending on the speed of the CLIE and polling rate.
+<P></P>
+A Windows based PC with WiFi card is required.
+Transmits JPEG compressed video. You can get several frames per second by adjusting the sampling rate and lowering the compression quality.
+<BR>
+You can change the camera settings from the PC (and run the CLIE unattended).
+
+<P></P>
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>CLIE with the built in camera (NX-V, NZ, UX)
+<LI>Power cable for the CLIE is recommended. It can run from battery (and will not auto-shutoff until the batteries get very low)
+<LI>CLIE WiFi card (built in for the UX, WL100/110 card for the NX/NZ)
+<P></P>
+<LI>A Windows PC
+<LI>A WiFi card for your PC
+<LI>NOTE: Your CLIE WiFi and PC WiFi must be on the same network (ie. so you can 'ping' your CLIE from the PC)
+</UL>
+
+<P></P>
+<H2>Installation</H2>
+<UL>
+<LI>Download this file <A HREF="SpyStillCam21.zip">SpyStillCam21.zip</A> to your computer and unzip it.
+<LI>Install the SpyStillCam.prc on your CLIE.
+<LI>Put the SpyCamWatcher.exe program somewhere on your PC.
+</UL>
+
+<P></P>
+<H2>Running It</H2>
+<UL>
+<LI>If running in 'ad-hoc' mode, be sure your PC's WiFi card is running (link light blinking first)
+<LI>Run SpyStillCam on the CLIE. It should connect and show you the preview window.
+<LI>SpyStillCam also shows a guess of the CLIE's IP address at the top of the screen.
+<I>This is just a guess</I>. To be sure run the "View Log" option from the Network Prefs panel.
+<LI>The CLIE is now a spy cam. You should plug it into a charger and hide it somewhere.
+Running from battery for an extended period of time is not recommended.
+<P></P>
+<LI>Run the SpyCamWatcher.exe program on the PC.
+<LI>Enter CLIE's IP address (usually the "Possible IP address" displayed on the CLIE itself)
+Press "Connect".
+<LI>If you get connection problems, check to see if you can 'ping' your CLIE using that IP address.
+<LI>Assuming there no connection problems -- watch the video!
+<LI>The default starts with 1 frame per second. Press the "Auto fast" button to run the video at full speed.
+<LI>You can also adjust the CLIE camera settings remotely from your PC.
+<LI>The Quality setting adjusts the quality of the JPEG compression. Lower quality means smaller image size, and faster frame rates.
+<LI>NOTE: when exiting the app, you may have to press on the main launcher icon for 1 second before it registers.
+</UL>
+
+Settings names are based on the UX/NX7x camera (eg: White Balance names and Effect names).
+They are slightly different for the NZ90. For the NZ90 the preview window shows the reticule and flash status which is somewhat annoying.
+
+<P></P>
+NOTES: uses TCP/IP port 51009. If you are using a fire-wall or similar program, please be sure to enable that port.
+<P></P>
+
+</BODY>
+</HTML>

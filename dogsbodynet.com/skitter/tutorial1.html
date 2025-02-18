@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter Tutorial #1 - Create Your First Skit!</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table border="0" cellpadding="20" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#0a6cce" valign="top"><big><b><font
+ size="+1"><big><font color="#ffffff"><big>Skitter Tutorial #1 - Create
+Your First Skit!</big> </font></big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><br>
+      <u><i><big><big><b>Creating Your First Skit!</b></big></big></i></u><br>
+      </p>
+      <p>Any AIBO owner has probably noticed that <big><b>AIBO moves!</b></big>
+&nbsp;&nbsp; <br>
+      </p>
+      <p>AIBO moves a lot in fact.&nbsp; It walks, scratches itself,
+chases
+pink balls and does all sorts of other stuff.&nbsp;&nbsp;&nbsp; Besides
+walking, most AIBO movement is controlled by skits, made with a program
+like Skitter.<br>
+      </p>
+In
+this tutorial, we focus on creating a simple skit.&nbsp; The <a
+ href="tutorial2.html">next tutorial</a> covers dressing things up with
+lights/LED's &amp; sound.&nbsp; <br>
+      <br>
+Our goals are:<br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li><a href="tutorial1.html#START">Starting Skitter</a></li>
+              <li><a href="tutorial1.html#CREATE">Creating an AIBO performance</a><br>
+              </li>
+              <li><a href="tutorial1.html#EDITING">Learning to edit AIBO motions</a></li>
+              <li><a href="tutorial1.html#PREVIEW">Previewing the motion (on your PC)</a></li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+So you want to make AIBO do something?&nbsp;&nbsp; No
+problem.&nbsp;&nbsp; Let's get started!<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><br>
+      <a name="START"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>1.0
+Starting Skitter<br>
+            </b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">&nbsp;<br>
+            <big><big><b><small><font color="#3366ff">(1) <br>
+            </font></small></b></big></big></td>
+            <td valign="top"><br>
+Install Skitter if you haven't done so
+already.&nbsp;&nbsp; <br>
+            <br>
+Download the<a href="../downloads/Skitter-v3.40-Installer.exe"> Skitter
+Installer
+to your PC desktop.&nbsp;&nbsp;&nbsp; Double click the program &amp;
+follow the simple step-by-step instructions.<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/install.gif" alt="" align="top" border="1" height="306"
+ hspace="20" vspace="8" width="401"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" rowspan="1" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><big><b><small><font color="#3366ff">(2)&nbsp;
+            <br>
+            </font></small></b></big></big></td>
+            <td valign="top">Select the "Start" Menu, then
+"Programs",&nbsp; "AIBO Tools", and finally&nbsp; "Skitter".<br>
+            <br>
+The
+first time you start Skitter, you see the "Welcome to Skitter" window
+(see
+right).&nbsp;&nbsp; <br>
+            <br>
+You're asked if Windows should use Skitter to open AIBO skits.&nbsp;
+This only
+appears once &amp; you won't be bothered by it again.<br>
+            <br>
+Click "<b>OK</b>" (recommended). <br>
+            <br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/ssetup.gif" alt="Welcome to Skitter" align="top"
+ border="1" height="262" hspace="20" vspace="0" width="383"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" rowspan="1" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><big><b><small><font color="#3366ff">(3)
+            <br>
+            </font></small></b></big></big></td>
+            <td colspan="2" rowspan="1" valign="top">If you clicked "<b>Skip</b>"
+instead, Windows is not
+configured.&nbsp;&nbsp; You'll need to start Skitter first, then use "<span
+ style="font-weight: bold;">Open</span>" from the toolbar or <span
+ style="font-weight: bold;">File</span> Menu.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" rowspan="1" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="CREATE"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>2.0
+Create an AIBO Performance</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"><big><big><b><small><font color="#3366ff">(1)&nbsp;&nbsp;
+            <br>
+            </font></small></b></big></big></td>
+            <td valign="top"><img src="../images/newfile.gif"
+ alt="New AIBO Performance" align="right" border="1" height="163"
+ hspace="28" vspace="0" width="303">Time to do something
+interesting.&nbsp; After starting Skitter, you are asked about creating
+a new AIBO performance.<br>
+            <br>
+Skitter supports all AIBO models (11x/2x0/31x/7).<br>
+            <br>
+Select your favorite AIBO flavor.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><big><b><small><font color="#3366ff">(2)
+&nbsp; </font></small></b></big></big></td>
+            <td valign="top">Skitter now displays the
+performance editors -- there is one each for Motion,&nbsp; LED's (for
+lights), and MIDI
+(for sound).&nbsp; The image below shows the ERS-210
+editors.&nbsp;&nbsp; For the moment, we can ignore the LED &amp; MIDI
+editors.<br>
+            <div style="text-align: center;"><img
+ src="../images/stut1_1.gif" alt="" border="1" height="469" hspace="40"
+ vspace="10" width="650"></div>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="EDITING"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>3.0
+Editing AIBO Motions</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <u><i><big><big><b></b></big></big></i></u><br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"><big><big><b><small><font color="#3366ff">(1)
+&nbsp;&nbsp; <br>
+            </font></small></b></big></big></td>
+            <td valign="top">First, let's make the motion editor
+bigger.&nbsp;&nbsp; Click on the toolbar "<b>Motion</b>"
+button.&nbsp;&nbsp; The motion editor fills the Skitter window (see
+below).<br>
+            <div align="center"><img src="../images/stut1_2.gif" alt=""
+ border="1" height="434" hspace="40" vspace="10" width="650"><br>
+            </div>
+            <br>
+Down the left side is a list of AIBO's moving joints, or servos. &nbsp;
+There are quite a
+few -- you might need the scrollbar to see them all. <br>
+            <br>
+Below the toolbar, is the 3D AIBO preview, and timeline (or
+ruler-bar).&nbsp;&nbsp; If you click-n-drag on the preview, the AIBO
+image rotates around for different views.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top"><img src="../images/stut1_3.gif" alt=""
+ align="right" border="1" height="126" hspace="40" vspace="10"
+ width="229">The preview shows AIBO standing up.&nbsp; In this
+performance we need AIBO sitting, so do the following:<br>
+            <ol>
+              <li>From the <b>Edit </b>Menu, click "<b>Select All</b>".&nbsp;&nbsp;
+The editor will turns gray (since everything is selected).<br>
+              </li>
+              <li>From the <b>Motion </b>Menu, click "<b>Set Pose</b>",
+then "<b>Sit Position</b>".</li>
+            </ol>
+The AIBO preview should now show AIBO sitting (see right).<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">) <br>
+            </font></b></big></td>
+            <td valign="top"><img src="../images/stut1_4.gif" alt=""
+ align="right" border="1" height="124" hspace="40" vspace="10"
+ width="227">We need a keyframe. &nbsp; Keyframes tell AIBO how
+to position itself at a given time.<br>
+            <br>
+Move the mouse to time "60" (on the
+timeline) and left-click.&nbsp;&nbsp; The orange marker
+appears.&nbsp;&nbsp; It doesn't need to be exact, but the left/right
+arrow keys can fine tune if you like.<br>
+            <br>
+Next, from the <b>Motion </b>Menu click "<b>Create Keyframe</b>".&nbsp;&nbsp;
+A tab appears under the orange marker (see right).&nbsp;&nbsp; The tab
+shows a keyframe was created.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+            </font></b></big></td>
+            <td valign="top"><img src="../images/stut1_5.gif" alt=""
+ align="right" border="1" height="124" hspace="40" vspace="10"
+ width="227">Time
+to get our hands dirty.&nbsp;&nbsp; Move the mouse down the
+orange marker line until lined up with "<b>Front Left Leg Vertical</b>".<br>
+            <br>
+Left-click where the orange &amp; black lines cross.&nbsp;&nbsp; An
+orange "edit-diamond" snaps to the intersection.&nbsp;&nbsp; An orange
+box also appears next to the servo
+title.&nbsp; <br>
+            <br>
+Now press <b>[Enter]</b>, type in
+a value of 90, and <b>[Enter]</b> once more.&nbsp;&nbsp; This adjust
+the position to 90 degrees.&nbsp;&nbsp; The small preview also shows
+the change.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(5</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">Punching numbers is a little
+tedious.&nbsp;&nbsp; So let's use the "<b>AIBO Window</b>"
+instead!&nbsp;&nbsp; From the <b>View </b>menu, click "<b>AIBO Window</b>"
+(see
+right).&nbsp;&nbsp;&nbsp; You get a bigger AIBO with a media-bar along
+the bottom.<br>
+                  <br>
+Click the pencil icon <img alt="Pencil" src="../images/pencil.gif"
+ align="middle" border="1" height="20" width="20"> in the lower right
+to enable editing.<br>
+                  <br>
+Now just click-n-drag on AIBO's legs &amp; head.&nbsp;&nbsp; Easy
+eh?&nbsp;&nbsp; Adjust AIBO until he is waving at you (as
+shown).&nbsp;&nbsp;&nbsp; Watch the motion editor while adjusting &amp;
+you'll see the values change.&nbsp;&nbsp; Here are settings to aim for:<br>
+                  <ul>
+                    <li>"<b>Head Tilt</b>" to be "-15"</li>
+                    <li>"<b>Head Pan/Yaw</b>" to be "25"</li>
+                    <li>"<b>Head Roll</b>" to be "19"&nbsp;&nbsp;&nbsp;
+(ERS210 / ERS220 only)</li>
+                    <li>"<b>Mouth</b>" to be "-30"&nbsp;&nbsp;&nbsp;
+(ERS210
+/ ERS7 only)</li>
+                    <li>"<b>Front Left Leg Lateral</b>" to be "30"</li>
+                    <li>"<b>Front Left Leg Knee</b>" to be "110"</li>
+                  </ul>
+                  <br>
+Click-n-drag on AIBO's body to rotate &amp; view from
+different angles.</td>
+                  <td valign="top"><img alt="AIBO Preview"
+ src="../images/stut1_6.gif"
+ style="border: 1px solid ; width: 270px; height: 282px;" align="top"
+ border="1" height="298" hspace="20" vspace="10" width="270"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(6</font></b></big><big><b><font
+ color="#3366ff">)<br>
+            </font></b></big></td>
+            <td valign="top"><img src="../images/stut1_8.gif" alt=""
+ align="right" border="1" height="124" hspace="60" width="227">Only
+a couple little things left.&nbsp;&nbsp; We need to make AIBO's front
+leg pause slightly so it looks less mechanical.<br>
+            <br>
+Go back to the Motion Editor, and click on time 60.&nbsp;&nbsp; The tab
+turns
+green.<br>
+            <br>
+Press the toolbar "<b>Copy</b>" button.&nbsp;&nbsp; Click on time 80,
+and press the "<b>Paste</b>" button.&nbsp;&nbsp; A copy of our keyframe
+appears at time 80.<br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><a name="TAILWAG"></a>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(7</font></b></big><big><b><font
+ color="#3366ff">)</font></b></big></td>
+            <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">Finally, let's make AIBO look happy
+with some tail wagging (skip for 220/310).<br>
+                  <br>
+Skitter has
+a nifty
+tool for this otherwise tedious challenge.&nbsp;&nbsp; From the <b>Motion
+                  </b>menu,
+select "<b>Tailwag
+Wizard</b>".<br>
+                  <br>
+Move the "Tailwag Speed" slider fully right.&nbsp;&nbsp; The preview
+shows how fast AIBO's tail will move.&nbsp;&nbsp; Feel free to try the
+different settings here.<br>
+                  <br>
+Click OK.&nbsp;&nbsp; Tada!&nbsp;&nbsp; Instant tail wagging.<br>
+                  <br>
+Don't like the result?&nbsp;&nbsp; Select <span
+ style="font-weight: bold;">Undo</span> from the <span
+ style="font-weight: bold;">Edit</span> Menu &amp; try again.<br>
+                  </td>
+                  <td valign="top"><img alt="Tailwag Wizard"
+ src="../images/stut1_14.gif" border="1" height="223" hspace="60"
+ vspace="0" width="228"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(8</font></b></big><big><b><font
+ color="#3366ff">)<br>
+            </font></b></big></td>
+            <td valign="top">
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">Save it!&nbsp;&nbsp;&nbsp;
+Click the toolbar "<b>Save</b>" button.&nbsp;&nbsp; Because this is a
+new performance, Skitter asks for a filename. <br>
+                  <br>
+Save somewhere on your PC -- not the memory stick -- preferably a
+folder just for skits.&nbsp; Skitter refers to this as your "<b>action
+directory</b>".&nbsp;&nbsp;&nbsp; It's used in the <a
+ href="tutorial3.html">third tutorial</a> when we cover
+initializing memory sticks (so AIBO performs for real).<br>
+                  <br>
+Type "<b>firstwave</b>" (or whatever filename you like) and press
+[Enter]. <br>
+                  <br>
+                  </td>
+                  <td valign="top"><img src="../images/stut1_9.gif"
+ alt="" align="right" border="1" height="213" hspace="10" vspace="0"
+ width="342"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><u><i><big><big><b><a name="PREVIEW"></a><br>
+      </b></big></big></i></u>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>4.0
+Preview the Motion</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(1</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Ok, the moment of truth.&nbsp;&nbsp; Let's
+see what its going to look like on AIBO.<br>
+            <br>
+Click on the "<b>AIBO Window</b>" -- anywhere but the media-bar.<br>
+            <br>
+Click on the <img alt="Rewind" src="../images/stut1_11b.gif"
+ align="middle" border="1" height="18" width="19"> move-to-start button
+(left-most). &nbsp; You should see
+AIBO back in its default sitting position.<br>
+            </td>
+            <td valign="middle"><img src="../images/stut1_11.gif" alt=""
+ align="right" border="1" height="39" hspace="40" width="270"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Now click the green start button <img
+ alt="Start" src="../images/stut1_12b.gif" align="middle" border="1"
+ height="18" width="19"> to begin playback.<br>
+            <br>
+AIBO should move his arm up to wave, then put it back
+down again.<br>
+            </td>
+            <td valign="middle"><img src="../images/stut1_12.gif" alt=""
+ align="right" border="1" height="39" hspace="40" width="270"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top"><big><i><b>Congratulations!&nbsp;&nbsp;
+You've finished the first tutorial!<br>
+            </b></i></big><br>
+Your first AIBO skit is ready to roll! &nbsp; <br>
+            <br>
+Click-n-drag on AIBO to rotate around to different angles.&nbsp; Try
+the replay again.&nbsp;&nbsp; Feel free to play around with the media
+controls.&nbsp;&nbsp; <br>
+            <br>
+Got a question? &nbsp;&nbsp; <i><a
+ href="mailto:dogsbody@dogsbodynet.com">Ask Dogsbody!</a></i><br>
+            <br>
+In the <a href="tutorial2.html">next tutorial</a>, we add lights &amp;
+sound.<br>
+            </td>
+            <td style="text-align: center;" valign="top"><img
+ alt="AIBO Preview" src="../images/stut1_13.gif"
+ style="border: 1px solid ; width: 270px; height: 282px;" align="middle"
+ height="283" width="270"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <p> </p>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+</center>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="../pleorb/index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Super ICybie Upgrade
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Super ICybie Upgrade
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<BR>
+ICybie has a expansion cartridge in the side of every ICybie.
+Unfortunately the cartridges that come with every ICybie do not have chips inside of them.
+You can get working cartridges with the Walk-up Charger or Downloader accessories from SilverLit.
+<BR>
+The "Super ICybie" upgrade lets you download software to your ICybie, or to a cartridge in your ICybie (just like the SilverLit "Downloader").
+The primary reason for upgrading your ICybie to a Super ICybie, is so you can write your own programs for ICybie in "C".
+<P></P>
+The upgrade consists of two parts:
+<LI> The hardware part: taking apart your ICybie and attaching an RS-232 port.
+The RS-232 serial port is used for uploading software and debugging.
+<LI>The software/firmware part: a "CROMINST" cartridge is needed to install "CROM" into the system ROM of the ICybie.
+<BR>
+After both these steps are completed, your mild mannered Standard ICybie will become a "Super ICybie".
+<P></P>
+<H2>Super ICybie Upgrade</H2>
+
+<DIR>The Super ICybie upgrade will void your ICybie warranty.
+<BR>
+	Downloading new firmware may break your ICybie permanently.
+<BR>
+	<font color=red size=+2>Use the Super ICybie upgrade at your own risk!</font>
+</DIR>
+
+<P></P>
+<HR>
+<P></P>
+<BR>
+With a Super ICybie, you can write software for yourself in C (or assembler), for sharing with others  and for interfacing to your own custom hardware.
+You must open up you ICybie and solder in new components.
+If you only want to run custom programs, you should buy the SilverLit downloader.
+<P></P>
+Comparison chart:
+<TABLE border=2>
+<TR>
+ <TH>Feature</TH>
+ <TH>SilverLit Downloader</TH>
+ <TH>DIY Super ICybie Mod.</TH>
+</TR>
+<tr>
+ <td>Needs Cartridge?</td>
+ <td>Yes!</td>
+ <td>Yes!</td>
+</tr>
+<tr>
+ <td>Use existing programs/Personalities</td>
+ <td>Yes</td>
+ <td>Yes</td>
+</tr>
+<tr>
+ <td>Customize Personalities with YICT</td>
+ <td>Yes</td>
+ <td>Yes</td>
+</tr>
+<tr>
+ <td>Write my own programs with SDK</td>
+ <td>No</td>
+ <td>Yes</td>
+</tr>
+<tr>
+ <td>Hook up my own hardware</td>
+ <td>No</td>
+ <td>Yes</td>
+</tr>
+<tr>
+ <td>Do I have to open up my ICybie?</td>
+ <td>No</td>
+ <td>Yes</td>
+</tr>
+<tr>
+ <td>Experience needed</td>
+ <td>Easy</td>
+ <td>Soldering small parts</td>
+</tr>
+<tr>
+ <td>Cost</td>
+ <td>$105</td>
+ <td>under $10 + your time/skill</td>
+</tr>
+<tr>
+ <td>PC Communication</td>
+ <td>n/a</td>
+ <td>full duplex</td>
+</tr>
+<tr>
+ <td>Uses PC port</td>
+ <td>Parallel port</td>
+ <td>Serial port</td>
+</tr>
+<tr>
+ <td>Operating Systems supported</td>
+ <td>Downloader.exe
+    <BR>or ICBURN.exe
+ </td>
+ <td>SICBURN.exe - Windows 95->XP (and Linux Port)</td>
+</tr>
+<tr>
+ <td>Needs Cartridge?</td>
+ <td>Yes</td>
+ <td>Yes</td>
+</tr>
+</TABLE>
+
+
+<P></P>
+<H3>What does it do ?</H3>
+Once upgraded, your Super ICybie will be able to:
+<UL>
+<LI>Run new software (performances and personalities) created by others downloaded from the Internet
+<LI>Run utility programs on your ICybie.
+For example, a very simple program lets you adjust the battery voltage threshold (to extend you battery operation time)
+<LI>Run new software you write (in either assembler or C), perhaps interfacing with new hardware you attach to the serial port.
+<LI>Remote Control ICybie with PC attached to the serial port (either wired or wireless)
+</UL>
+
+<P></P>
+<H3>What is it not ?</H3>
+The Super ICybie upgrade is <B>not</B> a low cost alternative to the SilverLit downloader.
+You still need a cartridge to use it, which currently costs $50 from SilverLit (comes with the charger).
+<BR>
+You should not attempt the modification on your <I>one and only</I> ICybie.
+Taking apart your ICybie puts it at risk, and soldering to the main circuit board is dangerous.
+<P></P>
+<DIR>
+If you don't have a second ICybie to hack - please do not attempt the SIC upgrade.
+</DIR>
+
+<P></P>
+<HR>
+<H2><font color=red>READ THIS:</font> You still need a cartridge!</H2>
+
+<DIR><B><I><font size=+1>
+If you do not want to write your own programs, but instead want a cheap alternative to buying the $105 Downloader - stop right here. SIC is not for you.
+</font></I></B>
+<P></P>
+Paying $100 for an accessory is not a lot of money compared to the amount of time it will take to learn, program, test and otherwise use the ICybie SDK.
+<BR>
+If you still can't afford $100, I suggest you lobby SilverLit to reduce their prices.
+</DIR>
+
+<P></P>
+To actually use your Super ICybie and write (or use) any custom programs you will need a working cartridge - permanently.
+<P></P>
+There are currently two viable options for getting a working cartridge:
+<UL>
+<LI>Option1) Buy the SilverLit Downloader ($90 + s/h). You get the Downloader and a working cartridge.
+To perform the SIC upgrade, you can download and make a "CROMINST" cartridge yourself (<A HREF="crominst11_not_2005.zip">crominst11.zip</A>). <font color=red><B>WARNING:</B></font> do not use in the 2005 re-release "Outrageous" iCybie (it will permanently damage your ICybie).
+
+<LI>Option2) Buy the SilverLit Walk-up Charger ($50 + s/h). You get the charger base, and a working cartridge (with the walkup personality on it).
+To perform the SIC upgrade, you must borrow a CROMINST cartridge from a friend,
+or get them to turn your walkup cartridge into a CROMINST cartridge (once your SIC modification is done, you can turn it back into the walkup cartridge).
+<DIR>Anyone with a working SIC or a SilverLit downloader can make a CROMINST cartridge (you need a working cartridge of course)</DIR>
+</UL>
+<P></P>
+If you haven't ordered anything from SilverLit (neither a Downloader 
+nor a Charger), you won't have a permanent cartridge to use with your 
+ICybie, so performing a SIC upgrade is a waste of your time.
+
+<P></P>
+So for potential SIC upgraders, you will fall in one of the four 
+categories:
+<UL>
+<LI>I have ordered a Downloader and Charger => no need to borrow
+<LI>I have ordered just a Downloader => no need to borrow
+<LI>I have ordered just a Charger => I must borrow a CROMINST cartridge (or have my cartridge turned into a CROMINST)
+<LI>I have not ordered anything => you don't have a cartridge to use, so 
+borrowing one won't help - SIC is not for you
+</UL>
+
+
+<P></P>
+<HR>
+<H2>Performing the RS-232 Super ICybie Upgrade</H2>
+
+<H3>Overview</H3>
+
+<UL>
+<LI>Step 1: take the shell off your ICybie (if you are afraid to do this, then this upgrade is not for you). You don't need to take the legs off, just open the main body shell.
+<LI>Step 2: Borrow a cartridge with the CROM installer on it (or make your own with the SilverLit Downloader)
+<LI>Step 3: Perform the RS-232 hardware modification
+<LI>Step 4: Hook up your ICybie to your PC's serial port, and run the CROM installer once (then you can return the cartridge)
+<LI>Finally: Upload programs from your PC to your ICybie
+</UL>
+
+<H3>Hardware Requirements</H3>
+<UL>
+<LI>One I-Cybie
+<LI>A PC computer with an available serial port
+<LI>A few simple tools like small screwdrivers, and a fine tip soldering iron
+<LI>A few small parts for the hardware modification (MAX233 chip, stereo phone plug and jack, 9 pin DIN connector).
+</UL>
+
+<P></P>
+Other than the ICybie and the PC, the rest of the parts should cost around $10.
+<BR>
+
+For full details of the hardware modification, see <A HREF="sic_rs232.htm">RS-232 installation instructions</A>.
+
+<P></P>
+<HR>
+<H2>How does it work?</H2>
+
+Each ICybie comes with 256KB of system ROM that contains the default ICybie personality.
+"CROM" is a small 8KB program that sits in the top of this memory and controls how your ICybie starts up.
+If ICybie is connected to the serial port of your PC, it will connect to the PC and allow programs to be uploaded and downloaded.
+If the PC connection is not present, CROM will start the default program.
+This can be a custom program, or the default ICybie personality (depending on what was last installed).
+If there is a working cartridge, the default system ROM personality will run the cartridge program (CROM starts system ROM personality which then starts cartridge personality).
+
+<P></P>
+CROM tries to keep itself protected so you should always be able to restore the original system ROM contents if you like.
+There is no guarantee of this. Use CROM and the Super ICybie upgrade at your own risk.
+If the system ROM gets wiped or written to incorrectly, your ICybie will no longer boot and be worthless.
+
+<P></P>
+Version 1 of the SicSDK (the current version), focuses on creating programs that install inside the system ROM (typically small programs that fit in the 8KB .ic0 format).
+This makes sense when there are very few cartridges floating around.
+<BR>
+Version 2 of the SicSDK (not yet completed), will focus on creating programs that run from cartridges.
+During development, software is compiled on the PC, and uploaded to the Super ICybie with the serial port.
+When the program is done, it can be released to everyone in standard Downloader format.
+Unless the program requires special hardware or input from the serial port, it will probably run on any ICybie (normal or Super ICybie).
+<BR>
+Standard ICybie owners just need a downloader and a cartridge to run the program.
+Super ICybie owners just need a cartridge.
+<P></P>
+<HR>
+
+</BODY>
+</HTML>
+
+</BODY>
+</HTML>

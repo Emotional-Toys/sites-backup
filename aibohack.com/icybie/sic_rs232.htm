@@ -1,0 +1,412 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="../pleorb/index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Super ICybie Upgrade - RS-232 Installation
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Super ICybie Upgrade - RS-232 Installation
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>WARNING: if you have a newly re-released "Outrageous" I-Cybie, do not attempt this modification!!!</DIR>
+
+<H2>Hardware Requirements</H2>
+<UL>
+<LI>One ICybie <B> - built before 2005 !!!</B>
+<LI>A PC computer with an available serial port
+<P>For the Hardware modification:</P>
+<LI>A MAX233 or MAX233A chip (<A HREF="http://www.jameco.com/cgi-bin/ncommerce3/ExecMacro/Jameco/searchResult.d2w/report?sort=BKW&search=MAX233"> Jameco </A>)
+<LI>A small (stereo) phone jack and plug (1/8" recommended).
+<LI>An RS-232 connector that will connect to the serial port on your computer (typically a 9 pin female DIN connector)
+<P></P>
+<LI>A few simple tools like small screwdrivers, and a fine tip soldering iron
+<LI>A little bit of wire-wrap wire
+<LI>A steady hand
+</UL>
+<BR>
+<center><IMG SRC="serial_mod1.jpg"></center><BR>
+
+<P></P>
+
+The following are the instructions for installing an RS-232 port into your ICybie.
+After the RS-232 serial port is working, and CROM is installed (see below), your mild-mannered ICybie will be a "Super ICybie".
+
+<P></P>
+<HR>
+<H2>Step 1 - remove the ICybie Shell</H2>
+
+<DIR>NOTE: Perform this step first (even before you buy the parts). If you don't have the heart to take apart your ICybie, stop right here.</DIR>
+
+You need to separate the two sides of ICybie's main body shell.
+OPTIONAL: you can remove the leg shields to give yourself more room.
+You will need two triangular screwdrivers (or otherwise improved tools).
+If you only want to do the Super ICybie upgrade, you don't need to bother.
+<P></P>
+To separate the main shell, you must remove <b>seven</b> phillips (cross shaped) screws holding the body together.
+On the dog's left side, there is only one screw.
+On the dog's right side, there are <B>six</b> (one for each hole).
+<BR>
+About half are visible, and can be easily removed.
+The other half are hidden under plastic covers/caps.
+Stick a long wood screw in the remaining holes, and give them a small turn - gently pull out the screw and the plastic cap should come out with it.
+NOTE: there may be two plastic caps in the same hole.
+<BR>
+Once the plastic cap is removed, throw it away (it is not needed), and remove the phillips screw like all the rest.
+<BR>
+The sides will easily move apart. If the sides are still stuck together, you probably forgot a screw, or didn't remove one completely.
+<P></P>
+Take a look around, and decide where you want to put your phone plug.
+If you don't have all the parts, reassemble ICybie until you do.
+Once the plastic caps are removed, it is very easy to take ICybie apart again.
+
+
+<P></P>
+<HR>
+<H2>Step 2: Get Parts, Borrow/Download a cartridge with the CROM installer on it</H2>
+Get all the parts required before moving to the next step.
+<P></P>
+The MAX233 (or 233A) chip is recommended (single chip, no external capacitors), even though there are cheaper alternatives.
+For the phone plug/jack, a 1/8" stereo phone plug/jack is recommended. The smaller 3/32" size is harder to fit through the ICybie plastic shell so is not recommended.
+These can be found at Radio Shack stores or other electronics sources.
+Any three conductor plug/jack will work, limited only by your imagination and how well you can fit it into the ICybie case.
+
+<P></P>
+To finish the installation, you need to run the "CROMINST" installation cartridge once.
+You can borrow one of these cartridges, or if you have a SilverLit downloader, you can download the CROMINST cartridge software yourself.
+
+<P></P>
+<HR>
+<H2>Step 3: The hardware modification</H2>
+
+<DIR>
+<TABLE border=4 cellspacing=4 cellpadding=2 bgcolor="#E00000">
+<TR><TD><H3>
+<CENTER>
+WARNING: This design is over 10 years old. Many computers don't come with RS-232 Serial/COM ports anymore.
+</CENTER><P></P>
+Instead of installing an RS-232 level shifter inside of the iCybie, you can use a USB to 3.3 volt RS-232 adapter based on the "FT232RL" or other similar chips connected outside the robot.
+The adapter can be plugged directly into your computer's USB port, and appears as a virtual Serial/COM port.
+<BR>
+A common adapter board is available at <A HREF=http://www.sparkfun.com/products/718>SparkFun</A>.
+If you use this approach, you won't need a MAX233 or 232 chip or a 9 pin DIN plug.
+This simplifies some of the construction, but the difficult steps remain unchanged:
+<BR>
+<UL>
+<LI>You must wire directly to the iCybie main board, and bring out the RX, TX and Ground pins to the FT232RL board.
+<LI>You must find/buy/build a working iCybie cartridge, initially programmed with "CROMINST".
+</UL>
+
+</H3></TD></TR>
+</TABLE>
+</DIR>
+If not already apart, repeat Step 1 to separate the two halves of ICybie's shell.
+
+<P></P>
+<H3>Schematic</H3>
+<center><IMG SRC="serial_schem.jpg"></center><BR>
+Thanks to Juan for the schematic.
+
+<P></P>
+<H3>Step 3A: the phone jack</H3>
+
+Find a location in ICybie's shell where you want to install the phone jack.
+The location shown in the photo is very tight for a 1/8" jack.
+You may want to place it on the side or bottom of ICybie instead.
+<BR>
+NOTE: be sure it is a stereo jack (ie. 3 conductors).
+<BR>
+Drill the proper sized hole and install the jack. It will be connected in step 3C.
+
+<P></P>
+<H3>Step 3B: the MAX Chip</H3>
+
+Take the MAX233 chip, and wire it up as shown below.
+If you are comforatble soldering directly to an IC chip, it is rather easy.
+If you would rather build a small circuit board, be my guest - but don't make it too big, size is at a premium inside the ICybie shell.
+<pre>
+                    MAX233 (or MAX233A)
+
+                        +------+
+                nc -  1 |      | 20 - nc
+    to TxD0 of CPU -  2 |      | 19 - nc
+    to RxD0 of CPU -  3 |      | 18 - nc
+   to ring of jack -  4 |      | 17 - to pin 12
+    to tip of jack -  5 |      | 16 - to pin 10
+            Ground -  6 |      | 15 - to pin 11
+             +3.6V -  7 |      | 14 - nc
+                nc -  8 |      | 13 - nc
+            Ground -  9 |      | 12 - to pin 17
+         to pin 16 - 10 |      | 11 - to pin 15
+                        +------+
+
+
+            +3.6V from ICybie motherboard (see photos below)
+
+            There are 4 ground wires all connect together
+                Two from MAX chip (pins 6 and 9)
+                One from phone jack (ground - base part of jack)
+                One to ICybie motherboard (see photos below)
+
+</pre>
+
+<P></P>
+
+<H3>Step 3C: wiring it together</H3>
+Find a location where you want to put the MAX chip.
+I put down a little masking tape to prevent electrical shorts and put the chip directly on top of the main board.
+You may decide to do a more professional installation job.
+<center><IMG SRC="serial_mod3.jpg"></center><BR>
+<P></P>
+The phone jack is easy to wire up.
+<P></P>
+You must get power and ground from the main board.
+An easy place to solder is the connector to the system ROM.
+<BR><center><IMG SRC="serial_mod4.jpg"></center><BR>
+The top right corner of the photo shows two pins soldered together - this is ground.
+Right below that (the lower right corner) has one pin that is +3.6 volts.
+You can solder on the connector or the capacitor next to it (the black thing below it in the photo).
+<BR><center><IMG SRC="serial_mod5.jpg"></center><BR>
+
+<P></P>
+<H3>Step 3C cont'd: Revision C or Revision D?</H3>
+The next step is wiring the two leads to the pads right next to the CPU.
+There are two revisions of board, Revision "C and Revision D (clearly marked on the board).
+With the Rev C board, soldering to the small pads is very difficult. You need thin wire-wrap wire, a fine and clean soldering iron, and a steady hand.
+With the Rev D board, soldering to the large pads is very easy.
+
+<BR><center><IMG SRC="hack_serial.jpg"><BR>Revision "C"</center><BR>
+<BR><center><IMG SRC="serial_mod6.jpg"><BR>Revision "D"</center><BR>
+
+<P></P>
+In either case, leave the "/CTS0" pin unconnected.
+After soldering, inspect with a magnifying glass for solder bridges.
+
+
+<P></P>
+<H3>Step 3D: the RS-232 cable</H3>
+This is the easy part.
+Connect the three wires of the phone plug to the RS-232 connector that will attach to your computer (usually a 9 pin female DIN plug).
+If you have a camera with a serial interface that connects to your camera with an 1/8" stereo plug, you may already have a compatible cable.
+<pre>
+      Phone plug ground => pin 5 (ground)
+      Phone plug tip => pin 2 (ICybie -> PC)
+      Phone plug ring => pin 3 (PC -> ICybie)
+
+</pre>
+You should check the voltage on pins 2 and 3 to make sure they are connected properly.
+<BR>
+The tip of the jack from ICybie, and pin 3 on the PC side should both be RS-232 transmit signals
+(measuring -10 volts or so with a voltmeter)
+
+<center><IMG SRC="serial_mod2.jpg"></center><BR>
+
+<P></P>
+<HR>
+<H2>Step 4: CROMINST</H2>
+
+<H3>Step 4A: Test the serial port</H3>
+<P>Ok, let's try it out (keep the shell open during this test).</P>
+<UL>
+<LI>Connect your cable between ICybie and your PC.
+<LI>On your PC, start a terminal program (eg: HyperTerminal) and set it to 9600 baud, 8 data bits, no parity, no handshake.
+<LI>Place the CROMINST cartridge in the side of your ICybie (press it in tightly)
+<LI>Connect up the battery. You don't have to worry about the battery door.
+</UL>
+
+<P></P>
+If you see a bunch of "U"s on your terminal program - congratulations the serial from ICybie to your PC is working.
+If not please check your connections.
+<P></P>
+When you see a bunch of "U"s, press any key on your keyboard.
+If the serial connection from your PC to ICybie is working, the "U"s will stop and you will get the CROMINST menu.
+<pre>
+	I-Cybie CROM Installer (version 1.1)
+	(c) 2002 ICybiePet
+	
+	Sending $55 ('U') forever until I receive something
+	UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+	UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+	UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+	....
+	UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+	UUUUUUUUUUUUUUUUUUUUUUUUU
+	STATUS CHECK
+	  + OLD ROM will be upgraded
+	  + CROM will be installed
+	    ==> Ready to install <==
+	
+	CROM Installer Commands:
+	    I = Install (whatever needed)
+	    U = Uninstall CROM
+	
+	Enter Command > 
+
+</pre>
+
+If you don't get this far, you are on your own debugging the hardware connection.
+<P></P>
+<H3>Step 4B: Installation</H3>
+
+<P>CROM Installation</P>
+<UL>
+<LI>Read the notice at the top. If Installation is not recommended, please email me and go no further.
+<LI>Type "I" to install CROM and any other upgrades. If you are ready to take the plunge, type "YES" (in upper case).
+<LI>It will take a very short time and then tell you it is done.
+<LI>Unplug the battery
+<LI>Remove the cartridge
+<LI>Plug in the battery again, close the battery door, and make sure ICybie is still sane.
+</UL>
+
+Type: "I" =><BR>
+<pre>
+	WARNING: installing new firmware on your ICybie voids the warranty.
+	Uploading new software may permanently break your ICybie.
+	Using the Super ICybie modification is AT YOUR OWN RISK!
+	If you understand what you are getting yourself into,
+	   answer 'YES' in upper case
+	
+	Are you sure you wish to continue?
+</pre>
+	
+Type: "YES" =><BR>
+<pre>
+	 -- ok
+	Installing CROM...INSTALLED!
+	Installing New ROM...INSTALLED!
+	
+	STATUS CHECK
+	    ==> Nothing to install <==
+	
+	CROM Installer Commands:
+	    I = Install (whatever needed)
+	    U = Uninstall CROM
+
+</pre>
+
+<P></P>
+
+<P></P>
+<HR>
+<H2>Step 4: Use it</H2>
+
+Try some of the YICT202 images.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>
+
+</BODY>
+</HTML>

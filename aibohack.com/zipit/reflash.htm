@@ -1,0 +1,357 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ ZipIt Software Reflashing
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ ZipIt Software Reflashing
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<CENTER>
+<TABLE width=80% border=8 bgcolor=#F03030 cellspacing=4 cellpadding=8>
+<tr><td colspan=1>
+<CENTER><H1>Does not work with the 2.01 firmware!</H1></CENTER>
+The current version of official Zipit firmware says it is 2.01, but is internally marked as 1.99.
+This breaks the ZRS upload mechanism on this page.
+<BR>
+If you just bought a Zipit, do not connect it to the web. If you do it will automatically update to 2.01 and lock out the software update.
+If you have old firmware, do the Software reflashing first and then you can use it as a Linux device.
+<BR>
+If you have an updated Zipit (2.01) and wish to reflash it, the only known option is the hardware modification (5-wire mod)
+<BR>
+If/after they release the next update (something after 2.01, supposed to be with MyTunez) the software reflashing may be working again -- but no promises.
+
+</td></tr>
+</TABLE>
+</CENTER>
+
+<H2>PROCEED AT YOUR OWN RISK!!!!</H2>
+
+Please read <B>all</B> the following warnings before proceeding.
+<UL>
+<LI>The following modification is not recommended or supported by the companies that brought you ZipIt messenger (KByte, Aeronix)
+<LI>Reflashing a consumer electronics device is a dangerous operation. In the case of Zipit, it is extra dangerous.
+If reflashing fails, or the reflashed data has not been tested before, your device may never boot again.
+<LI>To repair reflashing problems, a hardware modification is required. This is called the "Recovery Hardware Mod" ("3 wire mod", see hardware section)
+<LI>For more serious kernel hacking, I recommend the more complete "5 wire mod" that involves more difficult soldering
+<P></P>
+<LI>There is a chance that the device will never work again if you proceed and a problem occurs.
+<LI>If you have one ZipIt Messenger device and can't afford to replace it, do not proceed
+<LI>PROCEED AT YOUR OWN RISK!
+</UL>
+<P></P>
+
+<A HREF="serial.htm">Click Here for Hardware serial port mod info</A>
+<BR>
+<A HREF="index.html">Click Here for main Zipit page</A>
+<P></P>
+</DIR>
+
+<P></P>
+<HR>
+
+<H2>Requirements</H2>
+
+<UL>
+<LI>A Zipit device you are willing to screw up (see warnings above)
+<LI>A Windows PC (Windows XP recommended)
+<LI>A WiFi card, or WiFi access point, attached to the Windows PC (Linux version coming later)
+<LI>Optional: Linux PC or cygwin running on Windows PC (for compiling your own Linux ARM apps)
+<LI>Free software downloaded from this website (run on Windows PC)
+</UL>
+
+<P></P>
+<HR>
+
+<H2>Instructions (Windows PC)</H2>
+<UL>
+<LI>Download the following file and unzip it to a directory on your Windows PC: <A HREF="zipit_reflash_kit03.zip">zipit_reflash_kit03.zip</A>.
+<P></P>
+<LI>Turn off all WiFi devices in the immediate area
+<LI>Reconfigure your WiFi network to have a visible SSID (I recommend "ZIPNET"), and no WEP.
+Either adhoc directly to the PC's WiFi adapter or using an access point (connected to the PC)
+<LI>TIP: I recommend turning off WEP for now. You can turn it back on later or go back to your old WiFi settings.
+However keeping WEP off makes future net operations much easier (use other security features like MAC filtering)
+<LI>If using an access point connected to your PC with an ethernet cable, unplug other ethernet devices.
+<LI>IMPORTANT: if using an access point connected to a cable modem, UNPLUG the uplink cable.
+This is important because the WiFi network must be able to connect to the PC but not connect to the Internet (or anything with a DNS server)
+<P></P>
+<LI>Configure your Windows PC to be the one and only WiFi device. Give it an easy to type IP address. I recommend "10.0.1.9"
+<LI>TIP: try to ping a website, eg: "ping aibohack.com". It should time out.
+If it doesn't time out than you missed something and the Internet is still accessible (fix it before continuing)
+
+<P></P>
+<LI>Turn on the Zipit device, it should find the one WiFi network ("ZIPNET") with no WEP. It will use that to try to connect to the Internet
+<LI>After about a minute, it will give up and report
+<DIR><PRE>
+	      The network - ZIPNET - 
+    failed to connect because of a 'DNS error'.
+    ....
+_OR_
+    failed to connect because of a 'DHCP error'.
+    ....
+</PRE></DIR>
+<LI>NOTE: if it does connect to the Internet and you don't see this error, you have done something wrong.
+Re-read the above restrictions and try again.
+<LI>Press NEXT
+<LI>Enter the following values: (but do not press NEXT yet)
+<DIR><PRE>
+	IP Address: 10.0.1.5
+	NetMask: 255.255.255.0
+	Gateway: 10.0.1.9
+	DNS1: 10.0.1.9
+	DNS2: 
+</PRE></DIR>
+<LI>TIP: be sure the Zipit IP Address (10.0.1.5 in this case) is not blocked by a firewall
+
+<P></P>
+<LI>Before you press the "NEXT" button, start the ZRS server
+<UL>
+<LI>Go to the Windows PC directory where you installed the zipit_reflash_kit
+<LI>At the command line type: "zrs burn3 10.0.1.9"
+<LI>NOTE: This starts a mini DNS server and HTTP server, useful only for this functionality
+</UL>
+
+<P></P>
+<LI>Now that the ZRS server is running and ready, and you have entered the approriate values into the Zipit device, press the NEXT button
+<LI>It should connects to the ZRS server, and the ZRS program will print status messages on the PC screen. Ignore them unless there is a problem.
+<LI>Shortly the Zipit device should report
+<DIR><PRE>
+	"An update for the Zipit Wireless Messenger is available"
+   	....
+</PRE></DIR>
+<LI>Press NEXT, and it should report:
+<DIR><PRE>
+	Retrieving Update...
+	Verifying Update...
+	Installing Update...
+</PRE></DIR>
+<LI>This will take several minutes. When done it will reboot the device
+<LI>On your PC, press Ctrl+C to stop the ZRS program. It isn't needed anymore.
+</UL>
+
+<H2>Try It Out</H2>
+<UL>
+<LI>The device should reboot showing the Hacked by ZipitPet and eventually the penguin logo
+<LI>login as "root", no password
+<P></P>
+<LI>As you know already: when running the Zipit IM app, the shift keys are a prefix (press shift key first, let go, then press the other key)
+<LI>The Linux keyboard driver acts differently.
+Hold down the SHIFT (up arrow), Alt or Ctrl shift keys and press the other key at the same time (ie. like a normal keyboard).
+<LI>The P1, P2, P3 keys are mapped to F1, F2, F3
+<LI>TIP: Alt+P1/P2/P3 will switch virtual consoles.
+<LI>If you find a unexpected key mapping, please report it as a bug.
+<P></P>
+<LI>TIP: To run the regular Zipit IM app, type the command "zrun" at the command prompt.
+<LI>NOTE: the regular 'Zipit' program run, it will attempt to connect to the real Internet and download the latest firmware.
+When an update to the official version is released (currently 1.21),
+reflashing will replace the hacked firmware with something new.
+Stop it before it gets that far if you want to keep your hacked version.
+<P></P>
+<LI>When done, be sure to turn off the device (press and hold power switch). If you leave it on the battery will run down (ie. there is no auto power off timer when running regular Linux)
+<LI>The file system on the Zipit device is temporary, extracted from the Flash ROM contents at boot. If you copy over files, they will be lost when the power is turned off.
+<P></P>
+<LI>TIP: If using a DHCP server, the command "udhcpc" will connect to an open access point (without a WEP) and assign an IP address using DHCP
+You can then 'telnet' to the Zipit device from your PC.
+<LI>TIP: If you have a WL-HDD device configured as recommended (see below), the "n1" command will assign a static IP, and connect to the nfs server.
+<P></P>
+</UL>
+
+<P></P>
+<HR>
+
+<H2>Important Accessory: NFS Server</H2>
+<UL>
+<LI>To use the hacked Zipit device for anything more serious, you will need an 'NFS' server running on the WiFi network.
+This is where you will store your files, apps and data files for reflashing the ROM.
+<LI>To connect, you need to enter the WiFi settings with 'ifconfig' and 'iwconfig'.
+These settings are not saved.
+<LI>TIP: I suggest keeping the WEP on your WiFi network disabled. This will save you time typing in passwords etc (use MAC filtering for additional security if desired)
+
+<P></P>
+<P>Important Info for the NFS server</P>
+<LI>The exact details on your server configuration will depend on your specific setup.
+<LI>The NFS server must support version 3 over TCP/IP.
+<LI>To test this from another Linux box type "rpcinfo -t server_ip_address nfs 3", where "server_ip_address" is the address of the nfs server.
+<LI>If you are a Linux person, and already know how to configure all this stuff,
+you probably don't need any more help from me.
+<LI>If you are a Windows person, there are several free NFS servers that can run on Windows.
+I prefer the "Windows Services For Unix" addon to Windows XP (not free, but free download with some MSDN subscriptions)
+<LI>If all of this is greek to you, then my suggestion is to buy the WL-HDD device mentioned below
+(cheap, especially if you have an old laptop drive sitting around)
+<P></P>
+
+<P>Important Info for the Zipit device</P>
+<LI>If using a WEP or more complicated WiFi setup, you must first configure the WiFi network with 'iwconfig' (may not be necessary for some setups)
+<LI>Next, the Zipit device must get an IP address (either with ifconfig or udhcpc)
+<LI>Next, you need to create a mount location, something like:
+<DIR><PRE>
+mkdir /mnt/net1
+</PRE></DIR>
+<LI>Then you can mount the NFS server using commands that looks something like:
+<DIR><PRE>
+mount -t nfs -o nolock -o tcp -o intr server_ip_address:/server_folder /mnt/net1
+</PRE></DIR>
+(replacing server_ip_address and server_folder with details of your server)
+<LI>Failure to connect may occur if your server permissions are not setup properly (that can be a big hassle IMHO)
+</UL>
+<P></P>
+
+<H3>Recommended Hardware: WL-HDD</H3>
+Thanks to ben_dash for the <A HREF=http://groups.yahoo.com/group/zipitwireless/message/110>recommendation</A>,
+the WL-HDD is a WiFi access point, mini server and other things all packed into a small box.
+You must provide a laptop harddrive, but it is a cheap alternative if you don't want a more "turnkey" solution.
+I installed it and used the default settings (IP Address: 192.168.1.220).
+A freely available firmware update provides NFS server capabilities
+<A HREF="http://wl500g.info/showthread.php?t=1230">Version 1.1.2.8</A> (tested by me, others may work too)
+If you get one of these devices, set it up, install the patch and leave all the settings as defaults,
+then the built in 'n1' and 'n2' scripts will do all the other work for you.
+
+<P></P>
+<CENTER>
+<IMG SRC="zipit_harddrive.jpg">
+<BR>
+Zipit (16MB RAM, 2MB ROM) + 40GB Hard Drive (can be larger)
+</CENTER>
+
+<P></P>
+<HR>
+
+<H2>Writing your own programs</H2>
+<UL>
+<LI>To compile your own programs, you need to install ARM Linux cross compilation tools
+<LI>There are many possible toolsets to use, but I have been using version 3.2 tools
+<DIR>
+<A HREF=ftp://ftp-old.arm.linux.org.uk/pub/linux/arm/toolchain/cross-3.2.tar.gz>
+ftp://ftp-old.arm.linux.org.uk/pub/linux/arm/toolchain/cross-3.2.tar.gz</A>
+</DIR>
+<LI>Use of uClibc is recommended to keep app sizes small.
+<LI>More details to be written depending on interest, but there is already plenty of information on the web.
+</UL>
+
+
+<H2>Reflashing to include your programs</H2>
+<UL>
+<LI>To be written
+<LI>If you want to more permanently install programs into the 2MB of Flash ROM, you can rebuild the ramdisk file system and reflash the device using 'zflash'
+<LI>Also, because the ROM is mostly full now, you will likely need to remove the Zipit app and support file to free up enough space.
+<LI>This is a dangerous operation, especially with untested configurations
+<LI>More details to come
+
+</UL>
+<H2>Advanced: rebuilding the kernel</H2>
+<UL>
+<LI>The "5 wire" hardware mod is strongly recommended for all advanced stuff,
+including running untested configurations with custom kernel builds
+<LI>See <A HREF="http://groups.yahoo.com/group/zipitwireless/message/68">this post on the Yahoo BBS</A> and 
+<A HREF=http://www.zipitwireless.com/linux.html>The Zipit Linux/GPL page</A> for details.
+<LI>Current set of patches (by cynfab, built with 3.3 tools): <A HREF="patch_km2.zip">patch_km2.zip</A>
+<LI>NOTE: build order
+<DIR><PRE>
+tar zxvf linux-2.4.21.tar.gz
+cd linux-2.4.21
+zcat ../patch-2.4.21-rmk1.gz | patch -p1
+patch -p1 < ../patch-2.4.21-rmk1-zipit
+patch -p1 < ../patch-km2
+</PRE></DIR>
+<LI>More details to be written depending on interest
+</UL>
+
+<P></P>
+<H2>If Problems - Revert to Regular Zipit firmware</H2>
+
+The same ZRS reflashing feature can be used to force installation of specific versions of the official firmware.
+Email me if interested.
+
+The trick is to be sure the version number in the .txt file used by ZRS is greater than the current version in the device.
+A fake version number of "1.99" makes sure the firmware is updated all the time.
+
+For more frequent reflashing, using the 'zflash' tool and an unencrypted ROM image file is easier and faster, but requires an nfs server.
+The ZRS revert approach should work even for those people without an nfs server.
+
+<P></P>
+<HR>
+<H2>Legal / Version / Credits</H2>
+
+Most of the software provided here is released under the GPL.
+There are a few source changes (see kernel patch above).
+Much of the hard work goes into finding the right combination of tools, libraries and build options.
+Major credit goes to ken AKA 'cynfab' from the Yahoo BBS.
+<P></P>
+There are some tools, documentation and other things that are my own creations ((c) by me).
+They are not released under the GPL.
+You are free to use them as long as you do not sell them.
+<BR>
+<P></P>
+Finally the main Zipit app, sound driver, loader, and support files are copyrighted by Aeronix, Inc.
+See <A HREF=http://www.zipitwireless.com/linux.html>The Zipit Linux/GPL page</A> for details.
+These are repackaged and provided for you as a convenience (ie. the same copyrighted bits appear on their website, and in the device itself, albeit packaged in different ways).
+The current hacked version is based off the official version 1.21 of the Zipit/Aeronix firmware:
+<A HREF="http://www.zipitwireless.net/~zippy/bootrom.4KD8G8NA.bin" zipit_key="609BDD07C8169305A2550A3010D658F2">Version 1.21 ROM</A>.
+<P></P>
+NOTE: this is for your convenience only.
+None of this is meant to undermine the copyright holder.
+If Aeronix complains about me mirroring their copyrighted data bits,
+the convenient packaging will be replaced by an 100% open source binary,
+along with a batch file that <i>you</i> must run to get their copyrighted data files from their website and produce the same exact result.
+
+<H2>Don't sell this material!</H2>
+<B>The use of Zipit described on this website involves a mix of GPL, non-GPL and copyrighted material.
+The purely GPL components follow the rules of the <A HREF=http://www.gnu.org/copyleft/gpl.html>GPL licensing terms</A>.
+The combination is not GPL.
+Please respect copyright holders.
+You don't have the right to sell this combined material.
+</B>
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

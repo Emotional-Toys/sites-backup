@@ -1,0 +1,414 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots:
+  <a href="index.html">PleoRB</a>
+  ( <a href="../pleo/index.html">Pleo</a>
+  <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  ( <a href="../nds/index.html">Nintendo DS</a>
+  <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ PleoRB PLEOPM Overview
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PleoRB PLEOPM Overview
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This section describes some of the things I've discovered by disassembling the PLEOPM default Pleo personality for the PleoRB.
+It is significantly different than the older Pleos.
+The motions and sounds are much larger, and the behavior logic as PleoRB grows up is much more complex and takes a lot longer.
+
+<P></P>
+<HR>
+<P></P>
+
+<H3>PleoRB Evolution (as PleoRB grows up)</H3>
+
+<DIR><I>
+NOTE: Updated version (statsRB, ProbeRB and ChangeRB are currently out of date)
+</I></DIR>
+<P></P>
+
+<TABLE border=1>
+<TR align=right>
+<TD>Stage</TD>
+<TD>age_new property</TD>
+<TD>how long to evolve?</TD>
+<TD>motion speed</TD>
+<TD>basic personality</TD>
+</TR>
+
+<TR align=right>
+<TH>Birthing</TH>
+<TH>10</TH>
+<TD>2 to 3 active hours (*)</TD>
+<TD>n/a</TD>
+<TD>idle_birthing</TD>
+</TR>
+
+<TR align=right>
+<TH>hatchling/vegetative (Stage 1 in manual)</TH>
+<TH>20</TH>
+<TD>3 to 5 active hours (*)</TD>
+<TD>n/a</TD>
+<TD>idle_vegetative</TD>
+</TR>
+
+<TR align=right>
+<TH>social development (Stage 2 in manual)</TH>
+<TH>30</TH>
+<TD>4 to 6 active hours (*)</TD>
+<TD>90%</TD>
+<TD>idle_social_dev</TD>
+</TR>
+
+<TR align=right>
+<TH>juvenile (Stage 3 in manual)</TH>
+<TH>40</TH>
+<TD>1 day (real time)</TD>
+<TD>100%</TD>
+<TD>idle_juvenile</TD>
+</TR>
+
+<TR align=right>
+<TH>mature/adult (Stage 4 in manual)</TH>
+<TH>50</TH>
+<TD>3 years (realtime)</TD>
+<TD>120%</TD>
+<TD>idle_mature</TD>
+</TR>
+
+<TR align=right>
+<TH>old age</TH>
+<TH>60</TH>
+<TD>200 years (realtime)</TD>
+<TD>75%</TD>
+<TD>idle_old</TD>
+</TR>
+</TABLE>
+
+<BR>
+NOTEs:
+<UL>
+<LI>This information only applies to the PleoRB. The older Pleos have a much simpler evolution.
+<LI>The "how long to evolve" tells you how long before PleoRB to outgrow this stage and moves to the next.
+<P></P>
+<LI>(*) For the earlier stages (Newborn, Hatchling, Social Development), only active Pleo time counts.
+If you leave your Pleo turned off or with the main battery removed, it will not age.
+<LI>(*) For the earlier stages, you can shorten the time needed by touching and playing with your Pleo.
+For example, to evolve from 'Social Development' to 'Juvenile' normally takes 6 hours Pleo run time.
+If you leave Pleo alone, it will take the full 6 hours.
+If you play with your Pleo, it will take less, to as little as 4 hours play time.
+<LI>TIP: for the earlier stages, if you let PleoRB play in your lap for around 5 to 10 minutes, it will take an hour off the evolution time.
+<P></P>
+<LI>In the older stages (Juvenile, Adult, Old Age), PleoRB uses its internal real-time-clock, and will age along with real time.
+Whether Pleo is running or sitting on a shelf with its main battery removed doesn't matter, Pleo is still aging.
+
+<P></P>
+<LI>The time for the Juvenile stage is extremely short. I believe this is a bug. BUT:
+<LI>The older stages (Juvenile, Adult, Old Age) are very similar. The main difference is the motion speed.
+This may change with future firmware updates.
+<LI>NOTE: when a Mature Adult reaches 1 year of age, it will save itself in preparation for cloning. Perhaps a future feature?
+<P></P>
+<LI>Use the <A HREF="statsrb.htm">statsRB</A> or <A HREF="proberb.htm">ProbeRB</A> or
+<A HREF="changerb.htm">ChangeRB</A> to monitor the growth of your PleoRB.
+NOTE: in current versions reporting on stages Juvenile and later is incorrect. Use the guidelines above instead.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+
+
+<H3>Comparing Versions (PleoRB versus older Pleos)</H3>
+
+The default Pleo personality ("PLEOPM") contains many parts.
+Here is a rough examination of the 3 main versions to show how the default personality has grown over the years.
+
+
+The older Pleos have two common versions, the UGOBE 1.1 personality and the Innvo PM 2 personality.
+The PleoPM currently has one personalty variant (called RB here).
+<P></P>
+
+<TABLE border=1>
+<TR align=right>
+<TH></TH>
+<TH>1.1</TH>
+<TH>PM2</TH>
+<TH>RB</TH>
+</TR>
+<TR align=right>
+<TH align=left>Total URF</TH>
+<TD>3.6MB</TD>
+<TD>3.6MB</TD>
+<TD>7.2MB</TD>
+</TR>
+<TR align=right>
+<TH align=left>UCF - number of commands</TH>
+<TD>303</TD>
+<TD>323</TD>
+<TD>267</TD>
+</TR>
+<TR align=right>
+<TH align=left>UMF - number of motions</TH>
+<TD>495</TD>
+<TD>513</TD>
+<TD>796</TD>
+</TR>
+<TR align=right>
+<TH align=left>UMF - size of motions</TH>
+<TD>1.2MB</TD>
+<TD>1.2MB</TD>
+<TD><B>2.2MB</B></TD>
+</TR>
+<TR align=right>
+<TH align=left>USF - number of sounds</TH>
+<TD>428</TD>
+<TD>428</TD>
+<TD>575</TD>
+</TR>
+<TR align=right>
+<TH align=left>USF - size of sounds</TH>
+<TD>1.9MB</TD>
+<TD>1.9MB</TD>
+<TD><B>4.2MB</B></TD>
+</TR>
+<TR align=right>
+<TH align=left>AMX - number of scripts</TH>
+<TD>44</TD>
+<TD>40</TD>
+<TD>47</TD>
+</TR>
+<TR align=right>
+<TH align=left>AMX - size of scripts</TH>
+<TD>281KB</TD>
+<TD>304KB</TD>
+<TD><B>508KB</B></TD>
+</TR>
+</TABLE>
+
+<P></P>
+
+NOTE: Much of the extra size of the PleoRB personality is in large song and dances.
+
+<P></P>
+<HR>
+<P></P>
+<H3>PleoRB DNA</H3>
+
+There are several DNA properties that aren't changed during the lifetime of a normal PleoRB.
+You can examine them with <A HREF="statsrb.htm">statsRB</A>, <A HREF="proberb.htm">ProbeRB</A>
+or <A HREF="changerb.htm">ChangeRB</A>.
+You can change them with <A HREF="changerb.htm">ChangeRB</A>.
+
+<UL>
+<LI>DNA "Gender" - very little used right now. Hard coded in PLEOPM.
+There are three settings:
+Gender Neutral (usual for Green colored PleoRBs),
+Make (usual for Blue colored PleoRBs) and
+Female (usual for Pink colored PleoRBs).
+<LI>DNA "Temper" - influences current "Mood". A bad tempered PleoRB will take more care and attention to keep it happy ("Good", "Normal", "Bad")
+<LI>DNA "Courage" - influences current "Emotion".
+<LI>DNA "Physical" - influences current "Health" and current "Physical" fitness ("Strong", "Normal", "Weak")
+<LI>DNA "Activeness" - influences current "Activity" - Not currently used
+<LI>DNA "Intelligence" - influences current "Obedience" and current "Skill" ("Smart", "Normal", "Dumb")
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H3>PleoRB Health and Mood</H3>
+
+The health and mood report of statsRB/ProbeRB or ChangeRB dump the main properties that describe the current status of PleoRB
+As you play with PleoRB, these properties will change.
+These numbers are percentages, in the range of 0% to 99%.
+Very low values (under 30%) are usually bad for Pleo and it will refuse many commands.
+But a high value of 99% is not always the best.
+If you leave your PleoRB turned off for a period of time, some of the mood and health properties will drop to potentially low values the next time you turn it on.
+They won't go below 9% (ie. don't worry, your PleoRB won't die).
+<BR>
+Experimentation is required to find the best fit for you.
+If you change them with ChangeRB, these changes will be temporary.
+However as you play with your Pleo, the DNA factors will influence many of the health and mood properties.
+
+<BR>
+The statsRB/ProbeRB/ChangeRB tools will warn you when critical properties are too low.
+<BR>
+//TODO: add more detail on use of mood
+
+<P></P>
+<HR>
+<P></P>
+<H3>PleoRB Food</H3>
+
+<BR>
+Using the PleoRB RFID food items influences the Health and Mood properties.
+
+<UL>
+<LI>Conifer or Cycad leaf:
+<UL>
+<LI>Feed goes up 15% - keeps him alive
+<LI>Physical level goes up a lot - keeps him awake
+</UL>
+
+<LI>Sugar Cane:
+<UL>
+<LI>Mood goes up by 10% (less for bad temper PleoRB, more for good temper PleoRB)
+<LI>Emotion goes up by 5% (less for low courage PleoRB, more for high courage PleoRB)
+<LI>Health goes <B>down</B> by 2% (less for stronger PleoRB, more for weak PleoRB)
+<LI>Feed goes up a bit (2%)
+<LI>Physical level goes up - keeps him awake
+</UL>
+
+<LI>Chilli Pepper:
+<UL>
+<LI>Physical level goes up a lot, even more than other foods - keeps him wide awake
+</UL>
+
+<LI>Coffee Leaf:
+<UL>
+<LI>Emotion goes up by 15%
+<LI>Physical level goes up - keeps him awake
+</UL>
+
+<LI>Mushroom:
+<UL>
+<LI>Feed goes up 5%
+<LI>Health goes up by 5%
+<LI>Physical level goes - keeps him awake
+</UL>
+
+<LI>Mint Leaf:
+<UL>
+<LI>Cures certain conditions ? ??
+</UL>
+
+<LI>Rock Salt:
+<UL>
+<LI>Cures certain conditions ? injury ?
+</UL>
+
+<LI>Chunk Of Ice:
+<UL>
+<LI>Mood goes up by 10%
+<LI>Emotion goes up by 5%
+<LI>Cures certain conditions ? too hot ?
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H3>Other interesting stuff</H3>
+TBD - please email me if you are interested in something particular.
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

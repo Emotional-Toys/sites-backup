@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO ODA File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO ODA File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big><big><span
+ style="font-weight: bold;"></span></big></big> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">1.
+Introduction</big></big><br>
+      <br>
+AIBO ODA files are archives containing multiple other
+files.&nbsp;&nbsp; Typically motion, LED, or sound elements for
+skits.&nbsp;&nbsp; <br>
+      <br>
+ODA's consist of a 64-byte header, followed by an index
+table storing chunk names &amp; file offset/length of the corresponding
+elements, followed by the chunks/elements themselves.<br>
+      <br>
+These files may be optionally GZIP compressed -- AIBO can decompress
+them on-the-fly.&nbsp;&nbsp; In Aibo Mind, the file headers are
+uncompressed and the -entries-
+individually GZIP compressed.&nbsp;&nbsp; This enables AIBO to
+dynamically load compressed audio files&nbsp; without reading the
+entire ODA archive (as necessary for decompressing whole files).<br>
+      <br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>2.
+ODA
+Header</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct oda_header_type {<br>  char signature[4];          // "ODAR"<br>  int oda_version;            // 0x30000<br>  int entry_count;<br>  int index_recordlen;        // Size of ODA Index Entry (always 0x90)<br>  char reserved[0x30];<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big style="font-weight: bold; text-decoration: underline;"><big>3.
+ODA
+Index Entry</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct oda_index_type {<br>  char signature[4];          // Signature copied from chunk/element.<br>  char chunk_name[0x80];      // Reference name for chunk/element (null padded).<br>  unsigned data_ofs;          // Byte offset within file of chunk/element.<br>  int data_len;               // Byte length of chunk/element.<br>  unsigned reserved;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <big style="font-weight: bold; text-decoration: underline;"><big>4.
+Example</big></big><br>
+      <br>
+Simple ODA file containing two LED files...<br>
+      <pre>000000:&nbsp; <span style="color: rgb(0, 153, 0);">4f 44 41 52  00 00 03 00&nbsp; 02 00 00 00&nbsp; 90 00 00 00</span>&nbsp; |ODAR............|<br>000010:&nbsp; <span
+ style="color: rgb(0, 153, 0);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000020:&nbsp; <span
+ style="color: rgb(0, 153, 0);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000030:&nbsp; <span
+ style="color: rgb(0, 153, 0);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 0</span>0&nbsp; |................|<br>000040:&nbsp; <span
+ style="color: rgb(51, 51, 255);">4c 45 44 00  4e 65 77 53&nbsp; 6b 69 74 31&nbsp; 00 00 00 00</span>&nbsp; |LED.NewSkit1....|<br>000050:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000060:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000070:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000080:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000090:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>0000a0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>0000b0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>0000c0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  60 01 00 00&nbsp; 41 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |....`...A.......|<br>0000d0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">4c 45 44 00  4e 65 77 53&nbsp; 6b 69 74 32&nbsp; 00 00 00 00</span>&nbsp; |LED.NewSkit2....|<br>0000e0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>0000f0:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |................|<br>000100:&nbsp; <span><span
+ style="color: rgb(51, 51, 255);">00 00 00 00&nbsp; 00 00 00 00  00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>000110:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00&nbsp; 00 00 00 00  00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>000120:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00&nbsp; 00 00 00 00  00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>000130:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00&nbsp; 00 00 00 00  00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>000140:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00&nbsp; 00 00 00 00  00 00 00 00&nbsp; 00 00 00 00</span>  |................|<br>000150:&nbsp; <span
+ style="color: rgb(51, 51, 255);">00 00 00 00  a1 01 00 00&nbsp; 3a 00 00 00&nbsp; 00 00 00 00</span>&nbsp; |........:.......|<br>000160:&nbsp; <span
+ style="color: rgb(153, 0, 0);">4d 54 68 64  00 00 00 06&nbsp; 00 00 00 01&nbsp; 00 78 4d 54</span>&nbsp; |MThd.........xMT|<br>000170:&nbsp; <span
+ style="color: rgb(153, 0, 0);">72 6b 00 00  00 2b 00 ff&nbsp; 01 09 4d 4f&nbsp; 44 45 4c 3d</span>&nbsp; |rk...+....MODEL=|<br>000180:&nbsp; <span
+ style="color: rgb(153, 0, 0);">32 31 30 00  ff 03 08 75&nbsp; 6e 74 69 74&nbsp; 6c 65 64 00</span>&nbsp; |210....untitled.|<br>000190:&nbsp; <span
+ style="color: rgb(153, 0, 0);">ff 51 03 07  a1 20 00 90&nbsp; 54 7f 78 54&nbsp; 00 00 ff 2f</span>&nbsp; |.Q... ..T.xT.../|<br>0001a0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">00 4d 54 68  64 00 00 00&nbsp; 06 00 00 00&nbsp; 01 00 78 4d</span>&nbsp; |.MThd.........xM|<br>0001b0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">54 72 6b 00  00 00 24 00&nbsp; ff 03 08 75&nbsp; 6e 74 69 74</span>&nbsp; |Trk...$....untit|<br>0001c0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">6c 65 64 00  ff 51 03 07&nbsp; a1 20 00 90&nbsp; 3c 7f 00 3d</span>&nbsp; |led..Q... ..&lt;..=|<br>0001d0:&nbsp; <span
+ style="color: rgb(153, 0, 0);">7f 78 3c 00  00 3d 00 00&nbsp; ff 2f 00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |.x&lt;..=.../.&nbsp;&nbsp;&nbsp;&nbsp; |</span></pre>
+      <a href="examples/LED.ODA">Download Example</a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

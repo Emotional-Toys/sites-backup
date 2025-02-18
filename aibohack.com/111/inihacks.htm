@@ -1,0 +1,202 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ INI file hacks
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ INI file hacks
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This file contains information on customizing you AIBO using some undocumented configuration files. These files do not exist on the AiboWare memory stick, so the AiboWare software uses defaults for these values.
+<br>
+To use them, just create a file with the proper name in the "/open-r/app/conf" directory of the memory stick.
+With the exception of the "[DEBUG_GROWING]" line, all other lines in these files should be a string followed by a space followed by a number. Don't add extra blank lines.
+
+<HR>
+<A name=bntdebug><P><B><font=4>BNTDEBUG.CFG</font></B></P></A>
+/open-r/app/conf/bntdebug.cfg sets debugging options for the BeNet (Behavior Network).
+Here's the default for main options.
+<pre>
+GROWING 1
+LEARNING 1
+EMOTION 1
+INSTINCT 1
+</pre>
+You can disable features by changing the value to "0".
+<P></P>
+If you disable the emotional model (EMOTION=0) or the instinctive model (INSTINCT=0), then you can also specify a fixed emotional and/or instinctive state:
+<pre>
+anger ###
+affection ###
+appetite ###
+curiosity ###
+disgust ###
+exercise ###
+fear ###
+joy ###
+sadness ###
+surprise ###
+</pre>
+Where ### is a number from 0 to 100.
+<P></P>
+There are additional options for printing debugging info. I believe they go to the serial port.
+<pre>
+EMO_PRINT 0
+INS_PRINT 0
+SEM_PRINT 0
+DST_PRINT 0
+COM_PRINT 0
+PRINT_DATA 0
+</pre>
+
+
+<HR>
+<A name=touch> <P><B><font=4>TOUCH.CFG</font></B></P></A>
+The /open-r/app/conf/touch.cfg file lets you customize the default thresholds for the dog's head sensor.
+<pre>
+TOUCH_TIME 10
+THRESHOULD_TIME 37
+THRESHOULD_TIME_LONG 500
+</pre>
+These times are in 1/100ths of a second and decide the difference between CLICK HIT, PAT and LONGPAT.
+<P></P>
+There is also a "CALC_MAX" feature, that is normally on:
+<pre>
+CALC_MAX 1
+</pre>
+Turning it off affects how CLICK is handled in some unknown way.
+<P></P>
+There are also values for pressure settings, but I'm not sure how you enter them in the TOUCH.CFG file. The default values are:
+<pre>
+MIN_PRESSURE .1
+THRESHOULD_PRESS .3
+</pre>
+
+<HR>
+<A name=lion><P><B><font=4>LION</font></B></P></A>
+
+/open-r/app/conf/LION sets options for AiboWare's learning module.
+<br>
+The contents of the file (with ERS-111 defaults) looks like:
+<pre>
+[DEBUG_GROWING]
+BABY 100000
+CHILD 300000
+YOUNG 1000000
+ADULT 4000000
+</pre>
+You can adjust the thresholds to any value you want. Values are in 1/10 second of "quality time".
+
+</BODY>
+</HTML>

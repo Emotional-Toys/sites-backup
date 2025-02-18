@@ -1,0 +1,254 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboSapien V2 IR Codes (for WowWee toys after RSV1)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboSapien V2 IR Codes (for WowWee toys after RSV1)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The V2 modulation scheme is similar to the <A HREF="ir_codes.htm">RoboSapien V1 IR Codes</A>, but longer.
+The IR Carrier is 39.2kHz.
+Data is modulated using a space coded signal with 12 data bits (data clock is 1200Hz, but actual data rate varies depending on the data). The V1 format is only 8 data bits.
+
+<P></P>
+For modulating the signals yourself, the signal looks something like this:
+<pre>
+Timing based on 1/1200 second clock (~.833ms)
+Signal is normally high (idle, no IR).
+Start: signal goes low for 8/1200 sec.
+Data bits: for each of 12 data bits, space encoded signal depending on bit value
+    Sends the most significant data bit first
+    If the data bit is 0: signal goes high for 1/1200 sec, and low for 1/1200 sec.
+    If the data bit is 1: signal goes high for 4/1200 sec, and low for 1/1200 sec.
+When completed, signal goes high again.
+No explicit stop bit. Minimal between signals is not known.
+</pre>
+<P></P>
+The first 4 bits (prefix nibble) indicate the robot model:
+<UL>
+<LI>1: "0001" RoboRaptor. <A HREF="http://www.evosapien.com/robosapien-hack/nocturnal2/RoboRaptor/Controller">More Info</A>.
+<LI>2: "0010" RoboPet. <A HREF="http://www.evosapien.com/robosapien-hack/nocturnal2/RoboPet/Controller">More Info</A>.
+<LI>3: "0011" RoboSapien V2. See below for details.
+<LI>4: "0100" RoboReptile. <A HREF="http://www.evosapien.com/robosapien-hack/nocturnal2/RoboReptile/Controller">More Info</A>.
+<LI>5: "0101" RS Media. <A HREF="http://www.evosapien.com/robosapien-hack/nocturnal2/RSMedia/Controller">More Info</A>.
+<LI>6: "0110" RoboQuad. <A HREF="ir_codes_quad.htm">More Info</A>.
+<LI>7: "0111" RoboBoa. <A HREF="ir_codes_boa.htm">More Info</A>.
+<LI>F: "FFFF" Sometimes used for testing
+</UL>
+
+<P></P>
+<HR>
+<H2>RSV2 Codes</H2>
+
+<P></P>
+Here's are the IR codes for RoboSapien V2 (RSV2) formatted similar to the manual:
+<P></P>
+
+<TABLE border=2>
+<TR><TH></TH><TH>L</TH><TH>S</TH><TH>a</TH><TH>b</TH><TH>c</TH><TH>x</TH><TH>y</TH><TH>z</TH><TH>D</TH><TH>R</TH><TH></TH></TR>
+<TR><TH align=center=><BR>Un-Shifted<BR></TH><TD align=center><BR>Walking<BR><BR><font color=green>$300+DIR</font color=green></TD>
+<TD align=center><BR>Stop<BR><BR><font color=green>$3AA</font color=green></TD>
+<TD align=center>Sonic<BR>Sensors<BR>On/Off<BR><font color=green>$383</font color=green></TD>
+<TD align=center>Vision<BR>Systems<BR>On/Off<BR><font color=green>$380</font color=green></TD>
+<TD align=center>Positional<BR>Program<BR>Entry<BR><font color=green>$381</font color=green></TD>
+<TD align=center>Positional<BR>Program<BR>Play<BR><font color=green>$352</font color=green></TD>
+<TD align=center><BR>Gait Change/<BR>Quick Reset<BR><font color=green>$390</font color=green></TD>
+<TD align=center><BR>Free Roam<BR><BR><font color=green>$382</font color=green></TD>
+<TD align=center><BR>Dance Demo<BR><BR><font color=green>$350</font color=green></TD>
+<TD align=center><BR>Head and<BR>Upper Body<BR><font color=green>$320+DIR</font color=green></TD>
+<TH align=center=><BR>Un-Shifted<BR></TH></TR>
+<TR><TH align=center><BR>Shift1<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$308+DIR</font color=green></TD>
+<TD align=center><BR>Reset<BR><BR><font color=green>$353</font color=green></TD>
+<TD align=center><BR>Right Arm<BR>Throw<BR><font color=green>$355</font color=green></TD>
+<TD align=center>Right<BR>Arm Low<BR>Pickup<BR><font color=green>$356</font color=green></TD>
+<TD align=center>Right<BR>Arm High<BR>Pickup<BR><font color=green>$357</font color=green></TD>
+<TD align=center><BR>Right<BR>Arm Grab<BR><font color=green>$358</font color=green></TD>
+<TD align=center><BR>Right Arm<BR>Give<BR><font color=green>$359</font color=green></TD>
+<TD align=center><BR>Right Arm<BR>Roll<BR><font color=green>$35A</font color=green></TD>
+<TD align=center><BR>Movement<BR>Demo<BR><font color=green>$354</font color=green></TD>
+<TD align=center><BR>Right Arm<BR><BR><font color=green>$328+DIR</font color=green></TD>
+<TH align=center><BR>Shift1<BR></TH></TR>
+<TR><TH align=center><BR>Shift2<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3C0+DIR</font color=green></TD>
+<TD align=center><BR>Sleep/<BR>Wake Up<BR><font color=green>$386</font color=green></TD>
+<TD align=center><BR>Left Arm<BR>Throw<BR><font color=green>$35C</font color=green></TD>
+<TD align=center>Left<BR>Arm Low<BR>Pickup<BR><font color=green>$35D</font color=green></TD>
+<TD align=center>Left<BR>Arm High<BR>Pickup<BR><font color=green>$35E</font color=green></TD>
+<TD align=center><BR>Left<BR>Arm Grab<BR><font color=green>$35F</font color=green></TD>
+<TD align=center><BR>Left Arm<BR>Give<BR><font color=green>$360</font color=green></TD>
+<TD align=center><BR>Left Arm<BR>Roll<BR><font color=green>$361</font color=green></TD>
+<TD align=center>Lie Down/<BR>Sit up/Lie Down<BR>Stand up<BR><font color=green>$351</font color=green></TD>
+<TD align=center><BR>Left Arm<BR><BR><font color=green>$330+DIR</font color=green></TD>
+<TH align=center><BR>Shift2<BR></TH></TR>
+<TR><TH align=center><BR>Shift3<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3C8+DIR</font color=green></TD>
+<TD align=center><BR>Get Up<BR><BR><font color=green>$364</font color=green></TD>
+<TD align=center><BR>Right Kick<BR><BR><font color=green>$362</font color=green></TD>
+<TD align=center><BR>Right Push<BR><BR><font color=green>$365</font color=green></TD>
+<TD align=center><BR>Right Chop<BR><BR><font color=green>$366</font color=green></TD>
+<TD align=center><BR>Left Chop<BR><BR><font color=green>$367</font color=green></TD>
+<TD align=center><BR>Left Push<BR><BR><font color=green>$368</font color=green></TD>
+<TD align=center><BR>Left Kick<BR><BR><font color=green>$363</font color=green></TD>
+<TD align=center><BR>Oops<BR><BR><font color=green>$35B</font color=green></TD>
+<TD align=center><BR>Hip &<BR>Waist Tilt<BR><font color=green>$340+DIR</font color=green></TD>
+<TH align=center><BR>Shift3<BR></TH></TR>
+<TR><TH align=center><BR>Shift1+2<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3D0+DIR</font color=green></TD>
+<TD align=center><BR>Clear<BR>Program<BR><font color=green>$3F4</font color=green></TD>
+<TD align=center><BR>Sound<BR>Program<BR><font color=green>$3F1</font color=green></TD>
+<TD align=center><BR>Vision<BR>Program<BR><font color=green>$3F0</font color=green></TD>
+<TD align=center><BR>Main<BR>Program<BR><font color=green>$3F5</font color=green></TD>
+<TD align=center><BR>Perform<BR>Program<BR><font color=green>$3F6</font color=green></TD>
+<TD align=center><BR>Guard<BR>Mode<BR><font color=green>$3F2</font color=green></TD>
+<TD align=center><BR>Clear<BR>Entry<BR><font color=green>$3F3</font color=green></TD>
+<TD align=center><BR>High 5<BR><BR><font color=green>$369</font color=green></TD>
+<TD align=center><BR>Both Arms<BR><BR><font color=green>$338+DIR</font color=green></TD>
+<TH align=center><BR>Shift1+2<BR></TH></TR>
+<TR><TH align=center><BR>Shift1+3<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3D8+DIR</font color=green></TD>
+<TD align=center><BR>Bulldozer<BR>Forward<BR><font color=green>$36A</font color=green></TD>
+<TD align=center><BR>Laugh<BR><BR><font color=green>$36C</font color=green></TD>
+<TD align=center><BR>Insult<BR><BR><font color=green>$36D</font color=green></TD>
+<TD align=center><BR>Right Arm<BR>Drop<BR><font color=green>$36E</font color=green></TD>
+<TD align=center><BR>Left Arm<BR>Drop<BR><font color=green>$36F</font color=green></TD>
+<TD align=center><BR>Plan<BR><BR><font color=green>$370</font color=green></TD>
+<TD align=center><BR>Spare<BR>Change<BR><font color=green>$371</font color=green></TD>
+<TD align=center><BR>Hey Baby<BR><BR><font color=green>$36B</font color=green></TD>
+<TD align=center><BR>Head Only<BR><BR><font color=green>$348+DIR</font color=green></TD>
+<TH align=center><BR>Shift1+3<BR></TH></TR>
+<TR><TH align=center><BR>Shift2+3<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3E0+DIR</font color=green></TD>
+<TD align=center><BR>Bulldozer<BR>Backward<BR><font color=green>$372</font color=green></TD>
+<TD align=center><BR>Roar<BR><BR><font color=green>$374</font color=green></TD>
+<TD align=center><BR>Diode<BR><BR><font color=green>$375</font color=green></TD>
+<TD align=center><BR>Fetch<BR><BR><font color=green>$376</font color=green></TD>
+<TD align=center><BR>Danger<BR><BR><font color=green>$377</font color=green></TD>
+<TD align=center><BR>Calm Down<BR><BR><font color=green>$378</font color=green></TD>
+<TD align=center><BR>Hug<BR><BR><font color=green>$379</font color=green></TD>
+<TD align=center><BR>Burp<BR><BR><font color=green>$373</font color=green></TD>
+<TD align=center><BR>Head and<BR>Upper Body<BR><font color=green>$310+DIR</font color=green></TD>
+<TH align=center><BR>Shift2+3<BR></TH></TR>
+<TR><TH align=center><BR>Shift1+2+3<BR></TH><TD align=center><BR>no-op<BR><BR><font color=green>$3E8+DIR</font color=green></TD>
+<TD align=center><BR>Power<BR>Down<BR><font color=green>$384</font color=green></TD>
+<TD align=center><BR>Robosapien V2<BR>Interaction<BR><font color=green>$385</font color=green></TD>
+<TD align=center><BR>Roboraptor<BR>Interaction<BR><font color=green>$387</font color=green></TD>
+<TD align=center><BR>Robopet<BR>Interaction<BR><font color=green>$388</font color=green></TD>
+<TD align=center>Manual Color<BR>Mode:<BR>Daylight<BR><font color=green>$389</font color=green></TD>
+<TD align=center>Manual Color<BR>Mode:<BR>Indoor Yellow<BR><font color=green>$38A</font color=green></TD>
+<TD align=center>Manual Color<BR>Mode:<BR>Indoor White<BR><font color=green>$38B</font color=green></TD>
+<TD align=center><BR>Don't Press<BR><BR><font color=green>$37A</font color=green></TD>
+<TD align=center><BR>Upper Body<BR>Only<BR><font color=green>$318+DIR</font color=green></TD>
+<TH align=center><BR>Shift1+2+3<BR></TH></TR>
+</TABLE>
+<P></P>
+
+NOTES:
+<UL>
+<LI>"S" means the stop button
+<LI>"DIR" is a 3 bit code for one of the the directions on the joystick (L or R)
+<UL>
+<LI>+0 - Up/Forward
+<LI>+1 - Down/Backward
+<LI>+2 - Left
+<LI>+3 - Right
+<LI>+4 - Up and Left
+<LI>+5 - Up and Right
+<LI>+6 - Down and Left
+<LI>+7 - Down and Right
+</UL>
+<LI>When any shift key is held down, the L stick sends different codes (and appear to have no reaction from the robot)
+<LI>Secret code: $37B - used in robot interaction (see below)
+<LI>Some keys repeat, and at different rates. You can get an idea of the repeating buttons by looking at how the LED on the remote flashes.
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Tricky IR</H2>
+<H3>"Laser"</H3>
+The "laser" feature uses the bottom IR LED on the controller to send out a very slowly modulated signal.
+
+<BR>
+The carrier frequency is also 39.2kHz (or 40kHz give or take).
+Signal is normally off. When you press the "laser" button:
+IR goes on for ~20ms, followed by ~200ms sec of idle, and then repeats.
+While in this mode, other IR signals are jammed (eg: obstacle avoidance is disabled).
+The green light/LED is for aiming purposes so you can see where the remote is aiming. You can cover up the green light and it will still track the IR signal (from the bottom IR LED, the one inside the black housing).
+<P></P>
+
+<H3>Interactions</H3>
+DISCLAIMER: I don't have the extra robots to record their controller codes, or the full interactions.
+Here are the starting part of the interaction modes (ie. what you can confirm with a single V2 robot).
+<UL>
+<LI>Roboraptor Interaction: controller sends $387 to RobosapienV2. RobosapienV2 sends roboraptor codes $18E, $187, $192, $193, $1D1, $1B4, $186 with scripted dialog and delays inbetween (may have some randomness).
+<LI>Robopet Interaction: controller sends $388 to RobosapienV2. RobosapienV2 sends robopet codes $2E4, $2C4, $2E2, $2C4, $2E4 with scripted dialog and delays inbetween (may have some randomness).
+<LI>Roboraptor and Robopet interaction are one-way. The RoboSapienV2 will start immediately and perform his part of the script even if there is no other toy present.
+<P></P>
+<LI>The RobosapienV2 <-> RobosapienV2 interaction is two-way.
+<LI>RoboSapienV2 Interaction: controller sends $385 to 1st robot. 1st robot says "What a good looking guy" and sends $37B to 2nd robot.
+The second robot says "At last intelligent life".
+<LI>
+NOTE: that's all I see. If someone gets two V2 robots, please try this out and see if there is more to the skit.
+</UL>
+These may be exploited in a very limited fashion for other things.
+
+<P></P>
+<HR>
+<P></P>
+<H2>PSP RoboSapienV2 Remote</H2>
+
+The PSP IR remote sample can be easily adapted to use these codes (some programming required). The RSV2 version was never finished due to lack of interest.
+Also, because of all the strange shift states, the regular remote works better most of the time.
+<BR>
+If interested and you have a Homebrew capable PSP, check out the <A HREF="../psp/roboir.htm">V1 released program here</A>.
+<P></P>
+<HR>
+<P></P>
+
+
+</BODY>
+</HTML>

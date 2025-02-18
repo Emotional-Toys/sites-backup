@@ -1,0 +1,313 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+  <BR>
+    <HR>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=gold)" align="center" valign="top">
+	  <a href="../homie/index.html">HomieGate</a>
+        </TD>
+        </TR>
+    </TABLE>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+  <a href="../lesser/index.html">Gallery</a><BR>
+ </td>
+ <td colspan=3 align="center" valign="top" bgcolor=#D0D0D0>
+  <BR>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+
+ <td width=15% align="center" valign="top">
+  <a href="../clie/index.html">CLIE</a><BR>
+  <a href="../panel/index.html">Panel</a><BR>
+  <a href="../icybie/index.html">ICybie</a><BR>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AEditor - Performance Editor for ERS-2x0 and 31x
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AEditor - Performance Editor for ERS-2x0 and 31x
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Please refer to the <A HREF="dancetut.htm">Online Dance Choreography Tutorial</A> for how to use the editor to make AIBO dance.
+
+<H2>Two Versions</H2>
+There are two separate versions of the AIBO Editor, one for the ERS-11x (AIBO Editor) and a different version for the ERS-2x0 and 31x models ("AEditor23" described here).
+The functionality of the two editors is very similar.
+The motion (.MTN) and eye flashing (.LED) file formats are different.
+Please be sure you use the correct version of the editor.
+<BR>
+If you have ERS-111 motions you want converted to ERS-210 format (or vice versa), please send me an email.
+
+<H2>Overview</H2>
+AEditor23 is a tool for creating and editing AIBO performances for the ERS-210, ERS-31x and ERS-220.
+AEditor will edit body motions (in .MTN files) and eye flashing (in .LED files).
+You can load in audio files (.WAV or .MID files) and the editor will let you view and play them (WAV only).
+AEditor does not edit audio files. Please prepare your audio in other tools before using the AIBO editor.
+<br>
+AEditor23 is a multi-track editor that edits the audio, eye flashing and body motions all in a time synchronized format. You can click on the different tracks to edit the values.
+
+<br>
+<BR><IMG SRC="ss_edit1.jpg"><BR>
+
+<HR>
+<H2>Using AEditor23 with Master Studio</H2>
+The Performance Editor can be used in conjunction with Master Studio.
+Use the Master Studio Behavior Arranger ("BA") to create behaviors.
+Use the Master Studio Action Composer ("AC") to create performance data files, and do general editing.
+Then for more sophisticated editing, you can use the AiboPet editor ("AEditor23") for mouth movements, dance steps etc.
+
+<H3>Setting up performance files</H3>
+When using the Action Composer, be sure to place all .MTN, .WAV and .LED files in the same directory.
+Also for a given action, be sure the base filename is the same (eg: FOO.MTN, FOO.WAV, FOO.LED). The name of the .ACT file can be anything, but I recommend using the same naming convention (eg: FOO.ACT).
+
+For a detailed example, see the Bender source and other <A HREF="../rcode/index.html">Rcode examples</A>.
+<P></P>
+If you can't open a .MTN file created with AEditor23 into the Action Composer, then the position name may be invalid (please email me for help).
+
+<H3>Using both the Action Composer and AEditor</H3>
+It is pretty simple. Just use one editor at a time.
+Save all your work before switching to the other editor.
+<BR>
+The Action Composer editors are good for setting up the structure of your project, for editing MIDI music, flashing LED files, and limited WAV file editing.
+The Action Composer motion editor is good most basic motion editing, as long as you don't have too many key frames.
+<BR>
+The AEditor23 editor is good for general editing, and especially good at matching motions and LED flashing to a WAV file.
+<BR>
+For more advanced WAV file editing, I recommend CoolEdit.
+<BR>
+Experiment to find out what is the best mix of editing tools for your particular habits.
+
+<P></P>
+
+<HR>
+<H2>Platforms</H2>
+AEditor is a Win32 program. It should work on Windows 95 and above. It requires DirectX for the 3D Virtual AIBO.
+<br>
+The file VIRTAIBO2.DLL must be in the same directory as the main program.
+<P></P>
+
+<HR>
+<H2>Virtual AIBO</H2>
+The main tool for viewing and editing AIBO performances is Virtual Aibo. Virtual AIBO is a 3D model of the AIBO that is used for playback and editing of motions.
+<br>
+<A HREF="virtaibo.htm">Click here for more information on Virtual AIBO.</A><br>
+<P></P>
+
+<HR>
+<H2>Basic Concepts</H2>
+With the editor you are editing one, two or three files at once. The root file name must be the same and the files must be in the same directory.
+For example you can be editing the "SKIT1" performance, with the audio in SKIT1.WAV, the motion in SKIT1.MTN and the eye flashing in SKIT1.LED.
+<br>
+You can examine built-in Action (File / Open Action) but you can not change them. You can preview them and possibly copy motion tracks from them. The built-in actions are currently limited to ERS-111 performances only.
+<br>
+Virtual AIBO can be used to playback performances, and to edit joint values.
+<br>
+The "Generate Mouth" and "Generate Eyes" commands work with a WAVE file audio, generating mouth motion or eye flashing based on the sound in the sound file. You can adjust the thresholds used for the generation algorithm.
+You can also tweek the final results.
+
+<H3>Selection</H3>
+There are three kinds of selection using the mouse.
+<br>
+If you use the left button of the mouse and select a region, all motion tracks will be selected.
+This allows you to specify a time range.
+The audio track is hilited, even though you can't change the audio data.
+<br>
+If you hold down the SHIFT key when you select a range with the left mouse button, you will get a "2 Dimensional" selection. This will select both the time range and those tracks you want to change.
+This is primarily used to select specific tracks to smooth or perform other operations on.
+<br>
+Finally, the RIGHT mouse button is used to directly edit values. This works for motion tracks and LED tracks.
+
+<H3>File Menu</H3>
+<pre>
+    Open - Open a file (will load all files used by that performance)
+    Close - Close current performance
+    Save - Save current performance
+    Print options
+        Print and Print Preview.
+        This does a raw print of the track data -- not too useful.
+    Exit
+</pre>
+
+<H3>Edit Menu</H3>
+<pre>
+
+    Copy - copy the currently selected motion tracks to the clipboard
+            [select a time range]
+    Paste Special - paste over motion tracks
+            [select start of where data is to be merged]
+    Motion PosName - lets you change the position name stored in the motion file
+            Do not change this unless you know what you are doing!
+
+    Generate Eyes - generate flashing eyes based on audio track
+            [selection ignored]
+    Generate Mouth - generate mouth movement based on audio track
+            [select a time range]
+    Generate Tail - not implemented (if you have ideas, email me)
+
+    Select All - select all tracks and entire time range
+    Smooth Motion - smooth motion between endpoints
+            [select time range and rows - see 2D Selection]
+
+    Reduce - reduce the motion track to keyframes
+    Reduce - expand the motion track from keyframes
+</pre>
+<H2>View Menu</H2>
+<pre>
+    Toolbar - toggle the main toolbar on/off
+    Status Bar - toggle the status bar on/off
+
+    Zoom Features
+        Zoom In, Zoom Out, Set Zoom
+
+    Play - play WAVE file
+            [select a time range]
+</pre>
+
+<H2>Dancing Menu</H2>
+Inserts a dance step at the start of the current selection.
+<pre>
+    Sit* - dances from the sitting position
+    Standing* - dances from the standing position
+    Sleeping* - dances from the sleeping position
+    Change - change from one position to another
+    Other - other dance steps or motions
+</pre>
+<H2>Tools Menu</H2>
+<pre>
+    Replace Audio - replace audio track with a WAVE, reinit motion tracks
+    Change Start and End - advanced use only
+    Trim End - advanced use only
+</pre>
+
+<H2>Window Menu</H2>
+<pre>
+    Close All
+    Cascase
+    Tile
+
+    Show Player - show Virtual AIBO
+</pre>
+
+<H3>Keyboard Commands</H3>
+Most keyboard commands act on the current selection.
+<pre>
+    Left Arrow
+        Move selection forward one time slot (80 milliseconds)
+        Useful for playing back motion
+    Right Arrow
+        Move selection backwards one time slot (80 milliseconds)
+    Up Arrow
+        Move selection forward one keyframe
+    Down Arrow
+        Move selection backward one keyframe
+
+    SPACE
+        Play the current selection (Audio and Virtual AIBO if open)
+    ESCAPE
+        Stop playing
+
+    '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        Set the currently selected motion to specific value.
+        '1' = lowest, '5' = middle, '9' = highest
+
+    'R' or 'S'
+        Smooth motion
+
+    Ctrl+E
+        Expand motion
+    Ctrl+U
+        Reduce motion
+    Ctrl+A
+        Select All
+    
+</pre>
+
+</BODY>
+</HTML>

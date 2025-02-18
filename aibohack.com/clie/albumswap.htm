@@ -1,0 +1,270 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AlbumSwap 1.1 for the CLIE
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AlbumSwap 1.1 for the CLIE
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+AlbumSwap (version 1.1) is a simple utility to swap albums (play lists) for AudioPlayer.
+<BR>
+It is designed for very fast switching and tries to do all the work for you (normally no extra steps required).
+<P></P>
+It supports two different ways of organizing your albums (and a hybrid):
+<UL>
+<LI>Method 1 - all MP3s in one folder (MSAUDIO) and multiple .M3U playlists
+<LI>Method 2 - each MP3 collection in a separate folder (ALBUM_???) and an optional MP3LIST.M3U
+<LI>Method 2+1 - a combination of Method 2 and Method 1
+</UL>
+Method 2 is newer and recommended.
+Method 2 is much faster, especially if you have many songs on each storage card.
+<P></P>
+
+NOTE: I will use the terms "album" and "play list" interchangably. Either is just a collection of MP3s that are normally played in order.
+<BR>
+NOTE: I will use the terms "folder" and "directory" interchangably.
+<P></P>
+
+<P>Features</P>
+<UL>
+<LI>works with NX and NZ AudioPlayer
+<LI>works with TG50 AudioPlayer (method 2)
+<LI>may work with other CLIE models (incl NR series, method 2)
+<LI>displays list of available albums
+<LI>supports two different ways of organizing you music (see below) as well as a special hybrid of the two
+<LI>automatically re-mounts storage device (CF or MS) so you don't have to pull it out and re-insert it
+<LI>will autolaunches AudioPlayer (so you don't have to) and in full screen mode
+<LI>compatible with AudioPlayer in background play mode (background playing will stop after the swap)
+<LI>compatible with most memory stick or compact flash variations (but only the first VFS volume where it finds .M3U files)
+<LI>JogDial navigation
+</UL>
+
+<P></P>
+<HR>
+<H2>One Time Install</H2>
+
+<UL>
+<LI>Download <A HREF="ClieAlbumSwap11.zip">ClieAlbumSwap11.zip</A>
+<LI>Unzip and install AlbumSwap.prc to you CLIE (usually with HotSync).
+<LI>In AudioPlayer turn off "Reset PB mode by album change" and it will work automatically (not essential but it makes things much more convenient)
+</UL>
+
+<P></P>
+<HR>
+<H2>Media Preparation</H2>
+
+For each storage card (MS or CF), you need to prepare your music.
+You should already be familiar with how to create compatible MP3 files (ie. no VBR files).
+
+<H3>Method 2 - New and Recommended</H3>
+
+<P></P>
+<UL>
+<LI>Copy your MP3 files into separate folders on the storage card (MS or CF)
+<BR>How you organize your music collection is up to you.
+<LI>These folders must be created in the "\PALM\Programs" parent folder
+<LI>Each folder name must start with "ALBUM_"
+The part of the folder name after "ALBUM_" is up to you.
+<LI>You do not need to create any .M3U files.
+The AudioPlayer will play the songs in the order you copy them to the storage card.
+<LI>If there is a "\PALM\Programs\MSAUDIO" folder on the storage card, be sure to delete it before the first time you use AlbumSwap.
+<LI>NOTE: the current album will be renamed to "MSAUDIO" when in use.
+Only delete the MSAUDIO folder during the initial setup.
+
+<P></P>
+Sample:
+<pre>
+    \PALM\Programs\ALBUM_My First Collection\Song1.mp3
+    \PALM\Programs\ALBUM_My First Collection\Song2.mp3
+    \PALM\Programs\ALBUM_My Second Collection\Song3.mp3
+    \PALM\Programs\ALBUM_My Second Collection\Song4.mp3
+</pre>
+
+<LI>Optional: if you want more control over the play order, you can create an MP3LIST.M3U file in the proper ALBUM_??? folder.
+That MP3LIST.M3U should only contain the file names of the MP3 files in that same ALBUM_??? folder.
+<BR>
+BTW: You can edit the MP3LIST.M3U file manually, or use the AudioPlayer playlist arranging feature.
+</UL>
+
+<P></P>
+
+<H3>Method 1 - older way</H3>
+<P></P>
+<UL>
+<LI>Copy all your MP3 files into one folder on the storage card (MS or CF)
+<LI>This must be the standard audio folder:
+<pre>
+    \PALM\Programs\MSAUDIO
+</pre>
+<LI>Do not create an MP3LIST.M3U file
+<LI>Instead, create several ????.M3U files in the same folder.
+Each one represents a playlist.
+These playlist files can be named anything, just be sure they end in .M3U (and are not called MP3LIST.M3U)
+<pre>
+    Alanis.m3u
+    RockTheCasba.m3u
+    MellowTracks.m3u
+</pre>
+How you organize your music collection is up to you.
+<LI>.M3U files are text files with the filenames of the .MP3 files (no folder part, just the file name with extension).
+You can edit them with any text editor.
+<pre>
+    Song01.mp3
+    Song02.mp3
+    ...
+</pre>
+<LI>Note the .mp3 song files must be in the same folder as the .M3U playlist file.
+</UL>
+
+<P></P>
+<H3>Method 2+1 - use both !</H3>
+First organize your main music into separate folders as described in Method 2.
+Then on a case by case basis, you can create multiple playlists within each ALBUM_??? folder, as described in Method 1.
+<BR>
+The AlbumSwap program is smart enough to detect this case.
+When run it will let you pick from the playlists within the current ALBUM_??? folder.
+When you want to switch to a different ALBUM_??? folder, press the "Up" button (that will magically appear) and switch the folder/directory.
+
+<P></P>
+<HR>
+<H2>Usage</H2>
+
+<UL>
+<LI>Run AlbumSwap (making it a quick-launch app is recommended).
+<BR>NOTE: will work even if AudioPlayer is playing in the background
+<LI>Pick the album/playlist you want to hear.
+<LI>Press the "Swap" button.
+<P></P>
+<LI>You should automatically go back to AudioPlayer
+</UL>
+
+The first time you have to select the playlist manually.
+Press the sort option (top, 3rd button from right) and then press OK for the new playlist to take effect.
+
+<P></P>
+If you didn't turn off "Reset PB mode by album change" you will have to do this all the time you swap albums.
+If you did turn it off, the new album list will select automatically after the first time.
+
+<BR>
+If you use the regular playlist editing features (that edits the current MP3LIST.M3U file), you may lose changes after the next swap.
+Changes will be wiped out when using Method 1 or Method 2+1.
+Changes will be saved when using Method 2.
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

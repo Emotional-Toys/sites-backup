@@ -1,0 +1,1216 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Aibnet Telnet Console</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../dogsbodynet.com/index.html"><img alt="Home" src="web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBNET - AIBO
+Telnet Console</font></b></div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+</center>
+<br>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <table border="2" cellpadding="20" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce" valign="top">
+            <table
+ style="width: 100%; background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="width: 1px; vertical-align: middle;"><a
+ href="downloads/Aibnet-v3.10-Installer.exe"><img alt="Skitter Logo"
+ src="images/aiblogo.gif" border="0" height="93" hspace="5" vspace="2"
+ width="95"></a><br>
+                  </td>
+                  <td
+ style="vertical-align: middle; text-align: center;">
+                  <div align="center"><br>
+                  <big><a href="downloads/Aibnet-v3.10-Installer.exe"><b>Download
+Installer for<br>
+Aibnet Development Environment v3.1<br>
+(1.1 MBytes)</b></a></big><small><br>
+                  <br>
+Prefer zipfiles instead?&nbsp; <a
+ href="downloads/aibnet-tools-v3.10.zip">aibnet-tools-v3.10.zip</a><br>
+                  </small> </div>
+                  </td>
+                  <td style="width: 96px; vertical-align: middle;"><a
+ href="downloads/Aibnet-v3.10-Installer.exe"><img alt="Skitter Logo"
+ src="images/aiblogob.gif" border="0" height="93" hspace="5" vspace="2"
+ width="95"></a></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: center;"> </div>
+      <p>
+      <table
+ style="text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="1">
+        <tbody>
+          <tr>
+            <td style="width: 50%; white-space: nowrap;"><b><font
+ size="+1">&nbsp; <br>
+Table of Contents:<br>
+            <br>
+            </font></b>&nbsp;&nbsp;&nbsp; <a href="aibnet.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#INSTALL_AIBNET">2.0 Installing Aibnet</a>
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#MAKE_CONNECT">3.0 Making a Connection</a>
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#LOGFILE">4.0 Capturing Text to a Log File</a>
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#FILEXFER">5.0 Transfer RCode to/from Aibo</a>
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#UPLOAD">6.0 Upload Actions to Aibo</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#DEBUG">7.0 Debug Mode, Tracing, and
+Playback</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#WATCHBAR">8.0 Watch Bar</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#CAMERABAR">9.0 Camera Bar</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#VARBAR">10.0 Variable Bar</a>&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#CALLSTACK">11.0 Call Stack</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#SRCVIEW">12.0 Source Viewer</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#PREFERENCES">13.0 Specify Preferences</a>
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="aibnet.html#WHATSNEW">14.0 What's New?</a><br>
+            </td>
+            <td
+ style="width: 50%; white-space: nowrap; vertical-align: top;"> <b><font
+ size="+1"><br>
+            <br>
+&nbsp;&nbsp; Tools Included:</font></b><br>
+            <ul>
+              <li><a href="aibnet.html">Aibnet - AIBO Telnet
+Console</a></li>
+              <li><a href="aibnet_tools/BeCompile.html">BeCompile -
+Optimizing Behavior Compiler</a></li>
+              <li><a href="aibnet_tools/CPP.html">CPP - Macro
+Preprocessor</a></li>
+              <li><a href="aibnet_tools/RCheck.html">RCheck - RCode
+Syntax Checker</a></li>
+              <li><a href="aibnet_tools/ReCode.html">ReCode -
+Extended RCode Compiler</a></li>
+              <li><a href="aibnet_tools/OdaBuild.html">OdaBuild -
+Aibo Action Compiler</a></li>
+            </ul>
+            <br>
+            <b><font size="+1">&nbsp; RCode Syntax References:</font></b><br>
+            <ul>
+              <li><a href="rcode/rcode-ref.html">RCode 1.2 (210/220/310)</a></li>
+              <li><a href="rcode/rcode-ref-110.html">RCode 110</a><br>
+              </li>
+            </ul>
+            <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <br>
+      <hr align="left" width="100%"><br>
+      <div align="center"><img alt="Aibnet Screen Capture" title=""
+ src="images/aibnet20.gif" height="484" hspace="10" vspace="10"
+ width="650"><br>
+      </div>
+      <br>
+      <hr size="2" width="100%"><a name="INTRO"></a><b><font size="+1">1.0
+INTRODUCTION<br>
+      </font></b>
+      <hr size="2" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Aibnet &amp; its support tools offers a development
+environment for
+RCode programs.&nbsp;&nbsp; It's used as a replacement for the simple
+telnet
+console built into the Master Studio Behavior Arranger.&nbsp;&nbsp; If
+you don't own Master Studio, Aibnet plus <a href="skitter.html">Skitter</a>
+(and/or AiboPet's performance editor) provide everything you need for
+stand
+alone RCode development.&nbsp;
+            <p>Aibnet is a telnet console for AIBO's.&nbsp; It has
+a command bar for entering &amp; editing commands (instead of typing
+blind), a toolbar with start/stop/write/read buttons (similar to the
+Behavior
+Arranger window), a watchbar to monitor variables, and a camerabar so
+you
+see what AIBO see's (<a href="https://www.aibohack.com/rcode/index.html">RCodePlus</a>
+required).&nbsp; It supports scroll buffer capture, and logging to
+disk.&nbsp; Aibnet can compile Master Studio Behaviors, RCode
+and/or&nbsp; performance skits/actions and upload them to AIBO for you.
+            </p>
+            <p>Aibnet contains extensive debugging support.&nbsp;&nbsp;
+Interactive debug of AIBO isn't possible, but Aibnet has the next best
+thing.&nbsp;&nbsp; It records everything AIBO does (code execution,
+variable usage &amp; camera images).&nbsp;&nbsp;
+Think of it as TiVo for AIBO -- it turns your PC into an AIBO tape
+recorder.&nbsp;&nbsp;
+If something goes wrong with your AIBO program, simply rewind and
+examine
+in detail what happened. </p>
+            <p>Aibnet uses <a href="aibnet_tools/BeCompile.html">BeCompile</a>
+to compile
+Master Studio behavior files, or a script (batch file) running <a
+ href="aibnet_tools/CPP.html">CPP</a>
+&amp; <a href="aibnet_tools/ReCode.html">ReCode</a> to compile and
+verify
+hand-written RCode.&nbsp;&nbsp; <a href="aibnet_tools/OdaBuild.html">OdaBuild</a>
+compiles skits from <a href="skitter.html">Skitter</a>,
+Master Studio, or AiboPet's Performance Editor into the special
+files AIBO requires. </p>
+            <p>The <a href="aibnet_tools/CPP.html">CPP</a> macro
+preprocessor allows
+for much more readable code, supporting C-Style define/macro &amp;
+conditional
+code statements.&nbsp; The RCheck syntax checker flags typo's,
+uninitialized
+variables, invalid keywords, etc...&nbsp;&nbsp; The ReCode compiler
+supports
+C-style expressions in most places (there are a few exceptions),
+containing
+array &amp; function calls.<br>
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      <a name="INSTALL_AIBNET"></a><br>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;2.0
+INSTALLING AIBNET</font></b> <br>
+      <hr align="left" width="100%">
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr align="left">
+            <td>Download the <a
+ href="downloads/Aibnet-v3.10-Installer.exe">Aibnet Installer</a> to
+your PC desktop.&nbsp;&nbsp; <br>
+            <br>
+Double click on the installer icon &amp; follow the simple step-by-step
+instructions.&nbsp; <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a name="MAKE_CONNECT"></a> <br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;3.0 MAKING
+A CONNECTION</font></b> <br>
+      <hr align="left" width="100%"> <br>
+      <b><i><u>3.1 Connect to AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Click "<b>Connect</b>" from the toolbar, or Connect
+menu.&nbsp;&nbsp;
+In <b>Host</b>, type or select the name or IP address of your AIBO
+(for
+example, this could be 10.0.1.100).&nbsp;&nbsp;&nbsp; In <b>Port</b>,
+select
+"aibo".&nbsp;&nbsp;&nbsp; Click "<b>OK</b>" when ready.&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>3.2 Disconnect from AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Click the toolbar "<b>Detach</b>" button, or from the <b>Connect</b>
+menu, click "<b>Disconnect</b>"&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>3.3 Quit Aibnet</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Connect</b> menu, click "<b>Exit</b>".&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="LOGFILE"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;4.0
+CAPTURING TEXT TO
+A LOG FILE</font></b> <br>
+      <hr align="left" width="100%"> <br>
+      <b><i><u>4.1 Create a telnet log</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Start Logging </b>(or
+double
+click on "LOG" in the statusbar).&nbsp; Specify the log file.&nbsp; If
+the file already exists, it will be overwritten.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>4.2 To stop logging commands</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click&nbsp;<b> Stop
+Logging</b> (or double
+click on "LOG" in the statusbar).</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="FILEXFER"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;5.0
+TRANSFER RCODE TO/FROM
+AIBO</font></b> <br>
+      <hr align="left" width="100%"> <br>
+      <b><i><u>5.1 Open an RCode or Behavior file</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>RCode</b> menu, click <b>Open </b>(or
+click on Open in the
+toolbar) and specify a filename.&nbsp; You can also drag-n-drop RCode
+or
+a Behavior file from an Explorer window into Aibnet to open.&nbsp;
+Aibnet
+will compile behavior files, or perform macro &amp; syntax checks on
+handwritten
+RCode automatically.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>5.2 Write RCode to AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>RCode</b> menu, click <b>Write </b>(or
+click on Write in
+the toolbar).&nbsp;&nbsp; You must have a Behavior/RCode file open, and
+a connection with AIBO established for this to work.&nbsp; Power cycle
+AIBO to run with written RCode image.&nbsp;
+            <p>To run new RCode without a power cycle, use Start
+instead.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>5.3 Read RCode from AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>RCode</b> menu, click <b>Read </b>(or
+click on Read in the
+toolbar).&nbsp;&nbsp; The RCode stored on the memory stick will be read
+into memory in Aibnet.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>5.4 Compare RCode on AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>To verify the RCode in Aibnet memory, and the RCode
+stored on AIBO's
+memstick are identical, click <b>Compare </b>from the <b>RCode</b>
+menu (or
+Compare in the toolbar).&nbsp;&nbsp; You must have an Behavior/RCode
+file
+open, and a connection with AIBO established for this to work.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>5.5 Delete RCode on AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>To remove RCode from AIBO's memstick, from <b>RCode</b>
+click <b>Delete </b>(or press toolbar Delete button).</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>5.6 Start RCode Program on AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>RCode</b> menu, click <b>Start </b>(or
+click Start in the
+toolbar).&nbsp;&nbsp; If RCode isn't loaded into Aibnet, only a "RUN"
+is
+dispatched.&nbsp;&nbsp; However, if RCode -<i>is-</i> in Aibnet memory,
+the file is first downloaded to AIBO prior to "RUN".&nbsp; Note: AIBO
+will
+echo the file back as it parses the input.&nbsp; For large downloads,
+this
+could take a few minutes.&nbsp;
+            <p>To start AIBO without downloading the RCode in Aibnet
+memory (for example,
+if it has already been downloaded previously), type "RUN" in the
+Command
+Bar.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>5.7 Stop RCode Program on AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>RCode</b> menu, click <b>Stop </b>(or
+click Stop in the toolbar).</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="UPLOAD"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;6.0 UPLOAD
+ACTIONS TO
+AIBO</font></b> <br>
+      <hr align="left" width="100%"> <br>
+      <b><i><u>6.1 Select AIBO platform</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>From the <b>RCode</b> menu, choose <b>Select AIBO
+Platform</b>, then
+210 or 220 (whichever matches your AIBO).&nbsp; This must be correct
+prior
+to selecting Upload Actions, since it affects filenames &amp; how
+things
+are compiled.&nbsp;&nbsp; The current AIBO model is also visible in the
+status bar.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>6.2 Compile &amp; upload actions to AIBO</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr align="left">
+            <td>From the <b>RCode</b> menu, choose <b>Upload Actions</b>
+(or click
+Actions in the toolbar).&nbsp; Aibnet will ask you to select an actions
+directory.&nbsp;&nbsp; Select where your *.ACT files (and/or *.UAC
+files)
+are located, and click OK.&nbsp;&nbsp; Your actions are compiled &amp;
+uploaded to AIBO.&nbsp; See <a href="aibnet_tools/OdaBuild.html">OdaBuild</a>
+for details.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="DEBUG"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;7.0 DEBUG
+MODE, TRACING,
+&amp; PLAYBACK</font></b> <br>
+      <hr align="left" width="100%"> In debug mode, Aibnet offers some
+powerful debug capability for AIBO programming.&nbsp;&nbsp; Aibnet
+records most everything AIBO does into a trace log -- program execution
+(RCode or
+Master Studio Behavior), variables, stack events, and camera
+images.&nbsp;&nbsp; The various windows show a live display of
+everything AIBO does.<br>
+      <br>
+If something goes wrong in your program (ie: a bug!!!), you can then
+rewind the trace log and figure out step-by-step what happened.<br>
+      <br>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td align="center" valign="top"><a href="images/adebugr.gif"><img
+ src="images/adebugrs.gif" alt="" title="" border="2" height="239"
+ hspace="10" vspace="0" width="325"></a></td>
+            <td align="center" valign="top"><a href="images/adebugb.gif"><img
+ src="images/adebugbs.gif" alt="" title="" border="2" height="239"
+ hspace="10" vspace="0" width="325"></a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="top"><small>(click for larger
+image)<br>
+            </small></td>
+            <td align="center" valign="top"><small>(click for larger
+image)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+There are several windows available in debug mode.&nbsp;&nbsp; The
+watch bar, camera bar, variable bar, call stack, and source viewer
+(described in following sections).<br>
+      <br>
+The bottom of the source viewer contains a slider &amp; a playback
+control toolbar.&nbsp;&nbsp; You can rewind the recording, and view
+detailed execution.&nbsp;&nbsp; All debug windows are updated in blue
+when the trace log is used.<br>
+      <br>
+For debug mode to work, AIBO must be running a "debug-compile" from
+ReCode or
+BeCompile.&nbsp;&nbsp;
+The debug-compile has all sorts of information added that enables
+Aibnet tracing to function.&nbsp;&nbsp; Simply loading an RCode or
+Behavior program while in debug mode creates the necessary
+"debug-compile".&nbsp;&nbsp; Click the toolbar "<b>Start</b>" to
+download the program to AIBO and start tracing!<br>
+      <br>
+      <big><i><b>Warning!</b></i></big>&nbsp; Debug mode can more than
+triple the size of your program.&nbsp;&nbsp; DogsLife as an extreme
+case, is too large to run in debug mode whole (AIBO gets indigestion
+trying to process it - I test DogsLife in smaller chunks these
+days).&nbsp;&nbsp; However, virtually all other programs will have no
+difficulty.&nbsp;
+      <p><a name="WATCHBAR"></a> <br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;8.0 WATCH
+BAR</font></b> <br>
+      <hr align="left" width="100%"><img src="images/awatch.gif" alt=""
+ title="" align="right" border="1" height="225" hspace="10" width="114">The
+watchbar literally allows watching of variables.&nbsp;&nbsp;
+You specify the variables you want to watch.&nbsp;&nbsp; It works in
+both normal &amp; Aibnet debug modes.&nbsp;&nbsp; As your RCode or
+Behavior program executes, the watchbar periodically polls AIBO to
+get the current values.&nbsp;&nbsp; To avoid overloading AIBO, only
+about
+5 variables per second are updated.
+      <p><b>Debug Mode:</b>&nbsp;&nbsp; In debug mode, the watch bar
+does not poll AIBO.&nbsp; Instead
+it updates from the incoming tracing information (used by the variable
+bar).&nbsp;&nbsp; The watch bar also supports trace playback mode,
+always
+showing what the variables were at a given point in time.<br>
+      </p>
+      <p><b><i><u>8.1 To toggle watchbar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Debug</b> menu, click "<b>Watch Bar</b>".</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>8.2 To add a variable to watchbar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>With watchbar visible, click the "<b>Add</b>"
+button.&nbsp;&nbsp; Type
+in the new variable name where indicated.&nbsp; Note: the watchbar only
+updates the 'Value' column when online with AIBO.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>8.3 To edit a variable name in watchbar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Double-click on the variable which needs editing.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>8.4 To change a variable value from watchbar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Double-click on the value which needs changing.&nbsp;
+Aibnet will issue
+a 'SET variable new_value' command to AIBO to update the variable.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>8.5 To delete a variable from the watchbar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Click on the variable, and then click the "<b>Delete</b>"
+button.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="CAMERABAR"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;9.0 CAMERA
+BAR</font></b> <br>
+      <hr align="left" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">The camerabar shows what AIBO sees through
+its camera.&nbsp;&nbsp;
+You control the polling rate (slow, normal, fast, and very
+fast).&nbsp;&nbsp;
+The faster the poll rate, the more of AIBO's CPU you consume.<br>
+            <br>
+            <b>Debug Mode:</b>&nbsp;&nbsp; In debug mode, camera bar
+records everything
+camcorder style.&nbsp;&nbsp; This makes Aibnet great for debugging
+anything
+involving good paw-to-nose coordination.&nbsp; Soccer kicks are a
+perfect
+example (or self docking code...).</td>
+            <td valign="top"><img src="images/acamera.gif" alt=""
+ title="" align="right" border="1" height="102" hspace="10" width="115"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>9.1 To toggle camerabar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Debug</b> menu, click "<b>Camera Bar</b>".&nbsp;&nbsp;
+Note: <a href="https://www.aibohack.com/rcode/index.html">RCodePlus</a>
+1.91 (or newer) required to use the camerabar.&nbsp;&nbsp; <a
+ href="https://www.aibohack.com/rcode/index.html">RCodePlus</a>
+2.52 (or newer) is recommended if you haven't upgraded in a while.</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>9.2 To change the camera update speed</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>With the camera bar visible, on the <b>Debug</b> menu,
+click "<b>Camera
+Options</b>".&nbsp; Select "Fast", "Normal" or "Slow" update
+speed.&nbsp;&nbsp;
+Note: The camera burdens AIBO quite a lot (due to image
+compression).&nbsp;&nbsp;
+Slower camera updates are better, especially if running a personality
+like
+DogsLife.&nbsp;
+            <p>If you select YUV encoding, a "Vert Fast" poll rate is
+also available.&nbsp;
+YUV encoding is faster, but there is some loss in image quality
+(depending
+on lighting conditions).</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <a name="VARBAR"></a><br>
+      <br>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;10.0
+VARIABLE BAR</font></b> <br>
+      <hr align="left" width="100%"> <img src="images/avar.gif" alt=""
+ title="" align="right" border="1" height="226" hspace="10" width="112">The
+variable bar appears quite similar to the watch bar (except for the
+missing add/delete buttons).&nbsp;&nbsp; However, the variable bar
+shows -all- variables
+as they change.&nbsp;&nbsp;&nbsp; The watchbar instead shows only those
+variables -you- are interested in...&nbsp; an important
+difference.&nbsp;&nbsp;&nbsp; You cannot manually add anything to
+variable bar (its updated automatically by Aibnet).<br>
+      <br>
+      <b>Debug Mode:</b>&nbsp;&nbsp;
+The variable bar only works in debug mode.&nbsp; AIBO must also be
+running a "debug-compile" from ReCode or BeCompile.&nbsp;&nbsp; The
+debug-compile has all sorts of information added that enables Aibnet
+tracing to function.<br>
+      <p><b><i><u>10.1 To toggle variable bar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Debug</b> menu, click "<b>Variable Bar</b>".</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>10.2 To show all variables always (instead of only on
+change)</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Right-click in variable bar, and select "<b>Show All</b>".</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>10.3 Copy variables to the watch-bar</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Aibnet supports click-n-drag copying from the
+variable-bar to the
+watch-bar.&nbsp;&nbsp; Pick the variable you are interested in, down
+click and hold it.&nbsp; Now drag it into the watch-bar &amp; release
+the mouse button.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <br>
+      <a name="CALLSTACK"></a><br>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;11.0 CALL
+STACK</font></b><br>
+      <hr align="left" width="100%">
+      <table cellpadding="0" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td align="left" valign="top">The call stack tracks the use
+of the R-Code "CALL" statement.&nbsp;
+Each time a CALL is made,&nbsp; AIBO pushes the return address into a
+temporary storage (the stack).&nbsp;&nbsp; Later, when a RETURN (or
+RET) statement is encountered, AIBO pops that return address from the
+stack, and resumes R-Code after the CALL.<br>
+            <br>
+Aibnet tracks these pushes &amp; pops, and displays the call
+stack.&nbsp; It is easy to overlook a return statement, and eventually
+cause the stack to overflow.&nbsp;&nbsp; The call stack makes it very
+easy to spot such problems.<br>
+            <br>
+            <b>Debug Mode:</b>&nbsp;&nbsp;
+The call stack only works in debug mode.&nbsp;&nbsp; AIBO must also be
+running a "debug-compile" from ReCode or BeCompile.&nbsp;&nbsp;
+The debug-compile has all sorts of information added that enables
+Aibnet tracing to function. </td>
+            <td valign="top"><img src="images/astack.gif" alt=""
+ title="" border="1" height="157" hspace="10" vspace="0" width="112"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <p><b><i><u>11.1 To toggle call stack</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Debug</b> menu, click "<b>Call Stack Bar</b>".</td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>11.2 View R-Code where stack push occurred</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Left-Click on stack entry.&nbsp; Right-click in the
+call stack window, and select "<b>View Code</b>".<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <br>
+      <a name="SRCVIEW"></a><br>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;12.0
+SOURCE VIEWER</font></b><br>
+      <hr align="left" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">The source viewer displays the execution
+of R-Code or Master Studio Behavior programs.&nbsp;&nbsp; <br>
+            <br>
+It also contains the playback control toolbar.&nbsp;&nbsp; The slider
+is for quick and coarse movement.&nbsp; The buttons are for stepping
+forward and backward through the trace log.<br>
+            <br>
+            <b>Debug Mode:</b>&nbsp;&nbsp;
+The source viewer only works in debug mode.&nbsp;&nbsp; AIBO must also
+be running a "debug-compile" from ReCode or BeCompile.&nbsp;&nbsp;
+The debug-compile has all sorts of information added that enables
+Aibnet tracing to function.<br>
+            </td>
+            <td valign="top"><img src="images/asrcview.gif" alt=""
+ title="" border="1" height="267" hspace="10" width="299"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.1 To toggle source viewer</u></i></b><br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Debug</b> menu, click "<b>Source Viewer</b>".</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.2 Move slider to cursor position</u></i></b><br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>You can advance or rewind the current slider position
+to an arbitrary program point.&nbsp;&nbsp; <br>
+            <ol>
+              <li>Left click on the line of interest (turns yellow).</li>
+              <li>Right click in the source viewer</li>
+              <li>Choose "<b>Forward to cursor</b>" or "<b>Reverse to
+cursor</b>".</li>
+            </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.3 Zoom Behavior Box Size</u></i></b><br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>You can change the size of behavior boxes in the source
+viewer, making them bigger or smaller.&nbsp;&nbsp; <br>
+            <ol>
+              <li>Right click in the source viewer</li>
+              <li>Select "Zoom", then the size (from 25% to 200% of
+normal).</li>
+            </ol>
+Zooming is not available with RCode text files.&nbsp; If you want a
+larger or smaller font for RCode, see next section. </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.4 Change Font Size in Source Viewer<br>
+      </u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>From <b>Edit </b>menu, chose "<b>Preferences</b>",
+then "<b>Font &amp; Colors</b>".&nbsp;&nbsp; Click the "<b>Source Viewer</b>"
+tab.&nbsp;&nbsp; Change value in the "<b>Size</b>" box.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.5 Change Playback Speed</u></i></b><br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>The keyboard "<big><tt><b>+</b></tt></big>" and "<big><b><tt>-</tt></b></big>"
+(plus/minus) keys make playback run faster or slower.&nbsp;&nbsp;&nbsp;
+You can also change Playback settings from the preferences dialog.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <b><i><u>12.6 Setting Breakpoints</u></i></b><br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>Aibnet supports setting breakpoints -- markers that can
+stop
+playback.&nbsp;&nbsp; For example, if you know an bug is near a certain
+point, set a breakpoint there.&nbsp;&nbsp; Start playback &amp; Aibnet
+advances the slider position until the breakpoint is
+encountered.&nbsp;&nbsp; RCode or Behavior blocks marked as breakpoints
+are drawn with a red background.&nbsp;&nbsp; <br>
+            <br>
+To toggle a breakpoint:<br>
+            <table cellpadding="0" cellspacing="0" cols="1" width="100%">
+              <tbody>
+                <tr>
+                  <td>
+                  <ol>
+                    <li>Left click on the line of interest (turns
+yellow).</li>
+                    <li>Right click in the source viewer</li>
+                    <li>Choose "<b>Breakpoint</b>" (line turns red when
+breakpoint enabled)</li>
+                  </ol>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+Breakpoints might not appear precisely where you
+left-click.&nbsp; You cannot (for example) set a breakpoint on a blank
+line or comment.&nbsp; Aibnet scans down for the first executable line
+of RCode &amp; places the breakpoint there instead.<br>
+            <br>
+Note:&nbsp; All breakpoints are reset whenever a new trace log is
+started.<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <a name="PREFERENCES"></a>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;13.0
+SPECIFY PREFERENCES</font></b>
+      <hr align="left" width="100%"><br>
+      <b><i><u>13.1 Change the font and colors in your console window</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Preferences.</b>&nbsp;
+Choose
+"<b>Font &amp; Color</b>" from the preference dialog list.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><b><i><u>13.2 Set options for cursor and toolbar appearance</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Preferences.</b>&nbsp;
+Choose
+"<b>Appearance"</b> from the preference dialog list.
+            <p>Cursor style and console controls: </p>
+            <ul>
+              <li> <b>Cursor Style </b>displays the cursor as an
+underline, vertical bar,
+or block.</li>
+              <li> <b>Cursor Blinking </b>makes the cursor blink.</li>
+              <li> <b>Local Echo</b> displays all keyboard
+input.&nbsp;
+Can also be toggled
+by double clicking "ECHO" in the status bar.</li>
+              <li> <b>Output Linefeeds</b> makes Aibnet output a
+linefeed
+after every carriage
+return.&nbsp; Not normally needed with AIBO.</li>
+            </ul>
+Toolbar controls are:
+            <ul>
+              <li> <b>Display Toolbar Text Labels</b> toggles text in
+the
+toolbar.</li>
+              <li> <b>Show tool tips on toolbar buttons</b> controls
+if
+tooltips appear if
+mouse is paused over a button.</li>
+              <li> <b>Start button uploads RCode</b> controls Aibnet
+uploads the current RCode
+file whenever the Start button is clicked.&nbsp;&nbsp; This is useful
+when
+debugging small programs.&nbsp;&nbsp; However, for large programs (like
+DogsLife) it's much faster to write R-Code to AIBO's memstick and
+reboot.&nbsp;</li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>13.3 Set options for auto editing assist</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Preferences.</b>&nbsp;
+Choose
+"<b>Edit"</b> from the preference dialog list.
+            <ul>
+              <li> <b>Auto Copy Selection</b> copies selected text
+automatically into the
+clipboard without needing to click "Copy" on the toolbar.</li>
+            </ul>
+            <ul>
+              <li> <b>Auto Reload RCode</b> checks your RCode source
+file
+date/time stamp
+whenever the Write or Start toolbar buttons are used.&nbsp;&nbsp;
+Changes
+are reloaded/checked/compiled as required.</li>
+              <br>
+              <li> <b>Start button updates RCode </b>updates RCode on
+AIBO whenever the Start
+button is clicked.</li>
+            </ul>
+Aibnet can either upload &amp; run immediately (good for small
+programs),
+or write your RCode to the memstick and reboot AIBO.&nbsp;&nbsp; For
+larger
+programs (like DogsLife) it's MUCH faster to write the memstick and
+reboot.&nbsp;&nbsp;
+The following auto-edit options are:
+            <ul>
+              <li> <b>Upload and Run</b>.&nbsp;&nbsp; Does a temporary
+upload of RCode, and
+immediately starts.&nbsp;&nbsp; Good for small programs.&nbsp;&nbsp;
+These
+uploads are not saved to the memstick, and lost when AIBO is turned off.</li>
+              <br>
+              <li> <b>Write RCode to Memory Stick and Restart</b>.&nbsp;&nbsp;
+The memory
+stick is updated, and Aibnet tells AIBO to power cycle itself (turn
+off,
+and back on automatically).&nbsp; RCode starts running once AIBO has
+rebooted.&nbsp;&nbsp;
+The WLAN connection will be lost when AIBO shut's off and you will need
+to reconnect.&nbsp;</li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>13.4 Set how many lines are saved in the scroll back
+buffer</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Preferences.</b>&nbsp;
+Choose
+"<b>Edit"</b> from the preference dialog list.
+            <p>In <b>Buffer Size</b>, type a number between 200 and
+32000.&nbsp;&nbsp;
+The scroll back buffer is a block of memory where lines are stored so
+you
+can review text displayed by the terminal.&nbsp;</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><b><i><u>13.5 Stop shell window from appearing when opening
+RCode or
+Behavior files</u></i></b>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>On the <b>Terminal</b> menu, click <b>Preferences.</b>&nbsp;
+Choose
+"<b>Helper Tools"</b> from the preference dialog list.
+            <p>Select "<b>Hidden (unless error)</b>" in the Tool Window
+Operation mode
+group. </p>
+            <p><i>Note: </i>Aibnet continues compiling RCode and
+behavior files --
+but silently.&nbsp;&nbsp; The shell window -<i><b>still</b>-</i>
+appears
+if an error occurs (so you know there is a problem).</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <p><a name="WHATSNEW"></a><br>
+      </p>
+      <hr align="left" width="100%"><b><font size="+1">&nbsp;14.0
+What's New?</font></b> <br>
+      <hr align="left" width="100%">
+      <table cellpadding="5" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li>Version 3.10 - Fixed compatibility with Windows 98
+&amp; 2000.&nbsp;&nbsp; XP Themes support was getting in the way.<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li>Version 3.01 - Fixed problem with ReCode generating
+inaccurate line tracking information in debug mode.<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li>Version 3.0 - Support for ERS-7.<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <ul>
+              <li>Version 2.0 - New full debug tracing
+facility.&nbsp;&nbsp; Aibnet
+can record everything AIBO does, for later playback (just like a TiVo
+--
+but for AIBO).&nbsp;&nbsp; In debug mode, Aibnet displays a source
+viewer,
+variable window, and stack trace.&nbsp;&nbsp; The source viewer
+contains
+the trace toolbar, for rewinding captured playback data, single
+stepping,
+etc...&nbsp; Breakpoints are available.&nbsp;&nbsp; The source viewer
+works with either Master Studio Behavior files, stand-alone hand
+written
+RCode, or enhanced RCode (as required by DogsLife).<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <ul>
+              <li>Version 1.40 - New <a
+ href="aibnet_tools/OdaBuild.html">OdaBuild</a>
+Action
+compiler &amp; added "Actions" toolbar button within Aibnet to call
+OdaBuild,
+then upload the results to AIBO..&nbsp;&nbsp; Fully configure a memory
+stick personality (RCode &amp; Actions) with just two clicks from the
+Aibnet
+toolbar!&nbsp; Few cosmetic changes.</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <ul>
+              <li>Version 1.30 - CameraBar now supports for RCodePlus
+2.50.&nbsp; Added
+new
+extended RCode compiler "<a href="aibnet_tools/ReCode.html">ReCode</a>"
+to support easier coding (most valuable to experienced software
+developers).&nbsp;
+Various minor bug fixes (in particular, writing files to the memstick
+after
+being broken in v1.20).&nbsp;&nbsp; On the trivial note, there are
+several
+icon variations now.&nbsp; If you have Aibnet on your desktop, right
+click,
+chose "Properties", click "Change Icon", and pick a color matching your
+AIBO.</li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+RCodePlus Human Face Detector
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+RCodePlus Human Face Detector
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+An older version of the Human Face Detector is provided in RCodePlus version 2.52 only (for all model AIBOs).
+<P></P>
+<CENTER>
+<IMG SRC="../pix/face_template.jpg">
+</CENTER>
+<P></P>
+It is not as powerful as the one in Aibo Recognition (which does Human Face Identification).
+<BR>
+This feature is YART enabled (just run YART on an RCodePlus 2.52 stick).
+
+<P></P>
+For programming your own RCODE program, you need to turn on the HFD detector.
+<pre>
+    IF AP_Version >= 252 THEN
+        AP_DEVCTL 6 1 // enable HFD
+    ENDIF
+</pre>
+
+NOTE: this will eat up a lot of processing time, so don't turn on HFD unless you plan on reacting to face detection events.
+<P></P>
+
+Then there will be two new variables to test, "AP_FaceDetect" and "AP_FaceDetect_Horz".
+Normally "AP_FaceDetect" is zero.
+When a human face is detected, it will be a positive number between 1 and 5. The higher the number the bigger/closer the human's face is to AIBO's camera.
+The horizontal position of the face is in the "AP_FaceDetect_Horz" variable (like other _Horz properties like the detected sound location).
+Typically you set "AP_FaceDetect" to zero when you have processed this event.
+
+<P></P>
+When AIBO loses your face, "AP_FaceDetect" will be set to a negative number.
+
+<P></P>
+
+<HR>
+<H2>AP_VideoSource</H2>
+Experimental feature (guaranteed to go away in the future)
+To be documented...
+<HR>
+
+</BODY>
+</HTML>

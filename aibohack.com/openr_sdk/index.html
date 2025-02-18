@@ -1,0 +1,226 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+OPEN-R SDK
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+OPEN-R SDK
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+<H2>Getting Started</H2>
+If you are just getting into the OPEN-R SDK, please read <A HREF="advice.htm">my advice</A> for how to get started.
+<BR>
+NOTE: The OPEN-R SDK is not for everyone. If you want an easier and more high level programming tool, start with <A HREF="../rcode/yart.htm">YART</A> and get started on RCODE programming.
+You don't have to buy a LAN card.
+You don't even have to write code yourself (the YART tool does it for you).
+
+<P></P>
+<HR>
+
+<H2>Open-R SDK</H2>
+The official Open-R SDK website has been discontinued by Sony.
+<BR>
+There is a mirror of many parts of SDK at the
+<A HREF="http://www.cs.cmu.edu/~tekkotsu/openr-install.html">
+CMU Tekkotsu website</A>.
+<BR>
+This includes the binaries, headers and libraries.
+It does not include the documentation or the samples, so it is not enough to get started if you've never used the OpenR SDK before.
+
+<P></P>
+<H2>Other Open-R SDK Pages</H2>
+<UL>
+<LI><A HREF="http://www.geocities.com/udibr/openr.htm">Udi's Page</A> - Sound Tracker, Telnet and other stuff.
+<LI><A HREF="http://www.zitter.net/aibo">Dzitter's Page</A> - Mac OSX tools and other telemetry experiments
+</UL>
+<P></P>
+<HR>
+
+<H2>My Experiments - Index</H2>
+
+<UL>
+<LI><A HREF="speedracer.htm">AiboSpeedRacer</A> Walkbench CMU walk + UDP vision
+<LI><A HREF="walkbench.htm">WalkBench Walking test program</A>
+<P></P>
+<LI><A HREF="index.html#WALKER1">Walker/BiPedal AIBO</A> - AIBO on two legs
+<LI><A HREF="index.html#POSER">Poser</A> - simple poser program
+<LI><A HREF="index.html#P2P">Peer-to-Peer communication</A> - mimic walker
+<LI><A HREF="opencv.htm">OpenCV vision library</A> - working towards facial recognition
+</UL>
+
+
+
+
+<P><P>
+<HR>
+<A name="WALKER1">
+<H2>Walker/BiPedal AIBO</H2>
+
+<CENTER>
+<B>Walker (Demo Movie)</B><BR>
+<A HREF="../movies/apv_walker1.wmv"><IMG SRC="../movies/apv_walker1.jpg"><BR></A>
+</CENTER>
+
+Uses a very simple walking gait on the two rear legs (which needs improvement).
+<BR>
+The only tricky part is hacking the robot model detection (\OPEN-R\MW\CONF\DESIGN.CFG) to allow a robot with no head and only two legs.
+I couldn't figure out a way of modifying DESIGN.CFG, so I hacked the Design Robot module (\OPEN-R\SYSTEM\OBJS\DR.BIN - encrypted) to allow any hardware configuration.
+Getting a headless AIBO to work is even harder.
+I may release a public work-around that replaces this module in the future.
+
+<P><P>
+<HR>
+<A name="POSER">
+<H2>Poser</H2>
+
+Useful for posing AIBO in a variety of positions.
+<BR>
+Will work with legs or tail removed (but the head is necessary).
+<BR>
+NOTE: If you have an old ERS-210, you need to upgrade his ROM.
+
+<H3>Instructions</H3>
+<UL>
+<LI>Remove existing files from a PMS/RCODE memory stick
+<LI>Download <A HREF="poser.zip">poser.zip</A>
+<LI>Unzip on top of PMS/RCODE memory stick
+<LI>Place in your ERS-2x0 or ERS-31x AIBO
+<LI>He will stretch and joints will be rigid
+<LI>For the ERS-2x0, press his back - and you can pose him
+<LI>For the ERS-31x, press the tail upward - and you can pose him
+<LI>Release the back/tail, and the joints will be rigid again
+</UL>
+
+
+<P><P>
+<HR>
+<A name="P2P">
+<H2>Peer to Peer WiFi communication</H2>
+
+<CENTER>
+<B>Walker2 (Demo Movie)</B><BR>
+<A HREF="../movies/apv_walker2.wmv"><IMG SRC="../movies/apv_walker2.jpg"><BR></A>
+</CENTER>
+
+<H3>Peer to Peer and LAN cards</H3>
+If you have two ERS-2x0 AIBOs, each with a WiFi LAN card, you can have the two AIBOs talk without a PC.
+<BR>
+NOTE: if you don't have a WiFi access point (I don't), you need a PC running a WiFi card to bootstrap the connection, ie.
+<DIR>
+1) AIBO#1 boots up, checks for a WiFi network. The PC WiFi provides the channel for an ad-hoc (AIBO#1 <-> PC) connection.
+<BR>
+2) AIBO#2 boots up, checks for a WiFi network. The existing PC<->AIBO#1 connection is detected.
+<BR>
+3) At this point AIBO#1 and AIBO#2 can communicate directly.
+<BR>
+4)Optional: the PC can be turned off (or the PC WiFi card removed/disabled) and the two AIBOs will continue to communicate.
+If one of the AIBOs shuts off, the WiFi connection will be lost, and you should go back to step (1).
+</DIR>
+
+<P></P>
+<H3>RF "Waldo"/Mimic mode</H3>
+If you haven't tried it already, build and try the OPEN-R SDK sample LMasterRSlave.
+It turns a single AIBO (no LAN required) into a puppet performing device.
+If you move the legs on the Left side of the AIBO, the right side will repeat the motions.
+<P></P>
+The RF-Waldo/Mimic mode takes this one step further.
+If you move any of the limbs of the Master AIBO, the Slave will repeat those actions. This applies to the 12 leg joints/servos and the 3 head servos (tilt, yaw, roll).
+
+<P></P>
+<H3>RF Walker and Mimic server</H3>
+The "AIBO on 13 legs" video shows how one AIBO can walk or dance and another (or more) AIBOs can mimic the actions.
+
+<P><P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Other Topics</H1>
+</center></td></tr> </TABLE>
+<HR>
+<H2>Deployment: ERS-2x0, ERS-31x</H2>
+
+Read the EULA for the SDK.
+
+The SDK is configured for programs running on the ERS-210 and 220.
+Developing on the ERS-31x series is possible, but not recommended.
+<BR>
+After you get the program working on the ERS-2x0, you can adapt the program to work on the ERS-31x. <A HREF="sdk31x.htm">Click here for details</A>.
+
+
+<P></P>
+<HR>
+<H2>Questions, BBS etc.</H2>
+
+If you have a question on the SDK, programming examples, or other
+advice, you can ask it on the OPEN-R BBS.
+
+<P></P>
+<HR>
+<H2>AiboWare configurations</H2>
+
+NOTE: the SDK is designed for low level programming of the AIBO robot.
+<BR>
+It is similar to the level of control you would need for RoboCup.
+Higher level features (see AiboWare comparison) are not available in SDK2 applications [see EULA/FAQ]
+
+<P></P>
+
+<BR>
+<CENTER>
+<IMG SRC="aiboware.gif">
+</CENTER>
+<BR>
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO Action File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO Action File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="action.html#INTRO">Introduction</a></li>
+        <li><a href="action.html#AMS10">AMS1.0 Format</a></li>
+        <li><a href="action.html#AMS11">AMS1.1 Format</a></li>
+        <li><a href="action.html#BLOCK">AMS1.1 Block Records</a></li>
+        <li><a href="action.html#ENTRY">AMS1.1 Entry Records</a></li>
+        <li><a href="action.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+AIBO Action Files (*.act) are used to organize individual
+skits.&nbsp;&nbsp; They
+tell <a href="../skitter.html">Skitter</a> (and Master Studio) which
+Motion/LED/Sound files belong together.&nbsp;&nbsp; Action files store
+the
+filenames of the various skit elements, along with the action/skit
+name,
+comments, and the platform type (110/210/220/310/7).<br>
+      <br>
+There are two versions of the action file.&nbsp;&nbsp; The first
+version (<a href="action.html#AMS10">AMS1.0</a>) only supports the
+210.&nbsp;&nbsp; The second version
+(<a href="action.html#AMS11">AMS1.1</a>) can support all AIBO platforms.<br>
+      <br>
+      <br>
+      <a name="AMS10"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>2.
+AMS1.0
+Format</big></big><br>
+      <br>
+The first action file format uses fixed size fields for
+everything.&nbsp;&nbsp; It's organized in three blocks, but none ever
+change size.&nbsp; This makes loading/saving the format very
+easy.&nbsp;&nbsp; There are numerous unknown fields, which always
+appear to be zero.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct action_entry_type {<br>  unsigned signature;         // "OACT"<br>  unsigned block0_id;         // always 0<br>  unsigned block0_len;        // always 0x10 (len of block)<br>  unsigned unknown[2];        // Version info?<br><br>  unsigned block1_id;         // always 1<br>  unsigned block1_len;        // always 0x408 (len of block)<br>  char action_title[0x100];<br>  char action_company[0x100];<br>  char action_model[0x100];<br>  char action_comment[0x100];<br><br>  unsigned block2_id;         // always 2<br>  unsigned block2_len;        // always 0x434 (len of block)<br>  char action_motion[0x100];<br>  unsigned unknown2;          // always 0<br>  char action_sound[0x100];<br>  unsigned unknown3;          // always 0<br>  char action_led[0x100];<br>  unsigned unknown4;          // always 0<br>  char action_mark[0x100];<br>  unsigned unknown5[2];       // always 0<br>  unsigned motion_valid;      // Set 1 if motion valid.<br>  unsigned sound_valid;       // Set 1 if sound valid (MIDI/WAV)<br>  unsigned led_valid;         // Set 1 if led valid.<br>  unsigned unknown6;          // always 0<br>  unsigned start_time;        // Sound start time.<br>  unsigned unknown7;          // always 0<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The motion/sound/led fields hold pathnames relative to the position of
+the action file.&nbsp;&nbsp; For example:<br>
+      <ul>
+        <li>Motion\myskit.mtn</li>
+        <li>Sound\myskit.wav</li>
+        <li>LED\myskit.led</li>
+      </ul>
+The marker file is used internally by only Master Studio.&nbsp; Marker
+files are ignored by Skitter.<br>
+      <br>
+      <br>
+      <a name="AMS11"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>3.
+AMS1.1
+Format</big></big><br>
+      <br>
+The newer action file format is more complicated, with a different
+block organization and variable size data fields.&nbsp;&nbsp; However,
+these files are generally much smaller than the <a href="action.html#AMS10">AMS1.0</a>
+format as a
+result.&nbsp;&nbsp; The files consist of a signature followed by one or
+more
+block records.<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct atn_header_type {<br>  unsigned signature;   "OATN"<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <a name="BLOCK"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>4.
+AMS1.1
+Block Records<br>
+      <br>
+      </big></big>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct atn_block_type {<br>  unsigned short block_len;    // len not inclusive of atn_block_type<br>  unsigned short block_type;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The block types are:<br>
+      <ul style="font-family: monospace;">
+        <li>0x0000 - Action Info Block</li>
+        <li>0x0100 - Filename Blocks</li>
+        <li>0xFFFF - End of file
+indicator</li>
+      </ul>
+      <span style="font-family: monospace;"></span>Blocks contain one
+or more entry records.&nbsp;&nbsp; There is always
+an action info block, followed by up to three filename blocks.&nbsp;
+Filename blocks are always ordered: Motion, Sound, LED.<br>
+      <br>
+Pathnames stored in the filename blocks are relative to the position of
+the action file.&nbsp;&nbsp; For example:<br>
+      <ul>
+        <li>Motion\myskit.mtn</li>
+        <li>Sound\myskit.wav</li>
+        <li>LED\myskit.led</li>
+      </ul>
+      <a name="ENTRY"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>5.
+AMS1.1
+Entry Records<br>
+      </big></big><br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct atn_entry_type {<br>  unsigned short entry_len;   // len not inclusive of atn_entry_type<br>  unsigned short entry_type;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+Action Info Block entry types are:<br>
+      <ul style="font-family: monospace;">
+        <li>0x0002 Action Name<br>
+        </li>
+        <li>0x0003 Creator Name</li>
+        <li>0x0004 AIBO Model (ie: "ERS-210")</li>
+        <li>0x0005 AIBO Platform (ie: "DRX-910")</li>
+        <li>0x0006 Comment</li>
+        <li>0x0080 Company Name</li>
+      </ul>
+Filename Block entry types are:<br>
+      <ul style="font-family: monospace;">
+        <li>0x0101 Unknown (4-byte value)<br>
+        </li>
+        <li>0x0102 Filename<br>
+        </li>
+        <li>0x0103 Set 1 if filename valid (4-byte value)</li>
+        <li>0x0104 Start Time if sound file (in keyframes).&nbsp; Zero
+otherwise.</li>
+        <li>0x0105 Unknown</li>
+      </ul>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>6.
+Example</big></big><br>
+      <span style="font-family: monospace;"><br>
+      </span><span style="color: rgb(0, 153, 0); font-weight: bold;">Green:
+Block
+Record Headers</span><br style="font-weight: bold;">
+      <span style="color: rgb(204, 102, 0); font-weight: bold;">Brown:
+Entry
+Record Headers</span><br>
+      <pre>000000:&nbsp; 4f 41 54 4e&nbsp; <span
+ style="color: rgb(0, 153, 0);">5d 00 00 00</span>&nbsp; <span
+ style="color: rgb(204, 102, 0);">05 00 02 00</span>&nbsp; 70 69 61 6e&nbsp; |OATN].......pian|<br>000010:&nbsp; 6f <span
+ style="color: rgb(204, 102, 0);">07 00 03  00</span> 53 6b 69&nbsp; 74 74 65 72&nbsp; <span
+ style="color: rgb(204, 102, 0);">1b 00 80 00</span>  |o....Skitter....|<br>000020:&nbsp; 44 6f 67 73&nbsp; 42 6f 64 79&nbsp; 20 26 20 52&nbsp; 61 74 63 68&nbsp; |DogsBody &amp; Ratch|<br>000030:&nbsp; 65 74 20 53&nbsp; 6f 66 74 77&nbsp; 61 72 65 <span
+ style="color: rgb(204, 102, 0);">07&nbsp; 00 04 00</span> 45&nbsp; |et Software....E|<br>000040:&nbsp; 52 53 2d 32&nbsp; 31 30 <span
+ style="color: rgb(204, 102, 0);">07 00&nbsp; 05 00</span> 44 52  58 2d 39 31&nbsp; |RS-210....DRX-91|<br>000050:&nbsp; 30 <span
+ style="color: rgb(204, 102, 0);">00 00 06  00 04 00 07&nbsp; 00</span> 01 00 00&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">04 00 08</span>  |0...............|<br>000060:&nbsp; <span
+ style="color: rgb(204, 102, 0);">00</span> 03 00 00&nbsp; 00 <span
+ style="color: rgb(0, 153, 0);">34 00 00&nbsp; 01 </span><span
+ style="color: rgb(204, 102, 0);">04 00 01&nbsp; 01 </span>02 00 00&nbsp; |.....4..........|<br>000070:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">10 00 02  01</span> 4d 6f 74&nbsp; 69 6f 6e 5c&nbsp; 70 69 61 6e  |.....Motion\pian|<br>000080:&nbsp; 6f 2e 6d 74&nbsp; 6e <span
+ style="color: rgb(204, 102, 0);">04 00 03&nbsp; 01</span> 01 00 00&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">04 00 04</span>  |o.mtn...........|<br>000090:&nbsp; <span
+ style="color: rgb(204, 102, 0);">01</span> 00 00 00&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">04 00 05&nbsp; 01 </span>00 00 00&nbsp; 00 <span
+ style="color: rgb(0, 153, 0);">33 00 00</span>  |.............3..|<br>0000a0:&nbsp; <span
+ style="color: rgb(0, 153, 0);">01</span> <span
+ style="color: rgb(204, 102, 0);">04 00 01&nbsp; 01</span> 00 00 00&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">0f 00 02&nbsp; 01 </span>53 6f 75&nbsp; |.............Sou|<br>0000b0:&nbsp; 6e 64 5c 70&nbsp; 69 61 6e 6f&nbsp; 2e 6d 69 64&nbsp; <span
+ style="color: rgb(204, 102, 0);">04 00 03 01</span>  |nd\piano.mid....|<br>0000c0:&nbsp; 01 00 00 00&nbsp; <span
+ style="color: rgb(204, 102, 0);">04 00 04 01</span>&nbsp; e1 00 00 00&nbsp; <span
+ style="color: rgb(204, 102, 0);">04 00 05 01</span>  |................|<br>0000d0:&nbsp; 00 00 00 00&nbsp; <span
+ style="color: rgb(0, 153, 0);">31 00 00 01</span>&nbsp; <span
+ style="color: rgb(204, 102, 0);">04 00 01 01</span>&nbsp; 00 00 00 00&nbsp; |....1...........|<br>0000e0:&nbsp; <span
+ style="color: rgb(204, 102, 0);">0d 00 02 01</span>  4c 45 44 5c&nbsp; 70 69 61 6e&nbsp; 6f 2e 6c 65&nbsp; |....LED\piano.le|<br>0000f0:&nbsp; 64 <span
+ style="color: rgb(204, 102, 0);">04 00 03  01</span> 01 00 00&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">04 00 04&nbsp; 01</span> 00 00 00&nbsp; |d...............|<br>000100:&nbsp; 00 <span
+ style="color: rgb(204, 102, 0);">04 00 05  01</span> 00 00 00&nbsp; 00 <span
+ style="color: rgb(0, 153, 0);">00 00 ff&nbsp; ff</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |.............&nbsp;&nbsp; |    <span
+ style="color: rgb(0, 153, 0); font-weight: bold;"></span><br></pre>
+      <a href="examples/piano.act.html">Download Example</a><br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

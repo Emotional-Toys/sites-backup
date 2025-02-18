@@ -1,0 +1,429 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Animal Crossing Map Editor - Advanced Features
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Animal Crossing Map Editor - Advanced Features
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Related Links</H2>
+<UL>
+<LI><A HREF="ac_mapedit.htm">Main Map Editor page</A>
+<LI><A HREF="ac_mapedit1.htm">Basic Features</A>
+<LI><A HREF="ar.htm">Action Replay initial setup</A>
+<LI><A HREF="arhelp.htm">Action Replay common steps</A>
+</UL>
+
+<P></P>
+<CENTER><IMG SRC="acmap_ss11.jpg"></CENTER>
+
+<H2>EXTRA STRONG WARNING</H2>
+If you do something too extravagent, the program will wedge/crash when it first tries to run with that game save.
+<BR>
+Typically the program will wedge/crash either
+<UL>
+<LI>right after the boot screen and you won't see any animals walking around and no "Continue" menu, or
+<LI>after you select the character and the town has prepared, before your character goes out of the house.
+<LI>
+To fix, simplify you most recent changes, or go to your backup and try again.
+Nothing should break, but you could lose your town unless you save a backup.
+</UL>
+
+<P></P>
+<H3>Advanced Room Editing ("advanced room edit" button)</H3>
+
+This is similar to the regular room editor, but there are more squares, and two grids for each room.
+The left-side is the floor level. The right-side is for items on top.
+Not all combinations are possible (and some will wedge the game if you try to remove them the normal game way).
+The inside rectangle shows your the regular walls of the room. You can place items right outside the normal walls.
+This allows large items (like the Bonfire) to poke through the walls.
+Also you can place items near the room entrance. Sometimes this is cosmetic, like placing Xmas trees on the stairs.
+Sometimes it can be a barrier. Place an item to prevent strangers from going up the stairs. Or you can place an item right in the doorway to make a trap (strangers can go in, but can't get out).
+
+
+<P></P>
+<H3>Advanced World Editing ("advanced world edit" button)</H3>
+<BR>
+EXTRA WARNING: Even small changes in this mode can create a bogus gamesave.
+Significant experimentation required.
+The game has a number of assumptions of where things are located. Only a few things are patched by the editor (eg: the neighbor's houses are updated in the mini-map for you).
+More extravagent editing may lead to quirky results (which you may or may not want).
+<P>TIPS:</P>
+<UL>
+<LI>The editor interface is optimized for dropping down items. To move a house, click on the old location in "What is it?" mode, press "Place/Change" and click on the new location.
+Finally, press "Delete" and delete the old house location. Don't worry about the blue squares around the old location (code $F030), the game will fix those up automatically.
+<LI>If you forget to delete the old house, you will have two copies of the same neighbors house. Only the first one will appear in the map. This has some fun side-effects.
+<LI>Do not delete all copies of a neighbors house.
+<LI>Moving around neighbors houses appears to work well. However:
+<LI>Moving around some public buildings (town hall, museum) can be problematic.
+They will not appear on the mini-map.
+<LI>Duplicating the stores (Nook or Sisters store) appears to work. Leave the original one for the mini-map.
+<LI>You can change the size of Nook's store (4 different sizes), or have different copies on the same map. The inventory offered will be the same (limited by floor space of the smaller stores)
+<LI>You can move the GateHouse, but not too far from its original position (leaves a nice hole in the wall)
+<LI>Significant experimentation required to find cool and unusual combinations
+<LI>Using this mode for extravagent editing can take many trial-and-error attempts. I suggest using a faster Homebrew alternative instead of the relatively slow Action Replay.
+<LI>Moving around signposts may have some unintended consequences.
+</UL>
+
+<P></P>
+<H3>River Editing ("core river edit" button)</H3>
+EXTRA WARNING: Very powerful mode<BR>
+
+The core ACWW map is made up of 16 big tiles (4x4), AKA "acres".
+Each tile/acre represent a 16x16 cell region on the world map.
+The entire world is therefore 64x64 cells.
+Because of the way the game is implemented, you can only change the big tiles to certain types.
+<BR>
+The editor shows the way the river flows, bridges and other details like cobblestone pads.
+The editor graphics look better now (older screenshots were used for these tutorial steps).
+<CENTER><IMG SRC="acmap_ss5.jpg"></CENTER>
+River flow is in blue.
+Grassland is in green.
+Cobble-stone areas to place houses are shown in grey.
+Bridges over the river are shown with a brown box in the corner (max of 3 per map).
+
+<P></P>
+To see how the map looks for real, you must run the game.
+The patterns on the big tiles will also interlock in certain combinations. Some will look natural and other combinations will not.
+The normal game only picks what it considers good combinations. You can do something else.
+<P></P>
+<B>TRY THIS FIRST</B>
+The first and safest thing to do with the river editor is to move around bridges. This will give you a good idea of what is possible.
+Take a look at your map. You should have two segments with bridges on them (blue river with brown box in the corner).
+If you are lucky the game may have given you a third bridge.
+<P>To get rid of a bridge</P>
+<CENTER><IMG SRC="acmap_ss6.jpg"></CENTER>
+Click on one of the big tiles with a bridge on it (small brown box).
+See the tile type selected in the right-hand list.
+Pick the tile type <B>immediately above</B> it (thats the same river segment, but without a bridge). Click on the square again. The bridge is gone.
+<CENTER><IMG SRC="acmap_ss7.jpg"></CENTER>
+<P>To add a bridge</P>
+Click on one of the river segments without a bridge (no brown box).
+See the tile type selected in the right-hand list.
+Pick the tile type <B>immediately below</B> it if it has "[BRIDGE]" in the name.
+Click on the big tile again. The bridge added.
+If there isn't a "[BRIDGE]" type immediately below the tile type, then you can't add a bridge to that one (not all river segments can have bridges).
+You can correct that with other tiles, but don't try that on your first attempt (see "TRY THIS SECOND").
+<P></P>
+Using this technique, you can remove all your bridges, move them to other river segments, or add additional bridges (max of 3 per map).
+Don't bother to add more than 3 per map, the game won't draw them.
+<CENTER><IMG SRC="acmap_ss8.jpg"></CENTER>
+
+Save your gamesave, and go play the game. Walk around as your character and see if you like the new bridge locations.
+<P></P>
+<B>TRY THIS SECOND (or not at all)</B>
+<BR>
+Now you can go crazy. Experiment with what is possible. Read the tips below.
+Experimentation is mandatory. Often changes you make, especially extravagent changes, won't work properly with the game (eg: game will crash/wedge on startup, or will act weird when you walk around).
+
+<P>TIPS:</P>
+<UL>
+<LI>Each tile type should only be used once.
+IMPORTANT: If two or more tiles are red, change them to be more unique.
+<LI>You must have *some* water on the map for the fish (a little oceanfront or some river segments - ponds don't count). A single waterfall is enough.
+<LI>You are limited to 3 bridges if you want them to appear on the mini-map. If you add 4 or more bridges, the mini-map will be incorrect (neighbor houses will appear where the bridges are).
+<LI>After re-designing the river you may need to move building (Advanced World Editing for moving buildings), see tips below
+<LI>When the game itself moves around buildings (eg: when neighbors move out or if Red appears), the game logic may have problems if the map is too weird.
+<LI>NOTE: there are cases where you can use the tiles in more than one place - but that's extra extra tricky.
+When walking around in the game, you may walk into invisible doppleganger buildings
+</UL>
+
+<A name=MOVING_BUILDINGS>
+<H3>NEW: Tips for moving houses ("advanced world edit" mode)</H3>
+
+NOTE: Be sure you have the latest map editor (version 1.6 or later).
+In the "advanced world edit" mode, on the concrete areas, you will see small pink "x"s.
+These are hotspots.
+Normally there should be a public building (dark red) on that hotspot
+<CENTER><IMG SRC="acmap_ss10x.jpg"></CENTER>
+
+<P></P>
+Often you will move around buildings after you change the acre/tile types (using river editing or super river editing).
+
+The map editor describes what the concrete acre/tiles are meant for.
+<CENTER><IMG SRC="acmap_ss15.jpg"></CENTER>
+You can use them the way they were meant, or in other ways.
+
+<P></P>
+<H4>Public Buildings</H4>
+Public buildings include: Nook's store, Sisters' store, GateHouse, Museum, TownHall and the BulletinBoard.
+Normally they should be located on the proper tile/acre with the building on a hotspot.
+If you change the tiles/acre (river editing), it is recommended that you move all public buildings to their proper hotspots.
+<BR>
+If you don't place them on the proper hotspot, they will usually work normally, but you will not see them on the mini-map.
+<BR>
+If you add additional entrances to the same building, they will work as well, but won't appear on the mini-map.
+
+<P></P>
+<H4>Main House (aka "Mansion")</H4>
+Your main house is the most restricted.
+It must be on a home acre and on the hotspot.
+<BR>
+If you want to move your main house:
+<LI>Using "core river edit" mode:
+Put one of the 3 "Home Acres" in the part of town where you want your house.
+You will probably want to change the old acre to something else.
+<LI>Using "advanced world edit" mode:
+First pick the house from the parts list (use the proper size - "House size0" to size5 or "Big House (Mansion)").
+Then place it on the new "Home Acre" tile on the hotspot (small pink "x").
+You must remove the original house (or it will cause problems)
+<P></P>
+If you add additional entrances to your main house, it has other side effects.
+(eg: the mailbox won't work,
+and when you leave the second copy of the house entrance you exit from the original house)
+
+<P></P>
+<H4>Neighbor's Houses (aka NPC houses)</H4>
+You can move around NPC neighbor houses freely.
+The game will show them properly on the mini-map.
+If you have duplicate NPC neighbor houses, they won't show up on the mini-map.
+If you have more than 3 bridges in the inside of your town, the mini-map will show the NPC houses incorrectly.
+
+<P></P>
+<HR>
+<P></P>
+<H3>Menu Command: "Town"/"Change Town Name"</H3>
+Change the name of the town.
+Does not invalidate your Friend Code (you don't have to tell friends of the new name).
+EXTRA WARNING: This command replaces everything that looks like the old names with new names. There is a remote chance that it will replace things it shouldn't. If it screws up, revert to your last safe backup.
+
+<P></P>
+<H3>Menu Command: "Town"/"Change Town Type"</H3>
+Change the type of the town (0, 1 or 2).
+This will change the color of the roof on your town gate as well.
+<BR>
+NOTE: Still being researched, but the theory is type "0" is Type A etc.
+This has been corrected in the 1.4A version.
+
+<P></P>
+<H3>Menu Command: "Town"/"Fill out catalog"</H3>
+Adds all items to the catalog, as well as all fish and bugs.
+The mayor in the normal game will award you (with Golden Rod and Net) if you haven't already filled out the fish/bug lists.
+<BR>
+
+<P></P>
+<H3>Menu Command: "Town"/"Unburry all world map items"</H3>
+Unburries any holes.
+The normal game will burry some items at the start of each day (ie. there may be new holes by the time you try the gamesave)
+
+<P></P>
+<H3>Menu Command: "Town"/"View 9th neighbor info"</H3>
+Lets you view and change the "9th neighbor" info if there is one currently moving.
+Please see the <A HREF="ac_monkeymove.htm">Monkey Movement Tutorial</A> for how to use this feature to force rare NPCs (like monkeys) to move to a friend's town.
+
+<P></P>
+<H3>Menu Command: "Player"/"Next Resident"</H3>
+If you have a town with multiple residents (/players), or you previously deleted your first player,
+use this command to advance to the next available resident.
+The main screen will change showing you the name and stats on the 2nd (or 3rd or 4th) player.
+Select "Next Resident" to move on to the next.
+This will change all the player/resident specific commands like adding bells
+or depositing in the bank, or editing inventory/emotions/drawer contents.
+
+<P></P>
+<H3>Menu Command: "Player"/"Change Resident Name"</H3>
+Change the name of the current resident/player.
+Does not invalidate your Friend Code (you don't have to tell friends of the new name).
+EXTRA WARNING: This command replaces everything that looks like the old names with new names. There is a remote chance that it will replace things it shouldn't. If it screws up, revert to your last safe backup.
+
+<P></P>
+<H3>(NEW) Menu Command: "Player"/"Change Face/Hair/Tan"</H3>
+You can change some physical attributes of the current resident/player.
+You can use the map editor for combinations that are impossible within the normal game.
+<BR>
+There are 16 different face types (the first 8 are meant for boys, the last 8 for girls).
+There are 16 different hair styles (normally 8 for boys, 8 for girls, but the shampoodle allows cross-gender haircuts).
+There are 8 different hair colors.
+There are 4 different tan levels.
+In late September the game will erase your tan, so if your dark tan isn't showing up, change your game clock back to summer.
+<P></P>
+BTW: The animalxing.com website has some good guides for specifying these using the regular game.
+<BR>
+The <A HREF=http://www.animalxing.com/faceguideww.php>animalxing.com face guide</A> shows all 16 faces (NOTE: some of the eye colors are wrong).
+In the regular game you pick this once (at the start of the game).
+Normally your choices are restricted to your gender (ie. can't have anime style eyes on a boy).
+The map editor doesn't have that restriction.
+<BR>
+The <A HREF=http://www.animalxing.com/hairstyles.php>animalxing.com hairstyle guide</A> shows all 16 hair styles.
+You can change these in the middle of the game by visiting the barber shop.
+<BR>
+NOTE: the order in the animalxing.com guides is not the same as the Map Editor
+(hopefully you can figure them out with the descriptions in the map editor, or simply try them)
+
+<P></P>
+<H3>Menu Command: "Player"/"Edit Resident Drawers"</H3>
+Like Inventory editing, but for the 60 items in the Cabinets/Wardrobes for the resident/player.
+
+<P></P>
+<H3>Menu Command: "Edit"/"Edit Lost+Found"</H3>
+Like Inventory editing, but for the 15 items in Lost+Found.
+The normal game will add items to Lost+Found.
+<H3>Menu Command: "Edit"/"Edit Recycler"</H3>
+Like Inventory editing, but for the 15 items in the Recycler.
+The normal game will purge the Recycler on certain days.
+
+<H3>Menu Command: "Edit"/"Edit Nook Store Items"</H3>
+Similar to Inventory editing for the current offerings of Nook.
+The normal game will restock the store inventory and may wipe out your customization (especially at the beginning of the day).
+Not all items will fit (big items won't fit on display cases). Experimentation required.
+
+<H3>Menu Command: "Edit"/"Edit Bedroom (limited)"</H3>
+You can change the bed in the bedroom to another piece of furniture.
+There are places for all 4 beds (even if you don't have 4 residents in your house). Use the extra spaces for other furniture items.
+This is a very limited mode. You can't rearrange the furniture items (location or orientation in the room).
+Interactive furniture items will not work (add a "bureau" matching your bed to one of the other 3 spots, it won't let you store things there, but it looks cool)
+<P></P>
+<H3>Menu Command: "Edit"/"Edit River Super Mode"</H3>
+Super River editing is very tricky!
+You will need to do experimentation.
+Please play around with regular river editing first (4x4).
+In regular river editing, you should not duplicated tiles (if you do they will be shown with a red border).
+<P></P>
+In Super River editing mode, you can edit the 4x4 internal tiles (like regular mode) as well as the outer tiles.
+Duplication of tiles in the inner area should be avoided as usual.
+Duplication of tiles in the outer area is <b>necessary</b>!
+<P></P>
+The normal outer area has TWELVE tiles with a red border. The ocean area of 6 tiles at the bottom ("open ocean"),
+the main walls on the west side (3x "W wall 0E") and the walls on the east side (3x "E wall 10").
+<BR>
+Keep the same rules for the inner tiles (4x4). Don't duplicate tiles.
+Do not duplicate tiles from the inner part to the outer part.
+<B>If you see red borders on the 4x4 inner tiles, fix them!</B>
+<BR>
+In the outer area duplicate enough tiles so that you have approximately 12 repeated tiles (with a red border).
+When you get close to your final configuration, and need more unique tiles, try changing them one at a time (ie. reducing the number of red tiles from 12). Test after each change.
+When the game fails to boot, you have gone too far. Go back one change.
+<BR>
+You can't place items or houses or plants or trees on the outer tiles (either in the map editor or when playing the game).
+<P></P>
+You should have ONE and only one "Falls". You should have at most 3 three tiles with bridges (but can be duplicated, see below).
+<P></P>
+There are several side effects of duplicating tiles. First it is necessary to make the map simple enough for the game to boot.
+Second the graphics are duplicated, including bridges. This allows you to create maps with more than 3 bridges (ie. 3 unique tiles with bridges, some duplicated).
+When duplicating tiles in the outer part, there are no side-effects.
+However when duplicating an inner tile, there will be phantom invisible walls in the duplicated tiles, where the houses and other items exist in the real tile.
+You can use this for invisible mazes, but it is very tricky to perfect.
+
+<P></P>
+To avoid these problems:
+<BR><B>If you see red borders on the 4x4 inner tiles, fix/change them!</B>
+<BR><B>In the outer tiles, start with 12 of them with a red border</B>
+
+<P></P>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

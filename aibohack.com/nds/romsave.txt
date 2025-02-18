@@ -1,0 +1,320 @@
+ROMSAVE.TXT - notes about the GameSave for the AC:WW game
+
+(c) 2005, 2006 DsPet
+http://aibohack.com/nds/ac_mapedit.htm
+
+===================================================================
+Overview:
+
+The AC:WW game stores info in a 256KB Flash ROM on the cartridge.
+The most popular device, the Action Replay MAX/DUO transfers that data
+to and from the PC. It adds a special Action Replay header (500. bytes).
+
+The AnimalMap editor reads several formats.
+The discussion here will talk about the raw 256KB data, and mostly
+about the first $15FE0 bytes of the save (non-Japanese version)
+
+In fact the 256KB data contains two copies of the gamesave, as well as
+archived letters (the ones you save at the post office).
+These two copies are stored back to back. They are usually the same
+(with only a few bytes at the end different).
+The AnimalMap editor will cross check these two copies and give you advice.
+
+Other conventions:
+------------------
+Hex values start with "$"
+Decimal values end in "."
+If unspecified it is probably hex
+    0A = $0A = 10.
+    11 = $11 = 17.
+Size descriptions:
+  .B = 8 bit value (byte)
+  .W = 16 bit value (low-endian), usually for item codes
+  .L = 32 bit value (low-endian), used for bank balances
+  .Bn = array of n bytes
+  .Wn = array of n 16 bit values (words)
+"ACSTR" are strings in a funny AC:WW encoded format
+  $01 = 'A', etc. See AmimalMap source 'script.cpp' for details.
+
+All data is low-endian. That's true for the AC:WW ROMSAVE as well as the
+AnimalMap PC program (running on an x86 Windows box).
+
+Most of the discussion here is for the English (non-Japanese) version
+of the game. It is the same for all known non-Japanese versions,
+the original US version, the EU version and the updated version (called 1.1).
+For ROMSAVE editing there are no important differences.
+There are difference when it comes to "AR DS" runtime codes. We won't discuss
+those here.
+
+The Japanese ROMSAVE is similar, but smaller and with a different layout.
+The "ACSTR" interpretation is different (Hiragana+Katakana)
+The AnimalMap editor supports both for most of the common features.
+The ROMSAVE offset for the Japanese version can be found in the source code.
+
+If you see "NOT-WELL-UNDERSTOOD" that means the details haven't been
+figured out and were not used in the map editor. There may be more
+cool features yet to be discovered.
+
+I've tried to trim out the fat and other speculation, and point to
+features that are either known and tested (and part of AnimalMap)
+or are areas that need more exploration if someone has an interest.
+
+===================================================================
+
+Template:
+
+<hex_start_address>.<size> - description
+<hex_start_address> -> <hex_end_address> - description
+
+Layout of ROMSAVE:
+
+00000.W - global signature code ?? do not touch
+00002.W - townid.W - do not change
+00004.ACSTR(8) - space for town name (8 characters max)
+
+Followed by data for up to 4 residents (players)
+0000C -> 02297 - first resident
+02298 -> 04523 - second resident
+04524 -> 067AF - third resident
+067B0 -> 08A3B - fourth resident
+
+////////////////////// ////////////////////// //////////////////////
+// resident #1
+
+// here and in the AnimalMap source code, resident data is relative to
+//  the start of the ROMSAVE. These are the numbers for the first
+//  resident.
+
+// 8 resident specific patterns
+0000C -> 00233 : Pattern
+    Pattern: $200 bytes pattern data
+             [townid].W + ACSTR(8) for town name
+             [nameid].W + ACSTR(8) for character name
+             [0000].W + ACSTR(16) for pattern name
+            See Thulinma's pattern tool if interested in these things
+00234 -> 0045B : Pattern
+0045C -> 00683 : Pattern
+00684 -> 008AB : Pattern
+008AC -> 00AD3 : Pattern
+00AD4 -> 00CFB : Pattern
+00CFC -> 00F23 : Pattern
+00F24 -> 0114B : Pattern
+
+~0114C->01AD3: 10. letters, $F4 each -- including bottle mail
+     NOT-WELL-UNDERSTOOD: includes letter details, to/from etc
+  11A0->1203 - text of first letter
+  1294->12F7 - text of second letter
+   ...
+  1AD4->1B2B - Dear Future... letter
+
+Player Variables:
+
+01B2E.W15 (01B2E->01B4B) - inventory player 1 (15 item codes)
+01B4C.L = cash
+01B50.W: bitmap for which items are unopened presents
+
+01B54->01C76?: bitmap for catalogue
+        Furniture, Shirts, Umbrellas, Hats/Glasses, Paper etc
+        See AnimalMap source code for exact bit ranges
+
+01E38.L = my 32 bit friend code
+01E60.L = my 32 bit friend code again + other stuff
+01E6C->021EB: friend codes/names ($1C each, 32 slots)
+
+021F0.L = bank balance
+021F8.4B = emotions, one byte each
+02208.W = time (resetti related)
+
+02214.W = nook points
+
+02218.W - my shirt
+0221E.W - my bed (in bedroom)
+
+02224.W = birth date (hi=month, lo=day)
+
+02248.B = hair style (upper nibble), face style (lower nibble)
+    // See AnimalMap for values and names I made up
+    upper nibble 0->7 are male hair styles, 8->15 are female hair styles
+    lower nibble 0->7 are male face types, 8->15 are female face types
+
+02249.B = hair color (lower nibble, 0->7), tan (upper nibble 0->3)
+0225D.B ? maybe blood type ?
+? 21FE or 2202 or 2208 or 222E - coffee related??
+02222.W - last time played?
+
+0228C: official resident name/town
+
+////////////////////// ////////////////////// //////////////////////
+// Neighbor info
+
+You can have up to 8 different regular neighbors (NPCs)
+Special visitors don't count.
+
+08A3C->0C23B : 8 neighbors info, $700 bytes each
+        //  nboffset_total = 0x8A3C + 0x700 * index (0->7)
+
+    At start are 8 relationships, $68 bytes each
+    In the middle are other data, a pattern (for a custom hat for the NPC),
+        and room for a kept letter.
+
+    See 'ndlg.cpp' in AnimalMap source code for details
+
+    Much of the code uses a different base, to the character attributes:
+            // noffset = 0x9094 + 0x700 * index
+
+    Interesting values from 'noffset'
+        noffset+$72.B - personality
+            0 - (M) = Lazy
+            1 - (M) = Jock
+            2 - (M) = Cranky
+            3 - (F) = Normal
+            4 - (F) = Peppy
+            5 - (F) = Snooty
+        noffset+$73.B - neighbor type/name
+            150. total (0 -> $95)
+
+        noffset+$74 - wallpaper
+        noffset+$76 - flooring
+        noffset+$78 - blank
+        noffset+$7A - upper left item ?
+
+        noffset+$7C - town name again (set to source when moved to 9th slot)
+        noffset+$86 - catch phrase, ACSTR(10)
+        noffset+$90 - location of house (x coordinate + $10)
+        noffset+$91 - location of house (y coordinate + $10)
+
+        noffset+$92,$93 - some state thing for moving in/out
+
+        many details NOT-WELL-UNDERSTOOD
+
+////////////////////// ////////////////////// //////////////////////
+// World Map info
+
+0C274->C2F9 something related to work item (fetch medicine etc)
+    NOT-WELL-UNDERSTOOD
+
+0C330 -> 0C353 - River Tiles/Acres. 6x6 acre layout for the town.
+    NOTE: These are one byte Acre codes, not item codes.
+    See the river editing features of AnimalMap.
+
+0C354 -> 0E353 : main world map (4K Words)
+    This is the world map and the items stored on it.
+    It represents the entire inner part of the map, 4x4 acres.
+    Each acre is 16x16 cells. The entire (editable) world map is 64x64 cells.
+    The layout is not linear, but grouped by acre.
+    See the AnimalMap editor for code that access it like a big 64x64 map.
+    Each cell may contain one terrain item, or other item, or be blank ($FFF1)
+
+    If you use "super river editing" to make the town larger (6x6 acres)
+    you can't add items to the outer acres.
+
+0E354 -> 0E553 : hole bitmap (4K bits)
+    One bit for each cell on the world indicating if the item is burried or not.
+
+0E558 -> 0FAE7 : room maps
+    $450 per room
+        16x16 word item/feature map for floor
+        16x16 word item/feature map for on top
+        These can hold items, or be blank ($FFF1)
+
+From codejunkies AR DS codes:
+? FAE8.L: - if set, mortgage only costs 1 bell ?
+
+0FAF8.B - house size (lower nibble, actually lower 3 bits)
+        0:4x4, 1:6x6, 2:8x8, 3:2nd, 4:2nd+W room
+        5:2nd+W+E room, 6: 4 extra rooms = full mansion
+        (7:back to 4x4)
+
+////////////////////// ////////////////////// //////////////////////
+0FAFC -> 0FD23: Pattern
+0FD24 -> 0FF4B: Pattern
+0FF4C -> 10173: Pattern
+10174 -> 1039B: Pattern
+1039C -> 105C3: Pattern
+105C4 -> 107EB: Pattern
+107EC -> 10A13: Pattern
+10A14 -> 10C3B: Pattern
+
+  Sister's store patterns
+
+////////////////////// ////////////////////// //////////////////////
+
+10C3C -> 156FF...
+  text strings for message boards, mail etc
+  ~10C88 - bottle mail (both input and output)
+  10D2C: FFF1... ? some other remote town ?? ?? moving in
+
+10D78->11377 - Neighbor in transit: moving in/out - so called "9th slot"
+    10D78: start of NPC info
+    110B8: pattern
+    113D0 = noffset value to imporant stuff (used in AnimalMap)
+    ...
+
+11484->11DB3 - message boards (12. slots, $C4 bytes each)
+11DB4->120C3 - letters (4 slots, $C4 bytes each)
+12008.L - donated to Boondox (global)
+
+NOT-WELL-UNDERSTOOD: more letters, letters in transit etc
+
+~14FC0->15000+: constallations (NOT-WELL-UNDERSTOOD)
+
+15430 -> 156FF - wardrobe contents
+    (15. * 6 * 4 players = 360 slots)
+
+15700 -> 15927: Pattern  -- face painting for cat
+15930 -> 15B55: Pattern  -- town flag
+
+15B58: town type (1=green/brown flat roof,2=blue roof, 0=red roof)
+        Impact on the game -- NOT-WELL-UNDERSTOOD, but there are rumors
+
+15B78...: incoming bottle mail (on the beach)
+
+15D50: start of museum fossils
+    (1 nibble each - who donated it)
+    15D50.W - start $0001
+    15D68.W - end $1000
+    => 52 fossils
+  15D6A+1: start of museum fish
+    (15D6A.W: $0100 = first, 15D86.W: $0010 = last)
+    => 56 fish
+  15D88: start of museum bugs
+    (15D88.W: $0001 = first, 15DA2.W = $1000)
+    => 56 insects
+  15DA4+1: start of museum paintings
+     (15DA4.W: $0100 = first, 15DAE.W: 0010 = last)
+    => 20 paintings (not forgeries)
+
+15DB8 -> 15E01 - store available items (exact size unknown)
+
+15E10.L, 15E14.L - nook sold out flags (clear to make available)
+15E76.W - alien tree trick goes here, but doesn't stick
+
+15EC0 -> 15EDD : Lost and found (15 items)
+15EDE -> 15EFB : Recycler bin (15 items)
+
+15F96.6Bx3 - 3 Snowmen (0s when not present)
+    See snowmen.cpp in AnimalMap source code for primitive editing
+
+15FDA.W: misc global bits
+
+15FDC.W - Checksum !!!
+        If you make any change to the ROMSAVE data, this must be updated
+        The entire ROMSAVE is $15FE0 bytes ($0AFF0 16-bit words)
+        If you add it up as 16-bit values, the sum (modulo 2^16) must be 0
+
+15FDE.W - last two bytes (syncing dual version)
+        NOT-WELL-UNDERSTOOD
+
+[end of 1st copy $15FE0 bytes total]
+
+////////////////////// ////////////////////// //////////////////////
+
+15FE0->2BFC0-1: second copy of ROMSAVE
+
+2BFC0.. FF filler
+
+2E210->: stored letter post-office (cb=$F4)
+    75. stored letters per player
+    (all 4 players fill up to end of 256KB)
+
+////////////////////// ////////////////////// //////////////////////

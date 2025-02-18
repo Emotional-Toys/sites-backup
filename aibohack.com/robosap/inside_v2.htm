@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboSapien V2 Guts
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboSapien V2 Guts
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+I am focusing on the electronics in the RoboSapienV2, and in particular the newer technology.
+Check the RoboSapien BBS. I assume other people will post photos of the motors, skeleton structure etc.
+<BR>
+WARNING: photos below are of one of the early RSV2 robots. Current models have significant differences.
+<P></P>
+
+<H2>The Camera Board:</H2>
+<CENTER><IMG SRC="v2_camboard_frontside.jpg"></CENTER>
+Black thing is the small color camera (brand model not visible).
+Gold colored things below are the 3 IR transmitters (the center one and two side ones set at different angles).
+The big chip is Sunplus digital camera chip (Sunplus SPCA 563B).
+
+<P></P>
+Bottom side of board:
+<CENTER><IMG SRC="v2_camboard_backside.jpg"></CENTER>
+29LV400 512KB flash ROM to handle the camera firmware.
+Smaller chips is ATMEL 93C46 (128 Byte E2PROM).
+<BR>
+Notice the unattached 4 pin header (J2) in the upper right.
+Also notice the 2 test points on top, and 3 test points on bottom. Possible JTAG for programming the flash chip.
+
+<P></P>
+<HR>
+<P></P>
+<H2>The Head Connector Board:</H2>
+<CENTER><IMG SRC="v2_headboard_poor.jpg"></CENTER>
+Takes the sensor components in the head, and wires down (through the neck) to main board below for sensor input signals.
+<BR>
+Not very interesting for a PCB. More interesting is what is plugged in:
+<UL>
+<LI>2 Blue LEDs for the eyes (controlled individually), diffused through square eyepieces
+<LI>Little motor for turning the eyes (I guess that's the "12th" motor)
+<LI>Two microphones in the ears for stereo hearing
+<LI>Two IR detecters in the ears (for picking up remote control)
+<LI>One IR detecters in the mouth (for obstacle/distance detection, using gold colored IR transmitters by the camera)
+</UL>
+
+<P></P>
+<HR>
+<P></P>
+<CENTER><IMG SRC="v2_backoff.jpg"></CENTER>
+<P></P>
+
+<H2>The Driver Board:</H2>
+The driver board is sitting on top.
+44 transistors that (I assume) make up 11 H-Bridges to control the 11 main motors.
+In V1, they had a dedicated driver chip.
+Connects to the main board through two header/connectors on top.
+
+<P></P>
+<H2>The Main Board:</H2>
+<P></P>
+The main board is under the driver board in the above photo.
+Under the driver board are some capacitors and adjustable variable resistors (not shown).
+On the backside of the main board are two chip carriers holding an epoxy blob.
+I assume these are the two CPUs (guessing one for logic, one for sound samples).
+Here's a poor photo (not much to see, move along...).
+<CENTER><IMG SRC="v2_mainboard_backside_poor.jpg"></CENTER>
+<HR>
+<P></P>
+
+
+</BODY>
+</HTML>

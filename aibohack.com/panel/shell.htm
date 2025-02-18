@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ PanelShell
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ PanelShell
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+When you first reboot your machine, or press the reset button, the PanelShell program will start up first.
+
+It gives you two main options, "Normal" which launches the Viewsonic launcher you are familiar with, and "MS TSC" which launches the Microsoft Terminal Services Client (essential for copying additional files to the panel).
+
+If you want your panel to operate like normal, press the "Normal" button, then press the blue bar at the top, and press the "X" cancel button on the PanelShell.
+It will ask "Go away for good?" and if you answer yes, it will be gone, until you press the reset button again.
+<BR>
+To completely remove the PanelShell, you should use the RDPWizard to "re-flash" your panel to use the original software (just like Step#2 in the installation guide).
+<P></P>
+
+NOTE: PanelShell is "topmost". When you hit the "OK" button or run a program, the PanelShell will minimize.
+It appears as a blue bar on the top of the screen when minimized.
+If you press the "X" button,it will go away and not come back (unless you reset your panel).
+ Typically you will start another more powerful shell like EXPLORER.EXE before cancelling PanelShell.
+
+<P></P>
+<HR>
+<H2>Programs, where are the programs</H2>
+
+The PanelShell provides a listbox for the other programs you can run.
+Just double-click on the program you want to run.
+If you install new programs, typically place them in the "\Programs" folder then press the "refresh" button on the Panel Shell.
+<P></P>
+Places PanelShell runnable programs come from (in order):
+<UL>
+<LI>Any .RDP files (remote desktop config info) in the \IPSM folder
+<LI>Any program or data files in the \IPSM\Programs folder (normally folder does not exist)
+<LI>Any program or data files in the \Programs folder (folder does not exist at reboot)
+<LI>In Expert mode only: Any programs (*.exe) in the \IPSM folder
+<LI>In Expert mode only: Any programs (*.exe) in the \Windows folder.
+NOTE: running these programs directly often leads to the system hanging.
+<LI>Finally: the Control Panel CPL applets provided by cplmain.cpl
+</UL>
+
+NOTE: If you can get the \IPSM folder to work, you can also store programs in "\IPSM\Startup" and the PanelShell will launch those after reset.
+<HR>
+<H2>Storage hell</H2>
+The Flash ROM is used to store three things, the ROM image itself (what you are re-flashing),
+the registry settings (eg: your LAN and user accounts),
+and extra files (programs or data) that are not wiped out when you reset the panel.
+Those extra files are stored in the IPSM magic folder.
+
+<P></P>
+For some reason, data access to the IPSM magic folder is flakey (sometimes it works, sometimes it doesn't).
+Hopefully future versions will be more stable.
+For the mean time, I recommend storing programs in RAM, and avoid reseting the device unless you have to.
+
+<P></P>
+<HR>
+
+
+
+</BODY>
+</HTML>

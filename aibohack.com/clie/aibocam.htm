@@ -1,0 +1,285 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ CLIE AiboCam
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ CLIE AiboCam
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P>Camera Features (RCodePlus or LifePlus stick)</P>
+<UL>
+<LI>Runs on WiFi equiped PDA (NX or NZ with WiFi card, or UX50)
+<LI>Selectable update speed (fast, medium, slow, manual)
+<LI>Camera Settings (white balance, camera gain, shutter speed)
+<LI>Single and Double sized image options
+<LI>Double Sized: wide landscape mode (on UX50)
+<LI>Double Sized: tall rotated portrait mode (on NX/NZ)
+<LI>ARM accelerated for fast frame rate
+</UL>
+<P>Remote Features (RCodePlus stick)
+<UL>
+<LI>Walk commands (one of 8 directions + stop)
+<LI>Three walking speeds/styles (slow, normal, fast)
+<LI>Move head (one of 9 directions + center)
+<LI>Optional menu commands
+<LI>Keyboard commands (recommended, see below)
+<LI>Spot-light on/off (ERS-220 only)
+<LI>Run / stop RCode program
+</UL>
+
+<P></P>
+<HR>
+<H2>Required Hardware</H2>
+<UL>
+<LI>An ERS-210[A] or ERS-220[A] AIBO
+<LI>An AIBO LAN (WiFi) card installed in the dog
+<LI>A PMS pink stick with an RCodePlus personality on it (eg: DogsLife), _OR_
+<LI>A non-PMS pink stick with a LifePlus personality on it (eg: AiboLife2 Plus)
+<LI>An access point is recommended
+<LI>A PC with a WiFi card is strongly recommended for initial setup and testing
+<P></P>
+<LI>A WiFi capable CLIE
+<UL>
+<LI>An NX or NZ series with a WiFi card (WL100 or WL110) _OR_
+<LI>A UX50 (WiFi built in)
+</UL>
+<BR>
+NOTE:The CLIE, AIBO, PC and optional access point must all have the same SSID and WEP settings. They all must have unique IP addresses.
+</UL>
+
+<P></P>
+<H2>Installation</H2>
+<UL>
+<LI>Download and install <A HREF="AiboCam02.prc">AiboCam02.prc</A> to your CLIE (ie. download, double click on it, then run Hotsync).
+<LI>If you haven't done it already, setup your CLIE's WiFi to the proper AIBO settings (usually SSID="AIBONET", WEP enabled, key="AIBO2"). Test by 'ping'ing the CLIE from your PC.
+<LI>If running on battery, increase the power-off delay of the CLIE.
+The current version does not handle power-down well (usually you will have to reboot the CLIE, and maybe the AIBO to reconnect)
+</UL>
+<P></P>
+
+<H2>Connecting (can be frustrating)</H2>
+<UL>
+<LI>If you have an access point, or an active PC WiFi card, then you can start up AIBO now.
+<LI>If you don't have an access point or active PC WiFi card (or you are away from your computer), then you must manually start the CLIE WiFi card.
+Use the 'Prefs' program and start the WiFi connection first.
+Then boot AIBO.
+<LI>When AIBO has started, start the 'AiboCam' program on the CLIE.
+<BR>
+NOTE: if it reports an error, you may need to reboot your CLIE (soft reset by pressing the recessed reset button).
+This is the easiest way to make a good connection.
+Enter AIBO's IP address if different from the default (or last used)
+<LI>It should connect within a few seconds. If not, it may ask you to reboot either the CLIE or the AIBO.
+If AIBO is not found, check the general advice.
+In particular be sure you can 'ping' both the PDA and AIBO from your PC.
+<BR>
+DISCLAIMER: if the LAN settings are not setup <i>just right</i> it can be a frustrating experience!
+</UL>
+<P></P>
+
+<HR>
+<H2>Usage - general Camera</H2>
+<UL>
+<LI>When connected, you can pick the camera update speed from the menu or the buttons on the screen.
+<LI>"Medium" (the "Med" button) is a good setting to start
+<LI>"Manual" will stop the camera update, and will only update the display when you want to.
+<LI>If you have a UX50, press the "Wide" button to see a double size image. Press the button again if you don't like it that big.
+<LI>If you have a NX/NZ, press the "Tall" button to see a double size image, rotated. Press the button again if you don't like it that way.
+<LI>Under the "Cam" menu, you can adjust the camera settings.
+<BR>
+For a dark room, "High Gain" and "Slow Shutter" work best.
+<BR>
+Play around with the White Balance ("Inside", "Outside", "Fluores.") to get the best color reproduction.
+</UL>
+
+<P></P>
+If you are running a LifePlus personality, that's about all you can do.
+Let the personality do its thing, and you can watch.
+
+<P></P>
+<H2>Usage - RCodePlus/AiboRemote</H2>
+If you are running an RCodePlus Personality, there are "AiboRemote" features.
+<UL>
+<P>RCode menu</P>
+<LI>Command AIBO to sit, stand or lie down.
+<LI>Turn the ERS-220 spotlight on and off (does nothing on the ERS-210)
+<LI>When AiboCam initially connects to AIBO, it will stop the RCodePlus personality.
+If you pick "Run", it will run the personality on the stick.
+If you then send walk commands, they will compete with the personality.
+<P>Walk menu</P>
+<LI>You can pick a walking command from this menu. I recommend you use the keyboard interface instead.
+<LI>You can pick a walking speed/style ("Slow", "Norm", "Fast"). Do this before issuing a walk command.
+<P>Look menu</P>
+<LI>You can move AIBO's neck to make him look in a certain direction.
+I recommend you use the keyboard interface instead.
+
+</UL>
+
+<P></P>
+<H3>Keyboard Commands</H3>
+<pre>
+Moving AIBO
+
+        Q W E
+        A S D
+        Z X C
+
+    W = forward
+    S = stop
+    X = backward
+    others = turns
+
+
+Looking around:
+        U I O
+        H J K
+        B N M
+
+    J = look centered
+    I = look up
+    N = look down
+    ...
+
+Other:
+    1 = set slow walking speed
+    2 = set normal walking speed
+    3 = set fast walking speed
+
+</pre>
+<P></P>
+<HR>
+
+<H2>General WiFi recommendations</H2>
+<UL>
+<LI>Be sure to run the PC version of AiboRemote (for RCodePlus) or AiboScope (for LifePlus) _before_ trying the PDA version
+<LI>The PDA's WiFi card must be setup to use the standard AIBO LAN network (by default: AIBONET, with WEP key "AIBO2")
+<LI>The default AIBO IP address (10.0.1.100) is recommended (unless you can't use it in your setting)
+<LI>If you don't have an access point, be sure you WiFi card's "Link" light is on/flashing before you boot your AIBO!
+<LI>Use of an access point is recommended to keep the WiFi connection alive, especially during the boot process.
+<LI>During initial setup, a PC with WiFi card (for ping tests) is recommended.
+<LI>If you can't connect, be sure you can ping both the AIBO (usually 10.0.1.100) and the PDA from your PC.
+<LI>You will reboot often. This is the best way of getting the WiFi into a known state.
+</UL>
+<P></P>
+<HR>
+<P></P>
+<CENTER>
+<IMG SRC="../pix/ux50_2.jpg">
+</CENTER>
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,280 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Full Movie Player (FMP) by CliePet (for NX/NZ/UX/TH/VZ)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Full Movie Player (FMP) by CliePet (for NX/NZ/UX/TH/VZ)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Full Movie Player (FMP) is a full screen movie player for CLIEs with the MMLib system interface to movie playing.
+<P></P>
+FMP will play back any movie supported by the built-in movie player (or Media Center).
+FMP will play back movies in the standard locations, or from the "\MOVIES" folder.
+FMP will play back movies from Memory Stick (MS), Compact Flash cards (CF) or Internal Media (INT), assuming you have those devices on your PDA.
+
+<P></P>
+<CENTER>
+<TABLE width=90% border=20 bgcolor=#FFE0E0>
+<tr><td colspan=1>
+<B>
+NOTICE: Full Movie Player only plays back movies that are specially encoded for the CLIE.
+</B><BR>
+If you find a movie on the Internet or created from other tools not specifically for the CLIE, it most likely <B>will not work!</B>
+<P></P>
+<LI>MPEG-1 is supported, but is not recommended because of large movie files.
+<LI>Quicktime MQV (MPEG-4) movies must be created by Image Converter 1.x or equivalent (they can have the .MQV or .MOV suffix). Arbitrary QuickTime .MOV movies will not play without conversion.
+<LI>Newer format CLIE .MP4 (MPEG-4) movies must be created by Image Converter 2.
+
+<P></P>
+For models UX/TH, I recommend sticking to MQV format and Image Converter 1.x (perhaps the 1.5 patched version). MP4 format is possible with the correct installation of VZ90 codecs, but IMHO it is more hassle than it is worth.
+MQV movies are already MPEG-4 movies!
+
+</td></tr>
+</TABLE>
+</CENTER>
+
+<DIR>
+NOTE: This is the last planned Full Movie Player (version .05)
+</DIR>
+
+<P></P>
+<CENTER>
+<TABLE BORDER=2>
+<tr><th rowspan=2 width=190>PDA Model</th><th colspan=4>Movie Formats</th><th colspan=3>Media-MS</th><th>RMC?</th></tr>
+<tr><th>MPEG-1</th><th>QT (MQV)</th><th>QT HQ+</th><th>MP4 (.MP4)</th><th>MS</th><th>CF</th><th>INT</th><th></th></tr>
+<tr><td>NX60/NX70/NZ90</td><td>yes</td><td>yes</td><td>no</td><td>no</td><td>yes</td><td>yes (note1)</td><td>n/a</td><td>yes</td></tr>
+<tr><td>NX73/NX80</td><td>yes</td><td>yes</td><td>no</td><td>no</td><td>yes</td><td>yes (note1)</td><td>n/a</td><td>yes</td></tr>
+<tr><td>UX40/UX50</td><td>yes</td><td>yes</td><td>yes</td><td>(note2)</td><td>yes</td><td>n/a</td><td>yes</td><td>n/a</td></tr>
+<tr><td>TH55</td><td>yes</td><td>yes</td><td>(note3)</td><td>(note2)</td><td>yes</td><td>n/a</td><td>n/a</td><td>n/a</td></tr>
+<tr><td>VZ90</td><td>yes</td><td>yes</td><td>yes</td><td>yes</td><td>yes</td><td>yes (note4)</td><td>yes</td><td>yes</td></tr>
+</TABLE>
+</CENTER>
+
+<DIR>
+note1 - CF movie playback for high bit rate videos (384kbps or higher) is not recommended with the NX/NZ<BR>
+note2 - not built in (copying VZ90 codecs required)<BR>
+note3 - not built in (copying UX50 or VZ90 codecs required)<BR>
+note4 - be sure the CF card is fast enough<BR>
+"QT HQ+" is the highest setting for ImageConverter (768kbps)<BR>
+"RMC" is the hardware Audio Remote Control
+</DIR>
+
+<P></P>
+<HR>
+FMP allows you to play a movie, without any controls on the screen. Navigation is done by the input buttons (hard buttons, jog dial and optional keyboard)
+<P></P>
+
+<CENTER>(more modern screen shots coming later..)</CENTER>
+
+<P></P>
+<HR>
+<H2>Installation</H2>
+<UL>
+<LI>Download <A HREF="FullMoviePlayer_05A1.prc">FullMoviePlayer_05A1.prc (23KB, with original icon)</A> and install it on your PDA.
+<LI>Insert memory stick with movies on it
+<LI>Run "FullMoviePlayer"
+<LI>It will startup and list movies from the memory stick (see "Where are the Movies" below)
+<BR>NOTE: currently displays file names only - no descriptions
+<LI>If you want to switch volumes, the "MS", "CF"/"MS2" and "INT" buttons refill the list with movies from that volume if applicable.
+(movies on the "MS" are automatically loaded at startup)
+<LI>Select the filename of one of the movies listed (an info list and small preview may appear)
+<LI>Press the "Play" button (see below for play instructions)
+<LI>NOTE: you can navigate through the movie list with the jog dial (up, down and push to play selection)
+</UL>
+<P></P>
+
+<H2>Where are the Movies?</H2>
+The movies in the standard places are supported, as well as files that have the right extension, and movies in the MOVIES folder on the memory stick
+<pre>
+    /MOVIES/*.MOV
+    /MOVIES/*.MP4
+    /MOVIES/*.MPG
+    /MP_ROOT/100MNV01/*.MP4 -- IC2 puts movies here
+    /MQ_ROOT/100MQV01/*.MOV
+    /MQ_ROOT/100MQV01/*.MQV -- IC1 puts movies here
+    /MSSONY/MOML0001/*.MPG -- MPEG-1 style
+    /PALM/IMAGES/*.MPG -- MPEG-1 downloaded movies
+    /DCIM/1xxMSDCF/*.MPG -- MPEG-1 style
+</pre>
+
+
+<P></P>
+<H2>Controls when playing (default)</H2>
+NEW: Click your stylus on the screen and a temporary control form will popup under the movie being playing. You have 5 seconds to adjust the volume, current seek location or go to the prev or next movie, or stop the video playing.
+<BR>
+NOTE: With the "Config" menu, you can change any of these settings. Each button has two actions, what to do when the movie is stopped and what to do when the movie is playing. These are usually the same.
+<UL>
+<LI>"BACK" button - stop playing and return to main menu (press twice to exit the program)
+<LI>When playing, the Jog wheel will control the volume
+<LI>When paused, the Jog wheel will seek by 2 second steps (forward and back)
+<P></P>
+<LI>First hard button (Movie on VZ90) will seek 1 minute backwards
+<LI>Second hard button (Music on VZ90) will seek 1 minute forwards 
+<LI>Third hard button (Photo on VZ90) will switch the scale factor (see below)
+<LI>Last hard button (Organizer on VZ90) will rewind to start of current movie
+
+<P></P>
+VZ90 specific:
+<LI>The center button of the DPad will pause/resume
+<LI>The <- and -> buttons on the DPad will advance to the next/previous movie on the list
+<LI>The up and down buttons on the DPad will increase and decrease the volume
+<LI>NOTE: the jog wheel is IMHO backwards than you would expect (rotating clockwise is a downward scroll)
+
+<P></P>
+UX/NX/NZ specific:
+<LI>The space bar on the keyboard will pause/resume
+<LI>The <- and -> buttons on the keyboard will advance to the next/previous movie on the list
+<LI>The up and down buttons on the keyboard will increase and decrease the volume
+<P></P>
+RMC:
+<LI>Where applicable, the RMC audio remote buttons do similar things.
+</UL>
+
+<P></P>
+<H2>Scaling the video</H2>
+CLIE supports scaling by certain fixed scaling factors. If you press the 3rd hard button when playing it will switch through the different scale factors.
+<pre>
+        1/1 -> 4/3 -> -> 2/1 -> 8/3 -> 1/2 -> 1/4 -> 1/1 ...
+</pre>
+<BR>
+Try different scale factors and see what you like. The best setting may vary depending on the movie (eg: for letterbox movies)
+<BR>
+When starting MQV/MOV movies, the player will pick the best scale ratio for you.
+If you set the scale factor in the menu before you start the movie, it will use that factor.
+Use "Auto" (recommended) and it will automatically pick the right scale factor depending on the size of the movie (try to fill the screen, but without clipping the movie)
+
+<P></P>
+<HR>
+
+<P></P>
+<H2>Stopping a video and resuming later</H2>
+
+To stop a movie and exit the player, press the BACK button twice.
+Then when you want to resume watching the movie, run FullMoviePlayer and press the "Play" button before selecting anything else (ie. don't select anything from the movie list).
+The last played movie will be resumed from the last position.
+
+<BR>
+The last movie volume and scale factor are also saved.
+
+<P></P>
+<H2>More features</H2>
+This is the last planned Full Movie Player (version .05).
+If you want to tweek the UI for FMP and you have CodeWarror, the source code will be available soon (send me an email if interested).
+<P></P>
+If you want more general player features, look at TCPMP (open source player, more active development, supports many other non-Sony codecs)
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Animal Crossing Map Editor (PC Windows App) source and notes
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Animal Crossing Map Editor (PC Windows App) source and notes
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Source code - Warning</H2>
+For most people, source code is not as useful as you think it will be!
+<BR>
+The map editor changes the gamesave (ROMSAVE) that contains your town.
+The Action Replay MAX/DUO uploads those changes to the AC:WW game cartridge.
+<P></P>
+The map editor is a convenient user interface for tweeking the gamesave.
+It doesn't let you do anything that isn't already in the AC:WW game.
+<P></P>
+So if you think you can create a new feature, like placing full furnature items outside of your house, you will be mistaken.
+The hard work is figuring out what bytes can be changed in the gamesave,
+and to figure out what strange things you can trick the game into doing.
+For example girl faces on boy characters, or funny snowmen sizes.
+<P></P>
+The actual map editor is a Visual C++ project.
+It can be compiled with the (not free) Visual C++ 6.0 IDE.
+It can also be compiled with (the free demo version of) Visual Studio 2005.
+Optionally you can compile it with the free version of Visual C++ Express 2005 IDE (after the demo version expires).
+If you don't have theses tool or something compatible, you won't be able to build the project.
+<BR>
+The C++ source code is minimally documented.
+It has features slapped on (based on almost a year of small changes), so it isn't the cleanest code.
+If you are looking to create something totally different, you may be better off starting with a tool you are more familiar with (eg: Visual Basic).
+
+<P></P>
+Download the source code to the current version here <A HREF="acmapedit08_SRC.zip">AnimalMap 1.8 source (with VC6 and VStudio 2005 projects)</A>.
+Please read the README.TXT files.
+
+<P></P>
+
+<H2>ROMSAVE.TXT, technical description of gamesave</H2>
+Here's a text file listing some of the more important byte offset locations of the gamesave (ROMSAVE).
+This may be more interesting to you if you are trying to find new tricks/features.
+<BR>
+This info can also be used to make standalone "AR DS" codes
+(the gamesave/ROMSAVE is stored in RAM in the exact same format, so you only have to add a versions specific offset)
+
+<BR>
+This is also a very technical document, talking about hex bytes and offsets and minimally understood values.
+For adding new features, you will need to do some experimentation and guessing.
+
+<P></P>
+<LI><A HREF="romsave.txt">ROMSAVE/gamesave notes</A>
+
+<P></P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,291 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YART Tutorial (includes YART_APG)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YART Tutorial (includes YART_APG)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This is my short tutorial for using YART and YART_APG.
+<BR>
+First install RCodePlus and YART as described in <A HREF="yart.htm#install">the main YART page</A>.
+
+<P></P>
+<HR>
+<H2>'Dance when you hear your name'</H2>
+
+If not already running, run the program "\CUSTOM\YART" on the memory stick.
+<P></P>
+Expand the "AIBO voice command" group and pick the first one ("'AIBO' or {dog's name}").
+
+<P></P>
+<CENTER>
+<IMG SRC="ss_yart1.gif">
+</CENTER>
+
+<P></P>
+For the default personality, when AIBO hears the word "AIBO" or his registered name, he will perform this RCODE:
+<PRE>
+    PLAY ACTION KICK 30 1000
+    WAIT
+
+</PRE>
+AIBO will kick his paw.
+The "WAIT" statement makes AIBO wait for the action to complete.
+<P></P>
+This is a rather poor default, so let's change it so he will Dance when he hears his name.
+<P>Editing Steps</P>
+<UL>
+<LI>One at a time, grab the two RCODE statements with the mouse, and drag them out of the window (this deletes them).
+<LI>The code window is now empty -- it should say "empty (drag parts from below to here)"
+<BR>
+<CENTER>
+<IMG SRC="ss_yart2.gif">
+</CENTER>
+<BR>
+<LI>In "Available Actions" dropdown, change from "Standard" to "System: Play Alone"
+<LI>You will see the list of actions change.
+<LI>Pick "DANCE1_SIT" from the bottom list and drag it to the code window. This is a simple little dance.
+<LI>It will expand to two RCODE statements, "PLAY ACTION ALONE_DANCE1_SIT" and "WAIT"
+</UL>
+
+You have now customized your first RCODE program by writing these two lines of RCODE. Let's save the results and try it out on AIBO.
+<P>Testing Steps</P>
+<UL>
+<LI>Press the "Save RCODE program to memory stick" on the bottom of the YART window.
+<LI>YART should report "Changes saved" and go away.
+<LI>Take out the memory stick from your PC, and put it in your AIBO, and start him up.
+<LI>After he boots up, try saying "AIBO" a few times (the first few voice commands may not work). Eventually he will do his little dance while sitting down.
+<LI>If you say "Stand up" he will stand up (part of the default personality you can also customize). If you then say "AIBO" he will first sit down, then perform his sitting dance (ALONE_DANCE1_SIT).
+<LI>NOTE: if you say "Name Registration" and record a new name, that name will also start the little dance.
+</UL>
+Well, those are the basics. Even in this simple form, there are a lot of things you can do with YART programs.
+
+<P></P>
+<HR>
+<H2>'Show Time'</H2>
+Remove the memory stick from your AIBO (you don't need to press the chest button
+unless you recorded something with Name Registration).
+<BR>
+Put the stick back into your PC.
+Run the "\CUSTOM\YART" program again.
+
+<P></P>
+This time we are going to do a little more complicated logic.
+Select the "AIBO voice commands" again, but this time pick 'Show Time'.
+The code window should be empty (there is nothing in the default personality).
+<UL>
+<LI>Pick the "System: Physiological" category and the "EXCRETE0_STD" action (peeing). Drag it to the code window.
+<LI>Pick the "System: Guard" category and the "ATTACK0_SIT2" action (karate pose). Drag it to the code window.
+<LI>Pick the "Subroutines" category (at the bottom of the list) and the "Wait until head pressed" subroutine. Drag it to the code window.
+<LI>In the same category, pick the "Take a picture" subroutine. Drag it to the code window.
+<LI>Finally, pick the "Standard" category (at the top of the list) and the "Lie Down" action. Drag it to the code window.
+</UL>
+This is only an example, almost anything is possible.
+For this case, AIBO that will react to the phrase "Show Time" by peeing and karate chopping, then wait for you to press his head before taking a picture and laying down.
+
+<CENTER>
+<IMG SRC="ss_yart3.gif">
+</CENTER>
+
+<P></P>
+Save to memory stick and try it out (say "Show Time" to the dog a few times).
+<BR>
+When you are done take out the memory stick from AIBO, and put it back in the PC.
+You can view any photos taken by looking at the "\PHOTOS" folder on the memory stick.
+
+<P></P>
+<HR>
+<H2>What next ?</H2>
+Try it out! Go Crazy !
+<BR>
+You can drag and drop other actions from the lower list to the code window. There are over 300 built-in system actions you can use.
+Browse the existing default personality and you will see many places to customize.
+It is very simple.
+
+<P></P>
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Simple Audio Personality - Adding Cartman's Voice </H1>
+</center></td></tr> </TABLE>
+<HR>
+
+Currently the "User Action" category in YART is empty.
+Now we are going to add some custom audio files and create some "User Actions".
+<BR>
+To help us get started, you can install some already formatted WAV files containg wisdom from Eric Cartman.
+<UL>
+<LI>Download this file <A HREF="yarttut_audio.zip">yarttut_audio.zip</A>
+<LI>Unzip it and install it in the recommended folder (extract to "C:\" and it will put it into "C:\AIBO\MY_CARTMAN" on your PC)
+<LI>If you like, you can open up the "C:\AIBO\MY_CARTMAN" folder and double click on any of the WAV files to hear them on your PC first.
+</UL>
+Now run the "\CUSTOM\YART_APG" program on the memory stick.
+
+<P></P>
+<CENTER>
+<IMG SRC="ss_yart_apg0.gif">
+</CENTER>
+<P></P>
+First check to make sure the drive letter for the memory stick is correct (it should be).
+Next, change the "Audio Data Path" to point the Cartman samples ("C:\AIBO\MY_CARTMAN").
+
+<P></P>
+There are 11 .WAV files that we are going to add to the memory stick.
+Press the "Save To Stick" button.
+It should take a few seconds and eventually report "Memory Stick Update Complete"
+(if not please check the installation and the path you typed in)
+
+<P></P>
+<HR>
+<H2>Using those new User Actions</H2>
+After YART_APG has saved the new actions, run the YART program again (\CUSTOM\YART).
+This time you can pick the "User Actions" category and see the new words AIBO can speak:
+<CENTER>
+<IMG SRC="ss_yart4.gif">
+</CENTER>
+<P></P>
+
+You can use these actions in response to any conditions just like you have done before.
+<BR>
+Some suggestions:
+<DIR>
+when you say "Cheer Up", have AIBO say "SUCKEDASS"<BR>
+when you say "That's wrong", have AIBO say "BLACKASS"<BR>
+when you say "Don't do that", have AIBO say "BUTMOM"<BR>
+when you say "Sing a song", have AIBO say "STUPID"<BR>
+when you say "I'm here", have AIBO say "COURTLOVE"<BR>
+when he sees the Pink Ball, have AIBO say "CRAP"<BR>
+(it is all up to you)
+</DIR>
+
+
+<P></P>
+<HR>
+<H2>Adding your own .WAV files</H2>
+
+TO BE WRITTEN.
+
+<P></P>
+This part of the tutorial will show how you can use CoolEdit to convert WAVE files you record yourself or find on the Internet to 8kHz, 8 bit mono .WAV files, and how you update the stick accordingly.
+<BR>
+If you are already familiar with WAVE file editing, you can dive right in. Just make sure the files are in the correct format, and stored in the right folder before running YART_APG.
+YART_APG will warn you if the format is incorrect or the file names are improper (ie. no spaces or funny symbols in the file names).
+NOTE: you only have to re-run YART_APG if you change the .WAV files.
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

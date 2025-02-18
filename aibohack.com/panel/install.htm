@@ -1,0 +1,598 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Installation Part 1
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Installation Part 1
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>
+<B>DIRE WARNING</B>
+If you continue, you will be updating your Viewsonic panel with a hacked version of the Viewsonic provided ROM IMAGE.
+<BR>
+Proceed only at your own risk!
+<BR>
+Using these hacks may void your warranty on your hardware.
+<BR>
+Using these hacks may be in violation of your EULA (or your interpretation thereof).
+</DIR>
+
+<HR>
+
+<H2>Requirements/What's involved:</H2>
+<LI>You will need a Viewsonic V110 or V150 Smart Display Panel (see bottom of page if you have a Philips 150DM)
+<LI>You will need the blue USB cable that came with the panel
+<LI>You will need to re-install all the LAN and User settings from scratch (so write them down)
+<LI>You will need to install a hacked version of the firmware into the Flash memory of the Panel
+<LI>The standard Viewsonic software must be installed on your machine. This software is copyrighted by Viewsonic and Microsoft (and perhaps others).
+<LI>Assuming you plan on writing your own programs, you should install appropriate Windows CE development tools (many are available for free download from microsoft.com)
+<LI>You must understand the risks involved before proceeding.
+
+<P></P>
+<HR>
+<H2>Installation overview</H2>
+<UL>
+<LI>Step1) Prepare by writing down all the LAN and user settings
+<LI>Step2) RECOMMENDED: Dry run flash upgrade (no hacks involved yet)
+<LI>Step3) OPTIONAL: re-enter all the LAN and user settings
+<LI>Step4) make sure panel is still working
+<P></P>
+<LI>Step5) download the patch tool and PanelShell
+<LI>Step6) run the patch and flash upgrade (for real this time)
+<LI>Step6b) reboot, and now panel runs "PanelShell" instead of the standard MIRA client
+<P></P>
+<LI>Step7) enter LAN settings and other configuration
+<LI>Step8) use MSTSC to copy over additional files
+<LI>Step9) OPTIONAL: install Panel FunPack #1 programs
+<LI>Step10) go crazy...
+</UL>
+
+<P></P>
+After everything is installed, you can install the Panel Fun Pack #1 for some starter programs, or do more advanced customization, or start playing with Platform builder.
+<P></P>
+<DIR><B>Another warning:</B>
+In addition to all the risks involved in re-flashing your Panel, your are embarking into a world of very unpolished software.
+For example, some system dialogs don't have proper bitmaps, so you may have to deal with something like this:
+<CENTER> <IMG SRC="saveas.jpg"> </CENTER>
+</DIR>
+<P></P>
+If you are ready to continue, keep reading...
+
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Installation (Steps 1 -> 6)</H1>
+</center></td></tr> </TABLE>
+<HR>
+<P></P>
+
+<H2>Step1) Prepare</H2>
+
+<DIR><I>This step is performed on the SD Panel</I></DIR>
+Be sure the panel power is plugged in.
+Be sure you have the blue USB cable handy (don't plug it in yet).
+Writing down all the LAN and user settings that you originally entered into the panel.
+You will have to manually enter these once or twice after re-flashing the panel.
+<P></P>
+Things you should write down:
+<UL>
+<LI>All User accounts (the computer name, user name, and optional passwords)
+<LI>From the Settings dialog, properties of Preferred Networks (under the "Wireless Networks" tab)
+<LI>From the Settings dialog, any IP Settings (under the "Advanced" tab)
+<LI>Any other panel preferences 
+</UL>
+If you don't feel you have all the information you had when the panel was originally setup, then please don't continue.
+LAN setup can be frustrating if you forget something, that's why I recommend a Dry Run.
+
+<P></P>
+<HR>
+<H2>Step2) Dry Run</H2>
+<DIR><I>This step is performed with both the PC, and the SD Panel</I></DIR>
+
+This is not strictly necessary, but <B>strongly</B> recommended.
+During this step you will be running the RDPWizard on the PC
+(officially called the "Restore and Update Wizard").
+<BR>
+The wizard will transfer a ROM image to the panel,
+and the panel will then "re-flash" itself, burning the ROM image into the actual ROM.
+For the dry-run, we are using the official Viewsonic ROM image, so in theory nothing will change.
+It is a good step to perform so you are familiar with the procedure, and how long it takes.
+Also, if you want to go back to the original ROM image (ie. remove all hacks), this is what you need to do.
+
+<P></P>
+Find the root of your MIRA installation.
+This is typically in the folder:
+<PRE>
+
+	C:\Program Files\Common Files\Connected Devices\Mira
+
+	(adjust if you main drive is not on C:)
+</PRE>
+
+I will call that the "MIRA folder".
+Below that folder is what I will call the "airpanel device" folder:
+
+<PRE>
+For the V110:
+
+	{MIRA FOLDER} \ViewSonic\airpanel V110 Wireless Smart Display
+
+or for the V150
+
+	{MIRA FOLDER} \ViewSonic\airpanel V150 Wireless Smart Display
+
+</PRE>
+
+<UL>
+<LI>Be sure the blue USB cable is not connected, and the Panel should be turned off 
+<DIR><I>The following is done on the PC, using a regular keyboard, mouse and display</I></DIR>
+<LI>From the MIRA folder, go to the Tools sub-folder, and run the program "RDPWizard.exe"
+<DIR><I>?:\Program Files\Common Files\Connected Devices\Mira\<B>Tools\RDPWizard.exe</B></I></DIR>
+<LI>This starts the "Restore and Update Wizard". Select "Update my Smart Display to a different version" and press the "Next>" button.
+<CENTER><IMG SRC="update_not_restore.jpg"></CENTER>
+<P></P>
+<LI>The wizard will ask you to "Connect the Cables". Connect the blue USB cable between your PC and the Panel. Press the "Next>" button.
+<LI>The wizard will ask you to "Put Your Smart Display in Update Mode".
+<P></P>
+<DIR><I>The following is done on the Panel</I></DIR>
+Follow the instructions (press the recessed reset button on the panel
+and immediately press the 3rd button
+from the top on the right side of the panel (the "dashboard button")
+<LI>The panel will start up in "USB disaster recovery mode". Don't panic, it isn't a disaster. Release the dashboard button.
+You should have heard a sound on your PC (for the USB connect),
+<LI>Go back to the wizard on the PC, and press "Next>".
+<LI>If the wizard reports "Your Smart Display is Not in Update Mode", then something went wrong.
+Follow the instructions to get it into Update mode.
+If you are having problems the USB device may not be recognized by your PC.
+Try rebooting the PC (that helps me sometimes).
+<P></P>
+<LI>Once everything is connected, the wizard will say "Welcome to the Update Wizard".
+There will be a list of (one or more) installable versions.
+For the Dry run, pick the official version "1.0.0056.11:English (United States)". Press "Next>".
+<LI>This will typically take 30 seconds for the ROM image
+to be transfered to the panel (but not re-flashed yet).
+Do not run any other PC programs during the transfer.
+If it hangs or gives an error, restart this step from the top.
+<LI>During this process the wizard on the PC says "Copying Software to Your Smart Display".
+The panel will say "Downloading operating system image to FLASH"
+After about 30 seconds, the PC should make a sound again (USB disconnect) as the panel starts "re-flashing" itself.
+
+<LI>The PC will say "Restarting your Smart Display".
+You should cancel the wizard on the PC right now
+while you are waiting.
+You don't need it anymore (Cancel + answer Yes when it complains).
+<P></P>
+<LI>When the panel is in the "re-flashing" process. It will say "Erasing Flash" on the bottom with a progress bar.
+Later it will say "Now programming Flash".
+It will repeat this Erase/programming process a few times.
+<DIR>Do not unplug the panel's power or battery during this process!!!</DIR>
+<P></P>
+
+<LI>After about 3 minutes, the re-flashing will be done on the panel,
+and it will report "Image Download successful. Booting System" and it will reboot.
+<LI>After less than 1 minute (more), you will see the "Welcome" screen just like it was when you first bought the panel.
+<LI>Congratulations, you just "re-flashed" your Panel!
+<LI>Don't forget to unplug the blue USB cable (you can do this any time after you cancelled the wizard) and keep it handy.
+You will need the cable later for when we re-flash <i>for real</i> in Step#6.
+</UL>
+
+<P></P>
+NOTE: there also is a wireless way of upgrading the flash ROM, but I recommend the blue USB cable for predictability.
+
+<P></P>
+<HR>
+<H2>Step3) Dry Run - continued</H2>
+
+<DIR><I>This step is performed on the SD Panel</I></DIR>
+This is optional, but recommended if you just ran the
+RDPWizard for the very first time,
+or if it has been a long time since you setup the LAN.
+This will refamiliarize <i>you</i> as to the normal setup process.
+<P></P>
+Your Panel is starting like it did when you bought it.
+We are going to use the "Advanced" installation.
+<UL>
+<LI>From the "Welcome" screen at the end of Step#2, press the "Advanced" button. Then, press the "Next>" button.
+<LI>When it gets to "Align Screen", press the "Next" button and perform the alignment.
+<LI>From the "Alignment Successful" screen, press "Next>"
+<LI>From the "Input Panel" info screen, press "Next>"
+<LI>From the "Completing the Setup Wizard" info screen, press "Finish"
+<P></P>
+You are back at the main Viewsonic MIRA Shell.
+<LI>Select "Settings" and the "Wireless Networks" tab
+<LI>Fill in any information needed for your WiFi network
+<LI>If using specific IP address (and not DHCP), specify that in the "Advanced" tab
+<BR>NOTE: if you don't absolutely need DHCP, I recommend hard coded IP addresses for easier setup, and much faster panel boot/connect times.
+<LI>Select "OK" for the Settings dialog, and you should eventually get an "Excellent" rating on your Network status.
+If the network does not connect, then find out what you did wrong and fix it now.
+<LI>Once all this is working, you can select "New..." from the "General" tab of
+the Settings dialog and re-enter the user name and computer name for your User accounts.
+This is not necessary for the dry run, but you can do it if you want to test out your panel before going further.
+</UL>
+
+If successful, you will have a panel exactly the same as it was before we wiped out the settings in Step #2.
+This is only a temporary test (it will get wiped out again in Step#6).
+You might think this is a waste of time, but it is a good idea to rehearse it now.
+
+<P></P>
+<HR>
+<H2>Step4) make sure panel is still working</H2>
+
+<DIR><I>This step is performed on the SD Panel</I></DIR>
+If something did not work, or you broke the panel,
+or you forgot a LAN or user setting, fix it now.
+So far you have not done anything out of normal.
+
+<P></P>
+<HR>
+<H2>Step5) download the patch tool and PanelShell</H2>
+
+<DIR><I>This step is performed on the PC</I></DIR>
+
+<UL>
+<LI>Download this ZIP file <A HREF="pp_minhack102a.zip">pp_minhack102a.zip</A> and store it somewhere on your computer.
+<LI>Open the airpanel device folder
+<DIR><I>?:\Program Files\Common Files\Connected Devices\Mira\ViewSonic\airpanel V??? Wireless Smart Display</I></DIR>
+You should see folders named "1.0.0056.11" and "USBNIC".
+<LI>Drag the files from the ZIP file to that folder (ie. unzip the contents of the ZIP to that folder).
+<LI>If done correctly you should have the new files like "PanelShell.exe" and "install_ppminhack.bat" in that folder,
+along with the original folders named "1.0.0056.11" and "USBNIC".
+</UL>
+
+<CENTER><IMG SRC="drag_winzip.jpg"></CENTER>
+
+<P></P>
+<HR>
+<H2>Step6) Run the patch and flash upgrade (for real this time)</H2>
+
+<DIR><I>This step is performed with both the PC, and the SD Panel</I></DIR>
+
+<DIR><B>PROCEED AT YOUR OWN RISK!</B></DIR>
+
+<UL>
+<LI>From the airpanel device folder, run the batch file "install_ppmhack.bat".
+You can run it from the command line or just double click on it.
+<LI>This will: copy the original ROMIMAGE, patch it, and register a new ROMIMAGE type,
+<LI>The Registry Editor will pop up asking "Are you sure you want to add ... to the registry?". Answer Yes, and then OK.
+<LI>After all this is complete, the batch file will automatically run the RDPWizard for you.
+<P></P>
+<LI>This time perform the same steps as in the dry run (Step #2),
+but we will pick a different ROM image to re-flash ("PanelPets_MinHack:English")
+
+<DIR><HR>Repeated instructions (with minor changes):<BR>
+<LI>Be sure the blue USB cable is not connected, and the Panel should be turned off 
+<LI>From the "Restore and Update Wizard". Select "Update my Smart Display to a different version" and press the "Next>" button.
+<CENTER><IMG SRC="update_not_restore.jpg"></CENTER>
+<P></P>
+<LI>The wizard will ask you to "Connect the Cables". Connect the blue USB cable between your PC and the Panel. Press the "Next>" button.
+<LI>The wizard will ask you to "Put Your Smart Display in Update Mode".
+<P></P>
+<DIR><I>The following is done on the Panel</I></DIR>
+Follow the instructions (press the recessed reset button on the panel
+and immediately press the 3rd button
+from the top on the right side of the panel (the "dashboard button")
+<LI>The panel will start up in "USB disaster recovery mode". Don't panic, it isn't a disaster. Release the dashboard button.
+You should have heard a sound on your PC (for the USB connect),
+<LI>Go back to the wizard on the PC, and press "Next>".
+<LI>If the wizard reports "Your Smart Display is Not in Update Mode", then something went wrong.
+Follow the instructions to get it into Update mode.
+If you are having problems the USB device may not be recognized by your PC.
+Try rebooting the PC (that helps me sometimes).
+<P></P>
+<LI>Once everything is connected, the wizard will say "Welcome to the Update Wizard".
+There will be a list of two installable versions.
+
+<BR><B>For the real thing, pick the second one: "PanelPets_MinHack:English (United States)". Press "Next>".</B>
+<CENTER><IMG SRC="pick_second.jpg"></CENTER>
+<LI>This will typically take 30 seconds for the ROM image
+to be transfered to the panel (but not re-flashed yet).
+Do not run any other PC programs during the transfer.
+If it hangs or gives an error, restart this step from the top.
+<LI>During this process the wizard on the PC says "Copying Software to Your Smart Display".
+The panel will say "Downloading operating system image to FLASH"
+After about 30 seconds, the PC should make a sound again (USB disconnect) as the panel starts "re-flashing" itself.
+
+<LI>The PC will say "Restarting your Smart Display".
+You should cancel the wizard on the PC right now
+while you are waiting.
+You don't need it anymore (Cancel + answer Yes when it complains).
+<P></P>
+<LI>When the panel is in the "re-flashing" process. It will say "Erasing Flash" on the bottom with a progress bar.
+Later it will say "Now programming Flash".
+It will repeat this Erase/programming process a few times.
+<DIR>Do not unplug the panel's power or battery during this process!!!</DIR>
+<P></P>
+<HR></DIR>
+<LI>After about 3 minutes, the re-flashing will be done on the panel,
+and it will report "Image Download successful. Booting System" and it will reboot.
+<LI>After it reboots, instead of the normal Viewsonic launcher you know and love, it will start up the PanelShell mini Launcher.
+</UL>
+<P></P>
+<CENTER> <IMG SRC="shell1.jpg"> </CENTER>
+
+<P></P>
+NOTE: if you have a non-English version of the firmware, you should be able to customize the .BAT file. Please email me if you want to test this configuration.
+<P></P>
+<HR>
+<H2>Aside: Panel Shell - RAM and ROM</H2>
+The PanelShell program provides a mini program launcher, a mini control panel and other magic.
+<BR>
+If you press the "Normal" button it will run the standard MIRA shell.
+If you press the "MS TSC" button, it will run the Microsoft terminal client, which we need for copying additional files (in Step#8).
+If you double click on a program in the listbox, it will run it.
+At the bottom of the list are core control panel applets (starting with "CPL").
+Most are not all that useful.
+<BR>
+When a program is launched (or you hit the "OK" button) the PanelShell will minimize, and appear as a thin blue bar at the top of the screen (easy to click on to restore the PanelShell).
+If you press the "X" button, it will close the PanelShell.
+If you don't have another program running, it will be gone for good, until you press the reset button again.
+<P></P>
+<DIR><B>NOTE: pressing the reset button will erase all programs and data from RAM (but settings stored in the registry will be saved).
+</B></DIR>
+
+<P></P>
+More details (including ways to configure your programs) can be found on the <A HREF="shell.htm">Panel Shell instruction page</A>.
+
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Installation (Steps 7 -> 10)</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>Step7) enter LAN settings and other configuration</H2>
+
+<DIR><I>This step is performed on the SD Panel</I>
+<BR>
+TIP: For this step, having a USB keyboard attached to the
+panel (and maybe a mouse) makes installation much easier.
+</DIR>
+<P></P>
+
+Please follow these instructions exactly.
+All operations in Step#7 happen on the Panel itself.
+<UL>
+<LI>Press the "Normal" button on PanelShell. This will start up the normal program so you can configure the LAN (similar to Step#3, unless you skipped it).
+<BR>
+NOTE: the stylus has not yet been calibrated, so hitting the button may be off.
+<LI>From the "Welcome" screen, press the "Advanced" button. Then, press the "Next>" button.
+<LI>When it gets to "Align Screen", press the "Next" button and perform the alignment.
+<LI>From the "Alignment Successful" screen, press "Next>"
+<LI>From the "Input Panel" info screen, press "Next>"
+<LI>From the "Completing the Setup Wizard" info screen, press "Finish"
+<P></P>
+You are back at the main Viewsonic MIRA Shell.
+<LI>Select "Settings" and the "Wireless Networks" tab
+<LI>Fill in any information needed for your WiFi network
+<LI>If using specific IP address (and not DHCP), specify that in the "Advanced" tab
+<BR>NOTE: if you don't absolutely need DHCP, I recommend hard coded IP addresses for easier setup, and much faster panel boot/connect times.
+<LI>Select "OK" for the Settings dialog, and you should eventually get an "Excellent" rating on your Network status.
+If the network does not connect fix it before proceeding (hopefully if you did Step#2 and #3, you won't have a problem here)
+<LI>Now or later, you can "New..." from the "General" tab of
+the Settings dialog and re-enter the user name and computer name for your User accounts.
+This is not necessary for us, since we will use the "MS TSC" client instead.
+<P></P>
+<LI>Once the network is working, press the Panel's off button (wait till it turns off, about 5 or 6 seconds)
+<LI>After it is off, press the recessed reset button to reset the panel.
+<DIR>
+[note: turn off the panel before you reset to be sure registry changes are saved]
+</DIR>
+<P></P>
+<LI>After reset, the Panel will reboot, and the Panel Shell will again be the only thing running.
+<LI>This time press the "MS TSC" button on PanelShell
+<LI>This is a different MIRA client that has one important feature (the ability to share the Panel's file system with your PC)
+<LI>In the "Remote Desktop Connection" dialog, type in the LAN name of your PC under "Computer".
+Do not press "Connect" yet (or hit the Enter key)
+<LI>Press the "Option >>" button to give you access to more options.
+<LI>From the "General" tab, enter the login name under "User Name". Leave the other fields blank.
+Do not press "Connect" yet (or hit the Enter key)
+<LI>From the "Local Resource" tab, check the "Disk Drives" checkbox. This is important.
+Do not press "Connect" yet (or hit the Enter key)
+
+<P></P>
+<DIR><HR>Now, before you press "Connect" we are going to save these settings in the magic "IPSM" folder.<HR></DIR>
+<LI>Go back to the "General" tab, and press "Save As...".
+This will bring up a standard file "Save As" dialog.
+<LI>Double click on the "IPSM" folder.
+<LI>Press the enter key (or the unmarked "OK" button)
+This will save the current MS TSC settings as "\IPSM\Default.rdp".
+<CENTER> <IMG SRC="saveas_hint.jpg"> </CENTER>
+<DIR>Aside: Normally folders and the data they contain are stored in RAM.
+This data is lost when you press the reset button.
+<BR>
+The magic "IPSM" folder stores data into Flash ROM (when it works).
+"IPSM" stands for Intel Persistent Storage Manager.
+</DIR>
+<P></P>
+<LI>To test if it works, press the power off button, wait until it shuts down (5 or 6 seconds), then press the recessed reset button yet again.
+<LI>PanelShell will run, but this time it should show "\IPSM\Default.rdp" at the top of the listbox.
+<P></P>
+<CENTER> <IMG SRC="shell2.jpg"> </CENTER>
+
+<LI>Be sure your Desktop PC is running and WiFi connected.
+<LI>Double click on the "\IPSM\Default.rdp" entry in the listbox, this will start the connection.
+<LI>The first time through, it will give you a
+"Remote Desktop Connection Security Warning".
+Check the checkbox and press "OK".
+<LI>At the login screen enter the password, and you should connect to your PC.
+If it does not connect, please correct the LAN or user settings.
+</UL>
+
+<P></P>
+If you see your PC's desktop running on your Panel, congratulations you have opened the back door!
+
+<P></P>
+NOTE: the green LED on the top left of the panel does not work during this operation.
+The quality of the WiFi signal can be tested by running the "Normal" program (but you can't exit the normal program without resetting the device)
+<P></P>
+<HR>
+<H2>Step8) use MSTSC to copy over additional files</H2>
+
+<DIR><I>This step is performed on the panel, but talking to the PC via WiFi</I></DIR>
+<BR>
+Now, you may wonder what is different from the normal MIRA Shell.
+There are a few minor cosmetic differences.
+There is a titlebar at the top of the screen (you can turn this off).
+There is also a blue bar above that titlebar which you click on to bring the PanelShell back (don't do that now).
+<P></P>
+To see what is <I>really</I> different
+<BR>
+Go to "My Computer" and look for a new folder called "Files on WindowsCE".
+This is alternatively called "\\tsclient\Files".
+<BR>
+This is a network folder giving you complete access to the Panel's file store.
+Browse that folder, and in particular the "Windows" folder.
+While you are connected to your PC using this method,
+you can copy files from your PC directly to your Panel's file system.
+
+<DIR><I>What is going on:</I>
+<BR>The WindowsCE file system (on the Panel) is exported to the desktop using the WiFi network connection.
+It shows up on the PC's Windows XP-Pro desktop as a remote network drive.
+Using the standard Remote Desktop feature, you are viewing the Windows XP desktop on the Panel, which is in turn displaying on the WindowsXP-Pro desktop's rendition of the Panel's file system.
+</DIR>
+
+This file sharing connection is only available when the "MS TSC" client is running and connected to your PC.
+Use this connection to copy programs or data files to the Panel's RAM file system for later use.
+
+<P></P>
+NOTES:
+<LI>There is only 2MB of space for copying files.
+You can adjust this with the System control panel.
+Double click "CPL: System (cplmain.cpl)" from the PanelShell listbox and pick the "Memory" tab.
+<LI>The PanelShell will also launch programs from the IPSM folder (ROM not RAM).
+I have had flakey results storing programs and data in this folder.
+If you have better luck with your experiments, please let me know.
+<BR>
+
+<P></P>
+<HR>
+<H2>Step9) OPTIONAL: install Panel FunPack #1 programs</H2>
+
+<DIR><I>This step is performed on the panel, but talking to the PC via WiFi</I></DIR>
+
+<a name=FUNPACK>
+The current FunPack (#1) includes:
+<UL>
+<LI>pnotepad.exe - Pocket Notepad
+<LI>gExplore.exe - Grundle Explorer (shareware version, limited)
+<LI>gRegEdit.exe - Grundle RegEdit (shareware version, limited)
+<LI>registry.exe - Another registry editor
+<LI>mspacman - Ms PacMan (shareware)
+<LI>reversi - another classic game
+</UL>
+
+<P></P>
+
+To install the FunPack:
+<UL>
+<LI>Connect as you did at the end of Step#8.
+<LI>Download this ZIP file <A HREF="pp_funpack1.zip">pp_funpack1.zip</A> and store it somewhere on your computer.
+<LI>From "My Computer" on your PC, open the folder called "Files on WindowsCE".
+This is alternatively called "\\tsclient\Files".
+You should see the root of the WinCE file system.
+<LI>Unzip the contents of the pp_funpack1.zip ZIP file to that folder.
+This installs most of the programs in the "\Programs" folder on the Panel's RAM based file system.
+<LI>You can disconnect the MIRA mode to the PC now if no longer needed.
+<LI>On the panel, click on the blue bar at the top to bring the PanelShell back.
+Press the 'refresh' button, and the new programs should appear.
+<P></P>
+<CENTER> <IMG SRC="shell3.jpg"> </CENTER>
+<LI>Double clicked on a program name to run it.
+<LI>You can sometimes juggle more than one program at a time,
+but I recommend using one WinCE program at a time.
+There is no WinCE task bar to switch between programs.
+</UL>
+
+<P></P>
+<HR>
+<H2>Step10) go crazy...</H2>
+
+The procedure for installing your own WinCE programs is much like Step#9.
+You copy files to the "\Programs" folder on the WinCE device.
+Then press "refresh" and launch them from the PanelShell.
+<BR>
+Try out other WinCE programs using this proceedure.
+If your program crashes, typically you just close it and all is fine.
+If your program hangs the system, you are in trouble.
+You will then have to reset the device, which wipes out the RAM contents.
+You must then re-create the "\Programs" folder and copy over the programs again, but be more careful this time.
+<P></P>
+Other Suggestions:
+<UL>
+<LI>Port existing WinCE or PocketPC programs to the Panel
+<LI>Find more freeware/shareware WinCE programs that run well on the Panel, and email them to me for FunPack#2.
+<LI>Use Platform Builder to build some of the missing system components, and copy them to the Panel (redistribution rights have relaxed a little since this was first written)
+<LI>NEW: If you want the Taskbar at the bottom of your screen, install 'explorer.exe' in the "\Windows" folder of the Panel and run it.
+Unzip from <A HREF="explorer_wince41.zip">explorer_wince41.zip</A>.
+You don't get file exploring, but you will get the taskbar at the bottom which can be used to kill running programs.
+The official control panel also works (instead of the minimal one in the PanelShell)
+</UL>
+<P></P>
+<HR>
+<P></P>
+<H2>NEW: Philips DesXcape 150DM owners</H2>
+I prefer the Philips 150DM model. It has both a hardware and a software reset.
+Use the software reset and you won't lose the contents of RAM uploaded programs.
+<P></P>
+The instructions are very similar to the above. The batch file and directory names are slightly different.
+The USB cabling is slightly different (you need the docking station).
+You should be able to figure it out (if not, you probably shouldn't be mucking around with your panel).
+<BR>
+The DesXcape 150DM specific installation files are here
+<A HREF="ppmin_homie_150DM.zip">ppmin_homie_150DM.zip</A>.
+Also includes a version of the HomieGate client.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

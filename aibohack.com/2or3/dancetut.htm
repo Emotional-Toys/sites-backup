@@ -1,0 +1,717 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+  <BR>
+    <HR>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=gold)" align="center" valign="top">
+	  <a href="../homie/index.html">HomieGate</a>
+        </TD>
+        </TR>
+    </TABLE>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+  <a href="../lesser/index.html">Gallery</a><BR>
+ </td>
+ <td colspan=3 align="center" valign="top" bgcolor=#D0D0D0>
+  <BR>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+
+ <td width=15% align="center" valign="top">
+  <a href="../clie/index.html">CLIE</a><BR>
+  <a href="../panel/index.html">Panel</a><BR>
+  <a href="../icybie/index.html">ICybie</a><BR>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ Dancing Tutorial
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Dancing Tutorial
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<A name=STEP1>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 1: Overview, Installation</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>Latest Version - Version 4.x</H2>
+<DIR>UPDATED to be compatible with Disco AIBO 4.1 and later.</DIR>
+This version is simpler to use.
+You will edit the performance on the memory stick itself.
+<BR>
+Choreographing new dance steps is recommended for the ERS-210.
+This is the most complicated case. If you decide to submit your dance, I will automatically convert it to the other models (11x, 31x and 220).
+This usually gives adequate results. To do a better job, the converted dance steps may need manual tweeking.
+<BR>
+This tutorial includes instructions specific to the ERS-210, but the ERS-220 is also supported.
+<P></P>
+
+<H2>Overview</H2>
+This is a tutorial to explain the specific use of the ERS-2x0/31x Editor for choreographing AIBO Dance routines.
+<BR>
+This tutorial is focused on editing a motion and eye track to follow a song. The song is played on your computer, and the AIBO dances along.
+<DIR><I>AIBO does not play back any audio for these performances.</I></DIR>
+<P></P>
+<H3>What are we going to do?</H3>
+We are going to create a short song. Then we will create the dancing motions for AIBO.
+<BR>
+The tutorial uses the Elvis classic "Hound Dog". You can use any song you want, but I recommend going through the tutorial with Hound Dog first.
+
+<P></P>
+<UL>
+<LI><A HREF="dancetut.htm#STEP1">Step 1</A>: Installation
+<LI><A HREF="dancetut.htm#STEP2">Step 2</A>: Picking a Tune, creating Master Track
+<LI><A HREF="dancetut.htm#STEP3">Step 3</A>: Creating Edit and Playback Audio Tracks
+<LI><A HREF="dancetut.htm#STEP4">Step 4</A>: Editor Basics - Replace Audio
+<LI><A HREF="dancetut.htm#STEP5">Step 5</A>: Flashing Eyes
+<LI><A HREF="dancetut.htm#STEP6">Step 6</A>: Moving Legs
+<LI><A HREF="dancetut.htm#STEP7">Step 7</A>: Preview and Smoothing
+<LI><A HREF="dancetut.htm#STEP8">Step 8</A>: Yappy Mouth
+<LI><A HREF="dancetut.htm#STEP9">Step 9</A>: Updating the memory stick
+<LI><A HREF="dancetut.htm#STEP10">Step 10</A>: Testing it out with AIBO
+<LI><A HREF="dancetut.htm#STEP11">Step 11</A>: Repeat, Repeat, Repeat
+</UL>
+
+<P></P>
+<HR>
+<H2>Installation</H2>
+
+<H3>Required Hardware:</H3>
+<UL>
+<LI>An ERS-210 model AIBO
+ <B>OR</B>
+<LI>An ERS-220 model AIBO
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008, $34
+<LI>A memory stick reader to install the software (Sony brand recommended)
+</UL>
+
+<P></P>
+<H3>Installation part 1: The editor</H3>
+<UL>
+<LI>Download the ERS-2x0/31x Editor: <A HREF="editor23.zip">editor23.zip</A>
+<LI>Unzip it to a folder on your computer (say C:\AIBO\TOOLS)
+<LI>To run the editor, just double click on the AEditor23.exe program
+</UL>
+
+<P></P>
+<H3>Installation part 2: Support Files</H3>
+<UL>
+<LI>Download the support files for this tutorial: <A HREF="dtut41_250_files.zip">dtut41_250_files.zip</A>
+<LI>Unzip these into a tutorial directory on your PC (C:\AIBO\DTUT)
+</UL>
+
+<P></P>
+<H3>Installation part 3: Memory Stick</H3>
+<UL>
+<LI>Install Disco AIBO 4.x on a PMS memory stick.
+See the <A HREF="../disco/index.html">Disco AIBO</A> page for instructions.
+<LI>It is a good idea to try one of the existing songs first.
+<LI>Open the MyDanceStart210.zip file (C:\AIBO\DTUT\MyDanceStart210.zip) and unzip it to the root of the memory stick.
+<DIR>
+This will replace one file and give you a short dance step.
+<BR>
+NOTE: if you have an ERS-220, use MyDanceStart220.zip instead.
+</DIR>
+</UL>
+
+<P></P>
+<H3>BACKUP YOUR WORK</H3>
+The dance steps are stored in the \MYDATA folder on the memory stick.
+You will be editing the dance steps on the memory stick itself.
+You should backup the 3 files in that directory during the editing process.
+The AIBO Editor does not have an "undo" feature, so you should back up frequently.
+
+<P></P>
+<H3>CoolEdit</H3>
+
+This tutorial assumes you are using the CoolEdit Audio Editor.
+If you do not have it, download it from <A HREF=http://www.cooledit.com>www.cooledit.com</A>
+If you have another Audio Editor you prefer, you can use that.
+Be sure your audio editor can convert between .MP3 files and .WAV files.
+
+<P></P>
+<A name=STEP2>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 2: Picking a Tune, creating Master Track</H1>
+</center></td></tr> </TABLE>
+<HR>
+Your first decision is to pick the song you want AIBO to dance to.
+<BR>
+
+Find an .MP3 file for the song you like.
+If you don't have the song, I recommend Morpheus (<A HREF=http://www.musiccity.com>www.musiccity.com</A>) for all your music <s>pirating</s> sharing needs.
+<BR>
+WARNING: Morpheus is not as complete or as safe as the old Napster.
+Morpheus can be used to share virus infected files (and there are a lot of them).
+If the extension is not .MP3, delete it immediately.
+
+<P></P>
+For the tutorial, the MP3 file for Hound Dog is provided for you ("C:\AIBO\DTUT\Elvis - HoundDog.mp3")
+
+<H2>Converting to WAVE</H2>
+
+Now we need to convert it to a CD format stereo WAV file.
+To do this, in CoolEdit, just open the .MP3 file, then save it as a .WAV file.
+For the tutorial, we will save is as the "Master" audio file "ElvisMaster.WAV".
+
+<H3>Open It</H3>
+<UL>
+<LI>"File"/"Open..." menu command
+<LI>select "c:\aibo\dtut\Elvis - Hound Dog.mp3"
+<LI>Press "Open" button.
+</UL>
+<BR><CENTER><IMG SRC="tutimg/D1_01.jpg"></CENTER><BR>
+<H3>Save it:</H3>
+<UL>
+<LI>"File"/"Save As..." menu command
+<LI>Save as filename "c:\aibo\dtut\ElvisMaster.wav"
+<LI>Save as type "Windows PCM (*.wav)"
+<LI>Press "Save" button
+</UL>
+<P></P>
+
+<H2>Trimming the Audio</H2>
+Now we need to trim the song to a reasonable length.
+To start with I recommend no longer than 90 seconds of any one song.
+You should also trim any extra silence at the start or end of the track (unless you want the dog to move before or after the song is played).
+<BR>
+In CoolEdit, I trimmed 0.77 seconds from the start of the track and trimmed the end of the song so the total length is 49.484 seconds (trim the song to any size you would like).
+
+<BR>
+Before trimming:<BR>
+<CENTER><IMG SRC="tutimg/D1_02.jpg"></CENTER><BR>
+After trimming:<BR>
+<CENTER><IMG SRC="tutimg/D1_03.jpg"></CENTER><BR>
+
+<H2>Saving it</H2>
+Save this file ("File"/"Save" -- still called ElvisMaster.WAV).
+This is the "Master Audio Track".
+Two other audio tracks will be created from this master track.
+
+<H3>Are you happy ?</H3>
+Play the Master Audio Track a few times.
+Try to envision what you want AIBO to do while the song is playing.
+If you are not happy with it, now is the time to change the Master Audio Track.
+Updating the Master Audio Track later is a pain.
+
+<P></P>
+<A name=STEP3>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 3: Creating Edit and Playback Audio Tracks</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+You have a Master Audio Track that is CD format audio.
+We need to create two other audio tracks (WAV files) from the Master Audio Track.
+
+<H2>Creating the Edit Audio Track</H2>
+
+Now we need to convert the CD format audio (44.1kHz, 16bit, stereo) to a different format (8kHz, 8bit, mono) WAVE file for use by the AIBO Editor and put it on the memory stick.
+This is the "Edit Audio Track", and will be used for time synchronization only.
+
+Load the Master Audio Track in CoolEdit ("File" / "Open" menu command, select "ElvisMaster.WAV" and press "Open").
+Hit the F11 button.
+Select the following options:
+<UL>
+<LI>8000 Hz sampling rate
+<LI>Mono
+<LI>8 bit resolution
+<LI>Turn off dithering
+<LI>Set quality to any value you want (I like 999 with Pre/Post filtering, pick smaller number for faster conversion)
+</UL>
+<BR><CENTER><IMG SRC="tutimg/D2_01.jpg"></CENTER><BR>
+Press the "OK" button.
+It will take a little time to convert.<BR>
+When done, save the file to a <b>new</b> filename.
+Use the "File"/"Save As..." menu command.
+You must save it on the memory stick in the "\MYDATA" folder called "MyDance.WAV" (ie. "?:\MYDATA\MyDance.WAV" where ? is the memory stick drive). Replace the file that is there.
+<P></P>
+At this point you should have two WAV files (ElvisMaster.WAV on your PC and MyDan.WAV on the memory stick).
+
+<H2>Creating the Playback Audio Track</H2>
+We need to create a third WAV file, used for playing back on your computer.
+This is the same as the Master Audio Track except it has a short intro sequence.
+
+<UL>
+<LI>Load the file "c:\aibo\dtut\StartTune.wav".
+Copy the file to the clipboard (CTRL+A, CTRL+C)
+<LI>Load the Master Audio Track in CoolEdit again.
+<LI>Paste the intro track (CTRL+V).
+</UL>
+At this point you should have a track that starts with 3 tones, a 1 second gap, and then goes into playing Hound Dog.
+
+<P></P>
+When done, save the file to a <b>new</b> filename on your PC (do not save it on the memory stick - it may not fit).
+Use the "File"/"Save As..." menu command.
+For the tutorial, use "ElvisPlay.WAV" as the new filename.
+
+<BR><CENTER><IMG SRC="tutimg/D2_02.jpg"></CENTER><BR>
+
+At this point you should have three WAV files (ElvisMaster.WAV and ElvisPlay.WAV on your PC, and MyDance.WAV on the memory sticl).
+
+<BR>
+NOTE: When you want to share you AIBO dance with your friends, you will convert the ElvisPlay.WAV file to an .MP3 file.
+
+<P>Audio Editing is done.
+You may exit the CoolEdit application.</P>
+
+<P></P>
+<A name=STEP4>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 4: Editor Basics - Replace Audio</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+We are going to load in and take a quick overview of the editor.
+
+<H2>Start Editor</H2>
+
+Start the Editor.
+Run AEditor23.EXE.<BR>
+You will get an Open dialog asking you what to open.
+Open the "MyDance.mtn" file in the "?\MYDATA" directory on the memory stick.
+
+<BR><CENTER><IMG SRC="tutimg/D4_01.jpg"></CENTER><BR>
+
+This is not a real dance performance, this is just a place holder.
+The tracks go from the top to the bottom.
+The top track is the audio which we are going to use to synchronize the motions.
+The next two tracks are for the green and red eyes.
+The remaining 18 tracks are for the servo positions (the motions of the dog's head, mouth, legs, and tail).
+<BR>
+Time increases from left to right.
+The vertical lines are spaced 1 second apart.
+You can select any range of time by using the mouse (and the LEFT mouse button).
+
+<H2>Zoom</H2>
+Play with the two Zoom toolbar buttons to zoom in our out (the magnifying glass icons with + and - on them).
+When editing a longer song, you will be using Zoom a lot.
+
+<H2>Virtual AIBO</H2>
+<P></P>
+Press the Virtual AIBO toolbar button (or "Window" / "Show Player") to bring up Virtual AIBO.
+<A HREF="virtaibo.htm">Click Here for more info on Virtual AIBO</A>.
+Grab the AIBO with the mouse and move it around to find a good position.
+Also try holding down the SHIFT key to move Virtual AIBO to different positions.
+<P> We are going to positition the dog so it looks like it is sitting.
+Most of the AIBO dance moves occur when the dog is sitting.
+<BR><CENTER><IMG SRC="tutimg/D4_02.jpg"></CENTER><BR>
+
+NOTE: you can also resize the Virtual AIBO window.
+
+<H2>Pre-Preview</H2>
+Press the play toolbar button.
+Alternatively you can select a range to play with the mouse (using the LEFT mouse button).
+To play the selected range you can also press the space-bar.
+<BR>
+If Virtual AIBO is on the screen you will see the dog movements as well as hearing the song (otherwise you will just hear the song).
+<BR>
+Press and hold down the Escape key to stop any playback.
+
+<P>Long live Monty Python.</P>
+
+<H2>Replace Audio</H2>
+We now are going to wipe out the place-holder tracks (say goodbye to SPAM!), and use our Edit Audio Track instead.
+Select the "Tools"/"Replace Audio..." menu command.
+This will ask you what file to open.
+Pick the file "?:\MYDATA\MyDance.wav" on the memory stick.
+It will ask you two questions, answer yes to both.
+
+<H2>What do we have now ?</H2>
+
+Now we have the Hound Dog audio track, but no eye or motion tracks.
+This is the starting place for editing.
+
+<BR><CENTER><IMG SRC="tutimg/D4_03.jpg"></CENTER><BR>
+This only shows the first part of the song.
+Hit the Zoom Out toolbar button to see the entire song.
+<BR><CENTER><IMG SRC="tutimg/D4_04.jpg"></CENTER><BR>
+
+<P></P>
+<A name=STEP5>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 5: Flashing Eyes</H1>
+</center></td></tr> </TABLE>
+<HR>
+This is an easy step.
+We are going to make the AIBO's eyes flash in time to the music.
+
+<H2>Edit - Generate Eyes</H2>
+
+Select the "Edit"/"Generate Eyes..." menu command (or "E" icon on the toolbar).
+
+You will see two scroll bars.
+Leave them in the default positions, and hit "Generate".
+This operation changes the entire track.
+<P>NOTE: For the ERS-210 there are 3 scroll bars and 5 extra LED eye tracks in the editor window</P>
+<P>NOTE: The full ERS-220 LEDs are not supported by the editor</P>
+
+<BR><CENTER><IMG SRC="tutimg/D5_01.jpg"></CENTER><BR>
+
+You can see the results.
+The eyes turn on and off (more or less) in time with the loud parts of the music.
+<BR><CENTER><IMG SRC="tutimg/D5_02.jpg"></CENTER><BR>
+
+You can Zoom in for more detail:
+<BR><CENTER><IMG SRC="tutimg/D5_03.jpg"></CENTER><BR>
+
+<BR>
+You can try the command again, and change the thresholds to adjust how much green and red flashing you want to see.
+
+<BR>
+If you want to manually edit the eye flashing, use the mouse and draw on the green and red eye bars.
+Press the RIGHT mouse button to draw.
+You can drag the mouse with the right button down to draw (or erase) a longer line.<BR>
+<BR>
+NOTE: this is important to learn.
+Use the LEFT mouse button to select, the RIGHT mouse button to draw (or change).
+
+<P>
+You can do more clever things (like make the dog's eyes turn solid red or green at key parts in the song), but that's good enough for now.
+
+<P></P>
+<A name=STEP6>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 6: Moving Legs</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+Now we get into the interesting stuff, making AIBO move.
+
+<DIR>NOTE: For the ERS-210, some of the dancing steps (in particular the sitting ones) are a little rough.
+You will need to do some extra smoothing to make the motions playback smoothly (see step 7).</DIR>
+
+<H2>Start and End Positions</H2>
+The most important thing to worry about when choreographing AIBO dance steps is the position the dog is in.
+There are three main positions, Sitting, Standing and Sleeping (AKA laying down).
+The MyDance.mtn dance routine you are editing starts and ends with the dog in the Sitting position.
+
+<H2>The "Dance" Menu</H2>
+Select a dance step from the "Dance" menu and it will insert a pre-defined dance step at the current selection.
+The "Dance" menu has a 5 sub-categories.
+"Sitting" has the most options and is for steps that start and end with the dog Sitting.
+Similarly "Standing" and "Sleeping" are for steps when the dog is standing and sleeping (respectively).
+<BR>
+The "Change" category includes motions to change from one position to another.
+We will use this later to make the dog stand up, wiggle it's butt (a Standing motion) and sit down again.
+
+<H2>Keyframe (Expand and Reduce)</H2>
+If you look at the motion tracks, you will see that they evenly spaced ticks.
+Each tick is a keyframe (there are 12.5 ticks per second).
+<BR><CENTER><IMG SRC="tutimg/D6_01.jpg"></CENTER><BR>
+
+While editing, we use this format so that we don't have to worry about
+inserting or deleting keyframes.
+Later we will use the Reduce function to remove redundant keyframes.
+
+<H2>Inserting Dance Steps</H2>
+The procedure for inserting dance steps is simple.
+<UL>
+<LI>Select where you want the step to start (using left-mouse button)
+<LI>Pick one of the dance steps from the "Dance" menu (if the dog is Sitting, pick it from the "Sitting" category)
+<LI>Hit the space bar to play back the added motion with sound.
+<LI>Perhaps smooth the motion (see next part of tutorial)
+<LI>If you don't like the dance step, repeat
+<LI>If you do like the dance step, select a new starting position (after the end of the just added step) and repeat
+</UL>
+
+<P></P>
+For the "Hound Dog" tutorial, I added the following dance steps (you can do the same or whatever tickles your fancy)
+<UL>
+<LI>Raise For Shimmy (under Sitting)
+<LI>Shimmy (")
+<LI>Gap
+<LI>Hand Jive
+<LI>Sit to Stand (under Change)
+<LI>DANCE2 (under Standing) -- wiggle butt motion
+<LI>Dance_FURI (under Standing)
+<LI>Stand to Sit (under Change)
+<LI>HereIAm (under Sitting)
+<LI>Boxing
+<LI>LHandGesture
+</UL>
+
+<P></P>Here's the result (Zoomed out to fit everything on the screen)
+<BR><CENTER><IMG SRC="tutimg/D6_02.jpg"></CENTER><BR>
+You can pick different motions.
+The names aren't too descriptive, so try them out and see how they look.
+
+<P></P>
+<A name=STEP7>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 7: Preview and Smoothing</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+Before using the motions in AIBO, we are going to use Virtual AIBO to preview the motions.
+For any movements that appear too rough, we are going to smooth them out.
+
+<H2>Preview</H2>
+You should already have Virtual AIBO running on your screen.
+If you closed it, re-open it with the "Window" / "Show Player" menu command or the AIBO toolbar button.
+
+<BR>
+At this point you should make the Virtual AIBO window bigger, and position it so that you can see the dog's legs, mouth and head.
+
+<BR>
+Go back to the track editor and select "Edit"/"Select All" (or the "A" key) and then the play toolbar button (or the SPACE key).
+
+<BR>
+You will now see and hear the dance played back.
+Keep an eye on Virtual AIBO to make sure the movements are smooth (and you do not have any rapid movements).
+
+<BR>
+If you want to interrupt the playback, press and hold down the ESCAPE key.
+
+<BR>
+When you want to playback a smaller portion of the song, just select it (using the LEFT mouse button) and hit the play toolbar button (or the SPACE key).
+
+<H2>Smoothing - Why</H2>
+Virtual AIBO is just a simulation of what the real AIBO will do.
+Virtual AIBO can react much faster than the real AIBO.
+Also Virtual AIBO can't fall down.
+You need to watch out for motion changes that may be too fast, too extreme or disconnected.
+In the track view, extreme values (or changes) are shown in red.
+Yellow indicates values (or changes) that aren't too fast, but are near the limit.
+Normal values (or changes) are shown in blue.
+<P></P>
+A "disconnect" can occur if you forget what position the dog is in.
+If you insert a Standing dance step right after a Sitting dance step, the dog will immediately jump from one position to another.
+This looks goofy on Virtual AIBO.
+If you tried that on the real AIBO, it typically makes the dog fall down or be in an incorrect position.
+It also can increase the wear-and-tear on the leg servos.
+Do not allow this to happen.
+Use the "Change" motions to make the dog change from one position (eg: Sitting) to another (eg: Standing).
+<P></P>
+Take this example:
+<BR><CENTER><IMG SRC="tutimg/D7_01.jpg"></CENTER><BR>
+We can see that the legs are moving too quickly.
+To fix this we need to Smooth the leg motion.
+
+<H2>Smoothing - How To</H2>
+Smoothing is a very easy and very important feature.
+You simply select the range of motion you want to smooth, and hit the "S" key.
+This will "smooth" the motion from the start of the selection to the end of the selection (as a straight line).
+Typically you will hold down the SHIFT key while making the selection to smooth, so you can smooth one or more servos (not all the servos at one).
+As with other editor commands, there is no UNDO, so be careful and save your work.
+<P></P>
+In our example, we hold down the SHIFT key, and then using the LEFT mouse button select the range and the legs we want to smooth:
+<BR><CENTER><IMG SRC="tutimg/D7_02.jpg"></CENTER><BR>
+Then we hit the "S" key:
+<BR><CENTER><IMG SRC="tutimg/D7_03.jpg"></CENTER><BR>
+
+If we then playback the portion before and after the smoothed motion, we see (with Virtual AIBO) that the transition from one dance step to the next is a lot smoother.
+
+We do this to smooth the gaps between the different dance steps.
+
+<P></P>
+<A name=STEP8>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 8: Yappy Mouth</H1>
+</center></td></tr> </TABLE>
+<HR>
+Like the Eye flashing, we can use the audio track to generate a moving AIBO mouth.
+I recommend doing this after most of the dance steps (leg motions) are in place.
+
+<H2>Mouth movement</H2>
+Select the range you want the mouth to move.
+For our example, we select the part where Elvis sings "you never caught a rabbit...".
+
+Use the "Edit"/"Generate Mouth..." menu command (or the "M" toolbar button).
+This will ask you to set a threshold.
+You can adjust it to make the mouth be more closed or more open.
+Pick a value, and hit "Generate".
+You will see that the mouth motion now includes open and closing that go along with the song.
+
+<BR><CENTER><IMG SRC="tutimg/D8_01.jpg"></CENTER><BR>
+
+<H2>Tweeking</H2>
+The automatic mouth generation isn't perfect, so you will want to tweek it to improve the mouth tracking.
+Simply use the RIGHT mouse button and draw on top of the mouth track.
+
+<H2>Other Advice</H2>
+Mouth movements can greatly increase the number of keyframes needed for a motion file.
+Use it sparingly.
+Also, lip-syncing works best if it is closer to the start of the song.
+Later in the song there is some drift in the synchronization of the audio and the motion which makes accurate lip-syncing hard to reproduce.
+You should already have Virtual AIBO running on your screen.
+If you closed it, re-open it with the "Window" / "Show Player" menu command or the AIBO toolbar button.
+
+<P></P>
+<A name=STEP9>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 9: Saving to memory stick</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>Save your work</H2>
+Before saving, you should "Reduce" the motion to required keyframes.
+<UL>
+<LI>Select "Edit"/"Select All" (or hit "A" key)
+<LI>Select "Edit"/"Reduce" (or hit "U" key)
+</UL>
+Now save the data ("File"/"Save").
+This will save both the MyDance.mtn file and the MyDance.le2 file to the memory stick.
+<DIR>NOTE: the tutorial uses the .le2 format for LED dances.
+This is not compatible with the Master Studio LED editor</DIR>
+
+<P></P>
+<A name=STEP10>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 10: Test it out on AIBO</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+We are going to test our dance steps out on the real AIBO.
+<BR>
+NOTE: if your memory stick reader must be "stopped" before removing the memory stick, do that first.
+Now take stick out of PC, and put it in your AIBO and start him up.
+
+<H2>Dance AIBO Dance</H2>
+The dog should be sitting down waiting.
+Now play your song (the <B>Playback</B> Audio Track), or our case "ElvisPlay.wav".
+This will play the start tones and the dog should dance along.
+<BR>
+NOTE: playing back the LED track is not currently working.
+
+<P></P>
+Do you like what you see ? Does the dog fall down ? Can you make the dance steps cooler ?
+
+Think about these as the dog is dancing.
+In the next step we will go back and improve the dance steps.
+Repeat this process until you are happy with your dancing AIBO.
+
+<P></P>
+<A name=STEP11>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Step 11: Repeat, Repeat, Repeat</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+This step is where you will spend most of the time refining and improving the dog's dance steps.
+You just need to repeat the editing steps you've done before to change the dance steps.
+
+<H2>Expand before Reduce</H2>
+
+The only thing that is a little different is when you initially open the .mtn file.
+If we start the AIBO Editor (AEditor23.EXE) again, and open up our Hound Dog version of MyDance.mtn, we will see there are fewer keyframes than we started with.
+<BR>
+This is because we used the "Reduce" feature to remove keyframes that were not needed.
+Now that we are going back to editing, we want to expand all those possible keyframes.
+
+<BR>
+So as a general rule, after loading a .MTN file in the edit, hit the "A" and "E" keys to Expand the entire motion track.
+When you want to save the .MTN file, hit the "A" and "U" keys to Reduce the entire motion track.
+
+<H2>Other things</H2>
+The most common changes you will make will be smoothing motions, fixing when AIBO falls down and generally adding more motion to the dog's dance.
+<P></P>
+After you are finished, please email me.
+If you desire, your dance can be included in a future verson of Disco AIBO.
+
+
+P></P>
+<HR>
+<center>That's all folks</center>
+<HR>
+
+</BODY>
+</HTML>

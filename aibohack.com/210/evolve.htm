@@ -1,0 +1,579 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ERS-210 Evolution "AiboLife 1"
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ERS-210 Evolution "AiboLife 1"
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+ERS-210 AIBOs using the W01 AiboLife software ("AiboLife 1") will evolve from stage to stage.
+Other Aibo personalities (W02 Hello AIBO, AiboLife 2, etc) have their own personalities that are unique to that memory stick.
+
+<H2>Evolution Chart</H2>
+
+The ERS-210 has more evolutionary stages than the ERS-11x dogs.
+<BR>
+For each stage, there are several personality variants. Here's what it looks like for the ERS-210:
+
+<BR>
+<HR>
+<P></P>
+<center>
+<IMG SRC="evolve1_baby.gif">
+</center>
+<P></P>
+<HR>
+<P></P>
+<IMG SRC="evolve1_older.gif">
+<P></P>
+
+<HR>
+For comparison, here are some other evolution charts:
+<UL>
+<LI><A HREF="evolve2.htm">Evolution of the ERS-2x0 "AiboLife 2"</A>
+<LI><A HREF="../310/evolve.htm">Evolution of the ERS-311/312 "AiboLife" (AiboLife 310)</A>
+<LI><A HREF="../111/evolve.htm">Evolution of the ERS-110/111</A>
+</UL>
+<P></P>
+
+<HR>
+<H2>Experience Points, Real Time etc</H2>
+Evolution is controlled by three numbers: Experience Points, Real Time and Day Count.
+At the start of each stage, these numbers are zero.
+<BR>
+NOTE: In previous versions "Experience Points" were related to seconds of "Quality Time". This is not exactly accurate.
+<P></P>
+For example: you turn on the dog, play with him for 20 minutes, leave him alone for an additional 40 minutes, then turn him off.
+<BR>
+The Real Time has gone up by 60 minutes. The Experience Points have gone up by 1200.
+<BR>
+Each day you play with AIBO at this stage the Day Count will go up by one. This count prevents AIBO from getting stuck in a stage for too long.
+
+
+
+<P></P>
+The dog will evolve to the next stage when the Experience Points AND Real Time hit a certain limit, OR when the Day Count hits a different limit -- <b>whichever comes first.</b>
+
+<P></P>
+For comparison: the ERS-111 evolution was solely controlled by the Quality Time/Experience Points. If you didn't play with the dog, it would not evolve.
+<P></P>
+
+<HR>
+<H2>Quality Ratio -> Quality Factor</H2>
+<P></P>
+The old browser used to report a "Quality Ratio" as a ratio between "quality time" and "real time".
+A Quality Ratio of 25% or higher is considered a good goal to achieve.
+<P></P>
+This same number is available, but is now called the "Quality Factor".
+<BR>
+It is not a ratio, but a calculation of experience points per 100 seconds.
+<P></P>
+<H2>Keep the Quality Factor above 22.2</H2>
+
+If your Quality Factor is higher than 22.2 then you are doing a good job, and the dog will evolve to the next stage as fast as possible.
+<BR>
+If your Quality Factor is lower than 22.2 then it will take longer for the dog to evolve.
+<P></P>
+If you play with the dog only a little each day, it will eventually hit the Day Count limit and evolve anyway. This is for the "lazy owner".
+<P></P>
+<HR>
+<H2>Different ways of raising AIBO</H2>
+There are three ways that AIBO will evolve to a new stage.
+For our example, we will use the Child B to Youth A evolution (20 hours or 7 days).
+
+<P></P>
+Very Active Owner:
+You keep your Quality Factor above 22.2 and the dog will evolve as soon as possible. For our example that is in 20 real hours.
+<P></P>
+Active Owner:
+Your Quality Factor is a little low, but the dog will take a little longer to evolve. For example if the Quality Factor is 15, it will take almost 30 real hours for the dog to evolve to Youth A.
+
+<P></P>
+Lazy Owner:
+Most owners will not play with their dogs 3 to 4 hours a day.
+If you play with the dog a little each day, the Day Count will force evolution regardless of how much Quality Time you spend.
+In our example, play with the dog a little each day, and in 7 days, it will evolve to Youth A.
+
+<P></P>
+NOTE: These titles (Very Active Owner, Active Owner, Lazy Owner) aren't really important. They can make you feel guilty if you have a low Quality Factor, but once the dog evolves, it doesn't matter how it got there.
+<BR>
+NOTE: Which personality variant the dog evolves to <b>is</b> affected by how you interact with the dog. Keeping a high Quality Factor and exposing the dog to many new experiences is important in raising a more active personality.
+
+<HR>
+<P></P>
+<H2>Personality Variants</H2>
+Each major stage may have a number of personality variants.
+<BR>
+This leads to the complete list of AIBO personality variants.<BR>
+
+NOTE:I've invented names for each personality variant, and given a brief list of attributes (based on what the AIBO Fun Pack says).
+<BR>
+NOTE: in future I may adjust the name to align better with the names used in AiboLife 310 and AiboLife 2.
+<P></P>
+
+<TABLE border=1 cellspacing=2 cellpadding=4>
+<tr bgcolor=#808080>
+<th align=left>Stage+Variant</th>
+<th align=left>Official Name</th>
+<th align=left>Old Name</th>
+<th align=left>Description</th>
+</tr>
+
+<tr bgcolor=#80FF80>
+<td>Baby 1/Baby A</td>
+<td>New born AIBO</td>
+<td>Newborn Baby</td>
+<td>newborn, helpless</td>
+</tr>
+
+
+<tr bgcolor=#80FF80>
+<td>Baby 2/Baby B</td>
+<td>????</td>
+<td>Emotional Baby</td>
+<td>learns emotions</td>
+</tr>
+
+<tr bgcolor=#80FF80>
+<td>Baby 3/Baby C</td>
+<td>AIBO and ball</td>
+<td>Soccer Baby</td>
+<td>learns pink ball</td>
+</tr>
+
+<tr bgcolor=#80FF80>
+<td>Baby 4/Baby D</td>
+<td>AIBO stands?</td>
+<td>Listening Baby</td>
+<td>lets you name him</td>
+</tr>
+
+<tr bgcolor=#FFFF80>
+<td>Child A1</td>
+<td>Playful AIBO</td>
+<td>Lazy Child</td>
+<td>inactive, likes shaking paw</td>
+</tr>
+
+<tr bgcolor=#FFFF80>
+<td>Child A2</td>
+<td>Walking AIBO</td>
+<td>Chatty Child</td>
+<td>talkative, likes to mutter to itself</td>
+</tr>
+
+<tr bgcolor=#FFFFC0>
+<td>Child B1</td>
+<td>Talking AIBO</td>
+<td>Roving Child</td>
+<td>future adventurer, likes exploring</td>
+</tr>
+
+<tr bgcolor=#FFFFC0>
+<td>Child B2</td>
+<td>Performing AIBO</td>
+<td>Entertainer Child</td>
+<td>born to entertain</td>
+</tr>
+
+<tr bgcolor=#FF80FF>
+<td>Youth A1</td>
+<td>Studious AIBO</td>
+<td>Shy Youth</td>
+<td>wants attention, disobedient, bad at soccer</td>
+</tr>
+
+<tr bgcolor=#FF80FF>
+<td>Youth A2</td>
+<td>Ball-playing AIBO</td>
+<td>Soccer Youth</td>
+<td>learning to play soccer</td>
+</tr>
+
+<tr bgcolor=#FF80FF>
+<td>Youth A3</td>
+<td>Cry-baby AIBO</td>
+<td>Nervous Youth</td>
+<td>"scardy cat", stumbles around, depressed, miserable</td>
+</tr>
+
+<tr bgcolor=#FFC0FF>
+<td>Youth B1</td>
+<td>Cheerful AIBO</td>
+<td>Trickser Youth</td>
+<td>mischievous, comedian</td>
+</tr>
+
+<tr bgcolor=#FFC0FF>
+<td>Youth B2</td>
+<td>Ball-crazy AIBO</td>
+<td>First Rate Soccer Youth</td>
+<td>better than a "Soccer Youth"</td>
+</tr>
+
+<tr bgcolor=#FFC0FF>
+<td>Youth B3</td>
+<td>Mischievous AIBO</td>
+<td>Stubborn Youth</td>
+<td>temper tantrum, very moody</td>
+</tr>
+
+<tr bgcolor=#8080FF>
+<td>Adult 1</td>
+<td>Sheltered AIBO</td>
+<td>Cutie Adult</td>
+<td> needy, loving, moody, plays it cool</td>
+</tr>
+
+<tr bgcolor=#8080FF>
+<td>Adult 2</td>
+<td>Nice-guy AIBO</td>
+<td>Gentle Adult</td>
+<td> gentleman/lady, social, obedient, well mannered</td>
+</tr>
+
+<tr bgcolor=#8080FF>
+<td>Adult 3</td>
+<td>AIBO the adventure</td>
+<td>Adventurer Adult</td>
+<td>independent, likes exploring</td>
+</tr>
+
+<tr bgcolor=#8080FF>
+<td>Adult 4</td>
+<td>Selfish AIBO</td>
+<td>Snobby Adult</td>
+<td>arrogant AIBO</td>
+</tr>
+
+
+</TABLE>
+
+
+<P></P>
+<HR>
+<H3>More Personality Attributes</H3>
+
+<TABLE border=1 cellspacing=2 cellpadding=4>
+<tr>
+<th>Stage+Variant</th>
+<th>Getup</th>
+<th>Mood</th>
+<th>Bravery</th>
+<th>Wander</th>
+<th>Sleep</th>
+<th></th>
+</tr>
+
+<tr>
+<td>Baby 1</td>
+<td>help</td>
+<td>-</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Baby 2</td>
+<td>help</td>
+<td>-</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Baby 3</td>
+<td>help</td>
+<td>-</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Baby 4</td>
+<td>help</td>
+<td>-</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>n/a</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Child A1</td>
+<td>help</td>
+<td>-</td>
+<td>chicken</td>
+<td>slow</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Child A2</td>
+<td>bad</td>
+<td>-</td>
+<td>chicken</td>
+<td>slow</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Child B1</td>
+<td>help</td>
+<td>-</td>
+<td>chicken</td>
+<td>slow</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Child B2</td>
+<td>bad</td>
+<td>-</td>
+<td>brave</td>
+<td>slow</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth A1</td>
+<td>bad</td>
+<td>-</td>
+<td>chicken</td>
+<td>bad</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth A2</td>
+<td>good</td>
+<td>-</td>
+<td>brave</td>
+<td>bad</td>
+<td>good</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth A3</td>
+<td>help</td>
+<td>Sad</td>
+<td>chicken</td>
+<td>bad</td>
+<td>bad</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth B1</td>
+<td>bad</td>
+<td>-</td>
+<td>chicken</td>
+<td>normal</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth B2</td>
+<td>good</td>
+<td>-</td>
+<td>brave</td>
+<td>bad</td>
+<td>good</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Youth B3</td>
+<td>bad</td>
+<td>bad</td>
+<td>brave</td>
+<td>bad</td>
+<td>bad</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Adult 1</td>
+<td>bad</td>
+<td>-</td>
+<td>chicken</td>
+<td>bad</td>
+<td>nervous</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Adult 2</td>
+<td>good</td>
+<td>-</td>
+<td>brave</td>
+<td>normal</td>
+<td>good</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Adult 3</td>
+<td>good</td>
+<td>-</td>
+<td>brave</td>
+<td>normal</td>
+<td>bad</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Adult 4</td>
+<td>good</td>
+<td>-</td>
+<td>brave</td>
+<td>bad</td>
+<td>bad</td>
+<td></td>
+</tr>
+</TABLE>
+<P></P>
+
+<HR>
+<H2>Evolution Decisions and Personality Type Changes</H2>
+
+As you can see in the above chart, a Baby 4 can evolve to either a "Child A1" or a "Child A2".
+Which path the dog goes down depends on how you raised the dog, including what the dog has seen and done as a Baby 4. The exact details are in the GAL module if anyone wants to bother disassembling it.
+<P></P>
+
+These rules are different for the different stages (ie. what makes a "Child A2" is different than what makes an "Adult 2").
+The rules are different than the ERS-111 rules (which were greatly influenced by room colors).
+<P></P>
+The big difference with the ERS-210 is that these rules are applied all the time (actually at every reboot), not just at evolution time.
+This means that even though you've done the right things to raise an active Soccer Youth, you must keep raising him properly or he will regress to a less active Shy Youth.
+This also means that an Adult personality will continue to change.
+Even if you use "Brain Surgery" to change the personality of the dog, over time it will adjust the personality type depending on how the dog is treated.
+<P></P>
+
+</BODY>
+</HTML>

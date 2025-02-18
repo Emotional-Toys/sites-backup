@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>MySkit - Performance Editor for PLEO</title>
+<link rel="shortcut icon" href="../pleoicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="images/web_pleo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">MySkit Performance
+Editor for PLEO<small><sup><small><small>&#8482;*<br>
+</small></small></sup></small></font></b><small><font size="+3"><small><small><sup><small><small>(formerly
+the PleoSkit Performance Editor)<br>
+<br>
+</small></small></sup></small></small></font></small></div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <table style="width: 100%;" border="2" cellpadding="20"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(0, 192, 0);">
+            <table
+ style="width: 100%; background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="width: 1px; vertical-align: middle;"><a href="downloads/MySkit-v1.3-Installer.exe">
+
+                  <img alt="MySkit Logo" src="images/pleologo.gif"
+ style="border: 0px solid ; width: 96px; height: 96px;" hspace="5"
+ vspace="2"></a><br>
+                  </td>
+                  <td
+ style="vertical-align: middle; text-align: center;">
+                  <div align="center"><br>
+                  <big><b><a href="downloads/MySkit-v1.3-Installer.exe">
+Download
+Installer for<br>
+MySkit Performance Editor v1.3 for PLEO<br>
+(3.5 MBytes)</a></b></big> <small><br>
+                  <br>
+Prefer zipfiles instead? &nbsp;
+<a href="downloads/myskit-tools-v1.3.zip">myskit-tools-v1.3.zip</a> <br>
+                  </small> </div>
+                  </td>
+                  <td style="width: 96px; vertical-align: middle;"><a href="downloads/MySkit-v1.3-Installer.exe">
+
+                  <img alt="MySkit Logo" src="images/pleologob.gif"
+ style="border: 0px solid ; width: 96px; height: 96px;" hspace="5"
+ vspace="2"></a></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align: center;"><a href="pleopm11.html"><span
+ style="font-weight: bold; font-style: italic;">Click for important
+info regarding PLEO LifeOS 1.1!</span></a><br>
+      </p>
+      <p><a name="MYSKIT"></a><b><font size="+1"><br>
+      </font></b>
+      <table
+ style="width: 75%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+        <tbody>
+          <tr>
+            <td valign="top" width="50%"><b><font size="+1">Table
+of
+Contents:</font></b></td>
+            <td
+ style="width: 50%; vertical-align: top; white-space: nowrap;"><big><b>&nbsp;&nbsp;
+Tutorials:<br>
+            <br>
+            </b></big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; <a
+ href="index.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="index.html#INSTALL">2.0 Install MySkit</a>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="perform.html">3.0 Workbook Files</a>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="motion.html">4.0 Motion Editing</a>&nbsp;&nbsp;
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="wave.html">5.0 Wave Sound Editing</a>&nbsp;
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="library.html">6.0 The Reference
+Library</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="preview.html">7.0 The PLEO Window</a>&nbsp;
+&nbsp; &nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="upload.html">8.0 Upload Actions to PLEO</a><br>
+&nbsp;&nbsp;&nbsp; <a href="prefs.html">9.0 Specify
+Preferences</a><br>
+            <br>
+&nbsp;&nbsp;&nbsp; <big><i><b><a href="index.html#WHATSNEW">What's New?</a><br>
+            <br>
+            </b></i></big></td>
+            <td style="vertical-align: top; white-space: nowrap;">
+            <ul>
+              <li><a href="tutorial1.html">Create your first
+skit!</a></li>
+            </ul>
+            <ul>
+              <li><a href="tutorial2.html">Recording Music!</a></li>
+            </ul>
+            <ul>
+              <li><a href="tutorial3.html">Perform Skits on PLEO!<br>
+                </a></li>
+            </ul>
+            <ul>
+              <li><a href="tutorial4.html">Perform Skits using YAPT!</a></li>
+            </ul>
+            <ul>
+              <li>Need help?&nbsp;&nbsp; <a style="font-style: italic;"
+ href="mailto:dogsbody@dogsbodynet.com">Ask
+DogsBody!</a></li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <div align="center">
+      <hr size="2" width="100%"> <br>
+      <img src="images/myskit.gif" alt="MySkit Example"
+ style="width: 600px; height: 513px;" hspace="0"><br>
+      <br>
+      </div>
+      <br>
+      <a name="INTRO"></a><br>
+      <table style="width: 100%;" border="2" cellpadding="10"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(51, 204, 0);"><font
+ color="#ffffff"><b><font size="+1"><big>1.0&nbsp; INTRODUCTION TO
+MYSKIT<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td><b>&nbsp;<br>
+What is a PLEO skit?</b>&nbsp;&nbsp;&nbsp; Skits
+are things such as dances, tricks, leg
+waves, tail wagging, etc...&nbsp;&nbsp; <br>
+            <br>
+Generally, anything PLEO does other than walking is a
+skit.&nbsp;&nbsp; Skits control PLEO's body movement &amp;
+sound.<br>
+            <br>
+MySkit runs on your PC (not PLEO).&nbsp;&nbsp; Use it to create
+custom PLEO dances &amp;
+performances.&nbsp; There
+are many features,
+effects, and safe-guards to make editing easy.&nbsp;&nbsp; MySkit
+directly supports initializing SD flash cards using a
+card
+reader.&nbsp;&nbsp; Anyone familiar with <a
+ href="../skitter.html">Skitter</a>
+should feel right at home.<br>
+            <br>
+MySkit works on Windows 98, 2000, XP &amp; Vista.&nbsp;
+It
+uses OpenGL
+for drawing a 3D PLEO preview.&nbsp; A fast machine is not required for
+simple editing.&nbsp;&nbsp; However, for simulated playback a fast
+machine (800 Mhz+ CPU) with a 3D graphics card is recommended. </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      <a name="INSTALL"></a><br>
+      <table style="width: 100%;" border="2" cellpadding="10"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(0, 204, 0);"><font
+ color="#ffffff"><b><font size="+1"><big>2.0&nbsp; INSTALLING MYSKIT<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr align="left">
+            <td>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"><br>
+Download the<a href="downloads/MySkit-v1.3-Installer.exe">
+ MySkit
+Installer</a>
+to your PC desktop.&nbsp;&nbsp; <br>
+                  <br>
+Double click on the installer icon &amp; follow the simple step-by-step
+instructions.&nbsp;&nbsp; </td>
+                  <td align="center" valign="top"><img alt="Installer"
+ src="images/install.gif"
+ style="border: 1px solid ; width: 400px; height: 306px;" hspace="20"
+ vspace="10"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" valign="top"><br>
+                  <hr size="2" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><i><big><b><u>2.1 Filename
+Associations</u></b> </big></i><br>
+                  <p>The
+first time you start MySkit, you see the welcome window.&nbsp;&nbsp;
+Here you're asked if you want Windows to open PLEO
+skits with MySkit.</p>
+                  <p>Click "<b>OK</b>" so Windows
+uses MySkit to open them (recommended).<br>
+                  </p>
+                  <p>Click "<b>Skip</b>" and nothing is changed. </p>
+                  <p>You can change filename associations any
+time
+(from <b>Edit </b>menu, click <b>Preferences</b>). </p>
+                  </td>
+                  <td align="center" valign="top"><img
+ title="Welcome Dialog" src="images/welcome.gif" alt=""
+ style="border: 1px solid ; width: 383px; height: 261px;" align="top"
+ hspace="20" vspace="10"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <table style="width: 100%;" border="2" cellpadding="10"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(0, 204, 0);"><font
+ color="#ffffff"><b><font size="+1"><big>Additional Documentation...<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="index.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="index.html#INSTALL">2.0 Install MySkit</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="perform.html">3.0 Workbook
+Files</a><br>
+&nbsp;&nbsp;&nbsp; <a href="motion.html">4.0 Motion Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="wave.html">5.0 Wave Sound Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="library.html">6.0 The Reference
+Library</a><br>
+&nbsp;&nbsp;&nbsp; <a href="preview.html">7.0 The PLEO Window</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="upload.html">8.0 Upload Actions to PLEO</a><br>
+&nbsp;&nbsp;&nbsp; <a href="prefs.html">9.0 Specify
+Preferences</a><br>
+      <br>
+      <b><br>
+      </b>
+      <table style="width: 100%;" border="2" cellpadding="10"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(0, 204, 0);"><font
+ color="#ffffff"><b><font size="+1"><big>Tutorials...<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <ol>
+        <li><a href="tutorial1.html">Create your first
+skit!</a></li>
+        <li><a href="tutorial2.html">Recording Music!</a></li>
+        <li><a href="tutorial3.html">Perform Skits on PLEO!</a></li>
+        <li><a href="tutorial4.html">Perform Skits using YAPT!</a></li>
+      </ol>
+      <br>
+      <a name="WHATSNEW"></a><br>
+      <table style="width: 100%;" border="2" cellpadding="10"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="background-color: rgb(0, 204, 0);"><font
+ color="#ffffff"><b><font size="+1"><big>What's New?<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td>
+            <ul>
+              <li><b>Version 1.3</b><b>&nbsp;</b> -&nbsp; Updated for
+compatibility with PLEO v1.1 firmware.<br>
+              </li>
+              <li><b>Version 1.2&nbsp;</b> -&nbsp; Problem with
+reading/writing wave sound files fixed.<br>
+              </li>
+              <li><b>Version 1.1&nbsp;</b> -&nbsp; Name changed to
+MySkit Performance Editor</li>
+              <li><b>Version 1.0&nbsp;</b> -&nbsp; Initial Release
+(derived from <a href="../skitter.html">Skitter</a>).<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: center;"><br>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"PLEO" is a trademark UGOBE, Inc.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Master Studio Album File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Master Studio Album
+File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="album.html#INTRO">Introduction</a></li>
+        <li><a href="album.html#AMS10">AMS1.0 Album Format</a></li>
+        <li><a href="album.html#AMS11">AMS1.1 Album Format</a></li>
+        <li><a href="album.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+AIBO Master Studio (AMS) uses album files to organize/track multiple
+action files.&nbsp;&nbsp; In particular, they tell AMS which skits to
+download to AIBO. &nbsp; They can be confusing &amp; cumbersome and
+aren't needed/supported by <a href="../skitter.html">Skitter</a>.<br>
+      <br>
+There are two versions of the album files.&nbsp;&nbsp; The first
+version (<a href="album.html#AMS10">AMS1.0</a>) only supports the
+210.&nbsp;&nbsp; The second version
+(<a href="album.html#AMS11">AMS1.1</a>) can support all AIBO platforms.<br>
+      <br>
+      <br>
+      <a name="AMS10"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>2.
+AMS1.0
+Album Format</big></big><br>
+      <br>
+The first album file format uses fixed size fields for
+everything.&nbsp;&nbsp; It's organized as a header followed by zero or
+more entries.&nbsp;&nbsp; This makes loading/saving the format very
+easy. <br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct album_header_type {<br>  unsigned signature;        // "OALB"<br>  int version;               // always 1<br>  int action_count;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+Album entries are the organized as follows:<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct album_entry_type {<br>  unsigned action_number;<br>  unsigned unknown;          // always 0<br>  char action_filename[260];<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The action_filename stores a relative path to the skit action files
+(*.act).&nbsp;&nbsp; Typically the action files are stored in the same
+folder as the album.&nbsp;&nbsp; Action number appears to be the MWCID
+value need by AIBO.&nbsp;&nbsp; See <a href="mwc.html">MWC</a> format
+for more details.<br>
+      <br>
+      <br>
+      <a name="AMS11"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>3.
+AMS1.1
+Album Format</big></big><br>
+      <br>
+The newer album file format is more complicated, but generally much
+smaller than the <a href="album.html#AMS10">AMS1.0</a> format.&nbsp;&nbsp; The
+files consist of a header, followed variable length strings. <br>
+      <br>
+The header is the same format as AMS1.0, but with a different signature
+&amp; version:<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct album_header_type {<br>  unsigned signature;        // "OLIB"<br>  int version;               // always 0x00010001<br>  int action_count;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+The variable length strings consist of a 4-byte length, followed by the
+string characters.&nbsp;&nbsp;&nbsp; There are always at least four
+strings (which may be zero-length). &nbsp; These four strings store the
+following:<br>
+      <ul>
+        <li>Platform.&nbsp; ie: "ERS-210(E)"</li>
+        <li>Creator</li>
+        <li>Company</li>
+        <li>Comment</li>
+      </ul>
+Any variable length strings which follow are relative pathnames to the
+skit action files (*.act).&nbsp; Typically the action files are stored
+in the same folder as the album.<br>
+      <br>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>4.
+Example</big></big><br>
+      <span style="font-family: monospace;"><br>
+      </span><span style="color: rgb(204, 102, 0); font-weight: bold;">File
+Header </span><br>
+      <span style="color: rgb(0, 153, 0); font-weight: bold;">String
+Lengths</span><br style="font-weight: bold;">
+      <br>
+      <pre>000000:&nbsp; <span style="color: rgb(204, 102, 0);">4f 4c 49 42&nbsp; 01 00 01 00  02 00 00 00</span>&nbsp; <span
+ style="color: rgb(0, 153, 0);">0a 00 00 00</span>&nbsp; |OLIB............|<br>000010:&nbsp; 45 52 53 2d&nbsp; 32 31 30 28&nbsp; 45 29 <span
+ style="color: rgb(0, 153, 0);">00 00&nbsp; 00 00</span> <span
+ style="color: rgb(0, 153, 0);">00 00</span>&nbsp; |ERS-210(E)......|<br>000020:&nbsp; <span
+ style="color: rgb(0, 153, 0);">00 00 00 00  00 00</span> <span
+ style="color: rgb(0, 153, 0);">10 00&nbsp; 00 00 </span>2e 5c&nbsp; 62 65 65 74&nbsp; |...........\beet|<br>000030:&nbsp; 68 6f 76 65&nbsp; 6e 35 2e 61&nbsp; 63 74 <span
+ style="color: rgb(0, 153, 0);">0e 00&nbsp; 00 00</span> 2e 5c  |hoven5.act.....\|<br>000040:&nbsp; 4d 69 6e 75&nbsp; 65 74 31 62&nbsp; 2e 61 63 74&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |Minuet1b.act&nbsp;&nbsp;&nbsp; |<br><span
+ style="color: rgb(0, 153, 0); font-weight: bold;"></span></pre>
+      <br>
+      <a href="examples/sample.alb.html">Download Example</a><br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

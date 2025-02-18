@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ SapBench - PDA workbench for RoboSapien control scripting
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ SapBench - PDA workbench for RoboSapien control scripting
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+SapBench is a Palm/CLIE program provides that provides three main features:
+<LI>A replacement to the regular remote, using a textual palm interface, including access to secret IR codes. Aim the PDA at the robot and select an IR code.
+<LI>A simple tool for scripting, editing and downloading your RoboSapien logic.
+There are several samples that can automatically be downloaded to the robot and run (and more to come). Edit your own. Aim the PDA at the robot during download, then run the program on the robot.
+<LI>NOT YET FINISHED: A more powerful remote macro tool.
+In this case the PDA is serving as the brain, controlling the robot using IR control.
+Right now it is a simple scripting language with simple GOTO, random and LOOP primitives (but can be easily extended since everything is running on the PDA).
+The PDA must be aimed at the robot all the time the macro is running (the PDA must have a powerful IR emitter for this to work).
+
+<P></P>
+<CENTER><IMG SRC="ss_starting.jpg">
+<BR>(starting screen)
+</CENTER>
+<HR>
+<H2>Requirements</H2>
+
+You should already be familiar with how the robot works and have tried at least a little bit of simple programming (ie. work through the manual).
+<P></P>
+
+<H3>Hardware Requirements</H3>
+<UL>
+<LI>a RoboSapien robot
+<LI>a consumer IR capable Palm PDA
+</UL>
+<H3>Software Requirements</H3>
+<UL>
+<LI>the free SapBench program
+<LI>the OrLib library (provided version is a 15 day trial from OmniRemote)
+<LI>optionally install the full OmniRemote program (for testing and registration)
+</UL>
+
+If you don't know if your Palm PDA is consumer IR friendly, try installing SapBench and see if it works.
+The current version relies on the OrLib library (part of OmniRemote).
+If OmniRemote works on your PDA, SapBench should work.
+If OmniRemote gives you an error during startup (eg: with the UX or TH CLIEs), SapBench will not work.
+If OmniRemote appears to work, but fails to record new macros, SapBench <i>may</i> work.
+
+<P></P>
+NOTE: future versions may support the CLIE IR API (like PerfectRemote) and perhaps even a PocketPC version depending on interest (consumer IR on PocketPC is a pain as well).
+If you are a developer who has written PDA software before and want to help out, please send me an email.
+
+<P></P>
+<HR>
+<H2>Installation</H2>
+
+<UL>
+<LI>Download this ZIP file <A HREF="SapBench_101.zip">SapBench_101.zip</A>
+<LI>Unzip and install the two files to your PDA:
+<UL>
+<LI>SapBench.prc - is the actual program
+<LI>OrLib.prc - is OmniRemote library (15 day trial version, 
+<A HREF="http://www.pacificneotek.com/software/ORLib.zip">
+version 1.59</A>) -- same as on the official website.
+<LI>NOTE: for older black-and-white Palms, please use the NoIcons version:
+<A HREF="SapBench_noicons.prc">SapBench_noicons.prc</A>
+
+</UL>
+<LI>Run the "SapBench" program on your Palm. 
+The first time it runs it will report "WARNING: no script database - filling with samples". That's ok.
+<LI>See below for the different things you can do.
+</UL>
+
+<P></P>
+<H3>OmniRemote trial version</H3>
+A company called <A HREF=http://www.pacificneotek.com>Pacific Neo-Tek</A> makes a general purpose Palm PDA remote. In addition they have a programmer API for people to write their own programs. That's what SapBench uses and it saves me a lot of time
+(OmniRemote Library V1.59 part of OmniRemote Professional V2.13).
+<P></P>
+After the 15 day trial period, SapBench and OmniRemote will stop functioning.
+SapBench doesn't have a nag screen to remind you before the 15 days are up, however it will tell you after time is up (ie. after 15 days).
+If you are still using this after 15 days, I suggest you register
+($25, BTW: I see none of this money).
+Install the full OmniRemote (Remote.prc) from their website and enter your registration code.
+After registering OmniRemote you can go back to SapBench and it will work again.
+
+<P></P>
+<HR>
+<H2>Usage - part 1 - Remote Control</H2>
+This is the easy case of using SapBench as a remote control.
+First pick one of the categories on the buttons in the top right (eg: "M" for move commands):
+<UL>
+<LI>M - Move commands
+<LI>L - Left arm/hand commands
+<LI>R - Right arm/hand commands
+<LI>K - Skits
+<LI>O - Other
+<LI>P - Programming
+<LI>+ - for Macro mode (do not use - see part 3)
+</UL>
+This will fill the right side list with a number of commands.
+Aim the IR transmitter of your PDA at the head of the robot and click on one of the commands in the list (eg: "forward step") and it will control the robot.
+
+<CENTER><IMG SRC="ss_remote1.jpg"></CENTER>
+
+<P></P>
+HAVING PROBLEMS?: if the robot does not respond, check to make sure the regular remote is working. If SapBench fails to make the robot do anything, your PDA may not be supported.
+Some PDAs have very weak IR transmitters, so place the PDA close to the robot's head, and be sure the IR transmitter of the PDA is facing right at him.
+(the location of the IR transmitter varies with every PDA, check your manual for how you are supposed to align two PDAs for 'beaming')
+<BR>
+TIP: To access the currently identified (and useful) secret IR codes, select "Secrets" from the "Filter" menu.
+<BR>
+TIP: The "Stop" button on the bottom always there for your convenience (it does the same as the Move command "stop")
+
+<P></P>
+<HR>
+<H2>Usage - part 2A - Script downloader</H2>
+The upper left has a drop-down list of available scripts. Select one and you will see the code in the left hand list.
+You can edit these if you like (see part 2B).
+To download them to the robot, aim the PDA at the robot and press the "Downld" button.
+The robot should make a few noises and perhaps jitter a little.
+When complete, the program selected should now be downloaded into the robot's tiny brain.
+<P></P>
+Test him out as you would normally (eg: to test the sensor programs hit his toes).
+<BR>
+To run the main program, press the "Run" button after "Downld". This will start the main program using "quiet execute with subroutines" (see <A HREF="ir_codes.htm#LAUNCH">here for more info</A>)
+<P></P>
+
+Sample scripts provided:
+<UL>
+<LI>Test1, .., Test9 - these are placeholders to store your own scripts
+[NOTE: use these names for now -- adding, deleting or renaming these is not yet supported]
+<LI>No-Op - fill the 3 sensor handlers with do-nothing routines (different than the default routines that make noises and stop the robot from walking)
+<LI>SimpTurn - the simple "turn when you hit a wall" logic often called an "autonomous" walking routine
+<LI>VeryLong - an insane example of an 84 step program, running the AllDemo mode 84 times. This should take approximately 3 hours to execute (the same 2+ minute demo repeated 84 times).
+<LI>AllSkit1, AllSkit2 - simple demo programs that go through the simple skits (but not the longer demo modes)
+<LI>? other
+</UL>
+
+<CENTER><IMG SRC="ss_simpturn.jpg"></CENTER>
+
+<P></P>
+<HR>
+<H2>Usage - part 2B - Script editor</H2>
+<P></P>
+You can edit any of the existing scripts.
+For now, creating and renaming scripts is not supported, so you should pick one of the Test? scripts from the drop-down list to play with.
+<BR>
+Usually it will start with an empty script, with nothing in the 5 sections.
+Select the section you wish to record (eg: "[RSENSOR]").
+<BR>
+Now find the command you wish to record first using the selection process you used in part 1 (select the category, then select a command).
+<BR>
+When you have found the command you want, press the "<<" button and it will add it to the script (after the current selection in the left list).
+
+<CENTER><TABLE border=0 cellspacing=10>
+<TR><TH>Before</TH><TH width=50></TH><TH>After</TH></TR>
+<TR><TD><IMG SRC="ss_codeedit1.jpg"></TD><TD></TD><TD><IMG SRC="ss_codeedit2.jpg"></TD></TR>
+</TABLE></CENTER>
+</CENTER>
+
+<P></P>
+Deleting parts of a script is easy. Select any single command you like and press the "-" button to delete.
+<BR>
+To delete the entire handler, select the section you want to delete (eg: "[RSENSOR]", "[LSENSOR]", "[SSENSOR]", "[MAIN]") and press the "-" button.
+This makes it easy to start over.
+<P></P>
+All changes are immediately saved to the PDA as they are made.
+When you are done with your changes, press the "Downld" button and try it out on the actual robot.
+<P></P>
+NOTE: if you come up with some useful scripts that you'd like to contribute for future releases, please send me an email.
+
+<HR>
+<H2>Usage - part 3 - Super Macro Player</H2>
+Not finished yet.
+<BR>
+This will have the ability of writing more complicated scripts (with GOTO, random logic and time delays). The scripts will run on your PDA and send the necessary commands to the robot where they will be performed immediately.
+The strength of your Palm's IR transmitter matters and how well you can orient it to always reach the robot's head IR receiver.
+<P></P>
+<HR>
+<CENTER>This is preview version 1.01</CENTER>
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

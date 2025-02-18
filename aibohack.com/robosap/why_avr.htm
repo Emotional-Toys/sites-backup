@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Why use the ATMEL AVR90S2313 ?
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Why use the ATMEL AVR90S2313 ?
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P>Advantages:</P>
+<LI>Cheap - under $4 for the chip. Generally available (a common chip)
+<LI>20 pin chip (DIP), easy to wire up
+<LI>Plentiful free tools (assembler, C, C++)
+<LI>Powerful instruction set (true "RISC" programming model with many registers)
+<LI>Chip runs at 3.3V, so interfacing to existing CPU (also 3.3V) doesn't require level shifters.
+<LI>4MHz is fast enough, but chips can go faster.
+<P></P>
+<LI>128B of E2PROM (so programs will not be lost after power off)
+<LI>128B of RAM and seperate 32B of registers (more RAM than needed)
+<LI>Can be very easily programmed (via serial interface). Several relatively cheap programming designs are available on the web. Parallel programming is optional.
+<LI>On board UART [multiple uses: RF remote control, CMU Cam]
+<LI>Enough horsepower for second software UART [used for debug terminal]
+<LI>other hardware features (timer/counters, SPI, watchdog, etc - most of which I don't use)
+<LI>Disadvantage: Only 2KB of flash for code (instructions are typically 16bit)
+<LI>Disadvantage: faster part needs 4V or more (slower part goes down to 2.7V)
+</UL>
+<P></P>
+
+Overall a pretty cool little chip.
+<P></P>
+
+<P>FWIW: I considered and rejected a few other chips</P>
+<LI>Chips with onboard BASIC (BASIC STAMP, PIC BASIC) - too expensive, $30->$40 or so. Usually not enough space for program and data.
+<LI>ATMEL 89S2051 - only 128B RAM total, no E2PROM, and harder to program (parallel)
+<LI>Low pin count PICs with serial programming - little RAM, no UART, weird programming model
+<LI>8 pin chips - too small (need at least 10 i/o pins)
+<LI>other larger CPU/MCUs - too big
+
+</BODY>
+</HTML>

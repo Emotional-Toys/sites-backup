@@ -1,0 +1,283 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboSapienPet's Super Sapien Mods
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboSapienPet's Super Sapien Mods
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+NOTE: the following are DIY Do-It-Yourself hardware and software modifications to the commercial RoboSapien robot.
+<BR>
+
+This is not a commercial kit.
+<BR>
+You should have some experience with soldering and small electronic projects.
+The hardware mods are not designed to be reversable (ie. no sockets, although possible not worth the hassle).
+<BR>
+The mod is designed to be simple, using inexpensive and commonly available parts (under $5).
+Software is open source and can be compiled using freely available free tools.
+<BR>
+<H3>Do you have the stomach for it ?</H3>
+To perform this modification, you have to take off the robot's back (4 screws), chop a number of wires are re-route them to a small board containing the 20 pin AVR chip.
+Here's a photo of my modification to show the work involved.
+<CENTER><IMG SRC="sapavr_loosewire.jpg"></CENTER>
+If this looks too scary or too destructive for your tastes, then please don't attempt this modification.
+<BR>
+Also, do not attempt these kind of modifications if you only have a single robot, and can't afford to break it.
+I recommend having at least two robots (one to modify, one as backup and to use normally).
+
+<P></P>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Mod#1</H2>
+</center></td></tr> </TABLE>
+<P></P>
+<H2>SuperSapien Mod#1 - SapAVR - Early Adopter Version</H2>
+
+The SapAVR modification adds a second microprocessor to take over control of the robot.
+This provides "higher brain functions", non-volatile storage, a PC interface, and many other things.
+The second microprocessor is an Atmel 20 pin "AVR" chip (from Atmel, part AVR90S2313, under $4).
+The SapAVR chip designed to work in conjunction with the built-in CPU with minimal rewiring.
+All the old features and many new features can be accessed from the existing RoboSapien remote control.
+
+<DIR>
+<I>Goal</I>: Add a second brain to the robot
+<BR>
+<I>Constraints</I>: Economical (under $5), single chip, easy wiring
+<BR>
+<I>Standard Features</I>: all normal RoboSapien features 
+<BR>
+<I>Enhanced User Features</I>: many, see below
+<BR>
+<I>Peripherals supported</I>: disambiguated hand and foot sensors, standard remote, serial debug terminal to PC, extra serial for CMUCam
+<BR>
+<I>Other Technical Features</I>: see below
+<BR>
+<I>Demo movie</I>: available (check Movies page)
+</DIR>
+
+The following features are available by using a modified robot running the SapAVR firmware and a standard remote.
+For Early Adopters you will need a serial connection to a PC terminal. Eventually all the core features will be accessible by the remote.
+<BR>
+NOTE: not all the featured mentioned below are finished in the SapAVR0.1 release.
+
+<P></P>
+<H3>Standard User Features</H3>
+When initially started, the SapAVR is in "standard" mode which acts as a "pass-thru".
+You can control the robot exactly the same as a stock RoboSapien.
+The sensors and programming logic work as usual (foot and heel and toe act the same).
+The only difference is the "S>>" button. It is used as a special shift for new features.
+If you press a certain sequence it will turn on the "Enhanced" mode (REVIEW: safer sequence TBD).
+
+<P></P>
+<H3>Enhanced User Features</H3>
+
+When in enhanced mode you can do a lot of things with the robot and the standard remote:
+<UL>
+<LI>Hand and foot sensors disambiguated. The foot toe and heel sensors trigger the same routine, but the hand sensors trigger different routines.
+<LI>Four different sensor routines for hands and feet (left hand, left foot, right hand, right foot). Twice as many as a stock RoboSapien.
+<LI>Currently the sound sensor is not altered by SapAVR [future work]
+<LI>Five main general purpose routines. Triggerable from standard remote.
+Five times as many as a stock RoboSapien.
+<LI>An optional startup routine is run when the robot is turned on
+<LI>Six optional routines (reserved for other things like CMUCamera or PIR inputs)
+<BR>
+<LI>All program steps are stored in E2PROM.
+They are not lost when the power is turned off (unlike the stock RoboSapien).
+It is even possible to program the original brain by the SapAVR every time the robot is turned on.
+<LI>Routines can be programmed in a similar fashion to a regular RoboSapien, but with fewer restrictions and a few new features:
+<UL>
+<LI>there is no set limit for the size of any one routine (ie. no 6 step limit for sensor routines, or 14 step limit for the main routine)
+<LI>Total room for all program steps is 96 Bytes (not the 32 bytes in the regular memory).
+With the current implementation (which can be improved) that's close to 50 program steps.
+<LI>Programs can include several movements at the same time (eg: raise left arm and right arm at the same time)
+<LI>In future, programs can include more complex conditional logic.
+<LI>In future, better power management to be added (including ability of keeping both CPUs awake)
+</UL>
+<LI>If you don't like the features I picked, with a little "C++" programming, you can change it! (see below)
+</UL>
+See the <A HREF="sapavr_remote.htm">SapAVR remote instruction page</A> for more detail.
+
+<H3>What it can't do</H3>
+
+You can't add new sounds or motions.
+<DIR>
+<I>Why?</I> -
+The SapAVR sends control signals to the built-in CPU.
+The built-in CPU handles all the RoboSapien movement and sound. 
+Therefore motions and sounds are limited to what is provided by the standard RoboSapien.
+</DIR>
+
+<H3>Enhanced Features - PC connection, debug terminal</H3>
+
+The SapAVR chip has two serial/UART ports (0->3.3V RS-232 ports).
+The hardware UART is reserved for additional modifications, like the CMU Cam.
+A 1200baud software UART is provided to connect to your PC, either for remote control or for debugging.
+I call this the 'debug terminal' or 'debug console'.
+<P></P>
+You can type in commands from the debug terminal to control or monitor the SapAVR.
+Example commands:
+<UL>
+<LI>'E0', 'E1', 'E2' - set mode (idle, standard, enhanced)
+<LI>'P' - poll input sensors
+<LI>'I' - poll IR input (code from remote)
+<LI>'O' - send IR code to built-in CPU (to perform motions/skits)
+<LI>'A', 'W', 'D' - direct access E2PROM
+<LI>'L', 'R' - trigger built-in routines
+</UL>
+See the <A HREF="sapavr_console.htm">SapAVR debug console page</A> for more detail.
+
+<H3>Enhanced Features - Writing your own programs</H3>
+
+<UL>
+<LI>The SapAVR0.1 firmware is mostly written in C++. It is a relatively simple program.
+There are portions in assembler (for smaller size).
+<LI>You can modify or change the firmware to do anything else you like.
+<LI>Programs can be written in C++, C or assembler.
+The compiler, assembler and linker tools (from WinAVR) are free.
+<LI>
+Allows custom firmware programs (programmed in C++, C or assembler)
+<LI>Enabling technology for other things (like RF remote control or color tracking camera)
+</UL>
+
+<P></P>
+<H3>More Technical Features</H3>
+
+The AVR chip has 128 bytes of RAM, 32 bytes of registers, and 128 bytes of E2PROM.
+The firmware is limited to 2K of code. Code generated by the C++ compiler is a little fat, so the 2K limit is very easy to hit, so don't write unnecessary code.
+<BR>
+The software UART for the debug terminal is hard coded at 1200 baud (8 bit, no parity).
+The hardware UART available for other things, like CMU-Cam interface (for color tracking, see Mod#2).
+It is up to you how you want to use the serial ports.
+Currently there are only 3 unused i/o pins on the 20 pin AVR. If you don't need both UARTs, you can free up additional i/o pins.
+<BR>
+The logic for handling the IR input and output is provided for you.
+<BR>
+Almost everything else is very flexible and can be easily changed.
+<P></P>
+The SapAVR CPU runs at 4MHz, stealing the clock from the built-in CPU.
+The SapAVR CPU runs at 3.3V just like the built-in CPU, so no level shifters are needed for signals between the two.
+There are many other features of the AVR chip that are not exploited. Other larger AVR chips could be used.
+In this use, the AVR90S2313 part doesn't have a lot of spare RAM/ROM or extra pins, but it is small, cheap and commonly available.
+<A HREF="why_avr.htm">Click here</A> if you care to hear the reasons I chose it.
+</UL>
+
+<P></P>
+<H3>Early Adopter Version</H3>
+This is the "Early Adopter" version of the modification.
+In theory in the future if a generally useful set of firmware features stabilizes, not everyone needs to burn the chips themselves (ie. one person can do it for many other people).
+For now, if you aren't planning on burning your own chips, and at least trying to program new features in C, C++ or assembler, then you may want to wait for other alternatives.
+<BR>
+NOTE: In this version both the AVR chip and the debug console serial port connector are exposed.
+Currently I remove the AVR chip to reprogram the firmware. The AVR chip does support in-circuit programming (so in future the chip does not need to be exposed outside the case, but I think it looks cool...)
+<BR>
+
+<P></P>
+<HR>
+<H3>D-I-Y Modification</H3>
+
+If interested in the Mod#1 SapAVR modification, please <A HREF="sapavr.htm">click on the SapAVR D-I-Y page</A>
+
+
+<P></P>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Mod#2</H2>
+</center></td></tr> </TABLE>
+<P></P>
+<H2>Mod #2</H2>
+The RoboSapienPet#2 builds on the Mod#1, and adds a color and motion tracking CMUCam (CMUCam 2).
+It requires a CMUCam which costs approx. $100->$200 depending on the model.
+
+<DIR>
+<I>Goal</I>: Add a self contained camera to the robot, mainly for color tracking
+<BR>
+<I>Constraints</I>: Relatively economical (>$100), built on SapAVR (Mod#1), no PC connection required
+<BR>
+<I>Enhanced User Features</I>: see below
+<BR>
+<I>Other Technical Features</I>: see below
+<BR>
+<I>Demo movie</I>: ?? maybe later.
+</DIR>
+
+<P></P>
+
+<H3>What this is not</H3>
+This is not a wireless 'spy cam'. You can easily hook up such a spy cam and watch it on a nearby TV or your computer.
+That can be fun, but that is not the goal of this project.
+This project is to give the robot self contained vision and the ability to react differently based on the objects it sees (especially their color).
+<P></P>
+
+The location of mounting the camera is up to you.
+I am currently experimenting with the camera in the chest.
+<CENTER><IMG SRC="robosap_teaser2.jpg"></CENTER>
+RoboSapien with CMUCam 2 board and more expensive camera (other variations possible).
+<P></P>
+The CMUCam consists of a camera, interface logic and a CPU to do the color and motion detection. The "AVR" chip controls the CMUCam and coordinates it with the features.
+<P></P>
+NOTE: there is no external control, this is a stand-alone robot with vision!
+Not a wireless "SpyCam" hooked up to a TV monitor or a PC.
+All vision processing and decision logic occurs on the robot itself.
+<UL>
+<LI>Optional features - turn the feature on/off using the standard remote control [special shift mode]
+<LI>Other features available via the standard remote control
+<LI>Color detection - robot does different things depending on the color of the object/ball he sees
+<LI>Color location - robot does different things depending where the ball appears in the camera view.
+<LI>General movement detection - allows for hand signals regardless of the color of your hand, or other movement (requires CMUCam2).
+<LI>Future work: ? Soccer behavior ? - that may be a too difficult...
+</UL>
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

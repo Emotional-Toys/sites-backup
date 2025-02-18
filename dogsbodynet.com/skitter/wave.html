@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter - Chapter 7 - Wave Sound Editing</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table border="0" cellpadding="20" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#0a6cce" valign="top"><big><b><font
+ size="+1"><big><font color="#ffffff"><big>Skitter - Chapter 7 - Wave
+Sound Editing</big> </font></big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+<br>
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><b><font size="+1">Table of Contents:<br>
+      </font></b>&nbsp;&nbsp;&nbsp; <a href="../skitter.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="../skitter.html#INSTALL">2.0 Install
+Skitter</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="perform.html">3.0 Performance Files</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="motion.html">4.0 Motion Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="led.html">5.0 LED Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="midi.html">6.0 MIDI Sound Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="wave.html#WAVE">7.0 Wave Sound Editing</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="wave.html#WAVENAV">7.1 Navigating Wave Files</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="wave.html#WAVECAPTURE">7.2 Capture &amp; Record Wave
+Sounds</a> <br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; <a href="wave.html#WAVEEFFECT">7.3 Wave Sound Effects</a>&nbsp; <br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="wave.html#WAVESTART">7.4 Sound Start
+Time</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="wave.html#WAVEUNDO">7.5 Undo/Redo
+Changes</a><br>
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <a href="wave.html#WAVESPLIT">7.6 The
+Splitter Bar</a><br>
+&nbsp;&nbsp;&nbsp; <a href="library.html">8.0 The Reference Library</a><br>
+&nbsp;&nbsp;&nbsp; <a href="preview.html">9.0 The AIBO Window</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="test.html">10.0 Test Actions on AIBO</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="upload.html">11.0 Upload Actions to AIBO</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="prefs.html">12.0 Specify Preferences</a><br>
+      </p>
+      </td>
+    </tr>
+    <tr>
+      <td>&nbsp;<br>
+      <p> </p>
+      <table border="0" cellpadding="8" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"> <a name="WAVE"></a>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            <big><big><b><u>7.0 Wave Sound Editing<br>
+            </u></b></big></big><br>
+Wave files are good for recording arbitrary
+sound effects (such as dog barks).&nbsp; However, wave files consume
+MUCH more space than MIDI files. &nbsp; A one minute MIDI file might
+use 5-10 KBytes.&nbsp; A one minute WAVE file needs <b>480 KBytes</b>
+(50 to 100 times the size). &nbsp;&nbsp; Too many long wave files
+quickly consumes space available on the memory stick.<br>
+            <br>
+AIBO supports 8Khz, 8-bit, single channel, PCM format WAVE
+files.&nbsp;&nbsp; Skitter verifies Waves files are compatible with
+AIBO, and offers easy one-click conversions for those which
+aren't.&nbsp; Skitter filters, down-converts high bit-rates, and
+combines multiple channels automatically.<br>
+            <br>
+            <br>
+            <img src="../images/wave.gif" alt="Wave Editor" border="1"
+ height="382" hspace="40" width="534"><br>
+            <br>
+            <br>
+            <a name="WAVENAV"></a>
+            <hr noshade="noshade" size="1" width="100%">
+            <p> </p>
+            <br>
+            <i><big><b><u>7.1&nbsp; Navigating Wave Files</u></b></big></i>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="middle">An orange marker bar shows the
+current time position.&nbsp;&nbsp;
+Left-clicking
+in the ruler or wave panes moves the marker. </td>
+                  <td align="center" valign="middle" width="10"><img
+ src="../images/wmarker.gif" title="" alt="Current Position Marker"
+ border="1" height="114" hspace="30" width="115"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td height="1" valign="top"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="middle">Click-n-drag
+in the ruler or wave pane, and a green selection marker
+appears at the starting point.&nbsp; Skitter highlights between the
+markers &amp; changes any included motion keyframe tabs
+green.&nbsp;&nbsp; The motion keyframes cannot be edited from the Wave
+editor.<br>
+                  </td>
+                  <td valign="top"><img src="../images/wrange.gif"
+ title="" alt="Range Selection" border="1" height="114" hspace="30"
+ vspace="0" width="115"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p> </p>
+            <a name="WAVECAPTURE"></a>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>7.2 Capture &amp; Record Wave Sounds</i></u></big></b></p>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"> Skitter supports wave
+capture.&nbsp;&nbsp; Simply click the record button.&nbsp;&nbsp;&nbsp; <br>
+                  <br>
+To select what to record from, click the "Setup" button.&nbsp;&nbsp;
+Select a sound source from the list shown.&nbsp; Typically this would
+be "Microphone", or an output "Mix".&nbsp;&nbsp; If one doesn't work,
+trial &amp; error is fairly painless.<br>
+                  <br>
+Note:&nbsp; The available sound sources could vary depending on the
+sound card manufacturer.&nbsp; Also, if your computer has multiple
+sound cards, you might need to change the "Recording Device".<br>
+&nbsp; <br>
+                  <img alt="Wave Preferences"
+ src="../images/wavepref.gif" border="1" height="302" hspace="20"
+ vspace="5" width="439"><br>
+                  <br>
+Alternatively, you can use commercial software, such as
+CoolEdit, then later import capture sound into Skitter.<br>
+                  </td>
+                  <td valign="top" width="10"><img
+ alt="Windows Sound Recorder" src="../images/waverec.gif" border="0"
+ height="199" hspace="20" vspace="0" width="71"></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><br>
+            </p>
+            <p><a name="WAVEEFFECT"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>7.3 Wave Sound Effects</i><br>
+            </u></big></b></p>
+            <p>Skitter has a variety of special effects for wave files:<br>
+            </p>
+            <ul>
+              <li><b>Increase/Decrease Volume.</b>&nbsp; Make wave
+sound louder/quieter by 25%. <br>
+              </li>
+              <li><b>Increase/Decrease Speed.</b>&nbsp;&nbsp; Make wave
+sound play faster/slower (raise/lower pitch) by 50%.<br>
+              </li>
+              <li><b>Amplify Volume.</b>&nbsp;&nbsp; Arbitrary volume
+adjust (50% to 300%).<br>
+              </li>
+              <li><b>Echo Effects.</b>&nbsp; Adds echo to produce
+chorus effects (short delays), or canyon effects (longer delays).<br>
+              </li>
+              <li><b>Fade In/Out.</b>&nbsp;&nbsp; Make sound fade to
+nothing, or any percentage of original, or visa-versa.</li>
+              <li><b>Insert Silence.</b> &nbsp; Inserts silence into
+the
+wave file.&nbsp; <img alt="Updated" title="Updated!"
+ src="../images/updated.gif" style="width: 16px; height: 16px;"
+ align="middle"></li>
+              <li><b>Invert Wave.</b>&nbsp; Inverts the
+amplitude.&nbsp; Useful sometimes for matching up waves from different
+sources.<br>
+              </li>
+              <li><b>Normalize Wave.</b>&nbsp; Changes overall volume
+so maximum is 100% (ie: makes wave as loud as possible).<br>
+              </li>
+              <li><b>Reverse Wave.</b>&nbsp;&nbsp; Sounds plays back to
+front.<br>
+              </li>
+              <li><b>Scale Sound.</b>&nbsp; Stretch/shrink a wave
+file.&nbsp;&nbsp; Note this will affect pitch.&nbsp; <img alt="Updated"
+ title="Updated!" src="../images/updated.gif"
+ style="width: 16px; height: 16px;" align="middle"> </li>
+            </ul>
+            <p align="left"><br>
+            <a name="WAVESTART"></a></p>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top">
+                  <p><b><big><u><i>7.4 Sound Start Time</i><br>
+                  <br>
+                  </u></big></b>AIBO supports arbitrary sound start
+times.&nbsp;&nbsp; This is very useful for aligning sound to
+motions &amp; LED's.&nbsp;&nbsp; The start time is specified in either
+motion
+frames, or in time (seconds).<br>
+                  <br>
+AIBO waits the specified interval, relative to the start of motion or
+LED's, then begins the sound playback.</p>
+                  </td>
+                  <td valign="top" width="10">
+                  <p><img src="../images/sstart.gif" alt="" border="1"
+ height="195" hspace="30" vspace="10" width="270"></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p align="left"><a name="WAVEUNDO"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>7.5 Undo/Redo Changes</i></u></big></b><br>
+            </p>
+            <p>If you make a change that doesn't work out, simply undo
+it
+(Edit Menu-&gt;Undo).&nbsp;&nbsp; Skitter supports unlimited undo (ie:
+all edits since the wave file was loaded).&nbsp; If you undo too
+much, you can reapply changes (Edit Menu-&gt;Redo).</p>
+            <p> </p>
+            <p>Keyboard shortcuts of Ctrl+Z (Undo) and Ctrl+Y (Redo)
+are available.<br>
+            <br>
+            </p>
+            <p><a name="WAVESPLIT"></a></p>
+            <hr noshade="noshade" size="1" width="100%">
+            <p><b><big><u><br>
+            <i>7.6 The Splitter Bar</i></u></big></b><br>
+            </p>
+            <p>The vertical splitter bar allows two views of the Wave
+file
+at once.&nbsp;&nbsp; To adjust the position of the splitter bar, select:<br>
+&nbsp;&nbsp; "<b>Window Menu -&gt; Split Window</b>".&nbsp; <br>
+            </p>
+            <p>You can
+move the splitter at any time.&nbsp;&nbsp; To dock the splitter bar
+(hide it), simply drag the
+splitter to its left-most position.&nbsp; <br>
+            </p>
+            <p align="center"><img src="../images/wsplit.gif"
+ alt="Splitter Bar" border="1" height="368" width="522"><br>
+            </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

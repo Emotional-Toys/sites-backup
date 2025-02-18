@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ RoboBoa IR Codes
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ RoboBoa IR Codes
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The RoboBoa modulation scheme is the same as the RSV2 12-bit encoding described
+at the top of the <A HREF="ir_codes_v2.htm">IR Codes V2 page</A>.
+The first 4 bits are "0111" for the RoboBoa (hex $7).
+
+<P></P>
+
+<H3>Direction Pad</H3>
+<UL>
+<LI>$700 = ?
+<P></P>
+<LI>$701 = top (up) = head right
+<LI>$702 = bottom (down) = head left
+<LI>$703 = left = neck right
+<LI>$704 = right = neck left
+<LI>$705 = top+left = upper right
+<LI>$706 = top+right = upper left
+<LI>$707 = bottom+left = down right
+<LI>$708 = bottom+right = down left
+<LI>$709 = pad middle = stop (twice to reset to default position and aware)
+<P></P>
+<LI>$70B = Track = track moving things
+<LI>$70C = Explore = explore the room
+<LI>$70D = Alarm = set alarm (repeat to add another hour)
+<LI>$70E = Guard = enter guard mode (10 minutes)
+<LI>$70F = Demo = demo mode
+<LI>$710 = Execute = Program Play
+<P></P>
+<LI>$712 = mode button alone (hold for 2 sec)
+<P></P>
+<H3>Mode shifts (hold mode button down, press button within 2 sec)</H3>
+<LI>$715 = MODE+top = robot lifts and travels forward for 1 min
+<LI>$716 = MODE+bottom = robot lifts and travels backward for 1 min
+<LI>$717 = MODE+left = robot lifts and spins clockwise for 1 min
+<LI>$718 = MODE+right = robot lifts and spins counter-clockwise for 1 min
+<LI>$719 = MODE+top+left = robot moves to light up the ceiling on left
+<LI>$71A = MODE+top+right = robot moves to light up the ceiling on right
+<LI>$71B = MODE+bottom+left = robot moves to light up the floor on left
+<LI>$71C = MODE+bottom+right = robot moves to light up the floor on right
+<LI>$71D = MODE+middle = shutdown
+<P></P>
+<LI>$71E = MODE+Tail/Head = Strafe
+<LI>$71F = MODE+Track = Lazer
+<LI>$720 = MODE+Explore = Cannon
+<LI>$721 = MODE+Alarm =???
+<LI>$722 = MODE+Guard = Patrol (10 minutes)
+<LI>$723 = MODE+Demo = cycle volume control
+<LI>$724 = MODE+Execute = Back (undo last step when in program mode)
+<P></P>
+<LI>$725 = MODE button alone (press and release within 2 secs) = mode light (remote controlled spotlight)
+<P></P>
+<H3>With tail/head shift on (red LED on)</H3>
+<LI>$729 = TAILHEAD+top = body up
+<LI>$72A = TAILHEAD+bottom = body down
+<LI>$72B = TAILHEAD+left = tail backwards (wheel)
+<LI>$72C = TAILHEAD+right = tail forward (wheel)
+<LI>$72D = TAILHEAD+top+left ...
+<LI>$72E = TAILHEAD+top+right ...
+<LI>$72F = TAILHEAD+bottom+left ...
+<LI>$730 = TAILHEAD+bottom+right ...
+<BR>NOTE: TAILHEAD+middle will send regular hold ($709)
+<P></P>
+<LI>$732 = HOLD Tail/Head for 2 sec = Reset (and clear all settings)
+<LI>$733 = HOLD Track for 2 sec = Scan
+<LI>$734 = HOLD Explore for 2 sec = Sleep
+<LI>$735 = HOLD Alarm for 2 sec = Daily Alarm function
+<LI>$736 = HOLD Guard for 2 sec = Sentry mode (10 minutes)
+<LI>$737 = HOLD Demo for 2 sec = Party mode
+<LI>$738 = HOLD Execute for 2 sec = enter program mode
+<P></P>
+<LI>$??? = HOLD middle for 2 sec = hold (desklamp mode)
+<LI>$??? = HOLD other direction pad??
+<LI>$??? = MODE+button for 2 sec???
+<LI>$??? = HOLD MODE+Alarm = test alarm function (typo?)
+</UL>
+
+</BODY>
+</HTML>

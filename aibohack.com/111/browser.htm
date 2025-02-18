@@ -1,0 +1,191 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ABrowser - the AIBO Browser for ERS-110 and ERS-111
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ABrowser - the AIBO Browser for ERS-110 and ERS-111
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<H2>Platforms</H2>
+The AIBO Browser (ABrowser.exe) is a Win32 program. It should work on Windows 95 and above. It should work with both ERS-110 and ERS-111 data.
+The 3D Virtual AIBO needs DirectX 5 or better (used to playback motions).
+<br>
+The file VIRTAIBO.DLL must be in the same directory as the main program.
+
+<H2>Drives</H2>
+The browser will look for the first OpenR installation it finds by scanning the root drives from 'A:' to 'Z:'. Otherwise it will prompt you for a directory to open.
+<br>
+The browser needs most of the AIBO files to function, so I recommend running it on the actual memory stick, or a image of the memory stick.
+Version .9 and above do not change any data on the memory stick.
+
+<H2>User Interface</H2>
+<br><pre>          <img src="ss_browse.jpg"></pre></br>
+<br>
+
+The first window pane has a tree of possible files (or other features). Select this first.
+<br>
+The second window pane has a list of nodes which change depending on the file selected.  This can contain motion or sound names, behavior state numbers, action names or nothing at all.
+<br>
+The third window pane is the information pane that gives information about what is selected in the previous two window panes.
+<br>
+Poke around and explore. The information pane on the right hand side give you a small amount of context sensitive help.
+
+<P><B>Summary Mode</B></P>
+This gives a high level dump of the state of you AIBO.
+This includes the "Quality Time Spent" in the current mode, and how far your dog has evolved at this stage, and when it should evolve to the next stage.
+
+<P><B>Instinctive Behavior Browsing</B></P>
+<A HREF="behave.htm"> Click here for more information on the behavior model. </A><br>
+Select the behavior file (in the first window pane). Behavior files are categorized by the stage of AIBO (eg: "child stage"). 
+<br>
+After selecting a behavior file, select a state in the middle window pane. The behavior for that state will be shown in the information pane.
+The format is a BASIC-like pseudo code showing the behavior rules.
+<br>
+Cool features: You can select a behavior rule in the information pane.
+The "Play" button will play the sound associated with the selected behavior rule.
+The "Browse Action" button will spawn a new browser giving you the information about the action associated with selected rule.
+These buttons will be disabled if the don't apply to the currently selected behavior rule.
+Double clicking on a rule will move you to the next state.
+
+<P><B>State Descriptions</B></P>
+When displaying state names, the browser will look for a file containing comments (COMMENTS.INI in the same directory as ABROWSER.EXE).
+<br>
+I've included the state names/descriptions I've made up for some of the behavior files, mostly for Adult#1. You can customize this yourself (just edit the COMMENTS.INI file). The format is pretty simple, just read the file.
+<br>
+If you decode more, please send me your improved COMMENTS.INI file so I can include it in future releases.
+
+<P><B>Learned Behavior Browsing</B></P>
+This is an extension to the Instinctive Behavior mode, but only shows those behavior states and rules where your AIBO is different from the default "instinctive" behavior.
+<br>
+You will notice the information dump is slightly different in that it contains ywo percentages. The first percentage is the instinctive probability, the second percentage is how your dog's behavior.
+
+<P><B>Action Browsing</B></P>
+This shows all the possible actions of the AIBO. It gives you information about where the action sound and motion data is stored.
+The "Play Sound" button (when enabled) will play the sound and motion part of the action.
+<br>
+<A HREF="virtaibo.htm">Click here for more information on Virtual AIBO.</A><br>
+
+<P><B>Data Files Browsing</B></P>
+This mode lets you browse the "ODA" data files that contain all the motions, sounds and led performances of the AIBO.
+The "Play" button will play the data. Sounds (WAVs and MIDs) are played as sounds. Motions are played using Virtual AIBO. LED files are played as MIDI files.
+
+<P><B>System Files Dump</B></P>
+Low level dump of some of the system files.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

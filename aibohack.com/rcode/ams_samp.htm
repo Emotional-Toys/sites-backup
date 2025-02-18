@@ -1,0 +1,230 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+Master Studio Examples
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+Master Studio Examples
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<BR><I>NOTE: You must own the AIBO Master Studio program (version 1.1) to examine and modify these examples.</I><BR>
+This section discusses creating custom personalities for the ERS-210 AIBO using Master Studio.
+These personalities can be converted to work with the ERS-220 or ERS-31x.
+<P></P>
+
+<HR>
+<H2>Pre-requisites</H2>
+Before going any further you must:
+<UL>
+<LI>Own an ERS-210 AIBO
+<LI>Own a copy of the AIBO Master Studio 1.1 (ERF-PC03)
+<LI>If you have an AIBO LAN card, already have it setup and working
+<LI>Be familiar with the basics of Master Studio by working through the tutorials
+</UL>
+<P></P>
+<HR>
+<H2>Conventions</H2>
+There are several conventions used for these examples.
+All the Rcode is created with the Behavior Arranger ("BA").
+All performance data is editable with the Action Composer ("AC").
+Performance data is also editable with the <A HREF="../2or3/editor.htm">AiboPet Editor (AEditor23)</A>.
+
+<P></P>
+A simple naming convention is used for the actions.
+For any action, the same base name is used. For the "SKITFOO" action:
+<UL>
+<LI>In the BA, the Action box that plays back the performance is called "SKITFOO"
+<LI>In the AC, the action that is played back is called "SKITFOO", and is stored in file "SKITFOO.ACT"
+<LI>The performance files also use the same base filename: SKITFOO.MTN, SKITFOO.WAV (or SKITFOO.MID) and SKITFOO.LED.
+</UL>
+The performance data files (.MTN, .WAV, .MID and .LED) are all stored in a "DATA" subdirectory right below the main project folder. This is different than the standard AC directory layout, but is more self contained and works better with the the AiboPet ERS-210 Editor.
+
+<P></P>
+For the behavior layout with the "BA", the flowcharts are designed to be simple and modular.
+Group Boxes (ie. subroutines) are used frequently to group functionality.
+<BR>
+For laying out the flowchart, two sizes of boxes are used. Small boxes are used for very simple actions (usually just a single "PLAY:ACTION" or "PLAY:ACTION+").
+<P></P>
+If you install Master Studio Plus, you will get the small bitmaps.
+<P></P>
+<HR>
+<H2>Example 1: Bender AIBO (Bender 2.0)</H2>
+Bender AIBO (ERS-210) is a entertainment personality.
+It is a port of the ERS-11x personality with a few small changes.
+Many of the new ERS-210 features are not exploited.
+
+<H3>How does it work?</H3>
+Bender is a simple personality that reacts to inputs (head pat, hit, obstacle etc).
+Bender 2.0 does not respond to sounds or voice commands.
+Bender will perform skits (both short and long) at random after several seconds of inactivity.
+Lastly, it has a special mode (by pressing his back) to specifically select one of six of the longer skits.
+
+<H3>Interesting Actions</H3>
+Most of the actions are simple, consisting of a single MTN, WAV and LED performance.
+
+<H3>Interesting Branch Logic</H3>
+The main loop starts with "Clear_Inputs" which zeros out all interesting input variables (eg: "Head_Pat").
+The main loop goes through several input checks (eg: Head_Hit?, Head_ON? etc) and then does a timeout check.
+The Idle_Timeout? check will check for a period of inactivity.
+
+<H3>Interesting Groups (subroutines)</H3>
+There are some general purpose groups.
+<LI>"Pick_1of?" is used to pick at random one of several performances.
+<LI>"AskAiboPaws is used to enter the mode where AIBO lays down, and lets you pick one of 6 things by rotating his paws.
+<P></P>
+All the other groups (Skit_?, Random_?) are for organizing the Bender performance.
+
+<P></P>
+<HR>
+<H2>Example 2: Obey Cat [RCode Plus]</H2>
+Obey Cat (ERS-210) is a demo personality.
+It requires the RCode Plus.
+To edit using Master Studio, you should install the Master Studio Plus extensions.
+
+<H3>How does it work?</H3>
+Obey Cat has a simple structure.
+Most of the logic is just in handling input sensors.
+Obey Cat does react to voice commands and sound controller commands (through RCode Plus extensions).
+<BR>
+Most of the logic is handled in the "Main_Not_Walking" routine.
+When AIBO is walking (either forward or backwards), it has a more specialized routine "Main_Walking".
+
+<H3>Interesting Actions</H3>
+Most of the actions are simple, consisting of a single motion or WAV.
+Many of the motions use the built-in motions, including some of the extra ones.
+
+<H3>Interesting Branch Logic</H3>
+The main loop goes through a top check of "IsWalking?" to decide if the dog is walking or not walking. The variable "isWalking" is set by actions that start the dog walking without a fixed distance.
+This lets the logic know if the dog is currently walking, and do things differently.
+When walking, a normal "WAIT" command should not be used, since it will wait for AIBO to finish the rather long (10000 units) walk.
+<P></P>
+There are several places where similar code is duplicated in the behavior arranger. Future versions of Obey Cat will have a more modular structure.
+
+<H3>Interesting Groups (subroutines)</H3>
+For "RCode Plus" there are several general purpose groups:
+<LI>CheckVoice - check for voice
+<LI>CheckSoundControllerTone - check for ERS-11x sound controller tones
+<LI>CheckAiboSound - check for ERS-11x AIBO
+<LI>CheckRhythm - check for rhythmic music
+<LI>TurnInDirectionOfVoice - is the heart of the "Come Here" command
+<P></P>
+<LI>CommentOnly - used for adding comment boxes to the flowchart
+<P></P>
+Specific to "Obey Cat" are several "Handle_?" groups to handle certain inputs in a more modular way.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,3063 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>R-CODE 110/111 Reference</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<table style="text-align: left;" border="0" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <h1>R-CODE 110/111 for ERS-110/111 </h1>
+      <h3>Copyright (C) 2002 Sony Corporation </h3>
+      <h3>All Rights Reserved. </h3>
+      <h3>(HTML version 1.0)</h3>
+      <br>
+      <hr>
+      <h2>Reference Manual</h2>
+      <ul>
+        <li><a href="rcode-ref-110.html#SECTION1">[ List of R-CODE Commands ]</a> </li>
+        <li><a href="rcode-ref-110.html#SECTION2">[ R-CODE Commands ]</a> </li>
+        <li><a href="rcode-ref-110.html#SECTION3">[ List of R-CODE System Variables ]</a>
+        </li>
+        <li><a href="rcode-ref-110.html#SECTION4">[ Quick Reference of R-CODE Operators ]</a>
+        </li>
+        <li><a href="rcode-ref-110.html#SECTION5">[ List of Semantics of AIBO Performer
+Kit ]</a> </li>
+        <li><a href="rcode-ref-110.html#SECTION6">[ ESC File ]</a> </li>
+        <li><a href="rcode-ref-110.html#SECTION7">[ Motion Definition File ]</a> </li>
+        <li><a href="rcode-ref-110.html#SECTION8">[ Musical Scale Recognition File ]</a></li>
+      </ul>
+      <br>
+      <h4><a name="SECTION1"></a>[ List of R-CODE Commands ]</h4>
+      <table border="0">
+        <tbody>
+          <tr align="left">
+            <th>Controls </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#HALT">HALT</a></td>
+            <td>finishes the program and shuts down AIBO. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#DEF:POSE">DEF:POSE</a></td>
+            <td>registers a pose. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#DEF:MOVE">DEF:MOVE</a></td>
+            <td>registers a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SET">SET</a></td>
+            <td>specifies joint angles individually. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SET_MOVE">SET_MOVE</a></td>
+            <td>updates part of a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SET_POSE">SET_POSE</a></td>
+            <td>changes the angle data of the joints of poses. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#REC">REC</a></td>
+            <td>records a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LOAD_POSE">LOAD_POSE</a></td>
+            <td>loads poses from the "Memory Stick". </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SAVE_POSE">SAVE_POSE</a></td>
+            <td>saves poses to the "Memory Stick". </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LIMITER">LIMITER</a></td>
+            <td>controls motion. </td>
+          </tr>
+          <tr>
+            <td> <br>
+            </td>
+          </tr>
+          <tr align="left">
+            <th>Motions </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#POSE">POSE</a></td>
+            <td>takes a pose. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#PLAY">PLAY</a></td>
+            <td>performs a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#MOVE">MOVE</a></td>
+            <td>performs a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#STOP">STOP</a></td>
+            <td>stops a motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#QUIT">QUIT</a></td>
+            <td>stops a motion abruptly. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#WAIT">WAIT</a></td>
+            <td>waits. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#PLAY:APK">PLAY:APK</a></td>
+            <td>performs a registered motion. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#POSE:APK">POSE:APK</a></td>
+            <td>takes a registered pose. </td>
+          </tr>
+          <tr>
+            <td> <br>
+            </td>
+          </tr>
+          <tr align="left">
+            <th>Control Structures </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#COLON">: (colon)</a></td>
+            <td>defines a line to be a label. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#GO">GO</a></td>
+            <td>jumps the process to the specified label. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#IF">IF</a></td>
+            <td>conditional test statement. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SWITCH">SWITCH</a></td>
+            <td>branches the process. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#CSET">CSET</a></td>
+            <td>sets a context value. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#CASE">CASE</a></td>
+            <td>branches the process. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#FOR">FOR</a></td>
+            <td>generates a FOR loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#NEXT">NEXT</a></td>
+            <td>terminates a FOR loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#WHILE">WHILE</a></td>
+            <td>generates a WHILE loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#WEND">WEND</a></td>
+            <td>terminates a WHILE loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#REPEAT">REPEAT</a></td>
+            <td>generates a REPEAT loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#UNTIL">UNTIL</a></td>
+            <td>terminates a REPEAT loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#DO">DO</a></td>
+            <td>generates a DO loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LOOP">LOOP</a></td>
+            <td>terminates a DO loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#BREAK">BREAK</a></td>
+            <td>breaks a loop. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#CALL">CALL</a></td>
+            <td>calls a subroutine. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#ARG">ARG</a></td>
+            <td>fetches an argument of a subroutine. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#RETURN">RETURN</a></td>
+            <td>returns from a subroutine. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#RET">RET</a></td>
+            <td>returns from a subroutine (for context version). </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#ONCALL">ONCALL</a></td>
+            <td>registers an interrupt routine. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#RESUME">RESUME</a></td>
+            <td>returns from an interrupt routine. </td>
+          </tr>
+          <tr>
+            <td> <br>
+            </td>
+          </tr>
+          <tr align="left">
+            <th>Variables </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#GLOBAL">GLOBAL</a></td>
+            <td>declares a variable as a global variable. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LOCAL">LOCAL</a></td>
+            <td>declares a variable as a local variable. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LET">LET</a></td>
+            <td>assigns a value (simple assignment). </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SET">SET</a></td>
+            <td>assigns a value (assignment with a special function). </td>
+          </tr>
+          <tr>
+            <td> <br>
+            </td>
+          </tr>
+          <tr align="left">
+            <th>Operations </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#ADD">ADD</a></td>
+            <td>Addition </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#SUB">SUB</a></td>
+            <td>Subtraction </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#MUL">MUL</a></td>
+            <td>Multiplication </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#DIV">DIV</a></td>
+            <td>Division </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#MOD">MOD</a></td>
+            <td>Remainder </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#AND">AND</a></td>
+            <td>Logical AND </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#IOR">IOR</a></td>
+            <td>Logical OR </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#XOR">XOR</a></td>
+            <td>Exclusive OR </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#NOT">NOT</a></td>
+            <td>Negation </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LAND">LAND</a></td>
+            <td>Logical AND (Boolean operation) </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LIOR">LIOR</a></td>
+            <td>Logical OR (Boolean operation) </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LNOT">LNOT</a></td>
+            <td>Negation (Boolean operation) </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#EQ">EQ</a></td>
+            <td>Equal to </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#NE">NE</a></td>
+            <td>Not equal to </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LT">LT</a></td>
+            <td>Less than </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#LE">LE</a></td>
+            <td>Less than or equal to </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#GT">GT</a></td>
+            <td>Greater than </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#GE">GE</a></td>
+            <td>Greater than or equal to </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#RND">RND</a></td>
+            <td>Random number </td>
+          </tr>
+          <tr>
+            <td> <br>
+            </td>
+          </tr>
+          <tr align="left">
+            <th>Stack Operations </th>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#PUSH">PUSH</a></td>
+            <td>Pushes data onto the stack. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#POP">POP</a></td>
+            <td>Pops data from the stack. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#DUP">DUP</a></td>
+            <td>Copies the top entry on the stack. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#JT">JT</a></td>
+            <td>Jumps if the top entry on the stack is true. </td>
+          </tr>
+          <tr align="left">
+            <td><a href="rcode-ref-110.html#JF">JF</a></td>
+            <td>Jumps if the top entry on the stack is false. </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <a name="SECTION2"></a> <br>
+      <h3>[ R-CODE Commands ] </h3>
+      <hr><a name="HALT"></a><br>
+      <h3>HALT - Finish the program and shuts down AIBO</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">HALT</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;">None<br>
+      </div>
+      <h5>Description</h5>
+This command will stop the running program and shutdown AIBO. It will
+take a few seconds for AIBO to shutdown.<br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">EDIT</span><br>
+      <span style="font-family: monospace;">SET:Power:1</span><br>
+      <span style="font-family: monospace;">FOR:i:1:10</span><br>
+      <span style="font-family: monospace;">&nbsp; PLAY:SOUND:xxx:100</span><br>
+      <span style="font-family: monospace;">&nbsp; WAIT:SOUND</span><br>
+      <span style="font-family: monospace;">NEXT</span><br>
+      <span style="font-family: monospace;">HALT</span><br>
+      <span style="font-family: monospace;">END</span><br>
+      <br>
+      <hr><a name="POSE"></a><br>
+      <h3>POSE - Move AIBO to the starting pose of a motion</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;">Common format:<br>
+      <span style="font-family: monospace;">POSE:&lt;region&gt;:&lt;motion&gt;:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;
+      </span><br>
+      <br>
+      <span style="font-family: monospace;">POSE:AIBO:&lt;aibo&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]
+To the starting pose of a motion</span><br>
+      <span style="font-family: monospace;">POSE:HEAD:&lt;head&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]
+To the starting pose of a motion</span><br>
+      <span style="font-family: monospace;">POSE:LEGS:&lt;legs&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]
+To the starting pose of a motion</span><br>
+      <span style="font-family: monospace;">POSE:TAIL:&lt;tail&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]
+To the starting pose of a motion</span><br>
+      <br>
+      <span style="font-family: monospace;">POSE:HLT:&lt;head&gt;:&lt;legs&gt;:&lt;tail&gt;:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;HEAD+LEGS+TAIL</span><br>
+      <span style="font-family: monospace;">POSE:ESC:&lt;semantics&gt;:&lt;wait&gt;:&lt;semantics&gt;:&lt;semantics&gt;:&lt;semantics&gt;</span><br>
+      </div>
+      <h5>Arguments </h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;region&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Regions [ AIBO | HEAD | LEGS | TAIL ]</span><br>
+      <br>
+      <span style="font-family: monospace;">&lt;motion&gt;&nbsp;
+&nbsp;&nbsp; Motion name</span><br>
+      <span style="font-family: monospace;">&lt;aibo&gt;&nbsp;&nbsp;
+&nbsp; &nbsp; Motion name of the whole body</span><br>
+      <span style="font-family: monospace;">&lt;head&gt; &nbsp;&nbsp;
+&nbsp;&nbsp; Motion name of the head</span><br>
+      <span style="font-family: monospace;">&lt;legs&gt;&nbsp;&nbsp;
+&nbsp; &nbsp; Motion name of the 4 legs</span><br>
+      <span style="font-family: monospace;">&lt;tail&gt; &nbsp;&nbsp;
+&nbsp;&nbsp; Motion name of the tail<br>
+      <br>
+      </span><span style="font-family: monospace;">&lt;sound&gt;&nbsp;
+&nbsp; &nbsp; Sound name</span><br>
+      <span style="font-family: monospace;">&lt;light&gt; &nbsp;
+&nbsp;&nbsp; Name of the LED light pattern</span><br>
+      <span style="font-family: monospace;">&lt;semantics&gt;&nbsp;
+Semantics name</span><br>
+      <span style="font-family: monospace;">&lt;wait&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Wait flag for the end of a motion [0: Don't wait, 1: Wait]</span><br>
+      </div>
+      <h5>Description </h5>
+This command makes AIBO move to the starting
+pose
+of the specified &lt;motion&gt;. The motion names, specified with
+&lt;motion&gt;, varies depending on &lt;region&gt;. Refer to the
+following files for the motion names specified to each region, and for
+the starting pose of each motion.<br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;region&gt;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;&nbsp; .cfg file<br>
+AIBO (Motion of the whole body)&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/monet_01(00).cfg<br>
+HEAD (Motion of the
+head)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/head_01(00).cfg<br>
+LEGS (Motion of the 4 legs)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/legs_01(00).cfg<br>
+TAIL (Motion of the tail) &nbsp; &nbsp; &nbsp; &nbsp;
+/OPEN-R/SONY/CONF/tail_01(00).cfg<br>
+      </div>
+      <br>
+The 01.cfg files can be modified to change the
+motion name. The 00.cfg files are not editable. These are the only
+motions that are included as system motions. NOTE: The system motion
+names should not be changed. <br>
+      <br>
+You can specify &lt;sound&gt;/&lt;light&gt;,
+the sound and the light that should be played back while AIBO moves to
+the starting pose of a motion. The synchronization of the motion and
+sound/light is not controllable, because the transition from the
+current posture to the starting one varies depending on the current
+posture. The sound and the light are played back when you execute the
+POSE command. <br>
+      <br>
+Specify 1 to &lt;wait&gt; and the sound/light
+is not played back until AIBO moves to the starting pose of a motion. <br>
+      <br>
+* When you turn on AIBO, it is in an unknown
+pose. To change the pose from the unknown, specify the sleep pose so
+that the front and the rear legs do not collide with each other. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">POSE:AIBO:slp_slp:::1</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="PLAY"></a><br>
+      <h3>PLAY - Make AIBO perform a motion </h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"> Common format:<br>
+      <span style="font-family: monospace;">PLAY:&lt;region&gt;:&lt;motion&gt;:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;<br>
+      <br>
+PLAY:AIBO:&lt;aibo&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Motion of the whole body<br>
+PLAY:HEAD:&lt;head&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Motion of the head only<br>
+PLAY:LEGS:&lt;legs&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Motion of the legs only<br>
+PLAY:TAIL:&lt;tail&gt;[:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Motion of the tail only<br>
+      <br>
+PLAY:HLT:&lt;head&gt;:&lt;legs&gt;:&lt;tail&gt;:&lt;sound&gt;:&lt;light&gt;:&lt;wait&gt;HEAD+LEGS+TAIL<br>
+PLAY:ESC:&lt;semantics&gt;[:&lt;wait&gt;:&lt;semantics&gt;:&lt;semantics&gt;:&lt;semantics&gt;]<br>
+      <br>
+PLAY:SOUND:&lt;sound&gt;[:&lt;volume&gt;:&lt;if_not_busy&gt;:&lt;wait&gt;]&nbsp;&nbsp;
+Playback of sound<br>
+PLAY:LIGHT:&lt;light&gt;[:&lt;repeat&gt;:&lt;if_not_busy&gt;:&lt;wait&gt;]&nbsp;&nbsp;
+Playback of light (LED pattern) </span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;region&gt;
+&nbsp; &nbsp; Regions [ AIBO | HEAD | LEGS | TAIL ]<br>
+&lt;motion&gt; &nbsp; &nbsp; Motion name<br>
+&lt;aibo&gt;&nbsp;&nbsp; &nbsp; &nbsp; Motion name of the whole body<br>
+&lt;head&gt;&nbsp;&nbsp; &nbsp; &nbsp; Motion name of the head<br>
+&lt;legs&gt;&nbsp;&nbsp; &nbsp; &nbsp; Motion name of the 4 legs<br>
+&lt;tail&gt;&nbsp;&nbsp; &nbsp; &nbsp; Motion name of the tail<br>
+&lt;sound&gt;&nbsp;&nbsp; &nbsp;&nbsp; Sound name.&nbsp;&nbsp; Volume =
+0 to
+100. &nbsp; Default = Sound_volume<br>
+&lt;semantics&gt;&nbsp; Semantics name<br>
+&lt;wait&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wait flag for the end
+of a motion [0: Don't wait, 1: Wait]<br>
+      </div>
+      <h5>Description</h5>
+This command makes AIBO perform the specified
+&lt;motion&gt;. The motion names, specified with &lt;motion&gt;, vary
+depending on &lt;region&gt;. Refer to the following files for the
+motion names specified to each &lt;region&gt;, and the starting pose of
+each &lt;motion&gt;. <br>
+      <br>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;region&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.cfg file</span><br>
+      <span style="font-family: monospace;">AIBO (Motion of the whole
+body)&nbsp;&nbsp;&nbsp;&nbsp; /OPEN-R/SONY/CONF/monet_01(00).cfg</span><br>
+      <span style="font-family: monospace;">HEAD (Motion of the
+head)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/head_01(00).cfg</span><br>
+      <span style="font-family: monospace;">LEGS (Motion of the 4
+legs)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/legs_01(00).cfg</span><br>
+      <span style="font-family: monospace;">TAIL (Motion of the
+tail)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/OPEN-R/SONY/CONF/tail_01(00).cfg</span><br>
+      </div>
+      <br>
+The 01.cfg files define the list of external
+motions. The 00.cfg files define the list of internal motions.<br>
+      <br>
+To let AIBO make a specific motion, you can
+check if AIBO is currently in the starting pose of that motion. If it
+is not in the starting pose, the pose automatically changes to the
+starting pose. AIBO only performs &lt;motion&gt; when it is in the
+starting pose.<br>
+      <br>
+You can specify &lt;sound&gt;/&lt;light&gt;,
+the sound and the light to be played back in sync with &lt;motion&gt;.
+&lt;sound&gt;/&lt;light&gt; is played back in sync with &lt;motion&gt;
+when AIBO is in the starting pose.<br>
+      <br>
+Specify 1 to &lt;wait&gt; and the processes are
+blocked until AIBO finishes the motion.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">PLAY:AIBO:oStanding:::1</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="MOVE"></a><br>
+      <h3> MOVE - Make AIBO perform a built-in motion </h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"> Common format:<br>
+      <span style="font-family: monospace;">MOVE:&lt;region&gt;:&lt;motion&gt;:&lt;arg1&gt;:&lt;arg2&gt;:&lt;arg3&gt;:&lt;arg4&gt;<br>
+      <br>
+      </span><span style="font-family: monospace;">MOVE:AIBO:&lt;aibo&gt;
+AIBO performs built-in motions (e.g. getting up
+from the fall-down state)<br>
+      <br>
+      </span><span style="font-family: monospace;">MOVE:LEGS:WALK:&lt;w_style&gt;:&lt;dir&gt;
+Walks.</span><br>
+      <span style="font-family: monospace;">MOVE:LEGS:STEP:&lt;w_style&gt;:&lt;dir&gt;:&lt;steps&gt;
+Walks.
+(StepWalk)</span><br>
+      <span style="font-family: monospace;">MOVE:LEGS:KICK:&lt;k_style&gt;:&lt;deg&gt;
+Performs a kick motion.<br>
+      <br>
+      </span><span style="font-family: monospace;">MOVE:HEAD:HOME Moves
+the head to the home position.</span><br>
+      <span style="font-family: monospace;">MOVE:HEAD:ABS:&lt;tilt&gt;:&lt;pan&gt;:&lt;roll&gt;:&lt;time&gt;
+Moves
+the head to the absolute position.</span><br>
+      <span style="font-family: monospace;">MOVE:HEAD:REL:&lt;tilt&gt;:&lt;pan&gt;:&lt;roll&gt;:&lt;time&gt;
+Moves
+the head to a relative position.</span><br>
+      <span style="font-family: monospace;">MOVE:HEAD:C-TRACKING Moves
+the head in the track of a color.</span><br>
+      <span style="font-family: monospace;">MOVE:HEAD:C-TRACKING:&lt;time&gt;
+Moves the head in the track of a
+color.<br>
+      <br>
+      </span><span style="font-family: monospace;">MOVE:TAIL:HOME Moves
+the tail to the home position.</span><br>
+      <span style="font-family: monospace;">MOVE:TAIL:ABS:&lt;tilt&gt;:&lt;pan&gt;:&lt;time&gt;
+Moves the tail to
+the absolute position.</span><br>
+      <span style="font-family: monospace;">MOVE:TAIL:SWING:&lt;tilt&gt;:&lt;pan&gt;:&lt;time&gt;
+Swings the tail.</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;region&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Region [ AIBO | HEAD | LEGS | TAIL ]<br>
+&lt;motion&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Motion name<br>
+&lt;arg1&gt; to &lt;arg4&gt; &nbsp; Argument (depending on
+commands)<br>
+      <br>
+&lt;aibo&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Built-in motion name of the whole body<br>
+      <div style="margin-left: 160px;">&nbsp;NToStand&nbsp;&nbsp;&nbsp;&nbsp;
+From unknown pose to the standing pose<br>
+&nbsp;NToSleep&nbsp;&nbsp;&nbsp;&nbsp; From unknown pose to the
+sleeping pose<br>
+&nbsp;NToSit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From unknown pose to
+the
+sitting pose<br>
+&nbsp;NToPStation&nbsp; From unknown pose to the station preparation
+pose<br>
+&nbsp;PSToStation&nbsp; From station preparation pose to station pose<br>
+&nbsp;NToFD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; From unknown pose
+to
+fallen down state (no motion occurs)<br>
+&nbsp;ReactiveGU &nbsp; AIBO recovers from the fallen down state to
+standing
+pose\<br>
+      </div>
+      <br>
+&lt;w_style&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Walking style [ 0 to 10 | 12(R-Turn) | 13(L-Turn) ]<br>
+&lt;k_style&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Kicking style [ 14(R-Kick) | 15(L-Kick) ]<br>
+      <br>
+&lt;dir&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Advancing direction [ 1 to 6 ] <br>
+      </div>
+      <div style="font-family: monospace;">
+      <div style="margin-left: 200px;">&nbsp;1:Front<br>
+&nbsp;2:Right-front<br>
+&nbsp;3:Left-front<br>
+&nbsp;4:Right side<br>
+&nbsp;5:Left side<br>
+&nbsp;6:Move backward&nbsp;</div>
+      </div>
+      <div style="margin-left: 40px; font-family: monospace;"><br>
+&lt;deg&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Kicking direction (angle) [ -90 to 90 ] Unit:[degree]<br>
+&lt;steps&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The number of repeated steps [ 0 to 9999 ]<br>
+&lt;tilt&gt; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+Tilting angle [ -180 to 180 ] Unit:[degree]<br>
+&lt;pan&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; Panning angle [ -180 to 180 ] Unit:[degree]<br>
+&lt;roll&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+Rolling angle [ -180 to 180 ] Unit:[degree]<br>
+&lt;time&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; Moving time [ 0 to 30000 ] Unit:[ms]<br>
+      </div>
+      <h5>Description</h5>
+This command makes AIBO perform the built-in motion specified with
+&lt;motion&gt;.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> MOVE:LEGS:WALK:1:1</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="STOP"></a><br>
+      <h3> STOP - stops a motion</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;">Common format:<br>
+      <span style="font-family: monospace;">STOP:&lt;region&gt;</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:AIBO stops the whole
+body.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:LEGS stops the motion
+of the legs.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:HEAD stops the motion
+of the head.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:TAIL stops the motion
+of the tail.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:SOUND stops the
+playback of sound.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">STOP:LIGHT stops the
+playback of sound.</span><br style="font-family: monospace;">
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;region&gt; Regions [ AIBO | HEAD |
+LEGS | TAIL ]</span><br style="font-family: monospace;">
+      </div>
+      <h5>Description</h5>
+This command stops the motion of AIBO. Motions kept in the queue are
+all discarded. <br>
+When AIBO is performing a motion, it stops motions after completing it.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">STOP:AIBO</span><br>
+      <br>
+      <hr><br>
+      <a name="QUIT"></a><br>
+      <h3> QUIT - Stops a motion abruptly</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;">Common format<br>
+      <span style="font-family: monospace;">QUIT:&lt;region&gt;<br>
+      <br style="font-family: monospace;">
+      </span><span style="font-family: monospace;">QUIT:AIBO abruptly
+stops the motion of the whole body.</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">QUIT:LEGS abruptly stops
+the 4 legs.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">QUIT:HEAD abruptly stops
+the head.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">QUIT:TAIL abruptly stops
+the tail.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">QUIT:SOUND (equals
+STOP:SOUND) stops the sound.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">QUIT:LIGHT (equals
+STOP:LIGHT) stops the light.</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;region&gt;
+Regions [ AIBO | HEAD | LEGS |
+TAIL ]<br>
+      </div>
+      <h5>Description</h5>
+This command stops current performing motion abruptly.&nbsp;
+Any queued motions are discarded.&nbsp;&nbsp; Motion posture (of
+effected region) reset to oNEUTRAL. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> QUIT:AIBO</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="WAIT"></a><br>
+      <h3> WAIT - Make AIBO wait for the completion of a motion (Sync)</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">WAIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Wait for the completion of a given motion
+currently being executed.<br>
+      <br>
+WAIT:AIBO&nbsp;&nbsp;&nbsp; Wait for the completion of the motion of
+the whole body
+currently being executed.<br>
+WAIT:HEAD&nbsp;&nbsp;&nbsp; Wait for the completion of the motion of
+the head currently
+being executed <br>
+WAIT:LEGS&nbsp;&nbsp;&nbsp; Wait for the completion of the motion of
+the legs currently
+being executed <br>
+WAIT:TAIL&nbsp;&nbsp;&nbsp; Wait for the completion of the motion of
+the tail currently
+being executed <br>
+WAIT:SOUND&nbsp;&nbsp; Wait for the completion of the playback of sound.<br>
+WAIT:LIGHT&nbsp;&nbsp; Wait for the completion of the playback of light.<br>
+      <br>
+WAIT:&lt;ms&gt;&nbsp;&nbsp;&nbsp; Wait for the specified amount of time.<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;ms&gt; Millisecond [1 to 30000]
+Note: The
+resolution is 32[ms].</span><br>
+      </div>
+      <h5>Description</h5>
+This command is used to suspend AIBO's next
+motion until a specified condition is met. The execution of the program
+is suspended until the condition is met.&nbsp;&nbsp;&nbsp; If you
+execute &lt;WAIT&gt; when nothing is in
+the queue, the process is suspended, but restarted in about 32[ms]. <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> WAIT:AIBO</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="COLON"></a><br>
+      <h3>:&lt;label&gt; - Defines a line to be a label</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">:&lt;label&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A given character string</span><br>
+      </div>
+      <h5>Description</h5>
+This command defines a label to be used for a
+destination to which the process jumps to by using &lt;GO&gt; or
+&lt;IF&gt;. It can be used also for the name of a subroutine called by
+&lt;CALL&gt;. <br>
+      <br>
+&lt;label&gt; cannot exist by itself. <br>
+&lt;label&gt; is valid for the entire program (globally). <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">GO:Skip</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Banzai_sit_C //
+Never reach this line.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">:Skip</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Banzai_sit_C //
+Skip to here</span><br style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><br>
+      <a name="GO"></a><br>
+      <h3>GO - Jumps the process to the specified label</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">GO:&lt;label&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;label&gt; &nbsp; Label of the
+destination to which the
+process will jump to</span><br>
+      </div>
+      <h5>Description</h5>
+This command jumps the process to the line with
+&lt;label&gt;. It is prohibited to use &lt;GO&gt; across subroutines or
+scopes. Using it in such a way would destroy the stack, and the program
+would run out of control. You may use it to break a loop structure.
+Refrain from using &lt;GO&gt; as much as possible. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">GO:Skip</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Banzai_sit_C&nbsp;&nbsp;
+// Never reach this line.</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">:Skip</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Banzai_sit_C&nbsp;&nbsp;
+// Skip to here.</span><br style="font-family: monospace;">
+      <br>
+      <hr><br>
+      <a name="IF"></a><br>
+      <h3>IF - conditional test statement</h3>
+      <h5>Format 1:</h5>
+      <div style="margin-left: 40px; font-family: monospace;">IF:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;:THEN<br>
+&nbsp;&nbsp; // then-block<br>
+ELSE<br>
+&nbsp;&nbsp; // else-block<br>
+ENDIF<br>
+      </div>
+      <h5>Format 2:</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">IF:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;:CALL:&lt;label&gt;[:&lt;argc&gt;]</span><br>
+      </div>
+      <h5>Format 3:</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">IF:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;:BREAK</span><br>
+      </div>
+      <h5>Format 4:</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">IF:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;:&lt;then&gt;[:&lt;else&gt;]</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;v1&gt;&nbsp;
+Operand 1<br>
+&lt;op&gt;&nbsp; Comparison operator<br>
+&lt;v2&gt;&nbsp; Operand 2<br>
+      <br>
+List of comparison operators <br>
+&nbsp; =&nbsp;&nbsp;&nbsp;&nbsp; Equal to<br>
+&nbsp; &lt;&gt;&nbsp;&nbsp;&nbsp; Not equal to<br>
+&nbsp; &lt;&nbsp;&nbsp;&nbsp;&nbsp; Less than<br>
+&nbsp; &lt;=&nbsp;&nbsp;&nbsp; Less than or equal to<br>
+&nbsp; &gt;&nbsp;&nbsp;&nbsp;&nbsp; Greater than<br>
+&nbsp; &gt;=&nbsp;&nbsp;&nbsp; Greater than or equal to<br>
+&nbsp; &amp;&nbsp;&nbsp;&nbsp;&nbsp; Bitwise logical AND<br>
+&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; Bitwise logical OR<br>
+&nbsp; ^&nbsp;&nbsp;&nbsp;&nbsp; Bitwise exclusive OR<br>
+&nbsp; &amp;&amp;&nbsp;&nbsp;&nbsp; Logical AND (result 1 if both
+operands non-zero.&nbsp; 0 otherwise.)<br>
+&nbsp; ||&nbsp;&nbsp;&nbsp; Logical OR (result 1 if either operand
+non-zero.&nbsp; 0 otherwise.)<br>
+      <br>
+      <br>
+&lt;label&gt;&nbsp; Label of a subroutine<br>
+&lt;argc&gt;&nbsp;&nbsp; The number of the arguments of a subroutine<br>
+&lt;then&gt; &nbsp; Label of the jump destination when conditions are
+met<br>
+&lt;else&gt; &nbsp; Label of the jump destination when conditions are
+not met<br>
+      </div>
+      <br>
+      <h5>Description</h5>
+This command evaluates a conditional expression
+consisting of &lt;v1&gt;, &lt;op&gt; and &lt;v2&gt;, and to carry out
+processes in accordance with the results.<br>
+&nbsp;<br>
+In the case of Format 1: If the conditional
+express is true, the program executes &lt;THEN Block&gt;. If the
+conditional express is false, it executes &lt;ELSE Block&gt;.
+&lt;ELSE~&gt; and &lt;ELSE Block~&gt; can be omitted. Make sure to
+terminate the statement with ENDIF. <br>
+      <br>
+In the case of Format 2: If the conditional
+expression is true, it calls the function &lt;label&gt;. For the
+arguments subsequent to &lt;label&gt;, refer to the
+Description of CALL.<br>
+      <br>
+In the case of Format 3: If the conditional
+expression is true, it executes BREAK. It is used for exiting a loop.
+For further details, refer to the Description of BREAK.<br>
+      <br>
+In the case of Format 4: If the conditional
+expression is true, it jumps the process to the &lt;then&gt; label. If
+the conditional expression is false, it jumps the process to the
+&lt;else&gt; label. Refer to the note of GO. Refrain from using this
+format as much as possible.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">IF:x:=:0:THEN</span><br
+ style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;">// "x is 0"</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">ELSE</span><br
+ style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;">// "x is not 0"</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">ENDIF</span><br
+ style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><br>
+      <a name="SWITCH"></a><br>
+      <h3>SWITCH - branches the process. (Sets the context value)</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">SWITCH:&lt;value&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;value&gt; Variable names or
+constants</span><br>
+      </div>
+      <h5>Description</h5>
+This command sets the value of &lt;v&gt; as
+a context value. It implements multi-way branching conditions together
+with CASE statements<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">SWITCH:x</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:1:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 1"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 2"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "(two)"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:3:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 3"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 1"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 2"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 3"</span><br style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><br>
+      <a name="CSET"></a><br>
+      <h3>CSET - branches the process. (Sets the context value)</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">SET:&lt;value1&gt;:&lt;op&gt;:&lt;value2&gt;:&lt;value3&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;value1&gt;
+Operand 1<br>
+&lt;op&gt; Comparison operator<br>
+&lt;value2&gt; Operand 2<br>
+&lt;value3&gt; Variable names or constants<br>
+      </div>
+      <h5>Description</h5>
+This command evaluates the conditional
+expression
+consisting of &lt;v1&gt;, &lt;op&gt; and &lt;v2&gt;. If the results of
+the evaluation turn out to be true, the program sets the value of
+&lt;3&gt; as the context value. <br>
+      <br>
+CSET is a "skip" command.
+When CSET appears in succession, the program ignores all CSET's except
+the first one that turns out to be true. It implements multi-way
+branching conditions together with CASE statements. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">CSET:x:&lt;:10:1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CSET:x:&lt;:20:2</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CSET:x:&lt;:30:3</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CSET:x:&lt;:40:4</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CSET:x:&lt;:50:5</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:1:PLAY:AIBO:Akubi_sit
+//"x &lt; 10"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit
+//"x &lt; 20"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:3:PLAY:AIBO:Akubi_sit
+//"x &lt; 30"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:4:PLAY:AIBO:Akubi_sit
+//"x &lt; 40"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:5:PLAY:AIBO:Akubi_sit
+//"x &lt; 50"</span><br style="font-family: monospace;">
+      <br>
+      <hr><br>
+      <a name="CASE"></a><br>
+      <h3>CASE - Branches the process</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">CASE:&lt;const&gt;:&lt;command&gt;<br>
+CASE:ELSE:&lt;command&gt;<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;const&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Context value (It must be a
+constant.)<br>
+&lt;command&gt;&nbsp;&nbsp; Given R-CODE command (excluding CASE)<br>
+      </div>
+      <h5>Description</h5>
+This command executes &lt;command&gt; when the
+context value equals &lt;const&gt;.
+You can specify CASE:ELSE at the end of the contiguous CASE statements
+as well.
+If the context value does not equal &lt;const&gt; of any CASE
+statements, the program executes &lt;command&gt; of ELSE. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">SWITCH:x</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:1:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 1"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 2"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "(two)"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:3:PLAY:AIBO:Akubi_sit&nbsp;&nbsp;&nbsp;&nbsp;
+// "x = 3"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 1"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 2"</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:ELSE:PLAY:AIBO:Akubi_sit&nbsp;
+// "x is not 3"</span><br style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><a name="FOR"></a><a name="NEXT"></a><br>
+      <h3>FOR/NEXT - Loop structure</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">FOR:&lt;var&gt;:&lt;from&gt;:&lt;to&gt;[:&lt;step&gt;]<br>
+&nbsp; // nested commands<br>
+NEXT<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;var&gt;&nbsp;&nbsp;&nbsp;
+Loop variable<br>
+&lt;from&gt;&nbsp;&nbsp; Start value<br>
+&lt;to&gt;&nbsp;&nbsp;&nbsp;&nbsp; End value<br>
+&lt;step&gt;&nbsp;&nbsp; Increment value<br>
+      </div>
+      <h5>Description</h5>
+This command executes the command statements
+up to
+NEXT repeatedly by incrementing the value of a variable in steps of
+&lt;step&gt; from &lt;from&gt; to &lt;to&gt;. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">FOR:i:1:10</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Akubi_sit</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">WAIT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">NEXT</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">FOR:i:10:1:-1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Akubi_sit</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">WAIT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">NEXT</span><br
+ style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><a name="WHILE"></a><a name="WEND"></a><br>
+      <h3>WHILE/WEND - constitutes a loop structure.</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">WHILE:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;<br>
+&nbsp; // nested commands<br>
+WEND<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;v1&gt;
+Operand 1<br>
+&lt;op&gt; Comparison operator<br>
+&lt;v2&gt; Operand 2<br>
+      </div>
+      <h5>Description</h5>
+This command evaluates the conditional
+expression
+consisting of &lt;v1&gt;, &lt;op&gt; and &lt;v2&gt;, and executes the
+command statements up to WEND repeatedly as far as the evaluation
+results turn out to be true. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">SET:i:0</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">WHILE:i:&lt;:10</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PLAY:AIBO:Akubi_sit</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">WAIT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">WEND</span><br
+ style="font-family: monospace;">
+      <br>
+      <hr><br>
+      <a name="REPEAT"></a><a name="UNTIL"></a><br>
+      <h3> REPEAT/UNTIL - Loop
+structure</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">REPEAT<br>
+&nbsp;&nbsp; // nested commands<br>
+UNTIL:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;v1&gt;
+Operand 1<br>
+&lt;op&gt; Comparison operator<br>
+&lt;v2&gt; Operand 2<br>
+      </div>
+      <h5>Description</h5>
+This command executes the command statements
+up to UNTIL repeatedly until the evaluation results turn out to be
+true. <br>
+It executes the command statements at least
+once. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> SET:i:0</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">REPEAT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+PLAY:AIBO:Akubi_sit</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; WAIT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">UNTIL:i:&gt;=:10</span><br
+ style="font-family: monospace;">
+      <br>
+      <hr><a name="DO"></a><a name="LOOP"> </a> <br>
+      <h3> DO - LOOP - Loop structure</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">DO[:WHILE|UNTIL:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;]<br>
+&nbsp;&nbsp; // nested commands<br>
+LOOP[:WHILE|UNTIL:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;]<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;v1&gt;
+Operand 1<br>
+&lt;op&gt; Comparison operator<br>
+&lt;v2&gt; Operand 2<br>
+      </div>
+      <h5>Description</h5>
+This command executes the command statements
+between DO and LOOP repeatedly. <br>
+      <br>
+You can specify a conditional expression to DO
+and LOOP. When the condition is met, the program exits from the loop. <br>
+      <br>
+In case that you specify WHILE, the loop
+continues while the value of a conditional expression remains true. In
+case that you specify UNTIL, the program exits from the loop when the
+value of a conditional expression becomes true.<br>
+      <br>
+If you fail to specify a conditional
+expression to DO or LOOP, the program falls into an infinite loop.<br>
+      <br>
+      <br>
+      <hr><a name="BREAK"></a><br>
+      <h3> BREAK - Break out of loop structure</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">BREAK[:&lt;break_level&gt;]</span><br>
+      <span style="font-weight: bold;"></span></div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;break_level&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Number of nested loop structures you want to break out of.&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The number must be a constant (cannot specify a variable
+&lt;break_level&gt;).<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; If no
+value is specified, default is 1.<br>
+      </div>
+      <h5>Description</h5>
+This command exits from the currently running
+loop structure. You can use it for all loop structures in common. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> FOR:i:1:100</span><br
+ style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;">IF:i:&gt;:10:BREAK</span><br
+ style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;">PLAY:AIBO:Akubi_sit</span><br
+ style="font-family: monospace;">
+&nbsp;&nbsp; <span style="font-family: monospace;">WAIT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">NEXT</span><br
+ style="font-family: monospace;">
+      <br>
+      <hr><br>
+      <a name="CALL"></a><br>
+      <h3> CALL - calls a subroutine.</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">CALL:&lt;label&gt;[:&lt;argc&gt;]<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;label&gt;&nbsp;&nbsp;&nbsp;
+Label of a subroutine to call<br>
+&lt;argc&gt;&nbsp;&nbsp;&nbsp;&nbsp; The number of arguments PUSHed in
+advance\<br>
+      </div>
+      <h5>Description</h5>
+This command calls a subroutine with &lt;label&gt;.
+This command allows you to push a given number of arguments onto the
+stack with the PUSH command and pop them from the stack. You should
+specify to &lt;argc&gt; the number of arguments pushed onto the stack.<br>
+      <br>
+When this command calls a subroutine, the
+previous context value is saved to the stack. It is restored when the
+execution of RETURN brings back the program to its previous location. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> CALL:sub1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Argument 1</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:200&nbsp;&nbsp;&nbsp;&nbsp;
+// Argument 2</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:3000&nbsp;&nbsp;&nbsp;
+// Argument 3</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CALL:sub2:3</span><br
+ style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><a name="ARG"></a><br>
+      <h3> ARG - fetches an Argument of a subroutine</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">ARG:&lt;var&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;var&gt; Variable name</span>\<br>
+      </div>
+      <h5>Description</h5>
+This command fetches the value of the argument of
+a
+subroutine to the variable &lt;var&gt;. The same number of arguments as
+the number that were pushed to the stack with PUSH must be fetched with
+ARG. The arguments should be fetched using the first-in, first-out
+basis of the order in which they were pushed to the stack.<br>
+      <br>
+Note that the order of fetch by this command
+is not done on the first-in, last-out basis, even though it is common
+for a normal stacks.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">// Calling from:</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:10</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:200</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">PUSH:3000</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CALL:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">// Subroutine:</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">ARG:arg1 // arg1 &lt;- 10</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">ARG:arg2 // arg2 &lt;- 200</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">ARG:arg3 // arg3 &lt;- 3000</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;"></span><br>
+      <hr><br>
+      <a name="RETURN"></a><br>
+      <h3> RETURN - returns the program from a subroutine</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">RETURN[:&lt;return_value&gt;]</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;return_value&gt;&nbsp;&nbsp;
+Return value</span><br>
+      </div>
+      <h5>Description</h5>
+This command returns the program from a
+subroutine. You can specify a return value with &lt;return_value&gt;.
+The calling source fetches a return value with POP.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">// Calling from:</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">CALL:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">POP:rc&nbsp;&nbsp;&nbsp; //
+A return value (123) is fetched to the variable rc.</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// This is always required when you call a subroutine that returns
+a return value.</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">// Subroutine:</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">RETURN:123<br>
+      <br style="font-family: monospace;">
+      </span> <br>
+      <hr><br>
+      <a name="RET"></a><br>
+      <h3> RET - returns the program from a subroutine
+(Switching version of context values)</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">RET:&lt;context&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;context&gt;&nbsp;&nbsp; Context
+value</span><br>
+      </div>
+      <h5>Description</h5>
+This command returns the program from a
+subroutine.
+After the return from the subroutine, a context value is set to
+&lt;context&gt;. When the value of &lt;context&gt; is 0, the context
+value at the time of having called the subroutine is set there again.<br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;">// Calling from:</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CALL:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:1:PLAY:AIBO:Akubi_sit
+//"case 1..."</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:2:PLAY:AIBO:Akubi_sit
+//"case 2..."</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">CASE:3:PLAY:AIBO:Akubi_sit
+//"case 3..."</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">// Subroutine:</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">:sub</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">RET:1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">RET:2</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">...</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">RET:3</span><br
+ style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><br>
+      <a name="ONCALL"></a><br>
+      <h3> ONCALL - registers/deletes an interrupt processing routine</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">ONCALL:&lt;v1&gt;:&lt;op&gt;:&lt;v2&gt;:&lt;label&gt;[:&lt;resume_type&gt;:&lt;resume_label&gt;]<br>
+      <br>
+ONCALL:&lt;-n&gt;<br>
+      </div>
+      <br>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;v1&gt;
+Operand 1<br>
+&lt;op&gt; Comparison operator<br>
+&lt;v2&gt; Operand 2<br>
+      <br>
+&lt;label&gt; Label of an interrupt processing routine<br>
+      <br>
+&lt;resume_type&gt; Type of return<br>
+&lt;resume_label&gt; Label of the destination of jump after return<br>
+      <br>
+&lt;-n&gt; The number of interrupt processing routines that should be
+registered/deleted<br>
+      </div>
+      <br>
+      <h5>Description</h5>
+This command registers an interrupt
+processing
+routine that should be called when the condition based on &lt;v1&gt;,
+&lt;op&gt; and &lt;v2&gt; is met. The method of specifying a condition
+is the same as that of IF.<br>
+      <br>
+Return from an interrupt processing routine
+is done as follows:<br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;resume_type&gt;<br>
+&nbsp; 0&nbsp;&nbsp; Return to the statement where the interrupt took
+place.<br>
+&nbsp; 1&nbsp;&nbsp; Return to the statement where the interrupt took
+place and then
+GOes to &lt;resume_label&gt;.<br>
+&nbsp; 2&nbsp;&nbsp; Return to the location of the ONCALL statement.<br>
+&nbsp; 3&nbsp;&nbsp; Return to the location of the ONCALL statement and
+then GOes to
+&lt;resume_label&gt;.<br>
+&nbsp; 4 &nbsp; Return to the beginning of the program (all the stacks
+are
+cleared).<br>
+&nbsp; 5 &nbsp; Return to the beginning of the program and then GOes to
+&lt;resume_label&gt;.<br>
+      </div>
+      <br>
+      <br>
+In the cases of above (2) ~ (5), the ONCALL
+commands registered after the corresponding ONCALL are deleted. In the
+cases of (3) and (5), however, the ONCALL commands registered at the
+same level as the return location are stored.<br>
+      <br>
+The evaluation of conditions is done for
+each execution of statements (one line of R-CODE).<br>
+      <br>
+Nested interrupts are prohibited (ignored). <br>
+      <br>
+ONCALL is affected nested subroutines.
+ONCALL registered in a given subroutine is disabled once the program
+exits from that subroutine.<br>
+      <br>
+Specifying &lt;-n&gt; deletes the "n" pieces
+of ONCALL's registered right before the specification. &lt;-n&gt;
+should be a negative number.<br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> ONCALL:Leg_RF_sw:=:1:9000 <br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="RESUME"></a><br>
+      <h3> RESUME - returns the program from an interrupt routine</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">RESUME</span><br>
+      </div>
+      <br>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;">None<br>
+      </div>
+      <br>
+      <h5>Description</h5>
+This command returns the program from an
+interrupt routine.
+It functions similarly to RETURN from a CALL.
+You should not use RETURN to return the program from the execution of
+an interrupt routine. The returning location relies on
+&lt;resume_type&gt; of ONCALL.<br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> RESUME</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="GLOBAL"></a><br>
+      <h3> GLOBAL - declares a variable as a global variable.</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">GLOBAL:&lt;var&gt;[:&lt;init_value&gt;]</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;var&gt;
+Variable name<br>
+&lt;init_value&gt; Initial value</div>
+      <h5>Description</h5>
+This command declares a global variable
+&lt;var&gt;. When you specify &lt;init_value&gt; as a global variable,
+that value is set as an initial value. <br>
+      <br>
+If you use a variable name not declared
+either as a global or local variable, the R-CODE system automatically
+generates a global variable with that particular name.\<br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> GLOBAL:x:0<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="LOCAL"></a><br>
+      <h3> LOCAL - declares a variable as a local variable.</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">LOCAL:&lt;var&gt;[:&lt;init_value&gt;]<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;var&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Variable name<br>
+&lt;init_value&gt;&nbsp;&nbsp; Initial value<br>
+      </div>
+      <h5>Description</h5>
+This command declares a local variable
+&lt;var&gt;. When you specify &lt;init_value&gt; as a local variable,
+that value is set as an initial value. <br>
+      <br>
+A local variable is prepared on a stack. When
+the execution of the program exits from a subroutine or a scope, the
+space for the local variable is released. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> LOCAL:y:0<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="LET"></a><br>
+      <h3> LET - assigns a value to a variable</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">LET:&lt;var&gt;:&lt;value&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;var&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Variable name</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&lt;value&gt;&nbsp;&nbsp;
+Value (a variable name or a constant)</span><br
+ style="font-family: monospace;">
+      </div>
+      <h5>Description</h5>
+This command assigns a value to a variable.
+It does not have special functions like SET does. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> LET:x:1</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="SET"></a><br>
+      <h3> SET - assigns a value to a variable</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">SET:&lt;var&gt;:&lt;value&gt;<br>
+SET:COLOR:&lt;color&gt;<br>
+SET:&lt;joint&gt;:&lt;angle&gt;<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;var&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Variable name<br>
+&lt;value&gt;&nbsp;&nbsp; Value (a variable name or a constant)<br>
+&lt;color&gt;&nbsp;&nbsp; One of the following color names:<br>
+      <div style="margin-left: 80px;">&nbsp; ORANGE <br>
+&nbsp; PINK <br>
+&nbsp; YELLOW <br>
+&nbsp; BLUE <br>
+&nbsp; GREEN <br>
+      </div>
+      <br>
+&lt;joint&gt;&nbsp;&nbsp; Joint name to be set<br>
+&lt;angle&gt; &nbsp; New angle<br>
+      </div>
+      <h5>Description</h5>
+This command sets a value to a variable. Some
+variables have the following special functions. <br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">Power&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Controls On/Off of the power supply of
+motors.<br>
+      <br>
+Head_tilt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Moves a joint to the specified
+angle.<br>
+Head_pan <br>
+Head_roll&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do not use these concurrently
+to PLAY/MOVE!<br>
+Head_mouth&nbsp;&nbsp;&nbsp;&nbsp; <br>
+Tail_1<br>
+Tail_2<br>
+Leg_RF_1<br>
+Leg_RF_2<br>
+Leg_RF_3<br>
+Leg_LF_1<br>
+Leg_LF_2<br>
+Leg_LF_3<br>
+Leg_RR_1<br>
+Leg_RR_2<br>
+Leg_RR_3<br>
+Leg_LR_1<br>
+Leg_LR_2<br>
+Leg_LR_3<br>
+      </div>
+      <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> SET:Power:1<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="DEF:POSE"></a><br>
+      <h3> DEF:POSE - registers a pose</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">DEF:POSE:&lt;pose&gt;<br>
+&nbsp;&nbsp; &lt;joint&gt;:&lt;angle&gt;<br>
+&nbsp;&nbsp; &lt;joint&gt;:&lt;angle&gt;<br>
+&nbsp;&nbsp; ...<br>
+END<br>
+      <br>
+DEF:POSE:&lt;pose&gt;[:&lt;N&gt;]<br>
+      </div>
+      <br>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;pose&gt;
+Pose name to be registered to
+pose_list<br>
+&lt;joint&gt; Joint name<br>
+&lt;angle&gt; Angle<br>
+      <br>
+&lt;N&gt; The number of poses to register<br>
+      </div>
+      <br>
+      <h5>Description</h5>
+This command registers the pose, which
+is
+taken by
+setting the angle specified with &lt;angle&gt; to the joint specified
+with &lt;joint&gt;, to pose_list. You do not need to set all 18 joints.
+You can complete the settings with END. <br>
+      <br>
+You can register poses from &lt;pose&gt;1
+to &lt;pose&gt; N all together with the use of &lt;pose&gt;:N. Assign 0
+to &lt;pose&gt; to initialize it. In this case, you do not need to
+state END. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> DEF:POSE:pose1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Head_pan:40</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Head_roll:50</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Leg_LF_1:90</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">END</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">DEF:POSE:p:10 // &lt;- The
+poses from p1 to p10 are registered to
+pose_list<br>
+      <br style="font-family: monospace;">
+      </span> <br>
+      <hr><br>
+      <a name="DEF:MOVE"></a><br>
+      <h3> DEF:MOVE - defines MOVE</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">DEF:MOVE:&lt;move&gt;<br>
+&nbsp;&nbsp; &lt;time&gt;:&lt;pose1&gt;<br>
+&nbsp;&nbsp; &lt;time&gt;:&lt;pose2&gt;<br>
+&nbsp;&nbsp; ...<br>
+END<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;move&gt;
+Motion name to register<br>
+&lt;time&gt; Transition time from the current pose to &lt;pose1&gt;<br>
+&lt;pose1&gt; Name of a pose to take<br>
+      </div>
+      <h5>Description</h5>
+This command registers &lt;move&gt;,
+with
+which
+AIBO takes the pose specified with &lt;pose&gt; within the time
+specified with &lt;time&gt;, to move_list. You can complete the
+settings with END. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> DEF:MOVE:move1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; 1000:pose1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; 1000:pose2</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; 1000:pose3</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">END</span><br
+ style="font-family: monospace;">
+      <br>
+      <br>
+      <hr><br>
+      <a name="POSE:APK"></a><br>
+      <h3> POSE:APK - takes a pose</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">POSE:APK:&lt;pose&gt;[:&lt;time&gt;]</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;pose&gt;
+Pose name to take<br>
+&lt;time&gt; Transition time from the current pose to &lt;pose&gt;<br>
+      </div>
+      <br>
+      <h5>Description</h5>
+This command finds the pose name,
+specified
+with &lt;pose&gt;, from pose_list and makes AIOB take that pose. You
+can specify the transition time from the current pose to the specific
+one with &lt;time&gt;. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> POSE:APK:pose1:5000<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="PLAY:APK"></a><br>
+      <h3> PLAY:APK - performs a motion</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">PLAY:APK:&lt;move&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;move&gt; Name of a motion to
+perform</span><br>
+      </div>
+      <h5>Description</h5>
+This command finds the motion name
+corresponding to an argument from move_list and makes AIBO perform that
+motion. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> PLAY:APK:move1<br>
+      <br>
+      </span> <br>
+      <hr><a name="SET_POSE"></a><br>
+      <h3> SET_POSE - updates part of a pose</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">SET_POSE:&lt;pose&gt;:&lt;joint&gt;:&lt;angle&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;pose&gt;
+Pose name to update<br>
+&lt;joint&gt; Joint name which angle is to be updated<br>
+&lt;angle&gt; New angle<br>
+      </div>
+      <h5>Description</h5>
+This command updates the joint angle
+specified with &lt;joint&gt; of &lt;pose&gt; to &lt;angle&gt;. <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> SET_POSE:pose1:Head_pan:50
+// &lt;- Changes
+Head_pan of pose1 to a new angle of 50 degrees<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="SET_MOVE"></a><br>
+      <h3> SET_MOVE - updates part of a motion</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px; font-family: monospace;">SET_MOVE:&lt;move&gt;:&lt;index&gt;:&lt;time&gt;:&lt;pose&gt;<br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;move&gt;&nbsp;&nbsp;&nbsp; Motion
+name to update</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&lt;index&gt;&nbsp;&nbsp;
+Pose name to update</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&lt;time&gt;&nbsp;&nbsp;&nbsp;
+New time</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&lt;pose&gt;&nbsp;&nbsp;&nbsp;
+New pose</span><br style="font-family: monospace;">
+      </div>
+      <h5>Description</h5>
+This command changes the pose referred
+to by
+pose
+number &lt;index&gt; of &lt;move&gt; to &lt;pose&gt; with &lt;time&gt;.
+      <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;"> DEF:MOVE:move1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">1000:pose1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">1000:pose3</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">END</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">SET_MOVE:move1:1:5000:pose2&nbsp;
+// &lt;- To change 1000:pose3 to 5000:pose2<br>
+      <br style="font-family: monospace;">
+      </span> <br>
+      <hr><br>
+      <a name="REC"></a><br>
+      <h3> REC - records the joint angles of AIBO</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">REC:POSE:&lt;pose&gt;[:&lt;I&gt;]</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;pose&gt;&nbsp; Pose name to record</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&lt;I&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+Pose number</span><br style="font-family: monospace;">
+      </div>
+      <h5>Description</h5>
+      <br>
+This command reads and records the joint
+angles of
+AIBO.
+When you specify &lt;I&gt;, this command records the current joint
+angles of AIBO to poseI where the number I is the pose number defined
+with DEF:POSE:&lt;pose&gt;:N. <br>
+      <br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> REC:POSE:pose1<br>
+      <br>
+      </span> <br>
+      <hr><a name="LOAD_POSE"></a><br>
+      <h3> LOAD_POSE - loads a pose</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">LOAD_POSE:&lt;pose&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;pose&gt; Pose name to load</span><br>
+      </div>
+      <h5>Description</h5>
+This command loads &lt;pose&gt;.apk
+stored
+in OPEN-R\DATA\APK on the "Memory Stick" and adds it to pose_list.
+When the loaded &lt;pose&gt;.apk has the pose name already defined in
+pose_list, it is overwritten.<br>
+      <h5> Example</h5>
+      <span style="font-family: monospace;"> LOAD_POSE:pose1</span><br>
+      <br>
+      <br>
+      <hr><br>
+      <a name="SAVE_POSE"></a><br>
+      <h3>SAVE_POSE - saves a pose</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">SAVE_POSE:&lt;pose&gt;</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">&lt;pose&gt; Pose name to save</span><br>
+      </div>
+      <h5>Description</h5>
+This command saves a registered pose to
+OPEN-R\DATA\APK on the "Memory Stick" as &lt;pose&gt;.apk. <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">SAVE_POSE:pose1 // &lt;-
+pose1 in this
+statement is saved as pose1.apk on the "Memory Stick".<br>
+      <br>
+      </span> <br>
+      <hr><br>
+      <a name="LIMITER"></a><br>
+      <h3>LIMITER - controls the limiter</h3>
+      <h5>Format</h5>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">SET:LIMITER:ON/OFF</span><br>
+      </div>
+      <h5>Argument</h5>
+      <div style="margin-left: 40px;">None<br>
+      </div>
+      <h5>Description</h5>
+This command controls the limiter.
+Turning off the limiter allows AIBO to perform motions more quickly,
+but it has negative impacts such as additional loads to AIBO. <br>
+      <br>
+When AIBO moves from the angle A to B in
+time "t", its momentum per unit of time is expressed as (B-A)/t. If the
+limiter is turned on, however, the maximum value of its operating angle
+per unit of time is limited to a certain degree. If the limiter is
+turned off for the transition from the above A to B, you can set a
+shorter time to "t". <br>
+      <br>
+      <h5>Example</h5>
+      <span style="font-family: monospace;">SET:LIMITER:ON<br>
+      <br>
+      </span> <br>
+      <hr> <a name="SECTION3"></a> <br>
+      <h3>[ List of R-CODE System Variables ] </h3>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">Head_tilt Head: Angle of
+the first joint [degree]</span><br>
+      <span style="font-family: monospace;">Head_pan Head: Angle of the
+second joint [degree]</span><br>
+      <span style="font-family: monospace;">Head_roll Head: Angle of
+the third joint [degree]</span><br>
+      <span style="font-family: monospace;">Head_mouth Head: Angle of
+the mouth joint [degree]</span><br>
+      <span style="font-family: monospace;">Tail_1 Tail: Angle of the
+first joint [degree]</span><br>
+      <span style="font-family: monospace;">Tail_2 Tail: Angle of the
+second joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RF_1 Right-front leg:
+Angle of the first joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RF_2 Right-front leg:
+Angle of the second joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RF_3 Right-front leg:
+Angle of the third joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LF_1 Left-front leg:
+Angle of the first joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LF_2 Left-front leg:
+Angle of the second joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LF_3 Left-front leg:
+Angle of the third joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RR_1 Right-hind leg:
+Angle of the first joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RR_2 Right-hind leg:
+Angle of the second joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_RR_3 Right-hind leg:
+Angle of the third joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LR_1 Left-hind leg:
+Angle of the first joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LR_2 Left-hind leg:
+Angle of the second joint [degree]</span><br>
+      <span style="font-family: monospace;">Leg_LR_3 Left-hind leg:
+Angle of the third joint [degree]</span><br>
+      <span style="font-family: monospace;">Head_sw Head: Pressure
+sensor [10^-3Pa]</span><br>
+      <span style="font-family: monospace;">Distance Head: Obstacle
+sensor [mm]</span><br>
+      <span style="font-family: monospace;">Leg_RF_sw Right-front leg:
+Paw sensor [On:-1 Off:0]</span><br>
+      <span style="font-family: monospace;">Leg_LF_sw Left-front leg:
+Paw sensor [On:-1 Off:0]</span><br>
+      <span style="font-family: monospace;">Leg_RR_sw Right-hind leg:
+Paw sensor [On:-1 Off:0]</span><br>
+      <span style="font-family: monospace;">Leg_LR_sw Left-hind leg:
+Paw sensor [On:-1 Off:0]</span><br>
+      <span style="font-family: monospace;"> </span><br>
+      <span style="font-family: monospace;">Gsensor_status&nbsp;
+&nbsp;&nbsp; G sensor: Status 16bit flag (*3)</span><br>
+      <span style="font-family: monospace;">Gsensor_roll&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; G sensor: Roll angle [degree]</span><br>
+      <span style="font-family: monospace;">Gsensor_pitch&nbsp;&nbsp;
+&nbsp;&nbsp; G sensor: Pitch angle [degree]</span><br>
+      <span style="font-family: monospace;">Gsensor_yaw&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; G sensor: Yaw angle [degree]</span><br>
+      <span style="font-family: monospace;">Cdt_npixel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; Color sensor: The
+number of pixels [Pixels]</span><br>
+      <span style="font-family: monospace;">Touch_head&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Head touch
+sensor</span><br>
+      <span style="font-family: monospace;">Touch_head_time&nbsp;&nbsp;&nbsp;
+Head touch sensor: Length of time of the head's being
+pressed</span><br>
+      <span style="font-family: monospace;">Touch_head_press &nbsp;
+Head touch sensor: Average pressure</span><br>
+      <span style="font-family: monospace;">Touch_RF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Right-front leg: Paw sensor to detect ON-&gt;OFF OFF-&gt;ON </span><br>
+      <span style="font-family: monospace;">Touch_LF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Left-front leg: Paw sensor to detect ON-&gt;OFF OFF-&gt;ON</span><br>
+      <span style="font-family: monospace;">Touch_RR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Right-hind leg: Paw sensor to detect ON-&gt;OFF OFF-&gt;ON </span><br>
+      <span style="font-family: monospace;">Touch_LR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Left-hind leg: Paw sensor to detect ON-&gt;OFF OFF-&gt;ON </span><br>
+      <span style="font-family: monospace;"> </span><br>
+      <span style="font-family: monospace;">Tone_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone detection number</span><br>
+      <span style="font-family: monospace;">Tone_level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone level</span><br>
+      <span style="font-family: monospace;">Tone_dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Direction of tone detection</span><br>
+      <span style="font-family: monospace;">Melody_id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Melody
+detection Melody ID</span><br>
+      <span style="font-family: monospace;">Melody_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The number of tones (1 to 3)</span><br>
+      <span style="font-family: monospace;">Tone1_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone1
+Tone number</span><br>
+      <span style="font-family: monospace;">Tone1_level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone1 Tone level</span><br>
+      <span style="font-family: monospace;">Tone1_dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone1 Direction of the detected
+tone</span><br>
+      <span style="font-family: monospace;">Tone2_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone2
+Tone number</span><br>
+      <span style="font-family: monospace;">Tone2_level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone2 Tone level</span><br>
+      <span style="font-family: monospace;">Tone2_dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone2 Direction of the detected tone</span><br>
+      <span style="font-family: monospace;">Tone3_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone3
+Tone number</span><br>
+      <span style="font-family: monospace;">Tone3_level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone3 Tone level</span><br>
+      <span style="font-family: monospace;">Tone3_dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone3 Direction of the detected tone</span><br>
+      <span style="font-family: monospace;">Sound_status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Sound detection:
+Status (*4)</span><br>
+      <span style="font-family: monospace;">Sound_num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone number</span><br>
+      <span style="font-family: monospace;">Sound_level&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tone level</span><br>
+      <span style="font-family: monospace;">Sound_dir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Direction of the detected tone</span><br>
+      <span style="font-family: monospace;">Sound_busy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1: Playing
+back sound 0: No sound</span><br>
+      <span style="font-family: monospace;">Light_busy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1: Lighting
+0: No light</span><br>
+      <span style="font-family: monospace;"> </span><br>
+      <span style="font-family: monospace;">Sound_volume&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Default sound level at the time of sound playback </span><br>
+      <span style="font-family: monospace;">Light_repeat&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Default number of
+lighting repetition at the time of
+PLAY:LIGHT</span><br>
+      <span style="font-family: monospace;">Power&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Power supply of the motor 0:OFF 1:ON</span><br>
+      <span style="font-family: monospace;">Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Normal status *1</span><br>
+      <span style="font-family: monospace;">Emergency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Emergency *2</span><br>
+      <span style="font-family: monospace;">Context&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Context value</span><br>
+      <span style="font-family: monospace;"> </span><br>
+      <span style="font-family: monospace;">Wait&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The number of motions queued for completion</span><br>
+      <span style="font-family: monospace;">Trace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Trace level (reserved for a special tracer)</span><br>
+      <span style="font-family: monospace;">Debug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Debug level (reserved for a special debugger)</span><br>
+      <span style="font-family: monospace;">Clock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Clock (to be incremented by 1 every 32ms)</span><br>
+      <span style="font-family: monospace;"> </span><br>
+      <span style="font-family: monospace;">Wait_mode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For system inspection * Users are not allowed to
+use it. </span><br>
+      <span style="font-family: monospace;"></span></div>
+      <span style="font-family: monospace;"> <br>
+      <br>
+*1 Status: Meaning of each bit<br>
+      </span>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">0x0001 VIBRATION_DETECT Detection of
+vibration</span><br>
+      <span style="font-family: monospace;">0x0002 KEY_SW Pause button
+on the chest</span><br>
+      <span style="font-family: monospace;">0x0004 CONNECT_TO_STATION
+Connection to a station</span><br>
+      <span style="font-family: monospace;">0x0008 BATTERY_CHARGING
+Charging of the battery</span><br>
+      <span style="font-family: monospace;">0x0010 BATTERY_DISCHARGING
+Discharging of the battery</span><br>
+      <span style="font-family: monospace;">0x0020 CONNECT_TO_EX_POWER
+Connection to the external power supply</span><br>
+      <span style="font-family: monospace;">0x0040 MOTOR_POWER Power
+supply of the motor</span><br>
+      <span style="font-family: monospace;">0x0080 LOW_BATTERY
+Recharging is required (warning!).</span><br>
+      <span style="font-family: monospace;">0x0100 FULL_BATTERY The
+battery is fully charged.</span><br>
+      <span style="font-family: monospace;">0x0200 80_BATTERY Remaining
+capacity of the battery: 80%</span><br>
+      <span style="font-family: monospace;">0x0400 60_BATTERY Remaining
+capacity of the battery: 60%</span><br>
+      <span style="font-family: monospace;">0x0800 OVER_HEAT_40
+Over-heated (40 degrees)</span><br>
+      <span style="font-family: monospace;"></span></div>
+      <span style="font-family: monospace;"> <br>
+*2 Emergency: Meaning of each bit<br>
+      </span>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">0x0001 LOW_LOW_BATTERY Remaining
+capacity of the battery: less than 20%</span><br>
+      <span style="font-family: monospace;">0x0002 OVER_HEAT_RELEASE
+Over-heated due to discharging (60 degree)</span><br>
+      <span style="font-family: monospace;">0x0004 OVER_HEAT_CHARGE
+Over-heated due to recharging (40 degree)</span><br>
+      <span style="font-family: monospace;">0x0008 LOW_VOLTAGE Low
+voltage</span><br>
+      <span style="font-family: monospace;">0x0010 OVER_CURRENT Over
+current (reserved)</span><br>
+      <span style="font-family: monospace;">0x0020 FAN_STOP Stop of the
+internal fan</span><br>
+      <span style="font-family: monospace;"></span></div>
+      <span style="font-family: monospace;"> <br>
+*3 Gsensor_status: Meaning of each bit<br>
+      </span>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">bit&nbsp;&nbsp;&nbsp; OMGsensor status</span><br>
+      <span style="font-family: monospace;"> 0x0001 FALL_DOWN_FRONT
+(Frontward) Fall-down</span><br>
+      <span style="font-family: monospace;">0x0001 FALL_DOWN_RIGHT
+(Rightward) Fall-down</span><br>
+      <span style="font-family: monospace;">0x0001 FALL_DOWN_LEFT
+(Leftward) Fall-down</span><br>
+      <span style="font-family: monospace;">0x0001 FALL_DOWN_REAR
+(Backward) Fall-down</span><br>
+      <span style="font-family: monospace;">0x0002 HOLD_UP Holding-up</span><br>
+      <span style="font-family: monospace;">0x0004 HOLD_DOWN
+Holding-down</span><br>
+      <span style="font-family: monospace;">0x0400 GET_UP Getting-up
+from a fall-down state</span><br>
+      <span style="font-family: monospace;">0x0800 JOINT_DANGER Pinch
+of joints</span><br>
+      <span style="font-family: monospace;">0x1000 JOINT_GAIN_ENABLED
+Gain On</span><br>
+      <span style="font-family: monospace;">0x2000 JOINT_GAIN_DISABLED
+Gain Off</span><br>
+      <span style="font-family: monospace;"></span></div>
+      <span style="font-family: monospace;"> <br>
+*4 Sound_status<br>
+      </span>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">0 omtonePEAK Tone with a peak</span><br>
+      <span style="font-family: monospace;">1 omtoneNOPEAK Tone without
+a peak</span><br>
+      <span style="font-family: monospace;">2 omtoneNOPOWER Low sound
+level</span><br>
+      <span style="font-family: monospace;">3 omtoneCALC Calculating</span><br>
+      <span style="font-family: monospace;">4 omtoneOVERFLOW Overflow</span><br>
+      <span style="font-family: monospace;"></span></div>
+      <span style="font-family: monospace;"> <br>
+** Some sensor values always reflect the latest
+status, while some others are updated when an event takes place and are
+kept from that time on. In the latter case, the conditional test
+becomes true repeatedly depending on programming, and as a result, the
+same process may be repeated more than necessary. In that case, use SET
+or AND to reset a sensor value and you can avoid this kind of a
+problem. <br>
+      <br>
+*x Sound cannot be detected for about 5
+seconds right after the execution of PLAY:SOUND. This is because AIBO
+cannot carry out the playback and the detection of sound concurrently,
+nor detect the completion of the playback of sound precisely. (It is
+the completion of the transmission of the sound data that AIBO can
+detect.)<br>
+      <br>
+      <br>
+      </span>
+      <hr style="width: 100%; height: 2px;"><span
+ style="font-family: monospace;"><br>
+      </span> <a name="SECTION4"></a><br>
+      <h3>[ Quick Reference of R-CODE Operators ]</h3>
+      <a name="ADD"></a><a name="SUB"></a><a name="MUL"></a><a
+ name="DIV"></a><a name="MOD"> </a><a name="AND"></a><a name="IOR"> </a><a
+ name="XOR"></a><a name="NOT"> </a><a name="LAND"></a><a name="LIOR"> </a><a
+ name="LNOT"></a><a name="EQ"> </a><a name="NE"></a><a name="LT"> </a><a
+ name="LE"></a><a name="GT"> </a><a name="GE"></a><a name="RND"> </a>
+      <br>
+      <br>
+Operators carry out arithmetic operations and store the results to the
+variable &lt;var&gt;.<br>
+      <div style="margin-left: 40px; font-family: monospace;">&lt;var&gt;&nbsp;&nbsp;&nbsp;
+Variable name<br>
+&lt;value&gt;&nbsp; Value (a variable name or a constant)<br>
+      </div>
+      <br>
+      <br>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">ADD:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; +
+&lt;value&gt; Addition</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">SUB:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; -
+&lt;value&gt; Subtraction</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">MUL:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; *
+&lt;value&gt;
+Multiplication</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">DIV:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; /&nbsp;
+&lt;value&gt; Division</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">MOD:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; %
+&lt;value&gt; Remainder</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">AND:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; &amp;
+&lt;value&gt; Bitwise logical AND</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">IOR:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; |
+&lt;value&gt; Bitwise logical OR</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">XOR:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; ^
+&lt;value&gt;
+Bitwise exclusive OR</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">NOT:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- ~ &lt;value&gt; Bitwise
+logical NOT</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">LAND:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; AND
+&lt;value&gt; Logical AND</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">LIOR:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- &lt;var&gt; OR
+&lt;value&gt; Logical OR</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">LNOT:&lt;var&gt;:&lt;value&gt;
+&lt;var&gt; &lt;- NOT &lt;value&gt;
+Logical NOT</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">RND:&lt;var&gt;:&lt;from&gt;:&lt;to&gt;
+&lt;var&gt;
+&lt;- Random number in the range between
+&lt;from&gt; and &lt;to&gt;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      </div>
+In addition to the above operators, the following stack operators are
+provided.&nbsp;&nbsp; They pop operands from the stack and push the
+results onto the stack.<br>
+      <br>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">ADD &lt;push&gt; &lt;- &lt;pop1&gt; +
+&lt;pop2&gt; Addition</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">SUB &lt;push&gt; &lt;-
+&lt;pop1&gt; - &lt;pop2&gt; Subtraction</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">MUL &lt;push&gt; &lt;-
+&lt;pop1&gt; * &lt;pop2&gt; Multiplication</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">DIV &lt;push&gt; &lt;-
+&lt;pop1&gt; / &lt;pop2&gt; Division</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">MOD &lt;push&gt; &lt;-
+&lt;pop1&gt; % &lt;pop2&gt; Remainder</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">AND &lt;push&gt; &lt;-
+&lt;pop1&gt; &amp; &lt;pop2&gt; Bitwise logical
+AND</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">IOR &lt;push&gt; &lt;-
+&lt;pop1&gt; | &lt;pop2&gt; Bitwise logical OR</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">XOR &lt;push&gt; &lt;-
+&lt;pop1&gt; ^ &lt;pop2&gt; Bitwise exclusive OR</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">NOT &lt;push&gt; &lt;- ~
+&lt;pop2&gt; Bitwise logical NOT</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">LAND &lt;push&gt; &lt;-
+&lt;pop1&gt; AND &lt;pop2&gt; Logical AND</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">LIOR &lt;push&gt; &lt;-
+&lt;pop1&gt; OR &lt;pop2&gt; Logical OR</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">LNOT &lt;push&gt; &lt;- NOT
+&lt;pop2&gt; Logical NOT</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">EQ &lt;push&gt; &lt;-
+&lt;pop1&gt; == &lt;pop2&gt; Equal to</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">NE &lt;push&gt; &lt;-
+&lt;pop1&gt; &lt;&gt; &lt;pop2&gt; Not equal to</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">LT &lt;push&gt; &lt;-
+&lt;pop1&gt; &lt; &lt;pop2&gt; Less than</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">LE &lt;push&gt; &lt;-
+&lt;pop1&gt; &lt;= &lt;pop2&gt; Less than or
+equal to</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">GT &lt;push&gt; &lt;-
+&lt;pop1&gt; &gt; &lt;pop2&gt; Greater than</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">GE &lt;push&gt; &lt;-
+&lt;pop1&gt; &gt;= &lt;pop2&gt; Greater than or
+equal to</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">RND:&lt;from&gt;:&lt;to&gt;
+&lt;push&gt; &lt;- Values of uniform random
+numbers in the range between &lt;from&gt; and &lt;to&gt;</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">RND:&lt;to&gt; &lt;push&gt;
+&lt;- Values of uniform random numbers in
+the range from 0 to &lt;to&gt;</span><br style="font-family: monospace;">
+      </div>
+      <br>
+      <br>
+Stack Commands:<br>
+      <a name="PUSH"></a><br>
+      <div style="margin-left: 40px; font-family: monospace;">PUSH:&lt;var&gt;
+pushes a variable value or a constant onto the stack.<br>
+      <a name="POP"></a><br>
+POP[:&lt;var&gt;] pops a value from the stack to a variable.<br>
+If &lt;var&gt; is not specified, the fetched value is discarded.<br>
+      <a name="DUP"></a><br>
+DUP copies the top data element of the stack and pushes it back onto
+the stack.<br>
+      <a name="JT"></a><br>
+JT:&lt;label&gt; pops a value from the stack. If the value is true, the
+program jumps to &lt;label&gt;.<br>
+      <a name="JF"></a><br>
+JF:&lt;label&gt; pops a value from the stack. If the value is false,
+the program jumps to &lt;label&gt;.<br>
+      </div>
+      <br>
+Note: Stack operations across subroutines or scopes are not possible.<br>
+      <br>
+      <br>
+      <hr style="width: 100%; height: 2px;"><br>
+      <a name="SECTION5"></a> <br>
+      <h3>[ List of Semantics of AIBO Performer Kit ]</h3>
+This list allows you to edit motions with AIBO
+Performer Kit.<br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">Semantics
+:&nbsp; Name callable with the R-CODE system<br>
+Pose :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Post ure for starting and
+finishing a motion<br>
+Sound :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sound played back in&nbsp; sync
+with a motion<br>
+      </div>
+      <br>
+      <br>
+Calling method on the R-CODE system<br>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">PLAY:ESC:P1P1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+^^^^</span><br style="font-family: monospace;">
+      </div>
+      <br>
+The following are the descriptions of semantics.<br>
+      <br style="font-family: monospace;">
+      <table
+ style="width: 50%; font-family: monospace; margin-left: 40px;"
+ border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="width: 33%;">
+            <div>Semantics </div>
+            </td>
+            <td style="width: 33%;">Pose </td>
+            <td style="width: 33%;">Sound</td>
+          </tr>
+          <tr>
+            <td>P1P1 </td>
+            <td>Sitting </td>
+            <td>pero1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P1P2 </td>
+            <td>Sitting </td>
+            <td>bow1_ttp.wav</td>
+          </tr>
+          <tr>
+            <td>P1P3 </td>
+            <td>Sleeping </td>
+            <td>scrt3ppp.wav</td>
+          </tr>
+          <tr>
+            <td>P1P4 </td>
+            <td>Standing </td>
+            <td>nobi1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P1P5 </td>
+            <td>Standing </td>
+            <td>gari1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P1I1 </td>
+            <td>Standing </td>
+            <td>look1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P1I2 </td>
+            <td>Standing </td>
+            <td>bow1_ddp.wav</td>
+          </tr>
+          <tr>
+            <td>P1I3 </td>
+            <td>Standing </td>
+            <td>mark1ddp.wav</td>
+          </tr>
+          <tr>
+            <td>P1I4 </td>
+            <td>Sleeping </td>
+            <td>yawn5ppp.wav</td>
+          </tr>
+          <tr>
+            <td>P1I5 </td>
+            <td>Sleeping </td>
+            <td>tail4ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P1I6 </td>
+            <td>Sitting </td>
+            <td>yawn1xxp.wav</td>
+          </tr>
+          <tr>
+            <td>P1I7 </td>
+            <td>Sitting </td>
+            <td>dig1_ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P1I8 </td>
+            <td>Sitting </td>
+            <td>tilt1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P1I9 </td>
+            <td>Sleeping </td>
+            <td>gari1ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P2P1 </td>
+            <td>Sitting </td>
+            <td>bye1_ddp.wav</td>
+          </tr>
+          <tr>
+            <td>P2P2 </td>
+            <td>Sitting </td>
+            <td>strg1ttp.wav</td>
+          </tr>
+          <tr>
+            <td>P2P3 </td>
+            <td>Sleeping </td>
+            <td>nobi2ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P2P4 </td>
+            <td>Sleeping </td>
+            <td>flwr2ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P2P5 </td>
+            <td>Standing </td>
+            <td>bend1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I1 </td>
+            <td>Standing </td>
+            <td>yura1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I2 </td>
+            <td>Standing </td>
+            <td>swng1ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I3 </td>
+            <td>Standing </td>
+            <td>swng2ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I4 </td>
+            <td>Sleeping </td>
+            <td>flwr1ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I5 </td>
+            <td>Sitting </td>
+            <td>kyor1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I6 </td>
+            <td>Sitting </td>
+            <td>pose1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P2I7 </td>
+            <td>Sitting </td>
+            <td>yawn2xxp.wav</td>
+          </tr>
+          <tr>
+            <td>P3P1 </td>
+            <td>Sitting </td>
+            <td>kiss1ttp.wav</td>
+          </tr>
+          <tr>
+            <td>P3P2 </td>
+            <td>Sitting </td>
+            <td>banz1ttp.wav</td>
+          </tr>
+          <tr>
+            <td>P3P3 </td>
+            <td>Sleeping </td>
+            <td>thnk1ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P3P4 </td>
+            <td>Sleeping </td>
+            <td>find1ppp.mid</td>
+          </tr>
+          <tr>
+            <td>P3P5 </td>
+            <td>Standing </td>
+            <td>smel1ddp.wav</td>
+          </tr>
+          <tr>
+            <td>P3I1 </td>
+            <td>Standing </td>
+            <td>tilt2ddp.mid</td>
+          </tr>
+          <tr>
+            <td>P3I2 </td>
+            <td>Sleeping </td>
+            <td>sigh1ppp.wav</td>
+          </tr>
+          <tr>
+            <td>P3I3 </td>
+            <td>Sleeping </td>
+            <td>yawn4xxp.wav</td>
+          </tr>
+          <tr>
+            <td>P3I4 </td>
+            <td>Sleeping </td>
+            <td>bata1ppp.wav</td>
+          </tr>
+          <tr>
+            <td>P3I5 </td>
+            <td>Sitting </td>
+            <td>exec1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P3I6 </td>
+            <td>Sitting </td>
+            <td>what1ttp.mid</td>
+          </tr>
+          <tr>
+            <td>P3I7 </td>
+            <td>Sitting </td>
+            <td>yawn3xxp.wav</td>
+          </tr>
+          <tr>
+            <td>P4P1 </td>
+            <td>Sitting</td>
+            <td style="vertical-align: top;">usr#1.wav</td>
+          </tr>
+          <tr>
+            <td>P4P2 </td>
+            <td>Sitting </td>
+            <td>usr#2.wav</td>
+          </tr>
+          <tr>
+            <td>P4P3 </td>
+            <td>Sleeping </td>
+            <td>usr#3.wav</td>
+          </tr>
+          <tr>
+            <td>P4P4 </td>
+            <td>Standing </td>
+            <td>usr#4.wav</td>
+          </tr>
+          <tr>
+            <td>P4P5 </td>
+            <td>Standing </td>
+            <td>usr#5.wav</td>
+          </tr>
+          <tr>
+            <td>P4I1 </td>
+            <td>Standing </td>
+            <td>usrd#1.wav</td>
+          </tr>
+          <tr>
+            <td>P4I2 </td>
+            <td>Standing </td>
+            <td>usrd#2.wav</td>
+          </tr>
+          <tr>
+            <td>P4I3 </td>
+            <td>Sleeping </td>
+            <td>usrp#1.wav</td>
+          </tr>
+          <tr>
+            <td>P4I4 </td>
+            <td>Sleeping </td>
+            <td>usrp#2.wav</td>
+          </tr>
+          <tr>
+            <td>P4I5 </td>
+            <td>Sitting </td>
+            <td>usrt#1.wav</td>
+          </tr>
+          <tr>
+            <td>P4I6 </td>
+            <td>Sitting </td>
+            <td>usrt#2.wav</td>
+          </tr>
+          <tr>
+            <td>G_L1 </td>
+            <td>Sitting </td>
+            <td>lose1ttg.wav</td>
+          </tr>
+          <tr>
+            <td>G_L2 </td>
+            <td>Sitting </td>
+            <td>lose2ttg.wav</td>
+          </tr>
+          <tr>
+            <td>G_L3 </td>
+            <td>Sitting </td>
+            <td>lose3ttg.wav</td>
+          </tr>
+          <tr>
+            <td>G_W1 </td>
+            <td>Sitting </td>
+            <td>win1_ttg.wav</td>
+          </tr>
+          <tr>
+            <td>G_W2 </td>
+            <td>Sitting </td>
+            <td>win2_ttg.wav</td>
+          </tr>
+          <tr>
+            <td>G_W3 </td>
+            <td>Sitting </td>
+            <td>win3_ttg.wav</td>
+          </tr>
+          <tr>
+            <td>AAN1 </td>
+            <td>Sitting </td>
+            <td>kyor4ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAN2 </td>
+            <td>Sitting </td>
+            <td>nobi6ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAN3 </td>
+            <td>Sitting </td>
+            <td>Not Available<br>
+            </td>
+          </tr>
+          <tr>
+            <td>AAN4 </td>
+            <td>Sleeping </td>
+            <td>Not Available<br>
+            </td>
+          </tr>
+          <tr>
+            <td>AAN5 </td>
+            <td>Sitting </td>
+            <td>srch1ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAN6 </td>
+            <td>Sleeping </td>
+            <td>kyor5ppx.mid</td>
+          </tr>
+          <tr>
+            <td>AAN7 </td>
+            <td>Standing </td>
+            <td>kyor6ddx.mid</td>
+          </tr>
+          <tr>
+            <td>AAN8 </td>
+            <td>Standing </td>
+            <td>tilt3ddx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP1 </td>
+            <td>Sitting </td>
+            <td>ltch1ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP2 </td>
+            <td>Sleeping </td>
+            <td>ltch1ppx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP3 </td>
+            <td>Standing </td>
+            <td>ltch1ddx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP4 </td>
+            <td>Sitting </td>
+            <td>roll1ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP5 </td>
+            <td>Standing </td>
+            <td>roll1ddx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP6 </td>
+            <td>Sitting </td>
+            <td>stch1ttx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP7 </td>
+            <td>Sleeping </td>
+            <td>stch1ppx.mid</td>
+          </tr>
+          <tr>
+            <td>AAP8 </td>
+            <td>Standing </td>
+            <td>stch1ddx.mid</td>
+          </tr>
+          <tr>
+            <td>AAJ1 </td>
+            <td>Standing </td>
+            <td>joy6_dda.mid</td>
+          </tr>
+          <tr>
+            <td>AAJ2 </td>
+            <td>Standing </td>
+            <td>joy7_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AAF1 </td>
+            <td>Standing </td>
+            <td>fer4_dda.mid</td>
+          </tr>
+          <tr>
+            <td>AAF2 </td>
+            <td>Sleeping </td>
+            <td>fer5_ppa.mid</td>
+          </tr>
+          <tr>
+            <td>AAD1 </td>
+            <td>Sitting </td>
+            <td>dsg4_tta.mid</td>
+          </tr>
+          <tr>
+            <td>AAD2 </td>
+            <td>Standing </td>
+            <td>dsg5_dda.mid</td>
+          </tr>
+          <tr>
+            <td>AAD3 </td>
+            <td>Sitting </td>
+            <td>dsg5_tty.mid</td>
+          </tr>
+          <tr>
+            <td>AYJ1 </td>
+            <td>Standing </td>
+            <td>joy6_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AYW1 </td>
+            <td>Sleeping </td>
+            <td>sup5_ppa.mid</td>
+          </tr>
+          <tr>
+            <td>AYW2 </td>
+            <td>Standing </td>
+            <td>sup4_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AYW3 </td>
+            <td>Standing </td>
+            <td>sup5_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AYS1 </td>
+            <td>Standing </td>
+            <td>sad5_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AYF1 </td>
+            <td>Standing </td>
+            <td>fer5_ddy.mid</td>
+          </tr>
+          <tr>
+            <td>AYD1 </td>
+            <td>Sleeping </td>
+            <td>dsg5_ppy.mid</td>
+          </tr>
+          <tr>
+            <td>AYD2 </td>
+            <td>Sitting </td>
+            <td>dsg5_ttc.mid</td>
+          </tr>
+        </tbody>
+      </table>
+      <br style="font-family: monospace;">
+      <br>
+      <hr style="width: 100%; height: 2px;"><br>
+      <a name="SECTION6"></a> <br>
+      <h3>[ ESC File ]</h3>
+Three types of data, "motion",
+"sound" and "light," are associated with one command in the ESC.CFG
+file, so all three can be executed with one<br>
+command.<br>
+      <br>
+A part of \OPEN-R\APP\CONF\ESC.CFG<br>
+      <div style="margin-left: 40px;">----------------------------------------------------<br>
+      </div>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">2715</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">GET_STPOS motion
+oAll:slp_stasm NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">OFF_STPOS motion
+oAll:stasm_slp NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9AMAZING sound amz1_xxx 100</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_KYORO motion
+oAll:JitaKyoro_fall NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_KYORO sound risebxxx
+100</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_LEG motion
+oAll:JitaLeg_fall NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_LEG sound risefxxx 100</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_PAKU1 motion
+oAll:JitaPaku1_fall NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_PAKU1 sound riselxxx
+100</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_PAKU2 motion
+oAll:JitaPaku2_fall NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9JITA_PAKU2 sound riserxxx
+100</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9RISE_FRONT motion
+oAll:GetupF_fall_std NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9RISE_LEFT motion
+oAll:GetupL_fall_std NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9RISE_READY motion
+oAll:E_Stop NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9RISE_REAR motion
+oAll:GetupB_fall_std NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9RISE_RIGHT motion
+oAll:GetupR_fall_std NULL</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">9SQUEEZE sound sqz1_xxx 100</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">etc...</span><br>
+      </div>
+      <div style="margin-left: 40px;">----------------------------------------------------<br>
+      </div>
+      <br>
+2715 on the first line indicates the total number of lines that are
+after the first line in this file (total number of lines minus one).<br>
+      <br>
+Association is done from the second line on.<br>
+      <div style="margin-left: 40px; font-family: monospace;">9AMAZING&nbsp;&nbsp;&nbsp;
+sound&nbsp;&nbsp;&nbsp;&nbsp; amz1_xxx&nbsp;&nbsp; 100<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;a&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;b&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;c&gt;<br>
+      </div>
+      <br>
+&lt;a&gt;&nbsp; ESC name (a unique name)<br>
+&lt;b&gt;&nbsp; Grouping consisting of a patterns of "motion", "sound"
+and "light"<br>
+&lt;c&gt;&nbsp; The definition of "c" and the subsequent portion varies
+in its
+meaning depending on b.<br>
+      <br>
+      <br>
+In the case of "sound": Sound name<br>
+      <div style="margin-left: 40px;"><span
+ style="font-family: monospace;">Sound volume (normally 100)</span><br>
+      </div>
+      <br>
+      <br>
+In the case of "motion": Region: Motion name<br>
+      <div style="margin-left: 40px; font-family: monospace;">Region
+includes the following:<br>
+&nbsp; oAll: Motion of the whole body<br>
+&nbsp;oLegs: Motion of the 4 legs<br>
+&nbsp;oTail: Motion of the tail<br>
+&nbsp;oHead: Motion of the head<br>
+      </div>
+      <br>
+      <div style="margin-left: 40px;">Argument of motion (NULL should
+be specified for a normal motion.)<br>
+      </div>
+      <br>
+      <br>
+In the case of "light": Name of LED light pattern<br>
+      <div style="margin-left: 40px;">The number of repetitions<br>
+      </div>
+      <br>
+      <hr style="width: 100%; height: 2px;"><br>
+      <a name="SECTION7"></a> <br>
+      <h3>[ Motion Definition File ]</h3>
+The Motion Definition File
+includes the files for the head, the 4 legs, the tail and the whole
+body.<br>
+      <br>
+They are grouped into the following 6 types:<br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">head_XX.cfg
+&lt;-- List of head motions<br>
+legs_XX.cfg &lt;-- List of 4-leg motions<br>
+tail_XX.cfg &lt;-- List of tail motions<br>
+monet_XX.cfg &lt;-- List of whole body motions<br>
+      <br>
+XXXX_00.cfg &lt;-- File listing motions defined externally<br>
+The motions defined externally are those which data is defined in a
+separate file (*.oda).<br>
+      <br>
+XXXX_01.cfg &lt;-- File listing motions defined internally<br>
+The motions defined internally are motions generated and performed by
+the program.<br>
+      </div>
+      <br>
+&nbsp;File Path<br>
+      <div style="margin-left: 40px;">\OPEN-R\SONY\CONF\<br>
+      </div>
+      <br>
+A part of head_01.cfg<br>
+      <div style="margin-left: 40px; font-family: monospace;">----------------------------------------------------<br>
+oAll&nbsp;&nbsp; &lt;-- &lt;a&gt;<br>
+136&nbsp;&nbsp;&nbsp; &lt;-- &lt;b&gt;<br>
+Akubi_sit oSitting oSitting dt#1_n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;-- &lt;c&gt;<br>
+Akubi_sit_C oSitting oSitting sitpc001<br>
+Akubi_sit_D oSitting oSitting dt#1<br>
+Akubi_sit3 oSitting3 oSitting3 ct3#321_n<br>
+etc...<br>
+----------------------------------------------------<br>
+      </div>
+      <br>
+&lt;a&gt; Indicates the region name.<br>
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; oHead:
+Head</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; oLegs:
+All four legs</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; oTail:
+Tail</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; oAll :
+Whole body</span><br style="font-family: monospace;">
+      <br>
+&lt;b&gt; The number of valid data<br>
+      <br>
+&lt;c&gt; Definition of motions<br>
+      <br>
+      <div style="margin-left: 40px; font-family: monospace;">Akubi_sit&nbsp;&nbsp;
+oSitting&nbsp;&nbsp; oSitting&nbsp;&nbsp; dt#1_n<br>
+&nbsp;&nbsp; &lt;w&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;x&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;y&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;z&gt;<br>
+      <br>
+&lt;w&gt; Motion definition name<br>
+&lt;x&gt; Starting pose<br>
+&lt;y&gt; Ending pose<br>
+&lt;z&gt; Motion name<br>
+      </div>
+      <br>
+      <br>
+      <a name="SECTION8"></a> <br>
+      <h3>[ Musical Scale Recognition File ]</h3>
+The musical scale recognizable
+with the R-CODE system is defined in the TD.CFG file.<br>
+      <br>
+Location on the "Memory Stick" where the musical scale is placed:<br>
+&nbsp;&nbsp;&nbsp; \OPEN-R\SONY\CONF\TD.CFG<br>
+      <br>
+A part of TD.CFG <br>
+      <div style="margin-left: 40px; font-family: monospace;">---------------------------<br>
+CDE<br>
+C#D#F<br>
+DEF#<br>
+D#FG<br>
+EF#G#<br>
+FGA<br>
+F#G#A#<br>
+GAB<br>
+CED<br>
+C#FD#<br>
+---------------------------<br>
+      </div>
+      <br>
+Contents<br>
+      <div style="margin-left: 40px; font-family: monospace;">C: do<br>
+D: re<br>
+E: me <br>
+F: fa<br>
+G: so<br>
+A: la<br>
+B: ti<br>
+#: Sharp<br>
+~: Flat<br>
+      </div>
+      <br>
+When AIBO recognizes the musical scale of do, re and me (CDE), the line
+number where the musical scale of do, re and me (CDE) is defined in the
+TD.CFG file, 1 in this example,
+is assigned to the R-CODE system variable Melody_id.<br>
+      <br>
+For Melody_id, refer to the separate text file: Musical Scale
+Recognition List.<br>
+      <br>
+      <b r=""><b r=""><b r=""><b r=""> </b></b></b></b> <b r=""><b
+ r=""><b r=""><b r=""> </b></b></b></b></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

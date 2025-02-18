@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Speed Racer (ERS-2x0 or ERS-7)
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Speed Racer (ERS-2x0 or ERS-7)
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR>
+<H3>WARNING!!</H3>
+Aibo Speed Racer uses the CMU "knee-walk".
+Using the head and body 'kicks' can be quite aggressive.
+The RoboCup dogs wear out their knees and necks faster than normal AIBOs because of these strange walks.
+Your AIBO may fall down or servo jam.
+<BR>
+<B><font size=+1 color=red>Use at your own risk!</font></B>
+</DIR>
+
+SpeedRacer will to turn your AIBO into a remote control toy.
+You can see what AIBO is seeing using the full resolution of the camera.
+<P></P>
+<CENTER>
+<IMG SRC="ss_racercontrol7.jpg">
+<BR>ERS-7 version with 416x320 video
+</CENTER>
+
+<P></P>
+<HR>
+<H2>Supported AIBOs</H2>
+
+<UL>
+<LI><IMG SRC="../gfx/icon_210.gif"> - ERS-210 is supported with a WiFi card.
+<LI><IMG SRC="../gfx/icon_220.gif"> - ERS-220 is supported with a WiFi card.
+<LI><IMG SRC="../gfx/icon_7.gif"> - ERS-7 is supported
+</UL>
+
+<P></P>
+<HR>
+<H2>Installation</H2>
+
+<H2>Required Hardware:</H2>
+<UL>
+<LI>An ERS-210[A] or ERS-220[A] model AIBO, with working WiFi card
+ <B>OR</B>
+<LI>An ERS-7 model AIBO (with built-in WiFi card)
+<P></P>
+
+<LI>A Pink Programmable Memory Stick (AKA "PMS" or RCode stick) - ERA-MS008 or ERA-MS016, $34->$39
+<LI>A memory stick reader to install the software (<font color=red>Use only Sony brand stick readers</font>)
+<LI>A Windows PC with a WiFi card on the same network as the AIBO
+</UL>
+<P></P>
+
+NOTE: if you have an original ERS-210 [not A] and have never run an OpenR SDK program before, you may need to perform the <A HREF="../210/flashupdate.htm">Flash Update</A> on your ERS-210.
+<P></P>
+<CENTER><IMG SRC="../ers7/which_stick.jpg"></CENTER>
+<P></P>
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available PMS stick into your computer's stick reader
+<LI>Select any folders you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them. Do not format the stick.
+<LI>Download the proper version of AiboSpeedRacer for the model of your AIBO.
+<UL>
+<LI>For the ERS-2x0: <A HREF="AiboSpeedRacer2x0.zip">AiboSpeedRacer2x0.zip</A> (1.5MB, ERS-210, ERS-220, ERS-210A or ERS-220A)
+<LI>For the ERS-7: <A HREF="AiboSpeedRacer7_ERS7M3.zip">AiboSpeedRacer7_ERS7M3.zip</A> (1.6MB). NOTE: do not install on the AiboMind stick, use a PMS (a stick without an ERF- number)
+</UL>
+<LI>Unzip this RCodePlus file to the root of your PMS memory stick.
+<LI>Copy your working WLANCONF.TXT file for your LAN setup to the \OPEN-R\SYSTEM\CONF folder on the memory stick.
+Otherwise the default settings will be used (AIBONET, WEP enabled "AIBO2", ip address 10.0.1.100).
+<BR>NOTE: the WLANCONF.TXT file is in a different folder for RCode/RCodePlus/LifePlus sticks.
+<P></P>
+
+<LI>Download the Windows Speed Racer Control Program: <A HREF="RacerControl.zip">RacerControl.zip</A> (92KB)
+<LI>Unzip that file to a folder on your PC. The program is called 'RacerControl.EXE'
+<P></P>
+</UL>
+
+<P></P>
+<HR>
+<H2>Usage</H2>
+<UL>
+<LI>For the ERS-7, be sure the WiFi switch is "ON". For the ERS-2x0, be sure the WiFi card is in and working.
+<LI>If you have a custom WLANCONF.TXT, be sure you know what your AIBO's IP address (default: 10.0.1.100)
+<LI>If you are using an ad-hoc WiFi connection, be sure your PC WiFi card is active (with link LED on or blinking)
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Aibo will boot and stretch into a crouching position with head down and knees bent.
+<P></P>
+<LI>Run the RacerControl.EXE program on the PC
+<LI>Enter the IP address for your AIBO and Connect.
+<LI>The main display should appear and the camera video should show up on your PC's screen.
+AIBO's head should raise up.
+<BR>
+If you have connection problems, be sure you can 'ping' your AIBO from the PC.
+<P></P>
+<LI>When connected, use the buttons to make AIBO walk:
+<UL>
+<LI>"Fwd" for forward, "Stop" for stop, "Bwd" for backward
+<LI>"Fwd L" and "Fwd R" will walk on an angle
+<LI>"Side L" and "Side R" will walk sideways
+<LI>"Turn L" and "Turn R" will make AIBO turn in place
+<LI>You can set the walking speed with from "Slow" to "Hyper".
+Change the speed first, then press one of the Walk direction buttons
+<LI>Optionally use the Kick buttons to kick the ball with the dog's head or body.
+These are more aggressive than the walking and may jam your AIBO.
+<BR>NOTE: the very aggressive WalkBench body slam moves are not supported by RacerControl.
+</UL>
+<P></P>
+<LI>Camera Settings: You can use the 9 "Camera" buttons in the upper right to adjust the camera settings.
+The 3x3 buttons are the same as the AiboRemote and AiboScope programs.
+If the screen is dark, press the "H" and "S" buttons to increase the camera gain and slow the shutter speed.
+<P></P>
+<LI>NOTE: if AIBO jams, please reboot your AIBO (and reconnect the RacerControl program)
+<LI>When done, remove the memory stick from AIBO (this will shut him down). Do not press the pause button.
+</UL>
+
+<P></P>
+<HR>
+
+<P></P>
+<CENTER>
+<IMG SRC="ss_racercontrol210.jpg">
+<BR>ERS-2x0 version with 352x288 video
+</CENTER>
+<HR>
+
+</BODY>
+</HTML>

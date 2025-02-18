@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Toshiba e800/e805 PadRot V1.2
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Toshiba e800/e805 PadRot V1.2
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<P></P>
+<DIR>NOTE: For the original Toshiba e800/e805. Do not use if you have upgraded to Pocket PC 2003 "SE".</DIR>
+
+<P></P>
+Normally when your PDA is in regular portrait orientation, the D-Pad buttons will move the cursor around properly.
+If the screen is rotated to landscape (left or right handed) or upside-down portrait mode, the D-Pad buttons will not work as expected.
+
+<BR>
+Installing the PadRot Hack will correct this problem.
+<P></P>
+Features:
+<UL>
+<LI>Adjusts direction pad buttons to work properly with the current screen rotation
+<LI>Version 1.2: keeps the jog dial acting like page up/down (not left/right)
+<LI>Version 1.2: proper DPAD/ROCKER notifications when rotated
+<LI>Optionally: Adjusts app launch buttons to rotate
+<LI>Single install, all other adjustments automatic
+</UL>
+
+<HR>
+<H2>Requirements</H2>
+You must have the following:
+<UL>
+<LI>Toshiba e800 or e805 PDA
+<LI>ROM version 1.0108 or 1.0110. Other versions may work.
+<LI>An ActiveSync connection for installation
+<LI>Previously installed one of the following resolution switchers.
+You should be familiar with how the VGA <-> QVGA switching process works.
+<UL>
+<LI><A HREF=http://home.comcast.net/~swdeveloper>ResFix (2.0)</A> with landscape mode by deez, $10.
+<LI><A HREF="http://www.pocketpctools.com/modules.php?name=Forums&file=viewforum&f=61">MyVGA</A> by hugbug and others, free but registration required
+<LI>NOTE: PadRot is not needed for regular Portrait mode VGA
+</UL>
+<P></P>
+</UL>
+<P></P>
+
+<P></P>
+<HR>
+<a name="INSTALL">
+<H2>Installation</H2>
+This is a one-time installation (ie. do it once and forget about it, unless you hard reset your PDA).
+You can optionally keep the "install_padrot.exe" program on your PDA for later use. It also serves as an un-install program.
+<UL>
+<LI>BACKUP YOUR PDA FIRST!
+<LI>Download this file: <A HREF="install_padrot.exe">install_padrot.exe</A> [V1.2 13.8 KB], and put it somewhere you will remember (eg: on your PC desktop)
+<LI>NOTE: Do not run this program on your PC. It is a Pocket PC program that you must run on your PDA.
+<P></P>
+<LI>Put your PDA in the cradle connected to your PC.
+<LI>Perform the following steps on your PC:
+<UL>
+<LI>Microsoft ActiveSync should popup and connect [if not check your connections]
+<LI>Press the "Explore" button.
+<LI>Double click on "My Pocket PC" 
+<LI>Double click on the "Temp" folder
+<LI>Drag the install_padrot.exe program from your PC (eg: your desktop) to the \Temp folder on the PDA
+</UL>
+<P></P>
+<LI>Perform the following steps on your PDA:
+<UL>
+<LI>Run "File Explorer" (in Programs) and go to the "\Temp" folder
+<LI>Click on the "install_padrot" program
+<LI>If successful, it should report "PadRot hack installed OK (version 1.2)"
+and "Soft reset to activate". If not, check below for "Special Case #?"
+<LI>Optionally you can close that dialog and it will then ask, "Rotate App Launch buttons?". Normally you should answer no. This is the default.
+</UL>
+<P></P>
+<LI>Remove the PDA from the cradle, and press the reset button. After the soft reset the patched driver will be used.
+<LI>The easiest way to test this is to run the Pocket Excel program.
+Use the Direction pad to scroll around the 2D array of cells.
+When the screen is rotated (with ResFix2 or MyVGA) the Direction pad buttons will scroll in the correct direction.
+
+</UL>
+
+<P></P>
+<HR>
+(there is no Special Case#1)
+
+<P></P>
+<H3>Special Case#2 - keep program or delete it</H3>
+You don't need to keep the install_padrot.exe program around after following the main instructions and rebooting.
+If you plan on uninstalling it later, you can keep the program around (perhaps moving it to the "\Windows\Start Menu\Programs" folder).
+Otherwise you can delete it from the "\Temp" folder.
+
+<P></P>
+<H3>Special Case#3 - uninstall</H3>
+If you run the install_padrot.exe program on a PDA that already has the PadRot hack installed, it will ask you if it should uninstall the hack.
+<P></P>
+To upgrade, you need to run the newer "install_padrot.exe" twice. First uninstall the old version, soft reset and then install the new version (and soft reset again).
+
+<P></P>
+<H3>Special Case#4 - programs that chain the keyboard driver</H3>
+
+If there is something already installed in the chain when install_padrot.exe is run, it will report
+"Warning: another keyboard driver is installed",
+ and ask "Do you want to install on top of it?"
+You will normally select "YES", and it will add the padrot hack to the current head of the chain.
+This is a safe option, as long as you don't try to uninstall programs installed <b>before</b> the padrot hack.
+
+<P></P>
+NOTE: It will also report the DLL name that is currently at the head of the chain
+<BR>
+NOTE: If you find chaining programs that do not work after you select "YES" in the install, please send me an email.
+
+<HR>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,163 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YART_APG - Audio Personality Generator
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YART_APG - Audio Personality Generator
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The "Audio Personality Generator" takes a number of .WAV files, and generates ACTIONs for them.
+These will appear in YART under "User Actions".
+The mouth movements (on the 210), the head movements and LED flashing are automatically generated for you.
+<BR>
+Before using YART_APG you should be familar with simple WAV editing.
+
+<P></P>
+<HR>
+<H2>Usage</H2>
+
+You should already have installed RCodePlus 2.51'A' on your memory stick <A HREF="yart.htm#install">as described here</A>.
+Run the program "\CUSTOM\YART_APG" from the memory stick.
+<P></P>
+
+<CENTER>
+<IMG SRC="ss_yart_apg0.gif">
+</CENTER>
+
+<P></P>
+
+Check to make sure the drive letter for the memory stick is correct.
+You should change the "Audio Data Path" to point to a folder on your PC where you want to store your audio samples.
+All .WAV files in that folder must be the correct format.
+
+<P></P>
+<HR>
+<H2>WAV format</H2>
+
+The WAV files you use must have simple names (start with a letter, and may only contain letters, numbers and "_").
+<BR>
+This simple name will also be the Action name
+(ie. "FOO_BAR.WAV" becomes the RCODE statement "PLAY ACTION+ FOO_BAR")
+<P></P>
+WAVE files must be 8bit, 8kHz (8000Hz), mono.
+<BR>
+
+I recommend <A HREF="http://www.syntrillium.com/download">CoolEdit 2000</A> as a good general purpose editor (free to try, $69 to buy).
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

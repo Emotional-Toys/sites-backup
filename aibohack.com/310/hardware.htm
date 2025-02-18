@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ERS-310 Hardware - CPU and memory
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ERS-310 Hardware - CPU and memory
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+Check out <A HREF="http://www.yk.rim.or.jp/~hkora11/aibo_ers-310/inside.htm">hkora11's photos of the insides of the 31x</A>.
+<P></P>
+
+<H2>CPU</H2>
+The CPU is a Toshiba TMPR 4955A MIPS processor. It uses the MIPS IV instruction set, 32-bit data bus, and has a maximum speed of 200MHz. It runs at 192MHz.
+<BR>
+NOTE: This is a different CPU than the one found in the ERS-2x0.
+
+<H2>Memory</H2>
+Dynamic memory is in two NEC D4518163 memory chips giving a total of 32MB of memory. This is SDRAM.
+<BR>
+Read only memory is in single Toshiba TC58FVB321 flash memory chip giving a total of 4MB of flash ROM.
+
+<H2>I/O Controller</H2>
+There is a separate 8-bit micro-controller that performs I/O functions as well as controlling the main CPU (including powering it up and acting like a watch-dog).
+The chip is an NEC D780023.
+It is an 8-bit micro-controller with 24KB of ROM and 1KB of RAM, an analog-to-digital converter, a real-time-clock, a buzzer circuit (for the boot failure tune) and two serial ports (among other features).
+
+<P></P>
+<HR>
+<H2>Specs</H2>
+Here are the main chips:
+<UL>
+<LI>200MHz MIPS CPU from <A HREF=http://www.toshiba.com/taec>Toshiba</A>
+<LI>8-bit Micro-controller from <A HREF=http://www.necel.com>NEC</A>
+<LI>16MB SDRAM from from <A HREF=http://www.necel.com>NEC</A>
+<LI>Toshiba 4M Flash ROM
+</UL>
+Specs are easily found online. If you can't find a particular chip specific, please send me an email.
+
+There are additional custom Sony chips (see photos). They appear to be the same as the ERS-210 chips.
+
+<P></P>
+<HR>
+<H2>Bluetooth</H2>
+The Bluetooth models have an extra module in the head.
+<BR>
+<IMG SRC="bt_module2.jpg">
+<BR>
+<IMG SRC="bt_module3.jpg">
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

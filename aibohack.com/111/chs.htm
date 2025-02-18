@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+"Captain Hook Syndrome"
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+"Captain Hook Syndrome"
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR><I>UNDER CONSTRUCTION</I></DIR>
+
+This is place holder for a future topic discussing "Captain Hook Syndrome" (AKA "CHS"), and "cobwebs" in learned data.
+
+<P></P>
+<HR>
+<H2>CHS Preliminary Info</H2>
+It appears that most 'cobweb's do not cause a problem, and might be normal functioning of the AIBO learning mechanism.
+<P></P>
+A better way do diagnose this is to track the "Learned Summary" reported by the browser (ABrowser for the ERS-11X and ABrowser23 for the other models).
+
+<BR>
+If you have an older dog, and the Learned data is relatively low (say under 6 things learned and a couple dozen points learned), then your AIBO may have caught "CHS".
+To test this out, try a "learning boost".
+
+<P></P>
+<H2>Learning Boost</H2>
+A Learning Boost is a short experiment to find out if your AIBO has a problem learning ("CHS") or just has forgotten a lot (which is normal).
+<BR>
+This technique can work for any model dog running learning software.
+
+<UL>
+<LI>Step 1: put your main AIBO memory stick in the PC stick reader
+<LI>Step 2: run the Browser (ABrowser for the ERS-11x, ABrowser23 for the ERS-210 and later), and open the MEMSTICK.IND at the root of the memory stick
+<LI>Step 3: write down the numbers for "things" and "points" learned
+<LI>Step 4: remove the stick from the PC reader, and put it in your AIBO
+<LI>Step 5: boot up AIBO
+<LI>Step 6: play with your AIBO for about 3 to 5 minutes. Interact heavily and praise him (pat on the head) every time he does something, anything.
+<LI>Step 7: press the chest pause button, and wait for the stick to be updated (and beeping to stop)
+<LI>Step 8: put the stick back in the PC stick reader again (like step 1)
+<LI>Step 9: run the Browser again (like step 2)
+<LI>Step 10: compare the new numbers with the last numbers
+</UL>
+
+You should see a noticable spike in the learning. Several new things should be learned, and several dozen new points.
+If you see this spike in learning, your AIBO is fine, since he can learn.
+<BR>
+If you do not see a spike in learning (your AIBO fails to increase the things/points learned), please send me an email.
+
+<P></P>
+<H2>Requiring more investigation</H2>
+The general problem requires more investigation.
+I think most "CHS" problems may just be normal AIBOs, that do have learning problems.
+The problem is that they forget what they have learned too quickly.
+<BR>
+I am still investigating this, and will post more info as I learn more.
+
+<P></P>
+I suspect the internal flash memory (the root cause of many PPS problems) may have some influence on the situation, but I am not sure.
+<P></P>
+<HR>
+
+
+
+</BODY>
+</HTML>

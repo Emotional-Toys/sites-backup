@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter Workbook File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Skitter Workbook
+File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><big
+ style="text-decoration: underline;"><big style="font-weight: bold;">1.
+Introduction</big></big><br>
+      <br>
+      <a href="../skitter.html">Skitter</a> workbooks (*.aib) help
+organize skits more efficiently.&nbsp;&nbsp; Master Studio required up
+to four separate files for one skit.&nbsp;&nbsp; Workbooks on the other
+hand contain everything -- making them much easier to move, copy and
+share.<br>
+      <br>
+Workbooks are basically just standard ZIP files, which contain up to
+five files (subject to change).&nbsp;&nbsp; If you
+change the extension from *.aib to *.zip, you can open them with any
+ZIP program -- such as WinZip.&nbsp;&nbsp; <br>
+      <br>
+For example:<br>
+      <center>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">beethoven5.act<br>beethoven5.info<br>Motion\beethoven5.mtn<br>LED\beethoven5.led<br>Sound\beethoven5.mid</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+The <a href="action.html">Action</a>, <a href="motion.html">Motion</a>,
+      <a href="led.html">LED</a>, and sound (<a href="wave.html">Wave</a>
+or <a href="midi.html">MIDI</a>) files are AMS1.1 compatible
+formats.&nbsp;&nbsp; <br>
+      <br>
+      <br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">2. Workbook
+Info Files</span></big></big><br>
+      <br>
+Skitter's *.info files are optional simple text files.&nbsp;&nbsp; If
+present in a workbook,
+they store information such as row heights, comment markers, zoom
+state, etc...&nbsp;&nbsp; Changing the contents of an info file is not
+recommended, and could cause problems with Skitter.<br>
+      <br>
+Each line starts with a keyword identifying what follows on the same
+line.&nbsp;&nbsp;&nbsp; The only ones important to Skitter
+are:<br>
+      <pre style="margin: 0pt; padding: 5pt;"><ul><li>MIDI_READONLY &lt;flag&gt;        Skitter should treat MIDI as read only<br></li><li>MIDI_CONVERTED &lt;flag&gt;       MIDI file was converted<br></li><li>MTNROW &lt;row&gt; &lt;pixels&gt;       Row height</li><li>MARKER &lt;framenum&gt; &lt;text&gt;    Comment marker</li><li>ZOOM_STATE &lt;value&gt;          Zoom state (-1=custom, 0=20sec, 1=10sec, 2=4sec, ...)<br></li><li>ZOOM_FACTOR &lt;value&gt;         Zoom factor (frames per grid * 10000)</li></ul></pre>
+All other keywords are currently ignored.<br>
+      <br>
+      <br>
+      <big><big><span
+ style="font-weight: bold; text-decoration: underline;">3. INFO Example</span></big></big><br>
+      <br>
+      <table
+ style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre>SKITTER INFO *** DO NOT EDIT ***<br>PATHNAME NewSkit1<br>PLATFORM 7<br>SOUNDSTART 0<br>ISACTION 1<br>NAME NewSkit1<br>CREATOR Skitter<br>COMMENT <br>COMPANY <br>MTN Motion\NewSkit1.mtn<br>MTNMOD 1<br>MTNROW 0 30<br>MTNROW 1 30<br>MTNROW 2 30<br>MTNROW 3 30<br>MTNROW 4 30<br>MTNROW 5 30<br>MTNROW 6 30<br>MTNROW 7 30<br>MTNROW 8 30<br>MTNROW 9 30<br>MTNROW 10 30<br>MTNROW 11 30<br>MTNROW 12 30<br>MTNROW 13 30<br>MTNROW 14 30<br>MTNROW 15 30<br>MTNROW 16 30<br>MTNROW 17 30<br>MTNROW 18 30<br>MTNROW 19 30<br>LED LED\NewSkit1.led<br>LEDMOD 0<br>MIDI Sound\NewSkit1.mid<br>MIDIMOD 0<br>MIDI_READONLY 0<br>MIDI_CONVERTED 0<br>MARKER 59 This is a comment<br>ZOOM_STATE 2<br>ZOOM_FACTOR 3200</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a href="examples/NewSkit1.aib.html">Download Example</a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

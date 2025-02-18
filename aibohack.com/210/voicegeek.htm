@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+AIBO Voice Recognition Technical Info
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+AIBO Voice Recognition Technical Info
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<HR>
+<DIR><I>OLDER WEBPAGE (not being kept current) - a technical discussion of voice recognition and phonemes </I></DIR>
+
+<HR>
+<H2>Files</H2>
+A voice dictionary is stored in 3 files:
+<UL>
+<LI>HMMDATA.BIN - HMM phoneme codebook - low level phoneme unit recognition
+<LI>DICDATA.BIN - phrase dictionary - mid level - which phrases are recognized
+<LI>SEMDATA.BIN - command dictionary - how phrases are interpreted as high level semantic commands
+</UL>
+
+<P></P>
+<HR>
+<H2>Phonemes</H2>
+
+Each language has its own HMMDATA.BIN file.
+These represent the phonemes of the language.
+They are called "PLU"s (Phone-Like-Units or Phoneme-Like-Units) since they aren't always strictly phenemes.
+There are many versions of each PLU.
+<BR>
+
+Currently there are four different HMMDATA.BIN files:
+<UL>
+<LI>English has 43 PLUs <A HREF="english.htm">Click here for details</A>
+<LI>Japanese has 30 PLUs <A HREF="japanese.htm">Click here for details</A>
+<LI>French has 37 PLUs <A HREF="french.htm">Click here for details</A>
+<LI>German has 43 PLUs <A HREF="german.htm">Click here for details</A>
+</UL>
+
+<P></P>
+<HR>
+<H2>Phases, Commands</H2>
+There is an important difference between a phrase (DicID) and voice command (VCmd#?).
+Each voice command has one or more phrases.
+For example "Good Boy" and "Good Girl" are both interpreted as VCmd#9.
+Also, there may be more than one way to pronounce a word or phrase
+(for example 'g uh_' and 'g uh_ d' for the word "good").
+Each different pronunciation has its own phrase dictionary entry.
+<P></P>
+Which phrases are recognized is determined by the phrase dictionary (DICDATA.BIN).
+How the phrases are turned into semantic voice commands is determined by the ommand dictionary (SEMATA.BIN).
+<P></P>
+Even though all English versions of AiboWare share the same HMMDATA.BIN file, they may have different SEMDATA.BIN and DICDATA.BIN files.
+Currently there are three different command sets: AiboLife (which is the same as Hello AIBO), Party Mascot and Messenger (which is the same as Navigator).
+
+
+<P></P>
+<HR>
+<H2>How it all works</H2>
+
+At the heart of AIBO's voice recognition is a Hidden Markov Model (HMM) voice recognition engine.
+The voice recognition is "continuous", which means AIBO is listening to almost everything you say, and trying to recognize the words and phrases it knows
+(in the phrase dictionary).
+<P></P>
+Sound comes in the ear microphones, is digitized, (using LPC I believe) and then Vector Quantized.
+I don't have many details about the Vector Quantization approach used, so details in this area are vague.
+<P></P>
+Each of the phrases in the phrase dictionary (DICDATA.BIN) is tested to compare how closely it matches the sound heard
+(the number of phrases is limited by the CPU speed).
+The best matched phrase is then turned into a semantic voice command (by looking in SEMDATA.BIN).
+<P></P>
+After that, the semantic voice command is sent to the behavior logic (as in the case of AiboLife) to trigger some specific reaction to hearing the command.
+In the case of RCode Plus, the value is stored in "AP_Voice_Cmd".
+
+<P></P>
+// add picture here
+
+<P></P>
+<HR>
+<H2>Using AiboScope Live!</H2>
+If you have your AIBO attached to your PC via the WiFi LAN, you can use AiboScope LIVE! to monitor the voice commands heard by your AIBO.
+In addition to the voice command detected (VCmd#, the semantic voice command), the "dicid" from the phrase dictionary is also displayed for the top 10 matches.
+Be sure to pick the proper language vocabulary from the Aibo Scope menu (English AiboLife is the default).
+
+<P></P>
+<HR>
+<H2>RCode Plus</H2>
+If you have gotten this far in the technical explanation,
+hopefully you are already programming AIBO using Master Studio and RCode Plus.
+Using RCode Plus, you can do some more advanced things.
+<BR>
+After using the "AP_Voice_Cmd" variable to isolate a voice command you are insteresting in, you can use the "AP_Voice_DicID" variable to further distinguish which phrase was said.
+<BR>
+The default RCode Plus voice command set is the AiboLife set (in English, Japanese or French).
+If you are unhappy with the default (AiboLife) vocabulary, you can use the Party Mascot or Messenger voice commands instead.
+Email me for details.
+<BR>
+For more advanced applications, the DICDATA.BIN file can be customized to your own set of voice commands.
+I am still working on this, so email me for details.
+
+
+<P></P>
+<HR>
+<H2>Recorded Name / Name Registration</H2>
+When AIBO records his name with "Name Registration", the same phoneme dictionary and phoneme phrase analysis is used.
+This means recorded names are language specific (what works on a Japanese stick will may not work on an English stick and vice-versa).
+<BR>
+The file ARRDATA.BIN on the memory stick saves the recorded name in a format similar to the unchanging DICDATA.BIN file.
+<BR>
+The ERS-210 Browser (version 1.1 or later) will dump the phoneme's of your AIBO's recorded name.
+<P></P>
+
+<HR>
+
+
+</BODY>
+</HTML>

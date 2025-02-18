@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter Performance Editor</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../dogsbodynet.com/index.html"><img alt="Home" src="web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">Skitter - AIBO
+Performance Editor</font></b> </div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <table border="2" cellpadding="20" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce" valign="top">
+            <table
+ style="width: 100%; background-color: rgb(255, 255, 255); text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="width: 1px; vertical-align: middle;"><a href="downloads/Skitter-v3.40-Installer.exe">
+                  <img alt="Skitter Logo" src="images/logo.gif"
+ style="border: 0px solid ; width: 96px; height: 99px;" hspace="5"
+ vspace="2"></a><br>
+                  </td>
+                  <td
+ style="vertical-align: middle; text-align: center;">
+                  <div align="center"><br>
+                  <big><b><a href="downloads/Skitter-v3.40-Installer.exe">Download
+Installer for<br>
+Skitter AIBO Performance Editor v3.40<br>
+(1.5 MBytes)</a></b></big><small><br>
+                  <br>
+Prefer zipfiles instead?&nbsp;<a href="downloads/skitter-tools-v3.40.zip">skitter-tools-v3.40.zip</a>
+                  </small><br>
+                  </div>
+                  </td>
+                  <td style="width: 96px; vertical-align: middle;"><a href="downloads/Skitter-v3.40-Installer.exe">
+                  <img alt="Skitter Logo" src="images/logob.gif"
+ style="border: 0px solid ; width: 96px; height: 99px;" hspace="5"
+ vspace="2"></a></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a name="SKITTER"></a><b><font size="+1"><br>
+      </font></b>
+      <table
+ style="width: 75%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+        <tbody>
+          <tr>
+            <td valign="top" width="50%"><b><font size="+1">Table
+of
+Contents:</font></b></td>
+            <td
+ style="width: 50%; vertical-align: top; white-space: nowrap;"><big><b>&nbsp;&nbsp;
+Tutorials:<br>
+            <br>
+            </b></big></td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp; <a
+ href="skitter.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter.html#INSTALL">2.0 Install Skitter</a>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/perform.html">3.0 Performance Files</a>
+&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/motion.html">4.0 Motion Editing</a>&nbsp;&nbsp;
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/led.html">5.0 LED Editing</a>&nbsp;&nbsp;
+&nbsp; &nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/midi.html">6.0 MIDI Sound Editing</a>&nbsp;
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/wave.html">7.0 Wave Sound Editing</a>&nbsp;
+            <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/library.html">8.0 The Reference
+Library</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/preview.html">9.0 The AIBO Window</a>&nbsp;
+&nbsp; &nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/test.html">10.0 Test Actions on
+AIBO</a>&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/upload.html">11.0 Upload Actions
+to AIBO</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/prefs.html">12.0 Specify
+Preferences</a> <br>
+            <br>
+&nbsp;&nbsp;&nbsp; <big><i><b><a href="skitter.html#WHATSNEW">What's New?</a><br>
+            </b></i></big></td>
+            <td style="vertical-align: top; white-space: nowrap;">
+            <ul>
+              <li> <a href="skitter/tutorial1.html">Create your
+first
+skit!</a>&nbsp;<a href="skitter/tutorial1.html"> </a> </li>
+              <li> <a href="skitter/tutorial2.html">Adding
+lights
+&amp;
+sound!</a><br>
+              </li>
+            </ul>
+            <ul>
+              <li> <a href="skitter/tutorial3.html">Adding Skits
+to
+YART!</a> <br>
+              </li>
+              <li><a href="skitter/tutorial4.html">Adding Skits
+to AiboMind 1, 2 or 3!</a> <br>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="skitter/tutorial5.html">Adding Skits to
+DogsLife!</a>&nbsp;<a href="skitter/tutorial5.html"> </a></li>
+              <li><a href="skitter/tutorial8.html">Change or Tweak
+DogsLife Skits!</a>&nbsp; <br>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="skitter/tutorial6.html">Recording
+Music!</a> <br>
+              </li>
+              <li><a href="skitter/tutorial7.html">Making Situp
+Dances!</a>&nbsp; </li>
+            </ul>
+            <ul>
+              <li>Need help?&nbsp;&nbsp; <a style="font-style: italic;"
+ href="mailto:dogsbody@dogsbodynet.com">Ask
+DogsBody!</a></li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </p>
+      <div align="center">
+      <hr size="2" width="100%"> <br>
+      <br>
+      <img src="images/skitter.gif" alt="Skitter Screen Capture"
+ style="width: 650px; height: 536px;" hspace="0"><br>
+      <br>
+      </div>
+      <br>
+      <a name="INTRO"></a><br>
+      <table border="2" cellpadding="10" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce"><font color="#ffffff"><b><font
+ size="+1"><big>1.0&nbsp; INTRODUCTION TO SKITTER<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td><b>&nbsp;<br>
+What is an AIBO skit?</b>&nbsp;&nbsp;&nbsp; Skits
+are things such as dances, tricks, leg
+waves, tail wagging, etc...&nbsp;&nbsp; <br>
+            <br>
+Generally, anything AIBO does other than walking is a
+skit.&nbsp;&nbsp; Skits controls AIBO's body movement, lights &amp;
+sound.<br>
+            <br>
+Skitter runs on your PC (not AIBO).&nbsp;&nbsp; Use it to create custom
+AIBO skits &amp;
+performances.&nbsp; All AIBO flavors are supported.&nbsp;&nbsp; There
+are many features,
+effects, and safe-guards to make editing easy.&nbsp; Skitter and <a
+ href="aibnet.html">Aibnet</a>
+together are a complete AIBO design environment.<br>
+            <p>Skitter directly supports initializing memory
+sticks
+through a
+memstick
+reader, or over the AIBO wireless network (WLAN) -- if you have
+one.&nbsp; Owners with an AIBO WLAN can test actions on-the-fly at any
+time. </p>
+            <p>Skitter works on Windows 98, 2000, XP &amp; Vista.&nbsp;
+It
+uses OpenGL
+for drawing a 3D AIBO preview.&nbsp; A fast machine is not required for
+simple editing.&nbsp;&nbsp; However, for simulated playback a fast
+machine (600 Mhz+ CPU) with a 3D graphics card is recommended. </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p> </p>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      <a name="INSTALL"></a><br>
+      <table border="2" cellpadding="10" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce"><font color="#ffffff"><b><font
+ size="+1"><big>2.0&nbsp; INSTALLING SKITTER<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr align="left">
+            <td>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top"><br>
+Download the<a href="downloads/Skitter-v3.40-Installer.exe"> Skitter
+Installer</a> to
+your PC desktop.&nbsp;&nbsp; <br>
+                  <br>
+Double click on the installer icon &amp; follow the simple step-by-step
+instructions.&nbsp;&nbsp; </td>
+                  <td align="center" valign="top"><img alt="Installer"
+ src="images/install.gif" border="1" height="306" hspace="20"
+ vspace="10" width="401"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" rowspan="1" valign="top"><br>
+                  <hr size="2" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><i><big><b><u>2.1 Filename
+Associations</u></b> </big></i><br>
+                  <p>The
+first time you start Skitter, you see the "Welcome to Skitter" window
+(see
+right).&nbsp;&nbsp; <br>
+                  <br>
+You're asked if Windows should use Skitter to open AIBO skits.&nbsp; <br>
+                  </p>
+                  <p>Click "<b>OK</b>" so Windows
+uses
+Skitter to open them (recommended).<br>
+                  </p>
+                  <p>Click "<b>Skip</b>" and nothing is changed. </p>
+                  <p>You can change filename associations any
+time
+(from <b>Edit </b>menu, click <b>Preferences</b>). </p>
+                  </td>
+                  <td align="center" valign="top"><img
+ src="images/ssetup.gif" alt="" align="top" border="1" height="262"
+ hspace="20" vspace="10" width="383"></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <table border="2" cellpadding="10" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce"><font color="#ffffff"><b><font
+ size="+1"><big>Additional Documentation...<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter.html#INTRO">1.0
+Introduction</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter.html#INSTALL">2.0 Install Skitter</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/perform.html">3.0 Performance Files</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/motion.html">4.0 Motion Editing</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/led.html">5.0 LED Editing</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/midi.html">6.0 MIDI Sound Editing</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/wave.html">7.0 Wave Sound Editing</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/library.html">8.0 The Reference
+Library</a><br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/preview.html">9.0 The AIBO Window</a>
+      <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/test.html">10.0 Test Actions on
+AIBO</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/upload.html">11.0 Upload Actions
+to AIBO</a> <br>
+&nbsp;&nbsp;&nbsp; <a href="skitter/prefs.html">12.0 Specify
+Preferences</a><br>
+      <br>
+      <b><br>
+      </b>
+      <table border="2" cellpadding="10" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce"><font color="#ffffff"><b><font
+ size="+1"><big>Tutorials...<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul>
+        <li><a href="skitter/tutorial1.html">Create your first
+skit!</a></li>
+        <li><a href="skitter/tutorial2.html">Adding lights &amp;
+sound!</a></li>
+        <li><a href="skitter/tutorial3.html">Adding Skits to YART!</a></li>
+        <li><a href="skitter/tutorial4.html">Adding Skits to
+AiboMind</a><a href="skitter/tutorial4.html"> 1, 2 or 3</a><a
+ href="skitter/tutorial4.html">!</a></li>
+        <li><a href="skitter/tutorial5.html">Adding Skits to DogsLife!</a></li>
+        <li><a href="skitter/tutorial8.html">Change or Tweak DogsLife
+Skits!</a></li>
+        <li><a href="skitter/tutorial6.html">Recording Music!</a></li>
+        <li><a href="skitter/tutorial7.html">Making Situp Dances!</a></li>
+      </ul>
+      <br>
+      <a name="WHATSNEW"></a><br>
+      <table border="2" cellpadding="10" cellspacing="2" width="100%">
+        <tbody>
+          <tr>
+            <td bgcolor="#0a6cce"><font color="#ffffff"><b><font
+ size="+1"><big>What's New?<br>
+            </big></font></b></font></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table cellpadding="8" cellspacing="0" cols="1" width="100%">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">
+            <ul>
+              <li><b>V</b><b>ersion 3.40</b> - Issues with converting
+wave files fixed.&nbsp;&nbsp; Fixed
+number of clipboard related issues in MIDI editor.&nbsp;&nbsp; You can
+now add
+current workbook to the library easily.&nbsp;&nbsp; Can add current
+clipboard
+contents also (makes a great scratchpad!)&nbsp;&nbsp; Usual batch of
+minor fixes </li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">
+            <ul>
+              <li><a href="skitter/history.html">Click</a> for
+more change history...<br>
+              </li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="text-align: center;"><br>
+      </div>
+      <center>
+      <table style="text-align: center;" border="1" cellpadding="2"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td
+ style="width: 1px; vertical-align: top; text-align: center;">
+            <table
+ style="text-align: center; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="0" width="50%">
+              <tbody>
+                <tr align="center">
+                  <td colspan="5" rowspan="1"
+ style="vertical-align: top;"> Skitter supports all AIBO models!</td>
+                </tr>
+                <tr align="center">
+                  <td valign="middle" width="42"><img alt="ERS-110"
+ src="images/110.gif" title="ERS-110" border="1" height="32" hspace="5"
+ width="32"></td>
+                  <td valign="middle" width="42"><img title="ERS-210"
+ alt="ERS-210" src="images/210.gif" border="1" height="32" hspace="5"
+ width="32"></td>
+                  <td valign="middle" width="42"><img title="ERS-220"
+ alt="ERS-220" src="images/220.gif" border="1" height="32" hspace="5"
+ width="32"></td>
+                  <td valign="middle" width="42"><img title="ERS-310"
+ alt="ERS-310" src="images/310.gif" border="1" height="32" hspace="5"
+ width="32"></td>
+                  <td valign="middle" width="42"><a
+ href="skitter/ers7info.html"><img alt="ERS-7" src="images/7.gif"
+ title="ERS-7" border="1" height="32" hspace="5" width="32"></a></td>
+                </tr>
+                <tr align="center">
+                  <td style="text-align: center;" valign="middle"
+ width="42"><small>110</small></td>
+                  <td style="text-align: center;" valign="middle"
+ width="42"><small>210</small></td>
+                  <td style="text-align: center;" valign="middle"
+ width="42"><small>220</small></td>
+                  <td style="text-align: center;" valign="middle"
+ width="42"><small>310</small></td>
+                  <td style="text-align: center;" valign="middle"
+ width="42"><small>7</small></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      </td>
+    </tr>
+    <tr>
+      <td> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

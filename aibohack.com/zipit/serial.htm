@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Zipit Hardware mods
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Zipit Hardware mods
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+For general use, the software-only reflashing trick can be used if you have an old device.
+If the software-only process screws up, or you have a device with newer firmware (version 2.x or later)
+you must perform a hardware mod to enable the reflashing process (and open up the Zipit to homebrew Linux apps).
+The "5 wire" mod is recommended, and is what most/all people are using today.
+This lets you upload ROM images for testing, and gives you a serial port you can connect to.
+The "3 wire" mod is included here as a historical note (and an option if you want to reflash many units)
+<P></P>
+
+<HR>
+<H2>5 Wire - Developer Configuration</H2>
+
+<UL>
+<LI>PROCEED AT YOUR OWN RISK
+<LI>Take apart your Zipit device
+<LI>You will be soldering 5 small wires to the main PCB.
+Two solder points are easy to get to, two are a little tricky, and one is very very difficult to solder to.
+<LI>Run the wires to an RS-232 level shifter. A MAX233A chip (around $5) is recommended.
+<LI>You connect this to a free serial port of your PC. Current version of PC upload software runs under Windows (haven't gotten around to porting it to Linux)
+</UL>
+
+<CENTER>
+<IMG SRC="zipit5_schematic.gif">
+</CENTER>
+<P></P>
+Wiring points (original scan thanks to Andrew Hakman of Yahoo BBS):
+<CENTER>
+<IMG SRC="zipit_wiring1.jpg">
+<BR>Closeup:<BR>
+<IMG SRC="zipit_wiring2.jpg">
+</CENTER>
+<P></P>
+
+<H3>Other developer tips:</H3>
+<UL>
+<LI>A simple Windows console program is used to selectively upload new firmware.
+<LI>REVIEW: move to general webpage
+<LI>To rebuild the kernel, or build ARM Linux Apps to run on the Zipit, you will need a Linux PC (i386) with the ARM Linux cross compliation tools installed.
+<LI>When writing software, powering the device from AC only (unplug the battery) is recommended. It makes it easier to hard-reset the device.
+<LI>An NFS server is recommended for easy file uploads. 'nfs version 3 over UDP' is required.
+</UL>
+
+<HR>
+<H2>3 Wire - Repair Configuration</H2>
+
+This is a slightly easier version.
+Very tricky soldering is not required (only mildly difficult soldering for one contact point).
+It does not give you feedback for the first part of the reflashing process.
+
+<CENTER>
+<IMG SRC="zipit3_schematic.gif">
+</CENTER>
+(See above photos for contact points, but ignore the RxD2 and TxD2 signals)
+
+<P></P>
+The 3 Wire mod is not supported by my software, but there are others.
+I recommend the 5 Wire mod.
+
+<P></P>
+</HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,295 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ CliePet Extensions (developer helpers) - version 2.1
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ CliePet Extensions (developer helpers) - version 2.1
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+See <A HREF="index.html#GENERAL">main page</A> for runnable versions of the demo programs [some are older version .5 - the latest and greatest can be built from the sources]
+<P></P>
+This section is for developers (using CodeWarrior or other C++ tools) to give them a simple SDK
+for accessing the funky hardware feature of the NX/NZ/UX CLIEs.
+There are helper classes for the camera (preview and still preview), movie recording, movie playback and voice recording.
+Source code to demo programs is also provided.
+<P></P>
+<H3>Official APIs</H3>
+For newer devices (UX and later) use the official SndStream API for voice recording and playback.
+For NX/UX and TH devices, there is now an official CapLib2 API provided by Sony (see cliedeveloper.com). This gives you still camera control.
+These Cpx helper classes are not official APIs, but can be used in conjunction with them.
+
+<P></P>
+DISCLAIMER#1:
+The samples and mini SDK is very minimal.
+It is not a full SDK to all the features available in the hardware.
+Instead it provides very easy access to common features for camera preview,
+camera still image capture, voice recording, sound playback, movie recording and playback.
+<BR>
+DISCLAIMER#2: The current version has a very unreliable implementation of voice recording.
+I don't recommend you use it for serious work right now.
+<BR>
+DISCLAIMER#3: Not officially sanctioned by Sony. Use at your own risk. These are unofficial APIs.
+<BR>
+DISCLAIMER#4: Reverse engineered under fair use rules of DMCA for use in making your programs
+compatible with these CLIE models. Other uses may be prohibited by law.
+
+<P></P>
+<HR>
+
+<H3>System API helpers - cpx_common</H3>
+
+All the magic occurs in one C++ classes that hide all the details for each subsystem.
+<UL>
+<LI>class CpxCamera handles the still camera (preview and capture).
+See the header "cpx_common\cpx_camera.h", and the MyCam sample program (as well as BouncyCam and SpyStillCam for more elaborate examples)
+<LI>class CpxVoiceRecorder the voice recorder and limited sound playback.
+See the header "cpx_common\cpx_voicerec.h", and the MyRec sample program.
+</UL>
+<BR>
+There is very minimal documentation in "cpx_common\API.TXT".
+Please read all the README.TXT files and the sample source code as well.
+
+<P></P>
+
+<P>What it does:</P>
+
+<LI>Audio Recording (class CpxVoiceRecorder)
+<BR>NOTE: Not as reliable as it needs to be!
+<UL>
+<LI>Sample rates supported: 11025, 22050, 44100
+<LI>Only 4bit ADPCM supported
+<LI>Access to recorded data is through storage heap
+<LI>Normal processing is possible during recording.
+<LI>Selectable microphone sensitivity (Hi or Lo)
+<LI>Red "Recording" LED handled automatically on UX model
+<LI>NOTE: does <b>not</b> support arbitrarily streaming audio recording
+</UL>
+<LI>Audio Playback (class CpxVoiceRecorder)
+<UL>
+<LI>Synchronous playback of WAVE files loaded into RAM
+<LI>Most WAVE formats supported (from 11kHz 4bit ADPCM mono to CD quality 44kHz 16bit PCM stereo)
+<LI>NOTE: does <b>not</b> support streaming audio
+</UL>
+<LI>Camera Preview: (class CpxCamera)
+<UL>
+<LI>Preview window drawn anywhere on Hires screen
+<LI>Preview window can be up to 320x240 in size
+<LI>Standard camera settings: white balance, effect, exposure 
+<LI>Specialized camera settings: zoom (UX), camlight (NX80)
+<LI>Camera settings and effects show up in the preview window
+</UL>
+<LI>Camera Still Capture: (class CpxCamera)
+<UL>
+<LI>Capture and save .JPG file to a VFS file (MS or CF)
+<LI>Camera settings set for preview mode also apply to .JPG saved to VFS
+<LI>Automatically handles mirror flipping image
+(whether the camera is pointing towards you or away from you)
+<LI>Resolution supported depends on model
+<DIR>
+for UX/NX70V/NX73V?: 160x120, 320x240, 320x480, 640x480
+<BR>
+for NX80: 320x240, 320x480, 640x480, 1280x960
+<BR>
+for NZ: NOT SUPPORTED **
+</DIR>
+<LI>NOTE: does <b>not</b> support streaming video
+</UL>
+
+<LI>Movie Recording (class CpxMovieRecorder)
+<UL>
+<LI>Record standard size movie clips (160x112)
+<LI>Store to VFS (memory stick or CF) or storage heap
+<LI>Adjustable compressed video size (96, 192 or 256kbps)
+<LI>Audio recorded as well (standard 32kbps format)
+</UL>
+<LI>Movie Playback (class CpxMoviePlayer)
+<UL>
+<LI>Can play back movies a wider variety of sizes and rates (just like the built-in MoviePlayer)
+</UL>
+
+
+<P></P>
+<H3>Other Notes</H3>
+
+NZ90 Camera:
+Unfortunately the CLIE with the best camera (the NZ90) has a very different camera interface.
+I am not planning on figuring it out without a little help from Sony.
+You can still use the preview mode.
+Preview on the NZ90 includes the reticule and flash indicators.
+
+<HR>
+<H3>Demo samples</H3>
+Source to demo programs is also included.
+Please read the general README.TXT file as well as the README.TXT files in each sample directory.
+<UL>
+<LI>MyRec - simple recording features and access to storage heap. Currently suffers from a recording reliability problem.
+<LI>MyCam - simple camera preview and still image capture test program
+<LI>BouncyCam - simple camera preview window that bounces around the screen
+<LI>SpyCam - simple camera preview window with LAN telemetry to send images to PC program (SpyCamViewer)
+<LI>SpyCamViewer - a Windows program (Visual C++) that talks to the SpyCam program on the CLIE
+</UL>
+<P></P>
+<HR>
+<H3>Hardware/Software Requirements</H3>
+<UL>
+<LI>You will need CodeWarrior (I use version 9, but older versions should work with a little project tweeking).
+Other free development tools should work, but have not been tested.
+<LI>You will need at least one of the following CLIE models: NX70V, NX73V, NX80V, NZ90, UX40, UX50
+<LI>You can not use the Emulator or the Simulator to test your apps, you need a real device.
+</UL>
+
+<H3>Downloads</H3>
+
+<UL>
+<LI>Download the helper classes and demo samples here <A HREF="cpx_sdk_21.zip">cpx_sdk_21.zip</A>
+<LI>Unzip to a folder on your development machine.
+I recommend the folder name "C:\CPX_SAMP" which will make all the project files build easier.
+<LI>Build the projects, and play with them as you see fit.
+<LI>The very minimal documentation is in the "cpx_common\API.TXT" file.
+<LI>Minimal documentation for the samples is in their respective "README.TXT" files.
+<LI>Questions or comments, send me an email
+</UL>
+
+<P></P>
+<HR>
+<H3>Future Work</H3>
+<UL>
+<LI>Fix the voice recording reliability bug (still a problem)
+<LI>Support voice recording straight to memory stick
+<LI>Support still camera capture to storage heap
+<LI>Realtime video streaming (custom FileSystem handler)
+<LI>...
+</UL>
+<HR>
+<H3>Legal Notices</H3>
+Contains technology reverse engineered from standard camera and voice recorder apps.
+Falls under one of the few "fair uses" of reverse engineering under the DMCA, for creating compatible software.
+As far as I understand the vague law, it legal to use such technology
+in your own programs to make them compatible with the CLIE specialized hardware (voice recorder, speaker, camera).
+All other uses are prohibited by law, and may enrage the DMCA secret police.
+<P></P>
+This is freeware, and may be used anyway you see fit.
+Copyright remains with me.
+If you use it, a credit along the lines of "Thanks to CliePet" would be appreciated.
+<BR>
+If you do make feature additions, please email me the changes for future use.
+The programs and helper code is pretty small so a SourceForge project is overkill.
+
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

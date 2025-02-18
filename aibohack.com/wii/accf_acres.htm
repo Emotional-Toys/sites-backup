@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+          <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+ AC:CF Acre Types
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ AC:CF Acre Types
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+The normal AC:CF town is 5x5 acres in size.
+One acre is 16x16 cells. Each cell can contain one item, pattern, flower or tree.
+With a code hack of a future map editor, you can change the layout of your town.
+This is similar to the old "river editing" and "super river editing" feature of the AC:WW map editor.
+
+<P></P>
+<CENTER><IMG SRC="http://aibohack.com/wii/sample1.jpg"></CENTER>
+Underneath the covers, an AC:CF town is actually 7x7 acres in size.
+There is a border acre around the entire town. Normally this contains cliffs or ocean.
+With a code hack or a future map editor, you can change these outer acres as well
+<BR>
+NOTE: you can' place or drop items in this border area.
+Regular game play is restricted to the regular town (5x5 acres) in the middle.
+<CENTER><IMG SRC="http://aibohack.com/wii/sample2.jpg"></CENTER>
+
+<P></P>
+<H2>Using Acre Codes</H2>
+
+You can use these acre codes to poke into memory using a USB Gecko, or use a 'code' for Ocarina/GeckoOS.
+If you have the required hardware, email me if interested.
+<BR>
+Otherwise please wait for an updated version of Virus's ACToolkit/Map Editor.
+
+<BR><B>NOTE: These are 'acre codes' not 'item codes' or 'terrain codes'.
+You can't use these numbers in regular codes to create items.</B>
+
+<P></P>
+<HR>
+<P></P>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Acre Codes</H1>
+</center></td></tr> </TABLE>
+
+<P></P>
+<DIR><B>These are Acre Codes, not Item Codes or Terrain Codes</B></DIR>
+<P></P>
+
+Here are the possible acre codes in hex. The range is 0000 to 016F.
+Beside the codes is a little picture that is an approximation of the acre graphics shown in the town map.
+<BR>
+For this map, and lightest green is the lower level (usually sea level).
+The darker green is the upper level.
+There is also a very dark green which is the highest elevation. This allows you to make (limited) 3 elevation towns.
+
+<P></P>
+<CENTER>
+<IMG SRC="acre_color_key.jpg">
+</CENTER>
+
+<P></P>
+<DIR><B>This is a rough guide and overview.
+Experimentation is required to find good combinations</B></DIR>
+<P></P>
+
+<HR>
+<H3>0000 to 005F - Transitions</H3>
+These acre codes are used for transitions between levels.
+Normally use the flat acre types first, then use these acre codes to match them up (match dark green with dark green; match light green with light green).
+This will make the proper cliffs, and waterfalls.
+The orange blobs in the graphics are ramps going between levels.
+Light green is the lowest elevation (can be tied with light green 'flat' acres), Dark green is the higher elevation (can be tied to dark green 'flat' acress).
+Very dark green is for the highest elevation (there are no 'flat' acres at this elevation).
+<BR>
+The normal layout for a town is higher elevations in the north, lower elevations in the south (ie. as visitors walk from North to South, they go downhill, eventually to the ocean).
+You can break those rules.
+<P></P>
+0000..000F:
+<DIR><IMG SRC="acres/000.jpg"></DIR>
+0010..001F:
+<DIR><IMG SRC="acres/010.jpg"></DIR>
+0020..002F:
+<DIR><IMG SRC="acres/020.jpg"></DIR>
+0030..003F:
+<DIR><IMG SRC="acres/030.jpg"></DIR>
+0040..004F:
+<DIR><IMG SRC="acres/040.jpg"></DIR>
+0050..005F:
+<DIR><IMG SRC="acres/050.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+
+<H3>0060 to 0085 - normal flat acres</H3>
+These are the most common acre codes for flat areas.
+Blue shows the small lakes/ponds.
+Small orange ramps show the bus stop (use those tiles for bus stop). If you use this acre type elsewhere, it will be an invisible ramp.
+<BR>
+Cobble stone (where buildings are normally placed) is <B>now</B> displayed as rough grey blobs.
+<BR>
+Acre codes come in pairs (eg: 0060 and 0061).
+Use the first code (even, eg: 0060, light green) for acres placed on the lower part of your town, matching with sea level.
+Use the second code (odd, eg: 0061, dark green) for acres placed on the upper part of your town, where the gatehouse is usually placed.
+
+<P></P>
+0060..006F:
+<DIR><IMG SRC="acres/060.jpg"></DIR>
+0070..007F:
+<DIR><IMG SRC="acres/070.jpg"></DIR>
+0080..0089:
+<DIR><IMG SRC="acres/080_089.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+<H3>008A to 00C1 - oceanfront</H3>
+Welcome to the ocean front. Many options here.
+Normally place at the bottom of your town map (2nd bottom row).
+Normally use the light green version (even acre code).
+Connect to river acres as necessary (see 'flat river segments' below).
+
+<P></P>
+008A..008F:
+<DIR><IMG SRC="acres/08A_08F.jpg"></DIR>
+0090..009F:
+<DIR><IMG SRC="acres/090.jpg"></DIR>
+00A0..00AF:
+<DIR><IMG SRC="acres/0A0.jpg"></DIR>
+00B0..00BF:
+<DIR><IMG SRC="acres/0B0.jpg"></DIR>
+00C0..00C1:
+<DIR><IMG SRC="acres/0C0_0C1.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+<H3>00C2 to 00D7 - town barrier walls</H3>
+These acres are used on the border, the outside part of the 7x7 town grid.
+When you start playing with acre codes, you normally start with the 5x5 regular town grid.
+You should leave the outer border alone.
+<BR>
+When you get more experience, you can change the outer border acres. Typically you will replace the barrier walls with normal flat acres (increasing the walkable town size to approximately 7x7)
+You can also do the reverse, use barrier walls in other places in the town.
+<BR>
+The lighter brown (even acre code) should be used on the lower part of your town.
+The darker brown (odd acre code) should be used on the upper part of your town.
+There are a few transition options if you want to make your outer barrier wall match the cliffs in the regular town (5x5).
+<BR>
+The last two (00D6, 00D7) are the transition to the ocean.
+<BR>
+For a normal waterfall, use code 00CD on a border acre, and a acre with a water pool directly to the south of it (code 010D, 010F or 0111).
+There are other interesting variations. You can have more than one waterfall.
+
+<P></P>
+00C2..00D7:
+<DIR><IMG SRC="acres/0C2_0D7.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+<H3>00D8 to 00D9 - ocean</H3>
+<P></P>
+This is the ocean. Normally placed at the bottom (far south) of the 7x7 town grid.
+Normally use acre code 00D8.
+
+<P></P>
+00D8..00D9:
+<DIR><IMG SRC="acres/0D8_0D9.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+<H3>00DA to 016F - flat river segments</H3>
+<P></P>
+Many options here. All have river segments on a flat acre (remember light green for lower part of town, dark green for upper part).
+Many of the river segments have optional bridges.
+
+<P></P>
+00DA..00DF:
+<DIR><IMG SRC="acres/0DA_0DF.jpg"></DIR>
+00E0..00EF:
+<DIR><IMG SRC="acres/0E0.jpg"></DIR>
+00F0..00FF:
+<DIR><IMG SRC="acres/0F0.jpg"></DIR>
+0100..010F:
+<DIR><IMG SRC="acres/100.jpg"></DIR>
+0110..011F:
+<DIR><IMG SRC="acres/110.jpg"></DIR>
+0120..012F:
+<DIR><IMG SRC="acres/120.jpg"></DIR>
+0130..013F:
+<DIR><IMG SRC="acres/130.jpg"></DIR>
+0140..014F:
+<DIR><IMG SRC="acres/140.jpg"></DIR>
+0150..015F:
+<DIR><IMG SRC="acres/150.jpg"></DIR>
+0160..016F:
+<DIR><IMG SRC="acres/160.jpg"></DIR>
+
+<P></P>
+<HR>
+<P></P>
+<H2>Sample Town Maps</H2>
+<P></P>
+<CENTER><IMG SRC="teasers/teaser_acres_1.jpg">
+<BR>Multi level town, many ramps going down to hidden border areas,<BR>
+Walkways on border (the game won't show you walking to the far east or west),
+<BR>two waterfalls (at different elevations),
+three elevation hill near waterfront</CENTER>
+<HR>
+<P></P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>Skitter Tutorial #3 - Adding Skits to AIBO!</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<table border="0" cellpadding="20" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" bgcolor="#0a6cce" valign="top"><big><b><font
+ size="+1"><big><font color="#ffffff"><big>Skitter Tutorial #3 - Adding
+Skits to YART!</big> </font></big></font></b></big></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+
+</center>
+<center>
+<table cellpadding="0" cellspacing="0" width="90%">
+  <tbody>
+    <tr>
+      <td>
+      <p><br>
+      <u><i><big><big><b>Adding Skits to YART!</b></big></big></i></u><br>
+      </p>
+      <p>The <a href="tutorial1.html">first tutorial</a> introduced
+AIBO motion files (making AIBO move).&nbsp;&nbsp; The <a
+ href="tutorial2.html">second</a> described using the LED &amp; Sound
+editors.&nbsp; <br>
+      </p>
+      <p>Editing skits is ok for a while, but the real fun is
+seeing AIBO perform them!&nbsp;&nbsp; This tutorial explains preparing
+AIBO programmable memory sticks, and
+using them with <a href="https://www.aibohack.com/rcode/yart.htm">YART</a>.&nbsp;&nbsp;
+It's easy &amp; only takes a few mouse clicks. <br>
+      </p>
+      <p>Please note currently this tutorial only applies to the
+ERS-210, ERS-220, ERS-310, and ERS-7.<br>
+      </p>
+      <p> </p>
+Our goals are:<br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top">
+            <ul>
+              <li><a href="tutorial3.html#ACTDIR">Prepare an Action Directory</a></li>
+              <li><a href="tutorial3.html#MEMSTICK">Prepare a Programmable Memstick</a><br>
+              </li>
+              <li><a href="tutorial3.html#YART">Adding Skits to YART</a></li>
+              <li><a href="tutorial3.html#USEYART">Using New Skits in YART</a></li>
+            </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+Let's get started!<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="ACTDIR"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>1.0
+Prepare an Action Directory</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><br>
+            </td>
+            <td valign="top">An "<b>action directory</b>" is a folder
+(on your PC) where you collect the skits you want placed on AIBO.<br>
+            <br>
+There is nothing special about this folder, other than it contain the
+workbooks (*.aib) for your skits. &nbsp;&nbsp; If using action files
+instead (*.act), the action directory would also have folders for
+motion, sound, and LED files. <br>
+            <br>
+Generally you'll have one action directory for each AIBO personality
+you create. <br>
+            </td>
+            <td valign="top"><img alt="" src="../images/stut2_0.gif"
+ align="right" border="1" height="182" hspace="30" width="283"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <hr noshade="noshade" size="1" width="100%"><br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30">&nbsp;<br>
+            </td>
+            <td valign="top"><u><i><big><b>1.1 Copying &amp; Renaming
+skits</b></big></i></u><br>
+            <br>
+            <small><u><i><big><b>1.1.1 Workbooks</b></big></i></u>&nbsp;
+            </small><br>
+Copying or renaming AIBO Workbooks is easy.&nbsp;&nbsp; Just use
+Windows Explorer.&nbsp;&nbsp;&nbsp; No muss.&nbsp; No fuss.<br>
+            <br>
+            <small><u><i><big><b>1.1.2 Action Files</b></big></i></u>&nbsp;
+            </small><br>
+Copying &amp; renaming action files is harder.&nbsp; You must copy the
+action file,
+motion, led &amp; sound files.&nbsp;&nbsp; The easiest way is using
+Skitter. <br>
+            <br>
+Open the target performance in Skitter, and use the <b>File </b>Menu,
+"<b>Save-As</b>"
+command.&nbsp;&nbsp; Select a new destination action directory, and
+Skitter saves copies of all files associated with the performance. </td>
+            <td valign="top"><img src="../images/stut3_0.gif" alt=""
+ border="1" height="212" hspace="10" vspace="10" width="340"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <hr noshade="noshade" size="1" width="100%"><br>
+      <table style="width: 100%;" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><a name="MEMSTICK"></a><br>
+            <table
+ style="width: 100%; background-color: rgb(204, 204, 204);" border="1"
+ cellpadding="8" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>2.0
+Prepare the Programmable Memory Stick<br>
+                  </b></big></big></i></u></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0"
+ width="100%">
+              <tbody>
+                <tr>
+                  <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)&nbsp; <br>
+                  </font></small></b></big></big></td>
+                  <td valign="top">Download Aibopet's <a
+ href="https://www.aibohack.com/rcode/yart.htm">YART / RCodePlus</a>
+program.&nbsp;&nbsp; Get the version matching your AIBO (<a
+ href="https://www.aibohack.com/rcode/RCodePlus252A%28210%29.zip">210</a>,
+                  <a
+ href="https://www.aibohack.com/rcode/RCodePlus252A%28220%29.zip">220</a>,
+                  <a
+ href="https://www.aibohack.com/rcode/RCodePlus252A%2831x%29.zip">310</a>
+&amp; <a href="https://www.aibohack.com/ers7/RCODE7_YART703_E.zip">7</a>).<br>
+                  </td>
+                  <td align="center" valign="middle"><img
+ alt="YART Icon" src="../images/yart.gif" border="1" height="30"
+ width="32"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+                  </font></b></big></td>
+                  <td valign="top">Insert a programmable memory
+stick into your memstick reader. &nbsp; Oops, don't have a reader?
+&nbsp; Buy one from Sony, since other brands have damaged AIBO
+memsticks.&nbsp; Click <a href="../rcode_supplies.html">here</a> for
+info.<br>
+                  <br>
+PMS sticks are different from blue &amp; white sticks, AiboMind,
+AiboLife, or other
+AIBO-Ware.&nbsp; &nbsp; The memsticks are specially encrypted and -<span
+ style="font-weight: bold; font-style: italic;">not</span>-
+interchangeable.&nbsp;&nbsp; They'll have no label, a blank label, or
+an
+"<i>AIBO Master Studio</i>" label (see right).<br>
+                  <br>
+btw, CLIE PDA owners should get <a
+ href="https://www.aibohack.com/clie/stikzap.htm">StikZip</a> from
+Aibopet.&nbsp;&nbsp; Highly recommended.<br>
+                  </td>
+                  <td align="center" valign="middle"><img
+ alt="Memstick Examples" src="../images/msticks.gif" border="1"
+ height="138" hspace="10" width="319"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+                  </font></b></big></td>
+                  <td valign="top"> Install YART onto the
+memstick.&nbsp;&nbsp;&nbsp; Do not just copy the ZIP file -- it won't
+work.<br>
+                  <br>
+ZIP files are compressed.&nbsp;&nbsp; You must use something like <a
+ href="https://www.winzip.com/">WinZip</a>
+to "unzip" YART/RCodePlus onto the memory stick.<br>
+                  </td>
+                  <td valign="top"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top"><br>
+                  <hr noshade="noshade" size="1" width="100%"></td>
+                </tr>
+                <tr>
+                  <td valign="top">&nbsp;<br>
+                  <big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">) <br>
+                  </font></b></big></td>
+                  <td valign="top"><br>
+Open the memstick in Windows
+Explorer.&nbsp;&nbsp; If&nbsp; you see CUSTOM, OPEN-R and possibly
+PHOTOS, you're good to go!<br>
+                  <br>
+                  </td>
+                  <td align="center" valign="top"><img
+ alt="YART Memstick" src="../images/stut3_8.gif" border="1" height="162"
+ hspace="10" vspace="10" width="215"> </td>
+                </tr>
+                <tr>
+                  <td valign="top"><br>
+                  </td>
+                  <td colspan="2" valign="top">
+                  <hr size="1" width="100%"></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><a name="YART"></a><br>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>3.0
+Adding Skits to YART<br>
+            </b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <u><i><big><big><b></b></big></big></i></u><br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(1</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+            </font></b></big></td>
+            <td valign="top">Start Skitter &amp; close any open skits.<br>
+            <br>
+Click on the toolbar "<b>Write</b>"
+button.&nbsp;&nbsp; Skitter prompts for the AIBO platform being
+used.&nbsp;&nbsp; This must match your AIBO model, or AIBO won't boot
+up
+properly.<br>
+            <br>
+Select your AIBO type (or click Cancel to quit).<br>
+            </td>
+            <td align="center" valign="top" width="330"><img
+ src="../images/stut3_1.gif" alt="" align="top" border="1" height="142"
+ hspace="10" width="265"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Now select the "<b>action directory</b>"
+on your PC, where you've collected everything for your AIBO personality.<br>
+            <br>
+The example (see right) shows selecting the tutorial directory included
+with Skitter.<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_2.gif" alt="" align="top" border="1" height="264"
+ hspace="10" width="257"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">) <br>
+            </font></b></big></td>
+            <td valign="top">Skitter compiles the action directory, and
+writes it to the programmable memory stick.<br>
+            <br>
+For large action directories (such as in DogsLife) this might take
+several seconds.<br>
+            <br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_3.gif" alt="" align="top" border="1" height="117"
+ hspace="10" width="209"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">)<br>
+            </font></b></big></td>
+            <td valign="top">Once Skitter displays "Done!" the memstick
+is ready, or an error message if something went wrong.<br>
+            <br>
+If an error occurred, click on the "<b>View Log</b>"
+button to see what happened.<br>
+            <br>
+Otherwise, click "<b>OK</b>" to close the dialog.<br>
+            </td>
+            <td align="center" valign="top"><img
+ src="../images/stut3_4.gif" alt="" align="top" border="1" height="117"
+ hspace="10" width="209"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top"><u><i><big><big><b><a name="USEYART"></a><br>
+      </b></big></big></i></u>
+      <table style="width: 100%; background-color: rgb(204, 204, 204);"
+ border="1" cellpadding="8" cellspacing="4">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(51, 204, 255);"><u><i><big><big><b>4.0
+Using New Skits in YART</b></big></big></i></u></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td valign="top" width="30"><big><big><b><small><font
+ color="#3366ff">(1)&nbsp; <br>
+            </font></small></b></big></big></td>
+            <td valign="top">Start AiboPet's <a
+ href="https://www.aibohack.com/rcode/yart.htm">YART</a> utility on the
+memory stick.<br>
+            <br>
+It can be found in the memstick "CUSTOM" folder.&nbsp; Double click on "<b><big><tt>YART.EXE</tt></big></b>"
+from Windows Explorer.<br>
+            <br>
+The YART utility allows creating simple AIBO personalities.&nbsp; You
+just select events, and use the mouse to drag-n-drop skits.<br>
+            <br>
+In YART, using custom user skits is no different than using the builtin
+standard skits.<br>
+            </td>
+            <td valign="top"><img src="../images/stut3_5.gif" alt=""
+ title="" align="right" border="1" height="403" hspace="5" width="396">
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(2</font></b></big><big><b><font
+ color="#3366ff">)&nbsp;<br>
+            </font></b></big></td>
+            <td valign="top">From the "<i><b>When this happens</b></i>"
+box, expand "AIBO voice command", then click "Hello".<br>
+            <br>
+From the "<i><b>Available Actions</b></i>" category box, select "<b>User
+Actions</b>".&nbsp; YART puts all your custom/new skits in this
+category.<br>
+            <br>
+            <br>
+            <br>
+            </td>
+            <td valign="top"><img src="../images/stut3_6.gif" alt=""
+ title="" align="right" border="1" height="403" hspace="5" width="396"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(3</font></b></big><big><b><font
+ color="#3366ff">)&nbsp; <br>
+            </font></b></big></td>
+            <td valign="top">Click-n-drag one of the user actions (ie:
+"firstwave"), into the "<i><b>AIBO does this</b></i>" box.<br>
+            </td>
+            <td valign="top"><img src="../images/stut3_7.gif" alt=""
+ title="" align="right" border="1" height="403" hspace="5" width="396"></td>
+          </tr>
+          <tr>
+            <td valign="top"><br>
+            </td>
+            <td colspan="2" valign="top"><br>
+            <hr noshade="noshade" size="1" width="100%"><br>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top"><big><b><font color="#3366ff">(4</font></b></big><big><b><font
+ color="#3366ff">) <br>
+            </font></b></big></td>
+            <td colspan="2" valign="top">You're done!&nbsp;&nbsp; Click
+the large "<b>Save RCode program to memory stick</b>" button.&nbsp; <br>
+            <br>
+Once saving is complete, insert the memory stick into AIBO.&nbsp;&nbsp;
+Turn on AIBO, and after booting, try saying "Hello".&nbsp;&nbsp; AIBO
+should respond with the custom performance you added.<br>
+            <br>
+After three tutorials, you can now create custom skits, add them to
+AIBO, and use YART to perform them! <br>
+            <br>
+            <big><i><b>Congratulations!</b></i></big>&nbsp; <br>
+            <br>
+Got a question? &nbsp;&nbsp; <i><a
+ href="mailto:dogsbody@dogsbodynet.com">Ask Dogsbody!</a></i> </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+<hr width="100%">
+<div align="left">
+<center>
+<table cellpadding="0" cellspacing="0" cols="1" height="0" width="85%">
+<tbody>
+<tr align="right">
+<td align="left">
+<div align="center"> </div>
+<center>
+<div align="center"><small><small><i>Legalese: </i>These programs are provided AS IS without any warranty, expressed or implied.&nbsp;
+This includes without limitation the fitfulness for a particular purpose or
+application.&nbsp;&nbsp;&nbsp; People using the software bear all risk
+as to its quality and performance.&nbsp;&nbsp; The user of the software
+is responsible for any damages whether direct, indirect, special,
+incidental or consequential arising from a failure of these programs to operate in
+any manner desired.&nbsp;&nbsp; Etc, etc...<br>
+<br>
+</small></small></div>
+<font size="-2">"AIBO" is a registered trademark of Sony Corporation.&nbsp;
+"AIBO Master Studio", "R-Code", and "Memory Stick" are trademarks of Sony Corporation.</font>
+</center>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<hr width="100%"><br>
+
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

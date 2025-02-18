@@ -1,0 +1,386 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+AiboPet LAN Extensions
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+AiboPet LAN Extensions
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This page describes the extensions to the Wireless LAN protocol provided by "RCodePlus" and <A HREF="../210/lifeplus.htm">"LifePlus" family</A> ("Aibo Life 1 Plus", "Aibo Life 2 Plus", "Explorer Plus" and "Recognition Plus".
+This protocol applies to versions 2.52 and later.
+<DIR>
+Version 2.51 of RCodePlus and "Life-Plus" are
+<i>Legit-i-Mutt</i><font size=-1><sup>&#169;</font><font size=-2>TM</sup></font>releases.
+</DIR>
+<P></P>
+
+<H2>Extensions</H2>
+There are several different AiboWare "Plus" sticks:
+<LI>RCodePlus - extensions to the "PMS" RCODE software
+<LI>LifePlus - extensions to the Life software (AiboLife 1, AiboLife 2, Explorer, Recognition Plus)
+<P></P>
+Both LifePlus and RCodePlus support getting the camera photo from AIBO via the wireless LAN.
+<BR>
+LifePlus has additional LAN card extensions including getting voice command data, mood data and semantic input data. LifePlus does not have any RCODE language extensions.
+<BR>
+RCodePlus has RCODE language extensions that will do new things like voice recognition. See the <A HREF="rcp_overview.htm">RCodePlus</A> page for more details.
+<BR>
+
+<P></P>
+<HR>
+<H2>Supported commands</H2>
+
+<TABLE>
+<tr bgcolor=#808080>
+<td>Feature</td>
+<td>command code</td>
+<td>Supported in<BR>RCodePlus<BR>(2.52)</td>
+<td>Supported in<BR>LifePlus<BR>(2.52)</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Version Check</td>
+<td>TELEMREQ_GETVER</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Get camera data (jpeg)</td>
+<td>TELEMREQ_GETJPEG</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Get camera data (faster)</td>
+<td>TELEMREQ_GETYUV10</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Get color detection data</td>
+<td>TELEMREQ_GETCOLORIMAGE</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Record audio</td>
+<td>TELEMOP_FLUSHAUDIO, TELEMREQ_GETAUDIO</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Device control</td>
+<td>TELEMOP_SETPROPERTY</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Voice top 10 matches</td>
+<td>TELEMREQ_GETVOICEDATA</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Semantic input events</td>
+<td>TELEMREQ_GETSEMANTICEVENT</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr bgcolor=#FFFFFF>
+<td>Upload file to RAM</td>
+<td>TELEMOP_RPUT</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+<tr bgcolor=#C0FFC0>
+<td>RCODE interpreter extensions</td>
+<td>AP_*</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+</TABLE>
+
+<P></P>
+<HR>
+<HR>
+<H2>LAN Protocol ("RCOMM" extensions)</H2>
+
+This section discusses the extensions to the LAN card protocols.
+These are done outside the RCODE interpreter and therefore will work with either "LifePlus" or "RCodePlus".
+<BR>
+In earlier versions (RCodePlus 1.91 and earlier), the RCODE port (21002) was used to transfer data.
+In this version, a separate TCP/IP connection (AKA "pipe" AKA "socket") is used to request and received binary telemetry data.
+You open up port number 21001 on your AIBO to send telemetry requests.
+If you use a Berkeley-like socket package (like WinSock) you can open up a connection-oriented byte stream (SOCK_STREAM).
+<P></P>
+Telemetry requests start with a single byte determining the request or operation.
+The symbols start with "TELEMREQ_" for requests that return data, and "TELEMOP_" for operations that do something else. See the "telem.h" header in the C++ samples for more detail.
+
+<HR>
+<H3>Protocol Extensions overview</H3>
+<BR>
+When 32-bit value data is transmitted, it is transmitted in "intel" format.
+<P></P>
+With the exception of the TELEMREQ_VERSION request, all other data replies are in a standard binary reply format.
+When asking AIBO for data, it will first reply with 4 bytes.
+These 4 bytes make a 32-bit size value.
+If there is no data available, this size will be zero.
+If there is data available, this size will be the number of data bytes to follow.
+
+<BR>
+Data packets larger that 32000 bytes are not supported.
+<P></P>
+<HR>
+<H3>"TELEMREQ_VERSION"</H3>
+Return extension version info:
+<pre>
+        format:
+			struct TELEMVER
+			{
+			    char name[8];       // "AiboPet\0"
+			    unsigned char bMaj, bMin;    // version 2, 50
+			    unsigned char bType; // see TELEMVERTYPE
+			    unsigned char bFiller;
+            };
+</pre>
+You should check the version number (currently 2.51) and the capability flags before sending other commands to AIBO.
+<P></P>
+<HR>
+
+<H3>"TELEMREQ_GETJPEG"</H3>
+
+Get JPG image.
+Returns standard binary reply format.
+If no data is available a count of zero is returned.
+If data is available, a JFIF (.JPG) file is transmitted.
+The 4 byte size prefix is the number of valid bytes of JFIF data to follow (there is no rounding).
+The first time this is called, it will return a zero size, and will start the snapshot process. Subsequent calls will continue to auto-snapshot.
+
+<P></P>
+<HR>
+<H3>"TELEMREQ_GETYUV10"</H3>
+
+Recommended over JPEG for faster image download (about 10 fps, compared to JPEG 5 fps).
+<BR>
+Get image using 10 bits per pixel (5 bits for one Y sample each pixel, and 5 bits for the V and U values each other pixel).
+Returns standard binary reply format.
+If no data is available a count of zero is returned.
+If data is available, the size is exactly 31680.
+The first time this is called, it will return a zero size, and will start the snapshot process. Subsequent calls will continue to auto-snapshot.
+See samples for how the format is decoded and turned into 24 color bitmaps.
+<BR>
+NOTE: Version 2.51 and later
+
+<P></P>
+<HR>
+<H3>"TELEMREQ_GETCOLORIMAGE"</H3>
+Get color image. Returns standard binary reply format.
+<BR>
+If data is available it is exactly 6336 (88*72*1) bytes.
+Each byte contains 8 bits, one bit for each color range.
+This performs auto-snapshot just like TELEMREQ_GETJPEG.
+<P></P>
+<HR>
+<H3>"TELEMREQ_GETSEMANTIC"</H3>
+<DIR><I>LifePlus only</I></DIR>
+Get one or more semantic info records.
+Returns standard binary reply format.
+<BR>
+If data is available it is in multiples of 44 bytes
+<pre>
+	Each 44 byte record is in the format:
+		LONG - sequence number
+		LONG[10] - raw semantic data
+</pre>
+<P></P>
+<HR>
+<H3>"TELEMREQ_GETVOICEDATA"</H3>
+<DIR><I>LifePlus only</I></DIR>
+Get latest voice dictionary data record.
+Returns standard binary reply format.
+<BR>
+If data is available it is exactly 80 bytes.
+<pre>
+	Each 80 byte record is in the format of 10 records of 8 bytes each:
+		LONG voice dictionary id
+		LONG confidence
+	The order is the top ten matches from best to worst.
+</pre>
+
+<P></P>
+<HR>
+<H3>"TELEMREQ_FLUSHAUDIO", "TELEMREQ_GETAUDIO" - Getting audio from AIBO</H3>
+AIBO records audio in stereo from both of his ear microphones at the same time.
+The data format is 16kHz, 16bit, stereo.
+<BR>
+To get the audio stream from AIBO, you need to perform "TELEMREQ_GETAUDIO" requests to get chunks of data. Each chunk of audio data is 2048 bytes in size (512 samples representing 32ms of audio data).
+<BR>
+You must request audio at a fast enough rate not to lose data. AIBO will keep a circular buffer of 15 chunks (about 1/2 second).
+If full older records are kept.
+Non-empty reply packets include a sequence number you can check to see if data has been lost.
+<P></P>
+
+"TELEMREQ_GETAUDIO" returns the oldest audio chunks in the buffer.
+Returns standard binary reply format.
+<BR>
+If data is available it is multiple of 2056 (4+4+512*4) bytes.
+The current implementation returns at least 2 and at most 10 (MAX_AUDIO_BUFF) buffers.
+
+<pre>
+        format: (see the AUDIO_BUFF structure in 'telem.h')
+            LONG - sequence number (increments for each chunk)
+            WORD - sensor value AP_SensorData0
+            WORD - sensor value AP_SensorData1
+            WORD[512*2] - PCM audio samples (right channel first)
+
+</pre>
+
+<P></P>
+Before starting the TELEMREQ_GETAUDIO loop, you should send "TELEMOP_FLUSHAUDIO" which will reset the circular buffer.
+<P></P>
+The special sensor values provide an efficient way to pass 32 bits of data from a running RCODE program on AIBO to your PC while recording.
+<BR>
+See the AiboCap\aibomic.cpp sample for more details.
+
+<P></P>
+<HR>
+<H3>"TELEMOP_SETPROPERTY" - Device control</H3>
+This allows you access to the device control features normally found in the RCodePlus feature "AP_DEVCTL", but accessible for Life sticks as well.
+The byte command is followed by two data bytes, of the property index and the property value. See <A HREF="rcp_device.htm">AP_DEVCTL</A> for more details on the index and values supported.
+
+<P></P>
+<HR>
+<H3>"TELEMOP_RPUT" - Upload a file to RAM on AIBO</H3>
+
+"TELEMOP_RPUT" will upload a single file to RAM to be used with performance playback.
+See the "aiboplayr" sample for more details on the "TELEMOP_RPUT" protocol.
+<BR>
+WARNING: the RCodePlus 2.51 RPUT is flakey in some cases. Version 2.50 is more stable for now.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO LED File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO LED File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="led.html#INTRO">Introduction</a></li>
+        <li><a href="led.html#FORMAT">LED Format Differences</a></li>
+        <li><a href="led.html#PITCH">LED Key/Pitch Values</a></li>
+        <li><a href="led.html#VALUE">LED Brightness Values<br>
+          </a></li>
+        <li><a href="led.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+LED files control the eye/tail/back/etc... lights on an
+AIBO.&nbsp;&nbsp; The files are formatted as <a href="midi.html">MIDI
+files</a>.&nbsp; Instead of sound however, the key/pitch values
+correspond to individual LED's.&nbsp;&nbsp; The volume corresponds to
+LED brightness.&nbsp;&nbsp; As proof, try renaming any *.led file to
+*.midi and playing it in Windows Media Player.&nbsp; <br>
+      <br>
+Note: Familiarity with the <a href="midi.html">MIDI file format</a> is
+assumed below, so you
+might want to <a href="midi.html">review it</a> if needed.<br>
+      <br>
+      <a name="FORMAT"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">2. LED Format Differences</big></big><br>
+      <br>
+There are only a few minor differences/restrictions to creating
+compatible LED files:<br>
+      <ul>
+        <li>LED files -must- be <a href="midi.html#HDRCHUNKS">format 0</a>
+single track MIDI files.&nbsp;&nbsp;&nbsp; </li>
+        <li>Optional <a href="midi.html#META">Meta Text Event </a>(0xFF
+01 len msg) describes the target AIBO platform (ie: "MODEL=210").</li>
+        <li>No <a href="midi.html#META">Meta Time Signature</a> (0xFF
+58 04 nn dd cc bb) event is needed.</li>
+        <li>No <a href="midi.html#VOICEEVENTS">Program Change</a>
+(0xC0 pp) event to specify an instrument is needed.<br>
+        </li>
+        <li>Delta time values correspond to motion keyframes ticks
+instead of quarter notes.</li>
+      </ul>
+      <a name="PITCH"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">3. LED Key/Pitch Values</big></big><br>
+      <br>
+The following table lists per-platform LED to MIDI key/pitch mapping:<br>
+      <br>
+      <center>
+      <table
+ style="background-color: rgb(255, 255, 204); width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="1" cellpadding="5" cellspacing="0">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="margin: 0pt; padding: 0pt;">ERS-110  MODE          0x48<br>         MAD_EYES      0x40<br>         HAPPY_EYES    0x3C<br></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre style="margin: 0pt; padding: 0pt;">ERS-210  MODE          0x48<br>         RIGHT_EYE1    0x3F    (Mad)<br>         LEFT_EYE2     0x3E<br>         RIGHT_EYE2    0x3D    (Happy)<br>         LEFT_EYE2     0x3C<br>         RIGHT_EYE3    0x41    (Sad)<br>         LEFT_EYE3     0x40<br>         TAIL1         0x54    (Blue)<br>         TAIL2         0x56    (Orange)<br></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre style="margin: 0pt; padding: 0pt;">ERS-220  MODE          0x48<br>         UNKNOWN       0x4A<br>         VISOR1        0x3F    (Right-most)<br>         VISOR2        0x3D<br>         VISOR3        0x41<br>         VISOR4        0x40<br>         VISOR5        0x3C<br>         VISOR6        0x3E    (Left-most)<br>         FACE1         0x60<br>         FACE2         0x61<br>         FACE3         0x62<br>         TAIL1         0x5A    (Left)<br>         TAIL2         0x5B    (Center)<br>         TAIL3         0x5C    (Right)<br>         TAILFAN1      0x54    (Left-most)<br>         TAILFAN2      0x55<br>         TAILFAN3      0x56<br>         TAILFAN4      0x57<br>         TAILFAN5      0x58<br>         TAILFAN6      0x59    (Right-most)<br>         HEADLIGHT     0x30<br></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre style="margin: 0pt; padding: 0pt;">ERS-310  MODE          0x48<br>         HORN_GREEN    0x3C<br>         HORN_RED      0x3E<br>         HORN_BLUE     0x40<br></pre>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            <pre style="margin: 0pt; padding: 0pt;">ERS-7    MODE_RED      0x48<br>         MODE_GREEN    0x49<br>         MODE_BLUE     0x4A<br>         HEAD_COLOR    0x52<br>         HEAD_WHITE    0x53<br>         WIFI          0x4B<br>         FACE1W        0x30    (Lower-right, white)<br>         FACE2W        0x31    (Lower-left, white)<br>         FACE3W        0x32    (Mid-rightmost, white)<br>         FACE4W        0x33    (Mid-leftmost, white)<br>         FACE5W        0x34    (Mid-2nd right, white)<br>         FACE6W        0x35    (Mid-2nd left, white)<br>         FACE7W        0x36    (Top-rightmost, white)<br>         FACE8W        0x37    (Top-leftmost, white)<br>         FACE9W        0x38    (Top-2nd right, white)<br>         FACE10W       0x39    (Top-2nd left, white)<br>         FACE11W       0x3A    (Top center, white)<br>         FACE12W       0x3B    (Mid center, white)<br>         FACE13W       0x3C    (Angry 2, color)<br>         FACE14W       0x3D    (Angry 1, color)<br>         FACE1C        0x18    (Lower-right, color)<br>         FACE2C        0x19    (Lower-left, color)<br>         FACE3C        0x1A    (Mid-rightmost, color)<br>         FACE4C        0x1B    (Mid-leftmost, color)<br>         FACE5C        0x1C    (Mid-2nd right, color)<br>         FACE6C        0x1D    (Mid-2nd left, color)<br>         FACE7C        0x1E    (Top-rightmost, color)<br>         FACE8C        0x1F    (Top-leftmost, color)<br>         FACE9C        0x20    (Top-2nd right, color)<br>         FACE10C       0x21    (Top-2nd left, color)<br>         FACE11C       0x22    (Top center, color)<br>         FACE12C       0x23    (Mid center, color)<br>         FACE13C       0x24    (Sad 2, color)<br>         FACE14C       0x25    (Sad 1, color)<br>         BACK1W        0x55    (Front back sensor, white)<br>         BACK2W        0x57    (Center back sensor, white)<br>         BACK3W        0x59    (Rear back sensor, white)<br>         BACK1C        0x54    (Front back sensor, color)<br>         BACK2C        0x56    (Center back sensor, color)<br>         BACK3C        0x58    (Rear back sensor, color)<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <br>
+      <br>
+      <a name="VALUE"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">4. LED Brightness Values</big></big><br>
+      <br>
+AIBO LED's only support five brightness levels:&nbsp; Off, Low, Medium,
+High, Max.&nbsp;&nbsp; The 128 possible velocity (brightness) levels
+are therefore mapped as follows:<br>
+      <ul style="font-family: monospace;">
+        <li>0x00 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; = Off<br>
+        </li>
+        <li>0x01 to 0x1F&nbsp; = Low<br>
+        </li>
+        <li>0x20 to 0x3F&nbsp; = Medium<br>
+        </li>
+        <li>0x40 to 0x5F&nbsp; = High</li>
+        <li>0x60 to 0x7F&nbsp; = Max<br>
+        </li>
+      </ul>
+      <br>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>5.
+Example</big></big><br>
+      <span style="font-family: monospace;"><br>
+      </span><span style="font-family: monospace;"><span
+ style="color: rgb(0, 153, 0); font-weight: bold;">Chunk Headers<br>
+      </span></span><span style="font-family: monospace;"><span
+ style="font-weight: bold; color: rgb(0, 0, 153);">Meta Events &amp;
+Status Bytes<br>
+      </span></span><span style="font-family: monospace;"><span
+ style="color: rgb(204, 102, 0); font-weight: bold;">Time Delta's</span></span><br>
+      <pre>000000:&nbsp; <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">4d 54 68 64&nbsp; 00 00 00 06</span>&nbsp; 00 00 00 01&nbsp; 00 78 <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">4d 54</span>  |MThd.........xMT|<br>000010:&nbsp; <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">72 6b 00 00&nbsp; 01 34</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span> <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff&nbsp; 01 09 4d 4f&nbsp; 44 45 4c 3d</span>&nbsp; |rk...4....MODEL=|<br>000020:&nbsp; <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">32 31 30</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span>  <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff 03 08 75&nbsp; 6e 74 69 74&nbsp; 6c 65 64</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span>  |210....untitled.|<br>000030:&nbsp; <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff 51 03 07&nbsp; a1 20</span> <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">85 6e</span>  <span
+ style="color: rgb(0, 0, 153); font-weight: bold;">90 </span>3d 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00</span>  3c 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00 </span>54&nbsp; |.Q... .n.=..&lt;..T|<br>000040:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span> 54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00  |.&lt;T.-T.&lt;T.-T.&lt;T.|<br>000050:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span><span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f </span><span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  |-T.&lt;T.-T.&lt;T.-T.&lt;|<br>000060:&nbsp; 54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d</span> 54  7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; |T.-T.&lt;T.-T.&lt;T.-T|<br>000070:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span><span> 54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00  |.&lt;T.-T.&lt;T.-T.&lt;T.|<br>000080:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  |-T.&lt;T.-T.&lt;T.-T.&lt;|<br>000090:&nbsp; 54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; |T.-T.&lt;T.-T.&lt;T.-T|<br>0000a0:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00  |.&lt;T.-T.&lt;T.-T.&lt;T.|<br>0000b0:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  |-T.&lt;T.-T.&lt;T.-T.&lt;|<br>0000c0:&nbsp; 54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; |T.-T.&lt;T.-T.&lt;T.-T|<br>0000d0:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00  |.&lt;T.-T.&lt;T.-T.&lt;T.|<br>0000e0:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  |-T.&lt;T.-T.&lt;T.-T.&lt;|<br>0000f0:&nbsp; 54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; |T.-T.&lt;T.-T.&lt;T.-T|<br>000100:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00  |.&lt;T.-T.&lt;T.-T.&lt;T.|<br>000110:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  |-T.&lt;T.-T.&lt;T.-T.&lt;|<br>000120:&nbsp; 54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54&nbsp; |T.-T.&lt;T.-T.&lt;T.-T|<br>000130:&nbsp; 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c </span>54 00&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">2d </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">0f </span>3c  00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00 </span>3d 00&nbsp; |.&lt;T.-T.&lt;T..&lt;..=.|<br>000140:&nbsp; <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">1e </span>54 7f <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">3c</span>  54 00 <span
+ style="color: rgb(204, 102, 0); font-weight: bold;">00 </span><span
+ style="color: rgb(0, 0, 153); font-weight: bold;">ff  2f 00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |.T.&lt;T.../.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</span></pre>
+      <a href="examples/piano.led.html">Download Example</a><br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <a href="index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="../rcode/yart.htm">YART</a>,
+  <a href="../rcode/index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+YART 11x
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+YART 11x
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<DIR><I>Finally Here for the 110/111. You can teach old dogs new tricks!</I></DIR>
+<DIR>Please use the original <A HREF="../rcode/yart.htm">YART</A> for the ERS-210, 220 and 31x dogs</DIR>
+<P></P>
+
+YART_11x is a simple drag-and-drop tool for customizing the behavior of existing YART-enabled personalities for the ERS-110 and ERS-111.
+YART_APG_11x (Audio Personality Generator) is a separate tool for converting audio files (.WAV files) into AIBO actions.
+
+<P></P>
+NOTE: YART_11x is different than the standard YART (for the 2x0/31x).
+
+Many features of YART_11x are <i>similar</i> to the standard YART for the 2x0/31x.
+There is no direct compatibility between the two (because RCODE11x is significantly different than RCODE for the 2x0/31x).
+<P></P>
+
+
+<HR>
+<H2>Installation:</H2>
+<UL>
+<LI>Put an available 8MB or 16MB purple stick into your computer's stick reader
+<LI>Select any folders or files you see at the root of the stick (usually OPEN-R and CUSTOM) and delete them.
+<DIR>(if you see a file named MEMSTICK.IND, you can leave it)</DIR>
+<LI>Download the YART_11x basic personality: <A HREF="RCode11xWithYART.zip">RCode11x with YART.zip</A>
+<DIR>(Save this .ZIP file on your computer. You may want to use it again later.)</DIR>
+<LI>Unzip this file to the root of your memory stick.
+<LI>Open the \CUSTOM folder on the memory stick, and run "YART_11x.exe" to customize it (see below for details)
+<P></P>
+<LI>When done customizing, save the RCODE program, and remove the memory stick from your PC.
+<LI>Put the memory stick inside your AIBO and start it up.
+<LI>Play with your AIBO.
+</UL>
+
+<P></P>
+<HR>
+<H2>Using the basic personality</H2>
+
+<A name=BASE>
+Even before you customize it, there are many built-in features to the YART 11x personality.
+<UL>
+<LI>Customizable random skits performed when idle (for 10 seconds)
+<LI>Vibration detection
+<LI>Pink ball detection (with three levels - far, medium, near) including LOST
+<LI>Obstacle detection (with three levels - far, medium, near) including LOST
+<LI>Head sensor (pat and hit detection)
+<LI>Single mood (there is an option for a four mood personality like WhoAibo)
+<LI>Simple walk mode
+<UL>
+<LI>Will get up and walk when directed (???how???)
+<LI>Will stop when it detects an obstacle
+<LI>Will respond to a certain controller commands to direct AIBO walking
+<LI>??? list them ???
+</UL>
+<LI>Many Sound Controller Commands when walking:
+<DIR>(press "Game" button on controller once)</DIR>
+<UL>
+<LI>"2" - FORWARD - start walking forward (will stop if detects an obstacle)
+<LI>"5" - STOP - stop walking
+<LI>"8" - BACKWARD - start walking backward
+<LI>"6" - TURNR - turn right
+<LI>"4" - TURNL - turn left
+<LI>"3" - KICKR - kick right
+<LI>"1" - KICKL - kick left
+<P></P>
+<LI>"#" - WIN - win skit
+<LI>"*" - LOSE - lose skit
+<P></P>
+</UL>
+<LI>More Sound Controller Commands when not walking:
+<UL>
+<LI>11+Send - STANDUP - stand up
+<LI>12+Send - SITDOWN - sit down
+<LI>13+Send - LIEDOWN - lie down
+<LI>01+Send - GOGAME - stand and get ready to walk around
+<LI>All the walking commands (see above)
+<LI>88+Send/89+Send - SLEEP - lie down and get ready for charging
+<LI>31+Send - MSTYLE1 - Set "Animal" style for canned performances
+<LI>32+Send - MSTYLE2 - Set "Robot" style for canned performances
+<LI>33+Send - MSTYLE3 - Set "Child" style for canned performances
+<LI>34+Send - MSTYLE4 - Set "Other" style for canned performances
+<LI>41+Send - MOTION1 - Canned performance #1 (depends on style)
+<LI>42+Send - MOTION2 - Canned performance #2 (depends on style)
+<LI>43+Send - MOTION3 - Canned performance #3 (depends on style)
+<LI>44+Send - MOTION4 - Canned performance #4 (depends on style)
+<LI>45+Send - MOTION5 - Canned performance #5 (depends on style)
+</UL>
+<LI>Most sound controller commands with "ping" to acknowledge the command
+<LI>Sound controller will respond to either channel "A" or "B"
+<LI>Other controller commands are supported by YART_11x (many don't do anything in the default personality)
+</UL>
+
+<P></P>
+<HR>
+<H2>Using YART_11x to customize behavior</H2>
+
+<pre>
+TO ADD:
+// duplicate important parts from main overview/tutorial
+// canned actions
+// raw - sound, led
+</pre>
+
+<P></P>
+<HR>
+<H2>Using the 11x Browser to find and preview actions</H2>
+
+There are many built-in actions, and they can have rather obscure names.
+By using the ERS-11x Browser, you can preview the built-in system actions using the 3D Virtual AIBO (motions and audio, no LED playback).
+After you find the one you like, you can pick the action with the same name in YART_11x.
+
+
+<pre>
+TO ADD:
+// installation (be sure to get correct version)
+// browse the RCode11x stick directly
+// using browser for ESC
+// raw - sound, led
+</pre>
+
+<P></P>
+<HR>
+<H2>R-CODE.R</H2>
+The version of RCODE provided with YART is just the standard 11x version of RCODE, with a minor patch to increase the allowable user audio size.
+There are no feature changes (ie. there is no "RCodePlus" for the 11x).
+<P></P>
+If you want to program using straight RCODE (11x), please examine the file "\OPEN-R\R-CODE.R" on the memory stick.
+This is also the file you should backup.
+<P></P>
+NOTE: this is a different location and different features than RCODE for the ERS-2x0 and 31x.
+Read the
+<A HREF=http://www.us.aibo.com/clubaibo/rcode110ref.html>
+documentation</A> that comes with
+<A HREF=http://www.us.aibo.com/clubaibo/rcode.php>
+the official release of RCODE for the ERS-110/111</A> for more details.
+
+
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>YART_APG (11x)</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+<H2>Using YART_APG_11x to add custom sounds</H2>
+
+The "Audio Personality Generator" takes a number of .WAV files, and generates ACTIONs for them.
+These will appear in YART_11x under "User Actions".
+Mouth movements, head movements and LED flashing are automatically generated for you.
+For YART_APG_11x, user actions will be performed with the dog sitting down (other postures are possible, email me for details).
+<P></P>
+
+Before using YART_APG you should be familar with simple WAV editing.
+The .WAV files must be in standard AIBO format (8bit, 8kHz, mono).
+
+<P></P>
+<H3>Installing YART_APG_11x</H3>
+Because it is larger, you install YART_APG_11x, the support files it needs as well as your sounds on your PC.
+The sounds are checked, combined and added to the memory stick with the "Update Memory Stick" option.
+You should keep a backup of the PC installation as well as any changes made with YART_11x (ie. backup the \OPEN-R\R-CODE.R file from the memory stick.
+
+<pre>
+TO ADD:
+    installattion
+    explain this, PC installation, other details, mini-tutorial.
+</pre>
+
+
+
+</BODY>
+</HTML>

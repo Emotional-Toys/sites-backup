@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="DogsBody">
+<title>AIBO MWC File Format</title>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" type="text/css" href="../index_files/global.css">
+</head>
+<body style="margin: 0pt; color: black; background-color: rgb(255, 255, 255);"
+   alink="red" link="blue" vlink="navy">
+<table style="width: 100%; height: 100%;" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr valign="top">
+<td class="LHNavBar"><br>
+  <div style="text-align: center;">
+    <a href="../../dogsbodynet.com/index.html"><img alt="Home" src="../web_logo.gif" style="border: 0px solid;"></a>
+  </div><br>
+  <center>
+  <form method="get" action="https://www.google.com/search">
+   <input name="ie" value="UTF-8" type="hidden"> 
+   <input name="oe" value="UTF-8" type="hidden">
+   <input name="q" size="16" maxlength="255" value="" type="text">
+   <input name="btnG" value="  Search  " type="submit">
+   <input name="domains" value="www.dogsbodynet.com" type="hidden">
+   <input name="sitesearch" value="www.dogsbodynet.com" type="hidden">
+  </form>
+  </center>
+      <div class="MenuCat">Popular</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../dogslife.html">Dogslife</a></div>
+      <div class="MenuBottomSubCat"><a href="../tutorials.html">Tutorials</a></div>
+      <br>
+      <div class="MenuCat">Tools</div>
+      <div class="MenuSubCat"><a href="../skitter.html">Skitter</a></div>
+      <div class="MenuSubCat"><a href="../myskit/index.html">MySkit</a></div>
+      <div class="MenuSubCat"><a href="../aibnet.html">Aibnet</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/BeCompile.html">BeCompile</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/CPP.html">CPP</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/RCheck.html">RCheck</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/ReCode.html">ReCode</a></div>
+      <div class="MenuSubCat"><a href="../aibnet_tools/OdaBuild.html">OdaBuild</a></div>
+      <div class="MenuSubCat"><a href="../motion_file_tools.html">Command Line</a></div>
+      <div class="MenuBottomSubCat"><a href="../archive.html">Archive</a></div>
+      <br>
+      <div class="MenuCat">Tech Info</div>
+      <div class="MenuSubCat"><a href="../rcode.html">R-Code</a></div>
+      <div class="MenuSubCat"><a href="../openr.html">OPEN-R</a></div>
+      <div class="MenuBottomSubCat"><a href="../fileformats.html">File Formats</a></div>
+      <br>
+      <div class="MenuCat">Links</div>
+      <div class="MenuLinkCat"> <a href="https://www.aibohack.com/">Aibopet</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aibo-life.org/">Aibo-Life</a>
+      <a href="http://www.aibo-life.org/forums/cgi-bin/ultimatebb.cgi">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.aiboworld.com/">Aibo-World</a>
+      <a href="http://www.aiboworld.com/forum">Forum</a></div>
+      <div class="MenuLinkCat"> <a href="http://www.iofreak.com/">Aibo-Stuff</a></div>
+      <div class="MenuLinkCat"><a href="http://bobthepleo.com/forums/">Bob the Pleo Forum</a></div>
+      <div class="MenuLinkCat"> <a href="https://www.steamhobby.com/">Steam Hobby Site</a></div>
+      <div class="MenuBottomLinkCat"> <a href="http://www.tekkotsu.org/">Tekkotsu</a>
+      <a href="https://groups.yahoo.com/group/tekkotsu_dev/messages">Forum</a></div>
+
+<!-- It's either this or use an IE hack https://www.webreference.com/programming/min-width/ -->
+      <img src="../index_files/t.gif" height="1" width="140"> 
+</td>
+<td class="LH2NavBar"><br></td>
+
+      <td class="ContentPane">
+
+
+
+
+<center><br>
+<div style="text-align: center;"><b><font size="+3">AIBO MWC File
+Format</font></b>
+</div>
+<i>Contents of this website are freeware and/or copyrighted material, and may not be sold
+under any circumstances.</i><br>
+<i><font size="-1">Email: </font></i> <font size="-1"><a  href="mailto:dogsbody@dogsbodynet.com">dogsbody@dogsbodynet.com</a></font>
+<i><font size="-1">&nbsp;&nbsp;&nbsp; Home: </font></i> 
+<font size="-1"><a href="../../dogsbodynet.com/index.html">https://dogsbodynet.com</a></font><br>
+<br>
+ </center>
+<br>
+<center>
+<table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ cellspacing="0" cols="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"> <big
+ style="text-decoration: underline;"><big style="font-weight: bold;">Table
+of Contents</big></big><br>
+      <ol>
+        <li><a href="mwc.html#INTRO">Introduction</a></li>
+        <li><a href="mwc.html#HEADER">MWC Header</a></li>
+        <li><a href="mwc.html#BLOCK">MWC Block Record</a></li>
+        <li><a href="mwc.html#CHUNK">MWC Chunk Record</a></li>
+        <li><a href="mwc.html#CODES">Chunk Type Codes</a></li>
+        <li><a href="mwc.html#EXAMPLE">Example</a></li>
+      </ol>
+      <a name="INTRO"></a><br>
+      <big style="text-decoration: underline;"><big
+ style="font-weight: bold;">1. Introduction</big></big><br>
+      <br>
+AIBO MWC (Middleware Catalog) files are index tables, for associating
+the elements/chunks stored in ODA files.&nbsp;&nbsp; Since AIBO stores
+Motion, LED &amp; Sound elements separately, it needs a way to know
+which elements belong together.<br>
+      <br>
+The MWC file tells AIBO which elements go together, and provide
+AIBO a reference number called the MWCID.&nbsp;&nbsp; The MWCID can be
+used
+directly within R-Code to play a skit, using the
+PLAY:MWCID:&lt;value&gt; command.&nbsp;&nbsp; Generally though human
+readable names are preferable (see <a href="cfg.html">Action Config
+Files</a>).<br>
+      <br>
+Following the header are block &amp; chunk records.&nbsp;&nbsp; Each
+block record is immediately followed by its associated variable sized
+chunk records (a chunk header plus variable size chunk name).<br>
+      <br>
+For example, an MWC file with blocks containing 3, 2, and 1 chunks
+in turn: <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);"><span
+ style="color: rgb(204, 102, 0); font-weight: bold;">&lt;header&gt;</span> <span
+ style="font-weight: bold; color: rgb(0, 0, 153);">&lt;block&gt;</span> <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">&lt;chunk&gt; &lt;chunk&gt; &lt;chunk&gt;</span> <span
+ style="font-weight: bold; color: rgb(0, 0, 153);">&lt;block&gt;</span> <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">&lt;chunk&gt; &lt;chunk&gt;</span> <span
+ style="font-weight: bold; color: rgb(0, 0, 153);">&lt;block&gt;</span> <span
+ style="color: rgb(0, 153, 0); font-weight: bold;">&lt;chunk&gt;</span></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+These files may be optionally GZIP compressed (AIBO can decompress them
+on-the-fly).<br>
+      <br>
+      <span style="font-family: monospace;"></span><a name="HEADER"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>2.
+MWC
+Header</big></big><br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct mwc_header_type {<br>  char signature[4];      // "MWCM"<br>  int version;<br>  int num_blocks;<br>  int num_chunks;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="BLOCK"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>3.
+MWC
+Block Record<br>
+      <br>
+      </big></big>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct mwc_block_type {<br>  char signature[4];      // "MCID"<br>  int mwcid;<br>  int num_chunks;<br>};<br></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="CHUNK"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>4.
+MWC
+Chunk Record</big></big><br>
+      <br>
+Chunk headers are followed by the variable length chunk name
+(length specified by the 'namelen' field below).<br>
+      <br>
+      <center>
+      <table
+ style="width: 90%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td>
+            <pre style="background-color: rgb(255, 255, 204);">struct mwc_chunk_header_type {<br>  char signature[4];      // "CMAC"<br>  int chunktype;          // See type codes below.<br>  int repeat_count;<br>  int starttime;<br>  int alwayszero;<br>  short synchronize;      // Chunk elements should be synchronized<br>  short special;          // Chunk is special system action<br>  char namelen;<br>};</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <a name="CODES"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>5.
+Chunk
+Types Codes</big></big><br>
+      <div style="margin-left: 40px;">
+      <pre>CHUNK_MOTION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1000<br>CHUNK_MOTION_ALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1010<br>CHUNK_MOTION_MOUTH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1020<br>CHUNK_MOTION_HEADAXIS&nbsp;&nbsp;   0x1030<br>CHUNK_MOTION_LEGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1040<br>CHUNK_MOTION_TAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1050<br>CHUNK_MOTION_EARS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x1060<br>      <br>CHUNK_SOUND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x2000<br>CHUNK_SOUND_ALL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x2010<br>      <br>CHUNK_LED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3000<br>CHUNK_LED_PAUSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3000<br>CHUNK_LED_EYES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3030<br>CHUNK_LED_TAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3050<br>      <br>CHUNK_LED_220HEADLIGHT&nbsp;   0x3002<br>CHUNK_LED_220MOUTHRED&nbsp;&nbsp;   0x3003<br>CHUNK_LED_220MOUTHBOTTOM  0x3020<br>CHUNK_LED_220MOUTHTOP&nbsp;&nbsp;   0x3060<br>CHUNK_LED_220TAILFAN&nbsp;&nbsp;&nbsp;   0x3070<br>      <br>CHUNK_LED_7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3000&nbsp;&nbsp;&nbsp;&nbsp; // Mode LED's<br>CHUNK_LED_7A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3003&nbsp;&nbsp;&nbsp;&nbsp; // WLAN LED<br>CHUNK_LED_7B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3030&nbsp;&nbsp;&nbsp;&nbsp; // Face Matrix LED's<br>CHUNK_LED_7C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3060&nbsp;&nbsp;&nbsp;&nbsp; // Head Touch LED's<br>CHUNK_LED_7D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0x3070&nbsp;&nbsp;&nbsp;&nbsp; // Back LED's</pre>
+      </div>
+      <a name="EXAMPLE"></a><br>
+      <big style="font-weight: bold; text-decoration: underline;"><big>6.
+Example</big></big><br>
+      <pre>000000:&nbsp; 4d 57 43 4d&nbsp; 01 00 00 00&nbsp; 0a 00 00 00&nbsp; 0e 00 00 00&nbsp; |MWCM............|<br>000010:&nbsp; 4d 43 49 44&nbsp; c1 5d 00 00&nbsp; 01 00 00 00&nbsp; 43 4d 41 43&nbsp; |MCID.]......CMAC|<br>000020:&nbsp; 10 10 00 00&nbsp; 01 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; |................|<br>000030:&nbsp; 01 00 00 00&nbsp; 16 61 5f 73&nbsp; 74 61 6e 64&nbsp; 23 73 74 61&nbsp; |.....a_stand#sta|<br>000040:&nbsp; 6e 64 5f 6d&nbsp; 74 6e 32 34&nbsp; 30 30 31 4d&nbsp; 43 49 44 c2&nbsp; |nd_mtn24001MCID.|<br>000050:&nbsp; 5d 00 00 01&nbsp; 00 00 00 43&nbsp; 4d 41 43 10&nbsp; 10 00 00 01&nbsp; |]......CMAC.....|<br>000060:&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 01&nbsp; 00 00 00 16&nbsp; |................|<br>000070:&nbsp; 61 5f 73 74&nbsp; 61 6e 64 23&nbsp; 73 74 61 6e&nbsp; 64 5f 6d 74&nbsp; |a_stand#stand_mt|<br>000080:&nbsp; 6e 32 34 30&nbsp; 30 32 4d 43&nbsp; 49 44 c3 5d&nbsp; 00 00 01 00&nbsp; |n24002MCID.]....|<br>000090:&nbsp; 00 00 43 4d&nbsp; 41 43 10 10&nbsp; 00 00 01 00&nbsp; 00 00 00 00&nbsp; |..CMAC..........|<br>0000a0:&nbsp; 00 00 00 00&nbsp; 00 00 01 00&nbsp; 00 00 16 61&nbsp; 5f 73 74 61&nbsp; |...........a_sta|<br>0000b0:&nbsp; 6e 64 23 73&nbsp; 74 61 6e 64&nbsp; 5f 6d 74 6e&nbsp; 32 34 30 30&nbsp; |nd#stand_mtn2400|<br>0000c0:&nbsp; 33 4d 43 49&nbsp; 44 c4 5d 00&nbsp; 00 01 00 00&nbsp; 00 43 4d 41&nbsp; |3MCID.]......CMA|<br>0000d0:&nbsp; 43 10 10 00&nbsp; 00 01 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; |C...............|<br>0000e0:&nbsp; 00 01 00 00&nbsp; 00 16 61 5f&nbsp; 73 74 61 6e&nbsp; 64 23 73 74&nbsp; |......a_stand#st|<br>0000f0:&nbsp; 61 6e 64 5f&nbsp; 6d 74 6e 32&nbsp; 34 30 30 34&nbsp; 4d 43 49 44&nbsp; |and_mtn24004MCID|<br>000100:&nbsp; c5 5d 00 00&nbsp; 01 00 00 00&nbsp; 43 4d 41 43&nbsp; 10 10 00 00&nbsp; |.]......CMAC....|<br>000110:&nbsp; 01 00 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 01 00 00 00&nbsp; |................|<br>000120:&nbsp; 16 61 5f 73&nbsp; 74 61 6e 64&nbsp; 23 73 74 61&nbsp; 6e 64 5f 6d&nbsp; |.a_stand#stand_m|<br>000130:&nbsp; 74 6e 32 34&nbsp; 30 30 35 4d&nbsp; 43 49 44 c6&nbsp; 5d 00 00 01&nbsp; |tn24005MCID.]...|<br>000140:&nbsp; 00 00 00 43&nbsp; 4d 41 43 10&nbsp; 10 00 00 01&nbsp; 00 00 00 00&nbsp; |...CMAC.........|<br>000150:&nbsp; 00 00 00 00&nbsp; 00 00 00 01&nbsp; 00 00 00 16&nbsp; 61 5f 73 74&nbsp; |............a_st|<br>000160:&nbsp; 61 6e 64 23&nbsp; 73 74 61 6e&nbsp; 64 5f 6d 74&nbsp; 6e 32 34 30&nbsp; |and#stand_mtn240|<br>000170:&nbsp; 30 36 4d 43&nbsp; 49 44 c7 5d&nbsp; 00 00 01 00&nbsp; 00 00 43 4d&nbsp; |06MCID.]......CM|<br>000180:&nbsp; 41 43 10 10&nbsp; 00 00 01 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; |AC..............|<br>000190:&nbsp; 00 00 01 00&nbsp; 00 00 16 61&nbsp; 5f 73 74 61&nbsp; 6e 64 23 73&nbsp; |.......a_stand#s|<br>0001a0:&nbsp; 74 61 6e 64&nbsp; 5f 6d 74 6e&nbsp; 32 34 30 30&nbsp; 37 4d 43 49&nbsp; |tand_mtn24007MCI|<br>0001b0:&nbsp; 44 c8 5d 00&nbsp; 00 01 00 00&nbsp; 00 43 4d 41&nbsp; 43 10 10 00&nbsp; |D.]......CMAC...|<br>0001c0:&nbsp; 00 01 00 00&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 01 00 00&nbsp; |................|<br>0001d0:&nbsp; 00 16 61 5f&nbsp; 73 74 61 6e&nbsp; 64 23 73 74&nbsp; 61 6e 64 5f&nbsp; |..a_stand#stand_|<br>0001e0:&nbsp; 6d 74 6e 32&nbsp; 34 30 30 38&nbsp; 4d 43 49 44&nbsp; c9 5d 00 00&nbsp; |mtn24008MCID.]..|<br>0001f0:&nbsp; 04 00 00 00&nbsp; 43 4d 41 43&nbsp; 10 10 00 00&nbsp; 01 00 00 00&nbsp; |....CMAC........|<br>000200:&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 01 00 00 00&nbsp; 16 61 5f 73&nbsp; |.............a_s|<br>000210:&nbsp; 69 74 77 32&nbsp; 23 73 69 74&nbsp; 77 32 5f 6d&nbsp; 74 6e 32 34&nbsp; |itw2#sitw2_mtn24|<br>000220:&nbsp; 30 30 39 43&nbsp; 4d 41 43 10&nbsp; 20 00 00 01&nbsp; 00 00 00 00&nbsp; |009CMAC. .......|<br>000230:&nbsp; 00 00 00 00&nbsp; 00 00 00 01&nbsp; 00 00 00 08&nbsp; 73 6e 64 32&nbsp; |............snd2|<br>000240:&nbsp; 34 30 30 39&nbsp; 43 4d 41 43&nbsp; 30 30 00 00&nbsp; 01 00 00 00&nbsp; |4009CMAC00......|<br>000250:&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 01 00 00 00&nbsp; 08 6c 65 64&nbsp; |.............led|<br>000260:&nbsp; 32 34 30 30&nbsp; 39 43 4d 41&nbsp; 43 70 30 00&nbsp; 00 01 00 00&nbsp; |24009CMACp0.....|<br>000270:&nbsp; 00 00 00 00&nbsp; 00 00 00 00&nbsp; 00 01 00 00&nbsp; 00 08 6c 65&nbsp; |..............le|<br>000280:&nbsp; 64 32 34 30&nbsp; 30 39 4d 43&nbsp; 49 44 ca 5d&nbsp; 00 00 02 00&nbsp; |d24009MCID.]....|<br>000290:&nbsp; 00 00 43 4d&nbsp; 41 43 10 10&nbsp; 00 00 01 00&nbsp; 00 00 00 00&nbsp; |..CMAC..........|<br>0002a0:&nbsp; 00 00 00 00&nbsp; 00 00 01 00&nbsp; 00 00 16 61&nbsp; 5f 73 74 61&nbsp; |...........a_sta|<br>0002b0:&nbsp; 6e 64 23 73&nbsp; 74 61 6e 64&nbsp; 5f 6d 74 6e&nbsp; 32 34 30 31&nbsp; |nd#stand_mtn2401|<br>0002c0:&nbsp; 30 43 4d 41&nbsp; 43 30 30 00&nbsp; 00 01 00 00&nbsp; 00 00 00 00&nbsp; |0CMAC00.........|<br>0002d0:&nbsp; 00 00 00 00&nbsp; 00 01 00 00&nbsp; 00 08 6c 65&nbsp; 64 32 34 30&nbsp; |..........led240|<br>0002e0:&nbsp; 31 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  |</pre>
+      <a href="examples/ERS-210.MWC">Download Example</a><br>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<br>
+
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

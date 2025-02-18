@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Super Sapien Remote control codes
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Super Sapien Remote control codes
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+NOTE: The RS-232 console is always enabled. Many of the commands here have similar command line equivalents.
+Please see the <A HREF="sapavr_console.htm">SapAvr console commands</A> page for more details.
+<P></P>
+In enhanced mode, these standard features no longer work.
+<UL>
+<LI>The "S>>" button become a special shift.
+<LI>The ability to program and run sensor routines is very different
+<LI>The ability to program and run the main program is very different
+<LI>The hand and feet sensors are considered separate events (ie. the left hand will no longer do the same thing as the left heel/toe, unless you program it that way)
+<LI>The IR signals from the remote are not directly transmitted to the robot. Instead they are first decoded by the "AVR" 2nd CPU.
+Some signals stop there, some are changed to other IR codes, but most are passed through.
+</UL>
+
+<P></P>
+Initially RoboSapien starts in standard mode and will act like a stock RoboSapien (no new features).
+You can change the default boot mode (stored in E2PROM) from 'standard' to 'enhanced'.
+<BR>
+In standard mode:
+<UL>
+<LI>RoboSapien should work as usual, with no new features
+<LI>Hand, toe and heel sensors all act the same (no disambuation)
+<LI>The special button sequence of {TBD} will switch into 'enchanced' mode (see below). Use the "E2" command from the console for now.
+<LI>The SapAvr console is available for polling and other features, but many features don't make sense in 'standard' mode.
+</UL>
+
+<P></P>
+In enhanced mode, there are plenty of new features.
+Most start with the new Special Shift key "S>>".
+NOTE: a work in progress. Actual key sequences are in flux.
+<BR>//REVIEW: replace with graphics for unlableled keys
+<UL>
+<BR>Currently working:<BR>
+<LI>"S>>" + "^^^" (walk forward) - Execute Main #1
+<LI>"S>>" + "<" (turn right) - Execute Main #2
+<LI>"S>>" + [O] (stop - Execute Main #3
+<LI>"S>>" + ">" (turn left) - Execute Main #4
+<LI>"S>>" + "VVV" (walk backward) - Execute Main #5
+<BR>
+NOTE: layout on the remote keypad for the 5 direction keys:
+<pre>
+            1
+          2 3 4
+            5
+</pre>
+<LI>"S>>" + right_arm_up - raise both arms
+<LI>"S>>" + right_arm_out - move both arms
+<LI>"S>>" + right_arm_in - move both arms
+<LI>"S>>" + right_arm_down - move both arms
+
+<BR>Not Yet fully implemented:<BR>
+<LI>"S>>" + {TBD} - enter enhanced mode (does nothing since we are already there)
+<LI>"S>>" + {TBD} - exit enhanced mode (go back to standard mode)
+<LI>"S>>" + "S>>" - program the sonic sensor routine (like the regular "S>>" button)
+<LI>"S>>" + "L>>" - program the left foot sensor routine
+<LI>"S>>" + "R>>" - program the right foot sensor routine
+<LI>"S>>" + SHIFT + "L>>" - program the left hand sensor routine
+<LI>"S>>" + SHIFT + "R>>" - program the right hand sensor routine
+<LI>"S>>" + SHIFT + "" - program the right hand sensor routine
+<LI>"S>>" + SHIFT + 1 of 5 directions - program a main routine (#1 to #5)
+<LI>"S>>" + {TBD} - erase all E2PROM programming (start over)
+<LI>others TBD
+</UL>
+
+<P></P>
+<H2>Recording (enhanced mode)</H2>
+NOTE: the following describes the current functionality - subject to change
+<BR>
+In enhanced mode, the SapAvr chip is a macro recorder.
+The timing between steps is important.
+....
+
+<BR>//REVIEW: add more detail here
+
+<P></P>
+
+</BODY>
+</HTML>

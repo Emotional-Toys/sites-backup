@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ Super Sapien Console Commands
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ Super Sapien Console Commands
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+//REVIEW: pick a name and be consistent.
+I use the terms 'debug terminal', 'debug console', 'PC serial' etc to mean the same thing.
+<P></P>
+
+Please see the <A HREF="sapavr_remote.htm">SapAvr remote control</A> page for behavior using the standard remote control.
+<BR>
+Please see the <A HREF="ir_codes.htm">IR Codes</A> page for the hex codes for skits.
+<P></P>
+The Debug serial terminal (aka debug console) is always active.
+It is a 1200 baud, 8 bit RS-232 style signal. A level inverter/shifter is needed between the robot and your PC. See the hardware modification instructions
+<BR>
+Run any terminal program on your computer.
+When SuperSapien starts up, he will print information on the SapAVR firmware version.
+Commands are entered on the debug terminal. Most are upper case and one, two or three characters long. No ENTER (CR/LF) required.
+Data values are in hex.
+<P></P>
+<H3>General commands, modes</H3>
+<LI>? - print debug dump
+<LI>E0 - turn off raw echo
+<LI>E1 - turn on raw echo (default)
+<LI>E2 - echo off, behavior on
+<P></P>
+<H3>Skit control, IR sensors, other i/o</H3>
+<LI>Oxx - output IR code (xx = $80 .. $FF)
+<LI>I - show last IR code (and clear it). Format "xx\r\n"
+<LI>P - poll input sensor bits. Format "xx xx xx xx\r\n" (pinsB,portB,pinsD,portD)
+<LI>Rxx - pulse right sensor to old CPU for xx ticks (1/9600 sec)
+<LI>Lxx - pulse left sensor to old CPU for xx ticks (1/9600 sec)
+<P></P>
+<H3>E2PROM Access</H3>
+<LI>Axx - set E2PROM address (xx = $00 .. $7F)
+<LI>D - read E2PROM value and bump address. Format "xx:xx\n\r"
+<LI>Wxx - write E2PROM value and bump address
+<LI>Vn - write current E2PROM address in prog/code table [n = 0 .. F]. See 'e2.h' header file or list below.
+<LI>=nn - start executing byte codes from E2PROM address
+<LI>*n - start executing byte codes from table start
+<P></P>
+<H3>Other</H3>
+<LI>C - camera echo mode (text sent until ENTER)
+<P></P>
+<HR>
+<H2>E2PROM actions</H2>
+NOTE: currently the only way of programming skits is to use the serial terminal.
+Future releases will use the remote control 'record' feature to program handler sequences.
+
+<P></P>
+Handler routines are stored in E2PROM, and a pointer to the start of the skit is stored in the lowest addresses of E2PROM.
+The codes are single bytes.
+Values $80->$FE are sent to original CPU to execute canned skits (like the 'O' command).
+Values $01->$7F are wait instructions (the value is the number of 100ms intervals to wait, for example $50 = 80. = 8 seconds).
+Value $FF marks the end of a handler routine.
+
+<P></P>
+NOTE: there is a limit of 96 bytes for all handler routines.
+<P></P>
+
+<H2>Handlers</H2>
+See the 'e2.h' header for other handlers as well as place-holders for camera action handlers.
+The following are the handler numbers. This is the argument for the 'V' and '*' console commands.
+<UL>
+<LI>0 = the startup routine. Note: starts when the CPU boots, so leave a delay before directing the robot to do anything.
+<LI>1 = main routine #1
+<LI>2 = main routine #2
+<LI>3 = main routine #3
+<LI>4 = main routine #4
+<LI>5 = main routine #5
+<LI>6 = left arm handler
+<LI>7 = left foot handler
+<LI>8 = right arm handler
+<LI>9 = right foot handler
+<LI>10 to 15 = reserved for camera handlers
+</UL>
+
+<P></P>
+Sample mini-programs:
+
+<BR>
+<DIR>to be filled in</DIR>
+<P></P>
+<HR>
+
+
+</BODY>
+</HTML>

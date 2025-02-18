@@ -1,0 +1,244 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's AiboHack Site</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr valign="top" align="left" width="800">
+ <td width=15% align="center" valign="top" >
+  <a href="../111/index.html">
+  <BR>
+  <img src="../gfx/111.gif">
+  <BR>
+  ERS-110, 111</a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../210/index.html">
+  <img src="../gfx/2x0.gif">
+  <BR>
+  ERS-210[A], 220[A]</a>
+  <BR>
+ </td>
+
+ <td width=15% align="center" valign="top" bgcolor="#C0C0C0" >
+  <I>Programming AIBO with:</I><BR>
+ <BR>
+  <a href="yart.htm">YART</a>,
+  <a href="index.html">RCodePlus</a><BR>
+  <a href="../openr_sdk/index.html">OpenR SDK</a><BR>
+ <BR>
+ <a href="http://laptop.org">
+    <img src="http://wiki.laptop.org/images/e/e1/Olpc_badge_white.gif">
+ </a>
+ </td>
+
+ <td width=20% align="center" valign="top" bgcolor="#C0C0C0" >
+  <BR>
+  <a href="../310/index.html">
+  <img src="../gfx/31x.gif">
+  <BR>
+  ERS-311[B], 312[B], 31L</a>
+ </td>
+
+ <td width=20% align="center" valign="top" >
+  <BR>
+  <a href="../ers7/index.html">
+  <img src="../gfx/ers7.gif">
+  <BR>
+  ERS7</a>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top">
+  <a href="../index.html">Home</a>
+  <BR>
+  <a href="../movies/index.html">Movies (all)</a><BR>
+
+ <td colspan=3 align="center" valign="top">
+  PDAs: <a href="../clie/index.html">CLIE</a>
+  ( <a href="../panel/index.html">Panel</a>
+  <a href="../zipit/index.html">Zipit</a> )
+<BR>
+  Lesser Robots: <a href="../pleo/index.html">Pleo</a>
+  ( <a href="../robosap/index.html">RoboSapien</a>
+  <a href="../icybie/index.html">ICybie</a> )
+<BR>
+  Game Hacks:
+  <a href="../wii/index.html">Nintendo Wii</a>
+  <a href="../nds/index.html">Nintendo DS</a>
+  ( <a href="../psp/index.html">PSP</a> )
+<BR>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack]
+AiboPet R-CODE Extensions
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+AiboPet R-CODE Extensions
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+This page describes the extensions to the RCODE interpreter provided by "RCode Plus" version 2.51
+<BR>
+Version 2.51 of RCodePlus is a
+<i>Legit-i-Mutt</i><font size=-1><sup>&#169;</font><font size=-2>TM</sup></font>release.
+
+<P></P>
+There are two kinds of extensions :
+<LI>RCODE statements - eg: "AP_SNAPSHOT" (all upper case)
+<LI>RCODE variables - eg: "AP_Snap_Ready" (mixed case)
+
+<P></P>
+There is a third kind of extension for communicating with AIBO via the LAN.
+These use a separate "telemetry socket" and are documented <A HREF="lan_telemetry.htm">here.</A>
+
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>General Info, Version Checking</H1>
+</center></td></tr> </TABLE>
+<HR>
+
+This section discusses the extensions to the RCODE interpreter.
+These extensions only work with RCode Plus version 1.90 and later.
+<BR>
+Everything is case sensitive (so "AP_FOOBAR" is not the same as "AP_FooBar").
+Commands are in upper case (eg: AP_SNAPSHOT) and variables are in mixed case
+(eg: AP_Snap_Ready).
+All of the AiboPet extensions start with "AP_".
+<P></P><font color=red>TRANSITION:</font>
+Future releases of the official Sony released RCODE software may incorporate
+these or other features.
+RCode Plus will be updated (and some "AP_" extensions removed) as the
+core RCODE stick improves.
+<P></P>
+Most of the input values are like other input values.
+You first set the variable to 0 (eg: "SET:AP_Voice_Cmd:0") then wait for
+the variable to be non-zero.
+<P></P>
+See the "Obey Cat" example for how to use the extensions with Master Studio.
+
+<P></P>
+<H3>AP_Version</H3>
+Read-only system variable.
+Is the current version of the RCode Plus extensions.
+For example: if AP_Version is 251, that means major version 2, minor version 51 (AKA Version 2.51).
+<BR>
+If RCode Plus is not present, the variable "AP_Version" will be zero.
+Do not change this value.
+
+<P></P>
+<H2>RCode Plus Features</H2>
+
+<UL>
+<LI><A HREF="rcp_sound.htm">Voice Commands, Tones and other sound features</A>
+<LI><A HREF="rcp_image.htm">Camera capture, color detection and other camera features</A>
+<LI><A HREF="rcp_array.htm">Arrays</A>
+<LI><A HREF="rcp_device.htm">Device control</A>
+<LI><A HREF="rcp_motion.htm">Motion Control</A>
+</UL>
+
+<P></P>
+<HR>
+<H2>RCODE Runtime Library</H2>
+
+The RCODE Runtime Library (RCR) provides several RCODE routines that implement some of the grunt work common in many personalities.
+This provides a bridge between RCodePlus routines and higher level RCODE (written directly or with Master Studio).
+<BR>
+Examples include (REVIEW: document more fully)
+<UL>
+<LI>recording voice commands with feedback (ie. "Name Registration")
+<LI>playing back recorded name (ie. "What's your name")
+<LI>movement helpers (ie. faster head tracking)
+<LI>LED playback helpers (so you don't have to worry as much about model differences)
+<LI>playing back audio (and/or motions) loaded directly from memory stick (for "on demand" playback)
+<LI>Others TBD
+</UL>
+
+<BR>
+To be documented more fully.
+
+<H3>#AP_INCLUDE</H3>
+Allows inclusion of other RCODE text files at load/parse/compile time.
+Nesting is not supported. See examples.
+
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#C0C0C0"><tr><td><center>
+<H1>Undocumented/Enhanced Features</H1>
+</center></td></tr> </TABLE>
+<HR>
+I can't take credit for these features.
+They are provided in RCODE 1.2, but are not fully exposed or documented.
+Thanks to Mr Rcode for some of his hacks to enable them.
+Only briefly described here. Please email me if you need more info.
+
+<H3>GON/GOFF</H3>
+You can turn the gain off (GOFF) or on (GON) for a given servo.
+
+<H3>SET Led/Ear</H3>
+You can turn on or off a specific LED.
+See the JOINT.CFG file for the model of AIBO you want to use.
+This also works with the Ear servos in the ERS-210.
+
+<H3>MOVEJOINT</H3>
+MOVEJOINT is supported, but it is dangerous.
+Use if at your own risk.
+
+<H3>NoFallDown</H3>
+When set (ie. non-zero) the automatic falldown recovery will be disabled.
+This allows you to perform RollOver and other motions that would normally stop when the dog becomes upside-down.
+
+<H3>Custom Walking Styles</H3>
+<DIR><I>TO BE DOCUMENTED</I></DIR>
+
+
+<HR>
+<H2>Future Extensions</H2>
+
+If you have any suggestions, please send me your comments.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,241 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<center>
+
+<TABLE border=9 cellspacing=4 cellpadding=2 bgcolor="#E0E0E0">
+
+<tr valign="top" align="left">
+ <td colspan=5 align="center" valign="middle" bgcolor=#D0D0D0>
+	<TABLE>
+        <TR>
+        <TD style="filter:glow(color=pink)" width=300>
+          <CENTER>
+		  <font size=+2>AiboPet's BoneYard</font>
+          </CENTER>
+        </TD><TD>
+		  <A HREF="../index.html">
+		  http://aibopet.com</A>, <A HREF="../index.html">http://aibohack.com</A>
+        </TD></TR>
+    </TABLE>
+ </td>
+</tr>
+
+<tr>
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+ WARNING: contents of this page are very old.<BR>
+<a href="../index.html">Click here for the home page</a>
+ </td>
+
+ <td align="center" valign="top" bgcolor=#D0D0D0>
+  <i><font color="#333366" size="-1">
+  Email:</i>
+  <a href="mailto:aibopet@aibohack.com">aibopet@aibohack.com</a></font>
+ </td>
+</tr>
+
+</TABLE>
+</center>
+
+
+<TITLE>
+[AiboHack - Boneyard]
+ WiFi Multi-Test "Homebrew" app .03
+</TITLE>
+<P></P>
+<HR>
+<TABLE width=100% border=1 bgcolor="#808080"><tr><td><center>
+<H1>
+ WiFi Multi-Test "Homebrew" app .03
+</H1>
+</center></td></tr></TABLE>
+
+<HR>
+
+
+<CENTER><IMG SRC="wifitest_intro.jpg"></CENTER>
+
+<H2>WiFi Multi-Test .03 - Sony Gadget version</H2>
+
+<H3>Hardware Required</H3>
+<UL>
+<LI>Homebrew capable Sony PSP (firmware version 1.0 or 1.50)
+<LI>WiFi Access point recommended (although WiFi peer-to-peer does work)
+<P></P>
+<LI>PC to send text to the PSP (mini-telnet mode)
+<LI>PC to send JPG photos to the PSP (Photo Frame mode)
+<P></P>
+<LI>Optional: WiFi equipped ERS-210 or ERS-220 AIBO robot dog running RCodePlus or LifePlus software
+<LI>Optional: WiFi equipped Sony CLIE with camera running SpyStillCam (eg: NXxx/NZ90/TH55/UX50 models)
+</UL>
+
+<H3>Downloads</H3>
+<UL>
+<LI>Wifi .03 version (1.0 and 1.50 binaries, source, samples) for both Fancy and Simple -> <A HREF="wifi_03.zip">wifi_03.zip</A>
+</UL>
+NOTE: includes source to "SIMPLE" sample as well. The rest of this page describes the features of the "FANCY" WiFi Multi-Test app.
+
+<P></P>
+
+<H3>General Setup</H3>
+<UL>
+<LI>you <B>MUST</b> have an "Infrastructure" connection. DHCP will work now.
+<LI>Use of an access point is recommended. If you set everything manually you can use a "peer-to-peer" connection between the PSP and a PC (or AIBO or CLIE).
+To repeat, use of an access point is recommended.
+<LI>The general picker interface is relatively straight-forward. Up and down buttons move the selection. Circle or X make a selection. Triangle cancels.
+<P></P>
+<LI>For accessing AIBO or CLIE devices, you must edit the IPADDR.TXT on the PSP. It is in the top folder of the Memory Stick DUO. Add the IP addresses of your devices there.
+You can have up to 5 of them.
+The AIBO or CLIE tests will let you pick the IP address of the device from a list.
+<P></P>
+<LI>When done with the Wifi Multi-Test program, remove the PSP battery or turn it off (exit code will be improved in future releases). Picking "Exit" from the main menu is optional.
+<LI>If having problems, some potentially useful error information is saved in the "err.txt" file in the top folder of the memory stick DUO.
+</UL>
+
+<P></P>
+
+<H3>Features of the WiFi Multi-Test app</H3>
+<UL>
+<LI>Picker for net conguration (DHCP now supported !)
+<LI>Picker for one of four tests
+<LI>Connect timeout logic and other improvements
+<LI>More fleshed out "sockets.h"-like header (getting better, not complete)
+<LI>Sample build with the PSPSDK (get latest)
+<P></P>
+<LI>Test#1: mini-telnetd like app. Telnet to your PSP and it will display on the screen. Similar to the original version but now allows larger display.
+[TCP/IP with the PSP as the server]
+<LI>Test#2: wireless photo frame. UDP send a JPG to your PSP and it will display on the screen.
+[UDP/IP with the PSP as the server]
+<LI>Test#3: AiboCam/Scope viewer. Run RCodePlus or AiboLifePlus on your ERS-2x0 Sony AIBO robot dog.
+Shows AIBO camera image and color detection grids on the PSP.
+[polled TCP/IP protocol with the PSP as the client, custom video codec]
+<LI>Test#4: CLIE SpyCam Watcher.
+Run ClieSpyCam (URL) on your Sony CLIE PDA. Shows the camera image on the PSP.
+[polled TCP/IP protocol with the PSP as the client, JPG image data]
+</UL>
+<P></P>
+<HR>
+<H2>Telnet test</H2>
+
+This is a slightly longer version of the original mini-telnetd test in the .01 sample.
+Telnet to the PSP from your PC (standard port 23) and type what you want.
+It will display on the PSP screen.
+Sometimes there may be a delay.
+When the connection is dropped/closed, the test ends.
+
+<P></P>
+<HR>
+<H2>Photo Frame Mode</H2>
+
+<CENTER><IMG SRC="psp_photo_frame1.jpg">
+<BR>
+<IMG SRC="psp_photo_frame2.jpg">
+<BR>
+[Disembodied PSP display - sorry for the blurry photo]
+</CENTER>
+<P></P>
+
+You can send JPG images from your PC to the PSP.
+<UL>
+<LI>See the "PhotoSamp" folder for samples and PC utilities. Install on your PC.
+<LI>The program "udpsend" will send photos from your PC to the PSP.
+<LI>The command line program is run with "udpsend <i>psp_ip_addr</i> 100 <i>filename.jpg</i>".
+<UL>
+<i>psp_ip_addr</i> is the IP Address of the PSP.
+<BR>"100" is the port number used (fixed).
+<BR><i>filename.jpg</i> is the JPG filename to upload and display on the PSP.
+</UL>
+<P></P>
+<LI>Photos must be in standard JPG format. The JPG file must not be larger than 30KB.
+<LI><B>The JPG image must not be larger than the PSP screen (480x272 pixels)!</B>. If the JPG is too large, it will display "BAD JPEG".
+<P></P>
+<LI>See the "slideshow.bat" batch file, and edit the file for your JPG files and the IP address of your PSP.
+<LI>Thanks to the IJG for the JPEG decompression source code.
+<LI> Thanks to Paris Hilton and the card playing dogs for the sample photos.
+<LI>To exit the test, hold the Triangle button on the PSP and then upload an image to the PSP.
+It should return to the main test picker.
+If it wedges, pop out the battery and try again.
+<P></P>
+<LI>NOTE: sometimes the first 'udpsend' will not work (send it twice).
+<LI>NOTE: may have problems if the image width is not a multiple of 4. Make the JPGs 480x272 pixels to avoid problems.
+</UL>
+
+<P></P>
+<HR>
+<H2>AiboCam/Scope Mode</H2>
+<CENTER><IMG SRC="psp_aibo_viewer.jpg">
+<BR>
+<IMG SRC="psp_aibo_viewer2.jpg">
+<BR>
+[What AIBO sees is displayed on the PSP]
+</CENTER>
+<P></P>
+You must have a compatible WiFi capable AIBO model (ERS-210 or ERS-220 with WiFi card).
+AIBO must be running RCodePlus or one of the LifePlus variants.
+It must be on the same WiFi network as the PSP.
+
+<UL>
+<LI>First be sure your AIBO is working using the PC (Windows) programs.
+<LI>For RCodePlus see the <A HREF="../210/remote.htm">AiboRemote instructions</A>
+<LI>For LifePlus see the <A HREF="../210/aiboscope.htm">AiboScope instructions</A>
+<P></P>
+<LI>Add the IP address of your AIBO to the "IPADDR.TXT" in the root folder of the PSP memory stick.
+<LI>The AIBO and the PSP must be on the same WiFi network.
+<LI>An access point is strongly recommended. Peer-to-Peer is possible, but be sure the PSP is running first before booting the AIBO.
+<P></P>
+<LI>Pick the "Aibo Poll" test.
+<LI>If it connects, it will display the AIBO camera image on the PSP display.
+<LI>On the left side is the red and pink color detection results.
+On the right side is the blue, green and flesh-tone color detection results.
+<LI>Press the Circle button to switch to a fullscreen mode
+<LI>Press the Square button to switch back.
+<P></P>
+<LI>To exit the test, press the Triangle button on the PSP.
+It should return to the main test picker.
+If it wedges, pop out the battery and try again.
+</UL>
+
+<P></P>
+<HR>
+<H2>CLIE SpyCam Watcher Mode</H2>
+<CENTER><IMG SRC="psp_clie_watcher_blurry.jpg">
+<BR>
+[What the CLIE camera sees is shown on the PSP display - sorry for the blurry photo]
+</CENTER>
+<P></P>
+You must have a SpyStillCam compatible CLIE model (NX/NZ with WiFi card, UX50 or TH55).
+It must be on the same WiFi network as the PSP.
+<UL>
+<LI>First install the regular <A HREF="../clie/spystillcam.htm">SpyStillCam software</A> on your CLIE.
+<LI>Test it with the watcher program that runs under Windows on your PC (SpyCamWatcher.exe). Be sure that is working.
+<LI>Add the IP address of your CLIE to the "IPADDR.TXT" in the root folder of the PSP memory stick.
+<LI>The CLIE and the PSP must be on the same WiFi network.
+<P></P>
+<LI>Run the SpyStillCam program on the CLIE
+<LI>Run the WiFi MultiTest application on the PSP.
+Select the appropriate connection (if there is more than one)
+<LI>Pick the "CLIE SpyWatch" test.
+<LI>Select the IP address of the CLIE
+<LI>Images from the CLIE camera should be displayed on the PSP
+<LI>To exit the test, press the Triangle button on the PSP.
+It should return to the main test picker.
+If it wedges, pop out the battery and try again.
+
+</UL>
+
+<P></P>
+<HR>
+<a name=DEV>
+<a name=SOURCE>
+<H2>For Developers - Source Code</H2>
+
+The WiFi Multi-Test sample is built using the <A HREF=http://www.oopo.net/consoledev>PSP toolchain</A> and a (recent) version of the PSPSDK.
+Source for FANCY and SIMPLE apps provided in main .zip.
+
+<P></P>
+<HR>
+
+</BODY>
+</HTML>
